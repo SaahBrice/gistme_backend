@@ -172,3 +172,36 @@ INFO 2025-11-25 18:59:29,301 basehttp 60048 53940 "POST /api/articles/ HTTP/1.1"
 INFO 2025-11-25 18:59:55,154 basehttp 60048 34724 "GET /api/ HTTP/1.1" 200 10323
 INFO 2025-11-25 18:59:56,523 basehttp 60048 34724 "GET /api/articles/ HTTP/1.1" 200 25288
 INFO 2025-11-25 18:59:56,587 basehttp 60048 34724 "GET /static/rest_framework/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 304 0
+INFO 2025-11-25 21:38:36,466 autoreload 61668 60252 Watching for file changes with StatReloader
+INFO 2025-11-25 21:38:42,583 basehttp 61668 64972 "GET / HTTP/1.1" 200 35594
+INFO 2025-11-25 21:39:12,661 basehttp 61668 64972 "GET /feed/ HTTP/1.1" 200 59929
+INFO 2025-11-25 21:45:31,567 autoreload 64280 48948 Watching for file changes with StatReloader
+INFO 2025-11-25 21:45:34,502 basehttp 64280 44256 "GET / HTTP/1.1" 200 35594
+INFO 2025-11-25 21:45:39,928 basehttp 64280 44256 "GET /feed/ HTTP/1.1" 200 67947
+INFO 2025-11-25 21:46:06,928 basehttp 64280 44256 "GET /feed HTTP/1.1" 301 0
+INFO 2025-11-25 21:46:06,944 basehttp 64280 63436 "GET /feed/ HTTP/1.1" 200 67947
+INFO 2025-11-25 21:46:11,217 basehttp 64280 63436 "GET /feed/ HTTP/1.1" 200 67947
+INFO 2025-11-25 21:47:04,089 basehttp 64280 63436 "GET /feed/ HTTP/1.1" 200 67947
+INFO 2025-11-25 21:51:20,283 autoreload 15276 60588 Watching for file changes with StatReloader
+INFO 2025-11-25 21:51:23,561 basehttp 15276 48956 "GET / HTTP/1.1" 200 35594
+INFO 2025-11-25 21:51:28,455 basehttp 15276 48956 "GET /feed/ HTTP/1.1" 200 57385
+INFO 2025-11-25 21:51:31,508 basehttp 15276 48956 "GET /api/articles/?mood=hyped HTTP/1.1" 200 52
+INFO 2025-11-25 21:55:57,476 autoreload 66004 66000 Watching for file changes with StatReloader
+INFO 2025-11-25 21:56:00,484 basehttp 66004 57180 "GET /feed/ HTTP/1.1" 200 58560
+INFO 2025-11-25 21:56:06,010 basehttp 66004 57180 "GET / HTTP/1.1" 200 35594
+INFO 2025-11-25 21:56:11,203 basehttp 66004 57180 "GET /feed/ HTTP/1.1" 200 58560
+INFO 2025-11-25 22:00:52,920 autoreload 65984 49352 Watching for file changes with StatReloader
+INFO 2025-11-25 22:00:56,043 basehttp 65984 66408 "GET / HTTP/1.1" 200 35594
+INFO 2025-11-25 22:01:00,922 basehttp 65984 66408 "GET /feed/ HTTP/1.1" 200 57150
+INFO 2025-11-25 22:01:02,655 basehttp 65984 66408 "GET /api/articles/?mood=exciting HTTP/1.1" 200 4031
+INFO 2025-11-25 22:02:33,209 basehttp 65984 66408 "GET /feed/ HTTP/1.1" 200 57150
+INFO 2025-11-25 22:02:34,991 basehttp 65984 66408 "GET /api/articles/?mood=exciting HTTP/1.1" 200 4031
+WARNING 2025-11-25 22:02:39,038 log 65984 66408 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 22:02:39,039 basehttp 65984 66408 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-25 22:02:51,655 basehttp 65984 66408 "GET /api/articles/?mood=exciting HTTP/1.1" 200 4031
+INFO 2025-11-25 22:02:52,468 basehttp 65984 66408 "GET /api/articles/?mood=exciting&category=DEVELOPMENT HTTP/1.1" 200 52
+INFO 2025-11-25 22:02:54,243 basehttp 65984 66408 "GET /api/articles/?mood=exciting HTTP/1.1" 200 4031
+INFO 2025-11-25 22:02:55,353 basehttp 65984 66408 "GET /api/articles/?mood=exciting&category=BUSINESS HTTP/1.1" 200 52
+INFO 2025-11-25 22:02:57,093 basehttp 65984 66408 "GET /api/articles/?mood=exciting HTTP/1.1" 200 4031
+INFO 2025-11-25 22:02:58,101 basehttp 65984 66408 "GET /api/articles/?mood=exciting&category=SPORTS HTTP/1.1" 200 52
+INFO 2025-11-25 22:03:06,165 basehttp 65984 66408 "GET /api/articles/?mood=exciting HTTP/1.1" 200 4031
