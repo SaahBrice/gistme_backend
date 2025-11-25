@@ -3,9 +3,9 @@ from .models import Article, Comment
 
 @admin.register(Article)
 class ArticleAdmin(admin.ModelAdmin):
-    list_display = ('headline', 'category', 'mood', 'created_at', 'view_count')
+    list_display = ('headline', 'headline_en', 'headline_fr', 'category', 'mood', 'created_at', 'view_count')
     list_filter = ('category', 'mood', 'created_at')
-    search_fields = ('headline', 'french_summary', 'english_summary')
+    search_fields = ('headline', 'headline_en', 'headline_fr', 'french_summary', 'english_summary')
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):

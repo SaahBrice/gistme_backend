@@ -488,9 +488,10 @@
             class="fixed inset-0 z-50 flex items-center justify-center bg-black">
 
             <div class="text-center px-8">
-                <h1 class="text-5xl md:text-7xl brand-font text-yellow-500 mb-4 slide-up">GistMe</h1>
-                <p class="text-xl md:text-2xl text-gray-300 mb-12 slide-up" style="animation-delay: 0.1s">Choose your
-                    vibe to start gisting</p>
+                <h1 class="text-5xl md:text-7xl brand-font text-yellow-500 mb-4 slide-up">Gist4u</h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-12 slide-up" style="animation-delay: 0.1s"
+                    x-text="globalLang === 'fr' ? 'Choisissez votre ambiance pour commencer' : 'Choose your vibe to start gisting'">
+                </p>
 
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
                     <button @click="selectMood('happy')"
@@ -558,9 +559,25 @@
             <!-- NEW: Simple Header with View Count -->
             <div class="fixed top-0 left-0 w-full z-40 bg-black/90 backdrop-blur-md border-b border-gray-800">
                 <div class="flex justify-between items-center px-4 py-3">
-                    <div class="flex items-center gap-2">
-                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Vibe:</span>
-                        <span class="text-xs font-bold text-yellow-500 capitalize" x-text="currentMood"></span>
+                    <div class="flex items-center gap-4">
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Vibe:</span>
+                            <span class="text-xs font-bold text-yellow-500 capitalize" x-text="currentMood"></span>
+                        </div>
+
+                        <!-- Language Toggle -->
+                        <div class="flex gap-1 bg-gray-800/50 rounded-full p-1">
+                            <button @click="switchLanguage('en')"
+                                class="px-3 py-1 rounded-full text-xs font-bold transition-all"
+                                :class="globalLang === 'en' ? 'bg-yellow-500 text-black' : 'text-gray-400'">
+                                EN
+                            </button>
+                            <button @click="switchLanguage('fr')"
+                                class="px-3 py-1 rounded-full text-xs font-bold transition-all"
+                                :class="globalLang === 'fr' ? 'bg-yellow-500 text-black' : 'text-gray-400'">
+                                FR
+                            </button>
+                        </div>
                     </div>
 
                     <!-- Stats: View and Comment Counts -->
@@ -1010,7 +1027,8 @@
                 showReader: false,
                 isPlaying: false,
                 audioProgress: 0,
-                readerLang: 'en',
+                // Language
+                globalLang: localStorage.getItem('gist4u_language') || 'en',
                 commentUser: localStorage.getItem('gistme_username') || 'Anonymous',
                 commentText: '',
                 quickCommentText: '',
@@ -1171,14 +1189,18 @@
 
                         this.advertisements = data.results.map(article => ({
                             id: article.id,
-                            headline: article.headline,
-                            summary: article.english_summary,
-                            content: article.english_summary,
+                            headline: this.globalLang === 'fr' ? (article.headline_fr || article.headline_en || article.headline) : (article.headline_en || article.headline_fr || article.headline),
+                            headlineEn: article.headline_en,
+                            headlineFr: article.headline_fr,
+                            summary: this.globalLang === 'fr' ? article.french_summary : article.english_summary,
+                            content: this.globalLang === 'fr' ? article.french_summary : article.english_summary,
+                            frenchSummary: article.french_summary,
+                            englishSummary: article.english_summary,
                             image: article.thumbnails && article.thumbnails.length > 0 ? article.thumbnails[0] : 'https://placehold.co/600x400/000000/FFF',
                             category: 'ADVERTISEMENT',
                             source: article.source_names && article.source_names.length > 0 ? article.source_names[0] : 'Sponsor',
                             timeAgo: this.formatTimeAgo(article.created_at),
-                            audioUrl: article.english_audio,
+                            audioUrl: this.globalLang === 'fr' ? article.french_audio : article.english_audio,
                             viewCount: this.formatNumber(article.view_count),
                             commentCount: this.formatNumber(article.comment_count)
                         }));
@@ -1306,14 +1328,18 @@
 
                     const newArticles = data.results.map(article => ({
                         id: article.id,
-                        headline: article.headline,
-                        summary: article.english_summary,
-                        content: article.english_summary,
+                        headline: this.globalLang === 'fr' ? (article.headline_fr || article.headline_en || article.headline) : (article.headline_en || article.headline_fr || article.headline),
+                        headlineEn: article.headline_en,
+                        headlineFr: article.headline_fr,
+                        summary: this.globalLang === 'fr' ? article.french_summary : article.english_summary,
+                        content: this.globalLang === 'fr' ? article.french_summary : article.english_summary,
+                        frenchSummary: article.french_summary,
+                        englishSummary: article.english_summary,
                         image: article.thumbnails && article.thumbnails.length > 0 ? article.thumbnails[0] : 'https://placehold.co/600x400/000000/FFF',
                         category: article.category.toUpperCase(),
-                        source: article.source_names && article.source_names.length > 0 ? article.source_names[0] : 'GistMe',
+                        source: article.source_names && article.source_names.length > 0 ? article.source_names[0] : 'Gist4u',
                         timeAgo: this.formatTimeAgo(article.created_at),
-                        audioUrl: article.english_audio,
+                        audioUrl: this.globalLang === 'fr' ? article.french_audio : article.english_audio,
                         viewCount: this.formatNumber(article.view_count),
                         commentCount: this.formatNumber(article.comment_count)
                     }));
@@ -1369,6 +1395,43 @@
                         return (num / 1000).toFixed(1) + 'k';
                     }
                     return num.toString();
+                },
+
+                switchLanguage(lang) {
+                    this.globalLang = lang;
+                    localStorage.setItem('gist4u_language', lang);
+
+                    // Update all loaded articles with new language content
+                    this.articles.forEach(article => {
+                        // Update headlines
+                        if (article.headlineEn || article.headlineFr) {
+                            article.headline = lang === 'fr' ?
+                                (article.headlineFr || article.headlineEn) :
+                                (article.headlineEn || article.headlineFr);
+                        }
+
+                        // Update summaries
+                        if (article.frenchSummary && article.englishSummary) {
+                            article.summary = lang === 'fr' ? article.frenchSummary : article.englishSummary;
+                            article.content = lang === 'fr' ? article.frenchSummary : article.englishSummary;
+                        }
+                    });
+
+                    // Update advertisements
+                    this.advertisements.forEach(ad => {
+                        // Update headlines
+                        if (ad.headlineEn || ad.headlineFr) {
+                            ad.headline = lang === 'fr' ?
+                                (ad.headlineFr || ad.headlineEn) :
+                                (ad.headlineEn || ad.headlineFr);
+                        }
+
+                        // Update summaries
+                        if (ad.frenchSummary && ad.englishSummary) {
+                            ad.summary = lang === 'fr' ? ad.frenchSummary : ad.englishSummary;
+                            ad.content = lang === 'fr' ? ad.frenchSummary : ad.englishSummary;
+                        }
+                    });
                 },
 
                 handleScroll(event) {

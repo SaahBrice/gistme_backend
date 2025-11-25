@@ -439,3 +439,201 @@ INFO 2025-11-25 23:30:58,965 basehttp 46092 60588 "POST /api/comments/ HTTP/1.1"
 INFO 2025-11-25 23:31:36,727 basehttp 46092 60588 "POST /api/comments/ HTTP/1.1" 201 130
 INFO 2025-11-25 23:31:55,977 basehttp 46092 60588 "GET /api/articles/ HTTP/1.1" 200 27379
 INFO 2025-11-25 23:32:11,523 basehttp 46092 60588 "GET /api/articles/ HTTP/1.1" 200 27379
+INFO 2025-11-25 23:41:45,634 autoreload 63776 60824 Watching for file changes with StatReloader
+INFO 2025-11-25 23:41:46,599 basehttp 63776 60656 "GET /feed/ HTTP/1.1" 200 77366
+WARNING 2025-11-25 23:41:46,707 log 63776 60656 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 23:41:46,708 basehttp 63776 60656 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-25 23:41:47,829 basehttp 63776 60656 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-25 23:41:49,015 basehttp 63776 60656 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-25 23:41:49,131 basehttp 63776 60656 "GET /api/articles/ HTTP/1.1" 200 11126
+INFO 2025-11-25 23:43:08,666 basehttp 63776 60656 "GET /feed/ HTTP/1.1" 200 77366
+WARNING 2025-11-25 23:43:08,738 log 63776 60656 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 23:43:08,742 basehttp 63776 60656 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-25 23:43:09,272 basehttp 63776 60656 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-25 23:44:21,703 basehttp 63776 60656 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-25 23:44:21,756 basehttp 63776 60656 "GET /api/articles/ HTTP/1.1" 200 11126
+INFO 2025-11-25 23:47:40,070 autoreload 54380 56132 Watching for file changes with StatReloader
+INFO 2025-11-25 23:47:54,561 basehttp 54380 57544 "GET /feed/ HTTP/1.1" 200 77462
+WARNING 2025-11-25 23:47:54,639 log 54380 57544 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 23:47:54,639 basehttp 54380 57544 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-25 23:47:55,022 basehttp 54380 57544 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-25 23:48:02,347 basehttp 54380 57544 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-25 23:48:02,398 basehttp 54380 57544 "GET /api/articles/ HTTP/1.1" 200 11126
+INFO 2025-11-25 23:48:36,402 basehttp 54380 57544 "GET /feed/ HTTP/1.1" 200 77462
+WARNING 2025-11-25 23:48:36,567 log 54380 57544 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 23:48:36,568 basehttp 54380 57544 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-25 23:48:37,048 basehttp 54380 57544 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-25 23:48:38,665 basehttp 54380 57544 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-25 23:48:38,698 basehttp 54380 57544 "GET /api/articles/ HTTP/1.1" 200 11126
+INFO 2025-11-25 23:48:42,268 basehttp 54380 57544 "GET /feed/ HTTP/1.1" 200 77462
+WARNING 2025-11-25 23:48:42,339 log 54380 57544 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 23:48:42,339 basehttp 54380 57544 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-25 23:48:42,828 basehttp 54380 57544 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-25 23:48:45,526 basehttp 54380 57544 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-25 23:48:45,567 basehttp 54380 57544 "GET /api/articles/ HTTP/1.1" 200 11126
+INFO 2025-11-26 00:08:59,085 autoreload 54380 56132 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\models.py changed, reloading.
+INFO 2025-11-26 00:08:59,965 autoreload 36888 11944 Watching for file changes with StatReloader
+INFO 2025-11-26 00:09:06,823 autoreload 36888 11944 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\models.py changed, reloading.
+INFO 2025-11-26 00:09:07,666 autoreload 65884 65976 Watching for file changes with StatReloader
+INFO 2025-11-26 00:09:49,656 autoreload 65884 65976 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\models.py changed, reloading.
+INFO 2025-11-26 00:09:50,484 autoreload 46968 63932 Watching for file changes with StatReloader
+INFO 2025-11-26 00:10:17,545 autoreload 46968 63932 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\models.py changed, reloading.
+INFO 2025-11-26 00:10:18,511 autoreload 40468 58912 Watching for file changes with StatReloader
+INFO 2025-11-26 00:10:44,950 autoreload 40468 58912 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\serializers.py changed, reloading.
+INFO 2025-11-26 00:10:45,847 autoreload 61628 60412 Watching for file changes with StatReloader
+INFO 2025-11-26 00:13:37,710 basehttp 61628 60268 "GET /feed/ HTTP/1.1" 200 78753
+WARNING 2025-11-26 00:13:37,795 log 61628 60268 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-26 00:13:37,799 basehttp 61628 60268 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-26 00:13:38,613 basehttp 61628 60268 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-26 00:13:40,748 basehttp 61628 60268 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-26 00:13:40,795 basehttp 61628 60268 "GET /api/articles/ HTTP/1.1" 200 11240
+INFO 2025-11-26 00:23:38,371 autoreload 61628 60412 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\views.py changed, reloading.
+INFO 2025-11-26 00:23:39,833 autoreload 51908 63392 Watching for file changes with StatReloader
+INFO 2025-11-26 00:30:55,116 autoreload 8812 43652 Watching for file changes with StatReloader
+INFO 2025-11-26 00:30:56,737 basehttp 8812 48232 "GET /feed/ HTTP/1.1" 200 78753
+WARNING 2025-11-26 00:30:56,827 log 8812 48232 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-26 00:30:56,828 basehttp 8812 48232 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-26 00:30:57,459 basehttp 8812 48232 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-26 00:30:59,124 basehttp 8812 48232 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-26 00:30:59,171 basehttp 8812 48232 "GET /api/articles/ HTTP/1.1" 200 11240
+ERROR 2025-11-26 00:32:30,265 utils 8812 66476 Exception in ArticleViewSet: Authentication credentials were not provided.
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 503, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 421, in initial
+    self.check_permissions(request)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 339, in check_permissions
+    self.permission_denied(
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 180, in permission_denied
+    raise exceptions.NotAuthenticated()
+rest_framework.exceptions.NotAuthenticated: Authentication credentials were not provided.
+WARNING 2025-11-26 00:32:30,285 log 8812 66476 Forbidden: /api/articles/
+WARNING 2025-11-26 00:32:30,286 basehttp 8812 66476 "POST /api/articles/ HTTP/1.1" 403 76
+ERROR 2025-11-26 00:32:35,295 utils 8812 62320 Exception in ArticleViewSet: Authentication credentials were not provided.
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 503, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 421, in initial
+    self.check_permissions(request)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 339, in check_permissions
+    self.permission_denied(
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 180, in permission_denied
+    raise exceptions.NotAuthenticated()
+rest_framework.exceptions.NotAuthenticated: Authentication credentials were not provided.
+WARNING 2025-11-26 00:32:35,296 log 8812 62320 Forbidden: /api/articles/
+WARNING 2025-11-26 00:32:35,298 basehttp 8812 62320 "POST /api/articles/ HTTP/1.1" 403 76
+ERROR 2025-11-26 00:32:40,326 utils 8812 63676 Exception in ArticleViewSet: Authentication credentials were not provided.
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 503, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 421, in initial
+    self.check_permissions(request)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 339, in check_permissions
+    self.permission_denied(
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 180, in permission_denied
+    raise exceptions.NotAuthenticated()
+rest_framework.exceptions.NotAuthenticated: Authentication credentials were not provided.
+WARNING 2025-11-26 00:32:40,327 log 8812 63676 Forbidden: /api/articles/
+WARNING 2025-11-26 00:32:40,327 basehttp 8812 63676 "POST /api/articles/ HTTP/1.1" 403 76
+INFO 2025-11-26 00:37:47,984 autoreload 65968 55344 Watching for file changes with StatReloader
+INFO 2025-11-26 00:39:49,037 basehttp 65968 45284 "POST /api/articles/ HTTP/1.1" 201 5785
+INFO 2025-11-26 00:40:08,609 basehttp 65968 65724 "GET /feed/ HTTP/1.1" 200 78753
+WARNING 2025-11-26 00:40:08,687 log 65968 65724 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-26 00:40:08,687 basehttp 65968 65724 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-26 00:40:09,412 basehttp 65968 65724 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-26 00:40:10,782 basehttp 65968 65724 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-26 00:40:10,838 basehttp 65968 65724 "GET /api/articles/ HTTP/1.1" 200 17026
+INFO 2025-11-26 00:40:38,455 basehttp 65968 65308 "POST /api/articles/ HTTP/1.1" 201 3133
+INFO 2025-11-26 00:41:20,727 basehttp 65968 65724 "GET /feed/ HTTP/1.1" 200 78753
+WARNING 2025-11-26 00:41:20,804 log 65968 65724 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-26 00:41:20,805 basehttp 65968 65724 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-26 00:41:21,539 basehttp 65968 65724 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-26 00:41:22,717 basehttp 65968 65724 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-26 00:41:22,790 basehttp 65968 65724 "GET /api/articles/ HTTP/1.1" 200 20160
+WARNING 2025-11-26 00:41:22,873 log 65968 65724 Not Found: /feed/media/thumbnailssports_20251126_004013_1.jpeg
+WARNING 2025-11-26 00:41:22,873 basehttp 65968 65724 "GET /feed/media/thumbnailssports_20251126_004013_1.jpeg HTTP/1.1" 404 3147
+INFO 2025-11-26 00:41:57,228 basehttp 65968 62592 "POST /api/articles/ HTTP/1.1" 201 4046
+INFO 2025-11-26 00:43:23,413 basehttp 65968 66196 "POST /api/articles/ HTTP/1.1" 201 4370
+INFO 2025-11-26 00:43:42,792 basehttp 65968 65724 "GET /feed/ HTTP/1.1" 200 78753
+WARNING 2025-11-26 00:43:42,872 log 65968 65724 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-26 00:43:42,873 basehttp 65968 65724 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-26 00:43:43,614 basehttp 65968 65724 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-26 00:43:46,289 basehttp 65968 65724 "GET /api/articles/?mood=concerning HTTP/1.1" 200 7222
+INFO 2025-11-26 00:44:04,116 basehttp 65968 65724 "GET /feed/ HTTP/1.1" 200 78753
+WARNING 2025-11-26 00:44:04,188 log 65968 65724 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-26 00:44:04,188 basehttp 65968 65724 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-26 00:44:04,582 basehttp 65968 65724 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-26 00:44:05,789 basehttp 65968 65724 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-26 00:44:05,850 basehttp 65968 65724 "GET /api/articles/ HTTP/1.1" 200 28578
+WARNING 2025-11-26 00:44:05,963 log 65968 65724 Not Found: /feed/media/thumbnails\x0business_20251126_004238_1.jpeg
+WARNING 2025-11-26 00:44:05,964 basehttp 65968 65724 "GET /feed/media/thumbnails%0Business_20251126_004238_1.jpeg HTTP/1.1" 404 3155
+WARNING 2025-11-26 00:44:05,980 log 65968 62556 Not Found: /feed/media/thumbnails\x0entertainment_20251126_004118_1.jpeg
+WARNING 2025-11-26 00:44:05,980 basehttp 65968 62556 "GET /feed/media/thumbnails%0Entertainment_20251126_004118_1.jpeg HTTP/1.1" 404 3170
+WARNING 2025-11-26 00:44:05,997 log 65968 64480 Not Found: /feed/media/thumbnailssports_20251126_004013_1.jpeg
+WARNING 2025-11-26 00:44:05,998 basehttp 65968 64480 "GET /feed/media/thumbnailssports_20251126_004013_1.jpeg HTTP/1.1" 404 3147
+INFO 2025-11-26 00:44:45,129 basehttp 65968 63224 "POST /api/articles/ HTTP/1.1" 201 4162
+INFO 2025-11-26 00:45:28,842 basehttp 65968 62296 "POST /api/articles/ HTTP/1.1" 201 2673
+INFO 2025-11-26 00:49:46,929 basehttp 65968 59628 "GET /api/articles/?mood=happy&category=politics HTTP/1.1" 200 52
+INFO 2025-11-26 00:49:46,993 basehttp 65968 59628 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-26 00:49:47,019 basehttp 65968 59628 "GET /api/articles/?category=politics HTTP/1.1" 200 10923
+INFO 2025-11-26 00:49:47,686 basehttp 65968 59628 "GET /api/articles/?mood=happy&category=crime HTTP/1.1" 200 52
+INFO 2025-11-26 00:49:47,706 basehttp 65968 59628 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-26 00:49:47,729 basehttp 65968 59628 "GET /api/articles/?category=crime HTTP/1.1" 200 52
+INFO 2025-11-26 00:49:47,769 basehttp 65968 59628 "GET /api/articles/ HTTP/1.1" 200 35415
+WARNING 2025-11-26 00:49:47,855 log 65968 59628 Not Found: /feed/media/thumbnailshealth_20251126_004505_1.jpeg
+WARNING 2025-11-26 00:49:47,855 basehttp 65968 59628 "GET /feed/media/thumbnailshealth_20251126_004505_1.jpeg HTTP/1.1" 404 3147
+WARNING 2025-11-26 00:49:47,887 log 65968 56260 Not Found: /feed/media/thumbnailstechnology_20251126_004402_1.png
+WARNING 2025-11-26 00:49:47,887 basehttp 65968 56260 "GET /feed/media/thumbnailstechnology_20251126_004402_1.png HTTP/1.1" 404 3156
+WARNING 2025-11-26 00:49:47,903 log 65968 38836 Not Found: /feed/media/thumbnails\x0business_20251126_004238_1.jpeg
+WARNING 2025-11-26 00:49:47,904 basehttp 65968 38836 "GET /feed/media/thumbnails%0Business_20251126_004238_1.jpeg HTTP/1.1" 404 3155
+WARNING 2025-11-26 00:49:47,922 log 65968 35168 Not Found: /feed/media/thumbnailssports_20251126_004013_1.jpeg
+WARNING 2025-11-26 00:49:47,923 basehttp 65968 35168 "GET /feed/media/thumbnailssports_20251126_004013_1.jpeg HTTP/1.1" 404 3147
+WARNING 2025-11-26 00:49:47,933 log 65968 47632 Not Found: /feed/media/thumbnails\x0entertainment_20251126_004118_1.jpeg
+WARNING 2025-11-26 00:49:47,934 basehttp 65968 47632 "GET /feed/media/thumbnails%0Entertainment_20251126_004118_1.jpeg HTTP/1.1" 404 3170
+INFO 2025-11-26 00:50:05,914 basehttp 65968 47632 "GET /api/articles/?mood=happy&category=society HTTP/1.1" 200 52
+INFO 2025-11-26 00:50:05,961 basehttp 65968 47632 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-26 00:50:05,980 basehttp 65968 47632 "GET /api/articles/?category=society HTTP/1.1" 200 52
+INFO 2025-11-26 00:50:06,007 basehttp 65968 47632 "GET /api/articles/ HTTP/1.1" 200 35415
+WARNING 2025-11-26 00:50:06,090 log 65968 47632 Not Found: /feed/media/thumbnailshealth_20251126_004505_1.jpeg
+WARNING 2025-11-26 00:50:06,091 basehttp 65968 47632 "GET /feed/media/thumbnailshealth_20251126_004505_1.jpeg HTTP/1.1" 404 3147
+WARNING 2025-11-26 00:50:06,107 log 65968 38836 Not Found: /feed/media/thumbnails\x0business_20251126_004238_1.jpeg
+WARNING 2025-11-26 00:50:06,107 basehttp 65968 38836 "GET /feed/media/thumbnails%0Business_20251126_004238_1.jpeg HTTP/1.1" 404 3155
+WARNING 2025-11-26 00:50:06,122 log 65968 35168 Not Found: /feed/media/thumbnailstechnology_20251126_004402_1.png
+WARNING 2025-11-26 00:50:06,123 basehttp 65968 35168 "GET /feed/media/thumbnailstechnology_20251126_004402_1.png HTTP/1.1" 404 3156
+WARNING 2025-11-26 00:50:06,137 log 65968 59628 Not Found: /feed/media/thumbnailssports_20251126_004013_1.jpeg
+WARNING 2025-11-26 00:50:06,137 basehttp 65968 59628 "GET /feed/media/thumbnailssports_20251126_004013_1.jpeg HTTP/1.1" 404 3147
+WARNING 2025-11-26 00:50:06,153 log 65968 56260 Not Found: /feed/media/thumbnails\x0entertainment_20251126_004118_1.jpeg
+WARNING 2025-11-26 00:50:06,154 basehttp 65968 56260 "GET /feed/media/thumbnails%0Entertainment_20251126_004118_1.jpeg HTTP/1.1" 404 3170
+INFO 2025-11-26 00:50:08,525 basehttp 65968 56260 "GET /api/articles/?mood=happy&category=international HTTP/1.1" 200 52
+INFO 2025-11-26 00:50:08,544 basehttp 65968 56260 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-26 00:50:08,563 basehttp 65968 56260 "GET /api/articles/?category=international HTTP/1.1" 200 52
+INFO 2025-11-26 00:50:08,592 basehttp 65968 56260 "GET /api/articles/ HTTP/1.1" 200 35415
+WARNING 2025-11-26 00:50:08,716 log 65968 47632 Not Found: /feed/media/thumbnailssports_20251126_004013_1.jpeg
+WARNING 2025-11-26 00:50:08,717 basehttp 65968 47632 "GET /feed/media/thumbnailssports_20251126_004013_1.jpeg HTTP/1.1" 404 3147
+WARNING 2025-11-26 00:50:08,733 log 65968 38836 Not Found: /feed/media/thumbnails\x0entertainment_20251126_004118_1.jpeg
+WARNING 2025-11-26 00:50:08,734 basehttp 65968 38836 "GET /feed/media/thumbnails%0Entertainment_20251126_004118_1.jpeg HTTP/1.1" 404 3170
+WARNING 2025-11-26 00:50:08,749 log 65968 56260 Not Found: /feed/media/thumbnailshealth_20251126_004505_1.jpeg
+WARNING 2025-11-26 00:50:08,750 basehttp 65968 56260 "GET /feed/media/thumbnailshealth_20251126_004505_1.jpeg HTTP/1.1" 404 3147
+WARNING 2025-11-26 00:50:08,764 log 65968 59628 Not Found: /feed/media/thumbnailstechnology_20251126_004402_1.png
+WARNING 2025-11-26 00:50:08,765 basehttp 65968 59628 "GET /feed/media/thumbnailstechnology_20251126_004402_1.png HTTP/1.1" 404 3156
+WARNING 2025-11-26 00:50:08,779 log 65968 35168 Not Found: /feed/media/thumbnails\x0business_20251126_004238_1.jpeg
+WARNING 2025-11-26 00:50:08,780 basehttp 65968 35168 "GET /feed/media/thumbnails%0Business_20251126_004238_1.jpeg HTTP/1.1" 404 3155
+INFO 2025-11-26 00:50:17,655 basehttp 65968 35168 "GET /api/articles/?mood=happy&category=business HTTP/1.1" 200 52
+INFO 2025-11-26 00:50:17,679 basehttp 65968 35168 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-26 00:50:17,707 basehttp 65968 35168 "GET /api/articles/?category=business HTTP/1.1" 200 6507
+WARNING 2025-11-26 00:50:17,802 log 65968 35168 Not Found: /feed/media/thumbnails\x0business_20251126_004238_1.jpeg
+WARNING 2025-11-26 00:50:17,802 basehttp 65968 35168 "GET /feed/media/thumbnails%0Business_20251126_004238_1.jpeg HTTP/1.1" 404 3155
+INFO 2025-11-26 00:50:36,272 basehttp 65968 35168 "GET /api/articles/?mood=happy&category=university HTTP/1.1" 200 52
+INFO 2025-11-26 00:50:36,294 basehttp 65968 35168 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-26 00:50:36,315 basehttp 65968 35168 "GET /api/articles/?category=university HTTP/1.1" 200 52
+INFO 2025-11-26 00:50:36,348 basehttp 65968 35168 "GET /api/articles/ HTTP/1.1" 200 35415
+WARNING 2025-11-26 00:50:36,431 log 65968 35168 Not Found: /feed/media/thumbnailshealth_20251126_004505_1.jpeg
+WARNING 2025-11-26 00:50:36,433 basehttp 65968 35168 "GET /feed/media/thumbnailshealth_20251126_004505_1.jpeg HTTP/1.1" 404 3147
+WARNING 2025-11-26 00:50:36,456 log 65968 56260 Not Found: /feed/media/thumbnails\x0business_20251126_004238_1.jpeg
+WARNING 2025-11-26 00:50:36,456 basehttp 65968 56260 "GET /feed/media/thumbnails%0Business_20251126_004238_1.jpeg HTTP/1.1" 404 3155
+WARNING 2025-11-26 00:50:36,474 log 65968 59628 Not Found: /feed/media/thumbnailstechnology_20251126_004402_1.png
+WARNING 2025-11-26 00:50:36,475 basehttp 65968 59628 "GET /feed/media/thumbnailstechnology_20251126_004402_1.png HTTP/1.1" 404 3156
+WARNING 2025-11-26 00:50:36,488 log 65968 38836 Not Found: /feed/media/thumbnails\x0entertainment_20251126_004118_1.jpeg
+WARNING 2025-11-26 00:50:36,488 basehttp 65968 38836 "GET /feed/media/thumbnails%0Entertainment_20251126_004118_1.jpeg HTTP/1.1" 404 3170
+WARNING 2025-11-26 00:50:36,505 log 65968 47632 Not Found: /feed/media/thumbnailssports_20251126_004013_1.jpeg
+WARNING 2025-11-26 00:50:36,505 basehttp 65968 47632 "GET /feed/media/thumbnailssports_20251126_004013_1.jpeg HTTP/1.1" 404 3147

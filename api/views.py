@@ -17,7 +17,7 @@ class ArticleViewSet(viewsets.ModelViewSet):
     pagination_class = StandardResultsSetPagination
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
     filterset_fields = ['mood', 'category']
-    search_fields = ['headline', 'french_summary', 'english_summary']
+    search_fields = ['headline', 'headline_en', 'headline_fr', 'french_summary', 'english_summary']
     ordering_fields = ['created_at', 'view_count', 'reaction_count', 'comment_count']
 
     def get_permissions(self):

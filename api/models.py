@@ -4,7 +4,12 @@ from django.dispatch import receiver
 import random
 
 class Article(models.Model):
-    headline = models.CharField(max_length=300)
+    # Bilingual headlines
+    headline_en = models.CharField(max_length=300, null=True, blank=True)
+    headline_fr = models.CharField(max_length=300, null=True, blank=True)
+    # Legacy headline field for backward compatibility
+    headline = models.CharField(max_length=300, null=True, blank=True)
+    
     category = models.CharField(max_length=100, db_index=True)
     french_summary = models.TextField()
     english_summary = models.TextField()
@@ -21,6 +26,15 @@ class Article(models.Model):
     reaction_count = models.PositiveIntegerField(default=0)
 
     def save(self, *args, **kwargs):
+        # Backward compatibility: populate headline_en/headline_fr from headline if missing
+        if not self.headline_en and not self.headline_fr and self.headline:
+            self.headline_en = self.headline
+            self.headline_fr = self.headline
+        
+        # Ensure at least one headline exists
+        if not self.headline and (self.headline_en or self.headline_fr):
+            self.headline = self.headline_en or self.headline_fr
+        
         if not self.view_count:
             self.view_count = random.randint(1000, 5000000)
         
@@ -34,7 +48,8 @@ class Article(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return self.headline
+        return self.headline_en or self.headline_fr or self.headline or 'No headline'
+
 
 class Comment(models.Model):
     article = models.ForeignKey(Article, related_name='comments', on_delete=models.CASCADE)
@@ -43,7 +58,8 @@ class Comment(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.commenter_name} on {self.article.headline[:30]}"
+        headline = self.article.headline_en or self.article.headline_fr or self.article.headline or 'No headline'
+        return f"{self.commenter_name} on {headline[:30]}"
 
 class VisitorSubscription(models.Model):
     session_key = models.CharField(max_length=40, unique=True)
