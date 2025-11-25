@@ -563,16 +563,29 @@
                         <span class="text-xs font-bold text-yellow-500 capitalize" x-text="currentMood"></span>
                     </div>
 
-                    <!-- View Counter with Eye Icon -->
-                    <div class="flex items-center gap-2 bg-gray-800/50 px-3 py-1.5 rounded-full">
-                        <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                            <path fill-rule="evenodd"
-                                d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
-                                clip-rule="evenodd" />
-                        </svg>
-                        <span class="text-sm font-bold text-yellow-500 count-flip" x-text="currentViewCount"
-                            :key="currentIndex"></span>
+                    <!-- Stats: View and Comment Counts -->
+                    <div class="flex items-center gap-3">
+                        <!-- View Counter with Eye Icon -->
+                        <div class="flex items-center gap-1.5 bg-gray-800/50 px-3 py-1.5 rounded-full">
+                            <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                                <path fill-rule="evenodd"
+                                    d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-sm font-bold text-yellow-500"
+                                x-text="filteredArticles[currentIndex]?.viewCount || '0'"></span>
+                        </div>
+
+                        <!-- Comment Counter with Icon -->
+                        <div class="flex items-center gap-1.5 bg-gray-800/50 px-3 py-1.5 rounded-full">
+                            <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L7.586 10 5.293 7.707a1 1 0 010-1.414zM11 12a1 1 0 100 2h3a1 1 0 100-2h-3z" />
+                            </svg>
+                            <span class="text-sm font-bold text-yellow-500"
+                                x-text="filteredArticles[currentIndex]?.commentCount || '0'"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -828,7 +841,7 @@
                 </div>
 
                 <div class="p-4 border-t border-gray-800">
-                    <input type="text" x-model="quickCommentText" @keyup.enter="submitQuickComment()"
+                    <input type="text" x-model="quickCommentText" @keyup.enter="submitQuickComment()" maxlength="500"
                         placeholder="Drop a quick gist..."
                         class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-yellow-500">
                     <button @click="submitQuickComment()"
@@ -856,10 +869,10 @@
                 <h3 class="text-xl font-bold text-yellow-500 mb-4">Drop Your Gist 💬</h3>
 
                 <div class="mb-4">
-                    <input type="text" x-model="commentUser" placeholder="Your name"
+                    <input type="text" x-model="commentUser" placeholder="Your name" maxlength="50"
                         class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-yellow-500 mb-3">
 
-                    <textarea x-model="commentText" placeholder="What's on your mind?" rows="3"
+                    <textarea x-model="commentText" placeholder="What's on your mind?" rows="3" maxlength="500"
                         class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-yellow-500 resize-none"></textarea>
                 </div>
 
@@ -991,7 +1004,6 @@
                 moodSelected: false,
                 currentMood: '',
                 currentIndex: 0,
-                currentViewCount: '1.2k',
                 isLiked: false,
                 showDrumEffect: false,
                 showCommentModal: false,
@@ -999,7 +1011,7 @@
                 isPlaying: false,
                 audioProgress: 0,
                 readerLang: 'en',
-                commentUser: '',
+                commentUser: localStorage.getItem('gistme_username') || 'Anonymous',
                 commentText: '',
                 quickCommentText: '',
                 liveComments: [],
@@ -1148,7 +1160,6 @@
                 initApp() {
                     console.log('GistMe App Initialized');
                     this.startCommentSimulation();
-                    this.updateViewCount();
                     this.fetchAdvertisements();
                 },
 
@@ -1168,7 +1179,8 @@
                             source: article.source_names && article.source_names.length > 0 ? article.source_names[0] : 'Sponsor',
                             timeAgo: this.formatTimeAgo(article.created_at),
                             audioUrl: article.english_audio,
-                            viewCount: this.formatNumber(article.view_count)
+                            viewCount: this.formatNumber(article.view_count),
+                            commentCount: this.formatNumber(article.comment_count)
                         }));
                     } catch (error) {
                         console.log('No advertisements available');
@@ -1302,7 +1314,8 @@
                         source: article.source_names && article.source_names.length > 0 ? article.source_names[0] : 'GistMe',
                         timeAgo: this.formatTimeAgo(article.created_at),
                         audioUrl: article.english_audio,
-                        viewCount: this.formatNumber(article.view_count)
+                        viewCount: this.formatNumber(article.view_count),
+                        commentCount: this.formatNumber(article.comment_count)
                     }));
 
                     if (reset) {
@@ -1363,17 +1376,10 @@
                     const articleHeight = container.clientHeight;
                     const newIndex = Math.floor(container.scrollTop / articleHeight);
 
-                    // Update view count when article changes
+                    // Update current index when article changes
                     if (newIndex !== this.currentIndex) {
                         this.currentIndex = newIndex;
-                        this.updateViewCount();
                     }
-                },
-
-                // NEW: Update view count with animation
-                updateViewCount() {
-                    const index = this.currentIndex % this.viewCounts.length;
-                    this.currentViewCount = this.viewCounts[index];
                 },
 
                 handleTouchStart(e) {
@@ -1439,6 +1445,8 @@
                 },
 
                 openCommentModal() {
+                    // Load saved username or default to Anonymous
+                    this.commentUser = localStorage.getItem('gistme_username') || 'Anonymous';
                     this.showCommentModal = true;
                 },
 
@@ -1448,44 +1456,176 @@
                     this.commentText = '';
                 },
 
-                submitComment() {
-                    if (this.commentText.trim() && this.commentUser.trim()) {
-                        const newComment = {
-                            user: this.commentUser,
-                            text: this.commentText,
-                            time: 'Just now',
-                            delay: 0
-                        };
+                async submitComment() {
+                    if (!this.commentText.trim() || !this.commentUser.trim()) return;
 
-                        this.liveComments.push(newComment);
-                        this.allComments.unshift(newComment);
+                    const currentArticle = this.filteredArticles[this.currentIndex];
+                    if (!currentArticle) return;
 
-                        setTimeout(() => {
-                            this.liveComments.shift();
-                        }, 5000);
+                    // Save username to localStorage if not "Anonymous"
+                    if (this.commentUser !== 'Anonymous') {
+                        localStorage.setItem('gistme_username', this.commentUser);
+                    }
 
-                        this.closeCommentModal();
+                    const tempId = 'temp_' + Date.now();
+                    const newComment = {
+                        id: tempId,
+                        commenter_name: this.commentUser,
+                        comment_text: this.commentText,
+                        timestamp: new Date().toISOString(),
+                        user: this.commentUser,
+                        text: this.commentText,
+                        time: 'Just now',
+                        delay: 0
+                    };
+
+                    // Optimistic UI update
+                    currentArticle.commentCount = String(parseInt(currentArticle.commentCount.replace(/[^0-9]/g, '')) + 1);
+                    this.liveComments.push(newComment);
+                    this.allComments.unshift(newComment);
+
+                    // Store for potential rollback
+                    const commentUser = this.commentUser;
+                    const commentText = this.commentText;
+
+                    // Clear form and close modal
+                    this.closeCommentModal();
+
+                    // Remove from live comments after 5s
+                    setTimeout(() => {
+                        const index = this.liveComments.findIndex(c => c.id === tempId);
+                        if (index !== -1) this.liveComments.splice(index, 1);
+                    }, 5000);
+
+                    try {
+                        // Post to API
+                        const response = await fetch('/api/comments/', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({
+                                article: currentArticle.id,
+                                commenter_name: commentUser,
+                                comment_text: commentText
+                            })
+                        });
+
+                        if (!response.ok) throw new Error('Failed to post comment');
+
+                        const savedComment = await response.json();
+
+                        // Replace temp comment with real comment
+                        const commentIndex = this.allComments.findIndex(c => c.id === tempId);
+                        if (commentIndex !== -1) {
+                            this.allComments[commentIndex] = {
+                                ...savedComment,
+                                user: savedComment.commenter_name,
+                                text: savedComment.comment_text,
+                                time: 'Just now'
+                            };
+                        }
+
+                        console.log('✓ Comment posted successfully');
+
+                    } catch (error) {
+                        console.error('Error posting comment:', error);
+
+                        // Rollback optimistic update
+                        currentArticle.commentCount = String(Math.max(0, parseInt(currentArticle.commentCount.replace(/[^0-9]/g, '')) - 1));
+
+                        // Remove comment from lists
+                        const commentIndex = this.allComments.findIndex(c => c.id === tempId);
+                        if (commentIndex !== -1) this.allComments.splice(commentIndex, 1);
+
+                        const liveIndex = this.liveComments.findIndex(c => c.id === tempId);
+                        if (liveIndex !== -1) this.liveComments.splice(liveIndex, 1);
+
+                        alert('Failed to post comment. Please try again.');
                     }
                 },
 
-                submitQuickComment() {
-                    if (this.quickCommentText.trim()) {
-                        const newComment = {
-                            user: 'You',
-                            text: this.quickCommentText,
-                            time: 'Just now',
-                            delay: 0
-                        };
+                async submitQuickComment() {
+                    if (!this.quickCommentText.trim()) return;
 
-                        this.allComments.unshift(newComment);
-                        this.liveComments.push(newComment);
+                    const currentArticle = this.filteredArticles[this.currentIndex];
+                    if (!currentArticle) return;
 
-                        setTimeout(() => {
-                            this.liveComments.shift();
-                        }, 5000);
+                    // Use saved username or "Anonymous"
+                    const commenterName = localStorage.getItem('gistme_username') || 'Anonymous';
 
-                        this.quickCommentText = '';
-                        this.closeCommentsPanel();
+                    const tempId = 'temp_' + Date.now();
+                    const newComment = {
+                        id: tempId,
+                        commenter_name: commenterName,
+                        comment_text: this.quickCommentText,
+                        timestamp: new Date().toISOString(),
+                        user: commenterName,
+                        text: this.quickCommentText,
+                        time: 'Just now',
+                        delay: 0
+                    };
+
+                    // Optimistic UI update
+                    currentArticle.commentCount = String(parseInt(currentArticle.commentCount.replace(/[^0-9]/g, '')) + 1);
+                    this.allComments.unshift(newComment);
+                    this.liveComments.push(newComment);
+
+                    const commentText = this.quickCommentText;
+                    this.quickCommentText = '';
+                    this.closeCommentsPanel();
+
+                    // Remove from live comments after 5s
+                    setTimeout(() => {
+                        const index = this.liveComments.findIndex(c => c.id === tempId);
+                        if (index !== -1) this.liveComments.splice(index, 1);
+                    }, 5000);
+
+                    try {
+                        // Post to API
+                        const response = await fetch('/api/comments/', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({
+                                article: currentArticle.id,
+                                commenter_name: commenterName,
+                                comment_text: commentText
+                            })
+                        });
+
+                        if (!response.ok) throw new Error('Failed to post comment');
+
+                        const savedComment = await response.json();
+
+                        // Replace temp comment with real comment
+                        const commentIndex = this.allComments.findIndex(c => c.id === tempId);
+                        if (commentIndex !== -1) {
+                            this.allComments[commentIndex] = {
+                                ...savedComment,
+                                user: savedComment.commenter_name,
+                                text: savedComment.comment_text,
+                                time: 'Just now'
+                            };
+                        }
+
+                        console.log('✓ Comment posted successfully');
+
+                    } catch (error) {
+                        console.error('Error posting quick comment:', error);
+
+                        // Rollback optimistic update
+                        currentArticle.commentCount = String(Math.max(0, parseInt(currentArticle.commentCount.replace(/[^0-9]/g, '')) - 1));
+
+                        // Remove comment from lists
+                        const commentIndex = this.allComments.findIndex(c => c.id === tempId);
+                        if (commentIndex !== -1) this.allComments.splice(commentIndex, 1);
+
+                        const liveIndex = this.liveComments.findIndex(c => c.id === tempId);
+                        if (liveIndex !== -1) this.liveComments.splice(liveIndex, 1);
+
+                        alert('Failed to post comment. Please try again.');
                     }
                 },
 

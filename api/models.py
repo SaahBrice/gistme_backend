@@ -1,4 +1,6 @@
 from django.db import models
+from django.db.models.signals import post_save, post_delete
+from django.dispatch import receiver
 import random
 
 class Article(models.Model):
@@ -52,3 +54,19 @@ class VisitorSubscription(models.Model):
 
     def __str__(self):
         return f"Subscription for {self.session_key}"
+
+
+# Signals to automatically update comment_count
+@receiver(post_save, sender=Comment)
+def increment_comment_count(sender, instance, created, **kwargs):
+    """Increment article comment_count when a new comment is created"""
+    if created:
+        instance.article.comment_count += 1
+        instance.article.save(update_fields=['comment_count'])
+
+
+@receiver(post_delete, sender=Comment)
+def decrement_comment_count(sender, instance, **kwargs):
+    """Decrement article comment_count when a comment is deleted"""
+    instance.article.comment_count = max(0, instance.article.comment_count - 1)
+    instance.article.save(update_fields=['comment_count'])

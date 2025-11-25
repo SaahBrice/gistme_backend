@@ -366,3 +366,76 @@ INFO 2025-11-25 22:44:08,101 basehttp 39656 58676 "GET /api/articles/?mood=happy
 INFO 2025-11-25 22:44:08,121 basehttp 39656 58676 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
 INFO 2025-11-25 22:44:08,141 basehttp 39656 58676 "GET /api/articles/?category=crime HTTP/1.1" 200 52
 INFO 2025-11-25 22:44:08,165 basehttp 39656 58676 "GET /api/articles/ HTTP/1.1" 200 10392
+INFO 2025-11-25 22:53:05,004 autoreload 65152 54200 Watching for file changes with StatReloader
+INFO 2025-11-25 22:53:07,497 basehttp 65152 49312 "GET /feed/ HTTP/1.1" 200 68316
+WARNING 2025-11-25 22:53:07,597 log 65152 49312 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 22:53:07,598 basehttp 65152 49312 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-25 22:53:09,743 basehttp 65152 49312 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-25 22:53:11,666 basehttp 65152 49312 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-25 22:53:11,718 basehttp 65152 49312 "GET /api/articles/ HTTP/1.1" 200 10392
+INFO 2025-11-25 22:54:02,024 basehttp 65152 49312 "GET /feed/ HTTP/1.1" 200 68316
+WARNING 2025-11-25 22:54:02,113 log 65152 49312 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 22:54:02,114 basehttp 65152 49312 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-25 22:54:03,122 basehttp 65152 49312 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-25 22:54:04,866 basehttp 65152 49312 "GET /api/articles/?mood=inspiring HTTP/1.1" 200 52
+INFO 2025-11-25 22:54:04,900 basehttp 65152 49312 "GET /api/articles/ HTTP/1.1" 200 10392
+INFO 2025-11-25 23:11:31,488 basehttp 65152 57684 "GET /feed/ HTTP/1.1" 200 67926
+WARNING 2025-11-25 23:11:31,560 log 65152 57684 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 23:11:31,561 basehttp 65152 57684 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-25 23:11:33,172 basehttp 65152 57684 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-25 23:11:35,493 basehttp 65152 57684 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-25 23:11:35,533 basehttp 65152 57684 "GET /api/articles/ HTTP/1.1" 200 10392
+INFO 2025-11-25 23:11:54,099 autoreload 5592 66072 Watching for file changes with StatReloader
+INFO 2025-11-25 23:11:56,023 basehttp 5592 65848 "GET /feed/ HTTP/1.1" 200 67926
+WARNING 2025-11-25 23:11:56,096 log 5592 65848 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 23:11:56,097 basehttp 5592 65848 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-25 23:11:56,746 basehttp 5592 65848 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-25 23:12:00,609 basehttp 5592 65848 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-25 23:12:00,650 basehttp 5592 65848 "GET /api/articles/ HTTP/1.1" 200 10392
+INFO 2025-11-25 23:15:27,749 autoreload 5592 66072 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\models.py changed, reloading.
+INFO 2025-11-25 23:15:29,354 autoreload 43036 64056 Watching for file changes with StatReloader
+INFO 2025-11-25 23:19:02,438 autoreload 66092 54336 Watching for file changes with StatReloader
+INFO 2025-11-25 23:19:04,178 basehttp 66092 66540 "GET /feed/ HTTP/1.1" 200 74031
+WARNING 2025-11-25 23:19:04,255 log 66092 66540 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 23:19:04,257 basehttp 66092 66540 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-25 23:19:05,668 basehttp 66092 66540 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-25 23:19:06,841 basehttp 66092 66540 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-25 23:19:06,900 basehttp 66092 66540 "GET /api/articles/ HTTP/1.1" 200 10392
+INFO 2025-11-25 23:19:19,072 basehttp 66092 66540 "POST /api/comments/ HTTP/1.1" 201 126
+INFO 2025-11-25 23:19:27,956 basehttp 66092 66540 "GET /api/ HTTP/1.1" 200 10323
+INFO 2025-11-25 23:19:27,992 basehttp 66092 66540 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2025-11-25 23:19:27,997 basehttp 66092 63260 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2025-11-25 23:19:27,998 basehttp 66092 57296 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2025-11-25 23:19:27,998 basehttp 66092 64852 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2025-11-25 23:19:28,000 basehttp 66092 66540 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2025-11-25 23:19:28,002 basehttp 66092 60588 "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+INFO 2025-11-25 23:19:28,002 basehttp 66092 57296 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2025-11-25 23:19:28,003 basehttp 66092 63260 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2025-11-25 23:19:28,003 basehttp 66092 64852 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2025-11-25 23:19:28,003 basehttp 66092 56864 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2025-11-25 23:19:28,005 basehttp 66092 66540 "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+INFO 2025-11-25 23:19:28,007 basehttp 66092 66540 "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO 2025-11-25 23:19:29,073 basehttp 66092 66540 "GET /api/comments/ HTTP/1.1" 200 17086
+INFO 2025-11-25 23:19:29,217 basehttp 66092 66540 "GET /static/rest_framework/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 304 0
+INFO 2025-11-25 23:19:41,895 basehttp 66092 66540 "GET /api/ HTTP/1.1" 200 10323
+INFO 2025-11-25 23:19:43,021 basehttp 66092 66540 "GET /api/articles/ HTTP/1.1" 200 25651
+INFO 2025-11-25 23:19:52,357 basehttp 66092 66540 "GET /feed/ HTTP/1.1" 200 74031
+WARNING 2025-11-25 23:19:52,419 log 66092 66540 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 23:19:52,420 basehttp 66092 66540 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-25 23:19:53,193 basehttp 66092 66540 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-25 23:19:54,310 basehttp 66092 66540 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-25 23:19:54,388 basehttp 66092 66540 "GET /api/articles/ HTTP/1.1" 200 10518
+INFO 2025-11-25 23:20:12,999 basehttp 66092 66540 "POST /api/comments/ HTTP/1.1" 201 116
+INFO 2025-11-25 23:21:02,978 basehttp 66092 66540 "POST /api/comments/ HTTP/1.1" 201 124
+INFO 2025-11-25 23:30:00,478 autoreload 46092 65724 Watching for file changes with StatReloader
+INFO 2025-11-25 23:30:18,077 basehttp 46092 60588 "GET /feed/ HTTP/1.1" 200 74710
+WARNING 2025-11-25 23:30:18,174 log 46092 60588 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 23:30:18,176 basehttp 46092 60588 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-25 23:30:23,038 basehttp 46092 60588 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-25 23:30:27,384 basehttp 46092 60588 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-25 23:30:27,434 basehttp 46092 60588 "GET /api/articles/ HTTP/1.1" 200 10760
+INFO 2025-11-25 23:30:48,493 basehttp 46092 60588 "POST /api/comments/ HTTP/1.1" 201 116
+INFO 2025-11-25 23:30:58,965 basehttp 46092 60588 "POST /api/comments/ HTTP/1.1" 201 117
+INFO 2025-11-25 23:31:36,727 basehttp 46092 60588 "POST /api/comments/ HTTP/1.1" 201 130
+INFO 2025-11-25 23:31:55,977 basehttp 46092 60588 "GET /api/articles/ HTTP/1.1" 200 27379
+INFO 2025-11-25 23:32:11,523 basehttp 46092 60588 "GET /api/articles/ HTTP/1.1" 200 27379
