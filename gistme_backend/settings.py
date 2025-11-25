@@ -161,6 +161,9 @@ WEBPUSH_SETTINGS = {
     "VAPID_ADMIN_EMAIL": "admin@example.com",
 }
 
+# Feed Settings
+AD_INTERVAL = 3  # Show an advertisement every N articles
+
 INSTALLED_APPS += [
     "django_q",
     "drf_spectacular",

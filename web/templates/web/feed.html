@@ -492,33 +492,61 @@
                 <p class="text-xl md:text-2xl text-gray-300 mb-12 slide-up" style="animation-delay: 0.1s">Choose your
                     vibe to start gisting</p>
 
-                <div class="grid grid-cols-2 gap-6 max-w-md mx-auto">
-                    <button @click="selectMood('curious')"
-                        class="vibe-btn slide-up bg-gradient-to-br from-purple-600 to-purple-800 p-8 rounded-3xl hover:scale-105 transition-transform duration-300 shadow-2xl"
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                    <button @click="selectMood('happy')"
+                        class="vibe-btn slide-up bg-gradient-to-br from-yellow-500 to-yellow-700 p-6 rounded-3xl hover:scale-105 transition-transform duration-300 shadow-2xl"
+                        style="animation-delay: 0.1s">
+                        <div class="text-5xl mb-2">😊</div>
+                        <div class="text-lg font-bold">Happy</div>
+                    </button>
+
+                    <button @click="selectMood('exciting')"
+                        class="vibe-btn slide-up bg-gradient-to-br from-orange-500 to-red-600 p-6 rounded-3xl hover:scale-105 transition-transform duration-300 shadow-2xl"
+                        style="animation-delay: 0.15s">
+                        <div class="text-5xl mb-2">🤩</div>
+                        <div class="text-lg font-bold">Exciting</div>
+                    </button>
+
+                    <button @click="selectMood('inspiring')"
+                        class="vibe-btn slide-up bg-gradient-to-br from-purple-500 to-pink-600 p-6 rounded-3xl hover:scale-105 transition-transform duration-300 shadow-2xl"
                         style="animation-delay: 0.2s">
-                        <div class="text-6xl mb-3">🤔</div>
-                        <div class="text-xl font-bold">Curious</div>
+                        <div class="text-5xl mb-2">✨</div>
+                        <div class="text-lg font-bold">Inspiring</div>
                     </button>
 
-                    <button @click="selectMood('serious')"
-                        class="vibe-btn slide-up bg-gradient-to-br from-blue-700 to-blue-900 p-8 rounded-3xl hover:scale-105 transition-transform duration-300 shadow-2xl"
+                    <button @click="selectMood('shocking')"
+                        class="vibe-btn slide-up bg-gradient-to-br from-red-600 to-red-800 p-6 rounded-3xl hover:scale-105 transition-transform duration-300 shadow-2xl"
+                        style="animation-delay: 0.25s">
+                        <div class="text-5xl mb-2">😱</div>
+                        <div class="text-lg font-bold">Shocking</div>
+                    </button>
+
+                    <button @click="selectMood('concerning')"
+                        class="vibe-btn slide-up bg-gradient-to-br from-blue-700 to-blue-900 p-6 rounded-3xl hover:scale-105 transition-transform duration-300 shadow-2xl"
                         style="animation-delay: 0.3s">
-                        <div class="text-6xl mb-3">🧐</div>
-                        <div class="text-xl font-bold">Serious</div>
+                        <div class="text-5xl mb-2">🤔</div>
+                        <div class="text-lg font-bold">Concerning</div>
                     </button>
 
-                    <button @click="selectMood('chill')"
-                        class="vibe-btn slide-up bg-gradient-to-br from-green-600 to-green-800 p-8 rounded-3xl hover:scale-105 transition-transform duration-300 shadow-2xl"
+                    <button @click="selectMood('sad')"
+                        class="vibe-btn slide-up bg-gradient-to-br from-gray-600 to-gray-800 p-6 rounded-3xl hover:scale-105 transition-transform duration-300 shadow-2xl"
+                        style="animation-delay: 0.35s">
+                        <div class="text-5xl mb-2">😢</div>
+                        <div class="text-lg font-bold">Sad</div>
+                    </button>
+
+                    <button @click="selectMood('angry')"
+                        class="vibe-btn slide-up bg-gradient-to-br from-red-700 to-orange-700 p-6 rounded-3xl hover:scale-105 transition-transform duration-300 shadow-2xl"
                         style="animation-delay: 0.4s">
-                        <div class="text-6xl mb-3">😌</div>
-                        <div class="text-xl font-bold">Chill</div>
+                        <div class="text-5xl mb-2">😠</div>
+                        <div class="text-lg font-bold">Angry</div>
                     </button>
 
-                    <button @click="selectMood('hyped')"
-                        class="vibe-btn slide-up bg-gradient-to-br from-red-600 to-orange-600 p-8 rounded-3xl hover:scale-105 transition-transform duration-300 shadow-2xl"
-                        style="animation-delay: 0.5s">
-                        <div class="text-6xl mb-3">🤩</div>
-                        <div class="text-xl font-bold">Hyped</div>
+                    <button @click="selectMood('neutral')"
+                        class="vibe-btn slide-up bg-gradient-to-br from-slate-600 to-slate-800 p-6 rounded-3xl hover:scale-105 transition-transform duration-300 shadow-2xl"
+                        style="animation-delay: 0.45s">
+                        <div class="text-5xl mb-2">😐</div>
+                        <div class="text-lg font-bold">Neutral</div>
                     </button>
                 </div>
             </div>
@@ -728,30 +756,38 @@
                     </div>
                 </div>
 
-                <div class="flex-1 overflow-y-auto p-4">
-                    <div class="grid grid-cols-2 gap-3">
+                <div class="flex-1 overflow-y-auto p-4 space-y-6">
+                    <!-- All News Button -->
+                    <button @click="selectCategory('all')"
+                        class="w-full p-4 rounded-2xl text-left font-bold transition-all duration-300 hover:scale-105"
+                        :class="selectedCategory === 'all' ? 'bg-gradient-to-br from-yellow-400 to-yellow-600 text-black' : 'bg-gradient-to-br from-gray-700 to-gray-800 text-white'">
+                        <div class="flex items-center gap-3">
+                            <div class="text-3xl">📰</div>
+                            <div>
+                                <div class="text-lg font-black">All News</div>
+                                <div class="text-xs opacity-75">Everything</div>
+                            </div>
+                        </div>
+                    </button>
 
-                        <button @click="selectCategory('all')"
-                            class="category-card relative p-5 rounded-2xl text-left font-bold transition-all duration-300 hover:scale-105"
-                            :class="selectedCategory === 'all' ? 'bg-gradient-to-br from-yellow-400 to-yellow-600 text-black category-selected' : 'bg-gradient-to-br from-gray-700 to-gray-800 text-white'">
-                            <div class="text-4xl mb-2">📰</div>
-                            <div class="text-sm font-black">All News</div>
-                            <div class="absolute top-2 right-2 w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center text-black text-xs font-bold"
-                                x-text="articles.length"></div>
-                        </button>
-
-                        <template x-for="cat in categories" :key="cat.id">
-                            <button @click="selectCategory(cat.id)"
-                                class="category-card relative p-5 rounded-2xl text-left font-bold transition-all duration-300 hover:scale-105"
-                                :class="selectedCategory === cat.id ? cat.selectedGradient + ' text-black category-selected' : cat.gradient + ' text-white'">
-                                <div class="text-4xl mb-2" x-text="cat.emoji"></div>
-                                <div class="text-sm font-black" x-text="cat.name"></div>
-                                <div class="absolute top-2 right-2 w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center text-black text-xs font-bold"
-                                    x-text="getCategoryCount(cat.id)"></div>
-                            </button>
-                        </template>
-
-                    </div>
+                    <!-- Category Groups -->
+                    <template x-for="group in categoryGroups" :key="group.name">
+                        <div class="space-y-2">
+                            <div class="flex items-center gap-2 px-2 text-yellow-400 font-bold text-sm">
+                                <span x-text="group.icon"></span>
+                                <span x-text="group.name"></span>
+                            </div>
+                            <div class="grid grid-cols-1 gap-2">
+                                <template x-for="category in group.categories" :key="category">
+                                    <button @click="selectCategory(category)"
+                                        class="px-4 py-2.5 rounded-xl text-left text-sm font-semibold transition-all duration-200 hover:scale-105"
+                                        :class="selectedCategory === category ? 'bg-yellow-500 text-black' : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700'">
+                                        <span x-text="category"></span>
+                                    </button>
+                                </template>
+                            </div>
+                        </div>
+                    </template>
                 </div>
             </div>
         </div>
@@ -985,6 +1021,55 @@
                 // View counts for each article
                 viewCounts: ['1.2k', '3.5k', '892', '5.1k', '2.8k', '1.9k'],
 
+                // Category Groups
+                categoryGroups: [
+                    {
+                        name: 'News & Current Affairs',
+                        icon: '📰',
+                        categories: ['politics', 'crime', 'international', 'society']
+                    },
+                    {
+                        name: 'Business & Economy',
+                        icon: '💼',
+                        categories: ['business', 'economy', 'real_estate']
+                    },
+                    {
+                        name: 'Education & Jobs',
+                        icon: '🎓',
+                        categories: ['education', 'university', 'exam_results', 'latest_jobs', 'scholarships cameroonians can apply']
+                    },
+                    {
+                        name: 'Sports & Entertainment',
+                        icon: '⚽',
+                        categories: ['sports', 'entertainment', 'Mboko music', 'Mboa music', 'music artists']
+                    },
+                    {
+                        name: 'Tech & Science',
+                        icon: '💻',
+                        categories: ['technology', 'science']
+                    },
+                    {
+                        name: 'Lifestyle & Culture',
+                        icon: '🎨',
+                        categories: ['culture', 'lifestyle', 'religion', 'health']
+                    },
+                    {
+                        name: 'Local News',
+                        icon: '📍',
+                        categories: ['happened in Buea', 'happened in any region']
+                    },
+                    {
+                        name: 'Environment & Agriculture',
+                        icon: '🌱',
+                        categories: ['environment', 'agriculture', 'transportation']
+                    },
+                    {
+                        name: 'Special',
+                        icon: '⭐',
+                        categories: ['concours_launch', 'human_interest', 'disgusting']
+                    }
+                ],
+
                 // Categories
                 categories: [
                     {
@@ -1033,15 +1118,30 @@
 
                 // Articles (loaded from API)
                 articles: [],
+                advertisements: [],
                 isLoading: false,
                 nextPage: null,
+                adInterval: 3,
+                showingFallback: false,
+                hasAppliedFilters: false,
 
                 // Computed
                 get filteredArticles() {
-                    if (this.selectedCategory === 'all') {
-                        return this.articles;
+                    // Inject ads into article stream
+                    const result = [];
+                    for (let i = 0; i < this.articles.length; i++) {
+                        result.push(this.articles[i]);
+
+                        // Every N articles, inject an ad if available
+                        if ((i + 1) % this.adInterval === 0 && this.advertisements.length > 0) {
+                            const adIndex = Math.floor((i + 1) / this.adInterval - 1) % this.advertisements.length;
+                            result.push({
+                                ...this.advertisements[adIndex],
+                                isAd: true
+                            });
+                        }
                     }
-                    return this.articles.filter(article => article.category === this.selectedCategory);
+                    return result;
                 },
 
                 // Methods
@@ -1049,6 +1149,30 @@
                     console.log('GistMe App Initialized');
                     this.startCommentSimulation();
                     this.updateViewCount();
+                    this.fetchAdvertisements();
+                },
+
+                async fetchAdvertisements() {
+                    try {
+                        const response = await fetch('/api/articles/?category=advertisement');
+                        if (!response.ok) return;
+                        const data = await response.json();
+
+                        this.advertisements = data.results.map(article => ({
+                            id: article.id,
+                            headline: article.headline,
+                            summary: article.english_summary,
+                            content: article.english_summary,
+                            image: article.thumbnails && article.thumbnails.length > 0 ? article.thumbnails[0] : 'https://placehold.co/600x400/000000/FFF',
+                            category: 'ADVERTISEMENT',
+                            source: article.source_names && article.source_names.length > 0 ? article.source_names[0] : 'Sponsor',
+                            timeAgo: this.formatTimeAgo(article.created_at),
+                            audioUrl: article.english_audio,
+                            viewCount: this.formatNumber(article.view_count)
+                        }));
+                    } catch (error) {
+                        console.log('No advertisements available');
+                    }
                 },
 
                 getCategoryCount(categoryId) {
@@ -1066,63 +1190,139 @@
                     if (this.isLoading) return;
                     this.isLoading = true;
 
-                    let url = '/api/articles/';
-                    const params = new URLSearchParams();
-
-                    // Map UI moods to Backend moods
-                    const moodMap = {
-                        'curious': 'exciting',
-                        'serious': 'concerning',
-                        'chill': 'concerning',
-                        'hyped': 'exciting'
-                    };
-
-                    const apiMood = moodMap[this.currentMood] || this.currentMood;
-
-                    if (apiMood) {
-                        params.append('mood', apiMood);
-                    }
-                    if (this.selectedCategory !== 'all') {
-                        params.append('category', this.selectedCategory);
-                    }
-
-                    url += '?' + params.toString();
-
                     try {
-                        const response = await fetch(url);
-                        if (!response.ok) throw new Error('Network response was not ok');
-                        const data = await response.json();
-
-                        const newArticles = data.results.map(article => ({
-                            id: article.id,
-                            headline: article.headline,
-                            summary: article.english_summary,
-                            content: article.english_summary,
-                            image: article.thumbnails && article.thumbnails.length > 0 ? article.thumbnails[0] : 'https://placehold.co/600x400/000000/FFF',
-                            category: article.category.toUpperCase(),
-                            source: article.source_names && article.source_names.length > 0 ? article.source_names[0] : 'GistMe',
-                            timeAgo: this.formatTimeAgo(article.created_at),
-                            audioUrl: article.english_audio,
-                            viewCount: this.formatNumber(article.view_count)
-                        }));
-
-                        if (reset) {
-                            this.articles = newArticles;
-                            this.currentIndex = 0;
-                            if (this.articles.length > 0) {
-                                this.currentViewCount = this.articles[0].viewCount;
-                            }
-                        } else {
-                            this.articles = [...this.articles, ...newArticles];
+                        // For pagination, use nextPage URL
+                        if (!reset && this.nextPage) {
+                            await this.fetchFromUrl(this.nextPage, false);
+                            return;
                         }
 
-                        this.nextPage = data.next;
+                        // Progressive fallback sequence
+                        const hasMood = !!this.currentMood;
+                        const hasCategory = this.selectedCategory !== 'all';
+
+                        if (hasMood && hasCategory) {
+                            // Try 1: Mood + Category
+                            const results = await this.fetchFromUrl(this.buildUrl(this.currentMood, this.selectedCategory), true);
+                            if (results > 0) {
+                                console.log('✓ Showing: Mood + Category');
+                                return;
+                            }
+
+                            // Try 2: Mood only
+                            console.log('⚠ No results for Mood + Category, trying Mood only...');
+                            const moodResults = await this.fetchFromUrl(this.buildUrl(this.currentMood, null), true);
+                            if (moodResults > 0) {
+                                console.log('✓ Showing: Mood only');
+                                return;
+                            }
+
+                            // Try 3: Category only
+                            console.log('⚠ No results for Mood, trying Category only...');
+                            const categoryResults = await this.fetchFromUrl(this.buildUrl(null, this.selectedCategory), true);
+                            if (categoryResults > 0) {
+                                console.log('✓ Showing: Category only');
+                                return;
+                            }
+
+                            // Try 4: All content
+                            console.log('⚠ No results for Category, showing all content...');
+                            await this.fetchFromUrl(this.buildUrl(null, null), true);
+                            console.log('✓ Showing: All content');
+
+                        } else if (hasMood) {
+                            // Try 1: Mood only
+                            const results = await this.fetchFromUrl(this.buildUrl(this.currentMood, null), true);
+                            if (results > 0) {
+                                console.log('✓ Showing: Mood only');
+                                return;
+                            }
+
+                            // Try 2: All content
+                            console.log('⚠ No results for Mood, showing all content...');
+                            await this.fetchFromUrl(this.buildUrl(null, null), true);
+                            console.log('✓ Showing: All content');
+
+                        } else if (hasCategory) {
+                            // Try 1: Category only
+                            const results = await this.fetchFromUrl(this.buildUrl(null, this.selectedCategory), true);
+                            if (results > 0) {
+                                console.log('✓ Showing: Category only');
+                                return;
+                            }
+
+                            // Try 2: All content
+                            console.log('⚠ No results for Category, showing all content...');
+                            await this.fetchFromUrl(this.buildUrl(null, null), true);
+                            console.log('✓ Showing: All content');
+
+                        } else {
+                            // No filters, just fetch all
+                            await this.fetchFromUrl(this.buildUrl(null, null), true);
+                            console.log('✓ Showing: All content');
+                        }
 
                     } catch (error) {
-                        console.error('Error fetching articles:', error);
+                        console.error('Error in fetchArticles:', error);
                     } finally {
                         this.isLoading = false;
                     }
+                },
+
+                buildUrl(mood, category) {
+                    let url = '/api/articles/';
+                    const params = new URLSearchParams();
+
+                    if (mood) {
+                        params.append('mood', mood);
+                    }
+                    if (category) {
+                        params.append('category', category);
+                    }
+
+                    if (params.toString()) {
+                        url += '?' + params.toString();
+                    }
+
+                    return url;
+                },
+
+                async fetchFromUrl(url, reset) {
+                    const response = await fetch(url);
+                    if (!response.ok) throw new Error('Network response was not ok');
+                    const data = await response.json();
+
+                    const newArticles = data.results.map(article => ({
+                        id: article.id,
+                        headline: article.headline,
+                        summary: article.english_summary,
+                        content: article.english_summary,
+                        image: article.thumbnails && article.thumbnails.length > 0 ? article.thumbnails[0] : 'https://placehold.co/600x400/000000/FFF',
+                        category: article.category.toUpperCase(),
+                        source: article.source_names && article.source_names.length > 0 ? article.source_names[0] : 'GistMe',
+                        timeAgo: this.formatTimeAgo(article.created_at),
+                        audioUrl: article.english_audio,
+                        viewCount: this.formatNumber(article.view_count)
+                    }));
+
+                    if (reset) {
+                        this.articles = newArticles;
+                        this.currentIndex = 0;
+                        if (this.articles.length > 0) {
+                            this.currentViewCount = this.articles[0].viewCount;
+                        }
+                    } else {
+                        this.articles = [...this.articles, ...newArticles];
+                    }
+
+                    this.nextPage = data.next;
+
+                    // Load more if we reach the end of paginated results
+                    if (!data.next && this.articles.length > 0) {
+                        // We've reached the end, no more content to load
+                    }
+
+                    return newArticles.length;
                 },
 
                 formatTimeAgo(dateString) {

@@ -205,3 +205,164 @@ INFO 2025-11-25 22:02:55,353 basehttp 65984 66408 "GET /api/articles/?mood=excit
 INFO 2025-11-25 22:02:57,093 basehttp 65984 66408 "GET /api/articles/?mood=exciting HTTP/1.1" 200 4031
 INFO 2025-11-25 22:02:58,101 basehttp 65984 66408 "GET /api/articles/?mood=exciting&category=SPORTS HTTP/1.1" 200 52
 INFO 2025-11-25 22:03:06,165 basehttp 65984 66408 "GET /api/articles/?mood=exciting HTTP/1.1" 200 4031
+INFO 2025-11-25 22:23:35,327 autoreload 40108 56488 Watching for file changes with StatReloader
+INFO 2025-11-25 22:23:40,241 basehttp 40108 65788 "GET / HTTP/1.1" 200 35594
+WARNING 2025-11-25 22:23:40,325 log 40108 65788 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 22:23:40,326 basehttp 40108 65788 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-25 22:23:47,127 basehttp 40108 65788 "GET /feed/ HTTP/1.1" 200 64207
+WARNING 2025-11-25 22:23:47,207 log 40108 65788 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 22:23:47,208 basehttp 40108 65788 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-25 22:23:47,944 basehttp 40108 65788 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-25 22:23:57,044 basehttp 40108 65788 "GET /api/articles/?mood=neutral HTTP/1.1" 200 52
+WARNING 2025-11-25 22:24:03,271 log 40108 65788 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 22:24:03,272 basehttp 40108 65788 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+WARNING 2025-11-25 22:24:03,323 log 40108 65788 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 22:24:03,324 basehttp 40108 65788 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-25 22:24:04,497 basehttp 40108 65788 "GET /feed/ HTTP/1.1" 200 64207
+WARNING 2025-11-25 22:24:04,628 log 40108 65788 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 22:24:04,629 basehttp 40108 65788 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-25 22:24:05,335 basehttp 40108 65788 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-25 22:24:06,515 basehttp 40108 65788 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+WARNING 2025-11-25 22:24:13,567 log 40108 65788 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 22:24:13,567 basehttp 40108 65788 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+WARNING 2025-11-25 22:24:13,687 log 40108 65788 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 22:24:13,688 basehttp 40108 65788 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-25 22:24:14,813 basehttp 40108 65788 "GET /feed/ HTTP/1.1" 200 64207
+WARNING 2025-11-25 22:24:14,904 log 40108 65788 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 22:24:14,908 basehttp 40108 65788 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-25 22:24:15,729 basehttp 40108 65788 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-25 22:24:18,300 basehttp 40108 65788 "GET /api/articles/?mood=shocking HTTP/1.1" 200 52
+WARNING 2025-11-25 22:24:31,923 log 40108 65788 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 22:24:31,924 basehttp 40108 65788 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+WARNING 2025-11-25 22:24:31,967 log 40108 65788 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 22:24:31,968 basehttp 40108 65788 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-25 22:24:32,769 basehttp 40108 65788 "GET /feed/ HTTP/1.1" 200 64207
+WARNING 2025-11-25 22:24:32,852 log 40108 65788 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 22:24:32,853 basehttp 40108 65788 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-25 22:24:33,682 basehttp 40108 65788 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-25 22:24:37,178 basehttp 40108 65788 "GET /api/articles/?mood=angry HTTP/1.1" 200 52
+INFO 2025-11-25 22:25:12,707 basehttp 40108 65788 "GET /api/articles/?mood=angry&category=politics HTTP/1.1" 200 52
+INFO 2025-11-25 22:25:14,943 basehttp 40108 65788 "GET /api/articles/?mood=angry HTTP/1.1" 200 52
+INFO 2025-11-25 22:25:15,899 basehttp 40108 65788 "GET /api/articles/?mood=angry&category=politics HTTP/1.1" 200 52
+INFO 2025-11-25 22:25:17,931 basehttp 40108 65788 "GET /api/articles/?mood=angry HTTP/1.1" 200 52
+INFO 2025-11-25 22:25:18,618 basehttp 40108 65788 "GET /api/articles/?mood=angry&category=politics HTTP/1.1" 200 52
+INFO 2025-11-25 22:29:30,648 autoreload 66452 57648 Watching for file changes with StatReloader
+INFO 2025-11-25 22:29:35,337 basehttp 66452 66332 "GET / HTTP/1.1" 200 35594
+WARNING 2025-11-25 22:29:35,404 log 66452 66332 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 22:29:35,405 basehttp 66452 66332 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-25 22:29:41,309 basehttp 66452 66332 "GET /feed/ HTTP/1.1" 200 64780
+WARNING 2025-11-25 22:29:41,407 log 66452 66332 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 22:29:41,408 basehttp 66452 66332 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-25 22:29:41,802 basehttp 66452 66332 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-25 22:29:45,443 basehttp 66452 66332 "GET /api/articles/?mood=shocking HTTP/1.1" 200 52
+INFO 2025-11-25 22:30:36,369 autoreload 65844 62272 Watching for file changes with StatReloader
+INFO 2025-11-25 22:30:37,420 basehttp 65844 50320 "GET /feed/ HTTP/1.1" 200 64780
+WARNING 2025-11-25 22:30:37,478 log 65844 50320 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 22:30:37,479 basehttp 65844 50320 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-25 22:30:38,489 basehttp 65844 50320 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-25 22:30:43,026 basehttp 65844 50320 "GET /api/articles/?mood=concerning HTTP/1.1" 200 6412
+INFO 2025-11-25 22:31:31,675 basehttp 65844 50320 "GET /api/articles/?mood=concerning&category=DEVELOPMENT HTTP/1.1" 200 52
+INFO 2025-11-25 22:31:40,645 basehttp 65844 50320 "GET /api/articles/?mood=concerning&category=politics HTTP/1.1" 200 4365
+INFO 2025-11-25 22:31:53,747 basehttp 65844 50320 "GET /api/articles/?mood=concerning&category=crime HTTP/1.1" 200 52
+INFO 2025-11-25 22:31:54,862 basehttp 65844 50320 "GET /api/articles/?mood=concerning&category=international HTTP/1.1" 200 52
+INFO 2025-11-25 22:31:55,745 basehttp 65844 50320 "GET /api/articles/?mood=concerning&category=society HTTP/1.1" 200 52
+INFO 2025-11-25 22:31:58,246 basehttp 65844 50320 "GET /api/articles/?mood=concerning&category=business HTTP/1.1" 200 2098
+INFO 2025-11-25 22:32:06,183 basehttp 65844 50320 "GET /api/articles/?mood=concerning&category=economy HTTP/1.1" 200 52
+INFO 2025-11-25 22:32:07,059 basehttp 65844 50320 "GET /api/articles/?mood=concerning&category=real_estate HTTP/1.1" 200 52
+INFO 2025-11-25 22:32:07,979 basehttp 65844 50320 "GET /api/articles/?mood=concerning&category=education HTTP/1.1" 200 52
+INFO 2025-11-25 22:32:09,432 basehttp 65844 50320 "GET /api/articles/?mood=concerning&category=university HTTP/1.1" 200 52
+INFO 2025-11-25 22:32:11,011 basehttp 65844 50320 "GET /api/articles/?mood=concerning&category=exam_results HTTP/1.1" 200 52
+INFO 2025-11-25 22:32:11,508 basehttp 65844 50320 "GET /api/articles/?mood=concerning&category=latest_jobs HTTP/1.1" 200 52
+INFO 2025-11-25 22:32:12,275 basehttp 65844 50320 "GET /api/articles/?mood=concerning&category=sports HTTP/1.1" 200 52
+INFO 2025-11-25 22:32:12,963 basehttp 65844 50320 "GET /api/articles/?mood=concerning&category=entertainment HTTP/1.1" 200 52
+INFO 2025-11-25 22:32:13,633 basehttp 65844 50320 "GET /api/articles/?mood=concerning&category=Mboko+music HTTP/1.1" 200 52
+INFO 2025-11-25 22:32:14,469 basehttp 65844 50320 "GET /api/articles/?mood=concerning&category=entertainment HTTP/1.1" 200 52
+INFO 2025-11-25 22:32:18,713 basehttp 65844 50320 "GET /api/articles/?mood=concerning&category=technology HTTP/1.1" 200 52
+INFO 2025-11-25 22:32:19,275 basehttp 65844 50320 "GET /api/articles/?mood=concerning&category=science HTTP/1.1" 200 52
+WARNING 2025-11-25 22:32:23,795 log 65844 50320 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 22:32:23,796 basehttp 65844 50320 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+WARNING 2025-11-25 22:32:23,849 log 65844 50320 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 22:32:23,849 basehttp 65844 50320 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-25 22:32:25,582 basehttp 65844 50320 "GET /feed/ HTTP/1.1" 200 64780
+WARNING 2025-11-25 22:32:25,657 log 65844 50320 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 22:32:25,657 basehttp 65844 50320 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-25 22:32:26,470 basehttp 65844 50320 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-25 22:32:28,076 basehttp 65844 50320 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-25 22:32:34,322 basehttp 65844 50320 "GET /api/articles/?mood=happy&category=disgusting HTTP/1.1" 200 52
+INFO 2025-11-25 22:32:34,779 basehttp 65844 50320 "GET /api/articles/?mood=happy&category=human_interest HTTP/1.1" 200 52
+INFO 2025-11-25 22:32:35,175 basehttp 65844 50320 "GET /api/articles/?mood=happy&category=concours_launch HTTP/1.1" 200 52
+INFO 2025-11-25 22:32:35,964 basehttp 65844 50320 "GET /api/articles/?mood=happy&category=transportation HTTP/1.1" 200 52
+INFO 2025-11-25 22:32:36,578 basehttp 65844 50320 "GET /api/articles/?mood=happy&category=agriculture HTTP/1.1" 200 52
+INFO 2025-11-25 22:32:38,731 basehttp 65844 50320 "GET /api/articles/?mood=happy&category=environment HTTP/1.1" 200 52
+INFO 2025-11-25 22:32:39,418 basehttp 65844 50320 "GET /api/articles/?mood=happy&category=happened+in+any+region HTTP/1.1" 200 52
+INFO 2025-11-25 22:32:40,201 basehttp 65844 50320 "GET /api/articles/?mood=happy&category=happened+in+Buea HTTP/1.1" 200 52
+INFO 2025-11-25 22:32:41,902 basehttp 65844 50320 "GET /api/articles/?mood=happy&category=health HTTP/1.1" 200 52
+INFO 2025-11-25 22:32:43,667 basehttp 65844 50320 "GET /api/articles/?mood=happy&category=religion HTTP/1.1" 200 52
+INFO 2025-11-25 22:32:44,276 basehttp 65844 50320 "GET /api/articles/?mood=happy&category=lifestyle HTTP/1.1" 200 52
+INFO 2025-11-25 22:32:44,820 basehttp 65844 50320 "GET /api/articles/?mood=happy&category=culture HTTP/1.1" 200 52
+INFO 2025-11-25 22:32:46,795 basehttp 65844 50320 "GET /api/articles/?mood=happy&category=science HTTP/1.1" 200 52
+INFO 2025-11-25 22:32:47,379 basehttp 65844 50320 "GET /api/articles/?mood=happy&category=technology HTTP/1.1" 200 52
+INFO 2025-11-25 22:32:48,963 basehttp 65844 50320 "GET /api/articles/?mood=happy&category=music+artists HTTP/1.1" 200 52
+INFO 2025-11-25 22:32:49,378 basehttp 65844 50320 "GET /api/articles/?mood=happy&category=Mboa+music HTTP/1.1" 200 52
+INFO 2025-11-25 22:32:49,745 basehttp 65844 50320 "GET /api/articles/?mood=happy&category=Mboko+music HTTP/1.1" 200 52
+INFO 2025-11-25 22:32:50,891 basehttp 65844 50320 "GET /api/articles/?mood=happy&category=culture HTTP/1.1" 200 52
+INFO 2025-11-25 22:32:55,068 basehttp 65844 50320 "GET /api/articles/?mood=happy&category=business HTTP/1.1" 200 52
+INFO 2025-11-25 22:33:00,586 basehttp 65844 50320 "GET /api/articles/?mood=happy&category=business HTTP/1.1" 200 52
+WARNING 2025-11-25 22:33:06,830 log 65844 50320 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 22:33:06,830 basehttp 65844 50320 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+WARNING 2025-11-25 22:33:06,885 log 65844 50320 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 22:33:06,886 basehttp 65844 50320 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-25 22:33:08,490 basehttp 65844 50320 "GET /feed/ HTTP/1.1" 200 64780
+WARNING 2025-11-25 22:33:08,587 log 65844 50320 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 22:33:08,589 basehttp 65844 50320 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-25 22:33:09,295 basehttp 65844 50320 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-25 22:33:12,704 basehttp 65844 50320 "GET /api/articles/?mood=concerning HTTP/1.1" 200 6412
+INFO 2025-11-25 22:33:17,760 basehttp 65844 50320 "GET /api/articles/?mood=concerning&category=politics HTTP/1.1" 200 4365
+INFO 2025-11-25 22:33:22,315 basehttp 65844 50320 "GET /api/articles/?mood=concerning&category=crime HTTP/1.1" 200 52
+INFO 2025-11-25 22:33:22,837 basehttp 65844 50320 "GET /api/articles/?mood=concerning&category=international HTTP/1.1" 200 52
+INFO 2025-11-25 22:33:23,260 basehttp 65844 50320 "GET /api/articles/?mood=concerning&category=society HTTP/1.1" 200 52
+INFO 2025-11-25 22:33:24,157 basehttp 65844 50320 "GET /api/articles/?mood=concerning&category=business HTTP/1.1" 200 2098
+INFO 2025-11-25 22:34:39,732 basehttp 65844 50320 "GET /api/articles/ HTTP/1.1" 200 25288
+INFO 2025-11-25 22:34:39,788 basehttp 65844 50320 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2025-11-25 22:34:39,794 basehttp 65844 60012 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2025-11-25 22:34:39,794 basehttp 65844 61160 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2025-11-25 22:34:39,794 basehttp 65844 43588 "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+INFO 2025-11-25 22:34:39,794 basehttp 65844 50216 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2025-11-25 22:34:39,795 basehttp 65844 50320 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2025-11-25 22:34:39,809 basehttp 65844 60012 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2025-11-25 22:34:39,809 basehttp 65844 50216 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2025-11-25 22:34:39,809 basehttp 65844 50320 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2025-11-25 22:34:39,809 basehttp 65844 61160 "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+INFO 2025-11-25 22:34:39,810 basehttp 65844 43588 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2025-11-25 22:34:39,907 basehttp 65844 43588 "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO 2025-11-25 22:34:39,922 basehttp 65844 43588 "GET /static/rest_framework/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 304 0
+INFO 2025-11-25 22:34:56,328 basehttp 65844 43588 "GET / HTTP/1.1" 200 35594
+WARNING 2025-11-25 22:34:56,407 log 65844 43588 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 22:34:56,408 basehttp 65844 43588 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-25 22:35:02,499 basehttp 65844 43588 "GET /feed/ HTTP/1.1" 200 64780
+WARNING 2025-11-25 22:35:02,587 log 65844 43588 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 22:35:02,588 basehttp 65844 43588 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-25 22:35:03,393 basehttp 65844 43588 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-25 22:35:06,628 basehttp 65844 43588 "GET /api/articles/?mood=exciting HTTP/1.1" 200 4031
+INFO 2025-11-25 22:35:13,250 basehttp 65844 43588 "GET /api/articles/?mood=exciting&category=politics HTTP/1.1" 200 52
+INFO 2025-11-25 22:35:14,147 basehttp 65844 43588 "GET /api/articles/?mood=exciting&category=crime HTTP/1.1" 200 52
+INFO 2025-11-25 22:41:10,087 basehttp 65844 63124 "GET /api/articles/?mood=exciting&category=TECH HTTP/1.1" 200 52
+INFO 2025-11-25 22:41:13,999 basehttp 65844 63124 "GET /api/articles/?mood=exciting&category=DEVELOPMENT HTTP/1.1" 200 52
+INFO 2025-11-25 22:41:14,612 basehttp 65844 63124 "GET /api/articles/?mood=exciting HTTP/1.1" 200 4031
+INFO 2025-11-25 22:43:20,666 autoreload 39656 48708 Watching for file changes with StatReloader
+INFO 2025-11-25 22:43:25,413 basehttp 39656 58676 "GET / HTTP/1.1" 200 35594
+WARNING 2025-11-25 22:43:25,502 log 39656 58676 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 22:43:25,503 basehttp 39656 58676 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-25 22:43:31,740 basehttp 39656 58676 "GET /feed/ HTTP/1.1" 200 67152
+WARNING 2025-11-25 22:43:31,842 log 39656 58676 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-25 22:43:31,843 basehttp 39656 58676 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-25 22:43:36,147 basehttp 39656 58676 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-25 22:43:40,018 basehttp 39656 58676 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-25 22:43:40,066 basehttp 39656 58676 "GET /api/articles/ HTTP/1.1" 200 10392
+INFO 2025-11-25 22:43:56,297 basehttp 39656 58676 "GET /api/articles/?mood=happy&category=politics HTTP/1.1" 200 52
+INFO 2025-11-25 22:43:56,335 basehttp 39656 58676 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-25 22:43:56,355 basehttp 39656 58676 "GET /api/articles/?category=politics HTTP/1.1" 200 4365
+INFO 2025-11-25 22:44:08,101 basehttp 39656 58676 "GET /api/articles/?mood=happy&category=crime HTTP/1.1" 200 52
+INFO 2025-11-25 22:44:08,121 basehttp 39656 58676 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-25 22:44:08,141 basehttp 39656 58676 "GET /api/articles/?category=crime HTTP/1.1" 200 52
+INFO 2025-11-25 22:44:08,165 basehttp 39656 58676 "GET /api/articles/ HTTP/1.1" 200 10392
