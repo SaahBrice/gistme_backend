@@ -1,5 +1,11 @@
 from rest_framework import serializers
-from .models import Article, Comment
+from .models import Article, Comment, VisitorSubscription
+
+class VisitorSubscriptionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = VisitorSubscription
+        fields = ['endpoint', 'p256dh', 'auth']
+
 
 class CommentSerializer(serializers.ModelSerializer):
     class Meta:

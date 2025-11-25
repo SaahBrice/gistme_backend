@@ -36,3 +36,44 @@ class CommentViewSet(viewsets.ModelViewSet):
     filter_backends = [DjangoFilterBackend, filters.OrderingFilter]
     filterset_fields = ['article']
     ordering_fields = ['timestamp']
+
+from rest_framework.views import APIView
+from rest_framework.parsers import MultiPartParser, FormParser
+from django.core.files.storage import default_storage
+from .serializers import VisitorSubscriptionSerializer
+from .tasks import process_uploaded_media
+
+class SubscribeView(APIView):
+    def post(self, request):
+        # Ensure session exists
+        if not request.session.session_key:
+            request.session.create()
+        
+        serializer = VisitorSubscriptionSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save(session_key=request.session.session_key)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class FileUploadView(APIView):
+    parser_classes = (MultiPartParser, FormParser)
+
+    def post(self, request, *args, **kwargs):
+        if request.data.get('source_code') != settings.API_SECRET_CODE:
+            return Response(
+                {"error": "Invalid or missing source_code"},
+                status=status.HTTP_403_FORBIDDEN
+            )
+
+        file_obj = request.data.get('file')
+        if not file_obj:
+             return Response({"error": "No file provided"}, status=status.HTTP_400_BAD_REQUEST)
+
+        file_name = default_storage.save(file_obj.name, file_obj)
+        file_url = default_storage.url(file_name)
+        
+        # Trigger async task
+        from django_q.tasks import async_task
+        async_task(process_uploaded_media, file_url)
+
+        return Response({'file_url': file_url}, status=status.HTTP_201_CREATED)

@@ -125,5 +125,42 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-API_SECRET_CODE = "your-secure-pre-shared-code"
+
+# Session Settings
+SESSION_ENGINE = "django.contrib.sessions.backends.db"
+SESSION_SAVE_EVERY_REQUEST = True
+SESSION_COOKIE_AGE = 31536000  # 1 year in seconds
+SESSION_COOKIE_NAME = "gistme_session"
+
+# Media Settings
+import os
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
+
+# Django Q Settings
+Q_CLUSTER = {
+    "name": "gistme_cluster",
+    "workers": 4,
+    "recycle": 500,
+    "timeout": 60,
+    "compress": True,
+    "save_limit": 250,
+    "queue_limit": 500,
+    "cpu_affinity": 1,
+    "label": "Django Q",
+    "orm": "default",  # Use Django ORM as broker
+}
+
+# Web Push Settings
+WEBPUSH_SETTINGS = {
+    "VAPID_PUBLIC_KEY": os.environ.get("VAPID_PUBLIC_KEY", "your_public_key_here"),
+    "VAPID_PRIVATE_KEY": os.environ.get("VAPID_PRIVATE_KEY", "your_private_key_here"),
+    "VAPID_ADMIN_EMAIL": "admin@example.com",
+}
+
+INSTALLED_APPS += [
+    "django_q",
+]
+
+
 
