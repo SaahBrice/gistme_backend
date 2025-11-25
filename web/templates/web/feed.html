@@ -758,7 +758,8 @@
             <div class="h-full glass-morphism border-r-2 border-yellow-500/30 flex flex-col">
 
                 <div class="p-4 border-b border-gray-800 flex justify-between items-center">
-                    <h2 class="text-2xl font-black text-yellow-500">Categories</h2>
+                    <h2 class="text-2xl font-black text-yellow-500"
+                        x-text="globalLang === 'fr' ? 'Catégories' : 'Categories'"></h2>
                     <button @click="closeCategoryPanel()"
                         class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition-colors">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -772,15 +773,15 @@
                     <div class="flex gap-2 overflow-x-auto no-scrollbar pb-1">
                         <button @click="selectCategory('all')"
                             class="flex-shrink-0 px-4 py-1.5 rounded-full text-xs font-bold transition-all duration-300"
-                            :class="selectedCategory === 'all' ? 'bg-yellow-500 text-black' : 'bg-gray-800 text-gray-400'">
-                            All
+                            :class="selectedCategory === 'all' ? 'bg-yellow-500 text-black' : 'bg-gray-800 text-gray-400'"
+                            x-text="globalLang === 'fr' ? 'Tout' : 'All'">
                         </button>
                         <template x-for="cat in categories" :key="cat.id">
                             <button @click="selectCategory(cat.id)"
                                 class="flex-shrink-0 px-4 py-1.5 rounded-full text-xs font-bold transition-all duration-300"
                                 :class="selectedCategory === cat.id ? 'bg-yellow-500 text-black' : 'bg-gray-800 text-gray-400'">
                                 <span x-text="cat.emoji"></span>
-                                <span x-text="cat.name"></span>
+                                <span x-text="globalLang === 'fr' ? cat.nameFr : cat.nameEn"></span>
                             </button>
                         </template>
                     </div>
@@ -794,25 +795,27 @@
                         <div class="flex items-center gap-3">
                             <div class="text-3xl">📰</div>
                             <div>
-                                <div class="text-lg font-black">All News</div>
-                                <div class="text-xs opacity-75">Everything</div>
+                                <div class="text-lg font-black"
+                                    x-text="globalLang === 'fr' ? 'Toute l\'actualité' : 'All News'"></div>
+                                <div class="text-xs opacity-75" x-text="globalLang === 'fr' ? 'Tout' : 'Everything'">
+                                </div>
                             </div>
                         </div>
                     </button>
 
                     <!-- Category Groups -->
-                    <template x-for="group in categoryGroups" :key="group.name">
+                    <template x-for="group in categoryGroups" :key="group.nameEn">
                         <div class="space-y-2">
                             <div class="flex items-center gap-2 px-2 text-yellow-400 font-bold text-sm">
                                 <span x-text="group.icon"></span>
-                                <span x-text="group.name"></span>
+                                <span x-text="globalLang === 'fr' ? group.nameFr : group.nameEn"></span>
                             </div>
                             <div class="grid grid-cols-1 gap-2">
-                                <template x-for="category in group.categories" :key="category">
-                                    <button @click="selectCategory(category)"
+                                <template x-for="category in group.categories" :key="category.id">
+                                    <button @click="selectCategory(category.id)"
                                         class="px-4 py-2.5 rounded-xl text-left text-sm font-semibold transition-all duration-200 hover:scale-105"
-                                        :class="selectedCategory === category ? 'bg-yellow-500 text-black' : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700'">
-                                        <span x-text="category"></span>
+                                        :class="selectedCategory === category.id ? 'bg-yellow-500 text-black' : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700'">
+                                        <span x-text="globalLang === 'fr' ? category.nameFr : category.nameEn"></span>
                                     </button>
                                 </template>
                             </div>
@@ -921,14 +924,14 @@
                     </button>
 
                     <div class="flex gap-2">
-                        <button @click="changeLanguage('en')"
+                        <button @click="switchLanguage('en')"
                             class="px-4 py-2 rounded-lg font-bold text-sm transition-colors"
-                            :class="readerLang === 'en' ? 'bg-yellow-500 text-black' : 'bg-gray-800 text-gray-400'">
+                            :class="globalLang === 'en' ? 'bg-yellow-500 text-black' : 'bg-gray-800 text-gray-400'">
                             EN
                         </button>
-                        <button @click="changeLanguage('fr')"
+                        <button @click="switchLanguage('fr')"
                             class="px-4 py-2 rounded-lg font-bold text-sm transition-colors"
-                            :class="readerLang === 'fr' ? 'bg-yellow-500 text-black' : 'bg-gray-800 text-gray-400'">
+                            :class="globalLang === 'fr' ? 'bg-yellow-500 text-black' : 'bg-gray-800 text-gray-400'">
                             FR
                         </button>
                     </div>
@@ -1052,51 +1055,101 @@
                 viewCounts: ['1.2k', '3.5k', '892', '5.1k', '2.8k', '1.9k'],
 
                 // Category Groups
+                // Category Groups
                 categoryGroups: [
                     {
-                        name: 'News & Current Affairs',
+                        nameEn: 'News & Current Affairs',
+                        nameFr: 'Actualités',
                         icon: '📰',
-                        categories: ['politics', 'crime', 'international', 'society']
+                        categories: [
+                            { id: 'politics', nameEn: 'Politics', nameFr: 'Politique' },
+                            { id: 'crime', nameEn: 'Crime', nameFr: 'Crime' },
+                            { id: 'international', nameEn: 'International', nameFr: 'International' },
+                            { id: 'society', nameEn: 'Society', nameFr: 'Société' }
+                        ]
                     },
                     {
-                        name: 'Business & Economy',
+                        nameEn: 'Business & Economy',
+                        nameFr: 'Économie',
                         icon: '💼',
-                        categories: ['business', 'economy', 'real_estate']
+                        categories: [
+                            { id: 'business', nameEn: 'Business', nameFr: 'Affaires' },
+                            { id: 'economy', nameEn: 'Economy', nameFr: 'Économie' },
+                            { id: 'real_estate', nameEn: 'Real Estate', nameFr: 'Immobilier' }
+                        ]
                     },
                     {
-                        name: 'Education & Jobs',
+                        nameEn: 'Education & Jobs',
+                        nameFr: 'Éducation & Emploi',
                         icon: '🎓',
-                        categories: ['education', 'university', 'exam_results', 'latest_jobs', 'scholarships cameroonians can apply']
+                        categories: [
+                            { id: 'education', nameEn: 'Education', nameFr: 'Éducation' },
+                            { id: 'university', nameEn: 'University', nameFr: 'Université' },
+                            { id: 'exam_results', nameEn: 'Exam Results', nameFr: 'Résultats' },
+                            { id: 'latest_jobs', nameEn: 'Latest Jobs', nameFr: 'Emplois' },
+                            { id: 'scholarships cameroonians can apply', nameEn: 'Scholarships', nameFr: 'Bourses' }
+                        ]
                     },
                     {
-                        name: 'Sports & Entertainment',
+                        nameEn: 'Sports & Entertainment',
+                        nameFr: 'Sports & Loisirs',
                         icon: '⚽',
-                        categories: ['sports', 'entertainment', 'Mboko music', 'Mboa music', 'music artists']
+                        categories: [
+                            { id: 'sports', nameEn: 'Sports', nameFr: 'Sports' },
+                            { id: 'entertainment', nameEn: 'Entertainment', nameFr: 'Divertissement' },
+                            { id: 'Mboko music', nameEn: 'Mboko Music', nameFr: 'Musique Mboko' },
+                            { id: 'Mboa music', nameEn: 'Mboa Music', nameFr: 'Musique Mboa' },
+                            { id: 'music artists', nameEn: 'Music Artists', nameFr: 'Artistes' }
+                        ]
                     },
                     {
-                        name: 'Tech & Science',
+                        nameEn: 'Tech & Science',
+                        nameFr: 'Tech & Science',
                         icon: '💻',
-                        categories: ['technology', 'science']
+                        categories: [
+                            { id: 'technology', nameEn: 'Technology', nameFr: 'Technologie' },
+                            { id: 'science', nameEn: 'Science', nameFr: 'Science' }
+                        ]
                     },
                     {
-                        name: 'Lifestyle & Culture',
+                        nameEn: 'Lifestyle & Culture',
+                        nameFr: 'Art de vivre',
                         icon: '🎨',
-                        categories: ['culture', 'lifestyle', 'religion', 'health']
+                        categories: [
+                            { id: 'culture', nameEn: 'Culture', nameFr: 'Culture' },
+                            { id: 'lifestyle', nameEn: 'Lifestyle', nameFr: 'Mode de vie' },
+                            { id: 'religion', nameEn: 'Religion', nameFr: 'Religion' },
+                            { id: 'health', nameEn: 'Health', nameFr: 'Santé' }
+                        ]
                     },
                     {
-                        name: 'Local News',
+                        nameEn: 'Local News',
+                        nameFr: 'Infos Locales',
                         icon: '📍',
-                        categories: ['happened in Buea', 'happened in any region']
+                        categories: [
+                            { id: 'happened in Buea', nameEn: 'Buea', nameFr: 'Buea' },
+                            { id: 'happened in any region', nameEn: 'Regional', nameFr: 'Régional' }
+                        ]
                     },
                     {
-                        name: 'Environment & Agriculture',
+                        nameEn: 'Environment & Agriculture',
+                        nameFr: 'Environnement',
                         icon: '🌱',
-                        categories: ['environment', 'agriculture', 'transportation']
+                        categories: [
+                            { id: 'environment', nameEn: 'Environment', nameFr: 'Environnement' },
+                            { id: 'agriculture', nameEn: 'Agriculture', nameFr: 'Agriculture' },
+                            { id: 'transportation', nameEn: 'Transportation', nameFr: 'Transport' }
+                        ]
                     },
                     {
-                        name: 'Special',
+                        nameEn: 'Special',
+                        nameFr: 'Spécial',
                         icon: '⭐',
-                        categories: ['concours_launch', 'human_interest', 'disgusting']
+                        categories: [
+                            { id: 'concours_launch', nameEn: 'Concours', nameFr: 'Concours' },
+                            { id: 'human_interest', nameEn: 'Human Interest', nameFr: 'Intérêt Humain' },
+                            { id: 'disgusting', nameEn: 'Shocking', nameFr: 'Choquant' }
+                        ]
                     }
                 ],
 
@@ -1104,42 +1157,48 @@
                 categories: [
                     {
                         id: 'DEVELOPMENT',
-                        name: 'Development',
+                        nameEn: 'Development',
+                        nameFr: 'Développement',
                         emoji: '🏗️',
                         gradient: 'bg-gradient-to-br from-blue-600 to-blue-800',
                         selectedGradient: 'bg-gradient-to-br from-blue-400 to-blue-600'
                     },
                     {
                         id: 'BUSINESS',
-                        name: 'Business',
+                        nameEn: 'Business',
+                        nameFr: 'Affaires',
                         emoji: '💼',
                         gradient: 'bg-gradient-to-br from-orange-600 to-orange-800',
                         selectedGradient: 'bg-gradient-to-br from-orange-400 to-orange-600'
                     },
                     {
                         id: 'SPORTS',
-                        name: 'Sports',
+                        nameEn: 'Sports',
+                        nameFr: 'Sports',
                         emoji: '⚽',
                         gradient: 'bg-gradient-to-br from-green-600 to-green-800',
                         selectedGradient: 'bg-gradient-to-br from-green-400 to-green-600'
                     },
                     {
                         id: 'TECH',
-                        name: 'Technology',
+                        nameEn: 'Technology',
+                        nameFr: 'Technologie',
                         emoji: '💻',
                         gradient: 'bg-gradient-to-br from-purple-600 to-purple-800',
                         selectedGradient: 'bg-gradient-to-br from-purple-400 to-purple-600'
                     },
                     {
                         id: 'POLITICS',
-                        name: 'Politics',
+                        nameEn: 'Politics',
+                        nameFr: 'Politique',
                         emoji: '🏛️',
                         gradient: 'bg-gradient-to-br from-red-600 to-red-800',
                         selectedGradient: 'bg-gradient-to-br from-red-400 to-red-600'
                     },
                     {
                         id: 'ENTERTAINMENT',
-                        name: 'Entertainment',
+                        nameEn: 'Entertainment',
+                        nameFr: 'Divertissement',
                         emoji: '🎭',
                         gradient: 'bg-gradient-to-br from-pink-600 to-pink-800',
                         selectedGradient: 'bg-gradient-to-br from-pink-400 to-pink-600'
@@ -1732,11 +1791,7 @@
                     this.audioProgress = 0;
                 },
 
-                changeLanguage(lang) {
-                    this.readerLang = lang;
-                    this.isPlaying = false;
-                    this.audioProgress = 0;
-                },
+
 
                 toggleAudio() {
                     this.isPlaying = !this.isPlaying;
