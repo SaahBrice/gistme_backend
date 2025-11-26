@@ -77,13 +77,15 @@
 
         <div class="mt-8 p-4 bg-gray-900 rounded-xl border border-gray-800">
             <h3 class="text-sm font-bold text-yellow-500 uppercase tracking-wider mb-2">Sources</h3>
-            <ul class="space-y-2">
-                <template x-for="source in getArticleSources()" :key="source">
-                    <li class="text-sm text-blue-400" x-text="source"></li>
-                </template>
-                <li x-show="getArticleSources().length === 0" class="text-sm text-gray-500">Source info
-                    unavailable</li>
-            </ul>
+            <template x-if="currentArticle">
+                <ul class="space-y-2">
+                    <template x-for="(source, index) in (currentArticle.sourceNames || [])" :key="index">
+                        <li class="text-sm text-blue-400" x-text="source"></li>
+                    </template>
+                    <li x-show="!currentArticle.sourceNames || currentArticle.sourceNames.length === 0"
+                        class="text-sm text-gray-500">Source info unavailable</li>
+                </ul>
+            </template>
         </div>
     </div>
 </div>

@@ -808,12 +808,7 @@ function gistMeApp() {
             }
         },
 
-        getArticleSources() {
-            if (!this.currentArticle || !this.currentArticle.sourceNames) {
-                return [];
-            }
-            return this.currentArticle.sourceNames;
-        },
+
 
 
         initLiquidButton(canvas) {
