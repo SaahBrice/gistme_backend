@@ -777,96 +777,163 @@ const FeedActions = {
         canvas.width = 1080;
         canvas.height = 1920;
 
-        // 1. Background Gradient
-        const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
-        gradient.addColorStop(0, '#1a1a1a');
-        gradient.addColorStop(1, '#000000');
-        ctx.fillStyle = gradient;
+        // --- COLORS & FONTS ---
+        const bgDark = '#0f0f0f';
+        const bgCard = '#1a1a1a';
+        const textWhite = '#ffffff';
+        const textGray = '#a0a0a0';
+        const accentColor = '#FFDE00'; // Brand Yellow
+
+        // 1. Background
+        ctx.fillStyle = bgDark;
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-        // 2. Add Noise Texture (Optional simulation)
-        // ctx.globalAlpha = 0.05;
-        // ... noise drawing code ...
-        // ctx.globalAlpha = 1.0;
+        // 2. Header (Top 10% - 192px)
+        const headerHeight = 192;
 
-        // 3. Category Badge
-        ctx.font = 'bold 40px Inter, sans-serif';
-        ctx.fillStyle = '#FFDE00';
-        ctx.fillText(article.category.toUpperCase(), 80, 150);
-
-        // 4. Branding
+        // Branding (Left)
         ctx.font = 'bold 60px "Black Ops One", sans-serif';
-        ctx.fillStyle = '#FFFFFF';
-        ctx.textAlign = 'right';
-        ctx.fillText('GIST4U', canvas.width - 80, 150);
-        ctx.textAlign = 'left'; // Reset
+        ctx.fillStyle = accentColor;
+        ctx.textAlign = 'left';
+        ctx.textBaseline = 'middle';
+        ctx.fillText('GIST4U', 60, headerHeight / 2);
 
-        // 5. Main Image (if available)
+        // Category Badge (Right)
+        ctx.font = 'bold 40px Inter, sans-serif';
+        ctx.fillStyle = textWhite;
+        ctx.textAlign = 'right';
+        const categoryText = article.category.toUpperCase();
+        ctx.fillText(categoryText, canvas.width - 60, headerHeight / 2);
+
+        // Category Underline
+        const catWidth = ctx.measureText(categoryText).width;
+        ctx.fillStyle = accentColor;
+        ctx.fillRect(canvas.width - 60 - catWidth, (headerHeight / 2) + 25, catWidth, 4);
+
+
+        // 3. Image Area (Next 45% - ~864px)
+        const imageY = headerHeight;
+        const imageHeight = 864;
+
+        // Placeholder background for image area
+        ctx.fillStyle = '#222';
+        ctx.fillRect(0, imageY, canvas.width, imageHeight);
+
         if (article.image) {
             try {
                 const img = new Image();
                 img.crossOrigin = "anonymous";
                 img.src = article.image;
-                await new Promise(r => img.onload = r);
+                await new Promise((resolve, reject) => {
+                    img.onload = resolve;
+                    img.onerror = reject;
+                });
 
-                // Draw image with aspect ratio preserved or cropped
-                const imgHeight = 800;
-                ctx.drawImage(img, 0, 250, canvas.width, imgHeight);
+                // Draw image covering the area (object-fit: cover)
+                const scale = Math.max(canvas.width / img.width, imageHeight / img.height);
+                const x = (canvas.width / 2) - (img.width / 2) * scale;
+                const y = (imageY + imageHeight / 2) - (img.height / 2) * scale;
+                ctx.drawImage(img, x, y, img.width * scale, img.height * scale);
 
-                // Add gradient overlay on image
-                const overlayGrad = ctx.createLinearGradient(0, 250, 0, 250 + imgHeight);
-                overlayGrad.addColorStop(0, 'rgba(0,0,0,0)');
-                overlayGrad.addColorStop(0.7, 'rgba(0,0,0,0.8)');
-                overlayGrad.addColorStop(1, '#000000');
-                ctx.fillStyle = overlayGrad;
-                ctx.fillRect(0, 250, canvas.width, imgHeight);
+                // Gradient Overlay at the bottom of the image for smooth transition
+                const gradient = ctx.createLinearGradient(0, imageY + imageHeight - 200, 0, imageY + imageHeight);
+                gradient.addColorStop(0, 'rgba(15, 15, 15, 0)');
+                gradient.addColorStop(1, bgDark);
+                ctx.fillStyle = gradient;
+                ctx.fillRect(0, imageY + imageHeight - 200, canvas.width, 200);
+
             } catch (e) {
                 console.error("Failed to load image for canvas", e);
+                // Fallback text if image fails
+                ctx.fillStyle = '#333';
+                ctx.textAlign = 'center';
+                ctx.font = '40px Inter';
+                ctx.fillText('Image Unavailable', canvas.width / 2, imageY + imageHeight / 2);
             }
         }
 
-        // 6. Headline
-        ctx.font = '900 80px Inter, sans-serif';
-        ctx.fillStyle = '#FFFFFF';
-        this.wrapText(ctx, article.headline, 80, 1150, canvas.width - 160, 90);
+        // 4. Content Area (Bottom 45%)
+        let contentY = imageY + imageHeight + 40;
+        const padding = 60;
+        const contentWidth = canvas.width - (padding * 2);
 
-        // 7. Summary
-        ctx.font = '400 50px Inter, sans-serif';
-        ctx.fillStyle = '#CCCCCC';
-        this.wrapText(ctx, article.summary, 80, 1500, canvas.width - 160, 70);
+        // Headline
+        ctx.textAlign = 'left';
+        ctx.textBaseline = 'top';
+        ctx.fillStyle = textWhite;
+        ctx.font = '900 70px Inter, sans-serif'; // Large bold headline
 
-        // 8. Footer / Call to Action
-        ctx.fillStyle = '#333333';
-        ctx.roundRect(80, 1750, canvas.width - 160, 100, 50);
-        ctx.fill();
+        // Wrap and truncate headline (Max 3 lines)
+        contentY = this.wrapText(ctx, article.headline, padding, contentY, contentWidth, 85, 3);
 
-        ctx.font = 'bold 40px Inter, sans-serif';
-        ctx.fillStyle = '#FFDE00';
-        ctx.textAlign = 'center';
-        ctx.fillText('Read more on Gist4u', canvas.width / 2, 1815);
+        // Spacer
+        contentY += 40;
+
+        // Summary
+        ctx.fillStyle = textGray;
+        ctx.font = '400 45px Inter, sans-serif'; // Readable summary
+
+        // Wrap and truncate summary (Max 5 lines)
+        contentY = this.wrapText(ctx, article.summary, padding, contentY, contentWidth, 65, 5);
+
+        // 5. Footer (Bottom)
+        const footerY = canvas.height - 100;
+
+        // Divider line
+        ctx.strokeStyle = '#333';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(padding, footerY - 40);
+        ctx.lineTo(canvas.width - padding, footerY - 40);
+        ctx.stroke();
+
+        // "Read more"
+        ctx.fillStyle = accentColor;
+        ctx.font = 'bold 35px Inter, sans-serif';
+        ctx.textAlign = 'left';
+        ctx.fillText('Read more on Gist4u', padding, footerY);
+
+        // Date/Time
+        ctx.fillStyle = '#666';
+        ctx.textAlign = 'right';
+        ctx.fillText(article.timeAgo || 'Just now', canvas.width - padding, footerY);
 
         // Export
         this.gistCardImage = canvas.toDataURL('image/png');
     },
 
-    wrapText(ctx, text, x, y, maxWidth, lineHeight) {
+    wrapText(ctx, text, x, y, maxWidth, lineHeight, maxLines) {
         const words = text.split(' ');
         let line = '';
+        let lineCount = 1;
 
         for (let n = 0; n < words.length; n++) {
             const testLine = line + words[n] + ' ';
             const metrics = ctx.measureText(testLine);
             const testWidth = metrics.width;
+
             if (testWidth > maxWidth && n > 0) {
+                // Check if we are at the last allowed line
+                if (lineCount >= maxLines) {
+                    // Truncate and add ellipsis
+                    while (ctx.measureText(line + '...').width > maxWidth) {
+                        line = line.slice(0, -1);
+                    }
+                    ctx.fillText(line.trim() + '...', x, y);
+                    return y + lineHeight; // Stop processing
+                }
+
                 ctx.fillText(line, x, y);
                 line = words[n] + ' ';
                 y += lineHeight;
-            }
-            else {
+                lineCount++;
+            } else {
                 line = testLine;
             }
         }
+        // Draw the last line
         ctx.fillText(line, x, y);
+        return y + lineHeight;
     },
 
     async shareGistCard() {
