@@ -1,0 +1,69 @@
+<div x-show="!moodSelected" x-transition:enter="transition ease-out duration-500"
+    x-transition:leave="transition ease-in duration-300"
+    class="fixed inset-0 z-50 flex items-center justify-center bg-black">
+
+    <div class="text-center px-8">
+        <h1 class="text-5xl md:text-7xl brand-font text-yellow-500 mb-4 slide-up">Gist4u</h1>
+        <p class="text-xl md:text-2xl text-gray-300 mb-12 slide-up" style="animation-delay: 0.1s"
+            x-text="globalLang === 'fr' ? 'Choisissez votre ambiance pour commencer' : 'Choose your vibe to start gisting'">
+        </p>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            <button @click="selectMood('happy')"
+                class="vibe-btn slide-up bg-gradient-to-br from-yellow-500 to-yellow-700 p-6 rounded-3xl hover:scale-105 transition-transform duration-300 shadow-2xl"
+                style="animation-delay: 0.1s">
+                <div class="text-5xl mb-2">😊</div>
+                <div class="text-lg font-bold">Happy</div>
+            </button>
+
+            <button @click="selectMood('exciting')"
+                class="vibe-btn slide-up bg-gradient-to-br from-orange-500 to-red-600 p-6 rounded-3xl hover:scale-105 transition-transform duration-300 shadow-2xl"
+                style="animation-delay: 0.15s">
+                <div class="text-5xl mb-2">🤩</div>
+                <div class="text-lg font-bold">Exciting</div>
+            </button>
+
+            <button @click="selectMood('inspiring')"
+                class="vibe-btn slide-up bg-gradient-to-br from-purple-500 to-pink-600 p-6 rounded-3xl hover:scale-105 transition-transform duration-300 shadow-2xl"
+                style="animation-delay: 0.2s">
+                <div class="text-5xl mb-2">✨</div>
+                <div class="text-lg font-bold">Inspiring</div>
+            </button>
+
+            <button @click="selectMood('shocking')"
+                class="vibe-btn slide-up bg-gradient-to-br from-red-600 to-red-800 p-6 rounded-3xl hover:scale-105 transition-transform duration-300 shadow-2xl"
+                style="animation-delay: 0.25s">
+                <div class="text-5xl mb-2">😱</div>
+                <div class="text-lg font-bold">Shocking</div>
+            </button>
+
+            <button @click="selectMood('concerning')"
+                class="vibe-btn slide-up bg-gradient-to-br from-blue-700 to-blue-900 p-6 rounded-3xl hover:scale-105 transition-transform duration-300 shadow-2xl"
+                style="animation-delay: 0.3s">
+                <div class="text-5xl mb-2">🤔</div>
+                <div class="text-lg font-bold">Concerning</div>
+            </button>
+
+            <button @click="selectMood('sad')"
+                class="vibe-btn slide-up bg-gradient-to-br from-gray-600 to-gray-800 p-6 rounded-3xl hover:scale-105 transition-transform duration-300 shadow-2xl"
+                style="animation-delay: 0.35s">
+                <div class="text-5xl mb-2">😢</div>
+                <div class="text-lg font-bold">Sad</div>
+            </button>
+
+            <button @click="selectMood('angry')"
+                class="vibe-btn slide-up bg-gradient-to-br from-red-700 to-orange-700 p-6 rounded-3xl hover:scale-105 transition-transform duration-300 shadow-2xl"
+                style="animation-delay: 0.4s">
+                <div class="text-5xl mb-2">😠</div>
+                <div class="text-lg font-bold">Angry</div>
+            </button>
+
+            <button @click="selectMood('neutral')"
+                class="vibe-btn slide-up bg-gradient-to-br from-slate-600 to-slate-800 p-6 rounded-3xl hover:scale-105 transition-transform duration-300 shadow-2xl"
+                style="animation-delay: 0.45s">
+                <div class="text-5xl mb-2">😐</div>
+                <div class="text-lg font-bold">Neutral</div>
+            </button>
+        </div>
+    </div>
+</div>

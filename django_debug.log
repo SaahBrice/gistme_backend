@@ -780,3 +780,351 @@ WARNING 2025-11-26 03:59:15,816 log 59764 9724 Not Found: /.well-known/appspecif
 WARNING 2025-11-26 03:59:15,818 basehttp 59764 9724 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
 INFO 2025-11-26 03:59:15,821 basehttp 59764 53492 "GET /static/web/css/main.css HTTP/1.1" 200 2909
 INFO 2025-11-26 03:59:15,821 basehttp 59764 56056 "GET /static/web/js/main.js HTTP/1.1" 200 6816
+INFO 2025-11-26 04:05:54,004 autoreload 10996 49640 Watching for file changes with StatReloader
+ERROR 2025-11-26 04:06:23,152 log 10996 35768 Internal Server Error: /feed/
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\views.py", line 7, in feed
+    return render(request, 'web/feed.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 228, in do_block
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'block' tag with name 'title' appears more than once
+ERROR 2025-11-26 04:06:23,165 basehttp 10996 35768 "GET /feed/ HTTP/1.1" 500 179276
+WARNING 2025-11-26 04:06:23,575 log 10996 35768 Not Found: /favicon.ico
+WARNING 2025-11-26 04:06:23,577 basehttp 10996 35768 "GET /favicon.ico HTTP/1.1" 404 3030
+ERROR 2025-11-26 04:07:33,453 log 10996 67112 Internal Server Error: /feed/
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\views.py", line 7, in feed
+    return render(request, 'web/feed.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 228, in do_block
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'block' tag with name 'title' appears more than once
+ERROR 2025-11-26 04:07:33,462 basehttp 10996 67112 "GET /feed/ HTTP/1.1" 500 179276
+INFO 2025-11-26 04:08:42,128 basehttp 10996 67112 "GET /feed/ HTTP/1.1" 200 31530
+INFO 2025-11-26 04:08:42,789 basehttp 10996 67608 "GET /static/web/css/feed.css HTTP/1.1" 200 9471
+INFO 2025-11-26 04:08:42,796 basehttp 10996 67112 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-26 04:08:42,817 basehttp 10996 68200 "GET /static/web/js/main.js HTTP/1.1" 200 6816
+INFO 2025-11-26 04:08:42,824 basehttp 10996 68204 "GET /static/web/js/feed.js HTTP/1.1" 200 28929
+INFO 2025-11-26 04:08:44,093 basehttp 10996 68204 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-26 04:10:51,162 autoreload 48236 68160 Watching for file changes with StatReloader
+INFO 2025-11-26 04:10:54,525 basehttp 48236 67248 "GET / HTTP/1.1" 200 21297
+WARNING 2025-11-26 04:10:54,610 log 48236 67248 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-26 04:10:54,611 basehttp 48236 67248 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-26 04:10:54,808 basehttp 48236 64904 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-26 04:10:54,808 basehttp 48236 67552 "GET /static/web/js/main.js HTTP/1.1" 200 6816
+INFO 2025-11-26 04:11:19,994 basehttp 48236 67552 "GET /feed/ HTTP/1.1" 200 31530
+INFO 2025-11-26 04:11:20,142 basehttp 48236 64904 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-26 04:11:20,143 basehttp 48236 67248 "GET /static/web/css/feed.css HTTP/1.1" 200 9471
+INFO 2025-11-26 04:11:20,146 basehttp 48236 57224 "GET /static/web/js/main.js HTTP/1.1" 200 6816
+WARNING 2025-11-26 04:11:20,154 log 48236 67552 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-11-26 04:11:20,156 basehttp 48236 68300 "GET /static/web/js/feed.js HTTP/1.1" 200 28929
+WARNING 2025-11-26 04:11:20,158 basehttp 48236 67552 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-26 04:11:20,765 basehttp 48236 68300 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-26 04:11:28,146 basehttp 48236 68300 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-26 04:11:28,215 basehttp 48236 68300 "GET /api/articles/ HTTP/1.1" 200 35415
+WARNING 2025-11-26 04:11:28,326 log 48236 67248 Not Found: /feed/media/thumbnails\x0business_20251126_004238_1.jpeg
+WARNING 2025-11-26 04:11:28,327 basehttp 48236 67248 "GET /feed/media/thumbnails%0Business_20251126_004238_1.jpeg HTTP/1.1" 404 3155
+WARNING 2025-11-26 04:11:28,342 log 48236 57224 Not Found: /feed/media/thumbnails\x0entertainment_20251126_004118_1.jpeg
+WARNING 2025-11-26 04:11:28,343 basehttp 48236 57224 "GET /feed/media/thumbnails%0Entertainment_20251126_004118_1.jpeg HTTP/1.1" 404 3170
+WARNING 2025-11-26 04:11:28,361 log 48236 67552 Not Found: /feed/media/thumbnailstechnology_20251126_004402_1.png
+WARNING 2025-11-26 04:11:28,362 basehttp 48236 67552 "GET /feed/media/thumbnailstechnology_20251126_004402_1.png HTTP/1.1" 404 3156
+WARNING 2025-11-26 04:11:28,373 log 48236 64904 Not Found: /feed/media/thumbnailssports_20251126_004013_1.jpeg
+WARNING 2025-11-26 04:11:28,378 basehttp 48236 64904 "GET /feed/media/thumbnailssports_20251126_004013_1.jpeg HTTP/1.1" 404 3147
+WARNING 2025-11-26 04:11:28,388 log 48236 68300 Not Found: /feed/media/thumbnailshealth_20251126_004505_1.jpeg
+WARNING 2025-11-26 04:11:28,403 basehttp 48236 68300 "GET /feed/media/thumbnailshealth_20251126_004505_1.jpeg HTTP/1.1" 404 3147
+WARNING 2025-11-26 04:11:59,449 log 48236 68300 Not Found: /api/articles/9/comment/
+WARNING 2025-11-26 04:11:59,450 basehttp 48236 68300 "POST /api/articles/9/comment/ HTTP/1.1" 404 8045
+WARNING 2025-11-26 04:13:05,579 log 48236 68300 Not Found: /api/articles/8/comment/
+WARNING 2025-11-26 04:13:05,579 basehttp 48236 68300 "POST /api/articles/8/comment/ HTTP/1.1" 404 8045
+WARNING 2025-11-26 04:13:23,623 log 48236 68300 Not Found: /api/articles/8/comment/
+WARNING 2025-11-26 04:13:23,624 basehttp 48236 68300 "POST /api/articles/8/comment/ HTTP/1.1" 404 8045
+INFO 2025-11-26 04:17:01,293 basehttp 48236 68300 "GET /static/web/css/main.css HTTP/1.1" 304 0
+INFO 2025-11-26 04:17:01,342 basehttp 48236 68300 "GET /static/web/css/feed.css HTTP/1.1" 304 0
+WARNING 2025-11-26 04:17:01,390 log 48236 67228 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-26 04:17:01,394 basehttp 48236 67228 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-26 04:17:03,330 basehttp 48236 67228 "GET /feed/ HTTP/1.1" 200 31530
+WARNING 2025-11-26 04:17:03,445 log 48236 67228 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-26 04:17:03,447 basehttp 48236 67228 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-26 04:17:03,503 basehttp 48236 68300 "GET /static/web/css/feed.css HTTP/1.1" 200 9471
+INFO 2025-11-26 04:17:03,514 basehttp 48236 67228 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-26 04:17:03,562 basehttp 48236 66828 "GET /static/web/js/main.js HTTP/1.1" 200 6816
+INFO 2025-11-26 04:17:03,565 basehttp 48236 32584 "GET /static/web/js/feed.js HTTP/1.1" 200 28929
+INFO 2025-11-26 04:17:04,269 basehttp 48236 32584 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-26 04:17:08,849 basehttp 48236 32584 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-26 04:17:08,918 basehttp 48236 32584 "GET /api/articles/ HTTP/1.1" 200 35415
+WARNING 2025-11-26 04:17:09,051 log 48236 66828 Not Found: /feed/media/thumbnailstechnology_20251126_004402_1.png
+WARNING 2025-11-26 04:17:09,053 basehttp 48236 66828 "GET /feed/media/thumbnailstechnology_20251126_004402_1.png HTTP/1.1" 404 3156
+WARNING 2025-11-26 04:17:09,068 log 48236 67228 Not Found: /feed/media/thumbnails\x0business_20251126_004238_1.jpeg
+WARNING 2025-11-26 04:17:09,069 basehttp 48236 67228 "GET /feed/media/thumbnails%0Business_20251126_004238_1.jpeg HTTP/1.1" 404 3155
+WARNING 2025-11-26 04:17:09,088 log 48236 68300 Not Found: /feed/media/thumbnails\x0entertainment_20251126_004118_1.jpeg
+WARNING 2025-11-26 04:17:09,091 basehttp 48236 68300 "GET /feed/media/thumbnails%0Entertainment_20251126_004118_1.jpeg HTTP/1.1" 404 3170
+WARNING 2025-11-26 04:17:09,102 log 48236 32584 Not Found: /feed/media/thumbnailshealth_20251126_004505_1.jpeg
+WARNING 2025-11-26 04:17:09,103 basehttp 48236 32584 "GET /feed/media/thumbnailshealth_20251126_004505_1.jpeg HTTP/1.1" 404 3147
+WARNING 2025-11-26 04:17:09,118 log 48236 68008 Not Found: /feed/media/thumbnailssports_20251126_004013_1.jpeg
+WARNING 2025-11-26 04:17:09,119 basehttp 48236 68008 "GET /feed/media/thumbnailssports_20251126_004013_1.jpeg HTTP/1.1" 404 3147
+INFO 2025-11-26 04:30:46,735 basehttp 48236 70044 "GET /api/articles/?mood=happy&category=business HTTP/1.1" 200 52
+INFO 2025-11-26 04:30:46,807 basehttp 48236 70044 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-26 04:30:46,857 basehttp 48236 70044 "GET /api/articles/?category=business HTTP/1.1" 200 6507
+WARNING 2025-11-26 04:30:46,905 log 48236 70044 Not Found: /feed/media/thumbnails\x0business_20251126_004238_1.jpeg
+WARNING 2025-11-26 04:30:46,906 basehttp 48236 70044 "GET /feed/media/thumbnails%0Business_20251126_004238_1.jpeg HTTP/1.1" 404 3155
+WARNING 2025-11-26 04:31:21,788 log 48236 70044 Not Found: /api/articles/7/comment/
+WARNING 2025-11-26 04:31:21,788 basehttp 48236 70044 "POST /api/articles/7/comment/ HTTP/1.1" 404 8045
+WARNING 2025-11-26 04:31:35,525 log 48236 70044 Not Found: /api/articles/7/comment/
+WARNING 2025-11-26 04:31:35,526 basehttp 48236 70044 "POST /api/articles/7/comment/ HTTP/1.1" 404 8045
+WARNING 2025-11-26 04:32:05,166 log 48236 70044 Not Found: /api/articles/7/comment/
+WARNING 2025-11-26 04:32:05,166 basehttp 48236 70044 "POST /api/articles/7/comment/ HTTP/1.1" 404 8045
+WARNING 2025-11-26 04:33:11,119 log 48236 70044 Not Found: /api/articles/7/comment/
+WARNING 2025-11-26 04:33:11,120 basehttp 48236 70044 "POST /api/articles/7/comment/ HTTP/1.1" 404 8045
+INFO 2025-11-26 04:34:26,770 autoreload 48236 68160 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\views.py changed, reloading.
+INFO 2025-11-26 04:34:28,844 autoreload 68100 68484 Watching for file changes with StatReloader
+INFO 2025-11-26 04:34:45,147 basehttp 68100 30428 "GET /api/articles/ HTTP/1.1" 200 35415
+WARNING 2025-11-26 04:35:12,507 log 68100 30428 Bad Request: /api/articles/9/comment/
+WARNING 2025-11-26 04:35:12,508 basehttp 68100 30428 "POST /api/articles/9/comment/ HTTP/1.1" 400 39
+INFO 2025-11-26 04:35:48,577 autoreload 68100 68484 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\views.py changed, reloading.
+INFO 2025-11-26 04:35:50,769 autoreload 69556 69908 Watching for file changes with StatReloader
+INFO 2025-11-26 04:36:59,522 basehttp 69556 69900 "POST /api/articles/9/comment/ HTTP/1.1" 201 120
+INFO 2025-11-26 04:37:57,047 autoreload 63296 67144 Watching for file changes with StatReloader
+INFO 2025-11-26 04:38:01,506 basehttp 63296 68852 "GET /feed/ HTTP/1.1" 200 31530
+WARNING 2025-11-26 04:38:01,603 log 63296 68852 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-26 04:38:01,608 basehttp 63296 68852 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-26 04:38:02,011 basehttp 63296 68524 "GET /static/web/js/main.js HTTP/1.1" 200 6816
+INFO 2025-11-26 04:38:02,013 basehttp 63296 67348 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-26 04:38:02,015 basehttp 63296 56980 "GET /static/web/css/feed.css HTTP/1.1" 200 9471
+INFO 2025-11-26 04:38:02,016 basehttp 63296 68180 "GET /static/web/js/feed.js HTTP/1.1" 200 28929
+INFO 2025-11-26 04:38:02,532 basehttp 63296 68180 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-26 04:38:06,602 basehttp 63296 68180 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-26 04:38:06,663 basehttp 63296 68180 "GET /api/articles/ HTTP/1.1" 200 35535
+WARNING 2025-11-26 04:38:06,805 log 63296 68180 Not Found: /feed/media/thumbnailshealth_20251126_004505_1.jpeg
+WARNING 2025-11-26 04:38:06,806 basehttp 63296 68180 "GET /feed/media/thumbnailshealth_20251126_004505_1.jpeg HTTP/1.1" 404 3147
+WARNING 2025-11-26 04:38:06,813 log 63296 67348 Not Found: /feed/media/thumbnails\x0business_20251126_004238_1.jpeg
+WARNING 2025-11-26 04:38:06,814 basehttp 63296 67348 "GET /feed/media/thumbnails%0Business_20251126_004238_1.jpeg HTTP/1.1" 404 3155
+WARNING 2025-11-26 04:38:06,827 log 63296 68524 Not Found: /feed/media/thumbnails\x0entertainment_20251126_004118_1.jpeg
+WARNING 2025-11-26 04:38:06,830 basehttp 63296 68524 "GET /feed/media/thumbnails%0Entertainment_20251126_004118_1.jpeg HTTP/1.1" 404 3170
+WARNING 2025-11-26 04:38:06,843 log 63296 56980 Not Found: /feed/media/thumbnailstechnology_20251126_004402_1.png
+WARNING 2025-11-26 04:38:06,844 basehttp 63296 56980 "GET /feed/media/thumbnailstechnology_20251126_004402_1.png HTTP/1.1" 404 3156
+WARNING 2025-11-26 04:38:06,858 log 63296 68852 Not Found: /feed/media/thumbnailssports_20251126_004013_1.jpeg
+WARNING 2025-11-26 04:38:06,859 basehttp 63296 68852 "GET /feed/media/thumbnailssports_20251126_004013_1.jpeg HTTP/1.1" 404 3147
+INFO 2025-11-26 04:38:26,076 basehttp 63296 68852 "POST /api/articles/9/comment/ HTTP/1.1" 201 113
+INFO 2025-11-26 04:38:57,554 basehttp 63296 68852 "POST /api/articles/7/comment/ HTTP/1.1" 201 118
+WARNING 2025-11-26 04:39:15,864 log 63296 68852 Bad Request: /api/articles/4/comment/
+WARNING 2025-11-26 04:39:15,865 basehttp 63296 68852 "POST /api/articles/4/comment/ HTTP/1.1" 400 99
+INFO 2025-11-26 04:45:38,150 basehttp 63296 69712 "POST /api/articles/4/comment/ HTTP/1.1" 201 121
+INFO 2025-11-26 04:46:05,087 basehttp 63296 66432 "GET /api/articles/ HTTP/1.1" 200 60002
+INFO 2025-11-26 04:46:05,161 basehttp 63296 66432 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2025-11-26 04:46:05,164 basehttp 63296 67728 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2025-11-26 04:46:05,166 basehttp 63296 68416 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2025-11-26 04:46:05,169 basehttp 63296 61260 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2025-11-26 04:46:05,169 basehttp 63296 66432 "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+INFO 2025-11-26 04:46:05,169 basehttp 63296 60248 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2025-11-26 04:46:05,171 basehttp 63296 65588 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2025-11-26 04:46:05,185 basehttp 63296 67728 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2025-11-26 04:46:05,188 basehttp 63296 68416 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2025-11-26 04:46:05,188 basehttp 63296 65588 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2025-11-26 04:46:05,188 basehttp 63296 60248 "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+INFO 2025-11-26 04:46:05,343 basehttp 63296 60248 "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO 2025-11-26 04:46:05,346 basehttp 63296 60248 "GET /static/rest_framework/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 304 0
+INFO 2025-11-26 04:48:10,258 autoreload 70116 53568 Watching for file changes with StatReloader
+INFO 2025-11-26 04:48:37,579 basehttp 70116 66632 "GET /feed/ HTTP/1.1" 200 31530
+WARNING 2025-11-26 04:48:38,069 log 70116 66632 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-26 04:48:38,071 basehttp 70116 66632 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-26 04:48:38,455 basehttp 70116 69636 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-26 04:48:38,461 basehttp 70116 60224 "GET /static/web/js/main.js HTTP/1.1" 200 6816
+INFO 2025-11-26 04:48:38,464 basehttp 70116 70624 "GET /static/web/js/feed.js HTTP/1.1" 200 29041
+INFO 2025-11-26 04:48:38,468 basehttp 70116 67280 "GET /static/web/css/feed.css HTTP/1.1" 200 9471
+INFO 2025-11-26 04:48:39,563 basehttp 70116 67280 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-26 04:48:48,423 basehttp 70116 67280 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-26 04:48:48,488 basehttp 70116 67280 "GET /api/articles/ HTTP/1.1" 200 35888
+WARNING 2025-11-26 04:48:48,646 log 70116 66632 Not Found: /feed/media/thumbnailssports_20251126_004013_1.jpeg
+WARNING 2025-11-26 04:48:48,647 basehttp 70116 66632 "GET /feed/media/thumbnailssports_20251126_004013_1.jpeg HTTP/1.1" 404 3147
+WARNING 2025-11-26 04:48:48,666 log 70116 69636 Not Found: /feed/media/thumbnails\x0entertainment_20251126_004118_1.jpeg
+WARNING 2025-11-26 04:48:48,667 basehttp 70116 69636 "GET /feed/media/thumbnails%0Entertainment_20251126_004118_1.jpeg HTTP/1.1" 404 3170
+WARNING 2025-11-26 04:48:48,685 log 70116 60224 Not Found: /feed/media/thumbnails\x0business_20251126_004238_1.jpeg
+WARNING 2025-11-26 04:48:48,686 basehttp 70116 60224 "GET /feed/media/thumbnails%0Business_20251126_004238_1.jpeg HTTP/1.1" 404 3155
+WARNING 2025-11-26 04:48:48,696 log 70116 67280 Not Found: /feed/media/thumbnailshealth_20251126_004505_1.jpeg
+WARNING 2025-11-26 04:48:48,698 basehttp 70116 67280 "GET /feed/media/thumbnailshealth_20251126_004505_1.jpeg HTTP/1.1" 404 3147
+WARNING 2025-11-26 04:48:48,711 log 70116 70624 Not Found: /feed/media/thumbnailstechnology_20251126_004402_1.png
+WARNING 2025-11-26 04:48:48,711 basehttp 70116 70624 "GET /feed/media/thumbnailstechnology_20251126_004402_1.png HTTP/1.1" 404 3156
+INFO 2025-11-26 04:49:38,293 basehttp 70116 70624 "POST /api/articles/8/comment/ HTTP/1.1" 201 119
+INFO 2025-11-26 04:49:56,120 basehttp 70116 70624 "GET /api/articles/ HTTP/1.1" 200 60358
+INFO 2025-11-26 04:51:03,355 basehttp 70116 70624 "POST /api/articles/8/comment/ HTTP/1.1" 201 118
+INFO 2025-11-26 04:51:18,255 basehttp 70116 70624 "GET /api/articles/ HTTP/1.1" 200 60701
+INFO 2025-11-26 04:52:59,600 basehttp 70116 70624 "POST /api/articles/8/comment/ HTTP/1.1" 201 125
+INFO 2025-11-26 04:56:51,883 autoreload 70528 69364 Watching for file changes with StatReloader
+INFO 2025-11-26 04:56:58,738 basehttp 70528 66856 "GET /feed/ HTTP/1.1" 200 31530
+WARNING 2025-11-26 04:56:58,834 log 70528 66856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-26 04:56:58,837 basehttp 70528 66856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-26 04:56:59,260 basehttp 70528 70560 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-26 04:56:59,262 basehttp 70528 53208 "GET /static/web/css/feed.css HTTP/1.1" 200 9471
+INFO 2025-11-26 04:56:59,263 basehttp 70528 68872 "GET /static/web/js/main.js HTTP/1.1" 200 6816
+INFO 2025-11-26 04:56:59,267 basehttp 70528 396 "GET /static/web/js/feed.js HTTP/1.1" 200 30394
+INFO 2025-11-26 04:56:59,857 basehttp 70528 396 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-26 04:57:03,472 basehttp 70528 396 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-26 04:57:03,527 basehttp 70528 396 "GET /api/articles/ HTTP/1.1" 200 36252
+WARNING 2025-11-26 04:57:03,633 log 70528 396 Not Found: /feed/media/thumbnailshealth_20251126_004505_1.jpeg
+WARNING 2025-11-26 04:57:03,634 basehttp 70528 396 "GET /feed/media/thumbnailshealth_20251126_004505_1.jpeg HTTP/1.1" 404 3147
+WARNING 2025-11-26 04:57:03,650 log 70528 53208 Not Found: /feed/media/thumbnails\x0business_20251126_004238_1.jpeg
+WARNING 2025-11-26 04:57:03,651 basehttp 70528 53208 "GET /feed/media/thumbnails%0Business_20251126_004238_1.jpeg HTTP/1.1" 404 3155
+WARNING 2025-11-26 04:57:03,665 log 70528 66856 Not Found: /feed/media/thumbnailssports_20251126_004013_1.jpeg
+WARNING 2025-11-26 04:57:03,666 basehttp 70528 66856 "GET /feed/media/thumbnailssports_20251126_004013_1.jpeg HTTP/1.1" 404 3147
+WARNING 2025-11-26 04:57:03,688 log 70528 70560 Not Found: /feed/media/thumbnails\x0entertainment_20251126_004118_1.jpeg
+WARNING 2025-11-26 04:57:03,692 basehttp 70528 70560 "GET /feed/media/thumbnails%0Entertainment_20251126_004118_1.jpeg HTTP/1.1" 404 3170
+WARNING 2025-11-26 04:57:03,700 log 70528 68872 Not Found: /feed/media/thumbnailstechnology_20251126_004402_1.png
+WARNING 2025-11-26 04:57:03,700 basehttp 70528 68872 "GET /feed/media/thumbnailstechnology_20251126_004402_1.png HTTP/1.1" 404 3156
+INFO 2025-11-26 04:57:22,050 basehttp 70528 68872 "GET /api/articles/ HTTP/1.1" 200 61051
+INFO 2025-11-26 04:57:47,507 basehttp 70528 68872 "GET /feed/ HTTP/1.1" 200 31530
+INFO 2025-11-26 04:57:47,584 basehttp 70528 66856 "GET /static/web/css/feed.css HTTP/1.1" 200 9471
+INFO 2025-11-26 04:57:47,586 basehttp 70528 53208 "GET /static/web/js/main.js HTTP/1.1" 200 6816
+INFO 2025-11-26 04:57:47,586 basehttp 70528 70560 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-26 04:57:47,587 basehttp 70528 396 "GET /static/web/js/feed.js HTTP/1.1" 200 30394
+WARNING 2025-11-26 04:57:47,594 log 70528 68872 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-26 04:57:47,594 basehttp 70528 68872 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-26 04:57:48,334 basehttp 70528 68872 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-26 04:57:51,715 basehttp 70528 68872 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-26 04:57:51,821 basehttp 70528 68872 "GET /api/articles/ HTTP/1.1" 200 36252
+WARNING 2025-11-26 04:57:51,915 log 70528 396 Not Found: /feed/media/thumbnails\x0business_20251126_004238_1.jpeg
+WARNING 2025-11-26 04:57:51,916 basehttp 70528 396 "GET /feed/media/thumbnails%0Business_20251126_004238_1.jpeg HTTP/1.1" 404 3155
+WARNING 2025-11-26 04:57:51,932 log 70528 53208 Not Found: /feed/media/thumbnails\x0entertainment_20251126_004118_1.jpeg
+WARNING 2025-11-26 04:57:51,933 basehttp 70528 53208 "GET /feed/media/thumbnails%0Entertainment_20251126_004118_1.jpeg HTTP/1.1" 404 3170
+WARNING 2025-11-26 04:57:51,950 log 70528 70560 Not Found: /feed/media/thumbnailstechnology_20251126_004402_1.png
+WARNING 2025-11-26 04:57:51,951 basehttp 70528 70560 "GET /feed/media/thumbnailstechnology_20251126_004402_1.png HTTP/1.1" 404 3156
+WARNING 2025-11-26 04:57:51,964 log 70528 68872 Not Found: /feed/media/thumbnailshealth_20251126_004505_1.jpeg
+WARNING 2025-11-26 04:57:51,965 basehttp 70528 68872 "GET /feed/media/thumbnailshealth_20251126_004505_1.jpeg HTTP/1.1" 404 3147
+WARNING 2025-11-26 04:57:51,981 log 70528 66856 Not Found: /feed/media/thumbnailssports_20251126_004013_1.jpeg
+WARNING 2025-11-26 04:57:51,982 basehttp 70528 66856 "GET /feed/media/thumbnailssports_20251126_004013_1.jpeg HTTP/1.1" 404 3147
+INFO 2025-11-26 04:58:22,842 basehttp 70528 66856 "POST /api/articles/8/comment/ HTTP/1.1" 201 120
+INFO 2025-11-26 04:58:42,345 basehttp 70528 67312 "POST /api/articles/8/comment/ HTTP/1.1" 201 114
+INFO 2025-11-26 04:58:51,578 basehttp 70528 67312 "POST /api/articles/8/comment/ HTTP/1.1" 201 114
+INFO 2025-11-26 04:59:47,753 basehttp 70528 67312 "GET /api/articles/ HTTP/1.1" 200 62074
+INFO 2025-11-26 05:00:40,389 basehttp 70528 67312 "GET /feed/ HTTP/1.1" 200 31530
+WARNING 2025-11-26 05:00:40,462 log 70528 67312 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-26 05:00:40,465 basehttp 70528 67312 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-26 05:00:40,471 basehttp 70528 67312 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-26 05:00:40,480 basehttp 70528 70200 "GET /static/web/css/feed.css HTTP/1.1" 200 9471
+INFO 2025-11-26 05:00:40,480 basehttp 70528 66128 "GET /static/web/js/main.js HTTP/1.1" 200 6816
+INFO 2025-11-26 05:00:40,481 basehttp 70528 67444 "GET /static/web/js/feed.js HTTP/1.1" 200 30394
+INFO 2025-11-26 05:00:42,331 basehttp 70528 67444 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-26 05:00:45,827 basehttp 70528 67444 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-26 05:00:45,878 basehttp 70528 67444 "GET /api/articles/ HTTP/1.1" 200 36603
+WARNING 2025-11-26 05:00:45,991 log 70528 67444 Not Found: /feed/media/thumbnailshealth_20251126_004505_1.jpeg
+WARNING 2025-11-26 05:00:45,992 basehttp 70528 67444 "GET /feed/media/thumbnailshealth_20251126_004505_1.jpeg HTTP/1.1" 404 3147
+WARNING 2025-11-26 05:00:46,019 log 70528 67312 Not Found: /feed/media/thumbnails\x0entertainment_20251126_004118_1.jpeg
+WARNING 2025-11-26 05:00:46,021 basehttp 70528 67312 "GET /feed/media/thumbnails%0Entertainment_20251126_004118_1.jpeg HTTP/1.1" 404 3170
+WARNING 2025-11-26 05:00:46,066 log 70528 70200 Not Found: /feed/media/thumbnails\x0business_20251126_004238_1.jpeg
+WARNING 2025-11-26 05:00:46,067 basehttp 70528 70200 "GET /feed/media/thumbnails%0Business_20251126_004238_1.jpeg HTTP/1.1" 404 3155
+WARNING 2025-11-26 05:00:46,084 log 70528 66128 Not Found: /feed/media/thumbnailstechnology_20251126_004402_1.png
+WARNING 2025-11-26 05:00:46,084 basehttp 70528 66128 "GET /feed/media/thumbnailstechnology_20251126_004402_1.png HTTP/1.1" 404 3156
+WARNING 2025-11-26 05:00:46,100 log 70528 8208 Not Found: /feed/media/thumbnailssports_20251126_004013_1.jpeg
+WARNING 2025-11-26 05:00:46,100 basehttp 70528 8208 "GET /feed/media/thumbnailssports_20251126_004013_1.jpeg HTTP/1.1" 404 3147

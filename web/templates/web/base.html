@@ -69,13 +69,17 @@
         </div>
     </div>
 
+    {% block navbar %}
     {% include 'web/includes/_navbar.html' %}
+    {% endblock %}
 
     <main>
         {% block content %}{% endblock %}
     </main>
 
+    {% block footer %}
     {% include 'web/includes/_footer.html' %}
+    {% endblock %}
 
     <script src="{% static 'web/js/main.js' %}"></script>
     {% block extra_scripts %}{% endblock %}

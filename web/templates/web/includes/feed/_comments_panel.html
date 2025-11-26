@@ -1,0 +1,44 @@
+<!-- RIGHT PANEL: Comments Section -->
+<div class="fixed inset-y-0 right-0 w-80 z-50 side-panel side-panel-right" :class="{ 'open': showCommentsPanel }">
+    <div class="h-full glass-morphism border-l-2 border-yellow-500/30 flex flex-col">
+        <div class="p-4 border-b border-gray-800 flex justify-between items-center">
+            <h2 class="text-xl font-black text-yellow-500">Live Gists 💬</h2>
+            <button @click="closeCommentsPanel()"
+                class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="flex-1 overflow-y-auto p-4 space-y-4">
+            <template x-for="(comment, idx) in allComments" :key="idx">
+                <div class="bg-gray-800/50 backdrop-blur-md p-4 rounded-xl border border-gray-700">
+                    <div class="flex items-start gap-3">
+                        <div class="w-10 h-10 rounded-full bg-yellow-500 flex items-center justify-center font-bold text-black text-sm"
+                            x-text="comment.user.charAt(0).toUpperCase()"></div>
+                        <div class="flex-1">
+                            <p class="font-bold text-yellow-400 text-sm" x-text="comment.user"></p>
+                            <p class="text-gray-300 text-sm mt-1" x-text="comment.text"></p>
+                            <p class="text-xs text-gray-500 mt-1" x-text="comment.time"></p>
+                        </div>
+                    </div>
+                </div>
+            </template>
+
+            <div x-show="allComments.length === 0" class="text-center text-gray-500 py-8">
+                No comments yet. Be the first to drop a gist!
+            </div>
+        </div>
+
+        <div class="p-4 border-t border-gray-800">
+            <input type="text" x-model="quickCommentText" @keyup.enter="submitQuickComment()" maxlength="500"
+                placeholder="Drop a quick gist..."
+                class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-yellow-500">
+            <button @click="submitQuickComment()"
+                class="w-full mt-2 py-3 bg-yellow-500 hover:bg-yellow-600 text-black rounded-xl font-bold transition-colors">
+                Send Gist 🔥
+            </button>
+        </div>
+    </div>
+</div>

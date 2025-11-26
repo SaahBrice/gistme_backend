@@ -1,4 +1,5 @@
 from rest_framework import viewsets, filters, status
+from rest_framework.decorators import action
 from rest_framework.response import Response
 from django.conf import settings
 from django_filters.rest_framework import DjangoFilterBackend
@@ -30,6 +31,17 @@ class ArticleViewSet(viewsets.ModelViewSet):
     def create(self, request, *args, **kwargs):
         # source_code check is replaced by HasAPIKey permission
         return super().create(request, *args, **kwargs)
+
+    @action(detail=True, methods=['post'])
+    def comment(self, request, pk=None):
+        article = self.get_object()
+        data = request.data.copy()
+        data['article'] = article.id
+        serializer = CommentSerializer(data=data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class CommentViewSet(viewsets.ModelViewSet):
     queryset = Comment.objects.all().order_by('-timestamp')

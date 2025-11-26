@@ -1,0 +1,59 @@
+<div @scroll="handleScroll" @touchstart="handleTouchStart($event)" @touchmove="handleTouchMove($event)"
+    @touchend="handleTouchEnd($event)"
+    class="h-full overflow-y-scroll no-scrollbar snap-y snap-mandatory parallax-container pt-14 pb-16"
+    x-ref="feedContainer">
+
+    <template x-for="(article, index) in filteredArticles" :key="index">
+        <div class="relative w-full h-full flex-shrink-0 snap-start snap-always">
+
+            <!-- Background Image with Ken Burns Effect -->
+            <div class="absolute inset-0 overflow-hidden">
+                <div class="w-full h-full kenburns parallax-bg"
+                    :style="`background-image: url(${article.image}); background-size: cover; background-position: center;`">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Layer -->
+            <div class="relative h-full flex flex-col justify-end p-6 parallax-content">
+
+                <!-- Category Badge -->
+                <div class="mb-4">
+                    <span
+                        class="inline-block px-4 py-1.5 bg-yellow-500 text-black text-xs font-bold uppercase tracking-wider rounded-full stamp-font"
+                        x-text="article.category"></span>
+                </div>
+
+                <!-- Headline -->
+                <h2 class="text-3xl md:text-4xl font-black mb-3 leading-tight" x-text="article.headline">
+                </h2>
+
+                <!-- Summary -->
+                <p class="text-base md:text-lg text-gray-200 mb-4 line-clamp-3" x-text="article.summary">
+                </p>
+
+                <!-- Metadata -->
+                <div class="flex items-center gap-3 text-xs text-gray-400 mb-6">
+                    <span x-text="article.source"></span>
+                    <span>•</span>
+                    <span x-text="article.timeAgo"></span>
+                </div>
+
+                <!-- Griot Avatar Button -->
+                <div class="flex justify-center">
+                    <button @click="openReader(article)"
+                        class="relative w-16 h-16 rounded-full glass-morphism-yellow flex items-center justify-center griot-pulse shadow-2xl">
+                        <svg class="w-7 h-7 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
+                        </svg>
+                        <div class="absolute inset-0 rounded-full border-2 border-yellow-400 animate-ping opacity-50">
+                        </div>
+                    </button>
+                </div>
+                <p class="text-center text-sm text-yellow-400 mt-2 font-bold">Tap for Full Gist</p>
+            </div>
+        </div>
+    </template>
+</div>
