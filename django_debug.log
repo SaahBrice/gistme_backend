@@ -1221,3 +1221,27 @@ WARNING 2025-11-26 05:51:39,283 log 64196 59656 Not Found: /feed/media/thumbnail
 WARNING 2025-11-26 05:51:39,284 basehttp 64196 59656 "GET /feed/media/thumbnails%0Entertainment_20251126_004118_1.jpeg HTTP/1.1" 404 3170
 INFO 2025-11-26 05:51:47,206 basehttp 64196 59656 "POST /api/articles/9/comment/ HTTP/1.1" 201 116
 INFO 2025-11-26 05:51:54,797 basehttp 64196 59656 "POST /api/articles/9/comment/ HTTP/1.1" 201 117
+INFO 2025-11-26 05:54:34,635 autoreload 70508 44772 Watching for file changes with StatReloader
+INFO 2025-11-26 05:54:36,264 basehttp 70508 67308 "GET /feed/ HTTP/1.1" 200 31897
+WARNING 2025-11-26 05:54:36,324 log 70508 67308 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-26 05:54:36,325 basehttp 70508 67308 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-26 05:54:36,616 basehttp 70508 47632 "GET /static/web/js/main.js HTTP/1.1" 200 6816
+INFO 2025-11-26 05:54:36,633 basehttp 70508 60076 "GET /static/web/js/feed.js HTTP/1.1" 200 31254
+INFO 2025-11-26 05:54:36,636 basehttp 70508 66728 "GET /static/web/css/feed.css HTTP/1.1" 200 9471
+INFO 2025-11-26 05:54:36,636 basehttp 70508 67308 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-26 05:54:37,403 basehttp 70508 66728 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-26 05:54:41,335 basehttp 70508 66728 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-26 05:54:41,390 basehttp 70508 66728 "GET /api/articles/ HTTP/1.1" 200 37528
+WARNING 2025-11-26 05:54:41,531 log 70508 66728 Not Found: /feed/media/thumbnailshealth_20251126_004505_1.jpeg
+WARNING 2025-11-26 05:54:41,532 basehttp 70508 66728 "GET /feed/media/thumbnailshealth_20251126_004505_1.jpeg HTTP/1.1" 404 3147
+WARNING 2025-11-26 05:54:41,548 log 70508 67308 Not Found: /feed/media/thumbnailstechnology_20251126_004402_1.png
+WARNING 2025-11-26 05:54:41,550 basehttp 70508 67308 "GET /feed/media/thumbnailstechnology_20251126_004402_1.png HTTP/1.1" 404 3156
+WARNING 2025-11-26 05:54:41,563 log 70508 47632 Not Found: /feed/media/thumbnails\x0entertainment_20251126_004118_1.jpeg
+WARNING 2025-11-26 05:54:41,579 log 70508 60076 Not Found: /feed/media/thumbnails\x0business_20251126_004238_1.jpeg
+WARNING 2025-11-26 05:54:41,579 basehttp 70508 47632 "GET /feed/media/thumbnails%0Entertainment_20251126_004118_1.jpeg HTTP/1.1" 404 3170
+WARNING 2025-11-26 05:54:41,580 basehttp 70508 60076 "GET /feed/media/thumbnails%0Business_20251126_004238_1.jpeg HTTP/1.1" 404 3155
+WARNING 2025-11-26 05:54:41,603 log 70508 70560 Not Found: /feed/media/thumbnailssports_20251126_004013_1.jpeg
+WARNING 2025-11-26 05:54:41,604 basehttp 70508 70560 "GET /feed/media/thumbnailssports_20251126_004013_1.jpeg HTTP/1.1" 404 3147
+INFO 2025-11-26 05:54:46,413 basehttp 70508 70560 "POST /api/articles/9/comment/ HTTP/1.1" 201 116
+INFO 2025-11-26 05:55:11,187 autoreload 67404 18112 Watching for file changes with StatReloader
+INFO 2025-11-26 05:55:16,656 basehttp 67404 66912 "POST /api/articles/9/comment/ HTTP/1.1" 201 119
