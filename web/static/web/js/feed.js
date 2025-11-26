@@ -779,6 +779,70 @@ function gistMeApp() {
             }
             this.audioProgress += 0.5;
             requestAnimationFrame(() => this.simulateAudioProgress());
+        },
+
+        initLiquidButton(canvas) {
+            const ctx = canvas.getContext('2d');
+            let width, height;
+            let time = Math.random() * 100; // Random start time for variety
+
+            const resize = () => {
+                width = canvas.width = canvas.offsetWidth;
+                height = canvas.height = canvas.offsetHeight;
+            };
+
+            // Initial resize
+            resize();
+
+            // Observer for resize
+            const observer = new ResizeObserver(resize);
+            observer.observe(canvas);
+
+            const animate = () => {
+                // Check if canvas is still in DOM
+                if (!canvas.isConnected) {
+                    observer.disconnect();
+                    return;
+                }
+
+                ctx.clearRect(0, 0, width, height);
+
+                const centerX = width / 2;
+                const centerY = height / 2;
+                // Make the blob fill most of the canvas but leave room for movement
+                const radius = (Math.min(width, height) / 2) * 0.75;
+
+                ctx.beginPath();
+                // Draw the blob
+                for (let i = 0; i <= 360; i += 5) {
+                    const angle = (i * Math.PI) / 180;
+
+                    // Organic movement
+                    const w1 = Math.sin(angle * 3 + time * 2) * (radius * 0.1);
+                    const w2 = Math.cos(angle * 5 - time * 3) * (radius * 0.05);
+                    const w3 = Math.sin(angle * 2 + time * 5) * (radius * 0.05);
+
+                    const r = radius + w1 + w2 + w3;
+                    const x = centerX + Math.cos(angle) * r;
+                    const y = centerY + Math.sin(angle) * r;
+
+                    if (i === 0) ctx.moveTo(x, y);
+                    else ctx.lineTo(x, y);
+                }
+
+                ctx.closePath();
+                ctx.fillStyle = '#FFDE00'; // Brand Yellow
+                ctx.fill();
+
+                // Add glow/shadow
+                ctx.shadowBlur = 15;
+                ctx.shadowColor = '#FFDE00';
+
+                time += 0.03;
+                requestAnimationFrame(animate);
+            };
+
+            animate();
         }
     }
 }

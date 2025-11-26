@@ -42,17 +42,13 @@
 
                 <!-- Griot Avatar Button -->
                 <div class="flex justify-center">
-                    <button @click="openReader(article)"
-                        class="relative w-16 h-16 rounded-full glass-morphism-yellow flex items-center justify-center griot-pulse shadow-2xl">
-                        <svg class="w-7 h-7 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
+                    <button @click="openReader(article)" class="relative w-20 h-20 flex items-center justify-center">
+                        <canvas x-init="initLiquidButton($el)" class="absolute inset-0 w-full h-full"></canvas>
+                        <svg class="w-8 h-8 text-black relative z-10 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
                         </svg>
-                        <div class="absolute inset-0 rounded-full border-2 border-yellow-400 animate-ping opacity-50">
-                        </div>
                     </button>
                 </div>
-                <p class="text-center text-sm text-yellow-400 mt-2 font-bold">Tap for Full Gist</p>
             </div>
         </div>
     </template>

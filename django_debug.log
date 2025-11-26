@@ -1245,3 +1245,76 @@ WARNING 2025-11-26 05:54:41,604 basehttp 70508 70560 "GET /feed/media/thumbnails
 INFO 2025-11-26 05:54:46,413 basehttp 70508 70560 "POST /api/articles/9/comment/ HTTP/1.1" 201 116
 INFO 2025-11-26 05:55:11,187 autoreload 67404 18112 Watching for file changes with StatReloader
 INFO 2025-11-26 05:55:16,656 basehttp 67404 66912 "POST /api/articles/9/comment/ HTTP/1.1" 201 119
+INFO 2025-11-26 06:04:59,266 autoreload 65220 68932 Watching for file changes with StatReloader
+INFO 2025-11-26 06:05:00,485 basehttp 65220 66720 "GET /feed/ HTTP/1.1" 200 31897
+WARNING 2025-11-26 06:05:00,588 log 65220 66720 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-26 06:05:00,589 basehttp 65220 66720 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-26 06:05:01,031 basehttp 65220 61008 "GET /static/web/css/feed.css HTTP/1.1" 200 9471
+INFO 2025-11-26 06:05:01,048 basehttp 65220 30808 "GET /static/web/js/main.js HTTP/1.1" 200 6816
+INFO 2025-11-26 06:05:01,071 basehttp 65220 67976 "GET /static/web/js/feed.js HTTP/1.1" 200 31254
+INFO 2025-11-26 06:05:01,073 basehttp 65220 67016 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-26 06:05:01,606 basehttp 65220 67016 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-26 06:05:05,636 basehttp 65220 67016 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-26 06:05:05,694 basehttp 65220 67016 "GET /api/articles/ HTTP/1.1" 200 37765
+WARNING 2025-11-26 06:05:05,791 log 65220 67016 Not Found: /feed/media/thumbnailshealth_20251126_004505_1.jpeg
+WARNING 2025-11-26 06:05:05,792 basehttp 65220 67016 "GET /feed/media/thumbnailshealth_20251126_004505_1.jpeg HTTP/1.1" 404 3147
+WARNING 2025-11-26 06:05:05,808 log 65220 66720 Not Found: /feed/media/thumbnailssports_20251126_004013_1.jpeg
+WARNING 2025-11-26 06:05:05,809 basehttp 65220 66720 "GET /feed/media/thumbnailssports_20251126_004013_1.jpeg HTTP/1.1" 404 3147
+WARNING 2025-11-26 06:05:05,824 log 65220 61008 Not Found: /feed/media/thumbnails\x0entertainment_20251126_004118_1.jpeg
+WARNING 2025-11-26 06:05:05,824 basehttp 65220 61008 "GET /feed/media/thumbnails%0Entertainment_20251126_004118_1.jpeg HTTP/1.1" 404 3170
+WARNING 2025-11-26 06:05:05,841 log 65220 67976 Not Found: /feed/media/thumbnailstechnology_20251126_004402_1.png
+WARNING 2025-11-26 06:05:05,841 basehttp 65220 67976 "GET /feed/media/thumbnailstechnology_20251126_004402_1.png HTTP/1.1" 404 3156
+WARNING 2025-11-26 06:05:05,857 log 65220 30808 Not Found: /feed/media/thumbnails\x0business_20251126_004238_1.jpeg
+WARNING 2025-11-26 06:05:05,858 basehttp 65220 30808 "GET /feed/media/thumbnails%0Business_20251126_004238_1.jpeg HTTP/1.1" 404 3155
+INFO 2025-11-26 06:05:12,950 basehttp 65220 30808 "POST /api/articles/8/comment/ HTTP/1.1" 201 114
+INFO 2025-11-26 15:22:09,658 autoreload 17536 22620 Watching for file changes with StatReloader
+INFO 2025-11-26 15:22:16,975 basehttp 17536 10512 "GET / HTTP/1.1" 200 21297
+INFO 2025-11-26 15:22:17,157 basehttp 17536 20260 "GET /static/web/js/main.js HTTP/1.1" 200 6816
+INFO 2025-11-26 15:22:17,160 basehttp 17536 10512 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+WARNING 2025-11-26 15:22:19,131 log 17536 10512 Not Found: /favicon.ico
+WARNING 2025-11-26 15:22:19,132 basehttp 17536 10512 "GET /favicon.ico HTTP/1.1" 404 3030
+WARNING 2025-11-26 15:22:25,401 log 17536 10512 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-26 15:22:25,402 basehttp 17536 10512 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-26 15:22:54,439 basehttp 17536 10512 "GET /feed/ HTTP/1.1" 200 31897
+WARNING 2025-11-26 15:22:54,523 log 17536 10512 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-26 15:22:54,524 basehttp 17536 10512 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-26 15:22:54,539 basehttp 17536 10512 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-26 15:22:54,541 basehttp 17536 20260 "GET /static/web/css/feed.css HTTP/1.1" 200 9471
+INFO 2025-11-26 15:22:54,543 basehttp 17536 21452 "GET /static/web/js/main.js HTTP/1.1" 200 6816
+INFO 2025-11-26 15:22:54,545 basehttp 17536 13392 "GET /static/web/js/feed.js HTTP/1.1" 200 31254
+INFO 2025-11-26 15:22:55,324 basehttp 17536 13392 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-26 15:23:01,444 basehttp 17536 13392 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-26 15:23:01,505 basehttp 17536 13392 "GET /api/articles/ HTTP/1.1" 200 37881
+WARNING 2025-11-26 15:23:01,596 log 17536 10512 Not Found: /feed/media/thumbnails\x0entertainment_20251126_004118_1.jpeg
+WARNING 2025-11-26 15:23:01,597 basehttp 17536 10512 "GET /feed/media/thumbnails%0Entertainment_20251126_004118_1.jpeg HTTP/1.1" 404 3170
+WARNING 2025-11-26 15:23:01,616 log 17536 20260 Not Found: /feed/media/thumbnails\x0business_20251126_004238_1.jpeg
+WARNING 2025-11-26 15:23:01,617 basehttp 17536 20260 "GET /feed/media/thumbnails%0Business_20251126_004238_1.jpeg HTTP/1.1" 404 3155
+WARNING 2025-11-26 15:23:01,635 log 17536 21452 Not Found: /feed/media/thumbnailstechnology_20251126_004402_1.png
+WARNING 2025-11-26 15:23:01,641 basehttp 17536 21452 "GET /feed/media/thumbnailstechnology_20251126_004402_1.png HTTP/1.1" 404 3156
+WARNING 2025-11-26 15:23:01,647 log 17536 13392 Not Found: /feed/media/thumbnailshealth_20251126_004505_1.jpeg
+WARNING 2025-11-26 15:23:01,647 basehttp 17536 13392 "GET /feed/media/thumbnailshealth_20251126_004505_1.jpeg HTTP/1.1" 404 3147
+WARNING 2025-11-26 15:23:01,662 log 17536 22164 Not Found: /feed/media/thumbnailssports_20251126_004013_1.jpeg
+WARNING 2025-11-26 15:23:01,662 basehttp 17536 22164 "GET /feed/media/thumbnailssports_20251126_004013_1.jpeg HTTP/1.1" 404 3147
+INFO 2025-11-26 15:31:58,527 autoreload 9860 24260 Watching for file changes with StatReloader
+INFO 2025-11-26 15:32:01,372 basehttp 9860 22092 "GET /feed/ HTTP/1.1" 200 31582
+WARNING 2025-11-26 15:32:01,461 log 9860 22092 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-26 15:32:01,464 basehttp 9860 22092 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-26 15:32:01,928 basehttp 9860 10164 "GET /static/web/js/feed.js HTTP/1.1" 200 33496
+INFO 2025-11-26 15:32:01,936 basehttp 9860 22104 "GET /static/web/css/feed.css HTTP/1.1" 200 9471
+INFO 2025-11-26 15:32:01,950 basehttp 9860 10976 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-26 15:32:01,950 basehttp 9860 23876 "GET /static/web/js/main.js HTTP/1.1" 200 6816
+INFO 2025-11-26 15:32:02,425 basehttp 9860 10976 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-26 15:32:06,100 basehttp 9860 10976 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-26 15:32:06,193 basehttp 9860 10976 "GET /api/articles/ HTTP/1.1" 200 37881
+WARNING 2025-11-26 15:32:06,301 log 9860 23876 Not Found: /feed/media/thumbnailstechnology_20251126_004402_1.png
+WARNING 2025-11-26 15:32:06,302 basehttp 9860 23876 "GET /feed/media/thumbnailstechnology_20251126_004402_1.png HTTP/1.1" 404 3156
+WARNING 2025-11-26 15:32:06,332 log 9860 10976 Not Found: /feed/media/thumbnailshealth_20251126_004505_1.jpeg
+WARNING 2025-11-26 15:32:06,332 basehttp 9860 10976 "GET /feed/media/thumbnailshealth_20251126_004505_1.jpeg HTTP/1.1" 404 3147
+WARNING 2025-11-26 15:32:06,349 log 9860 22092 Not Found: /feed/media/thumbnailssports_20251126_004013_1.jpeg
+WARNING 2025-11-26 15:32:06,350 basehttp 9860 22092 "GET /feed/media/thumbnailssports_20251126_004013_1.jpeg HTTP/1.1" 404 3147
+WARNING 2025-11-26 15:32:06,365 log 9860 22104 Not Found: /feed/media/thumbnails\x0business_20251126_004238_1.jpeg
+WARNING 2025-11-26 15:32:06,366 basehttp 9860 22104 "GET /feed/media/thumbnails%0Business_20251126_004238_1.jpeg HTTP/1.1" 404 3155
+WARNING 2025-11-26 15:32:06,381 log 9860 10164 Not Found: /feed/media/thumbnails\x0entertainment_20251126_004118_1.jpeg
+WARNING 2025-11-26 15:32:06,381 basehttp 9860 10164 "GET /feed/media/thumbnails%0Entertainment_20251126_004118_1.jpeg HTTP/1.1" 404 3170
+WARNING 2025-11-26 15:32:41,901 log 9860 10164 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-26 15:32:41,902 basehttp 9860 10164 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
