@@ -1,0 +1,64 @@
+<section id="demo" class="min-h-screen py-32 px-4 bg-brand-light relative z-20" x-data="{ 
+    cards: [
+        {id: 1, title:'Concours Results Released', source:'MINFOPRA', tag:'EXAMS', color:'bg-green-100'},
+        {id: 2, title:'New Tech Scholarship 2025', source:'Silicon Mountain', tag:'OPPORTUNITY', color:'bg-brand-yellow'},
+        {id: 3, title:'Startups Raising Capital', source:'Business CM', tag:'FINANCE', color:'bg-blue-100'}
+    ],
+    activeIndex: 0,
+    nextCard() {
+        if(this.activeIndex < this.cards.length - 1) {
+            this.activeIndex++;
+        } else {
+            this.activeIndex = 0; // Loop back
+        }
+    }
+}">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
+
+        <div class="lg:col-span-4 sticky top-32 self-start">
+            <span class="text-xs font-mono border border-black rounded px-2 py-1 mb-4 inline-block">LIVE
+                PREVIEW</span>
+            <h2 class="text-5xl font-display font-bold mb-6">SWIPE<br>THE GIST.</h2>
+            <p class="text-gray-600 mb-10 text-lg">Experience the deck. Skip what you don't need, drill down
+                into what matters.</p>
+
+            <button @click="nextCard()" class="btn-primary w-full md:w-auto">
+                NEXT CARD →
+            </button>
+        </div>
+
+        <div class="lg:col-span-8 h-[500px] relative perspective-1000 flex items-center justify-center">
+            <template x-for="(card, index) in cards" :key="card.id">
+                <div class="card-stack-item p-6 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] flex flex-col justify-between max-w-sm"
+                    x-show="index >= activeIndex"
+                    :style="`transform: translateY(${(index - activeIndex) * 20}px) scale(${1 - ((index - activeIndex) * 0.05)}); z-index: ${50 - index}; opacity: ${index < activeIndex ? 0 : 1}`">
+
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="text-[10px] font-bold px-2 py-1 rounded border border-black"
+                                :class="card.color" x-text="card.tag"></span>
+                            <span class="font-mono text-xs text-gray-500">2m ago</span>
+                        </div>
+                        <div class="w-full h-40 bg-gray-200 rounded-lg mb-4 bg-cover bg-center grayscale hover:grayscale-0 transition-all"
+                            style="background-image: url('https://images.unsplash.com/photo-1546422904-90eab23c3d7e?q=80&w=400&auto=format&fit=crop')">
+                        </div>
+                        <h3 class="text-3xl font-display font-bold leading-tight" x-text="card.title"></h3>
+                        <p class="text-sm text-gray-500 mt-2 font-mono" x-text="card.source"></p>
+                    </div>
+
+                    <div class="flex gap-2 mt-4 pt-4 border-t border-gray-100">
+                        <button
+                            class="flex-1 py-3 border border-black rounded-lg font-bold text-xs hover:bg-gray-100">SAVE</button>
+                        <button
+                            class="flex-1 py-3 bg-black text-white border border-black rounded-lg font-bold text-xs hover:bg-brand-yellow hover:text-black">READ</button>
+                    </div>
+                </div>
+            </template>
+
+            <div class="text-center absolute z-0" x-show="activeIndex >= cards.length">
+                <h3 class="font-bold text-2xl">All Caught Up!</h3>
+                <button @click="activeIndex = 0" class="text-brand-yellow underline mt-2">Refresh Feed</button>
+            </div>
+        </div>
+    </div>
+</section>
