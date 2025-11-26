@@ -1938,3 +1938,4 @@ INFO 2025-11-26 23:48:54,473 basehttp 30548 20144 "GET /media/thumbnails/busines
 INFO 2025-11-26 23:50:26,523 basehttp 30548 29364 "GET /media/audio/french/business_20251126_165446.mp3 HTTP/1.1" 200 471936
 WARNING 2025-11-26 23:50:26,593 log 30548 29364 Not Found: /favicon.ico
 WARNING 2025-11-26 23:50:26,593 basehttp 30548 29364 "GET /favicon.ico HTTP/1.1" 404 3030
+INFO 2025-11-27 00:14:25,374 autoreload 26376 15924 Watching for file changes with StatReloader
