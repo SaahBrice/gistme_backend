@@ -716,15 +716,40 @@ function gistMeApp() {
             }
         },
 
-        startCommentSimulation() {
+        async startCommentSimulation() {
             // Simulate incoming comments for "liveness"
-            const dummyComments = [
-                { user: 'Sarah', text: 'This is wild! 😱' },
-                { user: 'Jean', text: 'Finally some good news.' },
-                { user: 'Ahmed', text: 'Does anyone know when this starts?' },
-                { user: 'Chioma', text: 'Sharing this right now.' },
-                { user: 'Paul', text: 'Cameroon to the moon! 🚀' }
-            ];
+            let dummyComments = [];
+
+            try {
+                const response = await fetch('/static/web/data/dummy_comments.json');
+                if (response.ok) {
+                    dummyComments = await response.json();
+                } else {
+                    console.warn('Failed to load dummy comments, using fallback');
+                    dummyComments = [
+                        { "user": "Sarah", "text": "This is wild! 😱" },
+                        { "user": "Jean", "text": "Finally some good news." },
+                        { "user": "Ahmed", "text": "Does anyone know when this starts?" },
+                        { "user": "Chioma", "text": "Sharing this right now." },
+                        { "user": "Paul", "text": "Cameroon to the moon! 🚀" },
+                        { "user": "Marc", "text": "Enfin une bonne nouvelle !" },
+                        { "user": "Aisha", "text": "Je vais partager ça." },
+                        { "user": "Chantal", "text": "C'est incroyable !" },
+                        { "user": "Boubacar", "text": "On verra si c'est vrai." },
+                        { "user": "Grace", "text": "🇨🇲🇨🇲🇨🇲" },
+                        { "user": "Eric", "text": "Na so we go see am." },
+                        { "user": "Patience", "text": "I no too believe dis news oo." },
+                        { "user": "Frank", "text": "Wahala for who no go read well." },
+                        { "user": "Brenda", "text": "Na wa oo!" },
+                        { "user": "Junior", "text": "Cette chose don chop money pass." },
+                    ];
+                }
+            } catch (e) {
+                console.error('Error fetching dummy comments:', e);
+                return;
+            }
+
+            if (dummyComments.length === 0) return;
 
             setInterval(() => {
                 if (Math.random() > 0.7) {
