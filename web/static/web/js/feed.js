@@ -10,6 +10,7 @@ function gistMeApp() {
         showReader: false,
         isPlaying: false,
         audioProgress: 0,
+        audioPlayer: null,
         // Language
         globalLang: localStorage.getItem('gist4u_language') || 'en',
         commentUser: localStorage.getItem('gistme_username') || 'Anonymous',
@@ -397,6 +398,8 @@ function gistMeApp() {
                 sourceNames: article.source_names || [],
                 timeAgo: this.formatTimeAgo(article.created_at),
                 audioUrl: this.globalLang === 'fr' ? article.french_audio : article.english_audio,
+                frenchAudio: article.french_audio,
+                englishAudio: article.english_audio,
                 viewCount: this.formatNumber(article.view_count),
                 commentCount: this.formatNumber(article.comment_count),
                 rawCommentCount: article.comment_count || 0
@@ -471,6 +474,7 @@ function gistMeApp() {
                 // Update summaries
                 article.summary = lang === 'fr' ? article.frenchSummary : article.englishSummary;
                 article.content = lang === 'fr' ? article.frenchSummary : article.englishSummary;
+                article.audioUrl = lang === 'fr' ? article.frenchAudio : article.englishAudio;
 
 
                 // Update category name
@@ -785,27 +789,62 @@ function gistMeApp() {
         },
 
         toggleAudio() {
-            this.isPlaying = !this.isPlaying;
             if (this.isPlaying) {
-                this.simulateAudioProgress();
+                this.pauseAudio();
+            } else {
+                this.playAudio();
             }
+        },
+
+        playAudio() {
+            const url = this.currentArticle?.audioUrl;
+            if (!url) {
+                // Optional: Show a toast or alert
+                console.log("Audio unavailable");
+                return;
+            }
+
+            if (!this.audioPlayer || this.audioPlayer.src !== url) {
+                if (this.audioPlayer) {
+                    this.audioPlayer.pause();
+                }
+                this.audioPlayer = new Audio(url);
+                this.audioPlayer.addEventListener('timeupdate', () => {
+                    if (this.audioPlayer.duration) {
+                        this.audioProgress = (this.audioPlayer.currentTime / this.audioPlayer.duration) * 100;
+                    }
+                });
+                this.audioPlayer.addEventListener('ended', () => {
+                    this.isPlaying = false;
+                    this.audioProgress = 0;
+                });
+                this.audioPlayer.addEventListener('error', (e) => {
+                    console.error("Audio error", e);
+                    this.isPlaying = false;
+                });
+            }
+
+            this.audioPlayer.play().catch(e => {
+                console.error("Audio play failed", e);
+                this.isPlaying = false;
+            });
+            this.isPlaying = true;
+        },
+
+        pauseAudio() {
+            if (this.audioPlayer) {
+                this.audioPlayer.pause();
+            }
+            this.isPlaying = false;
         },
 
         stopAudio() {
+            if (this.audioPlayer) {
+                this.audioPlayer.pause();
+                this.audioPlayer.currentTime = 0;
+            }
             this.isPlaying = false;
             this.audioProgress = 0;
-        },
-
-        simulateAudioProgress() {
-            if (!this.isPlaying) return;
-
-            if (this.audioProgress < 100) {
-                this.audioProgress += 0.5;
-                requestAnimationFrame(() => this.simulateAudioProgress());
-            } else {
-                this.isPlaying = false;
-                this.audioProgress = 0;
-            }
         },
 
 
