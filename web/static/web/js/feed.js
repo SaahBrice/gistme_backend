@@ -248,6 +248,22 @@ function gistMeApp() {
             }
         },
 
+        getCategoryName(categoryId) {
+            // Find category in groups
+            for (const group of this.categoryGroups) {
+                const category = group.categories.find(c => c.id === categoryId);
+                if (category) {
+                    return this.globalLang === 'fr' ? category.nameFr : category.nameEn;
+                }
+            }
+            // Find in main categories list
+            const mainCat = this.categories.find(c => c.id === categoryId);
+            if (mainCat) {
+                return this.globalLang === 'fr' ? mainCat.nameFr : mainCat.nameEn;
+            }
+            return categoryId; // Fallback
+        },
+
         getCategoryCount(categoryId) {
             // Can't easily calculate with server-side pagination
             return '';
@@ -375,7 +391,8 @@ function gistMeApp() {
                 frenchSummary: article.french_summary,
                 englishSummary: article.english_summary,
                 image: article.thumbnails && article.thumbnails.length > 0 ? article.thumbnails[0] : 'https://placehold.co/600x400/000000/FFF',
-                category: article.category.toUpperCase(),
+                category: this.getCategoryName(article.category),
+                categoryId: article.category, // Store original ID for lookups
                 source: article.source_names && article.source_names.length > 0 ? article.source_names[0] : 'Gist4u',
                 timeAgo: this.formatTimeAgo(article.created_at),
                 audioUrl: this.globalLang === 'fr' ? article.french_audio : article.english_audio,
@@ -451,9 +468,13 @@ function gistMeApp() {
                 }
 
                 // Update summaries
-                if (article.frenchSummary && article.englishSummary) {
-                    article.summary = lang === 'fr' ? article.frenchSummary : article.englishSummary;
-                    article.content = lang === 'fr' ? article.frenchSummary : article.englishSummary;
+                article.summary = lang === 'fr' ? article.frenchSummary : article.englishSummary;
+                article.content = lang === 'fr' ? article.frenchSummary : article.englishSummary;
+
+
+                // Update category name
+                if (article.categoryId) {
+                    article.category = this.getCategoryName(article.categoryId);
                 }
             });
 
@@ -477,7 +498,7 @@ function gistMeApp() {
         handleScroll(event) {
             const container = event.target;
             const articleHeight = container.clientHeight;
-            const newIndex = Math.floor(container.scrollTop / articleHeight);
+            const newIndex = Math.round(container.scrollTop / articleHeight);
 
             // Update current index when article changes
             if (newIndex !== this.currentIndex) {
