@@ -394,6 +394,7 @@ function gistMeApp() {
                 category: this.getCategoryName(article.category),
                 categoryId: article.category, // Store original ID for lookups
                 source: article.source_names && article.source_names.length > 0 ? article.source_names[0] : 'Gist4u',
+                sourceNames: article.source_names || [],
                 timeAgo: this.formatTimeAgo(article.created_at),
                 audioUrl: this.globalLang === 'fr' ? article.french_audio : article.english_audio,
                 viewCount: this.formatNumber(article.view_count),
@@ -864,6 +865,64 @@ function gistMeApp() {
                 ctx.shadowColor = '#FFDE00';
 
                 time += 0.03;
+                requestAnimationFrame(animate);
+            };
+
+            animate();
+        },
+
+        initWaveform(canvas) {
+            const ctx = canvas.getContext('2d');
+            let width, height;
+            let time = 0;
+
+            const resize = () => {
+                width = canvas.width = canvas.offsetWidth;
+                height = canvas.height = canvas.offsetHeight;
+            };
+
+            resize();
+            const observer = new ResizeObserver(resize);
+            observer.observe(canvas);
+
+            const animate = () => {
+                if (!canvas.isConnected) {
+                    observer.disconnect();
+                    return;
+                }
+
+                ctx.clearRect(0, 0, width, height);
+
+                // Configuration
+                const centerY = height / 2;
+                const baseAmplitude = this.isPlaying ? height * 0.4 : height * 0.1;
+                const speed = this.isPlaying ? 0.2 : 0.05;
+
+                // Draw multiple waves
+                for (let i = 0; i < 3; i++) {
+                    ctx.beginPath();
+                    ctx.strokeStyle = `rgba(255, 222, 0, ${1 - i * 0.2})`; // Brand yellow with fading opacity
+                    ctx.lineWidth = 2;
+
+                    for (let x = 0; x < width; x++) {
+                        // Mix of sine waves for organic look
+                        const frequency = 0.02 + i * 0.01;
+                        const phase = time * speed + i * 2;
+
+                        // Modulate amplitude based on x position (taper at ends)
+                        const envelope = Math.sin((x / width) * Math.PI);
+
+                        const y = centerY +
+                            Math.sin(x * frequency + phase) * baseAmplitude * envelope *
+                            (this.isPlaying ? (1 + Math.sin(time * 0.5) * 0.3) : 0.5); // Add "breathing" when playing
+
+                        if (x === 0) ctx.moveTo(x, y);
+                        else ctx.lineTo(x, y);
+                    }
+                    ctx.stroke();
+                }
+
+                time += 1;
                 requestAnimationFrame(animate);
             };
 
