@@ -1776,3 +1776,103 @@ INFO 2025-11-26 18:59:54,084 basehttp 7896 16216 "GET /media/audio/french/entert
 WARNING 2025-11-26 18:59:54,216 log 7896 16216 Not Found: /favicon.ico
 WARNING 2025-11-26 18:59:54,218 basehttp 7896 16216 "GET /favicon.ico HTTP/1.1" 404 3030
 INFO 2025-11-26 19:02:17,926 basehttp 7896 16216 "GET /media/audio/english/entertainment_20251126_165305.mp3 HTTP/1.1" 200 1220544
+INFO 2025-11-26 22:50:11,878 autoreload 25880 18332 Watching for file changes with StatReloader
+INFO 2025-11-26 22:50:12,636 basehttp 25880 3632 "GET /feed/ HTTP/1.1" 200 31252
+INFO 2025-11-26 22:50:12,679 basehttp 25880 3632 "GET /static/web/css/feed.css HTTP/1.1" 304 0
+INFO 2025-11-26 22:50:12,807 basehttp 25880 11876 "GET /static/web/js/feed.js HTTP/1.1" 200 38703
+INFO 2025-11-26 22:50:12,990 basehttp 25880 11876 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+WARNING 2025-11-26 22:50:18,878 log 25880 11876 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-26 22:50:18,878 basehttp 25880 11876 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-26 22:50:19,865 basehttp 25880 11876 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-26 22:50:19,988 basehttp 25880 11876 "GET /api/articles/ HTTP/1.1" 200 41231
+INFO 2025-11-26 22:50:20,026 basehttp 25880 11876 "GET /media/thumbnails/health_20251126_165933_1.jpeg HTTP/1.1" 200 22174
+INFO 2025-11-26 22:50:20,044 basehttp 25880 3632 "GET /media/thumbnails/technology_20251126_165712_1.jpeg HTTP/1.1" 200 83874
+INFO 2025-11-26 22:50:20,100 basehttp 25880 11876 "GET /media/thumbnails/business_20251126_165446_1.jpeg HTTP/1.1" 200 62467
+WARNING 2025-11-26 22:50:20,129 log 25880 28288 Not Found: /feed/media/thumbnailstechnology_20251126_004402_1.png
+WARNING 2025-11-26 22:50:20,129 basehttp 25880 28288 "GET /feed/media/thumbnailstechnology_20251126_004402_1.png HTTP/1.1" 404 3156
+WARNING 2025-11-26 22:50:20,147 log 25880 21188 Not Found: /feed/media/thumbnails\x0business_20251126_004238_1.jpeg
+WARNING 2025-11-26 22:50:20,148 basehttp 25880 21188 "GET /feed/media/thumbnails%0Business_20251126_004238_1.jpeg HTTP/1.1" 404 3155
+WARNING 2025-11-26 22:50:20,182 log 25880 7112 Not Found: /feed/media/thumbnailssports_20251126_004013_1.jpeg
+WARNING 2025-11-26 22:50:20,185 basehttp 25880 7112 "GET /feed/media/thumbnailssports_20251126_004013_1.jpeg HTTP/1.1" 404 3147
+WARNING 2025-11-26 22:50:20,203 log 25880 3632 Not Found: /feed/media/thumbnailshealth_20251126_004505_1.jpeg
+WARNING 2025-11-26 22:50:20,204 basehttp 25880 3632 "GET /feed/media/thumbnailshealth_20251126_004505_1.jpeg HTTP/1.1" 404 3147
+WARNING 2025-11-26 22:50:20,222 log 25880 27840 Not Found: /feed/media/thumbnails\x0entertainment_20251126_004118_1.jpeg
+WARNING 2025-11-26 22:50:20,222 basehttp 25880 27840 "GET /feed/media/thumbnails%0Entertainment_20251126_004118_1.jpeg HTTP/1.1" 404 3170
+INFO 2025-11-26 23:18:02,361 autoreload 18904 30176 Watching for file changes with StatReloader
+INFO 2025-11-26 23:18:05,969 basehttp 18904 29780 "GET /feed/ HTTP/1.1" 200 31361
+WARNING 2025-11-26 23:18:06,051 log 18904 29780 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-26 23:18:06,051 basehttp 18904 29780 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-26 23:18:06,457 basehttp 18904 29780 "GET /static/web/js/feed.js HTTP/1.1" 200 2033
+INFO 2025-11-26 23:18:06,463 basehttp 18904 24048 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-26 23:18:06,465 basehttp 18904 27996 "GET /static/web/css/feed.css HTTP/1.1" 200 9471
+INFO 2025-11-26 23:18:06,465 basehttp 18904 30224 "GET /static/web/js/feed-config.js HTTP/1.1" 200 6142
+INFO 2025-11-26 23:18:06,487 basehttp 18904 16872 "GET /static/web/js/main.js HTTP/1.1" 200 6816
+INFO 2025-11-26 23:18:06,493 basehttp 18904 20144 "GET /static/web/js/feed-actions.js HTTP/1.1" 200 27518
+INFO 2025-11-26 23:18:07,134 basehttp 18904 20144 "GET /static/web/data/dummy_comments.json HTTP/1.1" 200 33076
+INFO 2025-11-26 23:18:07,149 basehttp 18904 16872 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-26 23:18:11,893 basehttp 18904 16872 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-26 23:18:11,979 basehttp 18904 16872 "GET /api/articles/ HTTP/1.1" 200 41231
+INFO 2025-11-26 23:18:12,009 basehttp 18904 16872 "GET /media/thumbnails/health_20251126_165933_1.jpeg HTTP/1.1" 200 22174
+INFO 2025-11-26 23:18:12,022 basehttp 18904 20144 "GET /media/thumbnails/technology_20251126_165712_1.jpeg HTTP/1.1" 200 83874
+INFO 2025-11-26 23:18:12,089 basehttp 18904 30224 "GET /media/thumbnails/business_20251126_165446_1.jpeg HTTP/1.1" 200 62467
+WARNING 2025-11-26 23:18:12,105 log 18904 16872 Not Found: /feed/media/thumbnailstechnology_20251126_004402_1.png
+WARNING 2025-11-26 23:18:12,106 basehttp 18904 16872 "GET /feed/media/thumbnailstechnology_20251126_004402_1.png HTTP/1.1" 404 3156
+WARNING 2025-11-26 23:18:12,123 log 18904 27996 Not Found: /feed/media/thumbnails\x0business_20251126_004238_1.jpeg
+WARNING 2025-11-26 23:18:12,124 basehttp 18904 27996 "GET /feed/media/thumbnails%0Business_20251126_004238_1.jpeg HTTP/1.1" 404 3155
+WARNING 2025-11-26 23:18:12,153 log 18904 20144 Not Found: /feed/media/thumbnailshealth_20251126_004505_1.jpeg
+WARNING 2025-11-26 23:18:12,154 basehttp 18904 20144 "GET /feed/media/thumbnailshealth_20251126_004505_1.jpeg HTTP/1.1" 404 3147
+WARNING 2025-11-26 23:18:12,163 log 18904 29780 Not Found: /feed/media/thumbnailssports_20251126_004013_1.jpeg
+WARNING 2025-11-26 23:18:12,164 basehttp 18904 29780 "GET /feed/media/thumbnailssports_20251126_004013_1.jpeg HTTP/1.1" 404 3147
+WARNING 2025-11-26 23:18:12,179 log 18904 24048 Not Found: /feed/media/thumbnails\x0entertainment_20251126_004118_1.jpeg
+WARNING 2025-11-26 23:18:12,180 basehttp 18904 24048 "GET /feed/media/thumbnails%0Entertainment_20251126_004118_1.jpeg HTTP/1.1" 404 3170
+INFO 2025-11-26 23:18:18,215 basehttp 18904 24048 "GET /media/audio/english/health_20251126_165933.mp3 HTTP/1.1" 200 617664
+WARNING 2025-11-26 23:18:18,331 log 18904 24048 Not Found: /favicon.ico
+WARNING 2025-11-26 23:18:18,331 basehttp 18904 24048 "GET /favicon.ico HTTP/1.1" 404 3030
+INFO 2025-11-26 23:18:40,496 basehttp 18904 24048 "GET /media/audio/french/health_20251126_165933.mp3 HTTP/1.1" 200 704064
+INFO 2025-11-26 23:19:09,882 basehttp 18904 5100 "POST /api/articles/12/comment/ HTTP/1.1" 201 118
+INFO 2025-11-26 23:19:25,661 basehttp 18904 5100 "POST /api/articles/12/comment/ HTTP/1.1" 201 117
+INFO 2025-11-26 23:19:49,389 basehttp 18904 5100 "GET /api/articles/?mood=happy&category=crime HTTP/1.1" 200 52
+INFO 2025-11-26 23:19:49,458 basehttp 18904 5100 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-26 23:19:49,483 basehttp 18904 5100 "GET /api/articles/?category=crime HTTP/1.1" 200 52
+INFO 2025-11-26 23:19:49,515 basehttp 18904 5100 "GET /api/articles/ HTTP/1.1" 200 41468
+WARNING 2025-11-26 23:19:49,579 log 18904 5100 Not Found: /feed/media/thumbnailshealth_20251126_004505_1.jpeg
+WARNING 2025-11-26 23:19:49,580 basehttp 18904 5100 "GET /feed/media/thumbnailshealth_20251126_004505_1.jpeg HTTP/1.1" 404 3147
+WARNING 2025-11-26 23:19:49,590 log 18904 29188 Not Found: /feed/media/thumbnails\x0entertainment_20251126_004118_1.jpeg
+WARNING 2025-11-26 23:19:49,590 basehttp 18904 29188 "GET /feed/media/thumbnails%0Entertainment_20251126_004118_1.jpeg HTTP/1.1" 404 3170
+WARNING 2025-11-26 23:19:49,605 log 18904 3344 Not Found: /feed/media/thumbnailstechnology_20251126_004402_1.png
+WARNING 2025-11-26 23:19:49,606 basehttp 18904 3344 "GET /feed/media/thumbnailstechnology_20251126_004402_1.png HTTP/1.1" 404 3156
+WARNING 2025-11-26 23:19:49,614 log 18904 27408 Not Found: /feed/media/thumbnails\x0business_20251126_004238_1.jpeg
+WARNING 2025-11-26 23:19:49,615 basehttp 18904 27408 "GET /feed/media/thumbnails%0Business_20251126_004238_1.jpeg HTTP/1.1" 404 3155
+WARNING 2025-11-26 23:19:49,633 log 18904 30568 Not Found: /feed/media/thumbnailssports_20251126_004013_1.jpeg
+WARNING 2025-11-26 23:19:49,633 basehttp 18904 30568 "GET /feed/media/thumbnailssports_20251126_004013_1.jpeg HTTP/1.1" 404 3147
+INFO 2025-11-26 23:20:08,494 basehttp 18904 30568 "GET / HTTP/1.1" 200 21297
+WARNING 2025-11-26 23:20:08,580 log 18904 30568 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-26 23:20:08,581 basehttp 18904 30568 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-26 23:20:08,603 basehttp 18904 27408 "GET /static/web/js/main.js HTTP/1.1" 200 6816
+INFO 2025-11-26 23:20:08,604 basehttp 18904 30568 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-26 23:21:58,506 basehttp 18904 27408 "GET /feed/ HTTP/1.1" 200 31361
+WARNING 2025-11-26 23:21:58,591 log 18904 27408 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-26 23:21:58,592 basehttp 18904 27408 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-26 23:21:58,612 basehttp 18904 27408 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-26 23:21:58,612 basehttp 18904 3344 "GET /static/web/js/main.js HTTP/1.1" 200 6816
+INFO 2025-11-26 23:21:58,612 basehttp 18904 29188 "GET /static/web/js/feed-config.js HTTP/1.1" 200 6142
+INFO 2025-11-26 23:21:58,613 basehttp 18904 30568 "GET /static/web/css/feed.css HTTP/1.1" 200 9471
+INFO 2025-11-26 23:21:58,614 basehttp 18904 5100 "GET /static/web/js/feed-actions.js HTTP/1.1" 200 27518
+INFO 2025-11-26 23:21:58,614 basehttp 18904 25380 "GET /static/web/js/feed.js HTTP/1.1" 200 2033
+INFO 2025-11-26 23:21:59,898 basehttp 18904 25380 "GET /static/web/data/dummy_comments.json HTTP/1.1" 200 33076
+INFO 2025-11-26 23:21:59,909 basehttp 18904 5100 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-26 23:22:12,896 basehttp 18904 5100 "GET /api/articles/?mood=neutral HTTP/1.1" 200 52
+INFO 2025-11-26 23:22:12,945 basehttp 18904 5100 "GET /api/articles/ HTTP/1.1" 200 41468
+INFO 2025-11-26 23:22:12,973 basehttp 18904 5100 "GET /media/thumbnails/health_20251126_165933_1.jpeg HTTP/1.1" 200 22174
+INFO 2025-11-26 23:22:13,028 basehttp 18904 25380 "GET /media/thumbnails/technology_20251126_165712_1.jpeg HTTP/1.1" 200 83874
+INFO 2025-11-26 23:22:13,059 basehttp 18904 30568 "GET /media/thumbnails/business_20251126_165446_1.jpeg HTTP/1.1" 200 62467
+WARNING 2025-11-26 23:22:13,096 log 18904 29188 Not Found: /feed/media/thumbnailstechnology_20251126_004402_1.png
+WARNING 2025-11-26 23:22:13,097 basehttp 18904 29188 "GET /feed/media/thumbnailstechnology_20251126_004402_1.png HTTP/1.1" 404 3156
+WARNING 2025-11-26 23:22:13,115 log 18904 5100 Not Found: /feed/media/thumbnailshealth_20251126_004505_1.jpeg
+WARNING 2025-11-26 23:22:13,116 basehttp 18904 5100 "GET /feed/media/thumbnailshealth_20251126_004505_1.jpeg HTTP/1.1" 404 3147
+WARNING 2025-11-26 23:22:13,129 log 18904 27408 Not Found: /feed/media/thumbnails\x0entertainment_20251126_004118_1.jpeg
+WARNING 2025-11-26 23:22:13,130 basehttp 18904 27408 "GET /feed/media/thumbnails%0Entertainment_20251126_004118_1.jpeg HTTP/1.1" 404 3170
+WARNING 2025-11-26 23:22:13,136 log 18904 25380 Not Found: /feed/media/thumbnailssports_20251126_004013_1.jpeg
+WARNING 2025-11-26 23:22:13,137 basehttp 18904 25380 "GET /feed/media/thumbnailssports_20251126_004013_1.jpeg HTTP/1.1" 404 3147
+WARNING 2025-11-26 23:22:13,158 log 18904 3344 Not Found: /feed/media/thumbnails\x0business_20251126_004238_1.jpeg
+WARNING 2025-11-26 23:22:13,158 basehttp 18904 3344 "GET /feed/media/thumbnails%0Business_20251126_004238_1.jpeg HTTP/1.1" 404 3155
