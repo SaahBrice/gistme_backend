@@ -17,8 +17,11 @@ class Article(models.Model):
     source_urls = models.JSONField(default=list, blank=True)
     source_names = models.JSONField(default=list, blank=True)
     thumbnails = models.JSONField(default=list, blank=True)
-    french_audio = models.CharField(max_length=500, null=True, blank=True)
-    english_audio = models.CharField(max_length=500, null=True, blank=True)
+    # Temporary field for uploading a single thumbnail
+    thumbnail_image = models.ImageField(upload_to='thumbnails/', null=True, blank=True)
+    
+    french_audio = models.FileField(upload_to='audio/french/', max_length=500, null=True, blank=True)
+    english_audio = models.FileField(upload_to='audio/english/', max_length=500, null=True, blank=True)
     timestamp = models.CharField(max_length=100)
     created_at = models.DateTimeField(auto_now_add=True, db_index=True)
     view_count = models.PositiveIntegerField(default=0, db_index=True)
@@ -46,6 +49,17 @@ class Article(models.Model):
                 self.reaction_count = random.randint(100, upper_limit)
 
         super().save(*args, **kwargs)
+
+        # Post-save: if thumbnail_image exists, add to thumbnails list if not present
+        if self.thumbnail_image:
+            try:
+                url = self.thumbnail_image.url
+                if url not in self.thumbnails:
+                    self.thumbnails.insert(0, url)
+                    # Avoid infinite recursion by updating only the thumbnails field
+                    super().save(update_fields=['thumbnails'])
+            except Exception:
+                pass
 
     def __str__(self):
         return self.headline_en or self.headline_fr or self.headline or 'No headline'

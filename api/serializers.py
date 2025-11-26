@@ -21,7 +21,7 @@ class ArticleSerializer(serializers.ModelSerializer):
         model = Article
         fields = [
             'id', 'headline_en', 'headline_fr', 'headline', 'category', 'french_summary', 'english_summary',
-            'mood', 'source_urls', 'source_names', 'thumbnails',
+            'mood', 'source_urls', 'source_names', 'thumbnails', 'thumbnail_image',
             'french_audio', 'english_audio', 'timestamp', 'created_at',
             'view_count', 'comment_count', 'reaction_count', 'comments'
         ]
