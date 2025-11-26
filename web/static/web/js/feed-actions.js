@@ -751,5 +751,146 @@ const FeedActions = {
         };
 
         animate();
+    },
+
+    openShareModal() {
+        this.showShareModal = true;
+        // Wait for modal to render then generate card
+        setTimeout(() => {
+            this.generateGistCard();
+        }, 100);
+    },
+
+    closeShareModal() {
+        this.showShareModal = false;
+        this.gistCardImage = null;
+    },
+
+    async generateGistCard() {
+        const canvas = document.getElementById('gistCardCanvas');
+        if (!canvas) return;
+
+        const ctx = canvas.getContext('2d');
+        const article = this.currentArticle || this.filteredArticles[this.currentIndex];
+
+        // Set canvas size (Instagram Story ratio 9:16)
+        canvas.width = 1080;
+        canvas.height = 1920;
+
+        // 1. Background Gradient
+        const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+        gradient.addColorStop(0, '#1a1a1a');
+        gradient.addColorStop(1, '#000000');
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        // 2. Add Noise Texture (Optional simulation)
+        // ctx.globalAlpha = 0.05;
+        // ... noise drawing code ...
+        // ctx.globalAlpha = 1.0;
+
+        // 3. Category Badge
+        ctx.font = 'bold 40px Inter, sans-serif';
+        ctx.fillStyle = '#FFDE00';
+        ctx.fillText(article.category.toUpperCase(), 80, 150);
+
+        // 4. Branding
+        ctx.font = 'bold 60px "Black Ops One", sans-serif';
+        ctx.fillStyle = '#FFFFFF';
+        ctx.textAlign = 'right';
+        ctx.fillText('GIST4U', canvas.width - 80, 150);
+        ctx.textAlign = 'left'; // Reset
+
+        // 5. Main Image (if available)
+        if (article.image) {
+            try {
+                const img = new Image();
+                img.crossOrigin = "anonymous";
+                img.src = article.image;
+                await new Promise(r => img.onload = r);
+
+                // Draw image with aspect ratio preserved or cropped
+                const imgHeight = 800;
+                ctx.drawImage(img, 0, 250, canvas.width, imgHeight);
+
+                // Add gradient overlay on image
+                const overlayGrad = ctx.createLinearGradient(0, 250, 0, 250 + imgHeight);
+                overlayGrad.addColorStop(0, 'rgba(0,0,0,0)');
+                overlayGrad.addColorStop(0.7, 'rgba(0,0,0,0.8)');
+                overlayGrad.addColorStop(1, '#000000');
+                ctx.fillStyle = overlayGrad;
+                ctx.fillRect(0, 250, canvas.width, imgHeight);
+            } catch (e) {
+                console.error("Failed to load image for canvas", e);
+            }
+        }
+
+        // 6. Headline
+        ctx.font = '900 80px Inter, sans-serif';
+        ctx.fillStyle = '#FFFFFF';
+        this.wrapText(ctx, article.headline, 80, 1150, canvas.width - 160, 90);
+
+        // 7. Summary
+        ctx.font = '400 50px Inter, sans-serif';
+        ctx.fillStyle = '#CCCCCC';
+        this.wrapText(ctx, article.summary, 80, 1500, canvas.width - 160, 70);
+
+        // 8. Footer / Call to Action
+        ctx.fillStyle = '#333333';
+        ctx.roundRect(80, 1750, canvas.width - 160, 100, 50);
+        ctx.fill();
+
+        ctx.font = 'bold 40px Inter, sans-serif';
+        ctx.fillStyle = '#FFDE00';
+        ctx.textAlign = 'center';
+        ctx.fillText('Read more on Gist4u', canvas.width / 2, 1815);
+
+        // Export
+        this.gistCardImage = canvas.toDataURL('image/png');
+    },
+
+    wrapText(ctx, text, x, y, maxWidth, lineHeight) {
+        const words = text.split(' ');
+        let line = '';
+
+        for (let n = 0; n < words.length; n++) {
+            const testLine = line + words[n] + ' ';
+            const metrics = ctx.measureText(testLine);
+            const testWidth = metrics.width;
+            if (testWidth > maxWidth && n > 0) {
+                ctx.fillText(line, x, y);
+                line = words[n] + ' ';
+                y += lineHeight;
+            }
+            else {
+                line = testLine;
+            }
+        }
+        ctx.fillText(line, x, y);
+    },
+
+    async shareGistCard() {
+        if (!this.gistCardImage) return;
+
+        try {
+            const blob = await (await fetch(this.gistCardImage)).blob();
+            const file = new File([blob], 'gist-card.png', { type: 'image/png' });
+
+            if (navigator.share) {
+                await navigator.share({
+                    title: 'Gist4u',
+                    text: 'Check out this gist!',
+                    files: [file]
+                });
+            } else {
+                // Fallback: Download
+                const link = document.createElement('a');
+                link.download = 'gist-card.png';
+                link.href = this.gistCardImage;
+                link.click();
+            }
+        } catch (error) {
+            console.error('Error sharing:', error);
+        }
     }
 };

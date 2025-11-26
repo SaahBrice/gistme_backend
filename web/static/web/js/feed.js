@@ -7,6 +7,8 @@ function gistMeApp() {
         isLiked: false,
         showDrumEffect: false,
         showCommentModal: false,
+        showShareModal: false,
+        gistCardImage: null,
         showReader: false,
         isPlaying: false,
         audioProgress: 0,
