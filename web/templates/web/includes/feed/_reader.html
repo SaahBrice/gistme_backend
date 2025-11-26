@@ -65,99 +65,25 @@
                 <span class="text-sm text-gray-400 whitespace-nowrap ml-2"
                     x-text="readerLang === 'en' ? 'English' : 'Français'"></span>
             </div>
-            <!-- Full-Screen Reader -->
-            <div x-show="showReader" x-transition:enter="transition ease-out duration-500"
-                x-transition:enter-start="opacity-0 translate-y-10 scale-95"
-                x-transition:enter-end="opacity-100 translate-y-0 scale-100"
-                x-transition:leave="transition ease-in duration-300"
-                x-transition:leave-start="opacity-100 translate-y-0 scale-100"
-                x-transition:leave-end="opacity-0 translate-y-10 scale-95"
-                class="fixed inset-0 z-50 bg-black overflow-y-auto">
 
-                <div class="sticky top-0 z-10 bg-black/95 backdrop-blur-md border-b border-gray-800">
-                    <div class="flex justify-between items-center p-4">
-                        <button @click="closeReader()"
-                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition-colors">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </button>
-
-                        <div class="flex gap-2">
-                            <button @click="switchLanguage('en')"
-                                class="px-4 py-2 rounded-lg font-bold text-sm transition-colors"
-                                :class="globalLang === 'en' ? 'bg-yellow-500 text-black' : 'bg-gray-800 text-gray-400'">
-                                EN
-                            </button>
-                            <button @click="switchLanguage('fr')"
-                                class="px-4 py-2 rounded-lg font-bold text-sm transition-colors"
-                                :class="globalLang === 'fr' ? 'bg-yellow-500 text-black' : 'bg-gray-800 text-gray-400'">
-                                FR
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="p-6 max-w-2xl mx-auto">
-                    <div class="mb-6">
-                        <span
-                            class="inline-block px-4 py-1.5 bg-yellow-500 text-black text-xs font-bold uppercase tracking-wider rounded-full mb-4"
-                            x-text="currentArticle?.category"></span>
-                        <h1 class="text-3xl md:text-4xl font-black mb-4" x-text="currentArticle?.headline"></h1>
-                        <div class="flex items-center gap-3 text-sm text-gray-400 mb-6">
-                            <span x-text="currentArticle?.source"></span>
-                            <span>•</span>
-                            <span x-text="currentArticle?.timeAgo"></span>
-                        </div>
-                    </div>
-
-                    <div
-                        class="mb-8 p-6 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-2xl border border-yellow-500/30">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center gap-4 w-full">
-                                <button @click="toggleAudio()"
-                                    class="relative w-16 h-16 flex-shrink-0 flex items-center justify-center">
-                                    <canvas x-init="initLiquidButton($el)"
-                                        class="absolute inset-0 w-full h-full"></canvas>
-                                    <svg x-show="!isPlaying" class="w-6 h-6 text-black relative z-10 ml-1"
-                                        fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M8 5v14l11-7z" />
-                                    </svg>
-                                    <svg x-show="isPlaying" class="w-6 h-6 text-black relative z-10" fill="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
-                                    </svg>
-                                </button>
-
-                                <div class="flex-1 h-12 relative">
-                                    <canvas x-init="initWaveform($el)" class="w-full h-full"></canvas>
-                                </div>
-                            </div>
-
-                            <span class="text-sm text-gray-400 whitespace-nowrap ml-2"
-                                x-text="readerLang === 'en' ? 'English' : 'Français'"></span>
-                        </div>
-
-                        <div class="w-full h-2 bg-gray-800 rounded-full overflow-hidden">
-                            <div class="h-full bg-yellow-500 transition-all duration-300"
-                                :style="`width: ${audioProgress}%`"></div>
-                        </div>
-                    </div>
-
-                    <div class="prose prose-invert prose-lg max-w-none">
-                        <p class="text-gray-300 leading-relaxed mb-4" x-text="currentArticle?.content"></p>
-                    </div>
-
-                    <div class="mt-8 p-4 bg-gray-900 rounded-xl border border-gray-800">
-                        <h3 class="text-sm font-bold text-yellow-500 uppercase tracking-wider mb-2">Sources</h3>
-                        <ul class="space-y-2">
-                            <template x-for="source in currentArticle?.sourceNames" :key="source">
-                                <li class="text-sm text-blue-400" x-text="source"></li>
-                            </template>
-                            <li x-show="!currentArticle?.sourceNames?.length" class="text-sm text-gray-500">Source info
-                                unavailable</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="w-full h-2 bg-gray-800 rounded-full overflow-hidden">
+                <div class="h-full bg-yellow-500 transition-all duration-300" :style="`width: ${audioProgress}%`"></div>
             </div>
+        </div>
+
+        <div class="prose prose-invert prose-lg max-w-none">
+            <p class="text-gray-300 leading-relaxed mb-4" x-text="currentArticle?.content"></p>
+        </div>
+
+        <div class="mt-8 p-4 bg-gray-900 rounded-xl border border-gray-800">
+            <h3 class="text-sm font-bold text-yellow-500 uppercase tracking-wider mb-2">Sources</h3>
+            <ul class="space-y-2">
+                <template x-for="source in getArticleSources()" :key="source">
+                    <li class="text-sm text-blue-400" x-text="source"></li>
+                </template>
+                <li x-show="getArticleSources().length === 0" class="text-sm text-gray-500">Source info
+                    unavailable</li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -798,14 +798,23 @@ function gistMeApp() {
 
         simulateAudioProgress() {
             if (!this.isPlaying) return;
-            if (this.audioProgress >= 100) {
+
+            if (this.audioProgress < 100) {
+                this.audioProgress += 0.5;
+                requestAnimationFrame(() => this.simulateAudioProgress());
+            } else {
                 this.isPlaying = false;
                 this.audioProgress = 0;
-                return;
             }
-            this.audioProgress += 0.5;
-            requestAnimationFrame(() => this.simulateAudioProgress());
         },
+
+        getArticleSources() {
+            if (!this.currentArticle || !this.currentArticle.sourceNames) {
+                return [];
+            }
+            return this.currentArticle.sourceNames;
+        },
+
 
         initLiquidButton(canvas) {
             const ctx = canvas.getContext('2d');
