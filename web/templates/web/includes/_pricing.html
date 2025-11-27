@@ -38,8 +38,8 @@
                     <li class="flex items-center gap-2">✓ Custom Gist Alerts </li>
                     <li class="flex items-center gap-2">✓ Priority Notification</li>
                 </ul>
-                <a href="/feed/"
-                    class="nav-link w-full py-4 bg-black text-white rounded-xl font-bold text-center hover:scale-105 transition-transform">SUBSCRIBE</a>
+                <button @click="$dispatch('open-subscription-modal')"
+                    class="w-full py-4 bg-black text-white rounded-xl font-bold text-center hover:scale-105 transition-transform">SUBSCRIBE</button>
             </div>
 
             <div class="border border-white/20 p-8 rounded-3xl hover:bg-white/5 transition-colors flex flex-col">
