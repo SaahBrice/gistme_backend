@@ -17,3 +17,21 @@ class Subscription(models.Model):
     
     def __str__(self):
         return f"{self.name} - {self.email}"
+
+
+class Advertisement(models.Model):
+    """Model to store advertising inquiries from organizations"""
+    organization_name = models.CharField(max_length=200)
+    phone = models.CharField(max_length=20, help_text="Organization contact number")
+    email = models.EmailField()
+    created_at = models.DateTimeField(default=timezone.now)
+    contacted = models.BooleanField(default=False, help_text="Has our agent contacted them?")
+    
+    class Meta:
+        ordering = ['-created_at']
+        verbose_name = 'Advertisement Inquiry'
+        verbose_name_plural = 'Advertisement Inquiries'
+    
+    def __str__(self):
+        return f"{self.organization_name} - {self.email}"
+

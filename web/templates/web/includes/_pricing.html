@@ -53,9 +53,9 @@
                     <li class="flex items-center gap-2">✓ Analytics Dashboard</li>
                     <li class="flex items-center gap-2">✓ Geo-Targeting</li>
                 </ul>
-                <a href="/feed/"
-                    class="nav-link w-full py-4 bg-gray-800 text-white rounded-xl font-bold text-center hover:bg-white hover:text-black transition-colors">START
-                    ADS</a>
+                <button @click="$dispatch('open-advertising-modal')"
+                    class="w-full py-4 bg-gray-800 text-white rounded-xl font-bold text-center hover:bg-white hover:text-black transition-colors">START
+                    ADS</button>
             </div>
 
         </div>

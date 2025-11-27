@@ -2460,3 +2460,31 @@ WARNING 2025-11-27 23:04:14,197 log 35940 34656 Not Found: /.well-known/appspeci
 WARNING 2025-11-27 23:04:14,197 basehttp 35940 34656 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3402
 INFO 2025-11-27 23:04:14,322 basehttp 35940 28204 "GET /static/web/css/main.css HTTP/1.1" 200 2909
 INFO 2025-11-27 23:04:14,322 basehttp 35940 34112 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+INFO 2025-11-27 23:17:39,186 autoreload 33880 18868 Watching for file changes with StatReloader
+INFO 2025-11-27 23:17:45,299 basehttp 33880 11992 "GET / HTTP/1.1" 200 47662
+WARNING 2025-11-27 23:17:45,355 log 33880 11992 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-27 23:17:45,356 basehttp 33880 11992 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3663
+INFO 2025-11-27 23:17:45,493 basehttp 33880 30444 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-27 23:17:45,495 basehttp 33880 30428 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+INFO 2025-11-27 23:18:06,809 basehttp 33880 30444 "POST /subscribe/ HTTP/1.1" 200 78
+INFO 2025-11-27 23:18:10,654 basehttp 33880 30444 "GET /feed/ HTTP/1.1" 200 37725
+WARNING 2025-11-27 23:18:10,720 log 33880 30444 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-27 23:18:10,723 basehttp 33880 30444 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3663
+INFO 2025-11-27 23:18:10,729 basehttp 33880 30428 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-27 23:18:10,730 basehttp 33880 11992 "GET /static/web/css/feed.css HTTP/1.1" 200 9471
+INFO 2025-11-27 23:18:10,741 basehttp 33880 30444 "GET /static/web/js/feed.js HTTP/1.1" 200 2095
+INFO 2025-11-27 23:18:10,748 basehttp 33880 35216 "GET /static/web/js/feed-config.js HTTP/1.1" 200 6142
+INFO 2025-11-27 23:18:10,748 basehttp 33880 10784 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+INFO 2025-11-27 23:18:10,748 basehttp 33880 26012 "GET /static/web/js/feed-actions.js HTTP/1.1" 200 34998
+INFO 2025-11-27 23:18:11,429 basehttp 33880 26012 "GET /static/web/data/dummy_comments.json HTTP/1.1" 200 33076
+INFO 2025-11-27 23:18:11,445 basehttp 33880 10784 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+WARNING 2025-11-27 23:18:15,116 log 33880 10784 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-27 23:18:15,116 basehttp 33880 10784 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3663
+WARNING 2025-11-27 23:18:15,158 log 33880 10784 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-27 23:18:15,159 basehttp 33880 10784 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3663
+INFO 2025-11-27 23:18:21,832 basehttp 33880 10784 "GET / HTTP/1.1" 200 47662
+WARNING 2025-11-27 23:18:21,869 log 33880 10784 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-27 23:18:21,872 basehttp 33880 10784 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3663
+INFO 2025-11-27 23:18:21,873 basehttp 33880 26012 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-27 23:18:21,874 basehttp 33880 35216 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+INFO 2025-11-27 23:19:04,133 basehttp 33880 35216 "POST /advertise/ HTTP/1.1" 200 103

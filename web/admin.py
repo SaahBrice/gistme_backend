@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Subscription
+from .models import Subscription, Advertisement
 
 
 @admin.register(Subscription)
@@ -18,3 +18,22 @@ class SubscriptionAdmin(admin.ModelAdmin):
             'fields': ('is_active', 'subscribed_at')
         }),
     )
+
+
+@admin.register(Advertisement)
+class AdvertisementAdmin(admin.ModelAdmin):
+    list_display = ('organization_name', 'email', 'phone', 'created_at', 'contacted')
+    list_filter = ('contacted', 'created_at')
+    search_fields = ('organization_name', 'email', 'phone')
+    readonly_fields = ('created_at',)
+    date_hierarchy = 'created_at'
+    
+    fieldsets = (
+        ('Organization Information', {
+            'fields': ('organization_name', 'email', 'phone')
+        }),
+        ('Status', {
+            'fields': ('contacted', 'created_at')
+        }),
+    )
+
