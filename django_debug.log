@@ -2026,3 +2026,61 @@ INFO 2025-11-27 06:49:28,057 basehttp 30212 22956 "GET /static/web/js/main.js HT
 INFO 2025-11-27 06:52:37,639 autoreload 25604 28820 Watching for file changes with StatReloader
 INFO 2025-11-27 06:52:46,253 basehttp 25604 3552 "GET / HTTP/1.1" 200 20720
 INFO 2025-11-27 06:52:46,383 basehttp 25604 3552 "GET /static/web/js/main.js HTTP/1.1" 200 6792
+INFO 2025-11-27 07:16:33,915 autoreload 22328 27708 Watching for file changes with StatReloader
+INFO 2025-11-27 07:16:36,628 basehttp 22328 29836 "GET / HTTP/1.1" 200 20720
+WARNING 2025-11-27 07:16:55,418 log 22328 29836 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-27 07:16:55,420 basehttp 22328 29836 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-27 21:33:20,059 autoreload 30176 21568 Watching for file changes with StatReloader
+INFO 2025-11-27 21:33:22,607 basehttp 30176 2688 "GET / HTTP/1.1" 200 20720
+WARNING 2025-11-27 21:33:22,683 log 30176 35072 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-27 21:33:22,683 basehttp 30176 35072 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-27 21:33:22,857 basehttp 30176 33180 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+INFO 2025-11-27 21:33:22,861 basehttp 30176 2688 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-27 21:33:35,028 basehttp 30176 2688 "GET / HTTP/1.1" 200 20720
+INFO 2025-11-27 21:33:35,074 basehttp 30176 33180 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-27 21:33:35,074 basehttp 30176 35072 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+WARNING 2025-11-27 21:33:35,084 log 30176 2688 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-27 21:33:35,084 basehttp 30176 2688 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-27 21:41:49,898 basehttp 30176 31136 "GET / HTTP/1.1" 200 20986
+INFO 2025-11-27 21:41:50,001 basehttp 30176 31136 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+WARNING 2025-11-27 21:41:50,013 log 30176 34700 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-27 21:41:50,014 basehttp 30176 34700 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-27 21:41:50,014 basehttp 30176 25664 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+INFO 2025-11-27 21:42:15,258 basehttp 30176 34700 "GET /feed/ HTTP/1.1" 200 37725
+WARNING 2025-11-27 21:42:15,341 log 30176 34700 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-27 21:42:15,341 basehttp 30176 34700 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-27 21:42:15,347 basehttp 30176 34700 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-27 21:42:15,352 basehttp 30176 31136 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+INFO 2025-11-27 21:42:15,363 basehttp 30176 25664 "GET /static/web/css/feed.css HTTP/1.1" 200 9471
+INFO 2025-11-27 21:42:15,373 basehttp 30176 8376 "GET /static/web/js/feed.js HTTP/1.1" 200 2095
+INFO 2025-11-27 21:42:15,373 basehttp 30176 33560 "GET /static/web/js/feed-config.js HTTP/1.1" 200 6142
+INFO 2025-11-27 21:42:15,384 basehttp 30176 17660 "GET /static/web/js/feed-actions.js HTTP/1.1" 200 34998
+INFO 2025-11-27 21:42:16,026 basehttp 30176 33560 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-27 21:42:16,029 basehttp 30176 17660 "GET /static/web/data/dummy_comments.json HTTP/1.1" 200 33076
+INFO 2025-11-27 21:42:20,134 basehttp 30176 17660 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-27 21:42:20,195 basehttp 30176 17660 "GET /api/articles/ HTTP/1.1" 200 41585
+INFO 2025-11-27 21:42:20,217 basehttp 30176 17660 "GET /media/thumbnails/health_20251126_165933_1.jpeg HTTP/1.1" 200 22174
+INFO 2025-11-27 21:42:20,230 basehttp 30176 33560 "GET /media/thumbnails/technology_20251126_165712_1.jpeg HTTP/1.1" 200 83874
+INFO 2025-11-27 21:42:20,293 basehttp 30176 8376 "GET /media/thumbnails/business_20251126_165446_1.jpeg HTTP/1.1" 200 62467
+WARNING 2025-11-27 21:42:20,324 log 30176 25664 Not Found: /feed/media/thumbnails\x0business_20251126_004238_1.jpeg
+WARNING 2025-11-27 21:42:20,325 basehttp 30176 25664 "GET /feed/media/thumbnails%0Business_20251126_004238_1.jpeg HTTP/1.1" 404 3155
+WARNING 2025-11-27 21:42:20,341 log 30176 34700 Not Found: /feed/media/thumbnailssports_20251126_004013_1.jpeg
+WARNING 2025-11-27 21:42:20,341 basehttp 30176 34700 "GET /feed/media/thumbnailssports_20251126_004013_1.jpeg HTTP/1.1" 404 3147
+WARNING 2025-11-27 21:42:20,358 log 30176 17660 Not Found: /feed/media/thumbnailshealth_20251126_004505_1.jpeg
+WARNING 2025-11-27 21:42:20,360 basehttp 30176 17660 "GET /feed/media/thumbnailshealth_20251126_004505_1.jpeg HTTP/1.1" 404 3147
+WARNING 2025-11-27 21:42:20,373 log 30176 31136 Not Found: /feed/media/thumbnails\x0entertainment_20251126_004118_1.jpeg
+WARNING 2025-11-27 21:42:20,374 basehttp 30176 31136 "GET /feed/media/thumbnails%0Entertainment_20251126_004118_1.jpeg HTTP/1.1" 404 3170
+WARNING 2025-11-27 21:42:20,388 log 30176 33560 Not Found: /feed/media/thumbnailstechnology_20251126_004402_1.png
+WARNING 2025-11-27 21:42:20,389 basehttp 30176 33560 "GET /feed/media/thumbnailstechnology_20251126_004402_1.png HTTP/1.1" 404 3156
+INFO 2025-11-27 21:42:24,436 basehttp 30176 33560 "GET /media/audio/english/health_20251126_165933.mp3 HTTP/1.1" 200 617664
+WARNING 2025-11-27 21:42:24,506 log 30176 33560 Not Found: /favicon.ico
+WARNING 2025-11-27 21:42:24,507 basehttp 30176 33560 "GET /favicon.ico HTTP/1.1" 404 3030
+WARNING 2025-11-27 21:42:34,950 log 30176 33560 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-27 21:42:34,950 basehttp 30176 33560 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+WARNING 2025-11-27 21:42:34,994 log 30176 33560 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-27 21:42:34,994 basehttp 30176 33560 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
+INFO 2025-11-27 21:43:31,668 basehttp 30176 33560 "GET / HTTP/1.1" 200 20992
+INFO 2025-11-27 21:43:31,723 basehttp 30176 17660 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+INFO 2025-11-27 21:43:31,723 basehttp 30176 31136 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+WARNING 2025-11-27 21:43:31,731 log 30176 33560 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-27 21:43:31,731 basehttp 30176 33560 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141

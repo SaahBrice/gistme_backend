@@ -72,6 +72,7 @@ if (marqueeSection && marqueeTrack) {
         scrollTrigger: {
             trigger: marqueeSection,
             pin: true,
+            start: "center center",
             scrub: 1,
             // The scroll distance (duration) is proportional to the content width
             end: () => "+=" + Math.max(window.innerWidth, marqueeTrack.scrollWidth - window.innerWidth),
