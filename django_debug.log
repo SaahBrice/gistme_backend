@@ -2131,3 +2131,332 @@ INFO 2025-11-27 22:14:40,146 basehttp 35104 32948 "GET /static/web/js/feed.js HT
 INFO 2025-11-27 22:14:40,146 basehttp 35104 23104 "GET /static/web/js/feed-actions.js HTTP/1.1" 200 34998
 INFO 2025-11-27 22:14:41,833 basehttp 35104 23104 "GET /static/web/data/dummy_comments.json HTTP/1.1" 200 33076
 INFO 2025-11-27 22:14:41,846 basehttp 35104 32948 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-27 22:28:57,994 autoreload 35296 33276 Watching for file changes with StatReloader
+INFO 2025-11-27 22:29:29,717 basehttp 35296 31692 "GET / HTTP/1.1" 200 44530
+WARNING 2025-11-27 22:29:29,822 log 35296 31692 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-27 22:29:29,825 basehttp 35296 31692 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3406
+INFO 2025-11-27 22:29:29,973 basehttp 35296 17264 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-27 22:29:29,973 basehttp 35296 32864 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+INFO 2025-11-27 22:32:36,914 autoreload 34156 23052 Watching for file changes with StatReloader
+INFO 2025-11-27 22:32:47,083 basehttp 35296 32864 "GET / HTTP/1.1" 200 33551
+INFO 2025-11-27 22:32:47,132 basehttp 35296 17264 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+INFO 2025-11-27 22:32:47,132 basehttp 35296 32864 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+WARNING 2025-11-27 22:32:47,155 log 35296 17264 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-27 22:32:47,156 basehttp 35296 17264 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3406
+WARNING 2025-11-27 22:33:17,186 log 35296 17264 Bad Request: /api/subscribe/
+WARNING 2025-11-27 22:33:17,186 basehttp 35296 17264 "POST /api/subscribe/ HTTP/1.1" 400 112
+WARNING 2025-11-27 22:33:42,419 log 35296 17264 Bad Request: /api/subscribe/
+WARNING 2025-11-27 22:33:42,419 basehttp 35296 17264 "POST /api/subscribe/ HTTP/1.1" 400 112
+INFO 2025-11-27 22:36:10,851 autoreload 34760 36360 Watching for file changes with StatReloader
+INFO 2025-11-27 22:36:13,472 basehttp 35296 17264 "GET / HTTP/1.1" 200 33653
+INFO 2025-11-27 22:36:13,524 basehttp 35296 32864 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-27 22:36:13,524 basehttp 35296 23588 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+WARNING 2025-11-27 22:36:13,535 log 35296 17264 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-27 22:36:13,536 basehttp 35296 17264 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3406
+WARNING 2025-11-27 22:36:37,601 log 35296 17264 Bad Request: /api/subscribe/
+WARNING 2025-11-27 22:36:37,602 basehttp 35296 17264 "POST /api/subscribe/ HTTP/1.1" 400 112
+WARNING 2025-11-27 22:37:42,415 log 35296 17264 Bad Request: /api/subscribe/
+WARNING 2025-11-27 22:37:42,415 basehttp 35296 17264 "POST /api/subscribe/ HTTP/1.1" 400 112
+INFO 2025-11-27 22:40:33,901 autoreload 35156 35724 Watching for file changes with StatReloader
+INFO 2025-11-27 22:40:36,829 basehttp 35156 30444 "GET / HTTP/1.1" 200 33671
+WARNING 2025-11-27 22:40:36,886 log 35156 30444 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-27 22:40:36,890 basehttp 35156 30444 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3406
+INFO 2025-11-27 22:40:37,035 basehttp 35156 7544 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+INFO 2025-11-27 22:40:37,035 basehttp 35156 26340 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+WARNING 2025-11-27 22:40:57,396 log 35156 26340 Bad Request: /api/subscribe/
+WARNING 2025-11-27 22:40:57,396 basehttp 35156 26340 "POST /api/subscribe/ HTTP/1.1" 400 112
+INFO 2025-11-27 22:42:17,885 autoreload 35156 35724 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\views.py changed, reloading.
+INFO 2025-11-27 22:42:18,758 autoreload 30948 26272 Watching for file changes with StatReloader
+INFO 2025-11-27 22:42:49,711 autoreload 1100 35960 Watching for file changes with StatReloader
+INFO 2025-11-27 22:42:57,634 basehttp 1100 33884 "GET / HTTP/1.1" 200 33671
+WARNING 2025-11-27 22:42:57,703 log 1100 33884 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-27 22:42:57,704 basehttp 1100 33884 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3406
+INFO 2025-11-27 22:42:57,849 basehttp 1100 32284 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+INFO 2025-11-27 22:42:57,849 basehttp 1100 22120 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+WARNING 2025-11-27 22:43:15,358 log 1100 22120 Bad Request: /api/subscribe/
+WARNING 2025-11-27 22:43:15,358 basehttp 1100 22120 "POST /api/subscribe/ HTTP/1.1" 400 112
+INFO 2025-11-27 22:43:32,933 autoreload 27448 31456 Watching for file changes with StatReloader
+WARNING 2025-11-27 22:43:36,065 log 27448 33944 Bad Request: /api/subscribe/
+WARNING 2025-11-27 22:43:36,065 basehttp 27448 33944 "POST /api/subscribe/ HTTP/1.1" 400 112
+INFO 2025-11-27 22:47:18,778 autoreload 8136 11872 Watching for file changes with StatReloader
+INFO 2025-11-27 22:48:16,875 basehttp 8136 35308 "GET / HTTP/1.1" 200 33671
+WARNING 2025-11-27 22:48:16,945 log 8136 35308 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-27 22:48:16,946 basehttp 8136 35308 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3406
+INFO 2025-11-27 22:48:17,107 basehttp 8136 18464 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+INFO 2025-11-27 22:48:17,107 basehttp 8136 32156 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-27 22:48:37,327 autoreload 24544 15008 Watching for file changes with StatReloader
+INFO 2025-11-27 22:48:40,326 basehttp 24544 716 "GET / HTTP/1.1" 200 33671
+WARNING 2025-11-27 22:48:40,370 log 24544 716 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-27 22:48:40,372 basehttp 24544 716 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3406
+INFO 2025-11-27 22:48:40,495 basehttp 24544 35424 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-27 22:48:40,499 basehttp 24544 32792 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+WARNING 2025-11-27 22:48:56,929 log 24544 32792 Bad Request: /api/subscribe/
+WARNING 2025-11-27 22:48:56,929 basehttp 24544 32792 "POST /api/subscribe/ HTTP/1.1" 400 112
+INFO 2025-11-27 22:51:19,281 autoreload 35916 35656 Watching for file changes with StatReloader
+INFO 2025-11-27 22:51:24,980 basehttp 35916 34836 "GET / HTTP/1.1" 200 33721
+WARNING 2025-11-27 22:51:25,034 log 35916 34836 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-27 22:51:25,035 basehttp 35916 34836 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3406
+INFO 2025-11-27 22:51:25,204 basehttp 35916 26572 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-27 22:51:25,204 basehttp 35916 35084 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+INFO 2025-11-27 22:52:50,583 basehttp 35916 35084 "GET / HTTP/1.1" 200 34571
+WARNING 2025-11-27 22:52:50,640 log 35916 35084 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-27 22:52:50,640 basehttp 35916 35084 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3406
+INFO 2025-11-27 22:52:50,642 basehttp 35916 26572 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-27 22:52:50,643 basehttp 35916 34836 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+WARNING 2025-11-27 22:53:08,038 log 35916 34836 Bad Request: /api/subscribe/
+WARNING 2025-11-27 22:53:08,038 basehttp 35916 34836 "POST /api/subscribe/ HTTP/1.1" 400 112
+ERROR 2025-11-27 22:53:23,427 utils 35916 34836 Exception in SubscribeView: Method "GET" not allowed.
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 173, in http_method_not_allowed
+    raise exceptions.MethodNotAllowed(request.method)
+rest_framework.exceptions.MethodNotAllowed: Method "GET" not allowed.
+WARNING 2025-11-27 22:53:23,590 log 35916 34836 Method Not Allowed: /api/subscribe/
+WARNING 2025-11-27 22:53:23,591 basehttp 35916 34836 "GET /api/subscribe/ HTTP/1.1" 405 10623
+INFO 2025-11-27 22:53:23,660 basehttp 35916 26572 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2025-11-27 22:53:23,660 basehttp 35916 34836 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2025-11-27 22:53:23,660 basehttp 35916 35084 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2025-11-27 22:53:23,666 basehttp 35916 35788 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2025-11-27 22:53:23,668 basehttp 35916 34836 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2025-11-27 22:53:23,668 basehttp 35916 19916 "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+INFO 2025-11-27 22:53:23,668 basehttp 35916 26572 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2025-11-27 22:53:23,669 basehttp 35916 35084 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2025-11-27 22:53:23,669 basehttp 35916 32872 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2025-11-27 22:53:23,679 basehttp 35916 35788 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2025-11-27 22:53:23,679 basehttp 35916 34836 "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+INFO 2025-11-27 22:53:23,777 basehttp 35916 34836 "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+ERROR 2025-11-27 22:53:52,760 views 35916 34836 Subscription failed: JSON parse error - Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\parsers.py", line 66, in parse
+    return json.load(decoded_stream, parse_constant=parse_constant)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\utils\json.py", line 31, in load
+    return json.load(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\views.py", line 71, in post
+    serializer = VisitorSubscriptionSerializer(data=request.data)
+                                                    ^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\request.py", line 221, in data
+    self._load_data_and_files()
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\request.py", line 284, in _load_data_and_files
+    self._data, self._files = self._parse()
+                              ^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\request.py", line 359, in _parse
+    parsed = parser.parse(stream, media_type, self.parser_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\parsers.py", line 68, in parse
+    raise ParseError('JSON parse error - %s' % str(exc))
+rest_framework.exceptions.ParseError: JSON parse error - Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+ERROR 2025-11-27 22:53:52,822 log 35916 34836 Internal Server Error: /api/subscribe/
+ERROR 2025-11-27 22:53:52,822 basehttp 35916 34836 "POST /api/subscribe/ HTTP/1.1" 500 10574
+INFO 2025-11-27 22:53:58,984 basehttp 35916 34836 "OPTIONS /api/subscribe/ HTTP/1.1" 200 10858
+INFO 2025-11-27 22:54:00,554 basehttp 35916 34836 "OPTIONS /api/subscribe/ HTTP/1.1" 200 10858
+INFO 2025-11-27 22:54:01,513 basehttp 35916 34836 "OPTIONS /api/subscribe/ HTTP/1.1" 200 10858
+INFO 2025-11-27 22:54:02,142 basehttp 35916 34836 "OPTIONS /api/subscribe/ HTTP/1.1" 200 10858
+ERROR 2025-11-27 22:54:13,885 views 35916 34836 Subscription failed: JSON parse error - Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\parsers.py", line 66, in parse
+    return json.load(decoded_stream, parse_constant=parse_constant)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\utils\json.py", line 31, in load
+    return json.load(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\views.py", line 71, in post
+    serializer = VisitorSubscriptionSerializer(data=request.data)
+                                                    ^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\request.py", line 221, in data
+    self._load_data_and_files()
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\request.py", line 284, in _load_data_and_files
+    self._data, self._files = self._parse()
+                              ^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\request.py", line 359, in _parse
+    parsed = parser.parse(stream, media_type, self.parser_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\parsers.py", line 68, in parse
+    raise ParseError('JSON parse error - %s' % str(exc))
+rest_framework.exceptions.ParseError: JSON parse error - Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+ERROR 2025-11-27 22:54:13,889 log 35916 34836 Internal Server Error: /api/subscribe/
+ERROR 2025-11-27 22:54:13,889 basehttp 35916 34836 "POST /api/subscribe/ HTTP/1.1" 500 10574
+ERROR 2025-11-27 22:54:23,960 views 35916 34836 Subscription failed: JSON parse error - Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\parsers.py", line 66, in parse
+    return json.load(decoded_stream, parse_constant=parse_constant)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\utils\json.py", line 31, in load
+    return json.load(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\views.py", line 71, in post
+    serializer = VisitorSubscriptionSerializer(data=request.data)
+                                                    ^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\request.py", line 221, in data
+    self._load_data_and_files()
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\request.py", line 284, in _load_data_and_files
+    self._data, self._files = self._parse()
+                              ^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\request.py", line 359, in _parse
+    parsed = parser.parse(stream, media_type, self.parser_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\parsers.py", line 68, in parse
+    raise ParseError('JSON parse error - %s' % str(exc))
+rest_framework.exceptions.ParseError: JSON parse error - Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+ERROR 2025-11-27 22:54:23,964 log 35916 34836 Internal Server Error: /api/subscribe/
+ERROR 2025-11-27 22:54:23,964 basehttp 35916 34836 "POST /api/subscribe/ HTTP/1.1" 500 10574
+ERROR 2025-11-27 22:55:03,625 views 35916 34836 Subscription failed: JSON parse error - Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\parsers.py", line 66, in parse
+    return json.load(decoded_stream, parse_constant=parse_constant)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\utils\json.py", line 31, in load
+    return json.load(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\views.py", line 71, in post
+    serializer = VisitorSubscriptionSerializer(data=request.data)
+                                                    ^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\request.py", line 221, in data
+    self._load_data_and_files()
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\request.py", line 284, in _load_data_and_files
+    self._data, self._files = self._parse()
+                              ^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\request.py", line 359, in _parse
+    parsed = parser.parse(stream, media_type, self.parser_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\parsers.py", line 68, in parse
+    raise ParseError('JSON parse error - %s' % str(exc))
+rest_framework.exceptions.ParseError: JSON parse error - Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+ERROR 2025-11-27 22:55:03,629 log 35916 34836 Internal Server Error: /api/subscribe/
+ERROR 2025-11-27 22:55:03,629 basehttp 35916 34836 "POST /api/subscribe/ HTTP/1.1" 500 10574
+WARNING 2025-11-27 22:55:15,729 log 35916 34836 Bad Request: /api/subscribe/
+WARNING 2025-11-27 22:55:15,729 basehttp 35916 34836 "POST /api/subscribe/ HTTP/1.1" 400 112
+INFO 2025-11-27 22:56:45,009 basehttp 35916 34836 "GET /api/ HTTP/1.1" 200 10323
+INFO 2025-11-27 22:56:49,579 basehttp 35916 34836 "GET /api/ HTTP/1.1" 200 10323
+INFO 2025-11-27 22:57:06,867 basehttp 35916 34836 "GET / HTTP/1.1" 200 34571
+INFO 2025-11-27 22:57:06,907 basehttp 35916 35788 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-27 22:57:06,908 basehttp 35916 32872 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+WARNING 2025-11-27 22:57:06,918 log 35916 34836 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-27 22:57:06,919 basehttp 35916 34836 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3406
+INFO 2025-11-27 22:57:21,279 autoreload 34264 24496 Watching for file changes with StatReloader
+INFO 2025-11-27 22:57:23,928 basehttp 34264 30188 "GET / HTTP/1.1" 200 34567
+WARNING 2025-11-27 22:57:23,973 log 34264 30188 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-27 22:57:23,974 basehttp 34264 30188 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3406
+INFO 2025-11-27 22:57:24,114 basehttp 34264 30100 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+INFO 2025-11-27 22:57:24,114 basehttp 34264 8576 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+WARNING 2025-11-27 22:57:40,236 log 34264 8576 Not Found: /subscribe/
+WARNING 2025-11-27 22:57:40,237 basehttp 34264 8576 "POST /subscribe/ HTTP/1.1" 404 3293
+INFO 2025-11-27 22:58:30,385 autoreload 34264 24496 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\urls.py changed, reloading.
+INFO 2025-11-27 22:58:31,367 autoreload 36272 26828 Watching for file changes with StatReloader
+INFO 2025-11-27 22:59:09,995 basehttp 36272 32792 "GET / HTTP/1.1" 200 34567
+WARNING 2025-11-27 22:59:10,052 log 36272 32792 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-27 22:59:10,053 basehttp 36272 32792 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3402
+INFO 2025-11-27 22:59:10,204 basehttp 36272 36628 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+INFO 2025-11-27 22:59:10,204 basehttp 36272 25684 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-27 22:59:33,425 basehttp 36272 25684 "POST /subscribe/ HTTP/1.1" 200 78
+INFO 2025-11-27 23:01:13,815 autoreload 36272 26828 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\views.py changed, reloading.
+INFO 2025-11-27 23:01:14,766 autoreload 15112 28612 Watching for file changes with StatReloader
+INFO 2025-11-27 23:02:15,146 autoreload 32028 34556 Watching for file changes with StatReloader
+INFO 2025-11-27 23:02:18,472 basehttp 32028 16916 "GET /feed/ HTTP/1.1" 200 37725
+WARNING 2025-11-27 23:02:18,631 log 32028 16916 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-27 23:02:18,636 basehttp 32028 16916 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3402
+INFO 2025-11-27 23:02:19,002 basehttp 32028 36460 "GET /static/web/css/feed.css HTTP/1.1" 200 9471
+INFO 2025-11-27 23:02:19,002 basehttp 32028 31776 "GET /static/web/js/feed-config.js HTTP/1.1" 200 6142
+INFO 2025-11-27 23:02:19,012 basehttp 32028 16916 "GET /static/web/js/feed.js HTTP/1.1" 200 2095
+INFO 2025-11-27 23:02:19,012 basehttp 32028 23908 "GET /static/web/js/feed-actions.js HTTP/1.1" 200 34998
+INFO 2025-11-27 23:02:19,023 basehttp 32028 24844 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+INFO 2025-11-27 23:02:19,029 basehttp 32028 1620 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-27 23:02:19,529 basehttp 32028 1620 "GET /static/web/data/dummy_comments.json HTTP/1.1" 200 33076
+INFO 2025-11-27 23:02:19,542 basehttp 32028 24844 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-27 23:02:23,180 basehttp 32028 24844 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-27 23:02:23,240 basehttp 32028 24844 "GET /api/articles/ HTTP/1.1" 200 41585
+INFO 2025-11-27 23:02:23,265 basehttp 32028 24844 "GET /media/thumbnails/health_20251126_165933_1.jpeg HTTP/1.1" 200 22174
+INFO 2025-11-27 23:02:23,338 basehttp 32028 23908 "GET /media/thumbnails/business_20251126_165446_1.jpeg HTTP/1.1" 200 62467
+WARNING 2025-11-27 23:02:23,359 log 32028 24844 Not Found: /feed/media/thumbnailshealth_20251126_004505_1.jpeg
+WARNING 2025-11-27 23:02:23,361 basehttp 32028 24844 "GET /feed/media/thumbnailshealth_20251126_004505_1.jpeg HTTP/1.1" 404 3408
+WARNING 2025-11-27 23:02:23,372 log 32028 16916 Not Found: /feed/media/thumbnailstechnology_20251126_004402_1.png
+WARNING 2025-11-27 23:02:23,374 basehttp 32028 16916 "GET /feed/media/thumbnailstechnology_20251126_004402_1.png HTTP/1.1" 404 3417
+INFO 2025-11-27 23:02:23,393 basehttp 32028 1620 "GET /media/thumbnails/technology_20251126_165712_1.jpeg HTTP/1.1" 200 83874
+WARNING 2025-11-27 23:02:23,412 log 32028 23908 Not Found: /feed/media/thumbnailssports_20251126_004013_1.jpeg
+WARNING 2025-11-27 23:02:23,413 basehttp 32028 23908 "GET /feed/media/thumbnailssports_20251126_004013_1.jpeg HTTP/1.1" 404 3408
+WARNING 2025-11-27 23:02:23,429 log 32028 31776 Not Found: /feed/media/thumbnails\x0business_20251126_004238_1.jpeg
+WARNING 2025-11-27 23:02:23,429 basehttp 32028 31776 "GET /feed/media/thumbnails%0Business_20251126_004238_1.jpeg HTTP/1.1" 404 3416
+WARNING 2025-11-27 23:02:23,440 log 32028 36460 Not Found: /feed/media/thumbnails\x0entertainment_20251126_004118_1.jpeg
+WARNING 2025-11-27 23:02:23,440 basehttp 32028 36460 "GET /feed/media/thumbnails%0Entertainment_20251126_004118_1.jpeg HTTP/1.1" 404 3431
+INFO 2025-11-27 23:02:32,047 basehttp 32028 36460 "GET /media/audio/french/technology_20251126_165712.mp3 HTTP/1.1" 200 1251264
+WARNING 2025-11-27 23:02:32,123 log 32028 36460 Not Found: /favicon.ico
+WARNING 2025-11-27 23:02:32,123 basehttp 32028 36460 "GET /favicon.ico HTTP/1.1" 404 3291
+INFO 2025-11-27 23:02:39,380 basehttp 32028 36460 "POST /api/articles/13/comment/ HTTP/1.1" 201 117
+INFO 2025-11-27 23:03:02,545 basehttp 32028 36460 "GET /media/thumbnails/technology_20251126_165712_1.jpeg HTTP/1.1" 200 83874
+INFO 2025-11-27 23:04:09,553 autoreload 35940 33552 Watching for file changes with StatReloader
+INFO 2025-11-27 23:04:14,104 basehttp 35940 34656 "GET / HTTP/1.1" 200 34567
+WARNING 2025-11-27 23:04:14,197 log 35940 34656 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-27 23:04:14,197 basehttp 35940 34656 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3402
+INFO 2025-11-27 23:04:14,322 basehttp 35940 28204 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-27 23:04:14,322 basehttp 35940 34112 "GET /static/web/js/main.js HTTP/1.1" 200 6829

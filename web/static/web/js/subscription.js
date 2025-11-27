@@ -1,113 +1,54 @@
 // Subscription Modal Logic
 function subscriptionModal() {
     return {
-        showModal: false,
-        currentStep: 'intro', // intro, form, processing, success
-
-        // Form Data
-        subscriberName: '',
-        subscriberPhone: '',
-        subscriberEmail: '',
-
-        // Validation Errors
-        errors: {
+        isOpen: false,
+        step: 'intro', // intro, form, loading, success
+        formData: {
             name: '',
             phone: '',
             email: ''
         },
-
         openModal() {
-            this.showModal = true;
-            this.currentStep = 'intro';
-            this.resetForm();
-            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            this.isOpen = true;
+            this.step = 'intro';
+            this.formData = { name: '', phone: '', email: '' };
+            document.body.style.overflow = 'hidden';
         },
-
         closeModal() {
-            this.showModal = false;
+            this.isOpen = false;
             document.body.style.overflow = '';
             setTimeout(() => {
-                this.currentStep = 'intro';
-                this.resetForm();
+                this.step = 'intro';
             }, 300);
         },
+        processSubscription() {
+            this.step = 'loading';
 
-        resetForm() {
-            this.subscriberName = '';
-            this.subscriberPhone = '';
-            this.subscriberEmail = '';
-            this.errors = { name: '', phone: '', email: '' };
+            // Post subscription data to backend
+            fetch('/api/subscribe/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(this.formData)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        this.step = 'success';
+                    } else {
+                        alert('Subscription failed: ' + (data.error || 'Unknown error'));
+                        this.step = 'form';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred. Please try again.');
+                    this.step = 'form';
+                });
         },
-
-        proceedToForm() {
-            this.currentStep = 'form';
-        },
-
-        validateForm() {
-            let isValid = true;
-            this.errors = { name: '', phone: '', email: '' };
-
-            // Validate Name
-            if (!this.subscriberName.trim()) {
-                this.errors.name = 'Please enter your name';
-                isValid = false;
-            } else if (this.subscriberName.trim().length < 2) {
-                this.errors.name = 'Name must be at least 2 characters';
-                isValid = false;
-            }
-
-            // Validate Phone (Cameroon format: starts with 6, 9 digits)
-            const phonePattern = /^6[0-9]{8}$/;
-            const cleanPhone = this.subscriberPhone.replace(/\s+/g, '');
-            if (!cleanPhone) {
-                this.errors.phone = 'Please enter your phone number';
-                isValid = false;
-            } else if (!phonePattern.test(cleanPhone)) {
-                this.errors.phone = 'Invalid Cameroon phone (e.g., 670123456)';
-                isValid = false;
-            }
-
-            // Validate Email
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!this.subscriberEmail.trim()) {
-                this.errors.email = 'Please enter your email';
-                isValid = false;
-            } else if (!emailPattern.test(this.subscriberEmail.trim())) {
-                this.errors.email = 'Please enter a valid email address';
-                isValid = false;
-            }
-
-            return isValid;
-        },
-
-        async submitSubscription() {
-            if (!this.validateForm()) {
-                return;
-            }
-
-            // Show processing state
-            this.currentStep = 'processing';
-
-            // Simulate API call for payment processing
-            setTimeout(() => {
-                // In production, this would be an actual API call
-                // const response = await fetch('/api/subscribe/', {
-                //     method: 'POST',
-                //     headers: { 'Content-Type': 'application/json' },
-                //     body: JSON.stringify({
-                //         name: this.subscriberName,
-                //         phone: this.subscriberPhone,
-                //         email: this.subscriberEmail
-                //     })
-                // });
-
-                // Show success state
-                this.currentStep = 'success';
-            }, 2500); // Simulate 2.5 second processing time
-        },
-
         goToFeed() {
             window.location.href = '/feed/';
         }
-    };
+    }
 }
