@@ -2020,3 +2020,9 @@ INFO 2025-11-27 06:45:06,251 basehttp 31472 716 "GET /static/web/css/main.css HT
 WARNING 2025-11-27 06:45:06,252 basehttp 31472 26828 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3141
 INFO 2025-11-27 06:45:06,252 basehttp 31472 13016 "GET /static/web/js/main.js HTTP/1.1" 200 6816
 INFO 2025-11-27 06:45:52,689 basehttp 31472 13016 "GET / HTTP/1.1" 200 21283
+INFO 2025-11-27 06:49:20,305 autoreload 30212 31676 Watching for file changes with StatReloader
+INFO 2025-11-27 06:49:28,015 basehttp 30212 22956 "GET / HTTP/1.1" 200 20695
+INFO 2025-11-27 06:49:28,057 basehttp 30212 22956 "GET /static/web/js/main.js HTTP/1.1" 304 0
+INFO 2025-11-27 06:52:37,639 autoreload 25604 28820 Watching for file changes with StatReloader
+INFO 2025-11-27 06:52:46,253 basehttp 25604 3552 "GET / HTTP/1.1" 200 20720
+INFO 2025-11-27 06:52:46,383 basehttp 25604 3552 "GET /static/web/js/main.js HTTP/1.1" 200 6792

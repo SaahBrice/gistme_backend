@@ -61,28 +61,24 @@ document.querySelectorAll('.nav-link').forEach(anchor => {
 // --- 3. ANIMATIONS (GSAP) ---
 gsap.registerPlugin(ScrollTrigger);
 
-// A. Marquee with FASTER Velocity (Fix for User Complaint)
-let marqueeTween = gsap.to(".marquee-track", {
-    xPercent: -50,
-    ease: "none",
-    duration: 15, // Faster base speed
-    repeat: -1
-});
+// A. Marquee (Scroll-Driven & Pinned)
+const marqueeSection = document.querySelector("#marquee-section");
+const marqueeTrack = document.querySelector(".marquee-track");
 
-ScrollTrigger.create({
-    trigger: "body",
-    start: "top top",
-    end: "bottom bottom",
-    onUpdate: (self) => {
-        let velocity = Math.abs(self.getVelocity());
-        // Increased multiplier for more aggressive speed-up
-        let timeScale = 1 + (velocity / 20);
-        gsap.to(marqueeTween, { timeScale: timeScale, duration: 0.2, overwrite: true });
-        gsap.delayedCall(0.5, () => {
-            gsap.to(marqueeTween, { timeScale: 1, duration: 0.5 });
-        });
-    }
-});
+if (marqueeSection && marqueeTrack) {
+    gsap.to(marqueeTrack, {
+        x: () => -(marqueeTrack.scrollWidth - window.innerWidth),
+        ease: "none",
+        scrollTrigger: {
+            trigger: marqueeSection,
+            pin: true,
+            scrub: 1,
+            // The scroll distance (duration) is proportional to the content width
+            end: () => "+=" + Math.max(window.innerWidth, marqueeTrack.scrollWidth - window.innerWidth),
+            invalidateOnRefresh: true
+        }
+    });
+}
 
 // B. Horizontal Scroll
 let panels = gsap.utils.toArray(".h-panel");
