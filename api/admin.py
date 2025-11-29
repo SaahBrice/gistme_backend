@@ -12,3 +12,11 @@ class CommentAdmin(admin.ModelAdmin):
     list_display = ('commenter_name', 'article', 'timestamp')
     list_filter = ('timestamp',)
     search_fields = ('commenter_name', 'comment_text')
+
+from .models import FCMSubscription
+
+@admin.register(FCMSubscription)
+class FCMSubscriptionAdmin(admin.ModelAdmin):
+    list_display = ('token', 'created_at', 'last_used_at')
+    readonly_fields = ('created_at', 'last_used_at')
+    search_fields = ('token',)

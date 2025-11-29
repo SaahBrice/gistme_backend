@@ -2566,3 +2566,599 @@ WARNING 2025-11-28 00:14:35,314 log 27320 9796 Not Found: /.well-known/appspecif
 WARNING 2025-11-28 00:14:35,315 basehttp 27320 9796 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3663
 INFO 2025-11-28 00:14:35,320 basehttp 27320 10368 "GET /static/web/css/main.css HTTP/1.1" 200 2909
 INFO 2025-11-28 00:14:35,320 basehttp 27320 33864 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+INFO 2025-11-29 16:52:57,131 autoreload 34068 10976 Watching for file changes with StatReloader
+INFO 2025-11-29 16:53:02,161 basehttp 34068 40000 "GET / HTTP/1.1" 200 48196
+INFO 2025-11-29 16:53:02,367 basehttp 34068 40000 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-29 16:53:02,381 basehttp 34068 31548 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+WARNING 2025-11-29 16:53:09,640 log 34068 31548 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 16:53:09,640 basehttp 34068 31548 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3663
+INFO 2025-11-29 16:53:33,227 basehttp 34068 31548 "GET /feed/ HTTP/1.1" 200 34262
+INFO 2025-11-29 16:53:33,293 basehttp 34068 40000 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+WARNING 2025-11-29 16:53:33,293 log 34068 31548 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 16:53:33,302 basehttp 34068 31548 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3663
+INFO 2025-11-29 16:53:33,305 basehttp 34068 34600 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+INFO 2025-11-29 16:53:33,318 basehttp 34068 34528 "GET /static/web/css/feed.css HTTP/1.1" 200 9471
+INFO 2025-11-29 16:53:33,332 basehttp 34068 42048 "GET /static/web/js/feed-config.js HTTP/1.1" 200 6142
+INFO 2025-11-29 16:53:33,332 basehttp 34068 40000 "GET /static/web/js/feed.js HTTP/1.1" 200 2095
+INFO 2025-11-29 16:53:33,343 basehttp 34068 20624 "GET /static/web/js/feed-actions.js HTTP/1.1" 200 34998
+INFO 2025-11-29 16:53:33,807 basehttp 34068 20624 "GET /static/web/data/dummy_comments.json HTTP/1.1" 200 33076
+INFO 2025-11-29 16:53:33,823 basehttp 34068 40000 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-29 16:53:40,897 basehttp 34068 40000 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-29 16:53:40,962 basehttp 34068 40000 "GET /api/articles/ HTTP/1.1" 200 41824
+INFO 2025-11-29 16:53:40,989 basehttp 34068 40000 "GET /media/thumbnails/health_20251126_165933_1.jpeg HTTP/1.1" 200 22174
+INFO 2025-11-29 16:53:40,995 basehttp 34068 20624 "GET /media/thumbnails/technology_20251126_165712_1.jpeg HTTP/1.1" 200 83874
+INFO 2025-11-29 16:53:41,045 basehttp 34068 42048 "GET /media/thumbnails/business_20251126_165446_1.jpeg HTTP/1.1" 200 62467
+WARNING 2025-11-29 16:53:41,062 log 34068 34600 Not Found: /feed/media/thumbnails\x0entertainment_20251126_004118_1.jpeg
+WARNING 2025-11-29 16:53:41,062 basehttp 34068 34600 "GET /feed/media/thumbnails%0Entertainment_20251126_004118_1.jpeg HTTP/1.1" 404 3692
+WARNING 2025-11-29 16:53:41,085 log 34068 20624 Not Found: /feed/media/thumbnailstechnology_20251126_004402_1.png
+WARNING 2025-11-29 16:53:41,085 basehttp 34068 20624 "GET /feed/media/thumbnailstechnology_20251126_004402_1.png HTTP/1.1" 404 3678
+WARNING 2025-11-29 16:53:41,104 log 34068 31548 Not Found: /feed/media/thumbnailssports_20251126_004013_1.jpeg
+WARNING 2025-11-29 16:53:41,104 basehttp 34068 31548 "GET /feed/media/thumbnailssports_20251126_004013_1.jpeg HTTP/1.1" 404 3669
+WARNING 2025-11-29 16:53:41,139 log 34068 40000 Not Found: /feed/media/thumbnailshealth_20251126_004505_1.jpeg
+WARNING 2025-11-29 16:53:41,139 basehttp 34068 40000 "GET /feed/media/thumbnailshealth_20251126_004505_1.jpeg HTTP/1.1" 404 3669
+WARNING 2025-11-29 16:53:41,147 log 34068 34528 Not Found: /feed/media/thumbnails\x0business_20251126_004238_1.jpeg
+WARNING 2025-11-29 16:53:41,154 basehttp 34068 34528 "GET /feed/media/thumbnails%0Business_20251126_004238_1.jpeg HTTP/1.1" 404 3677
+INFO 2025-11-29 16:53:57,817 basehttp 34068 36952 "GET /media/audio/english/health_20251126_165933.mp3 HTTP/1.1" 200 617664
+WARNING 2025-11-29 16:53:57,939 log 34068 36952 Not Found: /favicon.ico
+WARNING 2025-11-29 16:53:57,939 basehttp 34068 36952 "GET /favicon.ico HTTP/1.1" 404 3552
+INFO 2025-11-29 16:55:17,039 basehttp 34068 36952 "POST /api/articles/9/comment/ HTTP/1.1" 201 120
+INFO 2025-11-29 16:59:54,511 autoreload 28924 42740 Watching for file changes with StatReloader
+INFO 2025-11-29 17:12:22,565 fcm 36936 40384 Firebase Admin SDK initialized successfully.
+INFO 2025-11-29 17:12:38,787 fcm 14508 44800 Firebase Admin SDK initialized successfully.
+ERROR 2025-11-29 17:12:38,787 fcm 14508 44800 Error sending FCM multicast: module 'firebase_admin.messaging' has no attribute 'send_multicast'
+INFO 2025-11-29 17:13:14,118 fcm 29500 6076 Firebase Admin SDK initialized successfully.
+ERROR 2025-11-29 17:13:17,052 fcm 29500 6076 Error sending FCM multicast: Project ID is required to access Cloud Messaging service. Either set the projectId option, or use service account credentials. Alternatively, set the GOOGLE_CLOUD_PROJECT environment variable.
+INFO 2025-11-29 19:00:54,134 autoreload 32680 39784 Watching for file changes with StatReloader
+ERROR 2025-11-29 19:01:01,807 log 32680 26200 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\views.py", line 9, in index
+    return render(request, 'web/index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 228, in do_block
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'block' tag with name 'html_attributes' appears more than once
+ERROR 2025-11-29 19:01:01,811 basehttp 32680 26200 "GET / HTTP/1.1" 500 184118
+INFO 2025-11-29 19:03:11,393 autoreload 9224 44380 Watching for file changes with StatReloader
+INFO 2025-11-29 19:03:14,063 basehttp 9224 1688 "GET / HTTP/1.1" 200 54284
+WARNING 2025-11-29 19:03:16,120 log 9224 1688 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 19:03:16,121 basehttp 9224 1688 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3663
+WARNING 2025-11-29 19:03:28,585 log 9224 1688 Not Found: /firebase-messaging-sw.js
+WARNING 2025-11-29 19:03:28,586 basehttp 9224 1688 "GET /firebase-messaging-sw.js HTTP/1.1" 404 3591
+INFO 2025-11-29 19:05:24,545 autoreload 9224 44380 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\views.py changed, reloading.
+INFO 2025-11-29 19:05:25,631 autoreload 26512 1720 Watching for file changes with StatReloader
+INFO 2025-11-29 19:05:29,618 autoreload 26512 1720 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\urls.py changed, reloading.
+INFO 2025-11-29 19:05:30,911 autoreload 18292 12692 Watching for file changes with StatReloader
+INFO 2025-11-29 19:13:49,920 autoreload 44956 17788 Watching for file changes with StatReloader
+INFO 2025-11-29 19:14:53,382 autoreload 2932 8860 Watching for file changes with StatReloader
+INFO 2025-11-29 19:16:47,996 autoreload 2932 8860 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\views.py changed, reloading.
+INFO 2025-11-29 19:16:49,063 autoreload 44984 27796 Watching for file changes with StatReloader
+INFO 2025-11-29 19:17:04,908 autoreload 24676 28616 Watching for file changes with StatReloader
+INFO 2025-11-29 19:17:11,444 basehttp 24676 33596 "GET / HTTP/1.1" 200 54284
+WARNING 2025-11-29 19:17:11,497 log 24676 33596 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 19:17:11,498 basehttp 24676 33596 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-29 19:17:11,663 basehttp 24676 22884 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+INFO 2025-11-29 19:17:11,663 basehttp 24676 19344 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-29 19:17:40,218 basehttp 24676 22884 "GET / HTTP/1.1" 200 54284
+WARNING 2025-11-29 19:17:40,259 log 24676 22884 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 19:17:40,261 basehttp 24676 22884 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-29 19:17:40,262 basehttp 24676 19344 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-29 19:17:40,262 basehttp 24676 33596 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+INFO 2025-11-29 19:18:02,343 basehttp 24676 33596 "GET / HTTP/1.1" 200 54284
+INFO 2025-11-29 19:18:02,379 basehttp 24676 19344 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+WARNING 2025-11-29 19:18:02,389 log 24676 33596 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 19:18:02,390 basehttp 24676 33596 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-29 19:18:02,509 basehttp 24676 33596 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+INFO 2025-11-29 19:18:08,351 basehttp 24676 33596 "GET /feed/ HTTP/1.1" 200 40350
+WARNING 2025-11-29 19:18:08,451 log 24676 33596 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 19:18:08,452 basehttp 24676 33596 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-29 19:18:08,465 basehttp 24676 33596 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-29 19:18:08,470 basehttp 24676 19344 "GET /static/web/css/feed.css HTTP/1.1" 200 9471
+INFO 2025-11-29 19:18:08,471 basehttp 24676 22884 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+INFO 2025-11-29 19:18:08,478 basehttp 24676 30020 "GET /static/web/js/feed-config.js HTTP/1.1" 200 6142
+INFO 2025-11-29 19:18:08,478 basehttp 24676 41044 "GET /static/web/js/feed.js HTTP/1.1" 200 2095
+INFO 2025-11-29 19:18:08,480 basehttp 24676 38368 "GET /static/web/js/feed-actions.js HTTP/1.1" 200 34998
+INFO 2025-11-29 19:18:09,316 basehttp 24676 38368 "GET /static/web/data/dummy_comments.json HTTP/1.1" 200 33076
+INFO 2025-11-29 19:18:09,332 basehttp 24676 41044 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-29 19:18:12,844 basehttp 24676 41044 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-29 19:18:12,888 basehttp 24676 41044 "GET /api/articles/ HTTP/1.1" 200 42205
+INFO 2025-11-29 19:18:12,907 basehttp 24676 41044 "GET /media/thumbnails/health_20251126_165933_1.jpeg HTTP/1.1" 200 22174
+INFO 2025-11-29 19:18:12,919 basehttp 24676 38368 "GET /media/thumbnails/technology_20251126_165712_1.jpeg HTTP/1.1" 200 83874
+INFO 2025-11-29 19:18:12,957 basehttp 24676 30020 "GET /media/thumbnails/business_20251126_165446_1.jpeg HTTP/1.1" 200 62467
+WARNING 2025-11-29 19:18:12,971 log 24676 41044 Not Found: /feed/media/thumbnailshealth_20251126_004505_1.jpeg
+WARNING 2025-11-29 19:18:12,971 basehttp 24676 41044 "GET /feed/media/thumbnailshealth_20251126_004505_1.jpeg HTTP/1.1" 404 4217
+WARNING 2025-11-29 19:18:12,984 log 24676 19344 Not Found: /feed/media/thumbnails\x0entertainment_20251126_004118_1.jpeg
+WARNING 2025-11-29 19:18:12,986 basehttp 24676 19344 "GET /feed/media/thumbnails%0Entertainment_20251126_004118_1.jpeg HTTP/1.1" 404 4240
+WARNING 2025-11-29 19:18:12,993 log 24676 38368 Not Found: /feed/media/thumbnailstechnology_20251126_004402_1.png
+WARNING 2025-11-29 19:18:12,993 basehttp 24676 38368 "GET /feed/media/thumbnailstechnology_20251126_004402_1.png HTTP/1.1" 404 4226
+WARNING 2025-11-29 19:18:13,015 log 24676 33596 Not Found: /feed/media/thumbnailssports_20251126_004013_1.jpeg
+WARNING 2025-11-29 19:18:13,017 basehttp 24676 33596 "GET /feed/media/thumbnailssports_20251126_004013_1.jpeg HTTP/1.1" 404 4217
+WARNING 2025-11-29 19:18:13,023 log 24676 22884 Not Found: /feed/media/thumbnails\x0business_20251126_004238_1.jpeg
+WARNING 2025-11-29 19:18:13,025 basehttp 24676 22884 "GET /feed/media/thumbnails%0Business_20251126_004238_1.jpeg HTTP/1.1" 404 4225
+INFO 2025-11-29 19:18:16,557 basehttp 24676 22884 "GET /media/audio/english/technology_20251126_165712.mp3 HTTP/1.1" 200 1121088
+WARNING 2025-11-29 19:18:16,678 log 24676 22884 Not Found: /favicon.ico
+WARNING 2025-11-29 19:18:16,680 basehttp 24676 22884 "GET /favicon.ico HTTP/1.1" 404 4100
+INFO 2025-11-29 19:18:20,775 basehttp 24676 22884 "GET /media/audio/french/technology_20251126_165712.mp3 HTTP/1.1" 200 1251264
+INFO 2025-11-29 19:18:27,080 basehttp 24676 22884 "GET / HTTP/1.1" 200 54284
+WARNING 2025-11-29 19:18:27,153 log 24676 22884 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 19:18:27,155 basehttp 24676 22884 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-29 19:18:27,158 basehttp 24676 33596 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-29 19:18:27,159 basehttp 24676 38368 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+INFO 2025-11-29 19:19:15,997 basehttp 24676 33596 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-11-29 19:19:16,172 basehttp 24676 33596 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4173
+INFO 2025-11-29 19:19:16,217 basehttp 24676 33596 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2025-11-29 19:19:16,218 basehttp 24676 38368 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2025-11-29 19:19:16,219 basehttp 24676 19344 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2025-11-29 19:19:16,219 basehttp 24676 41044 "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2025-11-29 19:19:16,219 basehttp 24676 30020 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2025-11-29 19:19:16,219 basehttp 24676 22884 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-11-29 19:19:16,239 basehttp 24676 22884 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-11-29 19:19:32,809 basehttp 24676 22884 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4345
+INFO 2025-11-29 19:19:52,862 basehttp 24676 22884 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4345
+INFO 2025-11-29 19:20:13,366 basehttp 24676 22884 "GET / HTTP/1.1" 200 52331
+WARNING 2025-11-29 19:20:13,420 log 24676 22884 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 19:20:13,421 basehttp 24676 22884 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-29 19:20:13,425 basehttp 24676 19344 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-29 19:20:13,427 basehttp 24676 41044 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+INFO 2025-11-29 19:30:24,145 autoreload 31160 6872 Watching for file changes with StatReloader
+INFO 2025-11-29 19:30:27,677 basehttp 31160 15048 "GET / HTTP/1.1" 200 54907
+WARNING 2025-11-29 19:30:27,739 log 31160 15048 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 19:30:27,745 basehttp 31160 15048 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-29 19:30:27,948 basehttp 31160 43108 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-29 19:30:27,948 basehttp 31160 33608 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+INFO 2025-11-29 19:31:22,538 autoreload 25964 10064 Watching for file changes with StatReloader
+INFO 2025-11-29 19:31:31,462 basehttp 25964 37784 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-11-29 19:31:31,538 basehttp 25964 37784 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4173
+INFO 2025-11-29 19:31:40,159 basehttp 25964 37784 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-11-29 19:31:40,206 basehttp 25964 37784 "GET /admin/ HTTP/1.1" 200 12039
+INFO 2025-11-29 19:31:40,242 basehttp 25964 37784 "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2025-11-29 19:31:40,242 basehttp 25964 31236 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-11-29 19:31:40,244 basehttp 25964 20648 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2025-11-29 19:31:50,619 basehttp 25964 20648 "GET /admin/web/subscription/ HTTP/1.1" 200 16924
+INFO 2025-11-29 19:31:50,661 basehttp 25964 20648 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2025-11-29 19:31:50,663 basehttp 25964 37784 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-11-29 19:31:50,665 basehttp 25964 20648 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-11-29 19:31:50,666 basehttp 25964 35268 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-11-29 19:31:50,666 basehttp 25964 28784 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-11-29 19:31:50,667 basehttp 25964 35064 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-11-29 19:31:50,668 basehttp 25964 37784 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-11-29 19:31:50,700 basehttp 25964 31236 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-29 19:31:50,736 basehttp 25964 35268 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-11-29 19:31:50,736 basehttp 25964 20648 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-11-29 19:31:50,884 basehttp 25964 20648 "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2025-11-29 19:31:50,885 basehttp 25964 35268 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2025-11-29 19:31:50,891 basehttp 25964 35268 "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2025-11-29 19:31:50,919 basehttp 25964 35268 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2025-11-29 19:31:50,923 basehttp 25964 35268 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+INFO 2025-11-29 19:31:50,923 basehttp 25964 20648 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2025-11-29 19:33:13,506 autoreload 25964 10064 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\admin.py changed, reloading.
+INFO 2025-11-29 19:33:14,650 autoreload 17176 15716 Watching for file changes with StatReloader
+INFO 2025-11-29 19:33:25,263 basehttp 17176 26288 "GET /admin/web/subscription/ HTTP/1.1" 200 17385
+INFO 2025-11-29 19:33:25,327 basehttp 17176 26288 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-29 19:33:26,913 basehttp 17176 26288 "GET /admin/api/fcmsubscription/ HTTP/1.1" 200 12783
+INFO 2025-11-29 19:33:26,963 basehttp 17176 26288 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-29 19:33:28,201 basehttp 17176 26288 "GET /admin/api/fcmsubscription/ HTTP/1.1" 200 12783
+INFO 2025-11-29 19:33:28,240 basehttp 17176 26288 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-29 19:33:34,720 basehttp 17176 26288 "GET / HTTP/1.1" 200 54907
+WARNING 2025-11-29 19:33:34,782 log 17176 37096 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 19:33:34,791 basehttp 17176 37096 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-29 19:33:34,912 basehttp 17176 26288 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-29 19:33:34,922 basehttp 17176 24976 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+INFO 2025-11-29 19:34:12,402 basehttp 17176 27896 "GET / HTTP/1.1" 200 54907
+INFO 2025-11-29 19:34:12,443 basehttp 17176 27896 "GET /static/web/css/main.css HTTP/1.1" 304 0
+INFO 2025-11-29 19:34:12,447 basehttp 17176 27896 "GET /static/web/js/main.js HTTP/1.1" 304 0
+WARNING 2025-11-29 19:34:15,837 log 17176 27896 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 19:34:15,838 basehttp 17176 27896 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+WARNING 2025-11-29 19:34:27,305 log 17176 42012 Not Found: /favicon.ico
+WARNING 2025-11-29 19:34:27,307 basehttp 17176 42012 "GET /favicon.ico HTTP/1.1" 404 4100
+INFO 2025-11-29 19:38:35,193 autoreload 31592 23488 Watching for file changes with StatReloader
+ERROR 2025-11-29 19:38:37,968 log 31592 30640 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\views.py", line 12, in index
+    return render(request, 'web/index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 228, in do_block
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'block' tag with name 'html_attributes' appears more than once
+ERROR 2025-11-29 19:38:37,973 basehttp 31592 30640 "GET / HTTP/1.1" 500 186723
+WARNING 2025-11-29 19:38:38,018 log 31592 30640 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 19:38:38,019 basehttp 31592 30640 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-29 19:40:41,198 autoreload 17296 2668 Watching for file changes with StatReloader
+INFO 2025-11-29 19:40:43,041 basehttp 17296 40448 "GET / HTTP/1.1" 200 55656
+WARNING 2025-11-29 19:40:43,095 log 17296 40448 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 19:40:43,096 basehttp 17296 40448 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-29 19:40:43,277 basehttp 17296 13212 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+INFO 2025-11-29 19:40:43,277 basehttp 17296 25880 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-29 19:40:48,115 basehttp 17296 25880 "GET /firebase-messaging-sw.js HTTP/1.1" 200 2492
+INFO 2025-11-29 19:40:48,806 basehttp 17296 25880 "GET /firebase-messaging-sw.js HTTP/1.1" 200 2492
+INFO 2025-11-29 19:42:38,918 autoreload 40452 44956 Watching for file changes with StatReloader
+INFO 2025-11-29 19:42:40,814 basehttp 40452 40868 "GET / HTTP/1.1" 200 54704
+WARNING 2025-11-29 19:42:40,875 log 40452 40868 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 19:42:40,876 basehttp 40452 40868 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-29 19:42:41,112 basehttp 40452 25684 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+INFO 2025-11-29 19:42:41,114 basehttp 40452 40868 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-29 19:48:15,043 basehttp 40452 4456 "GET / HTTP/1.1" 200 55953
+WARNING 2025-11-29 19:48:15,100 log 40452 4456 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 19:48:15,101 basehttp 40452 4456 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-29 19:48:15,108 basehttp 40452 4456 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-29 19:48:15,111 basehttp 40452 1428 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+INFO 2025-11-29 19:48:16,661 basehttp 40452 1428 "GET /firebase-messaging-sw.js HTTP/1.1" 200 2492
+INFO 2025-11-29 19:49:07,601 basehttp 40452 1428 "GET /admin/api/fcmsubscription/ HTTP/1.1" 200 12783
+INFO 2025-11-29 19:49:07,654 basehttp 40452 1428 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-29 19:49:10,412 basehttp 40452 1428 "GET /admin/api/fcmsubscription/ HTTP/1.1" 200 12783
+INFO 2025-11-29 19:49:10,455 basehttp 40452 1428 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-29 19:49:10,978 basehttp 40452 1428 "GET /admin/api/fcmsubscription/ HTTP/1.1" 200 12783
+INFO 2025-11-29 19:49:11,009 basehttp 40452 1428 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-29 19:49:11,400 basehttp 40452 1428 "GET /admin/api/fcmsubscription/ HTTP/1.1" 200 12783
+INFO 2025-11-29 19:49:11,432 basehttp 40452 1428 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-29 19:49:11,668 basehttp 40452 1428 "GET /admin/api/fcmsubscription/ HTTP/1.1" 200 12783
+INFO 2025-11-29 19:49:11,704 basehttp 40452 1428 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-29 19:49:11,935 basehttp 40452 1428 "GET /admin/api/fcmsubscription/ HTTP/1.1" 200 12783
+INFO 2025-11-29 19:49:11,966 basehttp 40452 1428 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-29 19:49:12,173 basehttp 40452 1428 "GET /admin/api/fcmsubscription/ HTTP/1.1" 200 12783
+INFO 2025-11-29 19:49:12,198 basehttp 40452 1428 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-29 19:49:12,381 basehttp 40452 1428 "GET /admin/api/fcmsubscription/ HTTP/1.1" 200 12783
+INFO 2025-11-29 19:49:12,409 basehttp 40452 1428 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-29 19:49:12,562 basehttp 40452 1428 "GET /admin/api/fcmsubscription/ HTTP/1.1" 200 12783
+INFO 2025-11-29 19:49:12,589 basehttp 40452 1428 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-29 19:49:12,702 basehttp 40452 1428 "GET /admin/api/fcmsubscription/ HTTP/1.1" 200 12783
+INFO 2025-11-29 19:49:12,732 basehttp 40452 1428 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-29 19:49:12,901 basehttp 40452 1428 "GET /admin/api/fcmsubscription/ HTTP/1.1" 200 12783
+INFO 2025-11-29 19:49:12,929 basehttp 40452 1428 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-29 19:49:13,132 basehttp 40452 1428 "GET /admin/api/fcmsubscription/ HTTP/1.1" 200 12783
+INFO 2025-11-29 19:49:13,159 basehttp 40452 1428 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-29 19:49:13,332 basehttp 40452 1428 "GET /admin/api/fcmsubscription/ HTTP/1.1" 200 12783
+INFO 2025-11-29 19:49:13,362 basehttp 40452 1428 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-29 19:49:14,117 basehttp 40452 1428 "GET /admin/api/fcmsubscription/ HTTP/1.1" 200 12783
+INFO 2025-11-29 19:49:14,153 basehttp 40452 1428 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-29 19:55:05,880 autoreload 22216 37168 Watching for file changes with StatReloader
+INFO 2025-11-29 19:55:21,266 basehttp 22216 21648 "GET / HTTP/1.1" 200 55953
+WARNING 2025-11-29 19:55:21,317 log 22216 21648 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 19:55:21,319 basehttp 22216 21648 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-29 19:55:21,467 basehttp 22216 38480 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-29 19:55:21,467 basehttp 22216 34556 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+INFO 2025-11-29 19:55:23,421 basehttp 22216 34556 "GET /firebase-messaging-sw.js HTTP/1.1" 200 2492
+INFO 2025-11-29 20:07:01,320 basehttp 22216 34852 "GET / HTTP/1.1" 200 55953
+INFO 2025-11-29 20:07:01,373 basehttp 22216 14264 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-29 20:07:01,374 basehttp 22216 20192 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+WARNING 2025-11-29 20:07:01,380 log 22216 34852 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 20:07:01,381 basehttp 22216 34852 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-29 20:07:25,364 autoreload 31700 31860 Watching for file changes with StatReloader
+INFO 2025-11-29 20:07:41,568 basehttp 31700 23844 "GET / HTTP/1.1" 200 55953
+WARNING 2025-11-29 20:07:41,611 log 31700 23844 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 20:07:41,612 basehttp 31700 23844 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-29 20:07:41,734 basehttp 31700 21104 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+INFO 2025-11-29 20:07:41,738 basehttp 31700 20288 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-29 20:08:06,016 basehttp 31700 20288 "GET / HTTP/1.1" 200 55953
+WARNING 2025-11-29 20:08:06,056 log 31700 20288 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 20:08:06,057 basehttp 31700 20288 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-29 20:08:06,061 basehttp 31700 21104 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-29 20:08:06,064 basehttp 31700 23844 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+INFO 2025-11-29 20:08:08,655 basehttp 31700 23844 "GET /firebase-messaging-sw.js HTTP/1.1" 200 2492
+INFO 2025-11-29 20:09:09,538 basehttp 31700 23844 "GET / HTTP/1.1" 200 55953
+INFO 2025-11-29 20:09:09,626 basehttp 31700 21104 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-29 20:09:09,627 basehttp 31700 20288 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+WARNING 2025-11-29 20:09:09,632 log 31700 23844 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 20:09:09,634 basehttp 31700 23844 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-29 20:09:20,553 basehttp 31700 23844 "GET /firebase-messaging-sw.js HTTP/1.1" 200 2492
+WARNING 2025-11-29 20:09:20,921 log 31700 23844 Not Found: /favicon.ico
+WARNING 2025-11-29 20:09:20,921 basehttp 31700 23844 "GET /favicon.ico HTTP/1.1" 404 4100
+INFO 2025-11-29 20:10:20,220 basehttp 31700 16616 "GET / HTTP/1.1" 200 55953
+WARNING 2025-11-29 20:10:20,290 log 31700 16616 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 20:10:20,291 basehttp 31700 16616 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+WARNING 2025-11-29 20:10:21,446 log 31700 16616 Not Found: /favicon.ico
+WARNING 2025-11-29 20:10:21,447 basehttp 31700 16616 "GET /favicon.ico HTTP/1.1" 404 4100
+INFO 2025-11-29 20:10:21,689 basehttp 31700 16616 "GET /firebase-messaging-sw.js HTTP/1.1" 200 2492
+INFO 2025-11-29 20:10:22,052 basehttp 31700 16616 "GET /firebase-messaging-sw.js HTTP/1.1" 200 2492
+INFO 2025-11-29 20:13:45,584 autoreload 17108 33220 Watching for file changes with StatReloader
+INFO 2025-11-29 20:13:47,687 basehttp 17108 44208 "GET / HTTP/1.1" 200 57233
+WARNING 2025-11-29 20:13:47,751 log 17108 44208 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 20:13:47,752 basehttp 17108 44208 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-29 20:13:48,016 basehttp 17108 19776 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+INFO 2025-11-29 20:13:48,020 basehttp 17108 44208 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-29 20:13:48,947 basehttp 17108 44208 "GET /firebase-messaging-sw.js HTTP/1.1" 200 2492
+INFO 2025-11-29 20:14:05,544 basehttp 17108 10572 "GET / HTTP/1.1" 200 57233
+WARNING 2025-11-29 20:14:05,601 log 17108 10572 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 20:14:05,601 basehttp 17108 10572 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-29 20:14:06,095 basehttp 17108 10572 "GET /firebase-messaging-sw.js HTTP/1.1" 200 2492
+INFO 2025-11-29 20:14:09,821 basehttp 17108 10572 "POST /api/fcm/subscribe/ HTTP/1.1" 201 154
+INFO 2025-11-29 20:14:28,692 basehttp 17108 44208 "GET /admin/api/fcmsubscription/ HTTP/1.1" 200 14664
+INFO 2025-11-29 20:14:28,745 basehttp 17108 44208 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-29 20:14:30,455 basehttp 17108 44208 "GET /firebase-messaging-sw.js HTTP/1.1" 200 2492
+INFO 2025-11-29 20:14:36,356 basehttp 17108 10572 "GET /feed/ HTTP/1.1" 200 43299
+INFO 2025-11-29 20:14:36,409 basehttp 17108 29584 "GET /static/web/css/feed.css HTTP/1.1" 304 0
+WARNING 2025-11-29 20:14:36,414 log 17108 10572 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-11-29 20:14:36,415 basehttp 17108 40104 "GET /static/web/js/feed-config.js HTTP/1.1" 304 0
+INFO 2025-11-29 20:14:36,415 basehttp 17108 29584 "GET /static/web/js/feed.js HTTP/1.1" 304 0
+INFO 2025-11-29 20:14:36,416 basehttp 17108 38368 "GET /static/web/js/feed-actions.js HTTP/1.1" 304 0
+WARNING 2025-11-29 20:14:36,417 basehttp 17108 10572 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-29 20:14:36,774 basehttp 17108 10572 "GET /static/web/data/dummy_comments.json HTTP/1.1" 304 0
+INFO 2025-11-29 20:14:36,793 basehttp 17108 38368 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-29 20:14:36,984 basehttp 17108 38368 "POST /api/fcm/subscribe/ HTTP/1.1" 200 31
+INFO 2025-11-29 20:14:38,924 basehttp 17108 38368 "GET /firebase-messaging-sw.js HTTP/1.1" 200 2492
+INFO 2025-11-29 20:14:46,975 basehttp 17108 38368 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-29 20:14:47,031 basehttp 17108 38368 "GET /api/articles/ HTTP/1.1" 200 42205
+INFO 2025-11-29 20:14:47,050 basehttp 17108 38368 "GET /media/thumbnails/health_20251126_165933_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 20:14:47,068 basehttp 17108 38368 "GET /media/thumbnails/business_20251126_165446_1.jpeg HTTP/1.1" 304 0
+WARNING 2025-11-29 20:14:47,115 log 17108 29584 Not Found: /feed/media/thumbnailshealth_20251126_004505_1.jpeg
+WARNING 2025-11-29 20:14:47,115 basehttp 17108 29584 "GET /feed/media/thumbnailshealth_20251126_004505_1.jpeg HTTP/1.1" 404 4217
+INFO 2025-11-29 20:14:47,132 basehttp 17108 10572 "GET /media/thumbnails/technology_20251126_165712_1.jpeg HTTP/1.1" 304 0
+WARNING 2025-11-29 20:14:47,164 log 17108 26720 Not Found: /feed/media/thumbnails\x0entertainment_20251126_004118_1.jpeg
+WARNING 2025-11-29 20:14:47,167 basehttp 17108 26720 "GET /feed/media/thumbnails%0Entertainment_20251126_004118_1.jpeg HTTP/1.1" 404 4240
+WARNING 2025-11-29 20:14:47,178 log 17108 38368 Not Found: /feed/media/thumbnailstechnology_20251126_004402_1.png
+WARNING 2025-11-29 20:14:47,180 basehttp 17108 38368 "GET /feed/media/thumbnailstechnology_20251126_004402_1.png HTTP/1.1" 404 4226
+WARNING 2025-11-29 20:14:47,195 log 17108 44328 Not Found: /feed/media/thumbnailssports_20251126_004013_1.jpeg
+WARNING 2025-11-29 20:14:47,195 basehttp 17108 44328 "GET /feed/media/thumbnailssports_20251126_004013_1.jpeg HTTP/1.1" 404 4217
+WARNING 2025-11-29 20:14:47,202 log 17108 40104 Not Found: /feed/media/thumbnails\x0business_20251126_004238_1.jpeg
+WARNING 2025-11-29 20:14:47,202 basehttp 17108 40104 "GET /feed/media/thumbnails%0Business_20251126_004238_1.jpeg HTTP/1.1" 404 4225
+INFO 2025-11-29 20:15:06,276 basehttp 17108 40104 "GET /media/audio/english/technology_20251126_165712.mp3 HTTP/1.1" 200 1121088
+WARNING 2025-11-29 20:15:06,482 log 17108 40104 Not Found: /favicon.ico
+WARNING 2025-11-29 20:15:06,482 basehttp 17108 40104 "GET /favicon.ico HTTP/1.1" 404 4100
+INFO 2025-11-29 20:15:52,161 basehttp 17108 44208 "GET /admin/api/article/ HTTP/1.1" 200 28018
+INFO 2025-11-29 20:15:52,220 basehttp 17108 44208 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-29 20:15:53,852 basehttp 17108 44208 "GET /firebase-messaging-sw.js HTTP/1.1" 200 2492
+INFO 2025-11-29 20:17:06,157 fcm 17108 37596 Firebase Admin SDK initialized with C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\serviceAccountKey.json
+INFO 2025-11-29 20:17:06,160 basehttp 17108 33180 "POST /api/articles/ HTTP/1.1" 201 4550
+ERROR 2025-11-29 20:17:07,833 fcm 17108 37596 Error sending FCM multicast: WebpushFCMOptions.link must be a HTTPS URL.
+ERROR 2025-11-29 20:17:07,833 fcm 17108 10000 Error sending FCM multicast: WebpushFCMOptions.link must be a HTTPS URL.
+INFO 2025-11-29 20:19:00,411 autoreload 17108 33220 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\utils\fcm.py changed, reloading.
+INFO 2025-11-29 20:19:01,450 autoreload 12428 25260 Watching for file changes with StatReloader
+INFO 2025-11-29 20:22:39,630 autoreload 41180 20280 Watching for file changes with StatReloader
+INFO 2025-11-29 20:25:12,759 fcm 41180 27640 Firebase Admin SDK initialized with C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\serviceAccountKey.json
+INFO 2025-11-29 20:25:12,766 basehttp 41180 43744 "POST /api/articles/ HTTP/1.1" 201 9550
+ERROR 2025-11-29 20:25:14,960 fcm 41180 27640 Error sending FCM multicast: WebpushFCMOptions.link must be a HTTPS URL.
+INFO 2025-11-29 20:26:21,160 autoreload 41180 20280 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\utils\fcm.py changed, reloading.
+INFO 2025-11-29 20:26:22,730 autoreload 21436 30960 Watching for file changes with StatReloader
+INFO 2025-11-29 20:26:41,362 fcm 21436 20196 Firebase Admin SDK initialized with C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\serviceAccountKey.json
+INFO 2025-11-29 20:26:41,363 fcm 21436 20196 Sending FCM notification with link: https://localhost:8000/article/20/
+INFO 2025-11-29 20:26:41,371 basehttp 21436 19460 "POST /api/articles/ HTTP/1.1" 201 4706
+WARNING 2025-11-29 20:26:45,540 basehttp 21436 41260 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 20:26:45,540 fcm 21436 20196 FCM Multicast sent: 1 successful, 0 failed.
+INFO 2025-11-29 20:28:30,282 fcm 21436 43776 Sending FCM notification with link: https://localhost:8000/article/21/
+INFO 2025-11-29 20:28:30,284 basehttp 21436 31696 "POST /api/articles/ HTTP/1.1" 201 3526
+WARNING 2025-11-29 20:28:30,486 basehttp 21436 23352 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 20:28:30,519 fcm 21436 43776 FCM Multicast sent: 1 successful, 0 failed.
+INFO 2025-11-29 20:30:35,697 fcm 21436 27804 Sending FCM notification with link: https://localhost:8000/article/22/
+INFO 2025-11-29 20:30:35,711 fcm 21436 23044 Sending FCM notification with link: https://localhost:8000/article/22/
+INFO 2025-11-29 20:30:35,713 basehttp 21436 23784 "POST /api/articles/ HTTP/1.1" 201 4804
+INFO 2025-11-29 20:30:37,014 fcm 21436 23044 FCM Multicast sent: 1 successful, 0 failed.
+WARNING 2025-11-29 20:30:37,021 basehttp 21436 12780 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 20:30:37,118 fcm 21436 27804 FCM Multicast sent: 1 successful, 0 failed.
+INFO 2025-11-29 20:30:37,181 basehttp 21436 35076 "GET /media/thumbnails/business_20251129_202902_1.png HTTP/1.1" 200 816964
+WARNING 2025-11-29 20:30:37,468 basehttp 21436 30300 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 20:30:37,481 basehttp 21436 35076 "GET /media/thumbnails/business_20251129_202902_1.png HTTP/1.1" 304 0
+INFO 2025-11-29 20:32:07,956 fcm 21436 45036 Sending FCM notification with link: https://localhost:8000/article/23/
+INFO 2025-11-29 20:32:07,964 fcm 21436 4164 Sending FCM notification with link: https://localhost:8000/article/23/
+INFO 2025-11-29 20:32:07,967 basehttp 21436 30148 "POST /api/articles/ HTTP/1.1" 201 5560
+WARNING 2025-11-29 20:32:08,130 basehttp 21436 14836 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 20:32:08,148 basehttp 21436 35076 "GET /media/thumbnails/technology_20251129_203112_1.jpeg HTTP/1.1" 200 101133
+INFO 2025-11-29 20:32:08,151 fcm 21436 45036 FCM Multicast sent: 1 successful, 0 failed.
+INFO 2025-11-29 20:32:08,218 fcm 21436 4164 FCM Multicast sent: 1 successful, 0 failed.
+WARNING 2025-11-29 20:32:08,533 basehttp 21436 20048 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 20:32:08,542 basehttp 21436 35076 "GET /media/thumbnails/technology_20251129_203112_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 20:34:27,466 fcm 21436 5728 Sending FCM notification with link: https://localhost:8000/article/24/
+INFO 2025-11-29 20:34:27,475 fcm 21436 23648 Sending FCM notification with link: https://localhost:8000/article/24/
+INFO 2025-11-29 20:34:27,477 basehttp 21436 43052 "POST /api/articles/ HTTP/1.1" 201 7743
+INFO 2025-11-29 20:34:28,944 fcm 21436 5728 FCM Multicast sent: 1 successful, 0 failed.
+WARNING 2025-11-29 20:34:28,952 basehttp 21436 21988 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 20:34:28,968 basehttp 21436 35076 "GET /media/thumbnails/health_20251129_203248_1.jpeg HTTP/1.1" 200 32313
+INFO 2025-11-29 20:34:29,049 fcm 21436 23648 FCM Multicast sent: 1 successful, 0 failed.
+WARNING 2025-11-29 20:34:29,050 basehttp 21436 16692 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 20:34:29,059 basehttp 21436 35076 "GET /media/thumbnails/health_20251129_203248_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 20:36:37,731 fcm 21436 23756 Sending FCM notification with link: https://localhost:8000/article/25/
+INFO 2025-11-29 20:36:37,739 fcm 21436 11696 Sending FCM notification with link: https://localhost:8000/article/25/
+INFO 2025-11-29 20:36:37,743 basehttp 21436 19528 "POST /api/articles/ HTTP/1.1" 201 4716
+INFO 2025-11-29 20:36:37,882 fcm 21436 23756 FCM Multicast sent: 1 successful, 0 failed.
+WARNING 2025-11-29 20:36:37,928 basehttp 21436 33392 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 20:36:38,007 basehttp 21436 35076 "GET /media/thumbnails/education_20251129_203455_1.png HTTP/1.1" 200 849697
+WARNING 2025-11-29 20:36:39,350 basehttp 21436 22924 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 20:36:39,352 fcm 21436 11696 FCM Multicast sent: 1 successful, 0 failed.
+INFO 2025-11-29 20:36:39,359 basehttp 21436 35076 "GET /media/thumbnails/education_20251129_203455_1.png HTTP/1.1" 304 0
+INFO 2025-11-29 20:37:04,721 autoreload 17996 24412 Watching for file changes with StatReloader
+INFO 2025-11-29 20:38:22,036 fcm 17996 30972 Firebase Admin SDK initialized with C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\serviceAccountKey.json
+INFO 2025-11-29 20:38:22,036 fcm 17996 12104 Sending FCM notification with link: https://localhost:8000/article/26/
+INFO 2025-11-29 20:38:22,037 fcm 17996 30972 Sending FCM notification with link: https://localhost:8000/article/26/
+INFO 2025-11-29 20:38:22,047 basehttp 17996 32628 "POST /api/articles/ HTTP/1.1" 201 5039
+INFO 2025-11-29 20:38:27,789 fcm 17996 30972 FCM Multicast sent: 1 successful, 0 failed.
+INFO 2025-11-29 20:38:27,795 fcm 17996 12104 FCM Multicast sent: 1 successful, 0 failed.
+INFO 2025-11-29 20:38:34,327 basehttp 17996 14788 "GET /feed/ HTTP/1.1" 200 43299
+WARNING 2025-11-29 20:38:34,399 log 17996 14788 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 20:38:34,402 basehttp 17996 14788 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-29 20:38:34,795 basehttp 17996 14788 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-29 20:38:35,004 basehttp 17996 14788 "POST /api/fcm/subscribe/ HTTP/1.1" 200 31
+INFO 2025-11-29 20:38:36,921 basehttp 17996 14788 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-29 20:38:39,151 basehttp 17996 14788 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-29 20:38:39,232 basehttp 17996 14788 "GET /api/articles/ HTTP/1.1" 200 53774
+INFO 2025-11-29 20:38:39,271 basehttp 17996 21944 "GET /media/thumbnails/education_20251129_203455_1.png HTTP/1.1" 304 0
+INFO 2025-11-29 20:38:39,284 basehttp 17996 29728 "GET /media/thumbnails/health_20251129_203248_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 20:38:39,300 basehttp 17996 21944 "GET /media/thumbnails/business_20251129_202902_1.png HTTP/1.1" 304 0
+INFO 2025-11-29 20:38:39,326 basehttp 17996 39904 "GET /media/thumbnails/technology_20251129_203112_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 20:38:39,481 basehttp 17996 14788 "GET /media/thumbnails/agriculture_20251129_203728_1.jpeg HTTP/1.1" 200 37094
+INFO 2025-11-29 20:38:39,537 basehttp 17996 29728 "GET /media/thumbnails/politics_20251129_201611_1.jpeg HTTP/1.1" 200 244598
+INFO 2025-11-29 20:39:19,657 basehttp 17996 29728 "GET /media/audio/english/health_20251129_203248.mp3 HTTP/1.1" 200 1903680
+WARNING 2025-11-29 20:39:19,782 log 17996 29728 Not Found: /favicon.ico
+WARNING 2025-11-29 20:39:19,783 basehttp 17996 29728 "GET /favicon.ico HTTP/1.1" 404 4100
+INFO 2025-11-29 20:39:28,178 basehttp 17996 29728 "GET /media/audio/french/health_20251129_203248.mp3 HTTP/1.1" 200 1816512
+INFO 2025-11-29 20:39:58,262 fcm 17996 42680 Sending FCM notification with link: https://localhost:8000/article/27/
+INFO 2025-11-29 20:39:58,274 fcm 17996 39168 Sending FCM notification with link: https://localhost:8000/article/27/
+INFO 2025-11-29 20:39:58,278 basehttp 17996 33348 "POST /api/articles/ HTTP/1.1" 201 5355
+INFO 2025-11-29 20:39:58,448 fcm 17996 42680 FCM Multicast sent: 1 successful, 0 failed.
+INFO 2025-11-29 20:39:58,545 fcm 17996 39168 FCM Multicast sent: 1 successful, 0 failed.
+INFO 2025-11-29 20:40:53,351 fcm 17996 20560 Sending FCM notification with link: https://localhost:8000/article/28/
+INFO 2025-11-29 20:40:53,363 fcm 17996 20172 Sending FCM notification with link: https://localhost:8000/article/28/
+INFO 2025-11-29 20:40:53,365 basehttp 17996 35668 "POST /api/articles/ HTTP/1.1" 201 2565
+INFO 2025-11-29 20:40:53,549 fcm 17996 20560 FCM Multicast sent: 1 successful, 0 failed.
+WARNING 2025-11-29 20:40:53,555 basehttp 17996 1656 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 20:40:53,561 fcm 17996 20172 FCM Multicast sent: 1 successful, 0 failed.
+INFO 2025-11-29 20:40:53,573 basehttp 17996 44432 "GET /media/thumbnails/crime_20251129_204021_1.jpeg HTTP/1.1" 200 29928
+WARNING 2025-11-29 20:40:53,683 basehttp 17996 41824 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 20:40:53,693 basehttp 17996 44432 "GET /media/thumbnails/crime_20251129_204021_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 20:41:30,536 basehttp 17996 44864 "GET /admin/api/fcmsubscription/ HTTP/1.1" 200 14664
+INFO 2025-11-29 20:41:30,631 basehttp 17996 44864 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-29 20:41:32,383 basehttp 17996 44864 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-29 20:41:39,573 fcm 17996 8900 Sending FCM notification with link: https://localhost:8000/article/29/
+INFO 2025-11-29 20:41:39,580 fcm 17996 7716 Sending FCM notification with link: https://localhost:8000/article/29/
+INFO 2025-11-29 20:41:39,583 basehttp 17996 20024 "POST /api/articles/ HTTP/1.1" 201 3165
+INFO 2025-11-29 20:41:39,705 fcm 17996 8900 FCM Multicast sent: 1 successful, 0 failed.
+INFO 2025-11-29 20:41:39,756 fcm 17996 7716 FCM Multicast sent: 1 successful, 0 failed.
+INFO 2025-11-29 20:43:01,133 fcm 17996 29520 Sending FCM notification with link: https://localhost:8000/article/30/
+INFO 2025-11-29 20:43:01,141 fcm 17996 41700 Sending FCM notification with link: https://localhost:8000/article/30/
+INFO 2025-11-29 20:43:01,144 basehttp 17996 22172 "POST /api/articles/ HTTP/1.1" 201 4882
+INFO 2025-11-29 20:43:01,255 fcm 17996 29520 FCM Multicast sent: 1 successful, 0 failed.
+INFO 2025-11-29 20:43:01,314 fcm 17996 41700 FCM Multicast sent: 1 successful, 0 failed.
+INFO 2025-11-29 20:45:47,320 basehttp 17996 44864 "GET /admin/api/fcmsubscription/ HTTP/1.1" 200 14664
+INFO 2025-11-29 20:45:47,373 basehttp 17996 44864 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-29 20:45:48,974 basehttp 17996 44864 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-29 20:47:35,035 fcm 17996 25540 Sending FCM notification with link: https://localhost:8000/article/31/
+INFO 2025-11-29 20:47:35,043 fcm 17996 44496 Sending FCM notification with link: https://localhost:8000/article/31/
+INFO 2025-11-29 20:47:35,045 basehttp 17996 27272 "POST /api/articles/ HTTP/1.1" 201 9776
+INFO 2025-11-29 20:47:36,006 fcm 17996 25540 FCM Multicast sent: 1 successful, 0 failed.
+WARNING 2025-11-29 20:47:36,009 basehttp 17996 28704 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 20:47:36,028 basehttp 17996 30536 "GET /media/thumbnails/economy_20251129_204407_1.png HTTP/1.1" 200 816964
+INFO 2025-11-29 20:47:36,081 fcm 17996 44496 FCM Multicast sent: 1 successful, 0 failed.
+WARNING 2025-11-29 20:47:36,231 basehttp 17996 29644 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 20:47:36,238 basehttp 17996 30536 "GET /media/thumbnails/economy_20251129_204407_1.png HTTP/1.1" 304 0
+INFO 2025-11-29 20:49:30,646 fcm 17996 43456 Sending FCM notification with link: https://localhost:8000/article/32/
+INFO 2025-11-29 20:49:30,652 fcm 17996 13932 Sending FCM notification with link: https://localhost:8000/article/32/
+INFO 2025-11-29 20:49:30,654 basehttp 17996 36676 "POST /api/articles/ HTTP/1.1" 201 6426
+INFO 2025-11-29 20:49:31,635 fcm 17996 43456 FCM Multicast sent: 1 successful, 0 failed.
+WARNING 2025-11-29 20:49:31,642 basehttp 17996 44056 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 20:49:31,659 basehttp 17996 30536 "GET /media/thumbnails/society_20251129_204818_3.jpeg HTTP/1.1" 200 76132
+INFO 2025-11-29 20:49:31,662 fcm 17996 13932 FCM Multicast sent: 1 successful, 0 failed.
+WARNING 2025-11-29 20:49:31,805 basehttp 17996 5524 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 20:49:31,812 basehttp 17996 30536 "GET /media/thumbnails/society_20251129_204818_3.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 20:50:02,588 basehttp 17996 30536 "GET /feed/ HTTP/1.1" 200 43299
+WARNING 2025-11-29 20:50:02,660 log 17996 30536 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 20:50:02,661 basehttp 17996 30536 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-29 20:50:02,948 basehttp 17996 30536 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-29 20:50:03,100 basehttp 17996 30536 "POST /api/fcm/subscribe/ HTTP/1.1" 200 31
+INFO 2025-11-29 20:50:05,030 basehttp 17996 30536 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-29 20:50:05,981 basehttp 17996 30536 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-29 20:50:06,034 basehttp 17996 30536 "GET /api/articles/ HTTP/1.1" 200 55329
+INFO 2025-11-29 20:50:06,069 basehttp 17996 30536 "GET /media/thumbnails/society_20251129_204818_3.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 20:50:06,099 basehttp 17996 27164 "GET /media/thumbnails/economy_20251129_204407_1.png HTTP/1.1" 304 0
+INFO 2025-11-29 20:50:06,115 basehttp 17996 8824 "GET /media/thumbnails/culture_20251129_203854_1.jpeg HTTP/1.1" 200 153869
+INFO 2025-11-29 20:50:06,146 basehttp 17996 30536 "GET /media/thumbnails/crime_20251129_204021_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 20:50:06,160 basehttp 17996 30536 "GET /media/thumbnails/technology_20251129_203112_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 20:50:06,202 basehttp 17996 37088 "GET /media/thumbnails/environment_20251129_204113_1.png HTTP/1.1" 200 844372
+INFO 2025-11-29 20:50:06,206 basehttp 17996 27164 "GET /media/thumbnails/education_20251129_203455_1.png HTTP/1.1" 304 0
+INFO 2025-11-29 20:50:06,220 basehttp 17996 8824 "GET /media/thumbnails/health_20251129_203248_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 20:50:06,236 basehttp 17996 2704 "GET /media/thumbnails/agriculture_20251129_203728_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 20:50:06,255 basehttp 17996 25860 "GET /media/thumbnails/international_20251129_204221_1.jpeg HTTP/1.1" 200 192204
+INFO 2025-11-29 20:50:16,412 fcm 17996 1224 Sending FCM notification with link: https://localhost:8000/article/33/
+INFO 2025-11-29 20:50:16,414 basehttp 17996 19824 "POST /api/articles/ HTTP/1.1" 201 2997
+INFO 2025-11-29 20:50:16,562 fcm 17996 1224 FCM Multicast sent: 1 successful, 0 failed.
+INFO 2025-11-29 20:50:20,535 basehttp 17996 25860 "GET /media/audio/french/society_20251129_204818.mp3 HTTP/1.1" 200 1438656
+WARNING 2025-11-29 20:50:20,685 log 17996 25860 Not Found: /favicon.ico
+WARNING 2025-11-29 20:50:20,686 basehttp 17996 25860 "GET /favicon.ico HTTP/1.1" 404 4100

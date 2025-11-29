@@ -99,3 +99,19 @@ class FileUploadView(APIView):
         except Exception as e:
             logger.error(f"File upload failed: {e}", exc_info=True)
             return Response({"error": "Upload failed"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+class FCMSubscribeView(APIView):
+    def post(self, request):
+        try:
+            from .serializers import FCMSubscriptionSerializer
+            serializer = FCMSubscriptionSerializer(data=request.data)
+            if serializer.is_valid():
+                serializer.save()
+                return Response(serializer.data, status=status.HTTP_201_CREATED)
+            # If token already exists, we can return 200 OK
+            if 'token' in serializer.errors and 'unique' in str(serializer.errors['token']):
+                return Response({"status": "already_subscribed"}, status=status.HTTP_200_OK)
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        except Exception as e:
+            logger.error(f"FCM Subscription failed: {e}", exc_info=True)
+            return Response({"error": "Subscription failed"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

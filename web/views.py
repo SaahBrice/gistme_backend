@@ -4,6 +4,9 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_http_methods
 import json
 from .models import Subscription, Advertisement
+from django.conf import settings
+import os
+from django.http import HttpResponse
 
 def index(request):
     return render(request, 'web/index.html')
@@ -98,3 +101,14 @@ def advertise(request):
             'error': str(e)
         }, status=500)
 
+def firebase_messaging_sw(request):
+    """
+    Serve the Firebase Messaging Service Worker from the root.
+    """
+    path = os.path.join(settings.BASE_DIR, 'web', 'static', 'firebase-messaging-sw.js')
+    try:
+        with open(path, 'r') as f:
+            content = f.read()
+        return HttpResponse(content, content_type='application/javascript')
+    except FileNotFoundError:
+        return HttpResponse("Service Worker not found", status=404)
