@@ -7,6 +7,13 @@ class VisitorSubscriptionSerializer(serializers.ModelSerializer):
         fields = ['endpoint', 'p256dh', 'auth']
 
 
+class FCMSubscriptionSerializer(serializers.ModelSerializer):
+    class Meta:
+        from .models import FCMSubscription
+        model = FCMSubscription
+        fields = ['token']
+
+
 class CommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment
@@ -23,6 +30,8 @@ class ArticleSerializer(serializers.ModelSerializer):
             'id', 'headline_en', 'headline_fr', 'headline', 'category', 'french_summary', 'english_summary',
             'mood', 'source_urls', 'source_names', 'thumbnails', 'thumbnail_image',
             'french_audio', 'english_audio', 'timestamp', 'created_at',
-            'view_count', 'comment_count', 'reaction_count', 'comments'
+            'mood', 'source_urls', 'source_names', 'thumbnails', 'thumbnail_image',
+            'french_audio', 'english_audio', 'timestamp', 'created_at',
+            'view_count', 'comment_count', 'reaction_count', 'comments', 'send_notification'
         ]
         read_only_fields = ['created_at', 'view_count', 'comment_count', 'reaction_count']

@@ -86,6 +86,190 @@
     {% endblock %}
 
     <script src="{% static 'web/js/main.js' %}"></script>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-messaging-compat.js"></script>
+
+    <!-- Notification Logic -->
+    <div x-data="notificationPrompt()" x-show="showPrompt" x-transition
+        class="fixed bottom-4 right-4 z-50 max-w-sm w-full bg-brand-dark border border-brand-gray/20 rounded-lg shadow-2xl p-4 backdrop-blur-md"
+        style="display: none;">
+        <div class="flex items-start gap-4">
+            <div class="flex-shrink-0">
+                <div
+                    class="w-10 h-10 rounded-full bg-brand-yellow/10 flex items-center justify-center text-brand-yellow">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                    </svg>
+                </div>
+            </div>
+            <div class="flex-1">
+                <h3 class="text-sm font-medium text-white">Enable Notifications</h3>
+                <p class="mt-1 text-xs text-gray-400">Get instant updates when new stories drop. No spam, just the gist.
+                </p>
+                <div class="mt-3 flex gap-2">
+                    <button @click="enableNotifications()"
+                        class="text-xs bg-brand-yellow text-brand-black px-3 py-1.5 rounded font-medium hover:bg-yellow-400 transition-colors">
+                        Allow
+                    </button>
+                    <button @click="dismiss()"
+                        class="text-xs text-gray-400 hover:text-white px-3 py-1.5 transition-colors">
+                        Later
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function notificationPrompt() {
+            return {
+                showPrompt: false,
+                async init() {
+                    console.log('Initializing notification prompt...');
+                    if (!('Notification' in window)) {
+                        console.log('Notifications not supported');
+                        return;
+                    }
+
+                    console.log('Permission status:', Notification.permission);
+
+                    // Check if already granted
+                    if (Notification.permission === 'granted') {
+                        console.log('Permission already granted. Ensuring token is registered...');
+                        await this.registerToken();
+                        return;
+                    }
+
+                    const dismissed = localStorage.getItem('dismissed_notifications');
+                    console.log('Dismissed status:', dismissed);
+
+                    if (Notification.permission === 'default' && !dismissed) {
+                        console.log('Scheduling prompt display...');
+                        setTimeout(() => {
+                            console.log('Showing prompt now');
+                            this.showPrompt = true;
+                        }, 3000);
+                    } else {
+                        console.log('Not showing prompt. Permission not default or dismissed.');
+                    }
+                },
+                async enableNotifications() {
+                    try {
+                        const permission = await Notification.requestPermission();
+                        if (permission === 'granted') {
+                            this.showPrompt = false;
+                            await this.registerToken();
+                        } else {
+                            this.showPrompt = false;
+                            console.log('Permission denied');
+                        }
+                    } catch (error) {
+                        console.error('Error enabling notifications:', error);
+                        alert('Error enabling notifications. Please check console.');
+                    }
+                },
+                async registerToken() {
+                    try {
+                        console.log('Registering FCM token...');
+
+                        // Step 1: Register Service Worker first
+                        console.log('Checking for service worker...');
+                        if (!('serviceWorker' in navigator)) {
+                            console.error('Service workers are not supported');
+                            return;
+                        }
+
+                        // Register the service worker
+                        let registration;
+                        try {
+                            registration = await navigator.serviceWorker.register('/firebase-messaging-sw.js');
+                            console.log('Service Worker registered:', registration);
+
+                            // Wait for service worker to be ready
+                            await navigator.serviceWorker.ready;
+                            console.log('Service Worker is ready');
+                        } catch (swError) {
+                            console.error('Service Worker registration failed:', swError);
+                            return;
+                        }
+
+                        // Step 2: Initialize Firebase
+                        const firebaseConfig = {
+                            apiKey: "AIzaSyBA9udkHboIsuVAzpVzsMa-pH_CrygGidA",
+                            authDomain: "c237-bvo0kf.firebaseapp.com",
+                            projectId: "c237-bvo0kf",
+                            storageBucket: "c237-bvo0kf.appspot.com",
+                            messagingSenderId: "426706752627",
+                            appId: "1:426706752627:web:de1cf08f4717d7ac934606"
+                        };
+
+                        // Initialize Firebase if not already initialized
+                        if (!firebase.apps.length) {
+                            firebase.initializeApp(firebaseConfig);
+                            console.log('Firebase initialized');
+                        }
+
+                        const messaging = firebase.messaging();
+
+                        // Step 3: Get registration token
+                        console.log('Requesting FCM token...');
+                        const token = await messaging.getToken({
+                            vapidKey: 'BIn01a1qNG7g9rNODDpyQ5w5Op9NBA9yCSFQ6PI1RhSD6_zVImrkJ1QgTmHN-iv9nuoY0iNgRs3ojhoRQm8gkAU',
+                            serviceWorkerRegistration: registration
+                        });
+
+                        if (token) {
+                            console.log('✅ FCM Token obtained:', token);
+
+                            // Step 4: Send token to backend
+                            const response = await fetch('/api/fcm/subscribe/', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                    'X-CSRFToken': this.getCookie('csrftoken')
+                                },
+                                body: JSON.stringify({ token: token })
+                            });
+
+                            if (response.ok) {
+                                console.log('✅ Subscribed to FCM successfully');
+                            } else {
+                                const errorData = await response.text();
+                                console.error('❌ Failed to subscribe to FCM backend:', errorData);
+                            }
+                        } else {
+                            console.log('No registration token available.');
+                        }
+                    } catch (error) {
+                        console.error('❌ Error registering token:', error);
+                    }
+                },
+                dismiss() {
+                    this.showPrompt = false;
+                    localStorage.setItem('dismissed_notifications', 'true');
+                },
+                getCookie(name) {
+                    let cookieValue = null;
+                    if (document.cookie && document.cookie !== '') {
+                        const cookies = document.cookie.split(';');
+                        for (let i = 0; i < cookies.length; i++) {
+                            const cookie = cookies[i].trim();
+                            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                                break;
+                            }
+                        }
+                    }
+                    return cookieValue;
+                }
+            }
+        }
+    </script>
+
     {% block extra_scripts %}{% endblock %}
 </body>
 
