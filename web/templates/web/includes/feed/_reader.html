@@ -82,6 +82,7 @@
                     <template x-for="(source, index) in (currentArticle.sourceNames || [])" :key="index">
                         <li class="text-sm text-blue-400" x-text="source"></li>
                     </template>
+                    <li class="text-sm text-gray-500">gist4u.site</li>
                     <li x-show="!currentArticle.sourceNames || currentArticle.sourceNames.length === 0"
                         class="text-sm text-gray-500">Source info unavailable</li>
                 </ul>

@@ -3736,3 +3736,85 @@ INFO 2025-11-29 23:05:53,525 fcm 41016 11576 [EN] Batch 1/1: Sending to 1 device
 INFO 2025-11-29 23:05:53,527 basehttp 41016 28856 "POST /api/articles/ HTTP/1.1" 201 4503
 INFO 2025-11-29 23:05:53,657 fcm 41016 11576 [EN] Batch 1: 1 successful, 0 failed
 INFO 2025-11-29 23:05:53,657 fcm 41016 11576 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 23:17:54,190 autoreload 10544 23500 Watching for file changes with StatReloader
+INFO 2025-11-29 23:18:00,884 basehttp 10544 22952 "GET /media/audio/english/transportation_20251129_224859.mp3 HTTP/1.1" 200 1439232
+WARNING 2025-11-29 23:18:01,064 log 10544 22952 Not Found: /favicon.ico
+WARNING 2025-11-29 23:18:01,064 basehttp 10544 22952 "GET /favicon.ico HTTP/1.1" 404 4100
+INFO 2025-11-29 23:18:06,537 basehttp 10544 22952 "GET /media/audio/french/transportation_20251129_224859.mp3 HTTP/1.1" 200 1403136
+INFO 2025-11-29 23:24:11,044 fcm 10544 44436 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 23:24:11,045 fcm 10544 44436 Starting English notifications: Cameroon's Political Scene Simmers with New Forces Challenging the Status Quo
+INFO 2025-11-29 23:24:11,104 basehttp 10544 44436 "POST /api/articles/ HTTP/1.1" 201 4280
+INFO 2025-11-29 23:24:11,104 fcm 10544 40340 Firebase Admin SDK initialized with C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\serviceAccountKey.json
+INFO 2025-11-29 23:24:11,104 fcm 10544 40340 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 23:24:15,457 fcm 10544 40340 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 23:24:15,457 fcm 10544 40340 [EN] Total: 1 successful, 0 failed out of 1
+WARNING 2025-11-29 23:24:15,548 basehttp 10544 33560 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 23:25:45,327 fcm 10544 44212 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 23:25:45,327 fcm 10544 44212 Starting English notifications: Samuel Eto'o Re-Elected Amid FECAFOOT-Government Showdown
+INFO 2025-11-29 23:25:45,328 fcm 10544 38068 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 23:25:45,329 basehttp 10544 44212 "POST /api/articles/ HTTP/1.1" 201 5414
+INFO 2025-11-29 23:25:45,461 fcm 10544 38068 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 23:25:45,461 fcm 10544 38068 [EN] Total: 1 successful, 0 failed out of 1
+WARNING 2025-11-29 23:25:45,469 basehttp 10544 27668 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 23:26:56,807 fcm 10544 38008 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 23:26:56,807 fcm 10544 38008 Starting English notifications: FESTAC Baka Ignites Youth and Culture in Eastern Cameroon with Over 450 Young People United
+INFO 2025-11-29 23:26:56,807 fcm 10544 28988 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 23:26:56,814 fcm 10544 38008 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 23:26:56,814 fcm 10544 38008 Starting English notifications: FESTAC Baka Ignites Youth and Culture in Eastern Cameroon with Over 450 Young People United
+INFO 2025-11-29 23:26:56,814 fcm 10544 39808 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 23:26:56,814 basehttp 10544 38008 "POST /api/articles/ HTTP/1.1" 201 4801
+INFO 2025-11-29 23:26:57,004 fcm 10544 28988 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 23:26:57,008 fcm 10544 28988 [EN] Total: 1 successful, 0 failed out of 1
+WARNING 2025-11-29 23:26:57,010 basehttp 10544 40584 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 23:26:57,039 basehttp 10544 18456 "GET /media/thumbnails/entertainment_20251129_232607_1.jpeg HTTP/1.1" 200 153869
+INFO 2025-11-29 23:26:58,161 fcm 10544 39808 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 23:26:58,161 fcm 10544 39808 [EN] Total: 1 successful, 0 failed out of 1
+WARNING 2025-11-29 23:26:58,167 basehttp 10544 6356 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 23:26:58,181 basehttp 10544 18456 "GET /media/thumbnails/entertainment_20251129_232607_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 23:27:48,104 basehttp 10544 18456 "GET /feed/ HTTP/1.1" 200 43928
+WARNING 2025-11-29 23:27:48,157 log 10544 18456 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 23:27:48,159 basehttp 10544 18456 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-29 23:27:48,435 basehttp 10544 18456 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-29 23:27:48,677 views 10544 18456 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-29 23:27:48,685 basehttp 10544 18456 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-29 23:27:50,533 basehttp 10544 18456 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-29 23:27:51,354 basehttp 10544 18456 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-29 23:27:51,403 basehttp 10544 18456 "GET /api/articles/ HTTP/1.1" 200 49997
+INFO 2025-11-29 23:27:51,426 basehttp 10544 18456 "GET /media/thumbnails/entertainment_20251129_232607_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 23:27:51,456 basehttp 10544 39628 "GET /media/thumbnails/Mboa_music_20251129_230321_1.jpeg HTTP/1.1" 200 60026
+INFO 2025-11-29 23:27:51,464 basehttp 10544 21184 "GET /media/thumbnails/happened_in_any_region_20251129_225843_1.jpeg HTTP/1.1" 200 100187
+INFO 2025-11-29 23:27:51,481 basehttp 10544 18636 "GET /media/thumbnails/happened_in_Buea_20251129_225632_1.png HTTP/1.1" 200 1779
+INFO 2025-11-29 23:27:51,512 basehttp 10544 36604 "GET /media/thumbnails/scholarships_cameroonians_can_apply_20251129_225514_1.jpeg HTTP/1.1" 200 196766
+INFO 2025-11-29 23:27:51,530 basehttp 10544 18456 "GET /media/thumbnails/disgusting_20251129_230011_1.jpeg HTTP/1.1" 200 141244
+INFO 2025-11-29 23:28:22,577 basehttp 10544 18456 "GET /feed/ HTTP/1.1" 200 43927
+WARNING 2025-11-29 23:28:22,634 log 10544 18456 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 23:28:22,636 basehttp 10544 18456 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-29 23:28:22,883 basehttp 10544 18456 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-29 23:28:23,003 views 10544 18456 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-29 23:28:23,012 basehttp 10544 18456 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-29 23:28:24,884 basehttp 10544 18456 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-29 23:28:25,898 basehttp 10544 18456 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-29 23:28:25,942 basehttp 10544 18456 "GET /api/articles/ HTTP/1.1" 200 49997
+INFO 2025-11-29 23:28:25,960 basehttp 10544 18456 "GET /media/thumbnails/entertainment_20251129_232607_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 23:29:50,882 fcm 10544 38296 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 23:29:50,883 fcm 10544 38296 Starting English notifications: Cameroon’s Digital Surge: AI Boom, Rural Connectivity, Youth Power & Tech Innovation!
+INFO 2025-11-29 23:29:50,883 fcm 10544 21580 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 23:29:50,891 fcm 10544 38296 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 23:29:50,891 fcm 10544 38296 Starting English notifications: Cameroon’s Digital Surge: AI Boom, Rural Connectivity, Youth Power & Tech Innovation!
+INFO 2025-11-29 23:29:50,892 fcm 10544 37932 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 23:29:50,894 basehttp 10544 38296 "POST /api/articles/ HTTP/1.1" 201 7451
+INFO 2025-11-29 23:29:51,012 fcm 10544 21580 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 23:29:51,012 fcm 10544 21580 [EN] Total: 1 successful, 0 failed out of 1
+WARNING 2025-11-29 23:29:51,018 basehttp 10544 36604 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 23:29:51,040 basehttp 10544 18456 "GET /media/thumbnails/technology_20251129_232830_1.png HTTP/1.1" 200 511425
+INFO 2025-11-29 23:29:51,813 fcm 10544 37932 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 23:29:51,814 fcm 10544 37932 [EN] Total: 1 successful, 0 failed out of 1
+WARNING 2025-11-29 23:29:51,818 basehttp 10544 18636 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 23:29:51,826 basehttp 10544 18456 "GET /media/thumbnails/technology_20251129_232830_1.png HTTP/1.1" 304 0
+INFO 2025-11-29 23:30:58,041 fcm 10544 21196 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 23:30:58,041 fcm 10544 21196 Starting English notifications: China Sends 25th Medical Mission to Cameroon
+INFO 2025-11-29 23:30:58,041 fcm 10544 38300 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 23:30:58,045 basehttp 10544 21196 "POST /api/articles/ HTTP/1.1" 201 3810
+INFO 2025-11-29 23:30:58,234 fcm 10544 38300 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 23:30:58,234 fcm 10544 38300 [EN] Total: 1 successful, 0 failed out of 1
+WARNING 2025-11-29 23:30:58,243 basehttp 10544 18456 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
