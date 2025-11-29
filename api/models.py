@@ -98,6 +98,7 @@ class FCMSubscription(models.Model):
         max_length=2,
         choices=LANGUAGE_CHOICES,
         default='fr',
+        db_index=True,  # Index for fast language-based queries
         help_text='User\'s preferred language for notifications'
     )
     created_at = models.DateTimeField(auto_now_add=True)
