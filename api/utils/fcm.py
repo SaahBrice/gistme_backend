@@ -42,82 +42,91 @@ def initialize_firebase():
     except Exception as e:
         logger.error(f"Failed to initialize Firebase Admin SDK: {e}")
 
-def _send_multicast(article_data, tokens):
+def _send_multicast(article_data, tokens, language=''):
     """
     Internal function to send multicast message.
+    Batches tokens into groups of 500 (Firebase limit).
     """
     initialize_firebase()
     
     if not tokens:
         return
-
-    # Create the message
-    # Note: Web Push requires specific config
-    # We add 'data' payload for the service worker to handle clicks reliably
     
-    # Build full URL - Firebase requires HTTPS even for localhost
-    # In production, set SITE_URL in settings or use environment variable
-    from django.conf import settings
+    # Firebase limit: 500 tokens per multicast request
+    BATCH_SIZE = 500
+    total_tokens = len(tokens)
+    total_success = 0
+    total_failure = 0
     
-    # Get base URL from settings or construct from ALLOWED_HOSTS
-    if hasattr(settings, 'SITE_URL'):
-        base_url = settings.SITE_URL
-    else:
-        # Use https for localhost - Firebase requires HTTPS for WebpushFCMOptions.link
-        # The browser will accept this even without a valid SSL cert for localhost
-        base_url = 'https://localhost:8000'
-    
-    link_url = f"{base_url}/article/{article_data.get('id')}/"
-    
-    # Debug logging
-    logger.info(f"Sending FCM notification with link: {link_url}")
-    
-    message = messaging.MulticastMessage(
-        notification=messaging.Notification(
-            title=article_data.get('headline', 'New Article'),
-            body=article_data.get('summary', 'Check out the latest update!'),
-            image=article_data.get('thumbnail_url'),
-        ),
-        data={
-            'click_action': link_url,
-            'link': link_url,
-            'article_id': str(article_data.get('id')),
-        },
-        webpush=messaging.WebpushConfig(
-            notification=messaging.WebpushNotification(
-                icon='/static/web/img/icon.png', # TODO: Update with actual icon path
-            ),
-            fcm_options=messaging.WebpushFCMOptions(
-                link=link_url
-            )
-        ),
-        tokens=tokens,
-    )
-
-
-    try:
-        response = messaging.send_each_for_multicast(message)
-        logger.info(f"FCM Multicast sent: {response.success_count} successful, {response.failure_count} failed.")
+    # Split tokens into batches of 500
+    for batch_num, i in enumerate(range(0, total_tokens, BATCH_SIZE), 1):
+        batch_tokens = tokens[i:i + BATCH_SIZE]
+        batch_size = len(batch_tokens)
         
-        if response.failure_count > 0:
-            responses = response.responses
-            failed_tokens = []
-            for idx, resp in enumerate(responses):
-                if not resp.success:
-                    # The order of responses corresponds to the order of the registration tokens.
-                    failed_tokens.append(tokens[idx])
-                    logger.warning(f"Failed to send to token {tokens[idx]}: {resp.exception}")
+        logger.info(f"{language}Batch {batch_num}/{(total_tokens + BATCH_SIZE - 1) // BATCH_SIZE}: Sending to {batch_size} devices")
+
+        # Build full URL - Firebase requires HTTPS even for localhost
+        from django.conf import settings
+        
+        if hasattr(settings, 'SITE_URL'):
+            base_url = settings.SITE_URL
+        else:
+            base_url = 'https://localhost:8000'
+        
+        link_url = f"{base_url}/article/{article_data.get('id')}/"
+        
+        message = messaging.MulticastMessage(
+            notification=messaging.Notification(
+                title=article_data.get('headline', 'New Article'),
+                body=article_data.get('summary', 'Check out the latest update!'),
+                image=article_data.get('thumbnail_url'),
+            ),
+            data={
+                'click_action': link_url,
+                'link': link_url,
+                'article_id': str(article_data.get('id')),
+            },
+            webpush=messaging.WebpushConfig(
+                notification=messaging.WebpushNotification(
+                    icon='/static/web/img/icon.png',
+                ),
+                fcm_options=messaging.WebpushFCMOptions(
+                    link=link_url
+                )
+            ),
+            tokens=batch_tokens,
+        )
+
+        try:
+            response = messaging.send_each_for_multicast(message)
+            total_success += response.success_count
+            total_failure += response.failure_count
             
-            # Optional: Clean up invalid tokens
-            # FCMSubscription.objects.filter(token__in=failed_tokens).delete()
+            logger.info(f"{language}Batch {batch_num}: {response.success_count} successful, {response.failure_count} failed")
             
-    except Exception as e:
-        logger.error(f"Error sending FCM multicast: {e}")
+            if response.failure_count > 0:
+                responses = response.responses
+                failed_tokens = []
+                for idx, resp in enumerate(responses):
+                    if not resp.success:
+                        failed_tokens.append(batch_tokens[idx])
+                        logger.warning(f"Failed to send to token {batch_tokens[idx][:20]}...: {resp.exception}")
+                
+                # Optional: Clean up invalid tokens
+                # FCMSubscription.objects.filter(token__in=failed_tokens).delete()
+                
+        except Exception as e:
+            logger.error(f"{language}Batch {batch_num} error: {e}")
+            total_failure += batch_size
+    
+    logger.info(f"{language}Total: {total_success} successful, {total_failure} failed out of {total_tokens}")
+
 
 def send_push_notification(article):
     """
     Sends a push notification for the given article to all subscribers.
     Sends separate notifications for French and English users.
+    Uses batching to handle 500+ users per language.
     This runs in a separate thread to be non-blocking.
     """
     try:
@@ -129,10 +138,11 @@ def send_push_notification(article):
              thumbnail_url = article.thumbnail_image.url
 
         # Get all FCM subscriptions grouped by language
+        # Using values_list for memory efficiency
         french_tokens = list(FCMSubscription.objects.filter(preferred_language='fr').values_list('token', flat=True))
         english_tokens = list(FCMSubscription.objects.filter(preferred_language='en').values_list('token', flat=True))
         
-        logger.info(f"Sending notifications: {len(french_tokens)} French, {len(english_tokens)} English")
+        logger.info(f"Preparing notifications: {len(french_tokens)} French, {len(english_tokens)} English")
 
         # Send French notifications
         if french_tokens:
@@ -147,8 +157,8 @@ def send_push_notification(article):
                 'thumbnail_url': thumbnail_url
             }
             
-            logger.info(f"Sending French notification: {headline_fr}")
-            thread = threading.Thread(target=_send_multicast, args=(article_data_fr, french_tokens))
+            logger.info(f"Starting French notifications: {headline_fr}")
+            thread = threading.Thread(target=_send_multicast, args=(article_data_fr, french_tokens, '[FR] '))
             thread.start()
 
         # Send English notifications
@@ -164,8 +174,8 @@ def send_push_notification(article):
                 'thumbnail_url': thumbnail_url
             }
             
-            logger.info(f"Sending English notification: {headline_en}")
-            thread = threading.Thread(target=_send_multicast, args=(article_data_en, english_tokens))
+            logger.info(f"Starting English notifications: {headline_en}")
+            thread = threading.Thread(target=_send_multicast, args=(article_data_en, english_tokens, '[EN] '))
             thread.start()
         
         if not french_tokens and not english_tokens:
@@ -173,4 +183,5 @@ def send_push_notification(article):
         
     except Exception as e:
         logger.error(f"Error preparing push notification: {e}")
+
 

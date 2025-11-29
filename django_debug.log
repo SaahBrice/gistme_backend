@@ -3348,3 +3348,391 @@ INFO 2025-11-29 21:46:32,264 fcm 38016 33560 Sending FCM notification with link:
 INFO 2025-11-29 21:46:32,264 basehttp 38016 40340 "POST /api/articles/ HTTP/1.1" 201 2922
 INFO 2025-11-29 21:46:32,441 fcm 38016 28932 FCM Multicast sent: 1 successful, 0 failed.
 INFO 2025-11-29 21:46:32,483 fcm 38016 33560 FCM Multicast sent: 1 successful, 0 failed.
+INFO 2025-11-29 22:22:07,729 autoreload 41016 23040 Watching for file changes with StatReloader
+INFO 2025-11-29 22:24:34,581 fcm 41016 5628 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:24:34,581 fcm 41016 5628 Starting English notifications: Cameroon's Streets Boil as New Wave of Protests Ignites
+INFO 2025-11-29 22:24:34,623 fcm 41016 43460 Firebase Admin SDK initialized with C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\serviceAccountKey.json
+INFO 2025-11-29 22:24:34,623 fcm 41016 43460 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:24:34,629 basehttp 41016 5628 "POST /api/articles/ HTTP/1.1" 201 5636
+WARNING 2025-11-29 22:24:37,675 basehttp 41016 388 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 22:24:37,685 fcm 41016 43460 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:24:37,685 fcm 41016 43460 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 22:25:43,948 fcm 41016 28224 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:25:43,948 fcm 41016 28224 Starting English notifications: Eto'o Crushes Opposition to Clinch Second Term as Fecafoot President Amid Government Showdown
+INFO 2025-11-29 22:25:43,950 fcm 41016 33780 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:25:43,957 fcm 41016 28224 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:25:43,957 fcm 41016 28224 Starting English notifications: Eto'o Crushes Opposition to Clinch Second Term as Fecafoot President Amid Government Showdown
+INFO 2025-11-29 22:25:43,958 fcm 41016 16900 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:25:43,960 basehttp 41016 28224 "POST /api/articles/ HTTP/1.1" 201 4356
+WARNING 2025-11-29 22:25:44,625 basehttp 41016 32548 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 22:25:44,625 fcm 41016 33780 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:25:44,626 fcm 41016 33780 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 22:25:44,747 basehttp 41016 33220 "GET /media/thumbnails/sports_20251129_222502_1.jpeg HTTP/1.1" 200 45125
+INFO 2025-11-29 22:25:44,864 fcm 41016 16900 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:25:44,864 fcm 41016 16900 [EN] Total: 1 successful, 0 failed out of 1
+WARNING 2025-11-29 22:25:44,864 basehttp 41016 14264 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 22:25:44,879 basehttp 41016 33220 "GET /media/thumbnails/sports_20251129_222502_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 22:27:14,920 fcm 41016 9052 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:27:14,920 fcm 41016 9052 Starting English notifications: Young Cameroonian Artists Shake Up Entertainment Scene with Bold Moves and Fresh Vibes
+INFO 2025-11-29 22:27:14,921 fcm 41016 40388 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:27:14,923 basehttp 41016 9052 "POST /api/articles/ HTTP/1.1" 201 3878
+WARNING 2025-11-29 22:27:15,075 basehttp 41016 33220 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 22:27:15,075 fcm 41016 40388 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:27:15,075 fcm 41016 40388 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 22:28:54,436 fcm 41016 37408 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:28:54,436 fcm 41016 37408 Starting English notifications: Cameroon Tightens Regulation on Gas Bottle Imports, Boosts Local Market
+INFO 2025-11-29 22:28:54,437 fcm 41016 35952 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:28:54,444 fcm 41016 37408 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:28:54,444 fcm 41016 37408 Starting English notifications: Cameroon Tightens Regulation on Gas Bottle Imports, Boosts Local Market
+INFO 2025-11-29 22:28:54,445 fcm 41016 44884 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:28:54,448 basehttp 41016 37408 "POST /api/articles/ HTTP/1.1" 201 4604
+INFO 2025-11-29 22:28:55,462 fcm 41016 35952 [EN] Batch 1: 1 successful, 0 failed
+WARNING 2025-11-29 22:28:55,462 basehttp 41016 28416 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 22:28:55,462 fcm 41016 35952 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 22:28:55,481 basehttp 41016 20036 "GET /media/thumbnails/business_20251129_222753_1.jpeg HTTP/1.1" 200 33577
+INFO 2025-11-29 22:28:55,563 fcm 41016 44884 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:28:55,563 fcm 41016 44884 [EN] Total: 1 successful, 0 failed out of 1
+WARNING 2025-11-29 22:28:55,572 basehttp 41016 37928 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 22:28:55,581 basehttp 41016 20036 "GET /media/thumbnails/business_20251129_222753_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 22:30:38,432 fcm 41016 40500 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:30:38,432 fcm 41016 40500 Starting English notifications: Cameroon Kicks Off Massive Digital Boost: 200,000 New Water Connections & 55 Billion CFA to Connect Rural Hoods!
+INFO 2025-11-29 22:30:38,432 fcm 41016 28712 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:30:38,439 fcm 41016 40500 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:30:38,440 fcm 41016 40500 Starting English notifications: Cameroon Kicks Off Massive Digital Boost: 200,000 New Water Connections & 55 Billion CFA to Connect Rural Hoods!
+INFO 2025-11-29 22:30:38,440 fcm 41016 24520 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:30:38,443 basehttp 41016 40500 "POST /api/articles/ HTTP/1.1" 201 5692
+INFO 2025-11-29 22:30:39,300 fcm 41016 24520 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:30:39,300 fcm 41016 24520 [EN] Total: 1 successful, 0 failed out of 1
+WARNING 2025-11-29 22:30:39,311 basehttp 41016 33628 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 22:30:39,327 basehttp 41016 20036 "GET /media/thumbnails/technology_20251129_222920_1.jpeg HTTP/1.1" 200 149106
+INFO 2025-11-29 22:30:39,574 fcm 41016 28712 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:30:39,574 fcm 41016 28712 [EN] Total: 1 successful, 0 failed out of 1
+WARNING 2025-11-29 22:30:39,612 basehttp 41016 13120 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 22:30:39,622 basehttp 41016 20036 "GET /media/thumbnails/technology_20251129_222920_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 22:31:45,677 fcm 41016 16524 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:31:45,677 fcm 41016 16524 Starting English notifications: Douala Hospital Launches Free Health Consultations amid Blood Safety Drive
+INFO 2025-11-29 22:31:45,677 fcm 41016 21960 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:31:45,680 basehttp 41016 16524 "POST /api/articles/ HTTP/1.1" 201 3490
+WARNING 2025-11-29 22:31:45,847 basehttp 41016 20036 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 22:31:45,876 fcm 41016 21960 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:31:45,876 fcm 41016 21960 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 22:33:24,804 fcm 41016 21140 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:33:24,804 fcm 41016 21140 Starting English notifications: Cameroon launches bold national school feeding program and pushes digital education in the West
+INFO 2025-11-29 22:33:24,805 fcm 41016 30592 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:33:24,811 fcm 41016 21140 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:33:24,811 fcm 41016 21140 Starting English notifications: Cameroon launches bold national school feeding program and pushes digital education in the West
+INFO 2025-11-29 22:33:24,812 fcm 41016 21380 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:33:24,814 basehttp 41016 21140 "POST /api/articles/ HTTP/1.1" 201 5204
+INFO 2025-11-29 22:33:24,935 fcm 41016 30592 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:33:24,935 fcm 41016 30592 [EN] Total: 1 successful, 0 failed out of 1
+WARNING 2025-11-29 22:33:24,941 basehttp 41016 19980 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 22:33:24,961 basehttp 41016 34412 "GET /media/thumbnails/education_20251129_223226_1.png HTTP/1.1" 200 749574
+INFO 2025-11-29 22:33:25,974 fcm 41016 21380 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:33:25,975 fcm 41016 21380 [EN] Total: 1 successful, 0 failed out of 1
+WARNING 2025-11-29 22:33:25,979 basehttp 41016 39688 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 22:33:25,990 basehttp 41016 34412 "GET /media/thumbnails/education_20251129_223226_1.png HTTP/1.1" 304 0
+INFO 2025-11-29 22:34:11,787 fcm 41016 19832 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:34:11,787 fcm 41016 19832 Starting English notifications: Boissons du Cameroun to Boost Local Sorghum Sourcing by 50% with Massive Investments
+INFO 2025-11-29 22:34:11,787 fcm 41016 36420 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:34:11,797 fcm 41016 19832 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:34:11,797 fcm 41016 19832 Starting English notifications: Boissons du Cameroun to Boost Local Sorghum Sourcing by 50% with Massive Investments
+INFO 2025-11-29 22:34:11,797 fcm 41016 40660 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:34:11,807 basehttp 41016 19832 "POST /api/articles/ HTTP/1.1" 201 3100
+INFO 2025-11-29 22:34:11,931 fcm 41016 36420 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:34:11,931 fcm 41016 36420 [EN] Total: 1 successful, 0 failed out of 1
+WARNING 2025-11-29 22:34:11,938 basehttp 41016 35156 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 22:34:11,956 basehttp 41016 34412 "GET /media/thumbnails/agriculture_20251129_223341_1.jpeg HTTP/1.1" 200 37094
+INFO 2025-11-29 22:34:12,031 fcm 41016 40660 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:34:12,031 fcm 41016 40660 [EN] Total: 1 successful, 0 failed out of 1
+WARNING 2025-11-29 22:34:12,056 basehttp 41016 43460 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 22:34:12,060 basehttp 41016 34412 "GET /media/thumbnails/agriculture_20251129_223341_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 22:35:34,633 fcm 41016 39576 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:35:34,633 fcm 41016 39576 Starting English notifications: Douala’s 7th Made in Cameroon Weekend Kicks Off Amidst Security Concerns
+INFO 2025-11-29 22:35:34,634 fcm 41016 6220 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:35:34,641 fcm 41016 39576 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:35:34,641 fcm 41016 39576 Starting English notifications: Douala’s 7th Made in Cameroon Weekend Kicks Off Amidst Security Concerns
+INFO 2025-11-29 22:35:34,642 fcm 41016 21276 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:35:34,645 basehttp 41016 39576 "POST /api/articles/ HTTP/1.1" 201 3703
+INFO 2025-11-29 22:35:35,001 fcm 41016 21276 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:35:35,001 fcm 41016 21276 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 22:35:35,013 fcm 41016 6220 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:35:35,013 fcm 41016 6220 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 22:36:24,828 basehttp 41016 34476 "GET /admin/api/article/ HTTP/1.1" 200 59298
+INFO 2025-11-29 22:36:24,897 basehttp 41016 34476 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-29 22:36:26,697 basehttp 41016 34476 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-29 22:37:01,895 fcm 41016 24248 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:37:01,900 fcm 41016 24248 Starting English notifications: Cameroon's Police Chief Throws Hat in Ring for Interpol's African Seat
+INFO 2025-11-29 22:37:01,900 fcm 41016 10064 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:37:01,908 fcm 41016 24248 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:37:01,908 fcm 41016 24248 Starting English notifications: Cameroon's Police Chief Throws Hat in Ring for Interpol's African Seat
+INFO 2025-11-29 22:37:01,908 fcm 41016 43692 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:37:01,915 basehttp 41016 24248 "POST /api/articles/ HTTP/1.1" 201 4538
+INFO 2025-11-29 22:37:02,095 fcm 41016 10064 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:37:02,095 fcm 41016 10064 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 22:37:02,145 fcm 41016 43692 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:37:02,145 fcm 41016 43692 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 22:37:52,775 fcm 41016 40604 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:37:52,775 fcm 41016 40604 Starting English notifications: Cameroon’s Banks Go Green: Climate Cash Moves Hit Yaoundé
+INFO 2025-11-29 22:37:52,775 fcm 41016 27116 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:37:52,784 fcm 41016 40604 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:37:52,784 fcm 41016 40604 Starting English notifications: Cameroon’s Banks Go Green: Climate Cash Moves Hit Yaoundé
+INFO 2025-11-29 22:37:52,784 fcm 41016 15892 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:37:52,784 basehttp 41016 40604 "POST /api/articles/ HTTP/1.1" 201 2585
+INFO 2025-11-29 22:37:52,914 fcm 41016 27116 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:37:52,914 fcm 41016 27116 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 22:37:53,026 fcm 41016 15892 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:37:53,027 fcm 41016 15892 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 22:38:39,193 basehttp 41016 34412 "GET /api/articles/?mood=happy&category=agriculture HTTP/1.1" 200 52
+INFO 2025-11-29 22:38:39,259 basehttp 41016 34412 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-29 22:38:39,283 basehttp 41016 34412 "GET /api/articles/?category=agriculture HTTP/1.1" 200 8192
+INFO 2025-11-29 22:38:39,314 basehttp 41016 34412 "GET /media/thumbnails/agriculture_20251129_223341_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 22:38:39,331 basehttp 41016 31188 "GET /media/thumbnails/agriculture_20251129_203728_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 22:38:52,192 basehttp 41016 31188 "GET /api/articles/?mood=happy&category=transportation HTTP/1.1" 200 52
+INFO 2025-11-29 22:38:52,203 basehttp 41016 31188 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-29 22:38:52,256 basehttp 41016 31188 "GET /api/articles/?category=transportation HTTP/1.1" 200 52
+INFO 2025-11-29 22:38:52,287 basehttp 41016 31188 "GET /api/articles/ HTTP/1.1" 200 41252
+INFO 2025-11-29 22:38:52,323 basehttp 41016 31188 "GET /media/thumbnails/environment_20251129_223727_1.jpeg HTTP/1.1" 200 35911
+INFO 2025-11-29 22:38:52,337 basehttp 41016 31188 "GET /media/thumbnails/sports_20251129_222502_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 22:38:52,352 basehttp 41016 40388 "GET /media/thumbnails/business_20251129_222753_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 22:38:52,364 basehttp 41016 34412 "GET /media/thumbnails/crime_20251129_223606_1.jpeg HTTP/1.1" 200 36394
+INFO 2025-11-29 22:38:52,380 basehttp 41016 36696 "GET /media/thumbnails/culture_20251129_223444_1.jpeg HTTP/1.1" 200 30841
+INFO 2025-11-29 22:38:52,389 basehttp 41016 34980 "GET /media/thumbnails/technology_20251129_222920_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 22:38:52,401 basehttp 41016 10516 "GET /media/thumbnails/education_20251129_223226_1.png HTTP/1.1" 304 0
+INFO 2025-11-29 22:38:53,577 basehttp 41016 10516 "GET /api/articles/?mood=happy&category=agriculture HTTP/1.1" 200 52
+INFO 2025-11-29 22:38:53,602 basehttp 41016 10516 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-29 22:38:53,637 basehttp 41016 10516 "GET /api/articles/?category=agriculture HTTP/1.1" 200 8192
+INFO 2025-11-29 22:38:54,038 basehttp 41016 10516 "GET /api/articles/?mood=happy&category=environment HTTP/1.1" 200 52
+INFO 2025-11-29 22:38:54,057 basehttp 41016 10516 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-29 22:38:54,086 basehttp 41016 10516 "GET /api/articles/?category=environment HTTP/1.1" 200 11998
+INFO 2025-11-29 22:38:54,106 basehttp 41016 10516 "GET /media/thumbnails/environment_20251129_204113_1.png HTTP/1.1" 304 0
+INFO 2025-11-29 22:39:17,053 basehttp 41016 10516 "GET /api/articles/?mood=happy&category=concours_launch HTTP/1.1" 200 52
+INFO 2025-11-29 22:39:17,073 basehttp 41016 10516 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-29 22:39:17,092 basehttp 41016 10516 "GET /api/articles/?category=concours_launch HTTP/1.1" 200 52
+INFO 2025-11-29 22:39:17,123 basehttp 41016 10516 "GET /api/articles/ HTTP/1.1" 200 41252
+INFO 2025-11-29 22:39:17,153 basehttp 41016 10516 "GET /media/thumbnails/crime_20251129_223606_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 22:39:17,170 basehttp 41016 34980 "GET /media/thumbnails/culture_20251129_223444_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 22:39:17,188 basehttp 41016 36696 "GET /media/thumbnails/agriculture_20251129_223341_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 22:39:17,594 basehttp 41016 36696 "GET /api/articles/?mood=happy&category=human_interest HTTP/1.1" 200 52
+INFO 2025-11-29 22:39:17,637 basehttp 41016 36696 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-29 22:39:17,670 basehttp 41016 36696 "GET /api/articles/?category=human_interest HTTP/1.1" 200 3049
+INFO 2025-11-29 22:39:22,142 basehttp 41016 36696 "GET /api/articles/?mood=happy&category=politics HTTP/1.1" 200 52
+INFO 2025-11-29 22:39:22,162 basehttp 41016 36696 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-29 22:39:22,234 basehttp 41016 36696 "GET /api/articles/?category=politics HTTP/1.1" 200 30989
+INFO 2025-11-29 22:39:22,256 basehttp 41016 36696 "GET /media/thumbnails/politics_20251129_201611_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 22:39:41,543 basehttp 41016 36696 "GET /api/articles/?mood=happy&category=real_estate HTTP/1.1" 200 52
+INFO 2025-11-29 22:39:41,585 basehttp 41016 36696 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-29 22:39:41,644 basehttp 41016 36696 "GET /api/articles/?category=real_estate HTTP/1.1" 200 52
+INFO 2025-11-29 22:39:41,673 basehttp 41016 36696 "GET /api/articles/ HTTP/1.1" 200 41252
+INFO 2025-11-29 22:39:41,692 basehttp 41016 36696 "GET /media/thumbnails/crime_20251129_223606_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 22:39:41,715 basehttp 41016 10516 "GET /media/thumbnails/education_20251129_223226_1.png HTTP/1.1" 304 0
+INFO 2025-11-29 22:39:41,728 basehttp 41016 34980 "GET /media/thumbnails/culture_20251129_223444_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 22:39:41,751 basehttp 41016 34412 "GET /media/thumbnails/technology_20251129_222920_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 22:39:50,462 fcm 41016 39676 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:39:50,462 fcm 41016 39676 Starting English notifications: Cameroon in Turmoil: Violent Clashes, Mass Arrests, and a Siege Amid Post-Election Crisis
+INFO 2025-11-29 22:39:50,462 fcm 41016 3016 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:39:50,462 basehttp 41016 39676 "POST /api/articles/ HTTP/1.1" 201 5053
+INFO 2025-11-29 22:39:52,262 fcm 41016 3016 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:39:52,262 fcm 41016 3016 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 22:41:37,331 fcm 41016 27408 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:41:37,331 fcm 41016 27408 Starting English notifications: Cameroon's 2026 Budget Boosts Youth and Women Empowerment Amid Debt Challenges
+INFO 2025-11-29 22:41:37,332 fcm 41016 27420 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:41:37,340 fcm 41016 27408 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:41:37,340 fcm 41016 27408 Starting English notifications: Cameroon's 2026 Budget Boosts Youth and Women Empowerment Amid Debt Challenges
+INFO 2025-11-29 22:41:37,341 fcm 41016 33036 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:41:37,344 basehttp 41016 27408 "POST /api/articles/ HTTP/1.1" 201 5172
+INFO 2025-11-29 22:41:37,513 fcm 41016 27420 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:41:37,514 fcm 41016 27420 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 22:41:38,661 fcm 41016 33036 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:41:38,661 fcm 41016 33036 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 22:43:44,410 fcm 41016 28548 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:43:44,410 fcm 41016 28548 Starting English notifications: Cameroon Gripped by Post-Electoral Chaos: Violence, Looting, and Political Tension Shake the Nation
+INFO 2025-11-29 22:43:44,410 fcm 41016 19964 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:43:44,410 basehttp 41016 28548 "POST /api/articles/ HTTP/1.1" 201 7623
+INFO 2025-11-29 22:43:45,438 fcm 41016 19964 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:43:45,438 fcm 41016 19964 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 22:45:16,167 fcm 41016 17080 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:45:16,167 fcm 41016 17080 Starting English notifications: Cameroon's Youth Turn to Tech: Local Hackathon Sparks Hope in Bamenda
+INFO 2025-11-29 22:45:16,167 fcm 41016 44476 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:45:16,167 basehttp 41016 17080 "POST /api/articles/ HTTP/1.1" 201 4274
+INFO 2025-11-29 22:45:16,384 fcm 41016 44476 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:45:16,384 fcm 41016 44476 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 22:46:51,649 fcm 41016 11372 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:46:51,649 fcm 41016 11372 Starting English notifications: Miss Cameroon Withdraws from Miss Universe 2025, Made in Cameroon Weekend Shifts Dates Amid Tensions
+INFO 2025-11-29 22:46:51,649 fcm 41016 41068 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:46:51,655 fcm 41016 11372 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:46:51,655 fcm 41016 11372 Starting English notifications: Miss Cameroon Withdraws from Miss Universe 2025, Made in Cameroon Weekend Shifts Dates Amid Tensions
+INFO 2025-11-29 22:46:51,655 fcm 41016 22356 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:46:51,655 basehttp 41016 11372 "POST /api/articles/ HTTP/1.1" 201 4219
+INFO 2025-11-29 22:46:52,957 fcm 41016 22356 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:46:52,957 fcm 41016 22356 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 22:46:53,760 fcm 41016 41068 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:46:53,760 fcm 41016 41068 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 22:48:19,613 fcm 41016 32348 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:48:19,613 fcm 41016 32348 Starting English notifications: Catholic Bishops Sound Alarm on Church Kidnappings Amidst Ongoing Cameroon Crisis
+INFO 2025-11-29 22:48:19,614 fcm 41016 11368 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:48:19,623 fcm 41016 32348 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:48:19,623 fcm 41016 32348 Starting English notifications: Catholic Bishops Sound Alarm on Church Kidnappings Amidst Ongoing Cameroon Crisis
+INFO 2025-11-29 22:48:19,624 fcm 41016 19268 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:48:19,627 basehttp 41016 32348 "POST /api/articles/ HTTP/1.1" 201 5524
+INFO 2025-11-29 22:48:19,794 fcm 41016 11368 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:48:19,794 fcm 41016 11368 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 22:48:19,806 fcm 41016 19268 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:48:19,806 fcm 41016 19268 [EN] Total: 1 successful, 0 failed out of 1
+WARNING 2025-11-29 22:48:21,053 log 41016 21760 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 22:48:21,054 basehttp 41016 21760 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-29 22:48:21,656 views 41016 21760 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: fr)
+INFO 2025-11-29 22:48:21,666 basehttp 41016 21760 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-29 22:48:23,417 basehttp 41016 21760 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-29 22:48:34,345 basehttp 41016 21760 "GET /feed/ HTTP/1.1" 200 43856
+WARNING 2025-11-29 22:48:34,413 log 41016 21760 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 22:48:34,414 basehttp 41016 21760 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-29 22:48:34,658 basehttp 41016 21760 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-29 22:48:34,768 views 41016 21760 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-29 22:48:34,777 basehttp 41016 21760 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-29 22:48:36,626 basehttp 41016 21760 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-29 22:48:38,758 basehttp 41016 21760 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-29 22:48:38,805 basehttp 41016 21760 "GET /api/articles/ HTTP/1.1" 200 45893
+INFO 2025-11-29 22:48:38,843 basehttp 41016 388 "GET /media/thumbnails/lifestyle_20251129_224553_1.jpeg HTTP/1.1" 200 30841
+INFO 2025-11-29 22:48:38,864 basehttp 41016 21760 "GET /media/thumbnails/religion_20251129_224724_1.webp HTTP/1.1" 200 51882
+INFO 2025-11-29 22:48:38,881 basehttp 41016 2564 "GET /media/thumbnails/environment_20251129_223727_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 22:48:38,908 basehttp 41016 36140 "GET /media/thumbnails/economy_20251129_224020_1.jpeg HTTP/1.1" 200 33577
+INFO 2025-11-29 22:48:38,917 basehttp 41016 388 "GET /media/thumbnails/agriculture_20251129_223341_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 22:48:38,927 basehttp 41016 16028 "GET /media/thumbnails/crime_20251129_223606_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 22:48:38,948 basehttp 41016 31548 "GET /media/thumbnails/culture_20251129_223444_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 22:48:59,625 basehttp 41016 31548 "GET /api/articles/?mood=happy&category=lifestyle HTTP/1.1" 200 52
+INFO 2025-11-29 22:48:59,697 basehttp 41016 31548 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-29 22:48:59,727 basehttp 41016 31548 "GET /api/articles/?category=lifestyle HTTP/1.1" 200 4271
+INFO 2025-11-29 22:48:59,750 basehttp 41016 31548 "GET /media/thumbnails/lifestyle_20251129_224553_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 22:50:00,263 fcm 41016 28332 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:50:00,263 fcm 41016 28332 Starting English notifications: Cameroon's Transport Sector Bounces Back: Government Crushes Post-Election Crisis with Bold Moves
+INFO 2025-11-29 22:50:00,263 fcm 41016 41912 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:50:00,276 fcm 41016 28332 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:50:00,276 fcm 41016 28332 Starting English notifications: Cameroon's Transport Sector Bounces Back: Government Crushes Post-Election Crisis with Bold Moves
+INFO 2025-11-29 22:50:00,276 fcm 41016 36384 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:50:00,277 basehttp 41016 28332 "POST /api/articles/ HTTP/1.1" 201 6440
+INFO 2025-11-29 22:50:00,477 fcm 41016 36384 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:50:00,477 fcm 41016 36384 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 22:50:01,132 fcm 41016 41912 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:50:01,132 fcm 41016 41912 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 22:51:16,640 fcm 41016 37032 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:51:16,640 fcm 41016 37032 Starting English notifications: Cameroon’s Real Estate Scene Heats Up: SIC’s Billion-Franc Projects and Bank Support Shake Douala & Yaoundé
+INFO 2025-11-29 22:51:16,640 fcm 41016 26668 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:51:16,641 fcm 41016 37032 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:51:16,641 fcm 41016 37032 Starting English notifications: Cameroon’s Real Estate Scene Heats Up: SIC’s Billion-Franc Projects and Bank Support Shake Douala & Yaoundé
+INFO 2025-11-29 22:51:16,641 fcm 41016 2860 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:51:16,652 basehttp 41016 37032 "POST /api/articles/ HTTP/1.1" 201 4687
+INFO 2025-11-29 22:51:16,973 fcm 41016 26668 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:51:16,973 fcm 41016 26668 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 22:51:17,231 fcm 41016 2860 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:51:17,231 fcm 41016 2860 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 22:51:21,991 basehttp 41016 31548 "GET /api/articles/?mood=happy&category=lifestyle HTTP/1.1" 200 52
+INFO 2025-11-29 22:51:22,007 basehttp 41016 31548 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-29 22:51:22,031 basehttp 41016 31548 "GET /api/articles/?category=lifestyle HTTP/1.1" 200 4271
+INFO 2025-11-29 22:51:22,350 basehttp 41016 31548 "GET /api/articles/?mood=happy&category=lifestyle HTTP/1.1" 200 52
+INFO 2025-11-29 22:51:22,376 basehttp 41016 31548 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-29 22:51:22,431 basehttp 41016 31548 "GET /api/articles/?category=lifestyle HTTP/1.1" 200 4271
+INFO 2025-11-29 22:51:25,531 basehttp 41016 31548 "GET /api/articles/?mood=happy&category=happened+in+Buea HTTP/1.1" 200 52
+INFO 2025-11-29 22:51:25,553 basehttp 41016 31548 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-29 22:51:25,573 basehttp 41016 31548 "GET /api/articles/?category=happened+in+Buea HTTP/1.1" 200 52
+INFO 2025-11-29 22:51:25,599 basehttp 41016 31548 "GET /api/articles/ HTTP/1.1" 200 50217
+INFO 2025-11-29 22:51:25,623 basehttp 41016 388 "GET /media/thumbnails/religion_20251129_224724_1.webp HTTP/1.1" 304 0
+INFO 2025-11-29 22:51:25,634 basehttp 41016 36140 "GET /media/thumbnails/economy_20251129_224020_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 22:51:25,642 basehttp 41016 2564 "GET /media/thumbnails/crime_20251129_223606_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 22:51:25,677 basehttp 41016 16028 "GET /media/thumbnails/transportation_20251129_224859_1.jpeg HTTP/1.1" 200 132415
+INFO 2025-11-29 22:51:25,693 basehttp 41016 388 "GET /media/thumbnails/environment_20251129_223727_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 22:51:25,716 basehttp 41016 31548 "GET /media/thumbnails/real_estate_20251129_225031_1.jpeg HTTP/1.1" 200 28168
+INFO 2025-11-29 22:52:40,439 fcm 41016 24428 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:52:40,439 fcm 41016 24428 Starting English notifications: Cameroon’s Science Scene Explodes with Innovation and Global Recognition
+INFO 2025-11-29 22:52:40,439 fcm 41016 23004 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:52:40,450 fcm 41016 24428 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:52:40,450 fcm 41016 24428 Starting English notifications: Cameroon’s Science Scene Explodes with Innovation and Global Recognition
+INFO 2025-11-29 22:52:40,451 fcm 41016 35608 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:52:40,453 basehttp 41016 24428 "POST /api/articles/ HTTP/1.1" 201 3851
+INFO 2025-11-29 22:52:40,579 fcm 41016 23004 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:52:40,579 fcm 41016 23004 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 22:52:40,599 fcm 41016 35608 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:52:40,599 fcm 41016 35608 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 22:53:22,238 fcm 41016 25208 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:53:22,238 fcm 41016 25208 Starting English notifications: Cameroon Releases 2025 GCE Results with Improved Pass Rates Across All Levels
+INFO 2025-11-29 22:53:22,238 fcm 41016 41544 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:53:22,238 basehttp 41016 25208 "POST /api/articles/ HTTP/1.1" 201 3347
+INFO 2025-11-29 22:53:22,381 fcm 41016 41544 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:53:22,381 fcm 41016 41544 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 22:54:54,581 fcm 41016 11384 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:54:54,581 fcm 41016 11384 Starting English notifications: Cameroon’s Job Market Buzz: Thousands of National to Local Opportunities Open Now
+INFO 2025-11-29 22:54:54,581 fcm 41016 43904 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:54:54,591 fcm 41016 11384 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:54:54,591 fcm 41016 11384 Starting English notifications: Cameroon’s Job Market Buzz: Thousands of National to Local Opportunities Open Now
+INFO 2025-11-29 22:54:54,591 fcm 41016 40244 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:54:54,597 basehttp 41016 11384 "POST /api/articles/ HTTP/1.1" 201 4856
+INFO 2025-11-29 22:54:54,757 fcm 41016 43904 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:54:54,757 fcm 41016 43904 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 22:54:54,797 fcm 41016 40244 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:54:54,797 fcm 41016 40244 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 22:55:57,631 fcm 41016 34392 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:55:57,631 fcm 41016 34392 Starting English notifications: Big Shot! New 2025/2026 Scholarships Open for Cameroonian Students
+INFO 2025-11-29 22:55:57,631 fcm 41016 6764 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:55:57,640 fcm 41016 34392 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:55:57,640 fcm 41016 34392 Starting English notifications: Big Shot! New 2025/2026 Scholarships Open for Cameroonian Students
+INFO 2025-11-29 22:55:57,640 fcm 41016 33744 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:55:57,640 basehttp 41016 34392 "POST /api/articles/ HTTP/1.1" 201 3439
+INFO 2025-11-29 22:55:57,758 fcm 41016 6764 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:55:57,758 fcm 41016 6764 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 22:55:57,873 fcm 41016 33744 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:55:57,873 fcm 41016 33744 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 22:57:59,885 fcm 41016 27316 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:57:59,885 fcm 41016 27316 Starting English notifications: Music Brings Hope to War-Torn Buea as Youth Dream Again
+INFO 2025-11-29 22:57:59,885 fcm 41016 29084 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:57:59,893 fcm 41016 27316 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:57:59,894 fcm 41016 27316 Starting English notifications: Music Brings Hope to War-Torn Buea as Youth Dream Again
+INFO 2025-11-29 22:57:59,894 fcm 41016 38892 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:57:59,894 basehttp 41016 27316 "POST /api/articles/ HTTP/1.1" 201 7205
+INFO 2025-11-29 22:58:00,073 fcm 41016 29084 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:58:00,073 fcm 41016 29084 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 22:58:00,980 fcm 41016 38892 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:58:00,980 fcm 41016 38892 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 22:59:30,626 fcm 41016 21984 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:59:30,627 fcm 41016 21984 Starting English notifications: Cameroon in Crisis: Opposition Calls Nationwide Shutdown, Protest Deaths Mount, and Leader Flees to Gambia
+INFO 2025-11-29 22:59:30,627 fcm 41016 41504 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:59:30,633 fcm 41016 21984 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 22:59:30,633 fcm 41016 21984 Starting English notifications: Cameroon in Crisis: Opposition Calls Nationwide Shutdown, Protest Deaths Mount, and Leader Flees to Gambia
+INFO 2025-11-29 22:59:30,633 fcm 41016 23656 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 22:59:30,633 basehttp 41016 21984 "POST /api/articles/ HTTP/1.1" 201 5521
+INFO 2025-11-29 22:59:30,777 fcm 41016 41504 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:59:30,777 fcm 41016 41504 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 22:59:32,096 fcm 41016 23656 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 22:59:32,096 fcm 41016 23656 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 23:00:59,277 fcm 41016 29828 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 23:00:59,277 fcm 41016 29828 Starting English notifications: Post-election Bloodbath and Mass Arrests Shake Cameroon
+INFO 2025-11-29 23:00:59,277 fcm 41016 27716 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 23:00:59,281 fcm 41016 29828 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 23:00:59,281 fcm 41016 29828 Starting English notifications: Post-election Bloodbath and Mass Arrests Shake Cameroon
+INFO 2025-11-29 23:00:59,281 fcm 41016 30260 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 23:00:59,292 basehttp 41016 29828 "POST /api/articles/ HTTP/1.1" 201 5338
+INFO 2025-11-29 23:00:59,402 fcm 41016 27716 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 23:00:59,402 fcm 41016 27716 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 23:00:59,455 fcm 41016 30260 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 23:00:59,455 fcm 41016 30260 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 23:03:01,829 fcm 41016 44416 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 23:03:01,831 fcm 41016 44416 Starting English notifications: Jovi Drops Fire, Tells Cameroonians: Register and Vote or Suffer!
+INFO 2025-11-29 23:03:01,832 fcm 41016 10988 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 23:03:01,835 basehttp 41016 44416 "POST /api/articles/ HTTP/1.1" 201 6465
+INFO 2025-11-29 23:03:02,039 fcm 41016 10988 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 23:03:02,039 fcm 41016 10988 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 23:04:39,287 fcm 41016 1688 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 23:04:39,293 fcm 41016 1688 Starting English notifications: Tal Kravitz Teams Up with MBOA Choir Ahead of Big Cameroon Concert
+INFO 2025-11-29 23:04:39,293 fcm 41016 39692 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 23:04:39,297 fcm 41016 1688 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 23:04:39,297 fcm 41016 1688 Starting English notifications: Tal Kravitz Teams Up with MBOA Choir Ahead of Big Cameroon Concert
+INFO 2025-11-29 23:04:39,297 fcm 41016 3164 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 23:04:39,297 basehttp 41016 1688 "POST /api/articles/ HTTP/1.1" 201 2929
+INFO 2025-11-29 23:04:39,431 fcm 41016 39692 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 23:04:39,431 fcm 41016 39692 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 23:04:40,464 fcm 41016 3164 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 23:04:40,464 fcm 41016 3164 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-29 23:05:53,524 fcm 41016 28856 Preparing notifications: 0 French, 1 English
+INFO 2025-11-29 23:05:53,525 fcm 41016 28856 Starting English notifications: Diri45 & Local Music Stars Fueling University Youth's Dream in Cameroon
+INFO 2025-11-29 23:05:53,525 fcm 41016 11576 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-29 23:05:53,527 basehttp 41016 28856 "POST /api/articles/ HTTP/1.1" 201 4503
+INFO 2025-11-29 23:05:53,657 fcm 41016 11576 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-29 23:05:53,657 fcm 41016 11576 [EN] Total: 1 successful, 0 failed out of 1
