@@ -3162,3 +3162,189 @@ INFO 2025-11-29 20:50:16,562 fcm 17996 1224 FCM Multicast sent: 1 successful, 0 
 INFO 2025-11-29 20:50:20,535 basehttp 17996 25860 "GET /media/audio/french/society_20251129_204818.mp3 HTTP/1.1" 200 1438656
 WARNING 2025-11-29 20:50:20,685 log 17996 25860 Not Found: /favicon.ico
 WARNING 2025-11-29 20:50:20,686 basehttp 17996 25860 "GET /favicon.ico HTTP/1.1" 404 4100
+INFO 2025-11-29 21:30:05,935 autoreload 27784 35628 Watching for file changes with StatReloader
+INFO 2025-11-29 21:32:18,535 fcm 27784 29760 Sending notifications: 1 French, 0 English
+INFO 2025-11-29 21:32:18,536 fcm 27784 29760 Sending French notification: Cameroun Sport : Eto'o Réélu, Clubs en Mouvement, Nouveau Chapitre à la FECAFOOT !
+INFO 2025-11-29 21:32:18,548 basehttp 27784 29760 "POST /api/articles/ HTTP/1.1" 201 4629
+INFO 2025-11-29 21:32:18,597 fcm 27784 15924 Firebase Admin SDK initialized with C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\serviceAccountKey.json
+INFO 2025-11-29 21:32:18,597 fcm 27784 15924 Sending FCM notification with link: https://localhost:8000/article/34/
+WARNING 2025-11-29 21:32:22,364 basehttp 27784 11576 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 21:32:22,385 fcm 27784 15924 FCM Multicast sent: 1 successful, 0 failed.
+INFO 2025-11-29 21:33:17,504 fcm 27784 43276 Sending notifications: 1 French, 0 English
+INFO 2025-11-29 21:33:17,505 fcm 27784 43276 Sending French notification: Drame au Football: L'emprise de Samuel Eto'o se renforce à la FECAFOOT alors que l'élection approche
+INFO 2025-11-29 21:33:17,505 fcm 27784 32528 Sending FCM notification with link: https://localhost:8000/article/35/
+INFO 2025-11-29 21:33:17,512 fcm 27784 43276 Sending notifications: 1 French, 0 English
+INFO 2025-11-29 21:33:17,512 fcm 27784 43276 Sending French notification: Drame au Football: L'emprise de Samuel Eto'o se renforce à la FECAFOOT alors que l'élection approche
+INFO 2025-11-29 21:33:17,512 fcm 27784 23296 Sending FCM notification with link: https://localhost:8000/article/35/
+INFO 2025-11-29 21:33:17,518 basehttp 27784 43276 "POST /api/articles/ HTTP/1.1" 201 3566
+WARNING 2025-11-29 21:33:17,823 basehttp 27784 38460 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 21:33:17,823 fcm 27784 32528 FCM Multicast sent: 1 successful, 0 failed.
+INFO 2025-11-29 21:33:17,987 basehttp 27784 22888 "GET /media/thumbnails/entertainment_20251129_213240_1.jpeg HTTP/1.1" 200 105653
+INFO 2025-11-29 21:33:18,961 fcm 27784 23296 FCM Multicast sent: 1 successful, 0 failed.
+WARNING 2025-11-29 21:33:18,971 basehttp 27784 38976 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 21:33:18,982 basehttp 27784 22888 "GET /media/thumbnails/entertainment_20251129_213240_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 21:33:53,610 basehttp 27784 22888 "GET /feed/ HTTP/1.1" 200 43856
+WARNING 2025-11-29 21:33:53,672 log 27784 22888 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 21:33:53,673 basehttp 27784 22888 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-29 21:33:54,038 basehttp 27784 22888 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-29 21:33:54,263 basehttp 27784 22888 "POST /api/fcm/subscribe/ HTTP/1.1" 200 31
+INFO 2025-11-29 21:33:56,232 basehttp 27784 22888 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-29 21:34:18,316 fcm 27784 18880 Sending notifications: 1 French, 0 English
+INFO 2025-11-29 21:34:18,316 fcm 27784 18880 Sending French notification: Cameroun : Budget 2026, pari fou sur la jeunesse, les femmes et la relance économique
+INFO 2025-11-29 21:34:18,317 fcm 27784 23792 Sending FCM notification with link: https://localhost:8000/article/36/
+INFO 2025-11-29 21:34:18,325 fcm 27784 18880 Sending notifications: 1 French, 0 English
+INFO 2025-11-29 21:34:18,325 fcm 27784 18880 Sending French notification: Cameroun : Budget 2026, pari fou sur la jeunesse, les femmes et la relance économique
+INFO 2025-11-29 21:34:18,326 fcm 27784 21856 Sending FCM notification with link: https://localhost:8000/article/36/
+INFO 2025-11-29 21:34:18,329 basehttp 27784 18880 "POST /api/articles/ HTTP/1.1" 201 3294
+INFO 2025-11-29 21:34:18,543 fcm 27784 23792 FCM Multicast sent: 1 successful, 0 failed.
+WARNING 2025-11-29 21:34:18,547 basehttp 27784 23860 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 21:34:18,562 basehttp 27784 22888 "GET /media/thumbnails/business_20251129_213339_1.jpeg HTTP/1.1" 200 33577
+INFO 2025-11-29 21:34:18,570 fcm 27784 21856 FCM Multicast sent: 1 successful, 0 failed.
+WARNING 2025-11-29 21:34:18,639 basehttp 27784 24060 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 21:34:18,648 basehttp 27784 22888 "GET /media/thumbnails/business_20251129_213339_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 21:36:08,404 fcm 27784 23144 Sending notifications: 1 French, 0 English
+INFO 2025-11-29 21:36:08,406 fcm 27784 23144 Sending French notification: Cameroun : cybersécurité renforcée et jeunesse en renfort tech
+INFO 2025-11-29 21:36:08,406 fcm 27784 12780 Sending FCM notification with link: https://localhost:8000/article/37/
+INFO 2025-11-29 21:36:08,408 basehttp 27784 23144 "POST /api/articles/ HTTP/1.1" 201 3929
+INFO 2025-11-29 21:36:08,611 fcm 27784 12780 FCM Multicast sent: 1 successful, 0 failed.
+WARNING 2025-11-29 21:36:09,233 basehttp 27784 22888 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 21:36:30,059 autoreload 44364 41488 Watching for file changes with StatReloader
+INFO 2025-11-29 21:37:11,254 fcm 44364 10696 Sending notifications: 1 French, 0 English
+INFO 2025-11-29 21:37:11,254 fcm 44364 10696 Sending French notification: Cameroun reporte la campagne anti-polio à cause d’un nouveau variant danger
+INFO 2025-11-29 21:37:11,297 fcm 44364 12076 Firebase Admin SDK initialized with C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\serviceAccountKey.json
+INFO 2025-11-29 21:37:11,297 fcm 44364 12076 Sending FCM notification with link: https://localhost:8000/article/38/
+INFO 2025-11-29 21:37:11,302 fcm 44364 10696 Sending notifications: 1 French, 0 English
+INFO 2025-11-29 21:37:11,302 fcm 44364 10696 Sending French notification: Cameroun reporte la campagne anti-polio à cause d’un nouveau variant danger
+INFO 2025-11-29 21:37:11,303 fcm 44364 35288 Sending FCM notification with link: https://localhost:8000/article/38/
+INFO 2025-11-29 21:37:11,309 basehttp 44364 10696 "POST /api/articles/ HTTP/1.1" 201 3809
+INFO 2025-11-29 21:37:15,877 fcm 44364 35288 FCM Multicast sent: 1 successful, 0 failed.
+WARNING 2025-11-29 21:37:15,883 basehttp 44364 33820 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 21:37:15,892 fcm 44364 12076 FCM Multicast sent: 1 successful, 0 failed.
+INFO 2025-11-29 21:37:15,996 basehttp 44364 21892 "GET /media/thumbnails/health_20251129_213629_1.jpeg HTTP/1.1" 200 32313
+WARNING 2025-11-29 21:37:16,066 basehttp 44364 22104 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 21:37:16,074 basehttp 44364 21892 "GET /media/thumbnails/health_20251129_213629_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 21:37:45,016 basehttp 44364 21892 "GET /feed/ HTTP/1.1" 200 43856
+WARNING 2025-11-29 21:37:45,080 log 44364 21892 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 21:37:45,081 basehttp 44364 21892 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-29 21:37:45,448 basehttp 44364 21892 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-29 21:37:45,700 basehttp 44364 21892 "POST /api/fcm/subscribe/ HTTP/1.1" 200 31
+INFO 2025-11-29 21:37:47,644 basehttp 44364 21892 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-29 21:37:58,770 basehttp 44364 21892 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-29 21:37:58,834 basehttp 44364 21892 "GET /api/articles/ HTTP/1.1" 200 46575
+INFO 2025-11-29 21:37:58,865 basehttp 44364 21892 "GET /media/thumbnails/health_20251129_213629_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 21:37:58,879 basehttp 44364 21108 "GET /media/thumbnails/business_20251129_213339_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 21:37:58,896 basehttp 44364 41180 "GET /media/thumbnails/economy_20251129_204407_1.png HTTP/1.1" 304 0
+INFO 2025-11-29 21:37:58,911 basehttp 44364 44948 "GET /media/thumbnails/entertainment_20251129_213240_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 21:37:58,926 basehttp 44364 8820 "GET /media/thumbnails/environment_20251129_204113_1.png HTTP/1.1" 304 0
+INFO 2025-11-29 21:37:58,941 basehttp 44364 21108 "GET /media/thumbnails/international_20251129_204221_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 21:37:58,949 basehttp 44364 21892 "GET /media/thumbnails/society_20251129_204818_3.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 21:38:09,550 basehttp 44364 21892 "GET /media/audio/english/business_20251129_213339.mp3 HTTP/1.1" 200 600192
+WARNING 2025-11-29 21:38:09,692 log 44364 21892 Not Found: /favicon.ico
+WARNING 2025-11-29 21:38:09,693 basehttp 44364 21892 "GET /favicon.ico HTTP/1.1" 404 4100
+INFO 2025-11-29 21:39:25,611 basehttp 44364 19568 "GET / HTTP/1.1" 200 57790
+INFO 2025-11-29 21:39:25,690 basehttp 44364 42680 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-29 21:39:25,690 basehttp 44364 10544 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+WARNING 2025-11-29 21:39:25,698 log 44364 19568 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 21:39:25,700 basehttp 44364 19568 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-29 21:39:30,963 basehttp 44364 19568 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-29 21:40:17,344 fcm 44364 25556 Sending notifications: 1 French, 0 English
+INFO 2025-11-29 21:40:17,345 fcm 44364 25556 Sending French notification: Le secteur éducatif camerounais franchit de nouveaux jalons : repas scolaires, formation numérique et investissement dans les enseignants transforment le paysage éducatif
+INFO 2025-11-29 21:40:17,345 fcm 44364 43676 Sending FCM notification with link: https://localhost:8000/article/39/
+INFO 2025-11-29 21:40:17,345 basehttp 44364 25556 "POST /api/articles/ HTTP/1.1" 201 9450
+INFO 2025-11-29 21:40:18,535 fcm 44364 43676 FCM Multicast sent: 1 successful, 0 failed.
+WARNING 2025-11-29 21:40:18,542 basehttp 44364 27896 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 21:41:54,482 fcm 44364 44020 Sending notifications: 1 French, 0 English
+INFO 2025-11-29 21:41:54,482 fcm 44364 44020 Sending French notification: Le pouls culturel du Cameroun : Jeunesse, foi et festivals illuminent novembre
+INFO 2025-11-29 21:41:54,482 fcm 44364 10384 Sending FCM notification with link: https://localhost:8000/article/40/
+INFO 2025-11-29 21:41:54,489 basehttp 44364 44020 "POST /api/articles/ HTTP/1.1" 201 2551
+INFO 2025-11-29 21:41:55,899 fcm 44364 10384 FCM Multicast sent: 1 successful, 0 failed.
+WARNING 2025-11-29 21:41:55,904 basehttp 44364 9816 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 21:42:12,704 basehttp 44364 19568 "GET /admin/api/fcmsubscription/ HTTP/1.1" 200 14669
+INFO 2025-11-29 21:42:12,778 basehttp 44364 19568 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-29 21:42:13,819 basehttp 44364 19568 "GET /admin/api/fcmsubscription/4/change/ HTTP/1.1" 200 15806
+INFO 2025-11-29 21:42:13,876 basehttp 44364 19568 "GET /static/admin/css/forms.css HTTP/1.1" 200 8525
+INFO 2025-11-29 21:42:13,879 basehttp 44364 42680 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-29 21:42:13,889 basehttp 44364 10544 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2025-11-29 21:42:13,893 basehttp 44364 19568 "GET /static/admin/css/widgets.css HTTP/1.1" 200 11973
+INFO 2025-11-29 21:42:13,915 basehttp 44364 19568 "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2025-11-29 21:42:15,532 basehttp 44364 19568 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-29 21:42:19,428 basehttp 44364 19568 "GET /admin/api/fcmsubscription/4/change/ HTTP/1.1" 200 15806
+INFO 2025-11-29 21:42:19,466 basehttp 44364 19568 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-29 21:42:21,047 basehttp 44364 19568 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-29 21:42:37,318 basehttp 44364 19568 "POST /admin/api/fcmsubscription/4/change/ HTTP/1.1" 302 0
+INFO 2025-11-29 21:42:37,340 basehttp 44364 19568 "GET /admin/api/fcmsubscription/ HTTP/1.1" 200 14917
+INFO 2025-11-29 21:42:37,385 basehttp 44364 19568 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-29 21:42:38,888 basehttp 44364 19568 "GET /admin/api/fcmsubscription/4/change/ HTTP/1.1" 200 15806
+INFO 2025-11-29 21:42:38,932 basehttp 44364 19568 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-29 21:42:38,979 basehttp 44364 19568 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-29 21:42:40,550 basehttp 44364 19568 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-29 21:43:21,842 fcm 44364 39804 Sending notifications: 0 French, 1 English
+INFO 2025-11-29 21:43:21,842 fcm 44364 39804 Sending English notification: Mass Arrests Shake Cameroon Amid Widespread Looting, Vandalism, and Arson
+INFO 2025-11-29 21:43:21,842 fcm 44364 38904 Sending FCM notification with link: https://localhost:8000/article/41/
+INFO 2025-11-29 21:43:21,845 basehttp 44364 39804 "POST /api/articles/ HTTP/1.1" 201 3848
+INFO 2025-11-29 21:43:22,091 fcm 44364 38904 FCM Multicast sent: 1 successful, 0 failed.
+WARNING 2025-11-29 21:43:22,098 basehttp 44364 21156 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-29 21:45:02,795 autoreload 44364 41488 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\views.py changed, reloading.
+INFO 2025-11-29 21:45:03,930 autoreload 38016 42220 Watching for file changes with StatReloader
+INFO 2025-11-29 21:45:29,085 basehttp 38016 35572 "GET /feed/ HTTP/1.1" 200 43856
+WARNING 2025-11-29 21:45:29,162 log 38016 35572 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 21:45:29,164 basehttp 38016 35572 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-29 21:45:29,545 basehttp 38016 35572 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-29 21:45:29,742 views 38016 35572 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-29 21:45:29,752 basehttp 38016 35572 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-29 21:45:31,738 basehttp 38016 35572 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-29 21:45:35,330 basehttp 38016 35572 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-29 21:45:35,415 basehttp 38016 35572 "GET /api/articles/ HTTP/1.1" 200 44601
+INFO 2025-11-29 21:45:35,453 basehttp 38016 35572 "GET /media/thumbnails/health_20251129_213629_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 21:45:35,480 basehttp 38016 25884 "GET /media/thumbnails/entertainment_20251129_213240_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 21:45:35,497 basehttp 38016 35572 "GET /media/thumbnails/society_20251129_204818_3.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 21:45:35,515 basehttp 38016 22488 "GET /media/thumbnails/business_20251129_213339_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-29 21:45:43,895 fcm 38016 20068 Sending notifications: 0 French, 1 English
+INFO 2025-11-29 21:45:43,895 fcm 38016 20068 Sending English notification: Cameroon's Environmental Overhaul: From Dschang's Revival to Underground Gold Mining Innovation
+INFO 2025-11-29 21:45:43,950 fcm 38016 23064 Firebase Admin SDK initialized with C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\serviceAccountKey.json
+INFO 2025-11-29 21:45:43,951 fcm 38016 20068 Sending notifications: 0 French, 1 English
+INFO 2025-11-29 21:45:43,951 fcm 38016 23064 Sending FCM notification with link: https://localhost:8000/article/42/
+INFO 2025-11-29 21:45:43,951 fcm 38016 20068 Sending English notification: Cameroon's Environmental Overhaul: From Dschang's Revival to Underground Gold Mining Innovation
+INFO 2025-11-29 21:45:43,952 fcm 38016 4720 Sending FCM notification with link: https://localhost:8000/article/42/
+INFO 2025-11-29 21:45:43,956 basehttp 38016 20068 "POST /api/articles/ HTTP/1.1" 201 6194
+INFO 2025-11-29 21:45:45,310 basehttp 38016 22488 "GET /feed/ HTTP/1.1" 200 43856
+WARNING 2025-11-29 21:45:45,375 log 38016 22488 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 21:45:45,375 basehttp 38016 22488 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-29 21:45:45,807 basehttp 38016 22488 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-29 21:45:46,019 views 38016 22488 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-29 21:45:46,029 basehttp 38016 22488 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-29 21:45:47,996 basehttp 38016 22488 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-29 21:45:48,724 fcm 38016 4720 FCM Multicast sent: 1 successful, 0 failed.
+INFO 2025-11-29 21:45:48,981 fcm 38016 23064 FCM Multicast sent: 1 successful, 0 failed.
+INFO 2025-11-29 21:45:49,569 basehttp 38016 22488 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-29 21:45:49,623 basehttp 38016 22488 "GET /api/articles/ HTTP/1.1" 200 44369
+INFO 2025-11-29 21:45:49,791 basehttp 38016 22488 "GET /media/thumbnails/environment_20251129_214401_1.png HTTP/1.1" 200 844372
+INFO 2025-11-29 21:45:53,939 basehttp 38016 22488 "GET /feed/ HTTP/1.1" 200 43856
+WARNING 2025-11-29 21:45:53,996 log 38016 22488 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 21:45:53,996 basehttp 38016 22488 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-29 21:45:54,298 basehttp 38016 22488 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-29 21:45:54,421 views 38016 22488 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-29 21:45:54,430 basehttp 38016 22488 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-29 21:45:56,396 basehttp 38016 22488 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-29 21:45:58,305 basehttp 38016 22488 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-29 21:45:58,350 basehttp 38016 22488 "GET /api/articles/ HTTP/1.1" 200 44369
+INFO 2025-11-29 21:45:58,367 basehttp 38016 22488 "GET /media/thumbnails/environment_20251129_214401_1.png HTTP/1.1" 304 0
+INFO 2025-11-29 21:46:02,040 basehttp 38016 22488 "GET /feed/ HTTP/1.1" 200 43856
+WARNING 2025-11-29 21:46:02,108 log 38016 22488 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-29 21:46:02,108 basehttp 38016 22488 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-29 21:46:02,432 basehttp 38016 22488 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-29 21:46:02,565 views 38016 22488 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-29 21:46:02,574 basehttp 38016 22488 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-29 21:46:04,549 basehttp 38016 22488 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-29 21:46:22,313 basehttp 38016 22488 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-29 21:46:22,357 basehttp 38016 22488 "GET /api/articles/ HTTP/1.1" 200 44369
+INFO 2025-11-29 21:46:22,388 basehttp 38016 22488 "GET /media/thumbnails/environment_20251129_214401_1.png HTTP/1.1" 304 0
+INFO 2025-11-29 21:46:32,257 fcm 38016 40340 Sending notifications: 0 French, 1 English
+INFO 2025-11-29 21:46:32,258 fcm 38016 40340 Sending English notification: Cameroon's Cocoa Sector Surges Forward: Africa Processing Company Opens Second Transformation Plant
+INFO 2025-11-29 21:46:32,259 fcm 38016 28932 Sending FCM notification with link: https://localhost:8000/article/43/
+INFO 2025-11-29 21:46:32,264 fcm 38016 40340 Sending notifications: 0 French, 1 English
+INFO 2025-11-29 21:46:32,264 fcm 38016 40340 Sending English notification: Cameroon's Cocoa Sector Surges Forward: Africa Processing Company Opens Second Transformation Plant
+INFO 2025-11-29 21:46:32,264 fcm 38016 33560 Sending FCM notification with link: https://localhost:8000/article/43/
+INFO 2025-11-29 21:46:32,264 basehttp 38016 40340 "POST /api/articles/ HTTP/1.1" 201 2922
+INFO 2025-11-29 21:46:32,441 fcm 38016 28932 FCM Multicast sent: 1 successful, 0 failed.
+INFO 2025-11-29 21:46:32,483 fcm 38016 33560 FCM Multicast sent: 1 successful, 0 failed.

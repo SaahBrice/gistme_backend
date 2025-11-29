@@ -117,42 +117,60 @@ def _send_multicast(article_data, tokens):
 def send_push_notification(article):
     """
     Sends a push notification for the given article to all subscribers.
+    Sends separate notifications for French and English users.
     This runs in a separate thread to be non-blocking.
     """
     try:
-        # Extract necessary data
-        headline = article.headline_en or article.headline_fr or article.headline or "New Story"
-        summary = article.english_summary or article.french_summary or "Read the latest story on Gist4u."
-        # Truncate summary
-        summary = (summary[:100] + '...') if len(summary) > 100 else summary
-        
+        # Prepare thumbnail URL
         thumbnail_url = None
         if article.thumbnails and len(article.thumbnails) > 0:
-            # Assuming thumbnails are full URLs or relative paths that need full domain
-            # For now, passing as is, but might need domain prefix if relative
             thumbnail_url = article.thumbnails[0]
         elif article.thumbnail_image:
              thumbnail_url = article.thumbnail_image.url
 
-        article_data = {
-            'id': article.id,
-            'headline': headline,
-            'summary': summary,
-            'thumbnail_url': thumbnail_url
-        }
-
-        # Get all tokens
-        # In a real app with millions of users, we would batch this.
-        # For now, fetching all is fine for smaller scale.
-        tokens = list(FCMSubscription.objects.values_list('token', flat=True))
+        # Get all FCM subscriptions grouped by language
+        french_tokens = list(FCMSubscription.objects.filter(preferred_language='fr').values_list('token', flat=True))
+        english_tokens = list(FCMSubscription.objects.filter(preferred_language='en').values_list('token', flat=True))
         
-        if not tokens:
-            logger.info("No FCM subscribers to notify.")
-            return
+        logger.info(f"Sending notifications: {len(french_tokens)} French, {len(english_tokens)} English")
 
-        # Run in thread
-        thread = threading.Thread(target=_send_multicast, args=(article_data, tokens))
-        thread.start()
+        # Send French notifications
+        if french_tokens:
+            headline_fr = article.headline_fr or article.headline or "Nouvelle histoire"
+            summary_fr = article.french_summary or "Lisez la dernière histoire sur Gist4u."
+            summary_fr = (summary_fr[:100] + '...') if len(summary_fr) > 100 else summary_fr
+            
+            article_data_fr = {
+                'id': article.id,
+                'headline': headline_fr,
+                'summary': summary_fr,
+                'thumbnail_url': thumbnail_url
+            }
+            
+            logger.info(f"Sending French notification: {headline_fr}")
+            thread = threading.Thread(target=_send_multicast, args=(article_data_fr, french_tokens))
+            thread.start()
+
+        # Send English notifications
+        if english_tokens:
+            headline_en = article.headline_en or article.headline or "New Story"
+            summary_en = article.english_summary or "Read the latest story on Gist4u."
+            summary_en = (summary_en[:100] + '...') if len(summary_en) > 100 else summary_en
+            
+            article_data_en = {
+                'id': article.id,
+                'headline': headline_en,
+                'summary': summary_en,
+                'thumbnail_url': thumbnail_url
+            }
+            
+            logger.info(f"Sending English notification: {headline_en}")
+            thread = threading.Thread(target=_send_multicast, args=(article_data_en, english_tokens))
+            thread.start()
+        
+        if not french_tokens and not english_tokens:
+            logger.info("No FCM subscribers to notify.")
         
     except Exception as e:
         logger.error(f"Error preparing push notification: {e}")
+

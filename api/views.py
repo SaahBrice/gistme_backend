@@ -103,15 +103,35 @@ class FileUploadView(APIView):
 class FCMSubscribeView(APIView):
     def post(self, request):
         try:
-            from .serializers import FCMSubscriptionSerializer
-            serializer = FCMSubscriptionSerializer(data=request.data)
-            if serializer.is_valid():
-                serializer.save()
-                return Response(serializer.data, status=status.HTTP_201_CREATED)
-            # If token already exists, we can return 200 OK
-            if 'token' in serializer.errors and 'unique' in str(serializer.errors['token']):
-                return Response({"status": "already_subscribed"}, status=status.HTTP_200_OK)
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            from .models import FCMSubscription
+            
+            token = request.data.get('token')
+            preferred_language = request.data.get('preferred_language', 'fr')
+            
+            if not token:
+                return Response({"error": "Token is required"}, status=status.HTTP_400_BAD_REQUEST)
+            
+            # Update or create - this will update the language if token exists
+            subscription, created = FCMSubscription.objects.update_or_create(
+                token=token,
+                defaults={'preferred_language': preferred_language}
+            )
+            
+            if created:
+                logger.info(f"New FCM subscription created: {token[:20]}... (lang: {preferred_language})")
+                return Response({
+                    "status": "subscribed",
+                    "token": token,
+                    "preferred_language": preferred_language
+                }, status=status.HTTP_201_CREATED)
+            else:
+                logger.info(f"FCM subscription updated: {token[:20]}... (lang: {preferred_language})")
+                return Response({
+                    "status": "updated",
+                    "token": token,
+                    "preferred_language": preferred_language
+                }, status=status.HTTP_200_OK)
+                
         except Exception as e:
             logger.error(f"FCM Subscription failed: {e}", exc_info=True)
             return Response({"error": "Subscription failed"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

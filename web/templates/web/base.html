@@ -225,14 +225,22 @@
                         if (token) {
                             console.log('✅ FCM Token obtained:', token);
 
-                            // Step 4: Send token to backend
+                            // Detect user's preferred language from browser
+                            const browserLang = navigator.language || navigator.userLanguage || 'fr';
+                            const preferredLanguage = browserLang.toLowerCase().startsWith('fr') ? 'fr' : 'en';
+                            console.log('Detected language:', browserLang, '→ Using:', preferredLanguage);
+
+                            // Step 4: Send token and language to backend
                             const response = await fetch('/api/fcm/subscribe/', {
                                 method: 'POST',
                                 headers: {
                                     'Content-Type': 'application/json',
                                     'X-CSRFToken': this.getCookie('csrftoken')
                                 },
-                                body: JSON.stringify({ token: token })
+                                body: JSON.stringify({
+                                    token: token,
+                                    preferred_language: preferredLanguage
+                                })
                             });
 
                             if (response.ok) {

@@ -88,12 +88,23 @@ class VisitorSubscription(models.Model):
 
 
 class FCMSubscription(models.Model):
+    LANGUAGE_CHOICES = [
+        ('fr', 'French'),
+        ('en', 'English'),
+    ]
+    
     token = models.CharField(max_length=500, unique=True)
+    preferred_language = models.CharField(
+        max_length=2,
+        choices=LANGUAGE_CHOICES,
+        default='fr',
+        help_text='User\'s preferred language for notifications'
+    )
     created_at = models.DateTimeField(auto_now_add=True)
     last_used_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f"FCM Token {self.token[:20]}..."
+        return f"FCM Token {self.token[:20]}... ({self.preferred_language})"
 
 
 # Signals to automatically update comment_count

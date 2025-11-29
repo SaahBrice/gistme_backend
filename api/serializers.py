@@ -8,10 +8,12 @@ class VisitorSubscriptionSerializer(serializers.ModelSerializer):
 
 
 class FCMSubscriptionSerializer(serializers.ModelSerializer):
+    preferred_language = serializers.CharField(max_length=2, required=False, default='fr')
+    
     class Meta:
         from .models import FCMSubscription
         model = FCMSubscription
-        fields = ['token']
+        fields = ['token', 'preferred_language']
 
 
 class CommentSerializer(serializers.ModelSerializer):
