@@ -4508,3 +4508,37 @@ INFO 2025-11-30 15:18:36,393 basehttp 39572 17152 "GET /media/thumbnails/sports_
 INFO 2025-11-30 15:18:36,394 fcm 39572 41192 [EN] Batch 1: 1 successful, 0 failed
 INFO 2025-11-30 15:18:36,395 fcm 39572 41192 [EN] Total: 1 successful, 0 failed out of 1
 WARNING 2025-11-30 15:19:44,570 basehttp 39572 16448 "GET /static/web/js/service-worker.js HTTP/1.1" 404 1886
+INFO 2025-11-30 15:31:58,055 autoreload 7216 44824 Watching for file changes with StatReloader
+INFO 2025-11-30 15:32:01,372 basehttp 7216 22900 "GET /feed/ HTTP/1.1" 200 44396
+INFO 2025-11-30 15:32:01,400 basehttp 7216 25648 "GET /static/web/js/pwa-install.js HTTP/1.1" 304 0
+INFO 2025-11-30 15:32:01,400 basehttp 7216 22900 "GET /static/web/css/feed.css HTTP/1.1" 304 0
+INFO 2025-11-30 15:32:01,401 basehttp 7216 22352 "GET /static/web/js/feed-actions.js HTTP/1.1" 304 0
+INFO 2025-11-30 15:32:01,496 basehttp 7216 38248 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-11-30 15:32:01,639 basehttp 7216 38248 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-30 15:32:01,711 basehttp 7216 3252 "GET /static/web/manifest.json HTTP/1.1" 304 0
+INFO 2025-11-30 15:32:01,719 basehttp 7216 22352 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 304 0
+INFO 2025-11-30 15:32:01,730 views 7216 38248 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-30 15:32:01,738 basehttp 7216 38248 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-30 15:32:03,378 basehttp 7216 38248 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6510
+INFO 2025-11-30 15:32:04,710 basehttp 7216 38248 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-30 15:32:04,754 basehttp 7216 38248 "GET /api/articles/ HTTP/1.1" 200 91698
+INFO 2025-11-30 15:32:04,777 basehttp 7216 38248 "GET /media/thumbnails/sports_20251130_151807_1.webp HTTP/1.1" 304 0
+INFO 2025-11-30 15:32:04,801 basehttp 7216 22352 "GET /media/thumbnails/music_artistsuniversity_20251130_123201_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 15:32:04,820 basehttp 7216 38248 "GET /media/thumbnails/Mboa_music_20251130_123106_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 15:32:04,834 basehttp 7216 25648 "GET /media/thumbnails/happened_in_any_region_20251130_122733_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 15:32:04,852 basehttp 7216 22900 "GET /media/thumbnails/disgusting_20251130_122838_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 15:32:08,295 basehttp 7216 22900 "GET /feed/ HTTP/1.1" 200 44396
+WARNING 2025-11-30 15:32:08,318 log 7216 22900 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-30 15:32:08,319 basehttp 7216 22900 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4227
+INFO 2025-11-30 15:32:29,862 basehttp 7216 22900 "GET /static/web/icons/icon-512x512.png HTTP/1.1" 200 376241
+INFO 2025-11-30 15:32:29,895 basehttp 7216 22900 "GET /static/web/icons/icon-maskable-512x512.png HTTP/1.1" 200 390230
+WARNING 2025-11-30 15:36:14,862 basehttp 7216 41920 "GET /static/web/js/service-worker.js HTTP/1.1" 404 1886
+INFO 2025-11-30 15:37:16,759 basehttp 7216 22900 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 304 0
+INFO 2025-11-30 15:37:17,842 basehttp 7216 22900 "GET /static/web/icons/icon-512x512.png HTTP/1.1" 304 0
+INFO 2025-11-30 15:37:17,855 basehttp 7216 22900 "GET /static/web/icons/icon-maskable-512x512.png HTTP/1.1" 304 0
+WARNING 2025-11-30 15:41:44,928 basehttp 7216 10076 "GET /static/web/js/service-worker.js HTTP/1.1" 404 1886
+INFO 2025-11-30 15:42:44,400 autoreload 7216 44824 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\gistme_backend\settings.py changed, reloading.
+INFO 2025-11-30 15:42:45,227 autoreload 36948 43836 Watching for file changes with StatReloader
+INFO 2025-11-30 15:44:07,068 basehttp 36948 24828 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 304 0
+INFO 2025-11-30 15:44:07,089 basehttp 36948 24828 "GET /static/web/icons/icon-512x512.png HTTP/1.1" 304 0
+INFO 2025-11-30 15:44:07,105 basehttp 36948 24828 "GET /static/web/icons/icon-maskable-512x512.png HTTP/1.1" 304 0
