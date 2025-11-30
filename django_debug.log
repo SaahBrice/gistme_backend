@@ -4427,3 +4427,36 @@ INFO 2025-11-30 14:32:55,399 basehttp 9400 5456 "POST /api/fcm/subscribe/ HTTP/1
 INFO 2025-11-30 14:32:57,095 basehttp 9400 5456 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6510
 INFO 2025-11-30 14:32:58,743 basehttp 9400 5456 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
 INFO 2025-11-30 14:32:58,782 basehttp 9400 5456 "GET /api/articles/ HTTP/1.1" 200 92569
+INFO 2025-11-30 14:42:05,315 autoreload 36276 13452 Watching for file changes with StatReloader
+INFO 2025-11-30 14:42:09,497 basehttp 36276 27144 "GET / HTTP/1.1" 200 68107
+INFO 2025-11-30 14:42:09,567 basehttp 36276 27144 "GET /static/web/js/pwa-install.js HTTP/1.1" 304 0
+INFO 2025-11-30 14:42:09,568 basehttp 36276 35668 "GET /static/web/js/waiting-list.js HTTP/1.1" 304 0
+INFO 2025-11-30 14:42:10,136 basehttp 36276 16556 "GET /static/web/manifest.json HTTP/1.1" 304 0
+INFO 2025-11-30 14:42:10,147 basehttp 36276 27144 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 304 0
+INFO 2025-11-30 14:42:10,158 views 36276 35668 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-30 14:42:10,166 basehttp 36276 35668 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-30 14:42:11,816 basehttp 36276 35668 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6510
+INFO 2025-11-30 14:42:13,648 basehttp 36276 35668 "GET /feed/ HTTP/1.1" 200 44301
+INFO 2025-11-30 14:42:13,670 basehttp 36276 35668 "GET /static/web/js/feed-actions.js HTTP/1.1" 304 0
+INFO 2025-11-30 14:42:13,911 basehttp 36276 35668 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-30 14:42:14,006 views 36276 35668 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-30 14:42:14,014 basehttp 36276 35668 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-30 14:42:15,669 basehttp 36276 35668 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6510
+INFO 2025-11-30 14:42:16,712 basehttp 36276 35668 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-30 14:42:16,749 basehttp 36276 35668 "GET /api/articles/ HTTP/1.1" 200 92569
+INFO 2025-11-30 14:42:29,476 basehttp 36276 35668 "GET / HTTP/1.1" 200 68107
+INFO 2025-11-30 14:42:30,163 basehttp 36276 35668 "GET /feed/ HTTP/1.1" 200 44301
+INFO 2025-11-30 14:42:30,556 basehttp 36276 35668 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-30 14:42:30,685 views 36276 35668 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-30 14:42:30,693 basehttp 36276 35668 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-30 14:42:32,397 basehttp 36276 35668 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6510
+INFO 2025-11-30 14:42:35,439 basehttp 36276 35668 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-30 14:42:35,478 basehttp 36276 35668 "GET /api/articles/ HTTP/1.1" 200 92569
+INFO 2025-11-30 14:42:56,364 basehttp 36276 35668 "GET / HTTP/1.1" 200 68107
+INFO 2025-11-30 14:42:57,046 basehttp 36276 35668 "GET /feed/ HTTP/1.1" 200 44301
+INFO 2025-11-30 14:42:57,424 basehttp 36276 35668 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-30 14:42:57,563 views 36276 35668 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-30 14:42:57,572 basehttp 36276 35668 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-30 14:42:59,297 basehttp 36276 35668 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6510
+INFO 2025-11-30 14:43:00,703 basehttp 36276 35668 "GET /api/articles/?mood=angry HTTP/1.1" 200 28206
+INFO 2025-11-30 14:43:00,738 basehttp 36276 35668 "GET /media/thumbnails/politics_20251129_201611_1.jpeg HTTP/1.1" 304 0

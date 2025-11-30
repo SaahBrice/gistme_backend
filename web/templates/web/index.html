@@ -18,4 +18,26 @@
 
 {% block extra_scripts %}
 <script src="{% static 'web/js/waiting-list.js' %}"></script>
+
+<script>
+    // PWA Smart Redirect - Send returning users directly to feed
+    (function () {
+        // Check if user has visited before
+        const hasVisited = localStorage.getItem('gist4u_has_visited');
+
+        // Check if opened as PWA (standalone mode)
+        const isPWA = window.matchMedia('(display-mode: standalone)').matches ||
+            window.navigator.standalone === true;
+
+        // If returning user and opening from PWA, redirect to feed
+        if (hasVisited && isPWA) {
+            console.log('[PWA] Returning user detected - redirecting to feed');
+            window.location.href = '/feed/';
+        } else {
+            // Mark that user has visited
+            localStorage.setItem('gist4u_has_visited', 'true');
+            console.log('[PWA] First visit or browser mode - showing landing page');
+        }
+    })();
+</script>
 {% endblock %}
