@@ -1,9 +1,10 @@
 importScripts('https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js');
 importScripts('https://www.gstatic.com/firebasejs/9.22.0/firebase-messaging-compat.js');
 
-// PWA Configuration
-const CACHE_NAME = 'gist4u-v1';
-const RUNTIME_CACHE = 'gist4u-runtime-v1';
+// PWA Version - Increment this when you want to force update
+const VERSION = 'v1.0.1';
+const CACHE_NAME = `gist4u-static-${VERSION}`;
+const RUNTIME_CACHE = `gist4u-runtime-${VERSION}`;
 
 // Assets to cache on install
 const STATIC_ASSETS = [
@@ -46,20 +47,22 @@ self.addEventListener('install', (event) => {
 
 // PWA Activate Event - Clean up old caches
 self.addEventListener('activate', (event) => {
-    console.log('[Service Worker] Activating...');
+    console.log(`[Service Worker] Activating version ${VERSION}...`);
     event.waitUntil(
         caches.keys().then(cacheNames => {
             return Promise.all(
                 cacheNames
-                    .filter(name => name !== CACHE_NAME && name !== RUNTIME_CACHE)
+                    .filter(name => !name.includes(VERSION))
                     .map(name => {
                         console.log('[Service Worker] Deleting old cache:', name);
                         return caches.delete(name);
                     })
             );
+        }).then(() => {
+            console.log('[Service Worker] Claiming clients...');
+            return self.clients.claim();
         })
     );
-    return self.clients.claim();
 });
 
 // PWA Fetch Event - Network first, fallback to cache
@@ -176,4 +179,12 @@ self.addEventListener('notificationclick', function (event) {
             console.error('Error handling notification click:', error);
         })
     );
+});
+
+// Listen for skip waiting message from update manager
+self.addEventListener('message', (event) => {
+    if (event.data && event.data.type === 'SKIP_WAITING') {
+        console.log('[Service Worker] Received SKIP_WAITING message');
+        self.skipWaiting();
+    }
 });

@@ -4542,3 +4542,135 @@ INFO 2025-11-30 15:42:45,227 autoreload 36948 43836 Watching for file changes wi
 INFO 2025-11-30 15:44:07,068 basehttp 36948 24828 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 304 0
 INFO 2025-11-30 15:44:07,089 basehttp 36948 24828 "GET /static/web/icons/icon-512x512.png HTTP/1.1" 304 0
 INFO 2025-11-30 15:44:07,105 basehttp 36948 24828 "GET /static/web/icons/icon-maskable-512x512.png HTTP/1.1" 304 0
+INFO 2025-11-30 16:14:17,164 autoreload 25160 38272 Watching for file changes with StatReloader
+INFO 2025-11-30 16:14:40,492 basehttp 25160 41584 "GET / HTTP/1.1" 200 68202
+INFO 2025-11-30 16:14:40,573 basehttp 25160 41584 "GET /static/web/js/pwa-install.js HTTP/1.1" 304 0
+INFO 2025-11-30 16:14:40,574 basehttp 25160 44360 "GET /static/web/js/update-manager.js HTTP/1.1" 304 0
+INFO 2025-11-30 16:14:40,582 basehttp 25160 44360 "GET /static/web/js/waiting-list.js HTTP/1.1" 304 0
+INFO 2025-11-30 16:14:41,240 basehttp 25160 44360 "GET /feed/ HTTP/1.1" 200 44396
+INFO 2025-11-30 16:14:41,274 basehttp 25160 44360 "GET /static/web/js/feed-actions.js HTTP/1.1" 304 0
+INFO 2025-11-30 16:14:41,391 basehttp 25160 24168 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-11-30 16:14:41,631 basehttp 25160 44360 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-30 16:14:41,753 basehttp 25160 44360 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 304 0
+INFO 2025-11-30 16:14:41,779 views 25160 41584 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-30 16:14:41,788 basehttp 25160 41584 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-30 16:14:43,509 basehttp 25160 41584 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-11-30 16:14:43,551 basehttp 25160 26180 "GET /static/web/icons/icon-512x512.png HTTP/1.1" 304 0
+INFO 2025-11-30 16:14:43,564 basehttp 25160 41584 "GET / HTTP/1.1" 200 68202
+INFO 2025-11-30 16:14:43,582 basehttp 25160 44360 "GET /feed/ HTTP/1.1" 200 44396
+WARNING 2025-11-30 16:14:45,475 basehttp 25160 41720 "GET /static/web/js/service-worker.js HTTP/1.1" 404 1886
+INFO 2025-11-30 16:14:56,540 basehttp 25160 24168 "GET /static/web/manifest.json HTTP/1.1" 304 0
+INFO 2025-11-30 16:14:56,551 basehttp 25160 44360 "GET /feed/ HTTP/1.1" 200 44396
+WARNING 2025-11-30 16:14:56,579 log 25160 44360 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-30 16:14:56,579 basehttp 25160 44360 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4227
+INFO 2025-11-30 16:14:57,127 basehttp 25160 44360 "GET /static/web/icons/icon-maskable-512x512.png HTTP/1.1" 304 0
+INFO 2025-11-30 16:15:54,864 basehttp 25160 44360 "GET / HTTP/1.1" 200 68202
+INFO 2025-11-30 16:15:55,461 basehttp 25160 24168 "GET /static/web/manifest.json HTTP/1.1" 304 0
+INFO 2025-11-30 16:15:55,470 basehttp 25160 44360 "GET /feed/ HTTP/1.1" 200 44396
+INFO 2025-11-30 16:15:55,764 basehttp 25160 44360 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-30 16:15:55,867 views 25160 44360 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-30 16:15:55,875 basehttp 25160 44360 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-30 16:15:57,553 basehttp 25160 44360 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-11-30 16:16:02,579 basehttp 25160 44360 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-30 16:16:02,626 basehttp 25160 44360 "GET /api/articles/ HTTP/1.1" 200 91698
+INFO 2025-11-30 16:16:02,650 basehttp 25160 44360 "GET /media/thumbnails/sports_20251130_151807_1.webp HTTP/1.1" 304 0
+INFO 2025-11-30 16:16:02,665 basehttp 25160 44360 "GET /media/thumbnails/Mboa_music_20251130_123106_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 16:16:02,678 basehttp 25160 25864 "GET /media/thumbnails/scholarships_cameroonians_can_apply_20251130_122509_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 16:16:02,693 basehttp 25160 25864 "GET /media/thumbnails/Mboa_music_20251129_230321_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 16:16:02,706 basehttp 25160 25864 "GET /media/thumbnails/disgusting_20251129_230011_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 16:16:02,728 basehttp 25160 44360 "GET /media/thumbnails/technology_20251129_232830_1.png HTTP/1.1" 304 0
+INFO 2025-11-30 16:16:02,742 basehttp 25160 44360 "GET /media/thumbnails/happened_in_Buea_20251129_225632_1.png HTTP/1.1" 304 0
+INFO 2025-11-30 16:16:02,761 basehttp 25160 17200 "GET /media/thumbnails/happened_in_any_region_20251130_122733_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 16:16:02,777 basehttp 25160 41584 "GET /media/thumbnails/music_artistsuniversity_20251130_123201_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 16:16:02,794 basehttp 25160 26180 "GET /media/thumbnails/disgusting_20251130_122838_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 16:16:02,825 basehttp 25160 36752 "GET /media/thumbnails/entertainment_20251129_232607_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 16:16:02,840 basehttp 25160 25864 "GET /media/thumbnails/happened_in_any_region_20251129_225843_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 16:17:50,731 basehttp 25160 25864 "GET / HTTP/1.1" 200 68202
+INFO 2025-11-30 16:17:51,525 basehttp 25160 25864 "GET /feed/ HTTP/1.1" 200 44396
+INFO 2025-11-30 16:17:52,024 basehttp 25160 25864 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-30 16:17:52,143 basehttp 25160 24168 "GET /static/web/manifest.json HTTP/1.1" 304 0
+INFO 2025-11-30 16:17:52,170 views 25160 25864 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-30 16:17:52,180 basehttp 25160 25864 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-30 16:17:53,915 basehttp 25160 25864 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-11-30 16:17:59,548 basehttp 25160 25864 "GET /feed/ HTTP/1.1" 200 44396
+WARNING 2025-11-30 16:17:59,573 log 25160 25864 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-30 16:17:59,574 basehttp 25160 25864 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4227
+INFO 2025-11-30 16:18:29,179 basehttp 25160 25864 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-30 16:18:29,228 basehttp 25160 25864 "GET /api/articles/ HTTP/1.1" 200 91698
+INFO 2025-11-30 16:19:59,810 fcm 25160 18800 Preparing notifications: 0 French, 1 English
+INFO 2025-11-30 16:19:59,810 fcm 25160 18800 Starting English notifications: Tensions rise as Issa Tchiroma calls for nationwide shutdown from exile
+INFO 2025-11-30 16:19:59,850 basehttp 25160 18800 "POST /api/articles/ HTTP/1.1" 201 3512
+INFO 2025-11-30 16:19:59,850 fcm 25160 31700 Firebase Admin SDK initialized with C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\serviceAccountKey.json
+INFO 2025-11-30 16:19:59,850 fcm 25160 31700 [EN] Batch 1/1: Sending to 1 devices
+ERROR 2025-11-30 16:20:01,634 fcm 25160 31700 [EN] Batch 1 error: WebpushFCMOptions.link must be a HTTPS URL.
+INFO 2025-11-30 16:20:01,634 fcm 25160 31700 [EN] Total: 0 successful, 1 failed out of 1
+WARNING 2025-11-30 16:20:15,550 basehttp 25160 16820 "GET /static/web/js/service-worker.js HTTP/1.1" 404 1886
+INFO 2025-11-30 16:21:55,265 autoreload 39376 26736 Watching for file changes with StatReloader
+INFO 2025-11-30 16:23:26,404 fcm 39376 20100 Preparing notifications: 0 French, 1 English
+INFO 2025-11-30 16:23:26,404 fcm 39376 20100 Starting English notifications: Tensions and Political Turmoil Shake Cameroon Post-Election
+INFO 2025-11-30 16:23:26,449 fcm 39376 27040 Firebase Admin SDK initialized with C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\serviceAccountKey.json
+INFO 2025-11-30 16:23:26,450 fcm 39376 27040 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-30 16:23:26,455 basehttp 39376 20100 "POST /api/articles/ HTTP/1.1" 201 4774
+INFO 2025-11-30 16:23:29,950 fcm 39376 27040 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-30 16:23:29,951 fcm 39376 27040 [EN] Total: 1 successful, 0 failed out of 1
+WARNING 2025-11-30 16:23:29,970 basehttp 39376 27184 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-30 16:23:49,397 basehttp 39376 11088 "GET / HTTP/1.1" 200 68202
+INFO 2025-11-30 16:23:49,456 basehttp 39376 11088 "GET /static/web/js/pwa-install.js HTTP/1.1" 304 0
+INFO 2025-11-30 16:23:49,457 basehttp 39376 28808 "GET /static/web/js/update-manager.js HTTP/1.1" 304 0
+INFO 2025-11-30 16:23:50,591 basehttp 39376 44832 "GET /static/web/manifest.json HTTP/1.1" 304 0
+INFO 2025-11-30 16:23:50,611 basehttp 39376 28808 "GET /feed/ HTTP/1.1" 200 44396
+INFO 2025-11-30 16:23:50,612 basehttp 39376 11088 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 304 0
+INFO 2025-11-30 16:23:50,950 basehttp 39376 28808 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-30 16:23:51,062 views 39376 28808 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-30 16:23:51,070 basehttp 39376 28808 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-30 16:23:52,758 basehttp 39376 28808 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-11-30 16:23:56,322 basehttp 39376 28808 "GET /feed/ HTTP/1.1" 200 44396
+WARNING 2025-11-30 16:23:56,344 log 39376 28808 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-30 16:23:56,344 basehttp 39376 28808 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4227
+INFO 2025-11-30 16:23:56,696 basehttp 39376 28808 "GET /static/web/icons/icon-512x512.png HTTP/1.1" 304 0
+INFO 2025-11-30 16:25:20,791 fcm 39376 3624 Preparing notifications: 0 French, 1 English
+INFO 2025-11-30 16:25:20,791 fcm 39376 3624 Starting English notifications: Seppo Ignites Douala Music Art Festival with Makossa Fire and Heritage Revival
+INFO 2025-11-30 16:25:20,791 fcm 39376 33200 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-30 16:25:20,799 fcm 39376 3624 Preparing notifications: 0 French, 1 English
+INFO 2025-11-30 16:25:20,799 fcm 39376 3624 Starting English notifications: Seppo Ignites Douala Music Art Festival with Makossa Fire and Heritage Revival
+INFO 2025-11-30 16:25:20,799 fcm 39376 9756 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-30 16:25:20,801 basehttp 39376 3624 "POST /api/articles/ HTTP/1.1" 201 3507
+WARNING 2025-11-30 16:25:20,938 basehttp 39376 11088 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-30 16:25:20,941 fcm 39376 33200 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-30 16:25:20,941 fcm 39376 33200 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-30 16:25:21,047 basehttp 39376 28808 "GET /media/thumbnails/entertainment_20251130_162431_1.png HTTP/1.1" 200 1135566
+INFO 2025-11-30 16:25:21,734 fcm 39376 9756 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-30 16:25:21,737 fcm 39376 9756 [EN] Total: 1 successful, 0 failed out of 1
+WARNING 2025-11-30 16:25:21,738 basehttp 39376 40124 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-30 16:25:21,746 basehttp 39376 28808 "GET /media/thumbnails/entertainment_20251130_162431_1.png HTTP/1.1" 304 0
+WARNING 2025-11-30 16:25:45,632 basehttp 39376 27700 "GET /static/web/js/service-worker.js HTTP/1.1" 404 1886
+INFO 2025-11-30 16:25:52,098 basehttp 39376 28808 "GET /static/web/icons/icon-maskable-512x512.png HTTP/1.1" 304 0
+INFO 2025-11-30 16:26:14,273 basehttp 39376 28808 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-30 16:26:14,316 basehttp 39376 28808 "GET /api/articles/ HTTP/1.1" 200 85427
+INFO 2025-11-30 16:26:14,337 basehttp 39376 28808 "GET /media/thumbnails/entertainment_20251130_162431_1.png HTTP/1.1" 304 0
+INFO 2025-11-30 16:26:14,351 basehttp 39376 28808 "GET /media/thumbnails/sports_20251130_151807_1.webp HTTP/1.1" 304 0
+INFO 2025-11-30 16:26:22,526 basehttp 39376 28808 "GET /media/audio/english/sports_20251130_151807.mp3 HTTP/1.1" 200 650880
+WARNING 2025-11-30 16:26:22,589 log 39376 28808 Not Found: /favicon.ico
+WARNING 2025-11-30 16:26:22,590 basehttp 39376 28808 "GET /favicon.ico HTTP/1.1" 404 4116
+INFO 2025-11-30 16:26:27,878 basehttp 39376 28808 "GET /static/web/audio/drum.mp3 HTTP/1.1" 304 0
+INFO 2025-11-30 16:26:35,770 fcm 39376 28808 Preparing notifications: 0 French, 1 English
+INFO 2025-11-30 16:26:35,770 fcm 39376 28808 Starting English notifications: Eto'o Re-Elected, Sparks Fire Against Coach Brys Amidst Football Power Struggle
+INFO 2025-11-30 16:26:35,770 fcm 39376 41284 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-30 16:26:35,777 basehttp 39376 28808 "POST /api/articles/86/comment/ HTTP/1.1" 201 110
+INFO 2025-11-30 16:26:35,969 fcm 39376 41284 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-30 16:26:35,970 fcm 39376 41284 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-30 16:26:49,053 fcm 39376 35332 Preparing notifications: 0 French, 1 English
+INFO 2025-11-30 16:26:49,053 fcm 39376 35332 Starting English notifications: New Cocoa Factory Boosts Cameroon’s Industrial Drive as Government Pushes Youth Employment
+INFO 2025-11-30 16:26:49,054 fcm 39376 39640 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-30 16:26:49,062 fcm 39376 35332 Preparing notifications: 0 French, 1 English
+INFO 2025-11-30 16:26:49,062 fcm 39376 35332 Starting English notifications: New Cocoa Factory Boosts Cameroon’s Industrial Drive as Government Pushes Youth Employment
+INFO 2025-11-30 16:26:49,062 fcm 39376 15612 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-30 16:26:49,066 basehttp 39376 35332 "POST /api/articles/ HTTP/1.1" 201 6026
+WARNING 2025-11-30 16:26:49,252 basehttp 39376 7908 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-30 16:26:49,253 fcm 39376 15612 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-30 16:26:49,253 fcm 39376 15612 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-30 16:26:49,269 fcm 39376 39640 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-30 16:26:49,269 fcm 39376 39640 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-30 16:26:49,271 basehttp 39376 28808 "GET /media/thumbnails/business_20251130_162552_1.png HTTP/1.1" 200 489068
+WARNING 2025-11-30 16:26:49,469 basehttp 39376 40656 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-30 16:26:49,480 basehttp 39376 28808 "GET /media/thumbnails/business_20251130_162552_1.png HTTP/1.1" 304 0
