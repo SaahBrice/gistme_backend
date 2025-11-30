@@ -85,6 +85,14 @@
                             class="w-full px-4 py-3 bg-gray-800 border-2 border-gray-700 focus:border-yellow-500 rounded-xl text-white placeholder-gray-500 focus:outline-none transition-all"
                             placeholder="johndoe@example.com">
                     </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-300 mb-2">What kind of gist do you
+                            want?</label>
+                        <input type="text" x-model="formData.gist_preferences" maxlength="100"
+                            class="w-full px-4 py-3 bg-gray-800 border-2 border-gray-700 focus:border-yellow-500 rounded-xl text-white placeholder-gray-500 focus:outline-none transition-all"
+                            placeholder="scholarships, concours and jobs">
+                        <p class="text-gray-500 text-xs mt-1 ml-1">Max 100 characters</p>
+                    </div>
                 </div>
 
                 <div class="bg-yellow-500/10 border border-yellow-500/30 rounded-xl p-4 mt-5">
@@ -175,12 +183,13 @@
             formData: {
                 name: '',
                 phone: '',
-                email: ''
+                email: '',
+                gist_preferences: ''
             },
             openModal() {
                 this.isOpen = true;
                 this.step = 'intro';
-                this.formData = { name: '', phone: '', email: '' };
+                this.formData = { name: '', phone: '', email: '', gist_preferences: '' };
                 document.body.style.overflow = 'hidden';
             },
             closeModal() {

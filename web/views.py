@@ -25,6 +25,7 @@ def subscribe(request):
         name = data.get('name', '').strip()
         phone = data.get('phone', '').strip()
         email = data.get('email', '').strip()
+        gist_preferences = data.get('gist_preferences', 'scholarships, concours and jobs').strip()
         
         # Basic validation
         if not all([name, phone, email]):
@@ -37,7 +38,8 @@ def subscribe(request):
         subscription = Subscription.objects.create(
             name=name,
             phone=phone,
-            email=email
+            email=email,
+            gist_preferences=gist_preferences
         )
         
         return JsonResponse({

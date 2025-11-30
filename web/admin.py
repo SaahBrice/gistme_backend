@@ -4,15 +4,15 @@ from .models import Subscription, Advertisement, WaitingList
 
 @admin.register(Subscription)
 class SubscriptionAdmin(admin.ModelAdmin):
-    list_display = ('name', 'email', 'phone', 'subscribed_at', 'is_active')
+    list_display = ('name', 'email', 'phone', 'gist_preferences', 'subscribed_at', 'is_active')
     list_filter = ('is_active', 'subscribed_at')
-    search_fields = ('name', 'email', 'phone')
+    search_fields = ('name', 'email', 'phone', 'gist_preferences')
     readonly_fields = ('subscribed_at',)
     date_hierarchy = 'subscribed_at'
     
     fieldsets = (
         ('Subscriber Information', {
-            'fields': ('name', 'email', 'phone')
+            'fields': ('name', 'email', 'phone', 'gist_preferences')
         }),
         ('Subscription Status', {
             'fields': ('is_active', 'subscribed_at')

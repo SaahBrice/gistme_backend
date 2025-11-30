@@ -4322,3 +4322,43 @@ INFO 2025-11-30 13:47:05,475 basehttp 12908 12456 "GET /static/web/js/waiting-li
 INFO 2025-11-30 13:47:06,014 views 12908 12456 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
 INFO 2025-11-30 13:47:06,024 basehttp 12908 12456 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
 INFO 2025-11-30 13:47:08,130 basehttp 12908 12456 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-30 13:53:31,976 autoreload 15736 26308 Watching for file changes with StatReloader
+INFO 2025-11-30 13:53:35,001 basehttp 15736 34532 "GET / HTTP/1.1" 200 66725
+INFO 2025-11-30 13:53:35,045 basehttp 15736 34532 "GET /static/web/js/waiting-list.js HTTP/1.1" 304 0
+WARNING 2025-11-30 13:53:35,068 log 15736 34532 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-30 13:53:35,070 basehttp 15736 34532 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4227
+INFO 2025-11-30 13:53:35,873 views 15736 34532 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-30 13:53:35,900 basehttp 15736 34532 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-30 13:53:37,894 basehttp 15736 34532 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-30 13:54:23,222 basehttp 15736 34532 "POST /subscribe/ HTTP/1.1" 200 78
+INFO 2025-11-30 13:54:28,763 basehttp 15736 34532 "GET /feed/ HTTP/1.1" 200 43780
+INFO 2025-11-30 13:54:28,854 basehttp 15736 35988 "GET /static/web/css/feed.css HTTP/1.1" 304 0
+INFO 2025-11-30 13:54:28,863 basehttp 15736 43252 "GET /static/web/js/feed.js HTTP/1.1" 304 0
+WARNING 2025-11-30 13:54:28,876 log 15736 34532 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-30 13:54:28,882 basehttp 15736 34532 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4227
+INFO 2025-11-30 13:54:29,091 basehttp 15736 38048 "GET /static/web/js/feed-actions.js HTTP/1.1" 200 36296
+INFO 2025-11-30 13:54:29,327 basehttp 15736 38048 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-30 13:54:29,556 views 15736 38048 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-30 13:54:29,565 basehttp 15736 38048 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-30 13:54:31,602 basehttp 15736 38048 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-30 13:54:32,854 basehttp 15736 38048 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-30 13:54:32,982 basehttp 15736 38048 "GET /api/articles/ HTTP/1.1" 200 92455
+INFO 2025-11-30 13:54:33,036 basehttp 15736 38048 "GET /media/thumbnails/music_artistsuniversity_20251130_123201_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 13:54:33,065 basehttp 15736 34532 "GET /media/thumbnails/Mboa_music_20251130_123106_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 13:54:33,088 basehttp 15736 35988 "GET /media/thumbnails/happened_in_any_region_20251130_122733_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 13:54:33,098 basehttp 15736 43252 "GET /media/thumbnails/disgusting_20251130_122838_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 13:54:33,115 basehttp 15736 38048 "GET /media/thumbnails/scholarships_cameroonians_can_apply_20251130_122509_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 13:54:40,940 basehttp 15736 18216 "GET /admin/web/waitinglist/2/change/ HTTP/1.1" 200 16912
+INFO 2025-11-30 13:54:40,997 basehttp 15736 18216 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-30 13:54:42,665 basehttp 15736 18216 "GET /admin/web/subscription/ HTTP/1.1" 200 18862
+INFO 2025-11-30 13:54:42,762 basehttp 15736 18216 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-30 13:54:42,818 basehttp 15736 18216 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-30 13:54:44,103 basehttp 15736 18216 "GET /admin/web/subscription/3/change/ HTTP/1.1" 200 17930
+INFO 2025-11-30 13:54:44,173 basehttp 15736 18216 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-30 13:54:44,484 basehttp 15736 18216 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-30 13:54:45,836 basehttp 15736 18216 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-30 13:54:50,599 basehttp 15736 38048 "GET /static/web/audio/drum.mp3 HTTP/1.1" 200 108000
+WARNING 2025-11-30 13:54:50,755 log 15736 38048 Not Found: /favicon.ico
+WARNING 2025-11-30 13:54:50,756 basehttp 15736 38048 "GET /favicon.ico HTTP/1.1" 404 4116
+INFO 2025-11-30 13:54:55,885 basehttp 15736 38048 "GET /static/web/audio/drum.mp3 HTTP/1.1" 200 108000
+INFO 2025-11-30 13:55:55,926 basehttp 15736 38048 "GET /media/audio/english/technology_20251129_232830.mp3 HTTP/1.1" 200 1484160

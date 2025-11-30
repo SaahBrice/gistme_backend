@@ -9,6 +9,11 @@ class Subscription(models.Model):
     email = models.EmailField()
     subscribed_at = models.DateTimeField(default=timezone.now)
     is_active = models.BooleanField(default=True)
+    gist_preferences = models.CharField(
+        max_length=100, 
+        default="scholarships, concours and jobs",
+        help_text="What type of gist would you like to receive?"
+    )
     
     class Meta:
         ordering = ['-subscribed_at']
