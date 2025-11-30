@@ -1,0 +1,44 @@
+{
+    "name": "Gist4U - The Curator Engine",
+    "short_name": "Gist4U",
+    "description": "Your news curator delivering personalized Cameroon gists instantly",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#080808",
+    "theme_color": "#FFDE00",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "icons": [
+        {
+            "src": "/static/web/icons/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/static/web/icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/static/web/icons/icon-maskable-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ],
+    "categories": [
+        "news",
+        "magazines",
+        "productivity"
+    ],
+    "screenshots": [],
+    "shortcuts": [
+        {
+            "name": "Latest Gists",
+            "url": "/feed",
+            "description": "View latest news gists"
+        }
+    ]
+}

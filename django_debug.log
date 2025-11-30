@@ -4362,3 +4362,68 @@ WARNING 2025-11-30 13:54:50,755 log 15736 38048 Not Found: /favicon.ico
 WARNING 2025-11-30 13:54:50,756 basehttp 15736 38048 "GET /favicon.ico HTTP/1.1" 404 4116
 INFO 2025-11-30 13:54:55,885 basehttp 15736 38048 "GET /static/web/audio/drum.mp3 HTTP/1.1" 200 108000
 INFO 2025-11-30 13:55:55,926 basehttp 15736 38048 "GET /media/audio/english/technology_20251129_232830.mp3 HTTP/1.1" 200 1484160
+INFO 2025-11-30 14:31:00,905 autoreload 9400 33248 Watching for file changes with StatReloader
+INFO 2025-11-30 14:31:06,704 basehttp 9400 5456 "GET /feed/ HTTP/1.1" 200 44301
+INFO 2025-11-30 14:31:06,778 basehttp 9400 21756 "GET /static/web/js/feed-actions.js HTTP/1.1" 304 0
+WARNING 2025-11-30 14:31:06,792 log 9400 21540 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-30 14:31:06,792 basehttp 9400 21540 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4227
+INFO 2025-11-30 14:31:06,919 basehttp 9400 5456 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 4366
+INFO 2025-11-30 14:31:07,125 basehttp 9400 5456 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-30 14:31:07,251 basehttp 9400 7100 "GET /static/web/manifest.json HTTP/1.1" 200 1201
+INFO 2025-11-30 14:31:07,277 views 9400 5456 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-30 14:31:07,285 basehttp 9400 5456 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-30 14:31:07,300 basehttp 9400 21540 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-11-30 14:31:09,205 basehttp 9400 21540 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6510
+INFO 2025-11-30 14:31:09,272 basehttp 9400 5456 "GET /feed/ HTTP/1.1" 200 44301
+INFO 2025-11-30 14:31:09,286 basehttp 9400 21756 "GET /static/web/icons/icon-512x512.png HTTP/1.1" 200 376241
+INFO 2025-11-30 14:31:09,287 basehttp 9400 21540 "GET / HTTP/1.1" 200 67246
+INFO 2025-11-30 14:31:26,758 basehttp 9400 21540 "GET /static/web/icons/icon-maskable-512x512.png HTTP/1.1" 200 390230
+INFO 2025-11-30 14:31:46,010 basehttp 9400 21540 "GET / HTTP/1.1" 200 67246
+INFO 2025-11-30 14:31:46,098 basehttp 9400 21540 "GET /static/web/js/waiting-list.js HTTP/1.1" 304 0
+INFO 2025-11-30 14:31:46,634 views 9400 21540 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-30 14:31:46,642 basehttp 9400 21540 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-30 14:31:48,306 basehttp 9400 21540 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6510
+INFO 2025-11-30 14:31:51,009 basehttp 9400 21540 "GET /feed/ HTTP/1.1" 200 44301
+INFO 2025-11-30 14:31:52,034 basehttp 9400 21540 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-30 14:31:52,188 views 9400 21540 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-30 14:31:52,200 basehttp 9400 21540 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-30 14:31:53,980 basehttp 9400 21540 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6510
+INFO 2025-11-30 14:31:55,633 basehttp 9400 21540 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-30 14:31:55,675 basehttp 9400 21540 "GET /api/articles/ HTTP/1.1" 200 92455
+INFO 2025-11-30 14:31:55,706 basehttp 9400 21540 "GET /media/thumbnails/music_artistsuniversity_20251130_123201_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 14:31:55,716 basehttp 9400 20084 "GET /media/thumbnails/happened_in_any_region_20251130_122733_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 14:31:55,729 basehttp 9400 28136 "GET /media/thumbnails/technology_20251129_232830_1.png HTTP/1.1" 304 0
+INFO 2025-11-30 14:31:55,754 basehttp 9400 20084 "GET /media/thumbnails/entertainment_20251129_232607_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 14:31:55,768 basehttp 9400 20084 "GET /media/thumbnails/happened_in_any_region_20251129_225843_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 14:31:55,783 basehttp 9400 20084 "GET /media/thumbnails/happened_in_Buea_20251129_225632_1.png HTTP/1.1" 304 0
+INFO 2025-11-30 14:31:55,797 basehttp 9400 20084 "GET /media/thumbnails/scholarships_cameroonians_can_apply_20251129_225514_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 14:31:55,817 basehttp 9400 20084 "GET /media/thumbnails/latest_jobs_20251129_225410_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 14:31:55,844 basehttp 9400 43996 "GET /media/thumbnails/Mboa_music_20251129_230321_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 14:31:55,868 basehttp 9400 21540 "GET /media/thumbnails/scholarships_cameroonians_can_apply_20251130_122509_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 14:31:55,877 basehttp 9400 21756 "GET /media/thumbnails/Mboa_music_20251130_123106_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 14:31:55,895 basehttp 9400 28136 "GET /media/thumbnails/disgusting_20251129_230011_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 14:31:55,910 basehttp 9400 5456 "GET /media/thumbnails/disgusting_20251130_122838_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 14:32:04,576 fcm 9400 5456 Preparing notifications: 0 French, 1 English
+INFO 2025-11-30 14:32:04,577 fcm 9400 5456 Starting English notifications: Cameroon Football Roars Back: New Season Kicks Off, Local Clubs Flex Muscle
+INFO 2025-11-30 14:32:04,624 fcm 9400 29568 Firebase Admin SDK initialized with C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\serviceAccountKey.json
+INFO 2025-11-30 14:32:04,624 fcm 9400 29568 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-30 14:32:04,632 basehttp 9400 5456 "POST /api/articles/84/comment/ HTTP/1.1" 201 114
+INFO 2025-11-30 14:32:08,414 fcm 9400 29568 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-30 14:32:08,414 fcm 9400 29568 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-30 14:32:11,049 basehttp 9400 5456 "GET /media/audio/english/music_artistsuniversity_20251130_123201.mp3 HTTP/1.1" 304 0
+WARNING 2025-11-30 14:32:11,125 log 9400 5456 Not Found: /favicon.ico
+WARNING 2025-11-30 14:32:11,125 basehttp 9400 5456 "GET /favicon.ico HTTP/1.1" 404 4116
+INFO 2025-11-30 14:32:26,331 basehttp 9400 5456 "GET /media/audio/french/music_artistsuniversity_20251130_123201.mp3 HTTP/1.1" 200 563328
+INFO 2025-11-30 14:32:48,607 basehttp 9400 5456 "GET / HTTP/1.1" 200 67246
+INFO 2025-11-30 14:32:48,687 basehttp 9400 5456 "GET /static/web/js/pwa-install.js HTTP/1.1" 304 0
+INFO 2025-11-30 14:32:49,353 views 9400 5456 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-30 14:32:49,361 basehttp 9400 5456 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-30 14:32:49,531 basehttp 9400 7100 "GET /static/web/manifest.json HTTP/1.1" 304 0
+INFO 2025-11-30 14:32:51,065 basehttp 9400 5456 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6510
+INFO 2025-11-30 14:32:54,967 basehttp 9400 5456 "GET /feed/ HTTP/1.1" 200 44301
+INFO 2025-11-30 14:32:55,271 basehttp 9400 5456 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-30 14:32:55,392 views 9400 5456 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-30 14:32:55,399 basehttp 9400 5456 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-30 14:32:57,095 basehttp 9400 5456 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6510
+INFO 2025-11-30 14:32:58,743 basehttp 9400 5456 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-30 14:32:58,782 basehttp 9400 5456 "GET /api/articles/ HTTP/1.1" 200 92569

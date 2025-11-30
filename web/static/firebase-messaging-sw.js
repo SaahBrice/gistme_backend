@@ -1,9 +1,21 @@
 importScripts('https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js');
 importScripts('https://www.gstatic.com/firebasejs/9.22.0/firebase-messaging-compat.js');
 
-// Initialize the Firebase app in the service worker by passing in the messagingSenderId.
-// TODO: Replace with your actual config
-// Your web app's Firebase configuration
+// PWA Configuration
+const CACHE_NAME = 'gist4u-v1';
+const RUNTIME_CACHE = 'gist4u-runtime-v1';
+
+// Assets to cache on install
+const STATIC_ASSETS = [
+    '/',
+    '/feed/',
+    '/static/web/css/main.css',
+    '/static/web/js/main.js',
+    '/static/web/icons/icon-192x192.png',
+    '/static/web/icons/icon-512x512.png',
+];
+
+// Initialize the Firebase app in the service worker
 const firebaseConfig = {
     apiKey: "AIzaSyBA9udkHboIsuVAzpVzsMa-pH_CrygGidA",
     authDomain: "c237-bvo0kf.firebaseapp.com",
@@ -15,9 +27,80 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-// Retrieve an instance of Firebase Messaging so that it can handle background
-// messages.
+// Retrieve an instance of Firebase Messaging
 const messaging = firebase.messaging();
+
+// PWA Install Event - Cache static assets
+self.addEventListener('install', (event) => {
+    console.log('[Service Worker] Installing...');
+    event.waitUntil(
+        caches.open(CACHE_NAME)
+            .then(cache => {
+                console.log('[Service Worker] Caching static assets');
+                return cache.addAll(STATIC_ASSETS);
+            })
+            .catch(err => console.error('[Service Worker] Cache failed:', err))
+    );
+    self.skipWaiting();
+});
+
+// PWA Activate Event - Clean up old caches
+self.addEventListener('activate', (event) => {
+    console.log('[Service Worker] Activating...');
+    event.waitUntil(
+        caches.keys().then(cacheNames => {
+            return Promise.all(
+                cacheNames
+                    .filter(name => name !== CACHE_NAME && name !== RUNTIME_CACHE)
+                    .map(name => {
+                        console.log('[Service Worker] Deleting old cache:', name);
+                        return caches.delete(name);
+                    })
+            );
+        })
+    );
+    return self.clients.claim();
+});
+
+// PWA Fetch Event - Network first, fallback to cache
+self.addEventListener('fetch', (event) => {
+    // Skip non-GET requests
+    if (event.request.method !== 'GET') return;
+
+    // Skip Chrome extension requests
+    if (event.request.url.startsWith('chrome-extension://')) return;
+
+    event.respondWith(
+        fetch(event.request)
+            .then(response => {
+                // Clone the response
+                const responseClone = response.clone();
+
+                // Cache successful responses
+                if (response.status === 200) {
+                    caches.open(RUNTIME_CACHE).then(cache => {
+                        cache.put(event.request, responseClone);
+                    });
+                }
+
+                return response;
+            })
+            .catch(() => {
+                // Network failed, try cache
+                return caches.match(event.request)
+                    .then(cachedResponse => {
+                        if (cachedResponse) {
+                            return cachedResponse;
+                        }
+
+                        // Return offline page for navigation requests
+                        if (event.request.mode === 'navigate') {
+                            return caches.match('/');
+                        }
+                    });
+            })
+    );
+});
 
 messaging.onBackgroundMessage((payload) => {
     console.log('[firebase-messaging-sw.js] Received background message ', payload);
