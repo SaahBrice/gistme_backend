@@ -4314,3 +4314,11 @@ INFO 2025-11-30 13:38:10,765 views 1860 40124 FCM subscription updated: epjYJtks
 INFO 2025-11-30 13:38:10,774 basehttp 1860 40124 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
 INFO 2025-11-30 13:38:12,612 basehttp 1860 40124 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
 INFO 2025-11-30 13:38:37,571 basehttp 1860 40124 "POST /join-waiting-list/ HTTP/1.1" 200 87
+INFO 2025-11-30 13:47:02,770 autoreload 12908 20468 Watching for file changes with StatReloader
+INFO 2025-11-30 13:47:05,257 basehttp 12908 5080 "GET / HTTP/1.1" 200 66008
+WARNING 2025-11-30 13:47:05,325 log 12908 5080 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-30 13:47:05,327 basehttp 12908 5080 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4227
+INFO 2025-11-30 13:47:05,475 basehttp 12908 12456 "GET /static/web/js/waiting-list.js HTTP/1.1" 200 2933
+INFO 2025-11-30 13:47:06,014 views 12908 12456 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-30 13:47:06,024 basehttp 12908 12456 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-30 13:47:08,130 basehttp 12908 12456 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
