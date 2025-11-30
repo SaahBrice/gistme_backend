@@ -4460,3 +4460,51 @@ INFO 2025-11-30 14:42:57,572 basehttp 36276 35668 "POST /api/fcm/subscribe/ HTTP
 INFO 2025-11-30 14:42:59,297 basehttp 36276 35668 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6510
 INFO 2025-11-30 14:43:00,703 basehttp 36276 35668 "GET /api/articles/?mood=angry HTTP/1.1" 200 28206
 INFO 2025-11-30 14:43:00,738 basehttp 36276 35668 "GET /media/thumbnails/politics_20251129_201611_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 15:15:01,433 autoreload 39572 35832 Watching for file changes with StatReloader
+INFO 2025-11-30 15:15:05,481 basehttp 39572 35152 "GET / HTTP/1.1" 200 68202
+INFO 2025-11-30 15:15:05,617 basehttp 39572 36264 "GET /static/web/js/waiting-list.js HTTP/1.1" 304 0
+INFO 2025-11-30 15:15:05,685 basehttp 39572 20172 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-11-30 15:15:05,688 basehttp 39572 35152 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 4366
+INFO 2025-11-30 15:15:05,997 basehttp 39572 37860 "GET /static/web/manifest.json HTTP/1.1" 200 1201
+INFO 2025-11-30 15:15:06,016 basehttp 39572 35152 "GET /feed/ HTTP/1.1" 200 44396
+INFO 2025-11-30 15:15:06,045 basehttp 39572 36264 "GET /static/web/js/feed.js HTTP/1.1" 304 0
+INFO 2025-11-30 15:15:06,045 basehttp 39572 35152 "GET /static/web/js/feed-actions.js HTTP/1.1" 304 0
+INFO 2025-11-30 15:15:06,047 basehttp 39572 20172 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-11-30 15:15:06,376 basehttp 39572 20172 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-30 15:15:06,484 views 39572 20172 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-30 15:15:06,495 basehttp 39572 20172 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-30 15:15:08,164 basehttp 39572 20172 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6510
+INFO 2025-11-30 15:15:09,740 basehttp 39572 20172 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-30 15:15:09,795 basehttp 39572 20172 "GET /api/articles/ HTTP/1.1" 200 92569
+INFO 2025-11-30 15:15:09,838 basehttp 39572 20172 "GET /media/thumbnails/music_artistsuniversity_20251130_123201_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 15:15:09,869 basehttp 39572 35152 "GET /media/thumbnails/Mboa_music_20251130_123106_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 15:15:09,902 basehttp 39572 36264 "GET /media/thumbnails/disgusting_20251130_122838_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 15:15:09,918 basehttp 39572 17152 "GET /media/thumbnails/happened_in_any_region_20251130_122733_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 15:15:09,934 basehttp 39572 28108 "GET /media/thumbnails/scholarships_cameroonians_can_apply_20251130_122509_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 15:15:16,091 basehttp 39572 28108 "GET /media/audio/english/Mboa_music_20251130_123106.mp3 HTTP/1.1" 200 615936
+WARNING 2025-11-30 15:15:16,156 log 39572 28108 Not Found: /favicon.ico
+WARNING 2025-11-30 15:15:16,157 basehttp 39572 28108 "GET /favicon.ico HTTP/1.1" 404 4116
+INFO 2025-11-30 15:17:39,341 fcm 39572 3344 Preparing notifications: 0 French, 1 English
+INFO 2025-11-30 15:17:39,341 fcm 39572 3344 Starting English notifications: Cameroon in Turmoil: Tchiroma's Challenge and Regional Elections Stir the Pot
+INFO 2025-11-30 15:17:39,385 basehttp 39572 3344 "POST /api/articles/ HTTP/1.1" 201 4284
+INFO 2025-11-30 15:17:39,386 fcm 39572 39272 Firebase Admin SDK initialized with C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\serviceAccountKey.json
+INFO 2025-11-30 15:17:39,386 fcm 39572 39272 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-30 15:17:42,460 fcm 39572 39272 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-30 15:17:42,460 fcm 39572 39272 [EN] Total: 1 successful, 0 failed out of 1
+WARNING 2025-11-30 15:17:42,473 basehttp 39572 28108 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-30 15:18:35,404 fcm 39572 21668 Preparing notifications: 0 French, 1 English
+INFO 2025-11-30 15:18:35,406 fcm 39572 21668 Starting English notifications: Eto'o Re-Elected, Sparks Fire Against Coach Brys Amidst Football Power Struggle
+INFO 2025-11-30 15:18:35,406 fcm 39572 39128 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-30 15:18:35,412 fcm 39572 21668 Preparing notifications: 0 French, 1 English
+INFO 2025-11-30 15:18:35,412 fcm 39572 21668 Starting English notifications: Eto'o Re-Elected, Sparks Fire Against Coach Brys Amidst Football Power Struggle
+INFO 2025-11-30 15:18:35,413 fcm 39572 41192 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-30 15:18:35,416 basehttp 39572 21668 "POST /api/articles/ HTTP/1.1" 201 3140
+WARNING 2025-11-30 15:18:35,585 basehttp 39572 36264 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-30 15:18:35,589 fcm 39572 39128 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-30 15:18:35,589 fcm 39572 39128 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-30 15:18:35,605 basehttp 39572 17152 "GET /media/thumbnails/sports_20251130_151807_1.webp HTTP/1.1" 200 54414
+WARNING 2025-11-30 15:18:36,382 basehttp 39572 35152 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-30 15:18:36,393 basehttp 39572 17152 "GET /media/thumbnails/sports_20251130_151807_1.webp HTTP/1.1" 304 0
+INFO 2025-11-30 15:18:36,394 fcm 39572 41192 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-30 15:18:36,395 fcm 39572 41192 [EN] Total: 1 successful, 0 failed out of 1
+WARNING 2025-11-30 15:19:44,570 basehttp 39572 16448 "GET /static/web/js/service-worker.js HTTP/1.1" 404 1886
