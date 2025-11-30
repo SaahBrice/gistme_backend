@@ -4065,3 +4065,151 @@ INFO 2025-11-30 12:44:39,626 fcm 21208 27872 [EN] Batch 1/1: Sending to 1 device
 INFO 2025-11-30 12:44:39,636 basehttp 21208 36136 "POST /api/articles/31/comment/ HTTP/1.1" 201 110
 INFO 2025-11-30 12:44:39,804 fcm 21208 27872 [EN] Batch 1: 1 successful, 0 failed
 INFO 2025-11-30 12:44:39,805 fcm 21208 27872 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-30 12:46:31,731 autoreload 1856 23256 Watching for file changes with StatReloader
+INFO 2025-11-30 12:46:41,771 basehttp 1856 11568 "GET /feed/ HTTP/1.1" 200 43927
+WARNING 2025-11-30 12:46:41,834 log 1856 32444 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-30 12:46:41,835 basehttp 1856 32444 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-30 12:46:41,955 basehttp 1856 11568 "GET /static/web/js/feed-actions.js HTTP/1.1" 200 35858
+INFO 2025-11-30 12:46:42,165 basehttp 1856 11568 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-30 12:46:42,329 views 1856 11568 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-30 12:46:42,338 basehttp 1856 11568 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-30 12:46:44,349 basehttp 1856 11568 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-30 12:46:56,703 basehttp 1856 11568 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-30 12:46:56,772 basehttp 1856 11568 "GET /api/articles/ HTTP/1.1" 200 90800
+INFO 2025-11-30 12:46:56,814 basehttp 1856 32444 "GET /media/thumbnails/Mboa_music_20251130_123106_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 12:46:56,827 basehttp 1856 32444 "GET /media/thumbnails/entertainment_20251129_232607_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 12:46:56,862 basehttp 1856 11568 "GET /media/thumbnails/music_artistsuniversity_20251130_123201_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 12:46:56,893 basehttp 1856 24848 "GET /media/thumbnails/technology_20251129_232830_1.png HTTP/1.1" 304 0
+INFO 2025-11-30 12:46:56,924 basehttp 1856 34332 "GET /media/thumbnails/disgusting_20251130_122838_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 12:46:56,940 basehttp 1856 34620 "GET /media/thumbnails/happened_in_any_region_20251130_122733_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 12:46:56,957 basehttp 1856 41252 "GET /media/thumbnails/scholarships_cameroonians_can_apply_20251130_122509_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 12:47:07,413 basehttp 1856 41252 "GET /api/articles/?page=2 HTTP/1.1" 200 93774
+WARNING 2025-11-30 12:51:11,990 basehttp 1856 29284 "GET /static/web/js/service-worker.js HTTP/1.1" 404 1886
+INFO 2025-11-30 12:54:57,300 fcm 1856 34040 Preparing notifications: 0 French, 1 English
+INFO 2025-11-30 12:54:57,301 fcm 1856 34040 Starting English notifications: Cameroon Football Roars Back: New Season Kicks Off, Local Clubs Flex Muscle
+INFO 2025-11-30 12:54:57,344 fcm 1856 33840 Firebase Admin SDK initialized with C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\serviceAccountKey.json
+INFO 2025-11-30 12:54:57,344 basehttp 1856 34040 "POST /api/articles/ HTTP/1.1" 201 4888
+INFO 2025-11-30 12:54:57,345 fcm 1856 33840 [EN] Batch 1/1: Sending to 1 devices
+WARNING 2025-11-30 12:55:01,483 basehttp 1856 37160 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-30 12:55:01,509 fcm 1856 33840 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-30 12:55:01,509 fcm 1856 33840 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-30 12:56:07,391 basehttp 1856 27236 "GET /admin/api/article/ HTTP/1.1" 200 87174
+INFO 2025-11-30 12:56:07,581 basehttp 1856 27236 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-30 12:56:09,882 basehttp 1856 27236 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-30 12:56:25,213 basehttp 1856 27236 "GET /admin/api/article/78/change/ HTTP/1.1" 200 28749
+INFO 2025-11-30 12:56:25,261 basehttp 1856 27236 "GET /static/admin/css/forms.css HTTP/1.1" 200 8525
+INFO 2025-11-30 12:56:25,275 basehttp 1856 20712 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-30 12:56:25,282 basehttp 1856 12944 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2025-11-30 12:56:25,282 basehttp 1856 27236 "GET /static/admin/css/widgets.css HTTP/1.1" 200 11973
+INFO 2025-11-30 12:56:25,310 basehttp 1856 27236 "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2025-11-30 12:56:26,941 basehttp 1856 27236 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+WARNING 2025-11-30 12:56:42,094 basehttp 1856 27236 "GET /static/web/js/service-worker.js HTTP/1.1" 404 1886
+INFO 2025-11-30 12:58:55,332 basehttp 1856 2408 "GET / HTTP/1.1" 200 57790
+WARNING 2025-11-30 12:58:55,389 log 1856 2408 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-30 12:58:55,390 basehttp 1856 2408 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-30 12:58:55,783 views 1856 2408 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-30 12:58:55,818 basehttp 1856 2408 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-30 12:58:57,716 basehttp 1856 2408 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+WARNING 2025-11-30 13:02:12,195 basehttp 1856 19884 "GET /static/web/js/service-worker.js HTTP/1.1" 404 1886
+INFO 2025-11-30 13:02:50,394 autoreload 29664 37500 Watching for file changes with StatReloader
+INFO 2025-11-30 13:02:52,655 basehttp 29664 25552 "GET /feed/ HTTP/1.1" 200 41495
+WARNING 2025-11-30 13:02:52,720 log 29664 25552 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-30 13:02:52,721 basehttp 29664 25552 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-30 13:02:52,847 basehttp 29664 41432 "GET /static/web/js/feed-actions.js HTTP/1.1" 200 36296
+INFO 2025-11-30 13:02:53,056 basehttp 29664 41432 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-30 13:02:53,186 views 29664 41432 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-30 13:02:53,195 basehttp 29664 41432 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-30 13:02:55,031 basehttp 29664 41432 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-30 13:02:56,232 basehttp 29664 41432 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-30 13:02:56,281 basehttp 29664 41432 "GET /api/articles/ HTTP/1.1" 200 92341
+INFO 2025-11-30 13:02:56,307 basehttp 29664 41432 "GET /media/thumbnails/music_artistsuniversity_20251130_123201_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 13:02:56,331 basehttp 29664 6008 "GET /media/thumbnails/happened_in_any_region_20251130_122733_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 13:02:56,345 basehttp 29664 35108 "GET /media/thumbnails/disgusting_20251129_230011_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 13:02:56,360 basehttp 29664 35108 "GET /media/thumbnails/happened_in_Buea_20251129_225632_1.png HTTP/1.1" 304 0
+INFO 2025-11-30 13:02:56,375 basehttp 29664 35108 "GET /media/thumbnails/scholarships_cameroonians_can_apply_20251129_225514_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 13:02:56,390 basehttp 29664 35108 "GET /media/thumbnails/latest_jobs_20251129_225410_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 13:02:56,425 basehttp 29664 8008 "GET /media/thumbnails/scholarships_cameroonians_can_apply_20251130_122509_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 13:02:56,442 basehttp 29664 6008 "GET /media/thumbnails/happened_in_any_region_20251129_225843_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 13:02:56,457 basehttp 29664 41432 "GET /media/thumbnails/Mboa_music_20251129_230321_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 13:02:56,480 basehttp 29664 37036 "GET /media/thumbnails/disgusting_20251130_122838_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 13:02:56,495 basehttp 29664 25552 "GET /media/thumbnails/Mboa_music_20251130_123106_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 13:05:00,881 autoreload 37348 26140 Watching for file changes with StatReloader
+INFO 2025-11-30 13:05:03,783 basehttp 37348 19060 "GET /feed/ HTTP/1.1" 200 43780
+INFO 2025-11-30 13:05:03,827 basehttp 37348 19060 "GET /static/web/js/feed-actions.js HTTP/1.1" 304 0
+WARNING 2025-11-30 13:05:03,861 log 37348 19060 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-30 13:05:03,861 basehttp 37348 19060 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-30 13:05:04,190 basehttp 37348 19060 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-30 13:05:04,355 views 37348 19060 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-30 13:05:04,365 basehttp 37348 19060 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-30 13:05:06,339 basehttp 37348 19060 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-30 13:05:07,158 basehttp 37348 19060 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-30 13:05:07,220 basehttp 37348 19060 "GET /api/articles/ HTTP/1.1" 200 92341
+WARNING 2025-11-30 13:05:11,308 basehttp 37348 19060 "GET /static/web/audio/drum.mp3 HTTP/1.1" 404 1868
+WARNING 2025-11-30 13:05:11,672 basehttp 37348 37240 "GET /static/web/audio/drum.mp3 HTTP/1.1" 404 1868
+WARNING 2025-11-30 13:05:11,859 basehttp 37348 37996 "GET /static/web/audio/drum.mp3 HTTP/1.1" 404 1868
+WARNING 2025-11-30 13:05:12,037 basehttp 37348 10368 "GET /static/web/audio/drum.mp3 HTTP/1.1" 404 1868
+WARNING 2025-11-30 13:05:12,251 basehttp 37348 34256 "GET /static/web/audio/drum.mp3 HTTP/1.1" 404 1868
+WARNING 2025-11-30 13:05:12,794 basehttp 37348 40692 "GET /static/web/audio/drum.mp3 HTTP/1.1" 404 1868
+WARNING 2025-11-30 13:05:15,816 basehttp 37348 8412 "GET /static/web/audio/drum.mp3 HTTP/1.1" 404 1868
+WARNING 2025-11-30 13:05:16,146 basehttp 37348 30020 "GET /static/web/audio/drum.mp3 HTTP/1.1" 404 1868
+WARNING 2025-11-30 13:05:16,520 basehttp 37348 30660 "GET /static/web/audio/drum.mp3 HTTP/1.1" 404 1868
+WARNING 2025-11-30 13:05:16,813 basehttp 37348 25476 "GET /static/web/audio/drum.mp3 HTTP/1.1" 404 1868
+WARNING 2025-11-30 13:05:17,034 basehttp 37348 13104 "GET /static/web/audio/drum.mp3 HTTP/1.1" 404 1868
+WARNING 2025-11-30 13:05:17,268 basehttp 37348 41780 "GET /static/web/audio/drum.mp3 HTTP/1.1" 404 1868
+WARNING 2025-11-30 13:05:36,818 basehttp 37348 43244 "GET /static/web/audio/drum.mp3 HTTP/1.1" 404 1868
+WARNING 2025-11-30 13:05:36,944 basehttp 37348 43720 "GET /static/web/audio/drum.mp3 HTTP/1.1" 404 1868
+WARNING 2025-11-30 13:05:37,126 basehttp 37348 21400 "GET /static/web/audio/drum.mp3 HTTP/1.1" 404 1868
+WARNING 2025-11-30 13:05:37,308 basehttp 37348 23020 "GET /static/web/audio/drum.mp3 HTTP/1.1" 404 1868
+WARNING 2025-11-30 13:05:37,607 basehttp 37348 29908 "GET /static/web/audio/drum.mp3 HTTP/1.1" 404 1868
+WARNING 2025-11-30 13:05:38,929 basehttp 37348 12384 "GET /static/web/audio/drum.mp3 HTTP/1.1" 404 1868
+WARNING 2025-11-30 13:05:39,171 basehttp 37348 23760 "GET /static/web/audio/drum.mp3 HTTP/1.1" 404 1868
+WARNING 2025-11-30 13:05:39,357 basehttp 37348 36900 "GET /static/web/audio/drum.mp3 HTTP/1.1" 404 1868
+WARNING 2025-11-30 13:05:39,564 basehttp 37348 23144 "GET /static/web/audio/drum.mp3 HTTP/1.1" 404 1868
+WARNING 2025-11-30 13:05:39,769 basehttp 37348 19184 "GET /static/web/audio/drum.mp3 HTTP/1.1" 404 1868
+WARNING 2025-11-30 13:05:40,009 basehttp 37348 39492 "GET /static/web/audio/drum.mp3 HTTP/1.1" 404 1868
+WARNING 2025-11-30 13:05:40,231 basehttp 37348 20632 "GET /static/web/audio/drum.mp3 HTTP/1.1" 404 1868
+WARNING 2025-11-30 13:05:40,721 basehttp 37348 17392 "GET /static/web/audio/drum.mp3 HTTP/1.1" 404 1868
+WARNING 2025-11-30 13:05:40,977 basehttp 37348 35604 "GET /static/web/audio/drum.mp3 HTTP/1.1" 404 1868
+WARNING 2025-11-30 13:05:41,223 basehttp 37348 32072 "GET /static/web/audio/drum.mp3 HTTP/1.1" 404 1868
+WARNING 2025-11-30 13:05:41,971 basehttp 37348 44824 "GET /static/web/audio/drum.mp3 HTTP/1.1" 404 1868
+WARNING 2025-11-30 13:05:42,450 basehttp 37348 40448 "GET /static/web/audio/drum.mp3 HTTP/1.1" 404 1868
+WARNING 2025-11-30 13:05:42,996 basehttp 37348 16688 "GET /static/web/audio/drum.mp3 HTTP/1.1" 404 1868
+INFO 2025-11-30 13:05:46,342 basehttp 37348 25976 "GET /feed/ HTTP/1.1" 200 43780
+INFO 2025-11-30 13:05:46,398 basehttp 37348 18284 "GET /static/web/js/feed-actions.js HTTP/1.1" 304 0
+WARNING 2025-11-30 13:05:46,407 log 37348 25976 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-30 13:05:46,408 basehttp 37348 25976 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-30 13:05:46,720 basehttp 37348 25976 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-30 13:05:46,898 views 37348 25976 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-30 13:05:46,908 basehttp 37348 25976 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-30 13:05:48,920 basehttp 37348 25976 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+WARNING 2025-11-30 13:07:42,324 basehttp 37348 30616 "GET /static/web/js/service-worker.js HTTP/1.1" 404 1886
+INFO 2025-11-30 13:11:05,163 autoreload 43356 1344 Watching for file changes with StatReloader
+INFO 2025-11-30 13:11:08,809 basehttp 43356 26384 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-30 13:11:08,881 basehttp 43356 26384 "GET /api/articles/ HTTP/1.1" 200 92341
+INFO 2025-11-30 13:11:08,930 basehttp 43356 26384 "GET /media/thumbnails/music_artistsuniversity_20251130_123201_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 13:11:08,940 basehttp 43356 43968 "GET /media/thumbnails/scholarships_cameroonians_can_apply_20251130_122509_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 13:11:08,975 basehttp 43356 43044 "GET /media/thumbnails/Mboa_music_20251130_123106_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 13:11:08,993 basehttp 43356 21644 "GET /media/thumbnails/disgusting_20251130_122838_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 13:11:09,008 basehttp 43356 28844 "GET /media/thumbnails/happened_in_any_region_20251130_122733_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 13:11:10,828 basehttp 43356 28844 "GET /static/web/audio/drum.mp3 HTTP/1.1" 200 108000
+WARNING 2025-11-30 13:11:10,939 log 43356 28844 Not Found: /favicon.ico
+WARNING 2025-11-30 13:11:10,939 basehttp 43356 28844 "GET /favicon.ico HTTP/1.1" 404 4100
+INFO 2025-11-30 13:11:13,829 basehttp 43356 28844 "GET /static/web/audio/drum.mp3 HTTP/1.1" 304 0
+INFO 2025-11-30 13:11:51,617 basehttp 43356 28844 "GET /api/articles/?mood=happy&category=politics HTTP/1.1" 200 52
+INFO 2025-11-30 13:11:51,709 basehttp 43356 28844 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-30 13:11:51,757 basehttp 43356 28844 "GET /api/articles/?category=politics HTTP/1.1" 200 35270
+INFO 2025-11-30 13:11:51,784 basehttp 43356 28844 "GET /media/thumbnails/politics_20251129_201611_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 13:12:00,445 fcm 43356 28844 Preparing notifications: 0 French, 1 English
+INFO 2025-11-30 13:12:00,445 fcm 43356 28844 Starting English notifications: Cameroon's Political Scene Simmers with New Forces Challenging the Status Quo
+INFO 2025-11-30 13:12:00,497 fcm 43356 25356 Firebase Admin SDK initialized with C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\serviceAccountKey.json
+INFO 2025-11-30 13:12:00,497 fcm 43356 25356 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-30 13:12:00,503 basehttp 43356 28844 "POST /api/articles/73/comment/ HTTP/1.1" 201 114
+INFO 2025-11-30 13:12:04,643 fcm 43356 25356 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-30 13:12:04,643 fcm 43356 25356 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-30 13:12:44,775 basehttp 43356 28844 "GET / HTTP/1.1" 200 57790
+WARNING 2025-11-30 13:12:44,835 log 43356 28844 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-30 13:12:44,836 basehttp 43356 28844 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-30 13:12:45,438 views 43356 28844 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-30 13:12:45,451 basehttp 43356 28844 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-30 13:12:47,286 basehttp 43356 28844 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+WARNING 2025-11-30 13:13:12,397 basehttp 43356 44236 "GET /static/web/js/service-worker.js HTTP/1.1" 404 1886

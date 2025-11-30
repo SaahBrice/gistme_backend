@@ -357,8 +357,19 @@ const FeedActions = {
     },
 
     toggleLike(event) {
+        // Keep the state toggle if needed for other logic, but UI is now static
         this.isLiked = !this.isLiked;
         this.showDrumEffect = true;
+
+        // Play Drum Sound
+        const drumSound = new Audio('/static/web/audio/drum.mp3');
+        drumSound.volume = 0.5;
+        drumSound.play().catch(e => console.log('Audio play failed:', e));
+
+        // Trigger Vibration (Haptic Feedback)
+        if (navigator.vibrate) {
+            navigator.vibrate(50); // 50ms vibration
+        }
 
         const rect = event.currentTarget.getBoundingClientRect();
 
