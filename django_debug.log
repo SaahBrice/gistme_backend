@@ -3854,3 +3854,214 @@ INFO 2025-11-30 11:34:36,795 basehttp 44604 30284 "GET /media/thumbnails/transpo
 INFO 2025-11-30 11:34:36,809 basehttp 44604 5928 "GET /media/thumbnails/latest_jobs_20251129_225410_1.jpeg HTTP/1.1" 304 0
 INFO 2025-11-30 11:34:36,829 basehttp 44604 22728 "GET /media/thumbnails/real_estate_20251129_225031_1.jpeg HTTP/1.1" 304 0
 INFO 2025-11-30 11:34:36,847 basehttp 44604 35888 "GET /media/thumbnails/science_20251129_225147_1.jpeg HTTP/1.1" 200 115580
+INFO 2025-11-30 12:25:11,794 autoreload 40000 36136 Watching for file changes with StatReloader
+INFO 2025-11-30 12:25:14,600 basehttp 40000 29284 "GET /feed/ HTTP/1.1" 200 43927
+WARNING 2025-11-30 12:25:14,665 log 40000 29284 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-30 12:25:14,667 basehttp 40000 29284 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-30 12:25:15,036 basehttp 40000 29284 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-30 12:25:15,188 views 40000 29284 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-30 12:25:15,196 basehttp 40000 29284 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-30 12:25:17,146 basehttp 40000 29284 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-30 12:25:18,042 basehttp 40000 29284 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-30 12:25:18,097 basehttp 40000 29284 "GET /api/articles/ HTTP/1.1" 200 98466
+INFO 2025-11-30 12:25:22,190 basehttp 40000 29284 "GET /api/articles/?mood=happy&category=politics HTTP/1.1" 200 52
+INFO 2025-11-30 12:25:22,285 basehttp 40000 29284 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-30 12:25:22,336 basehttp 40000 29284 "GET /api/articles/?category=politics HTTP/1.1" 200 35270
+INFO 2025-11-30 12:25:40,430 fcm 40000 20336 Preparing notifications: 0 French, 1 English
+INFO 2025-11-30 12:25:40,430 fcm 40000 20336 Starting English notifications: Fresh Scholarship Opportunities for Cameroonians in Science, Tech & More for 2025/26
+INFO 2025-11-30 12:25:40,477 fcm 40000 13104 Firebase Admin SDK initialized with C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\serviceAccountKey.json
+INFO 2025-11-30 12:25:40,479 fcm 40000 13104 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-30 12:25:40,480 fcm 40000 20336 Preparing notifications: 0 French, 1 English
+INFO 2025-11-30 12:25:40,481 fcm 40000 20336 Starting English notifications: Fresh Scholarship Opportunities for Cameroonians in Science, Tech & More for 2025/26
+INFO 2025-11-30 12:25:40,481 fcm 40000 30308 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-30 12:25:40,484 basehttp 40000 20336 "POST /api/articles/ HTTP/1.1" 201 3109
+INFO 2025-11-30 12:25:44,914 fcm 40000 30308 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-30 12:25:44,914 fcm 40000 13104 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-30 12:25:44,914 fcm 40000 30308 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-30 12:25:44,914 fcm 40000 13104 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-30 12:25:46,401 basehttp 40000 29284 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-30 12:25:46,468 basehttp 40000 29284 "GET /api/articles/ HTTP/1.1" 200 97301
+INFO 2025-11-30 12:25:46,620 basehttp 40000 29284 "GET /media/thumbnails/scholarships_cameroonians_can_apply_20251130_122509_1.jpeg HTTP/1.1" 200 196766
+INFO 2025-11-30 12:26:56,542 fcm 40000 39904 Preparing notifications: 0 French, 1 English
+INFO 2025-11-30 12:26:56,543 fcm 40000 39904 Starting English notifications: Buea Rocks with Blogger Arrest, Boundary Clash, and Festival Buzz
+INFO 2025-11-30 12:26:56,543 fcm 40000 37536 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-30 12:26:56,545 basehttp 40000 39904 "POST /api/articles/ HTTP/1.1" 201 4184
+WARNING 2025-11-30 12:26:56,682 basehttp 40000 29284 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-30 12:26:56,687 fcm 40000 37536 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-30 12:26:56,687 fcm 40000 37536 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-30 12:28:12,626 fcm 40000 43704 Preparing notifications: 0 French, 1 English
+INFO 2025-11-30 12:28:12,626 fcm 40000 43704 Starting English notifications: Yaoundé: Residents Fume Over Sudden Water Cut, Blame Eneo and City Hall
+INFO 2025-11-30 12:28:12,626 fcm 40000 7360 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-30 12:28:12,634 fcm 40000 43704 Preparing notifications: 0 French, 1 English
+INFO 2025-11-30 12:28:12,634 fcm 40000 43704 Starting English notifications: Yaoundé: Residents Fume Over Sudden Water Cut, Blame Eneo and City Hall
+INFO 2025-11-30 12:28:12,634 fcm 40000 32324 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-30 12:28:12,637 basehttp 40000 43704 "POST /api/articles/ HTTP/1.1" 201 3615
+INFO 2025-11-30 12:28:12,798 fcm 40000 32324 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-30 12:28:12,799 fcm 40000 32324 [EN] Total: 1 successful, 0 failed out of 1
+WARNING 2025-11-30 12:28:12,804 basehttp 40000 21876 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-30 12:28:12,821 basehttp 40000 44848 "GET /media/thumbnails/happened_in_any_region_20251130_122733_1.jpeg HTTP/1.1" 200 65895
+INFO 2025-11-30 12:28:12,823 fcm 40000 7360 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-30 12:28:12,824 fcm 40000 7360 [EN] Total: 1 successful, 0 failed out of 1
+WARNING 2025-11-30 12:28:13,076 basehttp 40000 28128 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-30 12:28:13,087 basehttp 40000 44848 "GET /media/thumbnails/happened_in_any_region_20251130_122733_1.jpeg HTTP/1.1" 304 0
+WARNING 2025-11-30 12:29:11,627 basehttp 40000 33596 "GET /static/web/js/service-worker.js HTTP/1.1" 404 1886
+INFO 2025-11-30 12:29:29,300 fcm 40000 24292 Preparing notifications: 0 French, 1 English
+INFO 2025-11-30 12:29:29,301 fcm 40000 24292 Starting English notifications: Disgusting food scandal shakes Cameroon's capital markets
+INFO 2025-11-30 12:29:29,301 fcm 40000 36836 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-30 12:29:29,312 fcm 40000 24292 Preparing notifications: 0 French, 1 English
+INFO 2025-11-30 12:29:29,312 fcm 40000 24292 Starting English notifications: Disgusting food scandal shakes Cameroon's capital markets
+INFO 2025-11-30 12:29:29,313 fcm 40000 19320 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-30 12:29:29,315 basehttp 40000 24292 "POST /api/articles/ HTTP/1.1" 201 4172
+INFO 2025-11-30 12:29:29,534 fcm 40000 19320 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-30 12:29:29,535 fcm 40000 19320 [EN] Total: 1 successful, 0 failed out of 1
+WARNING 2025-11-30 12:29:29,541 basehttp 40000 39428 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-30 12:29:29,556 basehttp 40000 44848 "GET /media/thumbnails/disgusting_20251130_122838_1.jpeg HTTP/1.1" 200 72107
+INFO 2025-11-30 12:29:29,557 fcm 40000 36836 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-30 12:29:29,557 fcm 40000 36836 [EN] Total: 1 successful, 0 failed out of 1
+WARNING 2025-11-30 12:29:29,771 basehttp 40000 11256 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-30 12:29:29,780 basehttp 40000 44848 "GET /media/thumbnails/disgusting_20251130_122838_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 12:31:25,907 autoreload 25888 43080 Watching for file changes with StatReloader
+INFO 2025-11-30 12:31:31,448 basehttp 25888 39132 "GET /feed/ HTTP/1.1" 200 43927
+WARNING 2025-11-30 12:31:31,524 log 25888 39132 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-30 12:31:31,526 basehttp 25888 39132 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-30 12:31:32,025 basehttp 25888 14864 "GET /static/web/js/main.js HTTP/1.1" 200 6829
+INFO 2025-11-30 12:31:32,042 basehttp 25888 44080 "GET /static/web/js/feed-actions.js HTTP/1.1" 200 36218
+INFO 2025-11-30 12:31:32,053 basehttp 25888 39132 "GET /static/web/js/feed.js HTTP/1.1" 200 2095
+INFO 2025-11-30 12:31:32,056 basehttp 25888 23200 "GET /static/web/js/feed-config.js HTTP/1.1" 200 6142
+INFO 2025-11-30 12:31:32,070 basehttp 25888 27536 "GET /static/web/css/feed.css HTTP/1.1" 200 9471
+INFO 2025-11-30 12:31:32,093 basehttp 25888 39224 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-11-30 12:31:32,801 basehttp 25888 27536 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-30 12:31:32,807 basehttp 25888 39224 "GET /static/web/data/dummy_comments.json HTTP/1.1" 200 33076
+WARNING 2025-11-30 12:31:33,033 log 25888 39224 Not Found: /favicon.ico
+WARNING 2025-11-30 12:31:33,034 basehttp 25888 39224 "GET /favicon.ico HTTP/1.1" 404 4100
+INFO 2025-11-30 12:31:33,046 views 25888 27536 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-30 12:31:33,060 basehttp 25888 27536 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-30 12:31:36,738 fcm 25888 21988 Preparing notifications: 0 French, 1 English
+INFO 2025-11-30 12:31:36,738 fcm 25888 21988 Starting English notifications: Franck T Ignites Mboa Scene with 'Reform' Drop Tomorrow
+INFO 2025-11-30 12:31:36,834 fcm 25888 39644 Firebase Admin SDK initialized with C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\serviceAccountKey.json
+INFO 2025-11-30 12:31:36,835 fcm 25888 39644 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-30 12:31:36,844 fcm 25888 21988 Preparing notifications: 0 French, 1 English
+INFO 2025-11-30 12:31:36,844 fcm 25888 21988 Starting English notifications: Franck T Ignites Mboa Scene with 'Reform' Drop Tomorrow
+INFO 2025-11-30 12:31:36,845 fcm 25888 27228 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-30 12:31:36,855 basehttp 25888 21988 "POST /api/articles/ HTTP/1.1" 201 2943
+INFO 2025-11-30 12:31:41,489 fcm 25888 27228 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-30 12:31:41,489 fcm 25888 27228 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-30 12:31:41,693 fcm 25888 39644 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-30 12:31:41,693 fcm 25888 39644 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-30 12:31:52,394 basehttp 25888 27536 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-30 12:31:52,452 basehttp 25888 27536 "GET /api/articles/ HTTP/1.1" 200 91345
+INFO 2025-11-30 12:31:52,490 basehttp 25888 39224 "GET /media/thumbnails/disgusting_20251130_122838_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 12:31:52,512 basehttp 25888 27536 "GET /media/thumbnails/Mboa_music_20251130_123106_1.jpeg HTTP/1.1" 200 16281
+INFO 2025-11-30 12:31:52,542 basehttp 25888 23200 "GET /media/thumbnails/happened_in_any_region_20251130_122733_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 12:31:52,561 basehttp 25888 39132 "GET /media/thumbnails/scholarships_cameroonians_can_apply_20251130_122509_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 12:32:41,673 fcm 25888 27844 Preparing notifications: 0 French, 1 English
+INFO 2025-11-30 12:32:41,674 fcm 25888 27844 Starting English notifications: Cameroon's Music Scene Explodes: Universities Host Mega-Concerts While Artists Storm the Stages in 2025
+INFO 2025-11-30 12:32:41,674 fcm 25888 42764 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-30 12:32:41,685 fcm 25888 27844 Preparing notifications: 0 French, 1 English
+INFO 2025-11-30 12:32:41,685 fcm 25888 27844 Starting English notifications: Cameroon's Music Scene Explodes: Universities Host Mega-Concerts While Artists Storm the Stages in 2025
+INFO 2025-11-30 12:32:41,686 fcm 25888 3732 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-30 12:32:41,689 basehttp 25888 27844 "POST /api/articles/ HTTP/1.1" 201 3306
+INFO 2025-11-30 12:32:41,887 fcm 25888 3732 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-30 12:32:41,887 fcm 25888 3732 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-30 12:32:41,918 fcm 25888 42764 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-30 12:32:41,918 fcm 25888 42764 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-30 12:32:44,419 basehttp 25888 39132 "GET /api/articles/?mood=happy&category=politics HTTP/1.1" 200 52
+INFO 2025-11-30 12:32:44,503 basehttp 25888 39132 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-30 12:32:44,545 basehttp 25888 39132 "GET /api/articles/?category=politics HTTP/1.1" 200 35270
+INFO 2025-11-30 12:33:30,891 basehttp 25888 39132 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-30 12:33:30,954 basehttp 25888 39132 "GET /api/articles/ HTTP/1.1" 200 90800
+INFO 2025-11-30 12:33:30,981 basehttp 25888 23200 "GET /media/thumbnails/Mboa_music_20251130_123106_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 12:33:30,991 basehttp 25888 44080 "GET /media/thumbnails/scholarships_cameroonians_can_apply_20251130_122509_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 12:33:31,019 basehttp 25888 39132 "GET /media/thumbnails/music_artistsuniversity_20251130_123201_1.jpeg HTTP/1.1" 200 153585
+INFO 2025-11-30 12:33:31,031 basehttp 25888 39224 "GET /media/thumbnails/happened_in_any_region_20251130_122733_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 12:33:31,046 basehttp 25888 27536 "GET /media/thumbnails/disgusting_20251130_122838_1.jpeg HTTP/1.1" 304 0
+WARNING 2025-11-30 12:34:41,733 basehttp 25888 2732 "GET /static/web/js/service-worker.js HTTP/1.1" 404 1886
+INFO 2025-11-30 12:36:45,514 basehttp 25888 27536 "GET /api/articles/?mood=happy&category=politics HTTP/1.1" 200 52
+INFO 2025-11-30 12:36:45,589 basehttp 25888 27536 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-30 12:36:45,648 basehttp 25888 27536 "GET /api/articles/?category=politics HTTP/1.1" 200 35270
+WARNING 2025-11-30 12:40:11,826 basehttp 25888 28184 "GET /static/web/js/service-worker.js HTTP/1.1" 404 1886
+INFO 2025-11-30 12:41:21,463 autoreload 21208 35136 Watching for file changes with StatReloader
+INFO 2025-11-30 12:41:25,177 basehttp 21208 36620 "GET /feed/ HTTP/1.1" 200 43927
+WARNING 2025-11-30 12:41:25,356 log 21208 24248 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-30 12:41:25,357 basehttp 21208 24248 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-30 12:41:25,418 basehttp 21208 36620 "GET /static/web/js/feed-actions.js HTTP/1.1" 200 35858
+INFO 2025-11-30 12:41:25,697 basehttp 21208 36620 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-30 12:41:25,886 views 21208 36620 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-30 12:41:25,895 basehttp 21208 36620 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-30 12:41:27,892 basehttp 21208 36620 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-30 12:41:30,873 basehttp 21208 36620 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-30 12:41:30,941 basehttp 21208 36620 "GET /api/articles/ HTTP/1.1" 200 90800
+INFO 2025-11-30 12:41:30,970 basehttp 21208 36620 "GET /media/thumbnails/music_artistsuniversity_20251130_123201_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 12:41:30,981 basehttp 21208 34880 "GET /media/thumbnails/disgusting_20251130_122838_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 12:41:31,015 basehttp 21208 36136 "GET /media/thumbnails/happened_in_any_region_20251130_122733_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 12:41:31,029 basehttp 21208 36620 "GET /media/thumbnails/scholarships_cameroonians_can_apply_20251130_122509_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 12:41:31,044 basehttp 21208 24248 "GET /media/thumbnails/Mboa_music_20251130_123106_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 12:41:33,215 basehttp 21208 24248 "GET /api/articles/?mood=happy&category=politics HTTP/1.1" 200 52
+INFO 2025-11-30 12:41:33,307 basehttp 21208 24248 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-30 12:41:33,361 basehttp 21208 24248 "GET /api/articles/?category=politics HTTP/1.1" 200 35270
+INFO 2025-11-30 12:41:45,905 basehttp 21208 24248 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-30 12:41:45,969 basehttp 21208 24248 "GET /api/articles/ HTTP/1.1" 200 90800
+INFO 2025-11-30 12:41:53,099 basehttp 21208 24248 "GET /api/articles/?page=2 HTTP/1.1" 200 93774
+INFO 2025-11-30 12:41:53,142 basehttp 21208 24248 "GET /media/thumbnails/economy_20251129_224020_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 12:41:53,194 basehttp 21208 24248 "GET /media/thumbnails/agriculture_20251129_223341_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 12:41:53,218 basehttp 21208 34880 "GET /media/thumbnails/culture_20251129_223444_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 12:41:53,250 basehttp 21208 34880 "GET /media/thumbnails/sports_20251129_222502_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 12:41:53,281 basehttp 21208 35796 "GET /media/thumbnails/education_20251129_223226_1.png HTTP/1.1" 304 0
+INFO 2025-11-30 12:41:53,300 basehttp 21208 32984 "GET /media/thumbnails/technology_20251129_222920_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 12:41:53,317 basehttp 21208 36136 "GET /media/thumbnails/crime_20251129_223606_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 12:41:53,344 basehttp 21208 36620 "GET /media/thumbnails/environment_20251129_223727_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 12:41:53,361 basehttp 21208 24248 "GET /media/thumbnails/business_20251129_222753_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 12:42:18,477 basehttp 21208 24248 "GET /api/articles/?page=3 HTTP/1.1" 200 97008
+INFO 2025-11-30 12:42:18,506 basehttp 21208 24248 "GET /media/thumbnails/international_20251129_214604_1.png HTTP/1.1" 304 0
+INFO 2025-11-30 12:42:18,521 basehttp 21208 36136 "GET /media/thumbnails/health_20251129_213629_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 12:42:18,550 basehttp 21208 36620 "GET /media/thumbnails/environment_20251129_214401_1.png HTTP/1.1" 304 0
+INFO 2025-11-30 12:42:18,567 basehttp 21208 24248 "GET /media/thumbnails/business_20251129_213339_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 12:42:18,596 basehttp 21208 36136 "GET /media/thumbnails/society_20251129_204818_3.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 12:42:18,627 basehttp 21208 34880 "GET /media/thumbnails/international_20251129_204221_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 12:42:18,643 basehttp 21208 34880 "GET /media/thumbnails/agriculture_20251129_203728_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 12:42:18,683 basehttp 21208 35796 "GET /media/thumbnails/economy_20251129_204407_1.png HTTP/1.1" 200 816964
+INFO 2025-11-30 12:42:18,691 basehttp 21208 32984 "GET /media/thumbnails/entertainment_20251129_213240_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 12:42:18,721 basehttp 21208 36136 "GET /media/thumbnails/culture_20251129_203854_1.jpeg HTTP/1.1" 200 153869
+INFO 2025-11-30 12:42:18,739 basehttp 21208 24248 "GET /media/thumbnails/crime_20251129_204021_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 12:42:18,763 basehttp 21208 34880 "GET /media/thumbnails/education_20251129_203455_1.png HTTP/1.1" 200 849697
+INFO 2025-11-30 12:42:18,772 basehttp 21208 35796 "GET /media/thumbnails/health_20251129_203248_1.jpeg HTTP/1.1" 200 32313
+INFO 2025-11-30 12:42:18,797 basehttp 21208 36620 "GET /media/thumbnails/environment_20251129_204113_1.png HTTP/1.1" 200 844372
+INFO 2025-11-30 12:42:31,362 basehttp 21208 36620 "GET /api/articles/?page=4 HTTP/1.1" 200 92415
+INFO 2025-11-30 12:42:31,399 basehttp 21208 35796 "GET /media/thumbnails/business_20251129_202902_1.png HTTP/1.1" 304 0
+INFO 2025-11-30 12:42:31,456 basehttp 21208 36620 "GET /media/thumbnails/technology_20251129_203112_1.jpeg HTTP/1.1" 200 101133
+INFO 2025-11-30 12:42:31,475 basehttp 21208 34880 "GET /media/thumbnails/technology_20251126_165712_1.jpeg HTTP/1.1" 304 0
+WARNING 2025-11-30 12:42:31,505 log 21208 32984 Not Found: /feed/media/thumbnailstechnology_20251126_004402_1.png
+WARNING 2025-11-30 12:42:31,506 basehttp 21208 32984 "GET /feed/media/thumbnailstechnology_20251126_004402_1.png HTTP/1.1" 404 4226
+WARNING 2025-11-30 12:42:31,537 log 21208 36620 Not Found: /feed/media/thumbnails\x0business_20251126_004238_1.jpeg
+WARNING 2025-11-30 12:42:31,538 basehttp 21208 36620 "GET /feed/media/thumbnails%0Business_20251126_004238_1.jpeg HTTP/1.1" 404 4225
+INFO 2025-11-30 12:42:31,567 basehttp 21208 24248 "GET /media/thumbnails/business_20251126_165446_1.jpeg HTTP/1.1" 304 0
+WARNING 2025-11-30 12:42:31,584 log 21208 32984 Not Found: /feed/media/thumbnailssports_20251126_004013_1.jpeg
+WARNING 2025-11-30 12:42:31,585 basehttp 21208 32984 "GET /feed/media/thumbnailssports_20251126_004013_1.jpeg HTTP/1.1" 404 4217
+WARNING 2025-11-30 12:42:31,600 log 21208 34880 Not Found: /feed/media/thumbnails\x0entertainment_20251126_004118_1.jpeg
+WARNING 2025-11-30 12:42:31,602 basehttp 21208 34880 "GET /feed/media/thumbnails%0Entertainment_20251126_004118_1.jpeg HTTP/1.1" 404 4240
+INFO 2025-11-30 12:42:31,616 basehttp 21208 35796 "GET /media/thumbnails/health_20251126_165933_1.jpeg HTTP/1.1" 304 0
+WARNING 2025-11-30 12:42:31,647 log 21208 36136 Not Found: /feed/media/thumbnailshealth_20251126_004505_1.jpeg
+WARNING 2025-11-30 12:42:31,648 basehttp 21208 36136 "GET /feed/media/thumbnailshealth_20251126_004505_1.jpeg HTTP/1.1" 404 4217
+INFO 2025-11-30 12:43:00,512 basehttp 21208 36136 "GET /api/articles/?mood=happy&category=politics HTTP/1.1" 200 52
+INFO 2025-11-30 12:43:00,612 basehttp 21208 36136 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-30 12:43:00,660 basehttp 21208 36136 "GET /api/articles/?category=politics HTTP/1.1" 200 35270
+INFO 2025-11-30 12:43:06,802 basehttp 21208 36136 "GET /api/articles/?mood=happy&category=economy HTTP/1.1" 200 52
+INFO 2025-11-30 12:43:06,821 basehttp 21208 36136 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-30 12:43:06,866 basehttp 21208 36136 "GET /api/articles/?category=economy HTTP/1.1" 200 15001
+INFO 2025-11-30 12:44:13,074 basehttp 21208 36136 "GET /media/audio/french/economy_20251129_204407.mp3 HTTP/1.1" 200 2766528
+WARNING 2025-11-30 12:44:13,208 log 21208 36136 Not Found: /favicon.ico
+WARNING 2025-11-30 12:44:13,209 basehttp 21208 36136 "GET /favicon.ico HTTP/1.1" 404 4100
+INFO 2025-11-30 12:44:17,391 basehttp 21208 36136 "GET /media/audio/english/economy_20251129_204407.mp3 HTTP/1.1" 200 2780928
+INFO 2025-11-30 12:44:28,010 fcm 21208 36136 Preparing notifications: 0 French, 1 English
+INFO 2025-11-30 12:44:28,010 fcm 21208 36136 Starting English notifications: Cameroon's Economy Accelerating Despite Post-Election Tensions: Big Infrastructure Projects Push Growth to 3.8-3.9%
+INFO 2025-11-30 12:44:28,058 fcm 21208 20864 Firebase Admin SDK initialized with C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\serviceAccountKey.json
+INFO 2025-11-30 12:44:28,058 fcm 21208 20864 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-30 12:44:28,063 basehttp 21208 36136 "POST /api/articles/31/comment/ HTTP/1.1" 201 119
+INFO 2025-11-30 12:44:31,907 fcm 21208 20864 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-30 12:44:31,909 fcm 21208 20864 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-11-30 12:44:39,624 fcm 21208 36136 Preparing notifications: 0 French, 1 English
+INFO 2025-11-30 12:44:39,624 fcm 21208 36136 Starting English notifications: Cameroon's Economy Accelerating Despite Post-Election Tensions: Big Infrastructure Projects Push Growth to 3.8-3.9%
+INFO 2025-11-30 12:44:39,626 fcm 21208 27872 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-11-30 12:44:39,636 basehttp 21208 36136 "POST /api/articles/31/comment/ HTTP/1.1" 201 110
+INFO 2025-11-30 12:44:39,804 fcm 21208 27872 [EN] Batch 1: 1 successful, 0 failed
+INFO 2025-11-30 12:44:39,805 fcm 21208 27872 [EN] Total: 1 successful, 0 failed out of 1

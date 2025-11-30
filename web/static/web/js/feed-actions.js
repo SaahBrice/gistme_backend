@@ -284,14 +284,31 @@ const FeedActions = {
         });
     },
 
+
     handleScroll(event) {
         const container = event.target;
         const articleHeight = container.clientHeight;
         const newIndex = Math.round(container.scrollTop / articleHeight);
 
+        // Calculate distance from bottom
+        const scrollTop = container.scrollTop;
+        const scrollHeight = container.scrollHeight;
+        const clientHeight = container.clientHeight;
+        const distanceFromBottom = scrollHeight - (scrollTop + clientHeight);
+
         // Update current index when article changes
         if (newIndex !== this.currentIndex) {
             this.currentIndex = newIndex;
+        }
+
+        // Load more articles when approaching the end (index-based OR scroll-based)
+        const remainingArticles = this.filteredArticles.length - newIndex;
+        const nearBottom = distanceFromBottom < 200; // Within 200px of bottom
+        const shouldLoadMore = (remainingArticles <= 5 || nearBottom) && this.nextPage && !this.isLoading;
+
+        if (shouldLoadMore) {
+            console.log(`📥 Loading more articles... (remaining: ${remainingArticles}, distanceFromBottom: ${distanceFromBottom}px)`);
+            this.fetchArticles(false);
         }
     },
 
@@ -299,6 +316,8 @@ const FeedActions = {
         this.touchStartX = e.changedTouches[0].clientX;
         this.touchStartY = e.changedTouches[0].clientY;
     },
+
+
 
     handleTouchMove(e) {
         this.touchEndX = e.changedTouches[0].clientX;
