@@ -5,13 +5,21 @@
             Be the first to know about National Exams, Scholarship drops, and Tech Jobs in Cameroon.
         </p>
 
-        <form
+        <form x-data="waitingListForm()" @submit.prevent="submitForm()"
             class="bg-white p-8 md:p-12 rounded-3xl border-2 border-black shadow-[15px_15px_0px_0px_rgba(0,0,0,1)] text-left">
+            {% csrf_token %}
+
+            <!-- Honeypot field (hidden) -->
+            <div style="display: none;">
+                <label>Leave this field empty</label>
+                <input type="text" x-model="formData.website" name="website" tabindex="-1" autocomplete="off">
+            </div>
+
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div class="group">
                     <label class="block font-mono text-xs font-bold mb-2 uppercase text-gray-500">Email
                         Address</label>
-                    <input type="email" placeholder="you@example.com"
+                    <input type="email" x-model="formData.email" required placeholder="you@example.com"
                         class="w-full bg-gray-50 border-b-2 border-gray-300 p-3 outline-none focus:border-black focus:bg-white transition-colors font-sans text-lg">
                 </div>
                 <div class="group">
@@ -24,15 +32,16 @@
                             <img src="https://flagcdn.com/w20/cm.png" alt="Cameroon Flag" class="w-5">
                             +237
                         </span>
-                        <input type="tel" placeholder="6XX XX XX XX"
+                        <input type="tel" x-model="formData.phone" placeholder="6XX XX XX XX"
                             class="w-full bg-transparent p-3 outline-none font-sans text-lg">
                     </div>
                 </div>
             </div>
-            <button type="button"
-                class="w-full py-5 bg-black text-white font-bold text-xl rounded-xl hover:scale-[1.01] transition-transform flex justify-center items-center gap-2">
-                JOIN THE WAITLIST
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <button type="submit" :disabled="isLoading"
+                class="w-full py-5 bg-black text-white font-bold text-xl rounded-xl hover:scale-[1.01] transition-transform flex justify-center items-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed">
+                <span x-show="!isLoading">JOIN THE WAITLIST</span>
+                <span x-show="isLoading">Processing...</span>
+                <svg x-show="!isLoading" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
                     </path>
                 </svg>

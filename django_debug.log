@@ -4213,3 +4213,104 @@ INFO 2025-11-30 13:12:45,438 views 43356 28844 FCM subscription updated: epjYJtk
 INFO 2025-11-30 13:12:45,451 basehttp 43356 28844 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
 INFO 2025-11-30 13:12:47,286 basehttp 43356 28844 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
 WARNING 2025-11-30 13:13:12,397 basehttp 43356 44236 "GET /static/web/js/service-worker.js HTTP/1.1" 404 1886
+INFO 2025-11-30 13:15:42,366 autoreload 25584 37392 Watching for file changes with StatReloader
+WARNING 2025-11-30 13:18:42,517 basehttp 25584 28852 "GET /static/web/js/service-worker.js HTTP/1.1" 404 1886
+INFO 2025-11-30 13:21:19,873 autoreload 25584 37392 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\models.py changed, reloading.
+INFO 2025-11-30 13:21:21,038 autoreload 20860 43324 Watching for file changes with StatReloader
+INFO 2025-11-30 13:22:32,838 autoreload 20860 43324 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\views.py changed, reloading.
+INFO 2025-11-30 13:22:34,348 autoreload 19208 27640 Watching for file changes with StatReloader
+INFO 2025-11-30 13:23:00,746 autoreload 19208 27640 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\urls.py changed, reloading.
+INFO 2025-11-30 13:23:02,092 autoreload 35444 42412 Watching for file changes with StatReloader
+INFO 2025-11-30 13:27:49,033 autoreload 34588 25088 Watching for file changes with StatReloader
+INFO 2025-11-30 13:28:03,659 basehttp 34588 26140 "GET / HTTP/1.1" 200 65695
+WARNING 2025-11-30 13:28:03,724 log 34588 37348 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-30 13:28:03,725 basehttp 34588 37348 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4227
+INFO 2025-11-30 13:28:03,863 basehttp 34588 26140 "GET /static/web/js/waiting-list.js HTTP/1.1" 200 3557
+INFO 2025-11-30 13:28:04,415 views 34588 26140 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-30 13:28:04,426 basehttp 34588 26140 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-30 13:28:06,450 basehttp 34588 26140 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-30 13:28:12,064 basehttp 34588 26140 "GET / HTTP/1.1" 200 65695
+WARNING 2025-11-30 13:28:12,176 log 34588 26140 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-30 13:28:12,181 basehttp 34588 26140 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4227
+INFO 2025-11-30 13:28:12,823 views 34588 26140 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-30 13:28:12,832 basehttp 34588 26140 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-30 13:28:14,742 basehttp 34588 26140 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-30 13:28:37,962 basehttp 34588 26140 "POST /join-waiting-list/ HTTP/1.1" 200 87
+INFO 2025-11-30 13:30:18,973 autoreload 21016 19640 Watching for file changes with StatReloader
+INFO 2025-11-30 13:30:23,336 basehttp 21016 25356 "GET / HTTP/1.1" 200 65695
+WARNING 2025-11-30 13:30:23,387 log 21016 27724 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-30 13:30:23,388 basehttp 21016 27724 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4227
+INFO 2025-11-30 13:30:23,497 basehttp 21016 25356 "GET /static/web/js/waiting-list.js HTTP/1.1" 200 2933
+INFO 2025-11-30 13:30:24,078 views 21016 25356 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-30 13:30:24,095 basehttp 21016 25356 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-30 13:30:26,250 basehttp 21016 25356 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-30 13:30:38,547 basehttp 21016 25356 "POST /join-waiting-list/ HTTP/1.1" 200 87
+INFO 2025-11-30 13:33:07,664 basehttp 21016 40488 "GET /admin/api/article/78/change/ HTTP/1.1" 200 28749
+INFO 2025-11-30 13:33:07,726 basehttp 21016 40488 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-30 13:33:09,418 basehttp 21016 40488 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-30 13:33:12,747 basehttp 21016 40488 "GET /admin/django_q/schedule/ HTTP/1.1" 200 15152
+INFO 2025-11-30 13:33:12,797 basehttp 21016 40488 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-30 13:33:14,391 basehttp 21016 40488 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-30 13:33:18,835 basehttp 21016 40488 "GET /admin/auth/user/ HTTP/1.1" 200 16333
+INFO 2025-11-30 13:33:18,890 basehttp 21016 18784 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2025-11-30 13:33:18,897 basehttp 21016 40488 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-30 13:33:18,920 basehttp 21016 40488 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+INFO 2025-11-30 13:33:20,551 basehttp 21016 40488 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-30 13:33:22,843 basehttp 21016 40488 "GET /admin/auth/user/1/change/ HTTP/1.1" 200 30306
+INFO 2025-11-30 13:33:22,894 basehttp 21016 18784 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-30 13:33:22,911 basehttp 21016 40488 "GET /static/admin/js/calendar.js HTTP/1.1" 200 9141
+INFO 2025-11-30 13:33:22,913 basehttp 21016 20932 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO 2025-11-30 13:33:22,915 basehttp 21016 10824 "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 15845
+INFO 2025-11-30 13:33:22,922 basehttp 21016 34060 "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4530
+INFO 2025-11-30 13:33:23,017 basehttp 21016 34060 "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+INFO 2025-11-30 13:33:23,017 basehttp 21016 10824 "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+INFO 2025-11-30 13:33:23,017 basehttp 21016 20932 "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+INFO 2025-11-30 13:33:24,561 basehttp 21016 10824 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-30 13:34:30,860 basehttp 21016 25356 "GET / HTTP/1.1" 200 65684
+INFO 2025-11-30 13:34:30,894 basehttp 21016 25356 "GET /static/web/js/waiting-list.js HTTP/1.1" 304 0
+WARNING 2025-11-30 13:34:30,913 log 21016 25356 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-30 13:34:30,914 basehttp 21016 25356 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4227
+INFO 2025-11-30 13:34:31,539 views 21016 25356 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-30 13:34:31,550 basehttp 21016 25356 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-30 13:34:33,597 basehttp 21016 25356 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-30 13:34:45,100 basehttp 21016 25356 "POST /join-waiting-list/ HTTP/1.1" 200 87
+INFO 2025-11-30 13:35:12,063 basehttp 21016 25356 "GET /feed/ HTTP/1.1" 200 43780
+INFO 2025-11-30 13:35:12,117 basehttp 21016 27724 "GET /static/web/js/feed-actions.js HTTP/1.1" 304 0
+WARNING 2025-11-30 13:35:12,128 log 21016 25356 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-30 13:35:12,128 basehttp 21016 25356 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4227
+INFO 2025-11-30 13:35:12,444 basehttp 21016 25356 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-30 13:35:12,622 views 21016 25356 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-30 13:35:12,631 basehttp 21016 25356 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+WARNING 2025-11-30 13:35:12,851 basehttp 21016 10824 "GET /static/web/js/service-worker.js HTTP/1.1" 404 1886
+INFO 2025-11-30 13:35:14,731 basehttp 21016 25356 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-30 13:35:15,803 basehttp 21016 25356 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-30 13:35:15,868 basehttp 21016 25356 "GET /api/articles/ HTTP/1.1" 200 92455
+INFO 2025-11-30 13:35:15,894 basehttp 21016 25356 "GET /media/thumbnails/music_artistsuniversity_20251130_123201_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 13:35:15,918 basehttp 21016 27724 "GET /media/thumbnails/Mboa_music_20251130_123106_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 13:35:15,949 basehttp 21016 31580 "GET /media/thumbnails/scholarships_cameroonians_can_apply_20251130_122509_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 13:35:15,967 basehttp 21016 44564 "GET /media/thumbnails/disgusting_20251130_122838_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 13:35:15,981 basehttp 21016 7300 "GET /media/thumbnails/happened_in_any_region_20251130_122733_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 13:35:21,449 basehttp 21016 7300 "GET /media/audio/english/music_artistsuniversity_20251130_123201.mp3 HTTP/1.1" 200 662784
+WARNING 2025-11-30 13:35:21,514 log 21016 7300 Not Found: /favicon.ico
+WARNING 2025-11-30 13:35:21,514 basehttp 21016 7300 "GET /favicon.ico HTTP/1.1" 404 4116
+INFO 2025-11-30 13:35:30,583 basehttp 21016 7300 "GET /static/web/audio/drum.mp3 HTTP/1.1" 304 0
+INFO 2025-11-30 13:36:43,549 autoreload 21016 19640 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\admin.py changed, reloading.
+INFO 2025-11-30 13:36:45,281 autoreload 8576 36380 Watching for file changes with StatReloader
+INFO 2025-11-30 13:37:27,682 autoreload 1860 25192 Watching for file changes with StatReloader
+INFO 2025-11-30 13:37:31,470 basehttp 1860 23344 "GET /admin/auth/user/1/change/ HTTP/1.1" 200 30750
+INFO 2025-11-30 13:37:31,546 basehttp 1860 23344 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-30 13:37:33,249 basehttp 1860 23344 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-30 13:37:33,631 basehttp 1860 23344 "GET /admin/web/waitinglist/ HTTP/1.1" 200 17173
+INFO 2025-11-30 13:37:33,732 basehttp 1860 23344 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-30 13:37:35,401 basehttp 1860 23344 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-30 13:37:36,157 basehttp 1860 23344 "GET /admin/web/waitinglist/2/change/ HTTP/1.1" 200 16912
+INFO 2025-11-30 13:37:36,208 basehttp 1860 23344 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-30 13:37:37,848 basehttp 1860 23344 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-30 13:38:10,021 basehttp 1860 40124 "GET / HTTP/1.1" 200 65684
+INFO 2025-11-30 13:38:10,103 basehttp 1860 37824 "GET /static/web/js/waiting-list.js HTTP/1.1" 304 0
+WARNING 2025-11-30 13:38:10,117 log 1860 40124 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-30 13:38:10,118 basehttp 1860 40124 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4227
+INFO 2025-11-30 13:38:10,765 views 1860 40124 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-30 13:38:10,774 basehttp 1860 40124 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-30 13:38:12,612 basehttp 1860 40124 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-30 13:38:37,571 basehttp 1860 40124 "POST /join-waiting-list/ HTTP/1.1" 200 87

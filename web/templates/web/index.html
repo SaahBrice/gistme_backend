@@ -1,4 +1,5 @@
 {% extends 'web/base.html' %}
+{% load static %}
 
 {% block html_attributes %}{% endblock %}
 {% block meta_translation %}{% endblock %}
@@ -12,4 +13,9 @@
 {% include 'web/includes/_pricing.html' %}
 {% include 'web/includes/_subscription_modal.html' %}
 {% include 'web/includes/_advertising_modal.html' %}
+{% include 'web/includes/_waiting_list_modal.html' %}
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="{% static 'web/js/waiting-list.js' %}"></script>
 {% endblock %}

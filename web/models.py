@@ -35,3 +35,19 @@ class Advertisement(models.Model):
     def __str__(self):
         return f"{self.organization_name} - {self.email}"
 
+
+class WaitingList(models.Model):
+    """Model to store waiting list signups"""
+    email = models.EmailField(unique=True)
+    phone = models.CharField(max_length=20, blank=True, null=True, help_text="Cameroon phone number")
+    created_at = models.DateTimeField(default=timezone.now)
+    ip_address = models.GenericIPAddressField(null=True, blank=True)
+    user_agent = models.TextField(null=True, blank=True)
+    
+    class Meta:
+        ordering = ['-created_at']
+        verbose_name = 'Waiting List Entry'
+        verbose_name_plural = 'Waiting List Entries'
+    
+    def __str__(self):
+        return self.email

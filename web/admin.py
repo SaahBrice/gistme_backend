@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Subscription, Advertisement
+from .models import Subscription, Advertisement, WaitingList
 
 
 @admin.register(Subscription)
@@ -37,3 +37,20 @@ class AdvertisementAdmin(admin.ModelAdmin):
         }),
     )
 
+
+@admin.register(WaitingList)
+class WaitingListAdmin(admin.ModelAdmin):
+    list_display = ('email', 'phone', 'created_at', 'ip_address')
+    list_filter = ('created_at',)
+    search_fields = ('email', 'phone', 'ip_address')
+    readonly_fields = ('created_at', 'ip_address', 'user_agent')
+    date_hierarchy = 'created_at'
+    
+    fieldsets = (
+        ('Contact Information', {
+            'fields': ('email', 'phone')
+        }),
+        ('Technical Details', {
+            'fields': ('ip_address', 'user_agent', 'created_at')
+        }),
+    )

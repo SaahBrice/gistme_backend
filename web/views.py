@@ -101,6 +101,74 @@ def advertise(request):
             'error': str(e)
         }, status=500)
 
+
+@csrf_exempt
+@require_http_methods(["POST"])
+def join_waiting_list(request):
+    """API endpoint to handle waiting list submissions"""
+    try:
+        data = json.loads(request.body)
+        
+        # Honeypot check (if 'website' field is filled, it's a bot)
+        if data.get('website'):
+            return JsonResponse({
+                'success': True,  # Fake success to fool bots
+                'message': 'Successfully joined!'
+            })
+            
+        # Extract form data
+        email = data.get('email', '').strip()
+        phone = data.get('phone', '').strip()
+        
+        # Basic validation
+        if not email:
+            return JsonResponse({
+                'success': False,
+                'error': 'Email is required'
+            }, status=400)
+            
+        # Create waiting list entry
+        from .models import WaitingList
+        
+        # Get client IP
+        x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+        if x_forwarded_for:
+            ip = x_forwarded_for.split(',')[0]
+        else:
+            ip = request.META.get('REMOTE_ADDR')
+            
+        entry, created = WaitingList.objects.get_or_create(
+            email=email,
+            defaults={
+                'phone': phone,
+                'ip_address': ip,
+                'user_agent': request.META.get('HTTP_USER_AGENT', '')
+            }
+        )
+        
+        if not created and phone:
+            # Update phone if provided and entry existed
+            entry.phone = phone
+            entry.save()
+        
+        return JsonResponse({
+            'success': True,
+            'message': 'You have been added to the waiting list!',
+            'entry_id': entry.id
+        })
+        
+    except json.JSONDecodeError:
+        return JsonResponse({
+            'success': False,
+            'error': 'Invalid JSON data'
+        }, status=400)
+    except Exception as e:
+        return JsonResponse({
+            'success': False,
+            'error': str(e)
+        }, status=500)
+
+
 def firebase_messaging_sw(request):
     """
     Serve the Firebase Messaging Service Worker from the root.
