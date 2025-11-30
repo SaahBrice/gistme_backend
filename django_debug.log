@@ -3818,3 +3818,39 @@ INFO 2025-11-29 23:30:58,045 basehttp 10544 21196 "POST /api/articles/ HTTP/1.1"
 INFO 2025-11-29 23:30:58,234 fcm 10544 38300 [EN] Batch 1: 1 successful, 0 failed
 INFO 2025-11-29 23:30:58,234 fcm 10544 38300 [EN] Total: 1 successful, 0 failed out of 1
 WARNING 2025-11-29 23:30:58,243 basehttp 10544 18456 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-11-30 11:33:56,335 autoreload 17232 7532 Watching for file changes with StatReloader
+INFO 2025-11-30 11:33:58,932 basehttp 17232 28440 "GET /feed/ HTTP/1.1" 200 43927
+WARNING 2025-11-30 11:33:59,066 log 17232 28440 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-30 11:33:59,068 basehttp 17232 28440 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-30 11:33:59,437 basehttp 17232 28440 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-30 11:33:59,626 views 17232 28440 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-30 11:33:59,634 basehttp 17232 28440 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-30 11:34:01,598 basehttp 17232 28440 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-30 11:34:03,030 basehttp 17232 28440 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-30 11:34:03,094 basehttp 17232 28440 "GET /api/articles/ HTTP/1.1" 200 50614
+INFO 2025-11-30 11:34:03,148 basehttp 17232 28440 "GET /media/thumbnails/technology_20251129_232830_1.png HTTP/1.1" 304 0
+INFO 2025-11-30 11:34:03,163 basehttp 17232 38272 "GET /media/thumbnails/disgusting_20251129_230011_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 11:34:03,194 basehttp 17232 20236 "GET /media/thumbnails/entertainment_20251129_232607_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 11:34:03,211 basehttp 17232 30580 "GET /media/thumbnails/Mboa_music_20251129_230321_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 11:34:03,227 basehttp 17232 21368 "GET /media/thumbnails/happened_in_any_region_20251129_225843_1.jpeg HTTP/1.1" 304 0
+WARNING 2025-11-30 11:34:10,758 basehttp 17232 30348 "GET /static/web/js/service-worker.js HTTP/1.1" 404 1886
+INFO 2025-11-30 11:34:16,028 autoreload 17232 7532 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\views.py changed, reloading.
+INFO 2025-11-30 11:34:17,087 autoreload 39468 33688 Watching for file changes with StatReloader
+INFO 2025-11-30 11:34:21,636 autoreload 44604 16988 Watching for file changes with StatReloader
+INFO 2025-11-30 11:34:30,180 basehttp 44604 41604 "GET /feed/ HTTP/1.1" 200 43927
+WARNING 2025-11-30 11:34:30,240 log 44604 41604 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-30 11:34:30,240 basehttp 44604 41604 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4211
+INFO 2025-11-30 11:34:30,625 basehttp 44604 41604 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-11-30 11:34:30,776 views 44604 41604 FCM subscription updated: epjYJtksM6qrkqzYz6zi... (lang: en)
+INFO 2025-11-30 11:34:30,786 basehttp 44604 41604 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-11-30 11:34:32,747 basehttp 44604 41604 "GET /firebase-messaging-sw.js HTTP/1.1" 200 3928
+INFO 2025-11-30 11:34:36,573 basehttp 44604 41604 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-11-30 11:34:36,641 basehttp 44604 41604 "GET /api/articles/ HTTP/1.1" 200 98466
+INFO 2025-11-30 11:34:36,715 basehttp 44604 41604 "GET /media/thumbnails/happened_in_Buea_20251129_225632_1.png HTTP/1.1" 304 0
+INFO 2025-11-30 11:34:36,729 basehttp 44604 41604 "GET /media/thumbnails/religion_20251129_224724_1.webp HTTP/1.1" 304 0
+INFO 2025-11-30 11:34:36,746 basehttp 44604 41604 "GET /media/thumbnails/lifestyle_20251129_224553_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 11:34:36,776 basehttp 44604 24976 "GET /media/thumbnails/scholarships_cameroonians_can_apply_20251129_225514_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 11:34:36,795 basehttp 44604 30284 "GET /media/thumbnails/transportation_20251129_224859_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 11:34:36,809 basehttp 44604 5928 "GET /media/thumbnails/latest_jobs_20251129_225410_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 11:34:36,829 basehttp 44604 22728 "GET /media/thumbnails/real_estate_20251129_225031_1.jpeg HTTP/1.1" 304 0
+INFO 2025-11-30 11:34:36,847 basehttp 44604 35888 "GET /media/thumbnails/science_20251129_225147_1.jpeg HTTP/1.1" 200 115580
