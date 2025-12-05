@@ -13,15 +13,27 @@ function app() {
                     this.finishLoad();
                 }
                 // Update Progress Bar Width
-                document.getElementById('loadBar').style.width = this.loadPercent + '%';
+                const loadBar = document.getElementById('loadBar');
+                if (loadBar) loadBar.style.width = this.loadPercent + '%';
             }, 50);
         },
 
         finishLoad() {
-            const tl = gsap.timeline();
-            tl.to('#loader', { yPercent: -100, duration: 1, ease: 'power4.inOut', delay: 0.2 })
-                .from('.hero-text', { y: '100%', stagger: 0.1, duration: 1.2, ease: 'power3.out' }, "-=0.5")
-                .from('.reveal-opacity', { opacity: 0, y: 20, duration: 1 }, "-=0.8");
+            const loader = document.getElementById('loader');
+            const heroTexts = document.querySelectorAll('.hero-text');
+            const revealOpacity = document.querySelectorAll('.reveal-opacity');
+
+            if (loader) {
+                const tl = gsap.timeline();
+                tl.to('#loader', { yPercent: -100, duration: 1, ease: 'power4.inOut', delay: 0.2 });
+
+                if (heroTexts.length > 0) {
+                    tl.from('.hero-text', { y: '100%', stagger: 0.1, duration: 1.2, ease: 'power3.out' }, "-=0.5");
+                }
+                if (revealOpacity.length > 0) {
+                    tl.from('.reveal-opacity', { opacity: 0, y: 20, duration: 1 }, "-=0.8");
+                }
+            }
         }
     }
 }
@@ -81,20 +93,23 @@ if (marqueeSection && marqueeTrack) {
     });
 }
 
-// B. Horizontal Scroll
-let panels = gsap.utils.toArray(".h-panel");
+// B. Horizontal Scroll (only runs on pages with these elements)
+let hScrollWrapper = document.querySelector(".h-scroll-wrapper");
 let hContainer = document.querySelector(".h-scroll-container");
 
-gsap.to(panels, {
-    xPercent: -100 * (panels.length - 1),
-    ease: "none",
-    scrollTrigger: {
-        trigger: ".h-scroll-wrapper",
-        pin: true,
-        scrub: 1,
-        end: () => "+=" + document.querySelector(".h-scroll-container").offsetWidth
-    }
-});
+if (hScrollWrapper && hContainer) {
+    let panels = gsap.utils.toArray(".h-panel");
+    gsap.to(panels, {
+        xPercent: -100 * (panels.length - 1),
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".h-scroll-wrapper",
+            pin: true,
+            scrub: 1,
+            end: () => "+=" + hContainer.offsetWidth
+        }
+    });
+}
 
 // --- 4. GLOBAL BACKGROUND (Liquid Grid) ---
 const bgCanvas = document.getElementById('bg-canvas');
@@ -152,70 +167,73 @@ animateBgCanvas();
 
 // --- 5. LIQUID VOICE VISUALIZER (The "Liquid Blob" Feature) ---
 const liquidCanvas = document.getElementById('liquid-canvas');
-const lCtx = liquidCanvas.getContext('2d');
-let lW, lH;
-let time = 0;
 
-function initLiquid() {
-    lW = liquidCanvas.width = liquidCanvas.offsetWidth;
-    lH = liquidCanvas.height = liquidCanvas.offsetHeight;
-}
+if (liquidCanvas) {
+    const lCtx = liquidCanvas.getContext('2d');
+    let lW, lH;
+    let time = 0;
 
-// Handle resizing of the inner canvas
-const lObserver = new ResizeObserver(() => initLiquid());
-lObserver.observe(liquidCanvas.parentElement);
-
-function drawBlob() {
-    lCtx.clearRect(0, 0, lW, lH);
-
-    // Black Background
-    lCtx.fillStyle = '#080808';
-    lCtx.fillRect(0, 0, lW, lH);
-
-    const centerX = lW / 2;
-    const centerY = lH / 2;
-    const radius = lW * 0.35; // Base radius
-
-    lCtx.beginPath();
-
-    // Generate Organic Shape using Sine summation
-    for (let i = 0; i <= 360; i += 2) {
-        const angle = (i * Math.PI) / 180;
-
-        // Simulating Perlin Noise using multiple sine waves
-        // Wave 1: Breathing
-        const w1 = Math.sin(angle * 3 + time * 2) * 15;
-        // Wave 2: Distortion
-        const w2 = Math.cos(angle * 5 - time * 3) * 10;
-        // Wave 3: Jitter (High frequency)
-        const w3 = Math.sin(angle * 10 + time * 5) * 5;
-
-        const r = radius + w1 + w2 + w3;
-
-        const x = centerX + Math.cos(angle) * r;
-        const y = centerY + Math.sin(angle) * r;
-
-        if (i === 0) {
-            lCtx.moveTo(x, y);
-        } else {
-            lCtx.lineTo(x, y);
-        }
+    function initLiquid() {
+        lW = liquidCanvas.width = liquidCanvas.offsetWidth;
+        lH = liquidCanvas.height = liquidCanvas.offsetHeight;
     }
 
-    lCtx.closePath();
-    lCtx.fillStyle = '#FFDE00'; // Brand Yellow
-    lCtx.fill();
+    // Handle resizing of the inner canvas
+    const lObserver = new ResizeObserver(() => initLiquid());
+    lObserver.observe(liquidCanvas.parentElement);
 
-    // Add slight glow
-    lCtx.shadowBlur = 20;
-    lCtx.shadowColor = '#FFDE00';
+    function drawBlob() {
+        lCtx.clearRect(0, 0, lW, lH);
 
-    time += 0.03;
-    requestAnimationFrame(drawBlob);
+        // Black Background
+        lCtx.fillStyle = '#080808';
+        lCtx.fillRect(0, 0, lW, lH);
+
+        const centerX = lW / 2;
+        const centerY = lH / 2;
+        const radius = lW * 0.35; // Base radius
+
+        lCtx.beginPath();
+
+        // Generate Organic Shape using Sine summation
+        for (let i = 0; i <= 360; i += 2) {
+            const angle = (i * Math.PI) / 180;
+
+            // Simulating Perlin Noise using multiple sine waves
+            // Wave 1: Breathing
+            const w1 = Math.sin(angle * 3 + time * 2) * 15;
+            // Wave 2: Distortion
+            const w2 = Math.cos(angle * 5 - time * 3) * 10;
+            // Wave 3: Jitter (High frequency)
+            const w3 = Math.sin(angle * 10 + time * 5) * 5;
+
+            const r = radius + w1 + w2 + w3;
+
+            const x = centerX + Math.cos(angle) * r;
+            const y = centerY + Math.sin(angle) * r;
+
+            if (i === 0) {
+                lCtx.moveTo(x, y);
+            } else {
+                lCtx.lineTo(x, y);
+            }
+        }
+
+        lCtx.closePath();
+        lCtx.fillStyle = '#FFDE00'; // Brand Yellow
+        lCtx.fill();
+
+        // Add slight glow
+        lCtx.shadowBlur = 20;
+        lCtx.shadowColor = '#FFDE00';
+
+        time += 0.03;
+        requestAnimationFrame(drawBlob);
+    }
+
+    initLiquid();
+    drawBlob();
 }
-
-initLiquid();
-drawBlob();
 
 // --- 6. TEXT SPLITTER ---
 document.querySelectorAll('.hero-text').forEach(el => {

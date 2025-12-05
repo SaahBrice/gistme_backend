@@ -97,5 +97,20 @@
                 <p x-text="globalLang === 'fr' ? 'Aucune catégorie trouvée' : 'No categories found'"></p>
             </div>
         </div>
+
+        <!-- Install App Button (bottom of sidebar) -->
+        <div class="p-4 border-t border-gray-800" x-data="{ canInstall: false }" x-init="
+                canInstall = window.canInstallPWA ? window.canInstallPWA() : false;
+                window.addEventListener('pwa-install-status-changed', (e) => canInstall = e.detail.canInstall);
+             " x-show="canInstall">
+            <button @click="window.installPWA && window.installPWA()"
+                class="w-full p-3 rounded-xl bg-gradient-to-r from-yellow-500 to-yellow-600 text-black font-bold flex items-center justify-center gap-2 hover:from-yellow-400 hover:to-yellow-500 transition-all duration-200 hover:scale-105">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                <span x-text="globalLang === 'fr' ? 'Installer l\'application' : 'Install App'"></span>
+            </button>
+        </div>
     </div>
 </div>

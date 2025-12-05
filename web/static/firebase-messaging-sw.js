@@ -2,7 +2,7 @@ importScripts('https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js'
 importScripts('https://www.gstatic.com/firebasejs/9.22.0/firebase-messaging-compat.js');
 
 // PWA Version - Increment this when you want to force update
-const VERSION = 'v1.0.1';
+const VERSION = 'v1.0.7';
 const CACHE_NAME = `gist4u-static-${VERSION}`;
 const RUNTIME_CACHE = `gist4u-runtime-${VERSION}`;
 

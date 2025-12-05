@@ -15,6 +15,7 @@ function gistMeApp() {
         audioPlayer: null,
         // Language
         globalLang: localStorage.getItem('gist4u_language') || 'en',
+        readerLang: localStorage.getItem('gist4u_language') || 'en',
         commentUser: localStorage.getItem('gistme_username') || 'Anonymous',
         commentText: '',
         quickCommentText: '',

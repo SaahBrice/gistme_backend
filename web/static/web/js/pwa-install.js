@@ -2,6 +2,41 @@
 let deferredPrompt;
 let installButton = null;
 
+// Constants
+const DISMISS_DURATION_DAYS = 7; // Reset dismissed state after 7 days
+
+// Check if app is already installed
+function isAppInstalled() {
+    // Check display mode (standalone = installed PWA)
+    if (window.matchMedia('(display-mode: standalone)').matches) return true;
+    // iOS Safari standalone mode
+    if (window.navigator.standalone === true) return true;
+    // Check our localStorage flag
+    if (localStorage.getItem('pwa_installed') === 'true') return true;
+    return false;
+}
+
+// Check if dismissal has expired (7 days)
+function shouldShowPromptAgain() {
+    const dismissedAt = localStorage.getItem('pwa_install_dismissed_at');
+    if (!dismissedAt) return true; // Never dismissed
+
+    const dismissedDate = new Date(parseInt(dismissedAt));
+    const now = new Date();
+    const daysPassed = (now - dismissedDate) / (1000 * 60 * 60 * 24);
+
+    if (daysPassed >= DISMISS_DURATION_DAYS) {
+        // Clear the old dismissal
+        localStorage.removeItem('pwa_install_dismissed');
+        localStorage.removeItem('pwa_install_dismissed_at');
+        console.log('[PWA] Dismiss period expired, will show prompt again');
+        return true;
+    }
+
+    console.log(`[PWA] User dismissed ${Math.floor(daysPassed)} days ago, waiting ${DISMISS_DURATION_DAYS - Math.floor(daysPassed)} more days`);
+    return false;
+}
+
 // Listen for beforeinstallprompt event
 window.addEventListener('beforeinstallprompt', (e) => {
     console.log('[PWA] beforeinstallprompt event fired');
@@ -11,6 +46,9 @@ window.addEventListener('beforeinstallprompt', (e) => {
 
     // Stash the event so it can be triggered later
     deferredPrompt = e;
+
+    // Update any install buttons visibility
+    updateInstallButtonVisibility();
 
     // Show the install prompt after a delay
     setTimeout(() => {
@@ -25,10 +63,15 @@ function showInstallPrompt() {
         return;
     }
 
-    // Check if user dismissed before
+    // Don't show if already installed
+    if (isAppInstalled()) {
+        console.log('[PWA] App already installed, not showing prompt');
+        return;
+    }
+
+    // Check if user dismissed before (with 7-day reset)
     const dismissed = localStorage.getItem('pwa_install_dismissed');
-    if (dismissed) {
-        console.log('[PWA] User previously dismissed install prompt');
+    if (dismissed && !shouldShowPromptAgain()) {
         return;
     }
 
@@ -67,11 +110,11 @@ function showInstallPrompt() {
     document.getElementById('pwa-dismiss-btn').addEventListener('click', dismissInstallPrompt);
 }
 
-// Install PWA
+// Install PWA - exposed globally for button use
 async function installPWA() {
     if (!deferredPrompt) {
         console.log('[PWA] Install prompt not available');
-        return;
+        return false;
     }
 
     // Show the install prompt
@@ -81,6 +124,12 @@ async function installPWA() {
     const { outcome } = await deferredPrompt.userChoice;
     console.log(`[PWA] User response to the install prompt: ${outcome}`);
 
+    if (outcome === 'accepted') {
+        // Mark as installed
+        localStorage.setItem('pwa_installed', 'true');
+        updateInstallButtonVisibility();
+    }
+
     // Clear the prompt
     deferredPrompt = null;
 
@@ -89,11 +138,31 @@ async function installPWA() {
     if (prompt) {
         prompt.remove();
     }
+
+    return outcome === 'accepted';
+}
+
+// Expose installPWA globally for button clicks
+window.installPWA = installPWA;
+
+// Check if PWA can be installed (for button visibility)
+window.canInstallPWA = function () {
+    return deferredPrompt !== null && !isAppInstalled();
+};
+
+// Update visibility of any install buttons on the page
+function updateInstallButtonVisibility() {
+    const canInstall = window.canInstallPWA();
+    // Dispatch custom event for Alpine.js components to react
+    window.dispatchEvent(new CustomEvent('pwa-install-status-changed', {
+        detail: { canInstall }
+    }));
 }
 
 // Dismiss install prompt
 function dismissInstallPrompt() {
     localStorage.setItem('pwa_install_dismissed', 'true');
+    localStorage.setItem('pwa_install_dismissed_at', Date.now().toString());
 
     const prompt = document.getElementById('pwa-install-prompt');
     if (prompt) {
@@ -105,17 +174,30 @@ function dismissInstallPrompt() {
 window.addEventListener('appinstalled', () => {
     console.log('[PWA] App was installed successfully');
 
+    // Mark as installed
+    localStorage.setItem('pwa_installed', 'true');
+
+    // Clear dismissal since they installed
+    localStorage.removeItem('pwa_install_dismissed');
+    localStorage.removeItem('pwa_install_dismissed_at');
+
     // Clear any existing prompts
     deferredPrompt = null;
     const prompt = document.getElementById('pwa-install-prompt');
     if (prompt) {
         prompt.remove();
     }
+
+    // Update button visibility
+    updateInstallButtonVisibility();
 });
 
-// Check if already installed (display mode)
+// Check if already installed (display mode) on load
 window.addEventListener('load', () => {
-    if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true) {
-        console.log('[PWA] App is running in standalone mode');
+    if (isAppInstalled()) {
+        console.log('[PWA] App is already installed');
     }
+
+    // Initial visibility update
+    setTimeout(updateInstallButtonVisibility, 100);
 });

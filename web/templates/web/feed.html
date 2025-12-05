@@ -8,6 +8,10 @@
     href="https://fonts.googleapis.com/css2?family=Carter+One&family=Black+Ops+One&family=Inter:wght@400;700;900&display=swap"
     rel="stylesheet">
 <link rel="stylesheet" href="{% static 'web/css/feed.css' %}">
+<!-- Feed scripts must load BEFORE Alpine.js initializes -->
+<script src="{% static 'web/js/feed-config.js' %}"></script>
+<script src="{% static 'web/js/feed-actions.js' %}"></script>
+<script src="{% static 'web/js/feed.js' %}"></script>
 {% endblock %}
 
 {% block navbar %}{% endblock %}
@@ -36,10 +40,4 @@
 
     </div>
 </div>
-{% endblock %}
-
-{% block extra_scripts %}
-<script src="{% static 'web/js/feed-config.js' %}"></script>
-<script src="{% static 'web/js/feed-actions.js' %}"></script>
-<script src="{% static 'web/js/feed.js' %}"></script>
 {% endblock %}
