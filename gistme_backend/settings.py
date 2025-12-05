@@ -33,11 +33,13 @@ ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',') if os.environ.get
 
 SITE_URL = os.environ.get('SITE_URL', 'http://localhost:8000')
 
+# CSRF Trusted Origins (for production)
+CSRF_TRUSTED_ORIGINS = os.environ.get('CSRF_TRUSTED_ORIGINS', '').split(',') if os.environ.get('CSRF_TRUSTED_ORIGINS') else []
+
 # Fapshi Payment Gateway
 FAPSHI_API_KEY = os.environ.get('FAPSHI_API_KEY', '')
 FAPSHI_API_USER = os.environ.get('FAPSHI_API_USER', '')
 FAPSHI_BASE_URL = os.environ.get('FAPSHI_BASE_URL', 'https://sandbox.fapshi.com')
-SITE_URL = os.environ.get('SITE_URL', 'http://127.0.0.1:8000')
 
 
 # Application definition
@@ -57,6 +59,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",  # Serve static files in production
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -132,6 +135,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = "static/"
+STATIC_ROOT = BASE_DIR / "staticfiles"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

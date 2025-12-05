@@ -1,4 +1,50 @@
+# Environment & Secrets
 .env
 serviceAccountKey.json
+
+# Media files
 media/audio
 media/thumbnails
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+.eggs/
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+
+# Static files (collected in production)
+staticfiles/
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+
+# OS
+.DS_Store
+Thumbs.db

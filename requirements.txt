@@ -1,0 +1,29 @@
+# Django & Core
+Django==5.2.8
+djangorestframework==3.16.1
+django-filter==25.2
+django-q2==1.8.0
+django-environ==0.11.2
+drf-spectacular==0.29.0
+python-dotenv==1.0.1
+
+# Static files
+whitenoise==6.6.0
+
+# HTTP requests
+requests==2.32.5
+
+# Firebase (for push notifications)
+firebase_admin==7.1.0
+
+# Database (SQLite is built-in, but if you upgrade to MySQL later)
+# mysqlclient==2.2.0
+
+# WSGI Server (optional - PythonAnywhere provides this)
+# gunicorn==21.2.0
+
+# Payment
+# (Fapshi uses requests, already included)
+
+# Other utilities
+python-decouple==3.8
