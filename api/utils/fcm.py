@@ -106,14 +106,26 @@ def _send_multicast(article_data, tokens, language=''):
             
             if response.failure_count > 0:
                 responses = response.responses
-                failed_tokens = []
+                tokens_to_delete = []
                 for idx, resp in enumerate(responses):
                     if not resp.success:
-                        failed_tokens.append(batch_tokens[idx])
-                        logger.warning(f"Failed to send to token {batch_tokens[idx][:20]}...: {resp.exception}")
+                        error_msg = str(resp.exception) if resp.exception else ''
+                        logger.warning(f"Failed to send to token {batch_tokens[idx][:20]}...: {error_msg}")
+                        
+                        # Clean up tokens that are definitely invalid
+                        # These errors mean the token will never work again
+                        if any(err in error_msg.lower() for err in [
+                            'not found', 
+                            'unregistered', 
+                            'invalid',
+                            'not a valid fcm'
+                        ]):
+                            tokens_to_delete.append(batch_tokens[idx])
                 
-                # Optional: Clean up invalid tokens
-                # FCMSubscription.objects.filter(token__in=failed_tokens).delete()
+                # Delete invalid tokens from database
+                if tokens_to_delete:
+                    deleted_count = FCMSubscription.objects.filter(token__in=tokens_to_delete).delete()[0]
+                    logger.info(f"{language}Cleaned up {deleted_count} invalid FCM tokens")
                 
         except Exception as e:
             logger.error(f"{language}Batch {batch_num} error: {e}")

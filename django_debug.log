@@ -6106,3 +6106,166 @@ INFO 2025-12-05 07:30:19,296 fcm 3928 8372 Firebase Admin SDK initialized with C
 INFO 2025-12-05 07:30:19,297 fcm 3928 8372 [EN] Batch 1/1: Sending to 1 devices
 INFO 2025-12-05 07:30:24,420 fcm 3928 8372 [EN] Batch 1: 1 successful, 0 failed
 INFO 2025-12-05 07:30:24,420 fcm 3928 8372 [EN] Total: 1 successful, 0 failed out of 1
+INFO 2025-12-05 07:58:00,072 autoreload 20252 26380 Watching for file changes with StatReloader
+INFO 2025-12-05 07:58:02,112 basehttp 20252 5528 "GET /feed/ HTTP/1.1" 200 48432
+INFO 2025-12-05 07:58:02,187 basehttp 20252 24756 "GET /static/web/js/main.js HTTP/1.1" 304 0
+INFO 2025-12-05 07:58:02,188 basehttp 20252 14200 "GET /static/web/js/pwa-install.js HTTP/1.1" 304 0
+WARNING 2025-12-05 07:58:02,226 log 20252 14200 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-05 07:58:02,227 basehttp 20252 14200 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4227
+INFO 2025-12-05 07:58:02,454 basehttp 20252 20816 "GET /static/web/js/feed.js HTTP/1.1" 200 2901
+INFO 2025-12-05 07:58:02,456 basehttp 20252 5528 "GET /static/web/js/feed-actions.js HTTP/1.1" 200 41203
+INFO 2025-12-05 07:58:02,768 basehttp 20252 5528 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-12-05 07:58:02,770 basehttp 20252 20816 "GET /api/fcm/preferences/?token=cIuowNHnBOawJ-xQlbN9ye%3AAPA91bHeD1iTw-5HDWbAi5Hv_W3KqMpmKv6-dyXZqCnH0W_XFMuJrXmN9Jd5cQwXsziTvYRwrqCeDy4UPmx2Y0DMQfV6JKgI1zxm3uvdXwX-gUeA0PqKglc HTTP/1.1" 200 86
+WARNING 2025-12-05 07:58:03,073 log 20252 20816 Not Found: /favicon.ico
+WARNING 2025-12-05 07:58:03,076 basehttp 20252 20816 "GET /favicon.ico HTTP/1.1" 404 4116
+INFO 2025-12-05 07:58:03,168 views 20252 20816 FCM subscription updated: cIuowNHnBOawJ-xQlbN9... (lang: en)
+INFO 2025-12-05 07:58:03,170 basehttp 20252 20816 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-12-05 07:58:04,798 basehttp 20252 20816 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-05 07:58:04,856 basehttp 20252 5528 "GET /feed/ HTTP/1.1" 200 48432
+INFO 2025-12-05 07:58:04,869 basehttp 20252 20816 "GET / HTTP/1.1" 200 68425
+INFO 2025-12-05 07:58:09,850 basehttp 20252 20816 "GET /feed/ HTTP/1.1" 200 48432
+WARNING 2025-12-05 07:58:09,907 log 20252 20816 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-05 07:58:09,909 basehttp 20252 20816 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4227
+INFO 2025-12-05 07:58:09,910 basehttp 20252 14200 "GET /static/web/js/feed.js HTTP/1.1" 304 0
+INFO 2025-12-05 07:58:09,910 basehttp 20252 5528 "GET /static/web/js/feed-actions.js HTTP/1.1" 304 0
+INFO 2025-12-05 07:58:10,386 basehttp 20252 5528 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-12-05 07:58:10,387 basehttp 20252 14200 "GET /api/fcm/preferences/?token=cIuowNHnBOawJ-xQlbN9ye%3AAPA91bHeD1iTw-5HDWbAi5Hv_W3KqMpmKv6-dyXZqCnH0W_XFMuJrXmN9Jd5cQwXsziTvYRwrqCeDy4UPmx2Y0DMQfV6JKgI1zxm3uvdXwX-gUeA0PqKglc HTTP/1.1" 200 86
+INFO 2025-12-05 07:58:10,741 views 20252 14200 FCM subscription updated: cIuowNHnBOawJ-xQlbN9... (lang: en)
+INFO 2025-12-05 07:58:10,743 basehttp 20252 14200 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-12-05 07:58:12,366 basehttp 20252 14200 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-05 07:58:16,898 basehttp 20252 14200 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-12-05 07:58:16,979 basehttp 20252 14200 "GET /api/articles/ HTTP/1.1" 200 102031
+INFO 2025-12-05 07:58:16,994 basehttp 20252 14200 "GET /media/thumbnails/agriculture_20251205_065149_1.jpeg HTTP/1.1" 304 0
+INFO 2025-12-05 07:58:17,009 basehttp 20252 14200 "GET /media/thumbnails/education_20251205_065016_3.jpeg HTTP/1.1" 304 0
+INFO 2025-12-05 07:58:17,017 basehttp 20252 14200 "GET /media/thumbnails/health_20251205_064922_1.jpg HTTP/1.1" 304 0
+INFO 2025-12-05 07:58:17,025 basehttp 20252 14200 "GET /media/thumbnails/technology_20251205_064820_1.jpeg HTTP/1.1" 304 0
+INFO 2025-12-05 07:58:17,029 basehttp 20252 14200 "GET /media/thumbnails/business_20251205_064622_1.jpeg HTTP/1.1" 304 0
+INFO 2025-12-05 07:58:17,035 basehttp 20252 14200 "GET /media/thumbnails/entertainment_20251205_064520_1.jpeg HTTP/1.1" 304 0
+INFO 2025-12-05 07:58:17,041 basehttp 20252 14200 "GET /media/thumbnails/sports_20251205_064422_1.jpg HTTP/1.1" 304 0
+INFO 2025-12-05 07:58:17,049 basehttp 20252 14200 "GET /media/thumbnails/sports_20251205_063707_1.jpg HTTP/1.1" 304 0
+INFO 2025-12-05 07:58:18,339 fcm 20252 26512 Targeted notifications: 0 French, 2 English (category: education)
+INFO 2025-12-05 07:58:18,341 fcm 20252 26512 Starting English notifications: Cameroon’s 2025-2026 School Year: High Hopes Amid Challenges and Bold Education Promises
+INFO 2025-12-05 07:58:18,446 fcm 20252 25160 Firebase Admin SDK initialized with C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\serviceAccountKey.json
+INFO 2025-12-05 07:58:18,447 fcm 20252 25160 [EN] Batch 1/1: Sending to 2 devices
+INFO 2025-12-05 07:58:18,449 fcm 20252 26512 Targeted notifications: 0 French, 2 English (category: education)
+INFO 2025-12-05 07:58:18,450 fcm 20252 26512 Starting English notifications: Cameroon’s 2025-2026 School Year: High Hopes Amid Challenges and Bold Education Promises
+INFO 2025-12-05 07:58:18,451 fcm 20252 18532 [EN] Batch 1/1: Sending to 2 devices
+INFO 2025-12-05 07:58:18,456 basehttp 20252 26512 "POST /api/articles/ HTTP/1.1" 201 6797
+INFO 2025-12-05 07:58:25,408 fcm 20252 18532 [EN] Batch 1: 1 successful, 1 failed
+WARNING 2025-12-05 07:58:25,408 fcm 20252 18532 Failed to send to token dw-_muwcKpiADH6AQWy4...: Requested entity was not found.
+INFO 2025-12-05 07:58:25,408 fcm 20252 18532 [EN] Total: 1 successful, 1 failed out of 2
+INFO 2025-12-05 07:58:25,474 fcm 20252 25160 [EN] Batch 1: 1 successful, 1 failed
+WARNING 2025-12-05 07:58:25,475 fcm 20252 25160 Failed to send to token dw-_muwcKpiADH6AQWy4...: Requested entity was not found.
+INFO 2025-12-05 07:58:25,475 fcm 20252 25160 [EN] Total: 1 successful, 1 failed out of 2
+INFO 2025-12-05 14:52:55,529 autoreload 15592 20704 Watching for file changes with StatReloader
+INFO 2025-12-05 14:52:59,287 basehttp 15592 18168 "GET / HTTP/1.1" 200 68425
+INFO 2025-12-05 14:52:59,341 basehttp 15592 26280 "GET /static/web/js/main.js HTTP/1.1" 304 0
+INFO 2025-12-05 14:52:59,358 basehttp 15592 26280 "GET /static/web/js/pwa-install.js HTTP/1.1" 304 0
+WARNING 2025-12-05 14:52:59,375 log 15592 18168 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-05 14:52:59,376 basehttp 15592 18168 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4227
+INFO 2025-12-05 14:53:00,246 views 15592 18168 FCM subscription updated: cIuowNHnBOawJ-xQlbN9... (lang: en)
+INFO 2025-12-05 14:53:00,247 basehttp 15592 18168 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-12-05 14:53:02,362 basehttp 15592 18168 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-05 14:53:07,180 basehttp 15592 18168 "GET /feed/ HTTP/1.1" 200 48432
+INFO 2025-12-05 14:53:07,232 basehttp 15592 18168 "GET /static/web/css/feed.css HTTP/1.1" 304 0
+INFO 2025-12-05 14:53:07,234 basehttp 15592 26280 "GET /static/web/js/feed-actions.js HTTP/1.1" 304 0
+INFO 2025-12-05 14:53:07,235 basehttp 15592 19980 "GET /static/web/js/feed.js HTTP/1.1" 304 0
+INFO 2025-12-05 14:53:07,527 basehttp 15592 19980 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-12-05 14:53:07,527 basehttp 15592 26280 "GET /api/fcm/preferences/?token=cIuowNHnBOawJ-xQlbN9ye%3AAPA91bHeD1iTw-5HDWbAi5Hv_W3KqMpmKv6-dyXZqCnH0W_XFMuJrXmN9Jd5cQwXsziTvYRwrqCeDy4UPmx2Y0DMQfV6JKgI1zxm3uvdXwX-gUeA0PqKglc HTTP/1.1" 200 86
+INFO 2025-12-05 14:53:07,739 views 15592 26280 FCM subscription updated: cIuowNHnBOawJ-xQlbN9... (lang: en)
+INFO 2025-12-05 14:53:07,741 basehttp 15592 26280 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+WARNING 2025-12-05 14:53:07,869 log 15592 26280 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-05 14:53:07,870 basehttp 15592 26280 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4227
+INFO 2025-12-05 14:53:09,474 basehttp 15592 26280 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-05 14:53:11,444 basehttp 15592 26280 "GET /api/articles/?mood=happy HTTP/1.1" 200 52
+INFO 2025-12-05 14:53:11,529 basehttp 15592 26280 "GET /api/articles/ HTTP/1.1" 200 104668
+INFO 2025-12-05 14:53:11,555 basehttp 15592 19980 "GET /media/thumbnails/agriculture_20251205_065149_1.jpeg HTTP/1.1" 304 0
+INFO 2025-12-05 14:53:11,559 basehttp 15592 19980 "GET /media/thumbnails/education_20251205_065016_3.jpeg HTTP/1.1" 304 0
+INFO 2025-12-05 14:53:11,565 basehttp 15592 19980 "GET /media/thumbnails/health_20251205_064922_1.jpg HTTP/1.1" 304 0
+INFO 2025-12-05 14:53:11,571 basehttp 15592 19980 "GET /media/thumbnails/technology_20251205_064820_1.jpeg HTTP/1.1" 304 0
+INFO 2025-12-05 14:53:11,579 basehttp 15592 19980 "GET /media/thumbnails/business_20251205_064622_1.jpeg HTTP/1.1" 304 0
+INFO 2025-12-05 14:53:11,582 basehttp 15592 18168 "GET /media/thumbnails/entertainment_20251205_064520_1.jpeg HTTP/1.1" 304 0
+INFO 2025-12-05 14:53:11,586 basehttp 15592 18168 "GET /media/thumbnails/sports_20251205_064422_1.jpg HTTP/1.1" 304 0
+INFO 2025-12-05 14:53:11,591 basehttp 15592 18168 "GET /media/thumbnails/sports_20251205_063707_1.jpg HTTP/1.1" 304 0
+INFO 2025-12-05 14:53:11,593 basehttp 15592 19980 "GET /media/thumbnails/business_20251205_062426_1.jpeg HTTP/1.1" 304 0
+INFO 2025-12-05 14:53:11,600 basehttp 15592 19980 "GET /media/thumbnails/entertainment_20251205_062315_1.png HTTP/1.1" 304 0
+INFO 2025-12-05 14:53:11,605 basehttp 15592 19980 "GET /media/thumbnails/sports_20251205_062213_1.jpg HTTP/1.1" 304 0
+INFO 2025-12-05 14:53:11,611 basehttp 15592 19980 "GET /media/thumbnails/politics_20251205_062056_1.jpg HTTP/1.1" 304 0
+INFO 2025-12-05 14:53:11,618 basehttp 15592 19980 "GET /media/thumbnails/sports_20251205_060121_1.jpg HTTP/1.1" 304 0
+INFO 2025-12-05 14:53:11,623 basehttp 15592 19980 "GET /media/thumbnails/politics_20251205_050334_1.jpg HTTP/1.1" 304 0
+INFO 2025-12-05 14:53:11,629 basehttp 15592 19980 "GET /media/thumbnails/politics_20251205_040440_1.jpg HTTP/1.1" 304 0
+INFO 2025-12-05 14:53:11,634 basehttp 15592 19980 "GET /media/thumbnails/politics_20251205_040015_1.jpg HTTP/1.1" 304 0
+INFO 2025-12-05 14:53:11,639 basehttp 15592 19980 "GET /media/thumbnails/entertainment_20251205_035612_1.webp HTTP/1.1" 304 0
+INFO 2025-12-05 14:53:11,644 basehttp 15592 19980 "GET /media/thumbnails/sports_20251205_035539_1.jpg HTTP/1.1" 304 0
+INFO 2025-12-05 14:53:11,649 basehttp 15592 19980 "GET /media/thumbnails/politics_20251205_035459_1.jpg HTTP/1.1" 304 0
+INFO 2025-12-05 14:53:11,780 basehttp 15592 26280 "GET /media/thumbnails/education_20251205_075726_1.png HTTP/1.1" 200 849697
+INFO 2025-12-05 14:53:21,549 fcm 15592 29228 Targeted notifications: 0 French, 0 English (category: sports)
+INFO 2025-12-05 14:53:21,550 fcm 15592 29228 No targeted subscribers for category: sports
+INFO 2025-12-05 14:53:21,559 fcm 15592 29228 Targeted notifications: 0 French, 0 English (category: sports)
+INFO 2025-12-05 14:53:21,559 fcm 15592 29228 No targeted subscribers for category: sports
+INFO 2025-12-05 14:53:21,562 basehttp 15592 29228 "POST /api/articles/ HTTP/1.1" 201 3306
+INFO 2025-12-05 14:54:10,455 fcm 15592 21680 Targeted notifications: 0 French, 0 English (category: entertainment)
+INFO 2025-12-05 14:54:10,455 fcm 15592 21680 No targeted subscribers for category: entertainment
+INFO 2025-12-05 14:54:10,463 fcm 15592 21680 Targeted notifications: 0 French, 0 English (category: entertainment)
+INFO 2025-12-05 14:54:10,463 fcm 15592 21680 No targeted subscribers for category: entertainment
+INFO 2025-12-05 14:54:10,467 basehttp 15592 21680 "POST /api/articles/ HTTP/1.1" 201 5161
+INFO 2025-12-05 14:55:21,542 fcm 15592 29628 Targeted notifications: 0 French, 2 English (category: business)
+INFO 2025-12-05 14:55:21,542 fcm 15592 29628 Starting English notifications: Cameroon Slaps Higher Taxes on Old Imported Cars Amid Push for Electric Vehicles
+INFO 2025-12-05 14:55:21,550 fcm 15592 29628 Targeted notifications: 0 French, 2 English (category: business)
+INFO 2025-12-05 14:55:21,550 fcm 15592 29628 Starting English notifications: Cameroon Slaps Higher Taxes on Old Imported Cars Amid Push for Electric Vehicles
+INFO 2025-12-05 14:55:21,554 basehttp 15592 29628 "POST /api/articles/ HTTP/1.1" 201 5298
+INFO 2025-12-05 14:55:21,692 fcm 15592 29380 Firebase Admin SDK initialized with C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\serviceAccountKey.json
+ERROR 2025-12-05 14:55:21,692 fcm 15592 10252 Failed to initialize Firebase Admin SDK: The default Firebase app already exists. This means you called initialize_app() more than once without providing an app name as the second argument. In most cases you only need to call initialize_app() once. But if you do want to initialize multiple apps, pass a second argument to initialize_app() to give each app a unique name.
+INFO 2025-12-05 14:55:21,692 fcm 15592 29380 [EN] Batch 1/1: Sending to 2 devices
+INFO 2025-12-05 14:55:21,692 fcm 15592 10252 [EN] Batch 1/1: Sending to 2 devices
+INFO 2025-12-05 14:55:27,807 fcm 15592 29380 [EN] Batch 1: 1 successful, 1 failed
+WARNING 2025-12-05 14:55:27,807 fcm 15592 29380 Failed to send to token dw-_muwcKpiADH6AQWy4...: Requested entity was not found.
+INFO 2025-12-05 14:55:27,807 fcm 15592 29380 [EN] Total: 1 successful, 1 failed out of 2
+INFO 2025-12-05 14:55:27,866 fcm 15592 10252 [EN] Batch 1: 1 successful, 1 failed
+WARNING 2025-12-05 14:55:27,866 fcm 15592 10252 Failed to send to token dw-_muwcKpiADH6AQWy4...: Requested entity was not found.
+INFO 2025-12-05 14:55:27,867 fcm 15592 10252 [EN] Total: 1 successful, 1 failed out of 2
+INFO 2025-12-05 14:56:12,635 fcm 15592 10552 Targeted notifications: 0 French, 1 English (category: technology)
+INFO 2025-12-05 14:56:12,635 fcm 15592 10552 Starting English notifications: Cameroon's Navy Joins Global Digital Transformation Push as Tech Training Revolution Spreads
+INFO 2025-12-05 14:56:12,636 fcm 15592 2424 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-12-05 14:56:12,643 fcm 15592 10552 Targeted notifications: 0 French, 1 English (category: technology)
+INFO 2025-12-05 14:56:12,643 fcm 15592 10552 Starting English notifications: Cameroon's Navy Joins Global Digital Transformation Push as Tech Training Revolution Spreads
+INFO 2025-12-05 14:56:12,645 fcm 15592 1504 [EN] Batch 1/1: Sending to 1 devices
+INFO 2025-12-05 14:56:12,649 basehttp 15592 10552 "POST /api/articles/ HTTP/1.1" 201 3932
+INFO 2025-12-05 14:56:12,769 fcm 15592 2424 [EN] Batch 1: 0 successful, 1 failed
+WARNING 2025-12-05 14:56:12,769 fcm 15592 2424 Failed to send to token dw-_muwcKpiADH6AQWy4...: Requested entity was not found.
+INFO 2025-12-05 14:56:12,770 fcm 15592 2424 [EN] Total: 0 successful, 1 failed out of 1
+INFO 2025-12-05 14:56:12,801 fcm 15592 1504 [EN] Batch 1: 0 successful, 1 failed
+WARNING 2025-12-05 14:56:12,801 fcm 15592 1504 Failed to send to token dw-_muwcKpiADH6AQWy4...: Requested entity was not found.
+INFO 2025-12-05 14:56:12,803 fcm 15592 1504 [EN] Total: 0 successful, 1 failed out of 1
+INFO 2025-12-05 14:57:09,319 fcm 15592 28604 Targeted notifications: 0 French, 0 English (category: health)
+INFO 2025-12-05 14:57:09,319 fcm 15592 28604 No targeted subscribers for category: health
+INFO 2025-12-05 14:57:09,335 fcm 15592 28604 Targeted notifications: 0 French, 0 English (category: health)
+INFO 2025-12-05 14:57:09,335 fcm 15592 28604 No targeted subscribers for category: health
+INFO 2025-12-05 14:57:09,337 basehttp 15592 28604 "POST /api/articles/ HTTP/1.1" 201 5982
+INFO 2025-12-05 14:58:26,461 views 15592 27396 Category preference added: education for token cIuowNHnBOawJ-xQlbN9...
+INFO 2025-12-05 14:58:26,463 basehttp 15592 27396 "POST /api/fcm/preferences/ HTTP/1.1" 200 141
+INFO 2025-12-05 14:58:27,913 views 15592 27396 Category preference added: happened in Buea for token cIuowNHnBOawJ-xQlbN9...
+INFO 2025-12-05 14:58:27,915 basehttp 15592 27396 "POST /api/fcm/preferences/ HTTP/1.1" 200 167
+INFO 2025-12-05 14:58:28,378 views 15592 27396 Category preference added: happened in any region for token cIuowNHnBOawJ-xQlbN9...
+INFO 2025-12-05 14:58:28,379 basehttp 15592 27396 "POST /api/fcm/preferences/ HTTP/1.1" 200 198
+INFO 2025-12-05 14:59:15,400 autoreload 15592 20704 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\utils\fcm.py changed, reloading.
+INFO 2025-12-05 14:59:17,346 autoreload 12676 22816 Watching for file changes with StatReloader
+INFO 2025-12-05 14:59:25,685 fcm 12676 23548 Targeted notifications: 0 French, 3 English (category: education)
+INFO 2025-12-05 14:59:25,685 fcm 12676 23548 Starting English notifications: Cameroon’s Education Faces Turmoil: Schools Reopen Amid Strikes, Security Woes, and Political Promises
+INFO 2025-12-05 14:59:25,752 fcm 12676 19864 Firebase Admin SDK initialized with C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\serviceAccountKey.json
+INFO 2025-12-05 14:59:25,753 fcm 12676 19864 [EN] Batch 1/1: Sending to 3 devices
+INFO 2025-12-05 14:59:25,754 fcm 12676 23548 Targeted notifications: 0 French, 3 English (category: education)
+INFO 2025-12-05 14:59:25,755 fcm 12676 23548 Starting English notifications: Cameroon’s Education Faces Turmoil: Schools Reopen Amid Strikes, Security Woes, and Political Promises
+INFO 2025-12-05 14:59:25,756 fcm 12676 4968 [EN] Batch 1/1: Sending to 3 devices
+INFO 2025-12-05 14:59:25,769 basehttp 12676 23548 "POST /api/articles/ HTTP/1.1" 201 5331
+INFO 2025-12-05 14:59:33,859 fcm 12676 19864 [EN] Batch 1: 2 successful, 1 failed
+WARNING 2025-12-05 14:59:33,860 fcm 12676 19864 Failed to send to token dw-_muwcKpiADH6AQWy4...: Requested entity was not found.
+WARNING 2025-12-05 14:59:33,879 basehttp 12676 1464 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-12-05 14:59:33,887 fcm 12676 19864 [EN] Cleaned up 1 invalid FCM tokens
+INFO 2025-12-05 14:59:33,888 fcm 12676 19864 [EN] Total: 2 successful, 1 failed out of 3
+INFO 2025-12-05 14:59:33,968 fcm 12676 4968 [EN] Batch 1: 2 successful, 1 failed
+WARNING 2025-12-05 14:59:33,969 fcm 12676 4968 Failed to send to token dw-_muwcKpiADH6AQWy4...: Requested entity was not found.
+INFO 2025-12-05 14:59:33,975 fcm 12676 4968 [EN] Cleaned up 0 invalid FCM tokens
+INFO 2025-12-05 14:59:33,975 fcm 12676 4968 [EN] Total: 2 successful, 1 failed out of 3
+INFO 2025-12-05 14:59:34,049 basehttp 12676 1752 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+WARNING 2025-12-05 14:59:34,453 basehttp 12676 1752 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
