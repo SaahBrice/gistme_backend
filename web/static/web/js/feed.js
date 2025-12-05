@@ -33,6 +33,9 @@ function gistMeApp() {
 
         // Category Filter
         selectedCategory: 'all',
+        categorySearch: '',
+        categoryPreferences: [],
+        fcmToken: localStorage.getItem('fcmToken') || null,
 
         // Articles (loaded from API)
         articles: [],
@@ -63,6 +66,21 @@ function gistMeApp() {
                 }
             }
             return result;
+        },
+
+        // Computed: Filter category groups by search query
+        get filteredCategoryGroups() {
+            const search = this.categorySearch.toLowerCase().trim();
+            if (!search) return this.categoryGroups;
+
+            return this.categoryGroups.map(group => ({
+                ...group,
+                categories: group.categories.filter(cat =>
+                    cat.nameEn.toLowerCase().includes(search) ||
+                    cat.nameFr.toLowerCase().includes(search) ||
+                    cat.id.toLowerCase().includes(search)
+                )
+            }));
         },
 
         // Spread actions

@@ -135,3 +135,75 @@ class FCMSubscribeView(APIView):
         except Exception as e:
             logger.error(f"FCM Subscription failed: {e}", exc_info=True)
             return Response({"error": "Subscription failed"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+class CategoryPreferencesView(APIView):
+    """API for managing category preferences for FCM subscribers."""
+    
+    def get(self, request):
+        """Get category preferences for a given FCM token."""
+        try:
+            from .models import FCMSubscription
+            
+            token = request.query_params.get('token')
+            if not token:
+                return Response({"error": "Token is required"}, status=status.HTTP_400_BAD_REQUEST)
+            
+            try:
+                subscription = FCMSubscription.objects.get(token=token)
+                return Response({
+                    "preferences": subscription.category_preferences or []
+                }, status=status.HTTP_200_OK)
+            except FCMSubscription.DoesNotExist:
+                return Response({"preferences": []}, status=status.HTTP_200_OK)
+                
+        except Exception as e:
+            logger.error(f"Get preferences failed: {e}", exc_info=True)
+            return Response({"error": "Failed to get preferences"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+    
+    def post(self, request):
+        """Toggle a category preference (add if not present, remove if present)."""
+        try:
+            from .models import FCMSubscription
+            
+            token = request.data.get('token')
+            category_id = request.data.get('category_id')
+            
+            if not token:
+                return Response({"error": "Token is required"}, status=status.HTTP_400_BAD_REQUEST)
+            if not category_id:
+                return Response({"error": "category_id is required"}, status=status.HTTP_400_BAD_REQUEST)
+            
+            try:
+                subscription = FCMSubscription.objects.get(token=token)
+            except FCMSubscription.DoesNotExist:
+                return Response({"error": "Subscription not found"}, status=status.HTTP_404_NOT_FOUND)
+            
+            # Ensure category_preferences is a list
+            preferences = subscription.category_preferences or []
+            if not isinstance(preferences, list):
+                preferences = []
+            
+            # Toggle: add if not present, remove if present
+            if category_id in preferences:
+                preferences.remove(category_id)
+                action = "removed"
+            else:
+                preferences.append(category_id)
+                action = "added"
+            
+            subscription.category_preferences = preferences
+            subscription.save(update_fields=['category_preferences'])
+            
+            logger.info(f"Category preference {action}: {category_id} for token {token[:20]}...")
+            
+            return Response({
+                "status": action,
+                "category_id": category_id,
+                "preferences": preferences
+            }, status=status.HTTP_200_OK)
+                
+        except Exception as e:
+            logger.error(f"Toggle preference failed: {e}", exc_info=True)
+            return Response({"error": "Failed to update preference"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+

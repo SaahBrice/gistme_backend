@@ -101,6 +101,21 @@ class FCMSubscription(models.Model):
         db_index=True,  # Index for fast language-based queries
         help_text='User\'s preferred language for notifications'
     )
+    category_preferences = models.JSONField(
+        default=list,
+        blank=True,
+        help_text='List of preferred category IDs for targeted notifications'
+    )
+    # Daily notification tracking for users without preferences
+    notifications_sent_today = models.PositiveIntegerField(
+        default=0,
+        help_text='Number of random notifications sent today (for users without preferences)'
+    )
+    last_notification_date = models.DateField(
+        null=True,
+        blank=True,
+        help_text='Date of last notification sent (for daily limit reset)'
+    )
     created_at = models.DateTimeField(auto_now_add=True)
     last_used_at = models.DateTimeField(auto_now=True)
 

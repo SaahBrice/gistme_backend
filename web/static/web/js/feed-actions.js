@@ -3,6 +3,7 @@ const FeedActions = {
         console.log('GistMe App Initialized');
         this.startCommentSimulation();
         this.fetchAdvertisements();
+        this.loadCategoryPreferences();
     },
 
     async fetchAdvertisements() {
@@ -345,6 +346,126 @@ const FeedActions = {
 
     closeCommentsPanel() {
         this.showCommentsPanel = false;
+    },
+
+    // Category Preferences Management
+    async loadCategoryPreferences() {
+        const token = localStorage.getItem('fcmToken');
+        if (!token) {
+            console.log('No FCM token found, cannot load preferences');
+            return;
+        }
+
+        try {
+            const response = await fetch(`/api/fcm/preferences/?token=${encodeURIComponent(token)}`);
+            if (response.ok) {
+                const data = await response.json();
+                this.categoryPreferences = data.preferences || [];
+                console.log('✓ Loaded category preferences:', this.categoryPreferences);
+            }
+        } catch (error) {
+            console.error('Error loading preferences:', error);
+        }
+    },
+
+    async toggleCategoryPreference(categoryId) {
+        const token = localStorage.getItem('fcmToken');
+
+        if (!token) {
+            // Show toast that they need to enable notifications
+            this.showToast(this.globalLang === 'fr'
+                ? 'Activez les notifications pour sauvegarder vos préférences'
+                : 'Enable notifications to save your preferences');
+            return;
+        }
+
+        // Optimistic UI update
+        const wasPreferred = this.categoryPreferences.includes(categoryId);
+        if (wasPreferred) {
+            this.categoryPreferences = this.categoryPreferences.filter(id => id !== categoryId);
+        } else {
+            this.categoryPreferences = [...this.categoryPreferences, categoryId];
+        }
+
+        try {
+            const response = await fetch('/api/fcm/preferences/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': this.getCookie('csrftoken')
+                },
+                body: JSON.stringify({
+                    token: token,
+                    category_id: categoryId
+                })
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                this.categoryPreferences = data.preferences;
+
+                // Show subtle feedback
+                const categoryName = this.getCategoryName(categoryId);
+                const message = data.status === 'added'
+                    ? (this.globalLang === 'fr' ? `${categoryName} ajouté aux préférences` : `${categoryName} added to preferences`)
+                    : (this.globalLang === 'fr' ? `${categoryName} retiré des préférences` : `${categoryName} removed from preferences`);
+                this.showToast(message);
+            } else {
+                // Revert on error
+                if (wasPreferred) {
+                    this.categoryPreferences = [...this.categoryPreferences, categoryId];
+                } else {
+                    this.categoryPreferences = this.categoryPreferences.filter(id => id !== categoryId);
+                }
+                console.error('Failed to toggle preference');
+            }
+        } catch (error) {
+            // Revert on error
+            if (wasPreferred) {
+                this.categoryPreferences = [...this.categoryPreferences, categoryId];
+            } else {
+                this.categoryPreferences = this.categoryPreferences.filter(id => id !== categoryId);
+            }
+            console.error('Error toggling preference:', error);
+        }
+    },
+
+    isCategoryPreferred(categoryId) {
+        return this.categoryPreferences.includes(categoryId);
+    },
+
+    showToast(message) {
+        // Create a simple toast notification
+        const existingToast = document.getElementById('preference-toast');
+        if (existingToast) {
+            existingToast.remove();
+        }
+
+        const toast = document.createElement('div');
+        toast.id = 'preference-toast';
+        toast.className = 'fixed bottom-20 left-1/2 -translate-x-1/2 px-4 py-2 bg-gray-900 text-yellow-500 text-sm font-semibold rounded-full shadow-lg z-50 animate-fade-in-up';
+        toast.textContent = message;
+        document.body.appendChild(toast);
+
+        setTimeout(() => {
+            toast.classList.add('animate-fade-out');
+            setTimeout(() => toast.remove(), 300);
+        }, 2000);
+    },
+
+    getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
     },
 
     selectCategory(category) {

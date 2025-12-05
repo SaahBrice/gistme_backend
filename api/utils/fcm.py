@@ -124,12 +124,19 @@ def _send_multicast(article_data, tokens, language=''):
 
 def send_push_notification(article):
     """
-    Sends a push notification for the given article to all subscribers.
+    Sends a push notification for the given article to targeted subscribers.
+    
+    Targeting logic:
+    - Users WITH category_preferences: Send only if article.category matches preferences
+    - Users WITHOUT preferences: Send up to 3 random notifications per day
+    
     Sends separate notifications for French and English users.
     Uses batching to handle 500+ users per language.
     This runs in a separate thread to be non-blocking.
     """
     try:
+        from datetime import date
+        
         # Prepare thumbnail URL
         thumbnail_url = None
         if article.thumbnails and len(article.thumbnails) > 0:
@@ -137,12 +144,67 @@ def send_push_notification(article):
         elif article.thumbnail_image:
              thumbnail_url = article.thumbnail_image.url
 
-        # Get all FCM subscriptions grouped by language
-        # Using values_list for memory efficiency
-        french_tokens = list(FCMSubscription.objects.filter(preferred_language='fr').values_list('token', flat=True))
-        english_tokens = list(FCMSubscription.objects.filter(preferred_language='en').values_list('token', flat=True))
+        article_category = article.category.lower().strip() if article.category else ''
+        today = date.today()
         
-        logger.info(f"Preparing notifications: {len(french_tokens)} French, {len(english_tokens)} English")
+        # Get all FCM subscriptions
+        all_subscriptions = FCMSubscription.objects.all()
+        
+        # Filter subscribers based on preferences
+        french_tokens = []
+        english_tokens = []
+        subscriptions_to_update = []
+        
+        for sub in all_subscriptions:
+            should_send = False
+            needs_counter_increment = False
+            
+            # Check if user has preferences
+            preferences = sub.category_preferences or []
+            
+            if preferences:
+                # User has preferences - check if article category matches any
+                # Normalize for comparison (case-insensitive)
+                normalized_preferences = [p.lower().strip() for p in preferences]
+                if article_category in normalized_preferences:
+                    should_send = True
+                    logger.debug(f"Category match for {sub.token[:20]}...: {article_category} in {normalized_preferences}")
+            else:
+                # User has no preferences - apply 3/day random limit
+                # Check if we need to reset the counter (new day)
+                if sub.last_notification_date != today:
+                    sub.notifications_sent_today = 0
+                    sub.last_notification_date = today
+                
+                # Check if under daily limit
+                if sub.notifications_sent_today < 3:
+                    should_send = True
+                    needs_counter_increment = True
+                    logger.debug(f"Random notification #{sub.notifications_sent_today + 1}/3 for {sub.token[:20]}...")
+                else:
+                    logger.debug(f"Daily limit reached for {sub.token[:20]}... (3/3)")
+            
+            if should_send:
+                # Add to appropriate language list
+                if sub.preferred_language == 'fr':
+                    french_tokens.append(sub.token)
+                else:
+                    english_tokens.append(sub.token)
+                
+                # Track subscriptions that need counter update
+                if needs_counter_increment:
+                    sub.notifications_sent_today += 1
+                    subscriptions_to_update.append(sub)
+        
+        # Bulk update counters for efficiency
+        if subscriptions_to_update:
+            FCMSubscription.objects.bulk_update(
+                subscriptions_to_update, 
+                ['notifications_sent_today', 'last_notification_date']
+            )
+            logger.info(f"Updated notification counters for {len(subscriptions_to_update)} subscribers")
+        
+        logger.info(f"Targeted notifications: {len(french_tokens)} French, {len(english_tokens)} English (category: {article_category})")
 
         # Send French notifications
         if french_tokens:
@@ -179,9 +241,8 @@ def send_push_notification(article):
             thread.start()
         
         if not french_tokens and not english_tokens:
-            logger.info("No FCM subscribers to notify.")
+            logger.info(f"No targeted subscribers for category: {article_category}")
         
     except Exception as e:
         logger.error(f"Error preparing push notification: {e}")
-
 

@@ -239,6 +239,9 @@
                         if (token) {
                             console.log('✅ FCM Token obtained:', token);
 
+                            // Save token to localStorage for category preferences feature
+                            localStorage.setItem('fcmToken', token);
+
                             // Detect user's preferred language from browser
                             const browserLang = navigator.language || navigator.userLanguage || 'fr';
                             const preferredLanguage = browserLang.toLowerCase().startsWith('fr') ? 'fr' : 'en';
