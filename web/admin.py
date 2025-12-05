@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Subscription, Advertisement, WaitingList
+from .models import Subscription, Advertisement, WaitingList, Coupon, CouponUsage
 
 
 @admin.register(Subscription)
@@ -54,3 +54,35 @@ class WaitingListAdmin(admin.ModelAdmin):
             'fields': ('ip_address', 'user_agent', 'created_at')
         }),
     )
+
+
+@admin.register(Coupon)
+class CouponAdmin(admin.ModelAdmin):
+    list_display = ('code', 'discount_percent', 'current_uses', 'max_uses', 'remaining_uses', 'is_active', 'created_at')
+    list_filter = ('is_active', 'discount_percent', 'created_at')
+    search_fields = ('code',)
+    readonly_fields = ('current_uses', 'created_at')
+    list_editable = ('is_active',)
+    
+    fieldsets = (
+        ('Coupon Details', {
+            'fields': ('code', 'discount_percent')
+        }),
+        ('Usage Limits', {
+            'fields': ('max_uses', 'current_uses', 'is_active')
+        }),
+        ('Timestamps', {
+            'fields': ('created_at',),
+            'classes': ('collapse',)
+        }),
+    )
+
+
+@admin.register(CouponUsage)
+class CouponUsageAdmin(admin.ModelAdmin):
+    list_display = ('coupon', 'email', 'used_at')
+    list_filter = ('coupon', 'used_at')
+    search_fields = ('email', 'coupon__code')
+    readonly_fields = ('coupon', 'email', 'used_at')
+    date_hierarchy = 'used_at'
+

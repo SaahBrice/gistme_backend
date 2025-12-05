@@ -13,13 +13,22 @@ class StandardResultsSetPagination(PageNumberPagination):
     max_page_size = 100
 
 class ArticleViewSet(viewsets.ModelViewSet):
-    queryset = Article.objects.all().order_by('-created_at')
+    queryset = Article.objects.all()  # Required for router
     serializer_class = ArticleSerializer
     pagination_class = StandardResultsSetPagination
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
     filterset_fields = ['mood', 'category']
     search_fields = ['headline', 'headline_en', 'headline_fr', 'french_summary', 'english_summary']
     ordering_fields = ['created_at', 'view_count', 'reaction_count', 'comment_count']
+
+    def get_queryset(self):
+        """
+        Exclude pro-* categories from the public feed.
+        Pro content is delivered via email only.
+        """
+        return Article.objects.exclude(
+            category__istartswith='pro-'
+        ).order_by('-created_at')
 
     def get_permissions(self):
         if self.action in ['create', 'update', 'partial_update', 'destroy']:

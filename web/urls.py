@@ -5,6 +5,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('feed/', views.feed, name='feed'),
     path('subscribe/', views.subscribe, name='subscribe'),
+    path('validate-coupon/', views.validate_coupon, name='validate_coupon'),
     path('advertise/', views.advertise, name='advertise'),
     path('join-waiting-list/', views.join_waiting_list, name='join_waiting_list'),
     path('firebase-messaging-sw.js', views.firebase_messaging_sw, name='firebase_messaging_sw'),

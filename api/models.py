@@ -94,6 +94,12 @@ class FCMSubscription(models.Model):
     ]
     
     token = models.CharField(max_length=500, unique=True)
+    email = models.EmailField(
+        null=True,
+        blank=True,
+        db_index=True,
+        help_text='Email for linking to Pro subscription (optional)'
+    )
     preferred_language = models.CharField(
         max_length=2,
         choices=LANGUAGE_CHOICES,
@@ -120,6 +126,8 @@ class FCMSubscription(models.Model):
     last_used_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
+        if self.email:
+            return f"FCM Token {self.token[:20]}... ({self.preferred_language}) - {self.email}"
         return f"FCM Token {self.token[:20]}... ({self.preferred_language})"
 
 
