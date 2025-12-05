@@ -14,6 +14,15 @@ def index(request):
 def feed(request):
     return render(request, 'web/feed.html')
 
+def legal(request):
+    return render(request, 'web/legal.html')
+
+def terms(request):
+    return render(request, 'web/terms.html')
+
+def contact(request):
+    return render(request, 'web/contact.html')
+
 
 @csrf_exempt
 @require_http_methods(["POST"])

@@ -9,6 +9,10 @@ urlpatterns = [
     path('advertise/', views.advertise, name='advertise'),
     path('join-waiting-list/', views.join_waiting_list, name='join_waiting_list'),
     path('firebase-messaging-sw.js', views.firebase_messaging_sw, name='firebase_messaging_sw'),
+    # Footer pages
+    path('legal/', views.legal, name='legal'),
+    path('terms/', views.terms, name='terms'),
+    path('contact/', views.contact, name='contact'),
     # Fapshi Payment
     path('initiate-payment/', views.initiate_payment, name='initiate_payment'),
     path('payment-status/<str:trans_id>/', views.get_payment_status, name='payment_status'),
