@@ -6492,3 +6492,130 @@ INFO 2025-12-05 17:03:25,462 basehttp 24752 25292 "GET /firebase-messaging-sw.js
 INFO 2025-12-05 17:03:53,246 basehttp 24752 25292 "POST /validate-coupon/ HTTP/1.1" 200 119
 WARNING 2025-12-05 17:04:05,952 log 24752 25292 Bad Request: /subscribe/
 WARNING 2025-12-05 17:04:05,952 basehttp 24752 25292 "POST /subscribe/ HTTP/1.1" 400 96
+INFO 2025-12-05 17:39:27,863 autoreload 16916 25192 Watching for file changes with StatReloader
+INFO 2025-12-05 17:39:38,383 basehttp 16916 19360 "GET / HTTP/1.1" 200 81255
+WARNING 2025-12-05 17:39:38,447 log 16916 19360 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-05 17:39:38,448 basehttp 16916 19360 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5338
+INFO 2025-12-05 17:39:39,127 views 16916 19360 FCM subscription updated: cIuowNHnBOawJ-xQlbN9... (lang: en)
+INFO 2025-12-05 17:39:39,138 basehttp 16916 19360 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-12-05 17:39:41,243 basehttp 16916 19360 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-05 17:40:43,018 basehttp 16916 19360 "POST /validate-coupon/ HTTP/1.1" 200 119
+INFO 2025-12-05 17:41:45,462 fapshi 16916 19360 [Fapshi] Initiating payment: 750 FCFA to 650945927
+ERROR 2025-12-05 17:41:47,159 fapshi 16916 19360 [Fapshi] Payment failed: Invalid externalId
+WARNING 2025-12-05 17:41:47,170 log 16916 19360 Bad Request: /initiate-payment/
+WARNING 2025-12-05 17:41:47,170 basehttp 16916 19360 "POST /initiate-payment/ HTTP/1.1" 400 49
+INFO 2025-12-05 17:43:16,952 autoreload 16916 25192 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\views.py changed, reloading.
+INFO 2025-12-05 17:43:18,739 autoreload 28220 6428 Watching for file changes with StatReloader
+INFO 2025-12-05 17:44:04,914 basehttp 28220 21748 "GET / HTTP/1.1" 200 81255
+WARNING 2025-12-05 17:44:04,981 log 28220 21748 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-05 17:44:04,983 basehttp 28220 21748 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5338
+INFO 2025-12-05 17:44:05,700 views 28220 21748 FCM subscription updated: cIuowNHnBOawJ-xQlbN9... (lang: en)
+INFO 2025-12-05 17:44:05,717 basehttp 28220 21748 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-12-05 17:44:07,559 basehttp 28220 21748 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-05 17:44:41,845 basehttp 28220 21748 "POST /validate-coupon/ HTTP/1.1" 200 119
+INFO 2025-12-05 17:44:43,485 fapshi 28220 21748 [Fapshi] Initiating payment: 750 FCFA to 650945927
+ERROR 2025-12-05 17:44:44,774 fapshi 28220 21748 [Fapshi] Payment failed: Invalid apiuser or apikey
+WARNING 2025-12-05 17:44:44,784 log 28220 21748 Bad Request: /initiate-payment/
+WARNING 2025-12-05 17:44:44,784 basehttp 28220 21748 "POST /initiate-payment/ HTTP/1.1" 400 56
+INFO 2025-12-05 17:49:43,765 basehttp 28220 21748 "GET / HTTP/1.1" 200 81255
+WARNING 2025-12-05 17:49:43,824 log 28220 21748 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-05 17:49:43,825 basehttp 28220 21748 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5338
+INFO 2025-12-05 17:49:44,600 views 28220 21748 FCM subscription updated: cIuowNHnBOawJ-xQlbN9... (lang: en)
+INFO 2025-12-05 17:49:44,612 basehttp 28220 21748 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-12-05 17:49:46,623 basehttp 28220 21748 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-05 17:50:33,011 fapshi 28220 21748 [Fapshi] Initiating payment: 1500 FCFA to 650000000
+ERROR 2025-12-05 17:50:34,730 fapshi 28220 21748 [Fapshi] Payment failed: Invalid apiuser or apikey
+WARNING 2025-12-05 17:50:34,741 log 28220 21748 Bad Request: /initiate-payment/
+WARNING 2025-12-05 17:50:34,742 basehttp 28220 21748 "POST /initiate-payment/ HTTP/1.1" 400 56
+INFO 2025-12-05 17:55:15,335 autoreload 27736 1144 Watching for file changes with StatReloader
+INFO 2025-12-05 17:55:21,538 basehttp 27736 27860 "GET / HTTP/1.1" 200 81255
+WARNING 2025-12-05 17:55:21,613 log 27736 10144 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-05 17:55:21,614 basehttp 27736 10144 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5338
+INFO 2025-12-05 17:55:21,786 basehttp 27736 27328 "GET /static/web/js/main.js HTTP/1.1" 200 7679
+INFO 2025-12-05 17:55:21,812 basehttp 27736 27860 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-05 17:55:22,187 basehttp 27736 27860 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-05 17:55:22,216 basehttp 27736 27328 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-05 17:55:22,220 basehttp 27736 27860 "GET /static/web/js/waiting-list.js HTTP/1.1" 200 2933
+INFO 2025-12-05 17:55:23,270 views 27736 27860 FCM subscription updated: cIuowNHnBOawJ-xQlbN9... (lang: en)
+INFO 2025-12-05 17:55:23,279 basehttp 27736 27860 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+WARNING 2025-12-05 17:55:23,501 log 27736 27860 Not Found: /favicon.ico
+WARNING 2025-12-05 17:55:23,504 basehttp 27736 27860 "GET /favicon.ico HTTP/1.1" 404 5227
+INFO 2025-12-05 17:56:06,311 fapshi 27736 27328 [Fapshi] Initiating payment: 750 FCFA to 650000000
+INFO 2025-12-05 17:56:06,317 basehttp 27736 27860 "POST /validate-coupon/ HTTP/1.1" 200 119
+ERROR 2025-12-05 17:56:08,272 fapshi 27736 27328 [Fapshi] Payment failed: Invalid apiuser or apikey
+WARNING 2025-12-05 17:56:08,281 log 27736 27328 Bad Request: /initiate-payment/
+WARNING 2025-12-05 17:56:08,282 basehttp 27736 27328 "POST /initiate-payment/ HTTP/1.1" 400 56
+INFO 2025-12-05 17:56:54,575 autoreload 28196 17208 Watching for file changes with StatReloader
+INFO 2025-12-05 17:57:00,623 fapshi 28196 14852 [Fapshi] Initiating payment: 750 FCFA to 650000000
+ERROR 2025-12-05 17:57:02,874 fapshi 28196 14852 [Fapshi] Payment failed: Forbidden request. Visit https://www.fapshi.com/en/help-and-support/how-to-activate-direct-pay-for-your-fapshi-api to know more
+WARNING 2025-12-05 17:57:02,886 log 28196 14852 Bad Request: /initiate-payment/
+WARNING 2025-12-05 17:57:02,886 basehttp 28196 14852 "POST /initiate-payment/ HTTP/1.1" 400 158
+INFO 2025-12-05 17:57:49,021 autoreload 2572 23216 Watching for file changes with StatReloader
+INFO 2025-12-05 17:57:58,761 fapshi 2572 476 [Fapshi] Initiating payment: 750 FCFA to 650000000
+ERROR 2025-12-05 17:58:00,619 fapshi 2572 476 [Fapshi] Payment failed: Invalid apiuser or apikey
+WARNING 2025-12-05 17:58:00,631 log 2572 476 Bad Request: /initiate-payment/
+WARNING 2025-12-05 17:58:00,632 basehttp 2572 476 "POST /initiate-payment/ HTTP/1.1" 400 56
+INFO 2025-12-05 18:26:55,478 autoreload 29084 28524 Watching for file changes with StatReloader
+INFO 2025-12-05 18:27:00,502 basehttp 29084 15676 "GET / HTTP/1.1" 200 77690
+WARNING 2025-12-05 18:27:00,578 log 29084 15676 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-05 18:27:00,579 basehttp 29084 15676 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5613
+INFO 2025-12-05 18:27:00,873 basehttp 29084 15676 "GET /static/web/js/main.js HTTP/1.1" 304 0
+INFO 2025-12-05 18:27:00,875 basehttp 29084 9892 "GET /static/web/js/pwa-install.js HTTP/1.1" 304 0
+INFO 2025-12-05 18:27:01,362 basehttp 29084 25168 "GET /static/web/manifest.json HTTP/1.1" 304 0
+INFO 2025-12-05 18:27:01,381 views 29084 9892 FCM subscription updated: cIuowNHnBOawJ-xQlbN9... (lang: en)
+INFO 2025-12-05 18:27:01,393 basehttp 29084 9892 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-12-05 18:27:01,397 basehttp 29084 15676 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 304 0
+INFO 2025-12-05 18:27:03,516 basehttp 29084 15676 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-05 18:27:31,655 basehttp 29084 18060 "POST /validate-coupon/ HTTP/1.1" 200 119
+INFO 2025-12-05 18:27:32,497 fapshi 29084 18060 [Fapshi] Initiating payment: 750 FCFA
+INFO 2025-12-05 18:27:34,405 fapshi 29084 18060 [Fapshi] Payment link created: rLvGFeVy
+INFO 2025-12-05 18:27:34,423 basehttp 29084 18060 "POST /initiate-payment/ HTTP/1.1" 200 176
+INFO 2025-12-05 18:29:00,850 basehttp 29084 17064 code 400, message Bad request version ('ªª\x00\x00ÿ\x01\x00\x01\x00\x00')
+ERROR 2025-12-05 18:29:00,850 basehttp 29084 17064 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-12-05 18:29:00,886 basehttp 29084 3804 code 400, message Bad request version ('\x89§=ÚÓV\x89ó¹³s')
+ERROR 2025-12-05 18:29:00,888 basehttp 29084 3804 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-12-05 18:29:01,160 basehttp 29084 4408 code 400, message Bad request version ('*')
+ERROR 2025-12-05 18:29:01,160 basehttp 29084 4408 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-12-05 18:29:01,203 basehttp 29084 22172 code 400, message Bad request version ('êê\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06¥zz\x00\x00\x00\x12\x00\x00\x00\x17\x00\x00\x00')
+ERROR 2025-12-05 18:29:01,204 basehttp 29084 22172 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-12-05 18:29:04,548 basehttp 29084 15840 code 400, message Bad request version ('/\xad\x84ó¦¦\x031R\x11g\x8c=\x04b')
+ERROR 2025-12-05 18:29:04,549 basehttp 29084 15840 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-12-05 18:29:04,549 basehttp 29084 26796 code 400, message Bad request version ('Ya\x84ûhMÃrD!Qd:àR\x1bÊ½\x8b')
+ERROR 2025-12-05 18:29:04,550 basehttp 29084 26796 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-12-05 18:29:04,788 basehttp 29084 24372 code 400, message Bad request version ('\x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06E')
+ERROR 2025-12-05 18:29:04,789 basehttp 29084 24372 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-12-05 18:29:04,861 basehttp 29084 15472 code 400, message Bad request version ('JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06¥jj\x00\x00\x00')
+INFO 2025-12-05 18:29:04,861 basehttp 29084 26836 code 400, message Bad request version ('Àá`')
+ERROR 2025-12-05 18:29:04,861 basehttp 29084 15472 You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2025-12-05 18:29:04,862 basehttp 29084 26836 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-12-05 18:29:05,102 basehttp 29084 14884 code 400, message Bad request version ('\x93"ºg\x16f$«ª0\x9aåW:á"VÃ')
+ERROR 2025-12-05 18:29:05,103 basehttp 29084 14884 You're accessing the development server over HTTPS, but it only supports HTTP.
+WARNING 2025-12-05 18:34:34,939 log 29084 2364 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-05 18:34:34,941 basehttp 29084 2364 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5613
+INFO 2025-12-05 18:34:35,137 basehttp 29084 2364 "GET / HTTP/1.1" 200 77690
+WARNING 2025-12-05 18:34:35,185 log 29084 2364 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-05 18:34:35,187 basehttp 29084 2364 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5613
+WARNING 2025-12-05 18:34:35,612 log 29084 2364 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-05 18:34:35,613 basehttp 29084 2364 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5613
+INFO 2025-12-05 18:34:36,003 basehttp 29084 2364 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-12-05 18:34:36,017 basehttp 29084 27332 "GET /api/fcm/preferences/?token=cIuowNHnBOawJ-xQlbN9ye%3AAPA91bHeD1iTw-5HDWbAi5Hv_W3KqMpmKv6-dyXZqCnH0W_XFMuJrXmN9Jd5cQwXsziTvYRwrqCeDy4UPmx2Y0DMQfV6JKgI1zxm3uvdXwX-gUeA0PqKglc HTTP/1.1" 200 142
+INFO 2025-12-05 18:34:36,383 views 29084 27332 FCM subscription updated: cIuowNHnBOawJ-xQlbN9... (lang: en)
+INFO 2025-12-05 18:34:36,391 basehttp 29084 27332 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+WARNING 2025-12-05 18:34:36,661 log 29084 27332 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-05 18:34:36,666 basehttp 29084 27332 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5613
+INFO 2025-12-05 18:34:37,531 views 29084 27332 FCM subscription updated: cIuowNHnBOawJ-xQlbN9... (lang: en)
+INFO 2025-12-05 18:34:37,541 basehttp 29084 27332 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-12-05 18:34:39,259 basehttp 29084 27332 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-05 18:39:22,020 basehttp 29084 27332 "GET /feed/ HTTP/1.1" 200 48432
+INFO 2025-12-05 18:39:22,101 basehttp 29084 3648 "GET /static/web/js/main.js HTTP/1.1" 304 0
+INFO 2025-12-05 18:39:22,103 basehttp 29084 1408 "GET /static/web/js/pwa-install.js HTTP/1.1" 304 0
+WARNING 2025-12-05 18:39:22,135 log 29084 1408 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-05 18:39:22,136 basehttp 29084 1408 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5613
+INFO 2025-12-05 18:39:22,461 basehttp 29084 2364 "GET /static/web/js/feed-actions.js HTTP/1.1" 200 41203
+INFO 2025-12-05 18:39:22,467 basehttp 29084 27332 "GET /static/web/css/feed.css HTTP/1.1" 200 9946
+INFO 2025-12-05 18:39:22,469 basehttp 29084 28276 "GET /static/web/js/feed.js HTTP/1.1" 200 2901
+INFO 2025-12-05 18:39:22,765 basehttp 29084 28276 "GET /api/articles/?category=advertisement HTTP/1.1" 200 52
+INFO 2025-12-05 18:39:22,781 basehttp 29084 27332 "GET /api/fcm/preferences/?token=cIuowNHnBOawJ-xQlbN9ye%3AAPA91bHeD1iTw-5HDWbAi5Hv_W3KqMpmKv6-dyXZqCnH0W_XFMuJrXmN9Jd5cQwXsziTvYRwrqCeDy4UPmx2Y0DMQfV6JKgI1zxm3uvdXwX-gUeA0PqKglc HTTP/1.1" 200 142
+INFO 2025-12-05 18:39:23,155 views 29084 27332 FCM subscription updated: cIuowNHnBOawJ-xQlbN9... (lang: en)
+INFO 2025-12-05 18:39:23,166 basehttp 29084 27332 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-12-05 18:39:24,783 basehttp 29084 27332 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965

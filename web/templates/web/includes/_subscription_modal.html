@@ -404,7 +404,7 @@
                     coupon_code: this.couponCode
                 };
 
-                fetch('/subscribe/', {
+                fetch('/initiate-payment/', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -414,9 +414,9 @@
                 })
                     .then(response => response.json())
                     .then(data => {
-                        if (data.success) {
-                            this.expiryDate = data.expiry_date || '';
-                            this.step = 'success';
+                        if (data.success && data.payment_link) {
+                            // Redirect to Fapshi checkout page
+                            window.location.href = data.payment_link;
                         } else {
                             // Check if it's an "already subscribed" error
                             const errorMsg = data.error || 'Unknown error';

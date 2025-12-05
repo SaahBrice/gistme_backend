@@ -33,6 +33,13 @@ ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',') if os.environ.get
 
 SITE_URL = os.environ.get('SITE_URL', 'http://localhost:8000')
 
+# Fapshi Payment Gateway
+FAPSHI_API_KEY = os.environ.get('FAPSHI_API_KEY', '')
+FAPSHI_API_USER = os.environ.get('FAPSHI_API_USER', '')
+FAPSHI_BASE_URL = os.environ.get('FAPSHI_BASE_URL', 'https://sandbox.fapshi.com')
+SITE_URL = os.environ.get('SITE_URL', 'http://127.0.0.1:8000')
+
+
 # Application definition
 
 INSTALLED_APPS = [

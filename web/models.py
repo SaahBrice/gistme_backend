@@ -127,3 +127,41 @@ class CouponUsage(models.Model):
     def __str__(self):
         return f"{self.email} used {self.coupon.code}"
 
+
+class PaymentTransaction(models.Model):
+    """Tracks Fapshi payment transactions"""
+    STATUS_CHOICES = [
+        ('CREATED', 'Created'),
+        ('PENDING', 'Pending'),
+        ('SUCCESSFUL', 'Successful'),
+        ('FAILED', 'Failed'),
+        ('EXPIRED', 'Expired'),
+    ]
+    
+    trans_id = models.CharField(max_length=100, unique=True, help_text="Fapshi transaction ID")
+    email = models.EmailField()
+    name = models.CharField(max_length=100)
+    phone = models.CharField(max_length=20)
+    amount = models.IntegerField(help_text="Amount in FCFA")
+    final_amount = models.IntegerField(help_text="Amount after coupon discount")
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='PENDING')
+    coupon = models.ForeignKey(Coupon, on_delete=models.SET_NULL, null=True, blank=True)
+    gist_preferences = models.CharField(max_length=100, default="scholarships, concours and jobs")
+    is_renewal = models.BooleanField(default=False)
+    
+    # Fapshi response data
+    medium = models.CharField(max_length=50, blank=True, null=True, help_text="mobile money or orange money")
+    financial_trans_id = models.CharField(max_length=100, blank=True, null=True, help_text="Operator transaction ID")
+    
+    created_at = models.DateTimeField(auto_now_add=True)
+    completed_at = models.DateTimeField(null=True, blank=True)
+    
+    class Meta:
+        ordering = ['-created_at']
+        verbose_name = 'Payment Transaction'
+        verbose_name_plural = 'Payment Transactions'
+    
+    def __str__(self):
+        return f"{self.status} - {self.email} - {self.final_amount} FCFA"
+
+

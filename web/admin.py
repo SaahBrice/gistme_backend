@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Subscription, Advertisement, WaitingList, Coupon, CouponUsage
+from .models import Subscription, Advertisement, WaitingList, Coupon, CouponUsage, PaymentTransaction
 
 
 @admin.register(Subscription)
@@ -85,4 +85,30 @@ class CouponUsageAdmin(admin.ModelAdmin):
     search_fields = ('email', 'coupon__code')
     readonly_fields = ('coupon', 'email', 'used_at')
     date_hierarchy = 'used_at'
+
+
+@admin.register(PaymentTransaction)
+class PaymentTransactionAdmin(admin.ModelAdmin):
+    list_display = ('trans_id', 'email', 'name', 'final_amount', 'status', 'medium', 'created_at', 'completed_at')
+    list_filter = ('status', 'medium', 'created_at', 'is_renewal')
+    search_fields = ('trans_id', 'email', 'name', 'phone', 'financial_trans_id')
+    readonly_fields = ('trans_id', 'created_at', 'completed_at', 'financial_trans_id')
+    date_hierarchy = 'created_at'
+    
+    fieldsets = (
+        ('Transaction Info', {
+            'fields': ('trans_id', 'status', 'medium', 'financial_trans_id')
+        }),
+        ('Customer', {
+            'fields': ('name', 'email', 'phone', 'gist_preferences')
+        }),
+        ('Payment', {
+            'fields': ('amount', 'final_amount', 'coupon', 'is_renewal')
+        }),
+        ('Timestamps', {
+            'fields': ('created_at', 'completed_at'),
+            'classes': ('collapse',)
+        }),
+    )
+
 

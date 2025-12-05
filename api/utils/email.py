@@ -230,3 +230,132 @@ Gist4U Pro - Don't miss exclusive opportunities!
     )
     thread.start()
     logger.info(f"[Email] Queued expiry notification for {subscriber.email}")
+
+
+def send_receipt_email(transaction):
+    """
+    Send a payment receipt email after successful subscription payment.
+    Non-blocking - runs in a separate thread.
+    
+    Args:
+        transaction: PaymentTransaction model instance
+    """
+    from web.models import Subscription
+    from datetime import datetime
+    
+    # Get subscription for expiry date
+    subscription = Subscription.objects.filter(email=transaction.email).first()
+    expiry_date = subscription.expiry_date.strftime('%B %d, %Y') if subscription else "90 days from now"
+    
+    # Format coupon info
+    coupon_info = ""
+    discount_info = ""
+    if transaction.coupon:
+        coupon_info = transaction.coupon.code
+        discount_info = f"{transaction.coupon.discount_percent}% discount"
+    
+    subject = f"🎉 Payment Receipt - Gist4U Pro Subscription"
+    
+    # Plain text version
+    message = f"""
+Hi {transaction.name},
+
+Thank you for subscribing to Gist4U Pro! 🎉
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PAYMENT RECEIPT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Transaction ID: {transaction.trans_id}
+Date: {transaction.completed_at.strftime('%B %d, %Y at %H:%M') if transaction.completed_at else datetime.now().strftime('%B %d, %Y at %H:%M')}
+
+Description: Gist4U Pro Subscription (3 months)
+Original Price: {transaction.amount} FCFA
+{f"Coupon ({coupon_info}): -{transaction.amount - transaction.final_amount} FCFA" if transaction.coupon else ""}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Total Paid: {transaction.final_amount} FCFA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Your subscription is valid until: {expiry_date}
+
+Thank you for trusting Gist4U Pro!
+
+---
+Gist4U Pro - Never miss an opportunity
+"""
+
+    # HTML version
+    html_message = f"""
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f5f5f5;">
+    <div style="background-color: #10B981; color: white; padding: 25px; border-radius: 10px; text-align: center;">
+        <h1 style="margin: 0 0 10px 0;">🎉 Payment Successful!</h1>
+        <p style="margin: 0; opacity: 0.9; font-size: 18px;">Welcome to Gist4U Pro</p>
+    </div>
+    
+    <div style="background-color: white; padding: 25px; border-radius: 10px; margin-top: 10px;">
+        <p style="font-size: 16px;">Hi <strong>{transaction.name}</strong>,</p>
+        
+        <p style="font-size: 15px; color: #666;">Thank you for your payment! Your subscription is now active.</p>
+        
+        <!-- Receipt Box -->
+        <div style="background-color: #f9f9f9; border: 1px solid #e0e0e0; border-radius: 10px; padding: 20px; margin: 25px 0;">
+            <h3 style="margin: 0 0 15px 0; color: #333; border-bottom: 2px solid #FFDE00; padding-bottom: 10px;">📄 Payment Receipt</h3>
+            
+            <table style="width: 100%; border-collapse: collapse;">
+                <tr>
+                    <td style="padding: 8px 0; color: #666;">Transaction ID:</td>
+                    <td style="padding: 8px 0; text-align: right; font-family: monospace; font-size: 12px;">{transaction.trans_id}</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px 0; color: #666;">Date:</td>
+                    <td style="padding: 8px 0; text-align: right;">{transaction.completed_at.strftime('%B %d, %Y') if transaction.completed_at else datetime.now().strftime('%B %d, %Y')}</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px 0; color: #666;">Payment Method:</td>
+                    <td style="padding: 8px 0; text-align: right;">{transaction.medium or 'Mobile Money'}</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                    <td style="padding: 12px 0 8px 0; color: #333;">Pro Subscription (3 months)</td>
+                    <td style="padding: 12px 0 8px 0; text-align: right;">{transaction.amount} FCFA</td>
+                </tr>
+                {"<tr><td style='padding: 8px 0; color: #10B981;'>Coupon (" + coupon_info + ")</td><td style='padding: 8px 0; text-align: right; color: #10B981;'>-" + str(transaction.amount - transaction.final_amount) + " FCFA</td></tr>" if transaction.coupon else ""}
+                <tr style="border-top: 2px solid #FFDE00; background-color: #FFFBEB;">
+                    <td style="padding: 15px 10px; font-weight: bold; font-size: 18px;">Total Paid</td>
+                    <td style="padding: 15px 10px; text-align: right; font-weight: bold; font-size: 18px; color: #10B981;">{transaction.final_amount} FCFA</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- Subscription Info -->
+        <div style="background-color: #FFFBEB; border: 2px solid #FFDE00; border-radius: 10px; padding: 20px; text-align: center;">
+            <p style="margin: 0 0 5px 0; color: #666; font-size: 14px;">Your subscription is valid until</p>
+            <p style="margin: 0; font-size: 24px; font-weight: bold; color: #333;">{expiry_date}</p>
+        </div>
+        
+        <p style="margin-top: 25px; color: #666; font-size: 14px; text-align: center;">
+            You'll now receive exclusive Pro content directly in your email! 🎓
+        </p>
+    </div>
+    
+    <div style="text-align: center; padding: 20px; color: #999; font-size: 12px;">
+        <p>Thank you for choosing Gist4U Pro!</p>
+        <p>Questions? Reply to this email.</p>
+    </div>
+</body>
+</html>
+"""
+
+    # Send in background thread
+    thread = threading.Thread(
+        target=_send_email_async,
+        args=(subject, message, html_message, transaction.email)
+    )
+    thread.start()
+    logger.info(f"[Email] Queued receipt for {transaction.email}")
+
