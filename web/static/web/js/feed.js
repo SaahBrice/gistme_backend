@@ -47,6 +47,12 @@ function gistMeApp() {
         showingFallback: false,
         hasAppliedFilters: false,
 
+        // Pro Banner state
+        showProBanner: false,
+        proBannerDismissed: sessionStorage.getItem('proBannerDismissed') === 'true',
+        articlesViewedCount: parseInt(sessionStorage.getItem('articlesViewedCount') || '0'),
+        proBannerInterval: 5, // Show banner every 7 articles
+
         // Spread static config
         ...FeedConfig,
 

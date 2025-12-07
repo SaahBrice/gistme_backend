@@ -30,7 +30,7 @@
             window.navigator.standalone === true;
 
         // If returning user and opening from PWA, redirect to feed
-        if (hasVisited && isPWA) {
+        if (hasVisited && isPWA && !window.location.search.includes('from=promo')) {
             console.log('[PWA] Returning user detected - redirecting to feed');
             window.location.href = '/feed/';
         } else {

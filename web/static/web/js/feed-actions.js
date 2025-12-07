@@ -300,6 +300,12 @@ const FeedActions = {
         // Update current index when article changes
         if (newIndex !== this.currentIndex) {
             this.currentIndex = newIndex;
+
+            // Track article views for Pro banner (only for non-ads)
+            const currentItem = this.filteredArticles[newIndex];
+            if (currentItem && !currentItem.isAd) {
+                this.trackArticleView();
+            }
         }
 
         // Load more articles when approaching the end (index-based OR scroll-based)
@@ -1110,5 +1116,37 @@ const FeedActions = {
         } catch (error) {
             console.error('Error sharing:', error);
         }
+    },
+
+    // Pro Banner Methods
+    trackArticleView() {
+        // Don't track if banner was dismissed this session
+        if (this.proBannerDismissed) return;
+
+        this.articlesViewedCount++;
+        sessionStorage.setItem('articlesViewedCount', this.articlesViewedCount.toString());
+
+        // Show banner every N articles
+        if (this.articlesViewedCount % this.proBannerInterval === 0) {
+            this.showProBanner = true;
+            // Auto-hide after 10 seconds if not interacted with
+            setTimeout(() => {
+                this.showProBanner = false;
+            }, 10000);
+        }
+    },
+
+    dismissProBanner() {
+        this.showProBanner = false;
+        this.proBannerDismissed = true;
+        sessionStorage.setItem('proBannerDismissed', 'true');
+    },
+
+    openSubscriptionModal() {
+        this.showProBanner = false;
+        // Open pricing section with full URL (works in PWA)
+        const pricingUrl = window.location.origin + '/#pricing';
+        window.open(pricingUrl, '_blank');
     }
 };
+
