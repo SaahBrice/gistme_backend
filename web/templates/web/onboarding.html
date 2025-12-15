@@ -37,23 +37,38 @@
         <!-- Audio Player Modal -->
         <div class="audio-modal-overlay" x-show="showPlayer" x-transition.opacity>
             <div class="audio-modal" x-show="showPlayer" x-transition.scale.origin.center>
-                <div class="audio-blob-container">
+                <div class="audio-blob-container" :class="{ 'celebrating': audioComplete }">
                     <!-- Progress Ring -->
                     <svg class="progress-ring" viewBox="0 0 130 130">
                         <circle class="progress-ring-circle" cx="65" cy="65" r="60"/>
                         <circle class="progress-ring-progress" cx="65" cy="65" r="60" 
                                 :style="{ strokeDashoffset: 377 - (377 * audioProgress / 100) }"/>
                     </svg>
-                    <div class="audio-blob" :class="{ 'playing': isPlaying }"></div>
+                    <div class="audio-blob" :class="{ 'playing': isPlaying, 'complete': audioComplete }"></div>
+                    
+                    <!-- Celebration Particles -->
+                    <template x-if="audioComplete">
+                        <div class="particles">
+                            <span class="particle"></span>
+                            <span class="particle"></span>
+                            <span class="particle"></span>
+                            <span class="particle"></span>
+                            <span class="particle"></span>
+                            <span class="particle"></span>
+                            <span class="particle"></span>
+                            <span class="particle"></span>
+                        </div>
+                    </template>
                 </div>
                 
-                <p class="audio-modal-text">Your future matters to us!!!</p>
+                <p class="audio-modal-text" x-text="audioComplete ? '🎉 You\'re ready!' : 'Your future matters to us!!!'"></p>
                 
                 <div class="audio-modal-buttons">
                     <button class="btn-play" @click="playOrReplay()" x-text="hasStartedPlaying ? 'Replay' : 'Play'">
                         Play
                     </button>
-                    <button class="btn-letsgo" @click="closePlayer()" :disabled="audioProgress < 50" :class="{ 'disabled': audioProgress < 50 }">
+                    <button class="btn-letsgo" @click="closePlayer()" :disabled="audioProgress < 50" 
+                            :class="{ 'disabled': audioProgress < 50, 'pulse-active': audioComplete }">
                         Let's Go →
                     </button>
                 </div>

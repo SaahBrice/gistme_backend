@@ -11,6 +11,7 @@ function onboardingFlow() {
         audioElement: null,
         audioProgress: 0, // 0-100 progress
         hasStartedPlaying: false, // Track if user has clicked play
+        audioComplete: false, // Track when audio finishes for celebration
 
         phone: '',
         phoneError: '',
@@ -30,6 +31,7 @@ function onboardingFlow() {
                     this.audioElement.addEventListener('ended', () => {
                         this.isPlaying = false;
                         this.audioProgress = 100;
+                        this.audioComplete = true; // Trigger celebration!
                     });
 
                     // Track audio progress for ring
@@ -52,6 +54,7 @@ function onboardingFlow() {
                 if (this.hasStartedPlaying) {
                     this.audioElement.currentTime = 0;
                     this.audioProgress = 0;
+                    this.audioComplete = false; // Reset celebration
                 }
 
                 this.audioElement.play().then(() => {

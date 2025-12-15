@@ -1,16 +1,131 @@
 {% extends 'web/base.html' %}
 {% load static %}
 
-{% block title %}Gist4U - Feed{% endblock %}
+{% block title %}Feed - Gist4U{% endblock %}
+
+{% block navbar %}{% endblock %}
+{% block footer %}{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'web/css/feed.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+{% endblock %}
 
 {% block content %}
-<div class="min-h-screen bg-brand-black flex items-center justify-center text-white">
-    <div class="text-center p-8">
-        <h1 class="text-4xl font-display font-bold mb-4">🚧 Feed Coming Soon</h1>
-        <p class="text-gray-400 mb-8">We're rebuilding something amazing. Stay tuned!</p>
-        <a href="/" class="inline-block px-6 py-3 bg-brand-yellow text-black font-bold rounded-xl hover:scale-105 transition-transform">
-            ← Back to Home
-        </a>
+<div class="feed-page" x-data="feedApp()" x-init="init()">
+    
+    <!-- Fixed Header Area -->
+    <div class="fixed-header">
+        <!-- Header -->
+        <header class="feed-header">
+            <div class="header-left">
+                <div class="profile-avatar" @click="showProfile = true">
+                    <span class="avatar-letter">{{ request.user.first_name|slice:":1"|default:"U" }}</span>
+                </div>
+            </div>
+            
+            <div class="header-right">
+                <button class="notification-btn" @click="showNotifications = true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                    </svg>
+                    <span class="notification-dot" x-show="hasNewNotifications"></span>
+                </button>
+            </div>
+        </header>
+        
+        <!-- Main Tabs -->
+        <nav class="main-tabs">
+            <button class="tab-btn" :class="{ 'active': activeTab === 'news' }" 
+                    @click="setTab('news')">
+                News
+            </button>
+            <button class="tab-btn" :class="{ 'active': activeTab === 'opportunities' }" 
+                    @click="setTab('opportunities')">
+                Opportunities
+            </button>
+            <button class="tab-btn" :class="{ 'active': activeTab === 'foryou' }" 
+                    @click="setTab('foryou')">
+                For You
+            </button>
+        </nav>
+        
+        <!-- Secondary Filter Chips -->
+        <div class="filter-chips-container" 
+             x-show="showFilters" 
+             x-transition:enter="filter-enter"
+             x-transition:enter-start="filter-enter-start"
+             x-transition:enter-end="filter-enter-end"
+             x-transition:leave="filter-leave"
+             x-transition:leave-start="filter-leave-start"
+             x-transition:leave-end="filter-leave-end"
+             @mouseover="resetFilterTimeout()"
+             @touchstart="resetFilterTimeout()">
+            <div class="filter-chips">
+                <template x-for="cat in currentCategories" :key="cat.id">
+                    <button class="filter-chip" 
+                            :class="{ 'active': activeCategory === cat.id }"
+                            @click="setCategory(cat.id)">
+                        <span x-text="cat.emoji"></span>
+                        <span x-text="cat.name"></span>
+                    </button>
+                </template>
+            </div>
+        </div>
     </div>
+    
+    <!-- Feed Cards - Snap Scroll Container -->
+    <main class="feed-content" id="feed-scroll" @scroll="onScroll($event)">
+        <template x-for="(article, index) in filteredArticles" :key="article.id">
+            <article class="feed-card" 
+                     :class="{ 'card-active': activeCardIndex === index }"
+                     :style="getCardStyle(index)"
+                     @click="openArticle(article)">
+                <div class="card-image">
+                    <img :src="article.image" :alt="article.title" loading="lazy">
+                    <span class="card-category" x-text="article.categoryName"></span>
+                </div>
+                
+                <div class="card-content">
+                    <h3 class="card-title" x-text="article.title"></h3>
+                    <p class="card-excerpt" x-text="article.excerpt"></p>
+                </div>
+                
+                <div class="card-actions" @click.stop>
+                    <button class="action-btn" @click="toggleBookmark(article)" 
+                            :class="{ 'active': article.bookmarked }">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </button>
+                    <button class="action-btn" @click="shareArticle(article)">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="18" cy="5" r="3"/>
+                            <circle cx="6" cy="12" r="3"/>
+                            <circle cx="18" cy="19" r="3"/>
+                            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+                            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+                        </svg>
+                    </button>
+                    <button class="action-btn play-btn" @click="playArticle(article)"
+                            :class="{ 'playing': playingId === article.id }">
+                        <svg x-show="playingId !== article.id" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5 3 19 12 5 21 5 3"/>
+                        </svg>
+                        <svg x-show="playingId === article.id" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                            <rect x="6" y="4" width="4" height="16"/>
+                            <rect x="14" y="4" width="4" height="16"/>
+                        </svg>
+                    </button>
+                </div>
+            </article>
+        </template>
+    </main>
+    
 </div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="{% static 'web/js/feed.js' %}"></script>
 {% endblock %}

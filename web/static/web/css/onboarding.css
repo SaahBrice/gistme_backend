@@ -248,6 +248,123 @@
     }
 }
 
+/* Celebration: Complete blob state - just glow, no bounce */
+.audio-blob.complete {
+    box-shadow: 0 0 40px rgba(250, 204, 21, 0.9);
+}
+
+/* Celebration Particles - fall to button */
+.particles {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    animation: particleFall 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Each particle starts at different horizontal offset and falls to button */
+.particle:nth-child(1) {
+    background: #FACC15;
+    animation-delay: 0s;
+    --startX: -40px;
+    --endX: 20px;
+}
+
+.particle:nth-child(2) {
+    background: #F59E0B;
+    animation-delay: 0.08s;
+    --startX: -20px;
+    --endX: -10px;
+}
+
+.particle:nth-child(3) {
+    background: #10B981;
+    animation-delay: 0.04s;
+    --startX: 0px;
+    --endX: 30px;
+}
+
+.particle:nth-child(4) {
+    background: #8B5CF6;
+    animation-delay: 0.12s;
+    --startX: 20px;
+    --endX: 0px;
+}
+
+.particle:nth-child(5) {
+    background: #FACC15;
+    animation-delay: 0.06s;
+    --startX: 40px;
+    --endX: -20px;
+}
+
+.particle:nth-child(6) {
+    background: #3B82F6;
+    animation-delay: 0.1s;
+    --startX: -30px;
+    --endX: 40px;
+}
+
+.particle:nth-child(7) {
+    background: #10B981;
+    animation-delay: 0.02s;
+    --startX: 30px;
+    --endX: 10px;
+}
+
+.particle:nth-child(8) {
+    background: #F59E0B;
+    animation-delay: 0.14s;
+    --startX: 10px;
+    --endX: -30px;
+}
+
+@keyframes particleFall {
+    0% {
+        opacity: 1;
+        transform: translate(var(--startX), -20px) scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translate(calc(var(--startX) + var(--endX) * 0.5), 60px) scale(0.8);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(var(--endX), 130px) scale(0.3);
+    }
+}
+
+/* Pulsating Let's Go button when complete */
+.btn-letsgo.pulse-active {
+    animation: buttonPulse 1.5s ease-in-out infinite;
+    box-shadow: 0 0 20px rgba(250, 204, 21, 0.5);
+}
+
+@keyframes buttonPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(250, 204, 21, 0.3);
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(250, 204, 21, 0.6);
+    }
+}
+
 .audio-modal-text {
     color: #ffffff;
     font-size: 1.1rem;
