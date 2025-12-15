@@ -1,5 +1,68 @@
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import User
+
+
+class UserProfile(models.Model):
+    """Extended user profile for onboarding preferences"""
+    
+    EDUCATION_CHOICES = [
+        ('FSLC', 'FSLC (Primary)'),
+        ('GCE_OL', 'GCE O/L'),
+        ('GCE_AL', 'GCE A/L'),
+        ('HND', 'HND'),
+        ('BACHELOR', 'Bachelor\'s Degree'),
+        ('MASTERS', 'Master\'s Degree'),
+        ('PHD', 'PhD'),
+        ('RAS', 'Prefer not to say'),
+    ]
+    
+    BACKGROUND_CHOICES = [
+        ('ARTS', 'Arts & Humanities'),
+        ('SCIENCE', 'Science & Technology'),
+        ('RAS', 'Prefer not to say'),
+    ]
+    
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
+    phone = models.CharField(max_length=20, help_text="Cameroon phone number (6XXXXXXXX)")
+    
+    # Interests stored as JSON list
+    interests = models.JSONField(default=list, help_text="Selected interest categories")
+    
+    education_level = models.CharField(max_length=20, choices=EDUCATION_CHOICES, default='RAS')
+    background = models.CharField(max_length=20, choices=BACKGROUND_CHOICES, default='RAS')
+    
+    # Notification preferences
+    notification_time = models.TimeField(default='08:00', help_text="Preferred notification time")
+    
+    # Optional custom desires
+    custom_desires = models.TextField(blank=True, null=True, help_text="User's specific needs")
+    
+    # Tracking
+    onboarding_completed = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        verbose_name = 'User Profile'
+        verbose_name_plural = 'User Profiles'
+    
+    def __str__(self):
+        return f"{self.user.email} - {'✓' if self.onboarding_completed else '○'}"
+    
+    @classmethod
+    def get_interest_options(cls):
+        """Returns all available interest options"""
+        return [
+            {'id': 'jobs_abroad', 'label': 'Jobs Abroad', 'emoji': '🌍'},
+            {'id': 'jobs_cameroon', 'label': 'Jobs in Cameroon', 'emoji': '🇨🇲'},
+            {'id': 'scholarships_abroad', 'label': 'Scholarships Abroad', 'emoji': '🎓'},
+            {'id': 'scholarships_local', 'label': 'Local Scholarships', 'emoji': '📚'},
+            {'id': 'concours', 'label': 'Concours (ENS, ENAM, etc.)', 'emoji': '📝'},
+            {'id': 'university_free', 'label': 'Free University Admissions', 'emoji': '🆓'},
+            {'id': 'university_paid', 'label': 'Paid University Admissions', 'emoji': '💰'},
+            {'id': 'competitions', 'label': 'Competitions & Contests', 'emoji': '🏆'},
+        ]
 
 
 class Subscription(models.Model):
@@ -63,23 +126,6 @@ class Advertisement(models.Model):
     
     def __str__(self):
         return f"{self.organization_name} - {self.email}"
-
-
-class WaitingList(models.Model):
-    """Model to store waiting list signups"""
-    email = models.EmailField(unique=True)
-    phone = models.CharField(max_length=20, blank=True, null=True, help_text="Cameroon phone number")
-    created_at = models.DateTimeField(default=timezone.now)
-    ip_address = models.GenericIPAddressField(null=True, blank=True)
-    user_agent = models.TextField(null=True, blank=True)
-    
-    class Meta:
-        ordering = ['-created_at']
-        verbose_name = 'Waiting List Entry'
-        verbose_name_plural = 'Waiting List Entries'
-    
-    def __str__(self):
-        return self.email
 
 
 class Coupon(models.Model):

@@ -1,7 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_http_methods
+from django.contrib.auth.decorators import login_required
+from django_ratelimit.decorators import ratelimit
 import json
 from .models import Subscription, Advertisement, Coupon, CouponUsage
 from django.conf import settings
@@ -9,8 +11,29 @@ import os
 from django.http import HttpResponse
 
 def index(request):
+    # If user is already logged in, redirect to feed
+    if request.user.is_authenticated:
+        return redirect('feed')
     return render(request, 'web/index.html')
 
+@ratelimit(key='ip', rate='10/m', block=True)
+def auth_page(request):
+    """Dedicated authentication page with Google + email options"""
+    # If already logged in, redirect to onboarding or feed
+    if request.user.is_authenticated:
+        return redirect('onboarding')
+    
+    context = {
+        'recaptcha_site_key': settings.RECAPTCHA_SITE_KEY,
+    }
+    return render(request, 'web/login.html', context)
+
+@login_required
+def onboarding(request):
+    """Onboarding page for new users to curate their content"""
+    return render(request, 'web/onboarding.html')
+
+@login_required
 def feed(request):
     return render(request, 'web/feed.html')
 
@@ -214,67 +237,6 @@ def advertise(request):
             'success': True,
             'message': 'Thank you! Our agent will contact you within 12 hours.',
             'inquiry_id': ad.id
-        })
-        
-    except json.JSONDecodeError:
-        return JsonResponse({
-            'success': False,
-            'error': 'Invalid JSON data'
-        }, status=400)
-    except Exception as e:
-        return JsonResponse({
-            'success': False,
-            'error': str(e)
-        }, status=500)
-
-
-@csrf_exempt
-@require_http_methods(["POST"])
-def join_waiting_list(request):
-    """API endpoint to handle waiting list submissions"""
-    try:
-        data = json.loads(request.body)
-        
-        if data.get('website'):
-            return JsonResponse({
-                'success': True,
-                'message': 'Successfully joined!'
-            })
-            
-        email = data.get('email', '').strip()
-        phone = data.get('phone', '').strip()
-        
-        if not email:
-            return JsonResponse({
-                'success': False,
-                'error': 'Email is required'
-            }, status=400)
-            
-        from .models import WaitingList
-        
-        x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
-        if x_forwarded_for:
-            ip = x_forwarded_for.split(',')[0]
-        else:
-            ip = request.META.get('REMOTE_ADDR')
-            
-        entry, created = WaitingList.objects.get_or_create(
-            email=email,
-            defaults={
-                'phone': phone,
-                'ip_address': ip,
-                'user_agent': request.META.get('HTTP_USER_AGENT', '')
-            }
-        )
-        
-        if not created and phone:
-            entry.phone = phone
-            entry.save()
-        
-        return JsonResponse({
-            'success': True,
-            'message': 'You have been added to the waiting list!',
-            'entry_id': entry.id
         })
         
     except json.JSONDecodeError:

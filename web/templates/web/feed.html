@@ -1,44 +1,16 @@
 {% extends 'web/base.html' %}
 {% load static %}
 
-{% block title %}Gist4u - powered by REEPLS{% endblock %}
-
-{% block extra_head %}
-<link
-    href="https://fonts.googleapis.com/css2?family=Carter+One&family=Black+Ops+One&family=Inter:wght@400;700;900&display=swap"
-    rel="stylesheet">
-<link rel="stylesheet" href="{% static 'web/css/feed.css' %}">
-<!-- Feed scripts must load BEFORE Alpine.js initializes -->
-<script src="{% static 'web/js/feed-config.js' %}"></script>
-<script src="{% static 'web/js/feed-actions.js' %}"></script>
-<script src="{% static 'web/js/feed.js' %}"></script>
-{% endblock %}
-
-{% block navbar %}{% endblock %}
-{% block footer %}{% endblock %}
+{% block title %}Gist4U - Feed{% endblock %}
 
 {% block content %}
-<div class="overflow-hidden fixed inset-0 text-white">
-    <div class="noise-overlay"></div>
-
-    <div x-data="gistMeApp()" x-init="initApp()" class="h-full w-full relative">
-
-        {% include 'web/includes/feed/_mood_selector.html' %}
-
-        <!-- MAIN FEED INTERFACE -->
-        <div x-show="moodSelected" class="h-full w-full">
-            {% include 'web/includes/feed/_header.html' %}
-            {% include 'web/includes/feed/_article_loop.html' %}
-            {% include 'web/includes/feed/_floating_ui.html' %}
-            {% include 'web/includes/feed/_action_bar.html' %}
-        </div>
-
-        {% include 'web/includes/feed/_category_panel.html' %}
-        {% include 'web/includes/feed/_comments_panel.html' %}
-        {% include 'web/includes/feed/_pro_banner.html' %}
-        {% include 'web/includes/feed/_modals.html' %}
-        {% include 'web/includes/feed/_reader.html' %}
-
+<div class="min-h-screen bg-brand-black flex items-center justify-center text-white">
+    <div class="text-center p-8">
+        <h1 class="text-4xl font-display font-bold mb-4">🚧 Feed Coming Soon</h1>
+        <p class="text-gray-400 mb-8">We're rebuilding something amazing. Stay tuned!</p>
+        <a href="/" class="inline-block px-6 py-3 bg-brand-yellow text-black font-bold rounded-xl hover:scale-105 transition-transform">
+            ← Back to Home
+        </a>
     </div>
 </div>
 {% endblock %}

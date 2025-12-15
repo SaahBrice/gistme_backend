@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Subscription, Advertisement, WaitingList, Coupon, CouponUsage, PaymentTransaction
+from .models import Subscription, Advertisement, Coupon, CouponUsage, PaymentTransaction, UserProfile
 
 
 @admin.register(Subscription)
@@ -34,24 +34,6 @@ class AdvertisementAdmin(admin.ModelAdmin):
         }),
         ('Status', {
             'fields': ('contacted', 'created_at')
-        }),
-    )
-
-
-@admin.register(WaitingList)
-class WaitingListAdmin(admin.ModelAdmin):
-    list_display = ('email', 'phone', 'created_at', 'ip_address')
-    list_filter = ('created_at',)
-    search_fields = ('email', 'phone', 'ip_address')
-    readonly_fields = ('created_at', 'ip_address', 'user_agent')
-    date_hierarchy = 'created_at'
-    
-    fieldsets = (
-        ('Contact Information', {
-            'fields': ('email', 'phone')
-        }),
-        ('Technical Details', {
-            'fields': ('ip_address', 'user_agent', 'created_at')
         }),
     )
 
@@ -112,3 +94,9 @@ class PaymentTransactionAdmin(admin.ModelAdmin):
     )
 
 
+@admin.register(UserProfile)
+class UserProfileAdmin(admin.ModelAdmin):
+    list_display = ('user', 'phone', 'education_level', 'background', 'onboarding_completed', 'created_at')
+    list_filter = ('onboarding_completed', 'education_level', 'background')
+    search_fields = ('user__email', 'phone', 'custom_desires')
+    readonly_fields = ('created_at', 'updated_at')

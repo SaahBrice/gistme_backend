@@ -6880,3 +6880,2014 @@ WARNING 2025-12-05 23:30:49,027 basehttp 16192 11328 "GET /static/web/img/icon.p
 WARNING 2025-12-05 23:30:49,096 basehttp 16192 25648 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
 INFO 2025-12-05 23:30:49,130 basehttp 16192 25636 "GET /media/thumbnails/economy_20251129_204407_1.png HTTP/1.1" 200 816964
 WARNING 2025-12-05 23:30:49,583 basehttp 16192 25636 "GET /static/web/img/icon.png HTTP/1.1" 404 1862
+INFO 2025-12-15 20:48:19,221 autoreload 48916 46612 Watching for file changes with StatReloader
+ERROR 2025-12-15 20:48:20,607 log 48916 60960 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\views.py", line 13, in index
+    return render(request, 'web/index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'socialaccount_login' not found. 'socialaccount_login' is not a valid view function or pattern name.
+ERROR 2025-12-15 20:48:20,612 basehttp 48916 60960 "GET / HTTP/1.1" 500 187825
+WARNING 2025-12-15 20:48:20,652 log 48916 60960 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 20:48:20,653 basehttp 48916 60960 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6251
+INFO 2025-12-15 20:48:22,628 basehttp 48916 60960 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 20:48:22,931 basehttp 48916 61304 "GET /feed/ HTTP/1.1" 302 0
+ERROR 2025-12-15 20:48:22,993 log 48916 60960 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\views.py", line 13, in index
+    return render(request, 'web/index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'socialaccount_login' not found. 'socialaccount_login' is not a valid view function or pattern name.
+ERROR 2025-12-15 20:48:23,000 basehttp 48916 60960 "GET / HTTP/1.1" 500 187755
+INFO 2025-12-15 20:48:23,092 basehttp 48916 45184 - Broken pipe from ('127.0.0.1', 55331)
+INFO 2025-12-15 20:48:23,178 basehttp 48916 61304 - Broken pipe from ('127.0.0.1', 59679)
+ERROR 2025-12-15 20:48:33,346 log 48916 60960 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\views.py", line 13, in index
+    return render(request, 'web/index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'socialaccount_login' not found. 'socialaccount_login' is not a valid view function or pattern name.
+ERROR 2025-12-15 20:48:33,350 basehttp 48916 60960 "GET / HTTP/1.1" 500 187825
+WARNING 2025-12-15 20:48:33,382 log 48916 60960 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 20:48:33,382 basehttp 48916 60960 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6251
+ERROR 2025-12-15 20:48:34,221 log 48916 60960 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\views.py", line 13, in index
+    return render(request, 'web/index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'socialaccount_login' not found. 'socialaccount_login' is not a valid view function or pattern name.
+ERROR 2025-12-15 20:48:34,223 basehttp 48916 60960 "GET / HTTP/1.1" 500 187825
+WARNING 2025-12-15 20:48:34,251 log 48916 60960 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 20:48:34,252 basehttp 48916 60960 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6251
+ERROR 2025-12-15 20:48:34,868 log 48916 60960 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\views.py", line 13, in index
+    return render(request, 'web/index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'socialaccount_login' not found. 'socialaccount_login' is not a valid view function or pattern name.
+ERROR 2025-12-15 20:48:34,871 basehttp 48916 60960 "GET / HTTP/1.1" 500 187825
+WARNING 2025-12-15 20:48:34,902 log 48916 60960 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 20:48:34,902 basehttp 48916 60960 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6251
+INFO 2025-12-15 20:48:35,190 basehttp 48916 60960 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+ERROR 2025-12-15 20:48:35,429 log 48916 60960 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\views.py", line 13, in index
+    return render(request, 'web/index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'socialaccount_login' not found. 'socialaccount_login' is not a valid view function or pattern name.
+ERROR 2025-12-15 20:48:35,431 basehttp 48916 60960 "GET / HTTP/1.1" 500 187825
+WARNING 2025-12-15 20:48:35,466 log 48916 60960 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 20:48:35,466 basehttp 48916 60960 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6251
+ERROR 2025-12-15 20:48:36,176 log 48916 60960 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\views.py", line 13, in index
+    return render(request, 'web/index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'socialaccount_login' not found. 'socialaccount_login' is not a valid view function or pattern name.
+ERROR 2025-12-15 20:48:36,179 basehttp 48916 60960 "GET / HTTP/1.1" 500 187825
+WARNING 2025-12-15 20:48:36,205 log 48916 60960 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 20:48:36,206 basehttp 48916 60960 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6251
+ERROR 2025-12-15 20:48:36,794 log 48916 60960 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\views.py", line 13, in index
+    return render(request, 'web/index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'socialaccount_login' not found. 'socialaccount_login' is not a valid view function or pattern name.
+ERROR 2025-12-15 20:48:36,798 basehttp 48916 60960 "GET / HTTP/1.1" 500 187825
+WARNING 2025-12-15 20:48:36,827 log 48916 60960 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 20:48:36,830 basehttp 48916 60960 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6251
+INFO 2025-12-15 20:48:38,705 basehttp 48916 60960 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+ERROR 2025-12-15 20:48:40,703 log 48916 60960 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\views.py", line 13, in index
+    return render(request, 'web/index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'socialaccount_login' not found. 'socialaccount_login' is not a valid view function or pattern name.
+ERROR 2025-12-15 20:48:40,706 basehttp 48916 60960 "GET / HTTP/1.1" 500 187825
+WARNING 2025-12-15 20:48:40,733 log 48916 60960 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 20:48:40,734 basehttp 48916 60960 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6251
+ERROR 2025-12-15 20:48:41,368 log 48916 60960 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\views.py", line 13, in index
+    return render(request, 'web/index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'socialaccount_login' not found. 'socialaccount_login' is not a valid view function or pattern name.
+ERROR 2025-12-15 20:48:41,372 basehttp 48916 60960 "GET / HTTP/1.1" 500 187825
+WARNING 2025-12-15 20:48:41,394 log 48916 60960 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 20:48:41,395 basehttp 48916 60960 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6251
+ERROR 2025-12-15 20:48:41,892 log 48916 60960 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\views.py", line 13, in index
+    return render(request, 'web/index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'socialaccount_login' not found. 'socialaccount_login' is not a valid view function or pattern name.
+ERROR 2025-12-15 20:48:41,894 basehttp 48916 60960 "GET / HTTP/1.1" 500 187825
+WARNING 2025-12-15 20:48:41,917 log 48916 60960 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 20:48:41,917 basehttp 48916 60960 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6251
+ERROR 2025-12-15 20:48:42,349 log 48916 60960 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\views.py", line 13, in index
+    return render(request, 'web/index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'socialaccount_login' not found. 'socialaccount_login' is not a valid view function or pattern name.
+ERROR 2025-12-15 20:48:42,353 basehttp 48916 60960 "GET / HTTP/1.1" 500 187825
+WARNING 2025-12-15 20:48:42,381 log 48916 60960 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 20:48:42,382 basehttp 48916 60960 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6251
+ERROR 2025-12-15 20:48:42,768 log 48916 60960 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\views.py", line 13, in index
+    return render(request, 'web/index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'socialaccount_login' not found. 'socialaccount_login' is not a valid view function or pattern name.
+ERROR 2025-12-15 20:48:42,771 basehttp 48916 60960 "GET / HTTP/1.1" 500 187825
+WARNING 2025-12-15 20:48:42,797 log 48916 60960 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 20:48:42,798 basehttp 48916 60960 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6251
+INFO 2025-12-15 20:48:44,800 basehttp 48916 60960 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+ERROR 2025-12-15 20:48:48,539 log 48916 60960 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\views.py", line 13, in index
+    return render(request, 'web/index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'socialaccount_login' not found. 'socialaccount_login' is not a valid view function or pattern name.
+ERROR 2025-12-15 20:48:48,540 basehttp 48916 60960 "GET / HTTP/1.1" 500 187825
+WARNING 2025-12-15 20:48:48,572 log 48916 60960 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 20:48:48,572 basehttp 48916 60960 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6251
+ERROR 2025-12-15 20:48:49,181 log 48916 60960 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\views.py", line 13, in index
+    return render(request, 'web/index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'socialaccount_login' not found. 'socialaccount_login' is not a valid view function or pattern name.
+ERROR 2025-12-15 20:48:49,184 basehttp 48916 60960 "GET / HTTP/1.1" 500 187825
+WARNING 2025-12-15 20:48:49,207 log 48916 60960 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 20:48:49,208 basehttp 48916 60960 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6251
+ERROR 2025-12-15 20:48:50,016 log 48916 60960 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\views.py", line 13, in index
+    return render(request, 'web/index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'socialaccount_login' not found. 'socialaccount_login' is not a valid view function or pattern name.
+ERROR 2025-12-15 20:48:50,019 basehttp 48916 60960 "GET / HTTP/1.1" 500 187825
+WARNING 2025-12-15 20:48:50,047 log 48916 60960 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 20:48:50,048 basehttp 48916 60960 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6251
+ERROR 2025-12-15 20:48:50,609 log 48916 60960 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\views.py", line 13, in index
+    return render(request, 'web/index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'socialaccount_login' not found. 'socialaccount_login' is not a valid view function or pattern name.
+ERROR 2025-12-15 20:48:50,612 basehttp 48916 60960 "GET / HTTP/1.1" 500 187825
+WARNING 2025-12-15 20:48:50,642 log 48916 60960 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 20:48:50,643 basehttp 48916 60960 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6251
+INFO 2025-12-15 20:48:50,981 basehttp 48916 60960 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 20:48:52,572 basehttp 48916 60960 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:09:11,122 autoreload 31080 29460 Watching for file changes with StatReloader
+ERROR 2025-12-15 21:09:14,058 log 31080 63392 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\views.py", line 13, in index
+    return render(request, 'web/index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'socialaccount_login' not found. 'socialaccount_login' is not a valid view function or pattern name.
+ERROR 2025-12-15 21:09:14,064 basehttp 31080 63392 "GET / HTTP/1.1" 500 188062
+INFO 2025-12-15 21:09:15,877 basehttp 31080 63392 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:11:33,535 basehttp 31080 63392 "GET / HTTP/1.1" 200 71171
+INFO 2025-12-15 21:11:33,778 basehttp 31080 6628 "GET /static/web/js/main.js HTTP/1.1" 200 7679
+INFO 2025-12-15 21:11:33,779 basehttp 31080 63392 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 21:11:34,371 basehttp 31080 63392 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 21:11:35,820 basehttp 31080 63392 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:11:41,039 basehttp 31080 63392 "GET /feed/ HTTP/1.1" 302 0
+INFO 2025-12-15 21:11:41,076 basehttp 31080 63392 "GET /accounts/login/?next=/feed/ HTTP/1.1" 200 2643
+INFO 2025-12-15 21:11:42,693 basehttp 31080 63392 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:12:13,374 basehttp 31080 63392 "GET /accounts/google/login/ HTTP/1.1" 302 0
+INFO 2025-12-15 21:12:15,855 basehttp 31080 63392 "GET /accounts/google/login/ HTTP/1.1" 302 0
+INFO 2025-12-15 21:12:16,478 basehttp 31080 63392 "GET /accounts/google/login/ HTTP/1.1" 302 0
+INFO 2025-12-15 21:12:17,022 basehttp 31080 63392 "GET /accounts/google/login/ HTTP/1.1" 302 0
+INFO 2025-12-15 21:12:18,022 basehttp 31080 63392 "GET /accounts/google/login/ HTTP/1.1" 302 0
+INFO 2025-12-15 21:12:19,007 basehttp 31080 63392 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:12:32,641 basehttp 31080 63392 "GET / HTTP/1.1" 200 71171
+WARNING 2025-12-15 21:12:32,667 log 31080 63392 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:12:32,668 basehttp 31080 63392 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6251
+INFO 2025-12-15 21:15:21,884 basehttp 31080 63392 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:22:44,961 basehttp 31080 52768 "GET / HTTP/1.1" 200 71171
+INFO 2025-12-15 21:22:45,042 basehttp 31080 35812 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 21:22:45,043 basehttp 31080 59788 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 21:22:45,043 basehttp 31080 23056 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 21:22:45,044 basehttp 31080 53176 "GET /static/web/js/main.js HTTP/1.1" 200 7679
+WARNING 2025-12-15 21:22:45,055 log 31080 52768 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:22:45,057 basehttp 31080 52768 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6251
+INFO 2025-12-15 21:22:47,022 basehttp 31080 61564 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 21:22:47,022 basehttp 31080 52768 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-15 21:22:47,042 basehttp 31080 52768 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 21:22:48,659 basehttp 31080 52768 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:23:02,113 basehttp 31080 19556 "GET / HTTP/1.1" 200 71171
+INFO 2025-12-15 21:23:02,181 basehttp 31080 19556 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 21:23:02,187 basehttp 31080 60240 "GET /static/web/js/main.js HTTP/1.1" 200 7679
+INFO 2025-12-15 21:23:02,188 basehttp 31080 61908 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 21:23:02,188 basehttp 31080 55368 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 21:23:06,159 basehttp 31080 55368 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:23:06,269 basehttp 31080 55368 "GET /feed/ HTTP/1.1" 302 0
+INFO 2025-12-15 21:23:06,281 basehttp 31080 60240 "GET / HTTP/1.1" 200 71171
+INFO 2025-12-15 21:23:06,289 basehttp 31080 61908 "GET /accounts/login/?next=/feed/ HTTP/1.1" 200 2643
+INFO 2025-12-15 21:23:06,300 basehttp 31080 60240 "GET /static/web/icons/icon-512x512.png HTTP/1.1" 200 376241
+INFO 2025-12-15 21:23:06,304 basehttp 31080 55368 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 21:23:06,801 basehttp 31080 60520 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 21:23:06,805 basehttp 31080 55368 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-15 21:23:11,449 views 31080 25200 New FCM subscription created: esMCyqggvfcHcvw3tSng... (lang: en)
+INFO 2025-12-15 21:23:11,451 basehttp 31080 25200 "POST /api/fcm/subscribe/ HTTP/1.1" 201 202
+INFO 2025-12-15 21:23:15,252 basehttp 31080 8396 "GET / HTTP/1.1" 200 71171
+INFO 2025-12-15 21:23:15,286 basehttp 31080 8396 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 21:23:15,286 basehttp 31080 59896 "GET /static/web/js/main.js HTTP/1.1" 200 7679
+INFO 2025-12-15 21:23:15,287 basehttp 31080 17416 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 21:23:15,288 basehttp 31080 53332 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 21:23:18,930 basehttp 31080 53332 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:23:19,246 basehttp 31080 17416 "GET /feed/ HTTP/1.1" 302 0
+INFO 2025-12-15 21:23:19,256 basehttp 31080 53332 "GET / HTTP/1.1" 200 71171
+INFO 2025-12-15 21:23:19,266 basehttp 31080 17416 "GET /accounts/login/?next=/feed/ HTTP/1.1" 200 2643
+INFO 2025-12-15 21:23:19,276 basehttp 31080 53332 "GET /static/web/icons/icon-512x512.png HTTP/1.1" 200 376241
+INFO 2025-12-15 21:23:19,280 basehttp 31080 8396 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 21:23:19,486 basehttp 31080 8396 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-15 21:29:07,808 autoreload 31080 29460 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\gistme_backend\settings.py changed, reloading.
+INFO 2025-12-15 21:29:09,054 autoreload 46880 20624 Watching for file changes with StatReloader
+INFO 2025-12-15 21:29:58,663 autoreload 46880 20624 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\urls.py changed, reloading.
+INFO 2025-12-15 21:29:59,805 autoreload 46536 60436 Watching for file changes with StatReloader
+INFO 2025-12-15 21:33:22,447 autoreload 56696 62980 Watching for file changes with StatReloader
+INFO 2025-12-15 21:33:23,306 basehttp 56696 54512 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:33:24,960 basehttp 56696 54512 "GET / HTTP/1.1" 200 66993
+WARNING 2025-12-15 21:33:25,021 log 56696 54512 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:33:25,021 basehttp 56696 54512 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:33:25,492 basehttp 56696 42140 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 21:33:25,499 basehttp 56696 59748 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 21:33:25,501 basehttp 56696 12988 "GET /static/web/js/main.js HTTP/1.1" 200 7679
+INFO 2025-12-15 21:33:25,523 basehttp 56696 48372 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 21:33:26,353 basehttp 56696 48372 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-15 21:33:26,356 basehttp 56696 52824 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 21:33:26,386 basehttp 56696 48372 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 21:33:28,266 basehttp 56696 48372 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:33:30,410 basehttp 56696 48372 "GET /feed/ HTTP/1.1" 302 0
+INFO 2025-12-15 21:33:30,438 basehttp 56696 48372 "GET /login/?next=/feed/ HTTP/1.1" 200 21505
+INFO 2025-12-15 21:33:30,563 basehttp 56696 48372 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 21:33:30,567 basehttp 56696 42140 "GET /static/web/js/main.js HTTP/1.1" 200 7679
+INFO 2025-12-15 21:33:30,569 basehttp 56696 12988 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 21:33:30,569 basehttp 56696 59748 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 21:33:31,340 basehttp 56696 52824 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 21:33:31,357 basehttp 56696 59748 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+WARNING 2025-12-15 21:33:32,935 log 56696 59748 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:33:32,936 basehttp 56696 59748 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:33:32,960 basehttp 56696 59748 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:33:54,301 basehttp 56696 59748 "GET / HTTP/1.1" 200 66993
+WARNING 2025-12-15 21:33:54,392 log 56696 59748 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:33:54,393 basehttp 56696 59748 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:33:54,395 basehttp 56696 12988 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 21:33:54,397 basehttp 56696 42140 "GET /static/web/js/main.js HTTP/1.1" 200 7679
+INFO 2025-12-15 21:33:54,398 basehttp 56696 48372 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 21:33:54,398 basehttp 56696 54512 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 21:33:58,194 basehttp 56696 52824 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 21:33:58,207 basehttp 56696 48372 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 21:33:58,295 basehttp 56696 48372 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:40:12,408 basehttp 56696 55548 "GET /login/ HTTP/1.1" 200 21489
+WARNING 2025-12-15 21:40:12,515 log 56696 55548 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:40:12,515 basehttp 56696 55548 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:40:12,525 basehttp 56696 50460 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 21:40:12,526 basehttp 56696 52600 "GET /static/web/js/main.js HTTP/1.1" 200 7679
+INFO 2025-12-15 21:40:12,529 basehttp 56696 55548 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 21:40:12,529 basehttp 56696 15612 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 21:40:18,047 basehttp 56696 63652 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 21:40:18,069 basehttp 56696 15612 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 21:40:19,628 basehttp 56696 15612 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:40:22,231 basehttp 56696 15612 "GET /accounts/signup/ HTTP/1.1" 200 2566
+WARNING 2025-12-15 21:40:22,284 log 56696 15612 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:40:22,285 basehttp 56696 15612 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:40:24,285 basehttp 56696 15612 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:45:22,795 basehttp 56696 15612 "GET /accounts/signup/ HTTP/1.1" 200 2566
+WARNING 2025-12-15 21:45:22,848 log 56696 15612 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:45:22,851 basehttp 56696 15612 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:45:24,737 basehttp 56696 15612 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:45:27,945 basehttp 56696 15612 "GET /accounts/signup/ HTTP/1.1" 200 2566
+WARNING 2025-12-15 21:45:27,990 log 56696 15612 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:45:27,994 basehttp 56696 15612 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:45:29,990 basehttp 56696 15612 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:45:43,991 basehttp 56696 15612 "GET /login/ HTTP/1.1" 200 21035
+WARNING 2025-12-15 21:45:44,056 log 56696 15612 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:45:44,056 basehttp 56696 15612 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:45:44,064 basehttp 56696 31340 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 21:45:44,067 basehttp 56696 52556 "GET /static/web/js/main.js HTTP/1.1" 200 7679
+INFO 2025-12-15 21:45:44,069 basehttp 56696 15612 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 21:45:44,070 basehttp 56696 64412 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 21:45:45,648 basehttp 56696 33180 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 21:45:45,683 basehttp 56696 64412 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 21:45:47,274 basehttp 56696 64412 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:46:06,799 basehttp 56696 64412 "GET /accounts/signup/ HTTP/1.1" 200 2566
+WARNING 2025-12-15 21:46:06,865 log 56696 64412 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:46:06,866 basehttp 56696 64412 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:46:08,861 basehttp 56696 64412 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:46:15,228 autoreload 63976 52928 Watching for file changes with StatReloader
+WARNING 2025-12-15 21:46:16,074 log 63976 18752 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:46:16,076 basehttp 63976 18752 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:46:16,086 basehttp 63976 26448 "GET /login/ HTTP/1.1" 200 21035
+WARNING 2025-12-15 21:46:16,099 log 63976 18752 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:46:16,100 basehttp 63976 18752 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:46:16,228 basehttp 63976 63632 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 21:46:16,285 basehttp 63976 12196 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 21:46:16,297 basehttp 63976 60268 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 21:46:17,522 basehttp 63976 12196 "GET /login/ HTTP/1.1" 200 21035
+WARNING 2025-12-15 21:46:17,569 log 63976 12196 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:46:17,571 basehttp 63976 12196 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:46:17,573 basehttp 63976 63632 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 21:46:17,579 basehttp 63976 18752 "GET /static/web/js/main.js HTTP/1.1" 200 7679
+INFO 2025-12-15 21:46:17,579 basehttp 63976 26448 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 21:46:17,579 basehttp 63976 49076 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 21:46:22,257 basehttp 63976 49076 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-15 21:46:22,257 basehttp 63976 60268 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 21:46:22,276 basehttp 63976 49076 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 21:46:23,787 basehttp 63976 49076 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:47:17,507 basehttp 63976 49076 "GET /accounts/signup/ HTTP/1.1" 200 2566
+WARNING 2025-12-15 21:47:17,604 log 63976 49076 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:47:17,605 basehttp 63976 49076 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:47:19,338 basehttp 63976 49076 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:47:33,833 basehttp 63976 49076 "GET /accounts/signup/ HTTP/1.1" 200 2566
+WARNING 2025-12-15 21:47:33,878 log 63976 49076 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:47:33,879 basehttp 63976 49076 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:47:35,560 basehttp 63976 49076 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:47:36,832 basehttp 63976 49076 "GET /accounts/signup/ HTTP/1.1" 200 2566
+WARNING 2025-12-15 21:47:36,869 log 63976 49076 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:47:36,870 basehttp 63976 49076 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:47:38,870 basehttp 63976 49076 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:48:10,226 basehttp 63976 49076 "GET /login/ HTTP/1.1" 200 20262
+WARNING 2025-12-15 21:48:10,294 log 63976 49076 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:48:10,296 basehttp 63976 49076 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:48:10,312 basehttp 63976 26448 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 21:48:10,317 basehttp 63976 18752 "GET /static/web/js/main.js HTTP/1.1" 200 7679
+INFO 2025-12-15 21:48:10,317 basehttp 63976 12196 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 21:48:10,318 basehttp 63976 63632 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 21:48:12,828 basehttp 63976 60268 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 21:48:12,844 basehttp 63976 63632 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 21:48:14,373 basehttp 63976 63632 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:48:14,525 basehttp 63976 63632 "GET /accounts/signup/ HTTP/1.1" 200 2566
+WARNING 2025-12-15 21:48:14,584 log 63976 63632 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:48:14,584 basehttp 63976 63632 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:48:16,255 basehttp 63976 63632 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:48:42,540 autoreload 63976 52928 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\gistme_backend\settings.py changed, reloading.
+INFO 2025-12-15 21:48:43,780 autoreload 57128 16368 Watching for file changes with StatReloader
+INFO 2025-12-15 21:52:06,560 basehttp 57128 59140 "GET /accounts/signup/ HTTP/1.1" 200 20023
+WARNING 2025-12-15 21:52:06,615 log 57128 59140 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:52:06,618 basehttp 57128 59140 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:52:06,938 basehttp 57128 60672 "GET /static/web/js/main.js HTTP/1.1" 200 7679
+INFO 2025-12-15 21:52:06,942 basehttp 57128 41524 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 21:52:06,945 basehttp 57128 13928 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 21:52:06,946 basehttp 57128 60960 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 21:52:07,934 basehttp 57128 60228 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 21:52:07,954 basehttp 57128 60960 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 21:52:09,496 basehttp 57128 60960 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:52:11,648 basehttp 57128 60960 "GET /login/ HTTP/1.1" 200 20262
+WARNING 2025-12-15 21:52:11,722 log 57128 60960 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:52:11,723 basehttp 57128 60960 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:52:11,733 basehttp 57128 60960 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 21:52:11,736 basehttp 57128 13928 "GET /static/web/js/main.js HTTP/1.1" 200 7679
+INFO 2025-12-15 21:52:11,737 basehttp 57128 41524 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 21:52:11,737 basehttp 57128 60672 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 21:52:12,429 basehttp 57128 60228 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 21:52:12,452 basehttp 57128 41524 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 21:52:14,087 basehttp 57128 41524 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:52:14,225 basehttp 57128 41524 "GET /accounts/signup/ HTTP/1.1" 200 20023
+WARNING 2025-12-15 21:52:14,289 log 57128 41524 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:52:14,290 basehttp 57128 41524 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:52:14,294 basehttp 57128 60672 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 21:52:14,294 basehttp 57128 13928 "GET /static/web/js/main.js HTTP/1.1" 200 7679
+INFO 2025-12-15 21:52:14,297 basehttp 57128 41524 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 21:52:14,297 basehttp 57128 60960 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 21:52:14,916 basehttp 57128 60228 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 21:52:14,936 basehttp 57128 60960 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 21:52:16,530 basehttp 57128 60960 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:52:32,194 basehttp 57128 60960 "GET /login/ HTTP/1.1" 200 20262
+WARNING 2025-12-15 21:52:32,284 log 57128 60960 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:52:32,287 basehttp 57128 60960 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:52:32,292 basehttp 57128 41524 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 21:52:32,293 basehttp 57128 60960 "GET /static/web/js/main.js HTTP/1.1" 200 7679
+INFO 2025-12-15 21:52:32,299 basehttp 57128 60960 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 21:52:32,302 basehttp 57128 41524 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 21:52:32,940 basehttp 57128 60228 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 21:52:32,951 basehttp 57128 41524 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 21:52:33,988 basehttp 57128 41524 "GET /accounts/signup/ HTTP/1.1" 200 20023
+WARNING 2025-12-15 21:52:34,069 log 57128 41524 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:52:34,069 basehttp 57128 41524 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:52:34,072 basehttp 57128 60960 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 21:52:34,074 basehttp 57128 13928 "GET /static/web/js/main.js HTTP/1.1" 200 7679
+INFO 2025-12-15 21:52:34,076 basehttp 57128 60672 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 21:52:34,076 basehttp 57128 41524 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 21:52:34,506 basehttp 57128 41524 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:52:34,604 basehttp 57128 60228 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 21:52:34,616 basehttp 57128 41524 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 21:52:35,569 basehttp 57128 41524 "GET /login/ HTTP/1.1" 200 20262
+WARNING 2025-12-15 21:52:35,645 log 57128 41524 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:52:35,646 basehttp 57128 41524 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:52:35,648 basehttp 57128 60672 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 21:52:35,649 basehttp 57128 13928 "GET /static/web/js/main.js HTTP/1.1" 200 7679
+INFO 2025-12-15 21:52:35,652 basehttp 57128 60960 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 21:52:35,652 basehttp 57128 41524 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 21:52:36,178 basehttp 57128 41524 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:52:36,188 basehttp 57128 60228 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 21:52:36,203 basehttp 57128 41524 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 21:52:36,786 basehttp 57128 41524 "GET /accounts/signup/ HTTP/1.1" 200 20023
+WARNING 2025-12-15 21:52:36,855 log 57128 41524 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:52:36,857 basehttp 57128 41524 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:52:36,864 basehttp 57128 60960 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 21:52:36,868 basehttp 57128 13928 "GET /static/web/js/main.js HTTP/1.1" 200 7679
+INFO 2025-12-15 21:52:36,873 basehttp 57128 60672 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 21:52:36,874 basehttp 57128 59140 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 21:52:37,461 basehttp 57128 60228 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 21:52:37,482 basehttp 57128 59140 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 21:52:39,116 basehttp 57128 59140 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:53:50,369 basehttp 57128 59140 "GET /accounts/signup/ HTTP/1.1" 200 20023
+WARNING 2025-12-15 21:53:50,428 log 57128 59140 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:53:50,429 basehttp 57128 59140 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:53:50,439 basehttp 57128 13928 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 21:53:50,445 basehttp 57128 60672 "GET /static/web/js/main.js HTTP/1.1" 200 7679
+INFO 2025-12-15 21:53:50,445 basehttp 57128 41524 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 21:53:50,445 basehttp 57128 60960 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 21:53:51,929 basehttp 57128 60960 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-15 21:53:51,930 basehttp 57128 60228 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 21:53:51,951 basehttp 57128 60960 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 21:53:53,499 basehttp 57128 60960 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:53:57,842 basehttp 57128 60960 "GET /login/ HTTP/1.1" 200 23279
+WARNING 2025-12-15 21:53:57,922 log 57128 60960 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:53:57,923 basehttp 57128 60960 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:53:57,934 basehttp 57128 60960 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 21:53:57,936 basehttp 57128 60672 "GET /static/web/js/main.js HTTP/1.1" 200 7679
+INFO 2025-12-15 21:53:57,938 basehttp 57128 13928 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 21:53:57,938 basehttp 57128 41524 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 21:53:58,496 basehttp 57128 60228 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 21:53:58,514 basehttp 57128 13928 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 21:54:00,065 basehttp 57128 13928 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:55:33,802 basehttp 57128 13928 "POST /accounts/signup/ HTTP/1.1" 302 0
+INFO 2025-12-15 21:55:33,817 basehttp 57128 13928 "GET /onboarding/ HTTP/1.1" 200 14385
+INFO 2025-12-15 21:55:33,911 basehttp 57128 41524 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 21:55:33,914 basehttp 57128 60672 "GET /static/web/js/main.js HTTP/1.1" 200 7679
+INFO 2025-12-15 21:55:33,914 basehttp 57128 60960 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 21:55:33,914 basehttp 57128 59140 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+WARNING 2025-12-15 21:55:33,914 log 57128 13928 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:55:33,918 basehttp 57128 13928 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:55:38,965 basehttp 57128 60228 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 21:55:38,982 basehttp 57128 13928 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 21:55:40,540 basehttp 57128 13928 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:56:19,737 basehttp 57128 13928 "GET /feed/ HTTP/1.1" 200 15488
+WARNING 2025-12-15 21:56:19,818 log 57128 13928 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:56:19,819 basehttp 57128 13928 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:56:19,833 basehttp 57128 13928 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 21:56:19,837 basehttp 57128 60672 "GET /static/web/js/main.js HTTP/1.1" 200 7679
+INFO 2025-12-15 21:56:19,838 basehttp 57128 59140 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 21:56:19,841 basehttp 57128 13928 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 21:56:21,828 basehttp 57128 60228 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 21:56:21,840 basehttp 57128 13928 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 21:56:23,387 basehttp 57128 13928 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:56:25,420 basehttp 57128 13928 "GET / HTTP/1.1" 302 0
+INFO 2025-12-15 21:56:25,439 basehttp 57128 13928 "GET /feed/ HTTP/1.1" 200 15488
+WARNING 2025-12-15 21:56:25,492 log 57128 13928 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:56:25,493 basehttp 57128 13928 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:56:25,497 basehttp 57128 59140 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 21:56:25,500 basehttp 57128 13928 "GET /static/web/js/main.js HTTP/1.1" 200 7679
+INFO 2025-12-15 21:56:25,502 basehttp 57128 60672 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 21:56:25,504 basehttp 57128 13928 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 21:56:26,313 basehttp 57128 60228 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 21:56:26,358 basehttp 57128 13928 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 21:56:27,131 basehttp 57128 13928 "GET / HTTP/1.1" 302 0
+INFO 2025-12-15 21:56:27,149 basehttp 57128 13928 "GET /feed/ HTTP/1.1" 200 15488
+WARNING 2025-12-15 21:56:27,206 log 57128 13928 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-12-15 21:56:27,207 basehttp 57128 59140 "GET /static/web/js/main.js HTTP/1.1" 200 7679
+WARNING 2025-12-15 21:56:27,208 basehttp 57128 13928 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:56:27,208 basehttp 57128 60672 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 21:56:27,211 basehttp 57128 60960 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 21:56:27,211 basehttp 57128 41524 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 21:56:27,676 basehttp 57128 60228 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 21:56:27,692 basehttp 57128 41524 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 21:56:27,922 basehttp 57128 41524 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:56:29,246 basehttp 57128 41524 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:56:30,382 basehttp 57128 41524 "GET /feed/ HTTP/1.1" 200 15488
+WARNING 2025-12-15 21:56:30,428 log 57128 41524 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:56:30,433 basehttp 57128 41524 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:56:30,435 basehttp 57128 60960 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 21:56:30,436 basehttp 57128 59140 "GET /static/web/js/main.js HTTP/1.1" 200 7679
+INFO 2025-12-15 21:56:30,437 basehttp 57128 60672 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 21:56:30,437 basehttp 57128 13928 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 21:56:31,348 basehttp 57128 60228 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 21:56:31,362 basehttp 57128 13928 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 21:56:32,400 basehttp 57128 13928 "GET /feed/ HTTP/1.1" 200 15488
+INFO 2025-12-15 21:56:32,443 basehttp 57128 59140 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 21:56:32,447 basehttp 57128 60672 "GET /static/web/js/main.js HTTP/1.1" 200 7679
+INFO 2025-12-15 21:56:32,448 basehttp 57128 41524 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 21:56:32,449 basehttp 57128 60960 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+WARNING 2025-12-15 21:56:32,454 log 57128 13928 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:56:32,455 basehttp 57128 13928 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:56:32,882 basehttp 57128 13928 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:56:34,850 basehttp 57128 60228 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 21:56:34,867 basehttp 57128 13928 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 21:56:36,152 basehttp 57128 13928 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:56:41,276 basehttp 57128 13928 "GET / HTTP/1.1" 302 0
+INFO 2025-12-15 21:56:41,292 basehttp 57128 13928 "GET /feed/ HTTP/1.1" 200 15488
+WARNING 2025-12-15 21:56:41,342 log 57128 13928 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-12-15 21:56:41,342 basehttp 57128 60960 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 21:56:41,344 basehttp 57128 41524 "GET /static/web/js/main.js HTTP/1.1" 200 7679
+WARNING 2025-12-15 21:56:41,345 basehttp 57128 13928 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:56:41,346 basehttp 57128 59140 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 21:56:41,346 basehttp 57128 60672 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 21:56:42,940 basehttp 57128 60228 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 21:56:42,954 basehttp 57128 60672 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 21:56:44,379 basehttp 57128 60672 "GET / HTTP/1.1" 302 0
+INFO 2025-12-15 21:56:44,397 basehttp 57128 60672 "GET /feed/ HTTP/1.1" 200 15488
+WARNING 2025-12-15 21:56:44,440 log 57128 60672 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:56:44,441 basehttp 57128 60672 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:56:44,447 basehttp 57128 59140 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 21:56:44,447 basehttp 57128 13928 "GET /static/web/js/main.js HTTP/1.1" 200 7679
+INFO 2025-12-15 21:56:44,448 basehttp 57128 41524 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 21:56:44,449 basehttp 57128 60960 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 21:56:44,492 basehttp 57128 60960 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:56:45,031 basehttp 57128 60228 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 21:56:45,061 basehttp 57128 60960 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 21:56:46,660 basehttp 57128 60960 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:58:46,522 basehttp 57128 60960 "GET /feed/ HTTP/1.1" 200 15488
+WARNING 2025-12-15 21:58:46,584 log 57128 60960 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-12-15 21:58:46,587 basehttp 57128 41524 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+WARNING 2025-12-15 21:58:46,587 basehttp 57128 60960 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:58:46,590 basehttp 57128 59140 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 21:58:46,590 basehttp 57128 60672 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 21:58:46,591 basehttp 57128 13928 "GET /static/web/js/main.js HTTP/1.1" 200 3073
+INFO 2025-12-15 21:58:52,916 basehttp 57128 60228 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 21:58:52,931 basehttp 57128 59140 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 21:58:54,353 basehttp 57128 59140 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:59:00,555 basehttp 57128 50892 "GET / HTTP/1.1" 200 66220
+INFO 2025-12-15 21:59:00,604 basehttp 57128 50892 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 21:59:00,607 basehttp 57128 53756 "GET /static/web/js/main.js HTTP/1.1" 200 3073
+INFO 2025-12-15 21:59:00,609 basehttp 57128 30640 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 21:59:00,609 basehttp 57128 396 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 21:59:07,639 basehttp 57128 30640 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 21:59:09,797 basehttp 57128 396 "GET /feed/ HTTP/1.1" 302 0
+INFO 2025-12-15 21:59:09,797 basehttp 57128 30640 "GET / HTTP/1.1" 200 66220
+INFO 2025-12-15 21:59:09,806 basehttp 57128 30640 "GET /login/?next=/feed/ HTTP/1.1" 200 23311
+INFO 2025-12-15 21:59:09,810 basehttp 57128 53756 "GET /static/web/icons/icon-512x512.png HTTP/1.1" 200 376241
+INFO 2025-12-15 21:59:09,813 basehttp 57128 396 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 21:59:10,950 basehttp 57128 396 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-15 21:59:57,736 basehttp 57128 59140 "GET /feed/ HTTP/1.1" 200 15488
+WARNING 2025-12-15 21:59:57,791 log 57128 59140 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:59:57,793 basehttp 57128 59140 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:59:57,798 basehttp 57128 13928 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 21:59:57,803 basehttp 57128 60672 "GET /static/web/js/main.js HTTP/1.1" 200 3073
+INFO 2025-12-15 21:59:57,804 basehttp 57128 41524 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 21:59:57,804 basehttp 57128 60960 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 21:59:59,385 basehttp 57128 60960 "GET /feed/ HTTP/1.1" 200 15488
+WARNING 2025-12-15 21:59:59,429 log 57128 60960 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 21:59:59,433 basehttp 57128 60960 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 21:59:59,434 basehttp 57128 41524 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 21:59:59,434 basehttp 57128 13928 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 21:59:59,435 basehttp 57128 60672 "GET /static/web/js/main.js HTTP/1.1" 200 3073
+INFO 2025-12-15 21:59:59,436 basehttp 57128 59140 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 22:00:00,188 basehttp 57128 59140 "GET /onboarding/ HTTP/1.1" 200 14385
+WARNING 2025-12-15 22:00:00,255 log 57128 59140 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 22:00:00,257 basehttp 57128 59140 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 22:00:00,261 basehttp 57128 60672 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 22:00:00,264 basehttp 57128 13928 "GET /static/web/js/main.js HTTP/1.1" 200 3073
+INFO 2025-12-15 22:00:00,266 basehttp 57128 59140 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 22:00:00,268 basehttp 57128 13928 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 22:00:03,479 basehttp 57128 60228 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 22:00:03,479 basehttp 57128 13928 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-15 22:00:03,492 basehttp 57128 13928 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 22:00:04,021 basehttp 57128 13928 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 22:00:55,074 basehttp 57128 65212 "GET / HTTP/1.1" 200 66220
+INFO 2025-12-15 22:00:57,784 basehttp 57128 65212 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 22:00:57,983 views 57128 65480 FCM subscription updated: esMCyqggvfcHcvw3tSng... (lang: en)
+INFO 2025-12-15 22:00:57,984 basehttp 57128 65480 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-12-15 22:01:04,007 basehttp 57128 65480 "GET / HTTP/1.1" 200 66220
+INFO 2025-12-15 22:01:04,312 views 57128 65480 FCM subscription updated: esMCyqggvfcHcvw3tSng... (lang: en)
+INFO 2025-12-15 22:01:04,313 basehttp 57128 65480 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-12-15 22:01:05,860 basehttp 57128 65480 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 22:01:10,522 basehttp 57128 7776 "GET / HTTP/1.1" 200 66220
+INFO 2025-12-15 22:01:10,554 basehttp 57128 7776 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 22:01:10,556 basehttp 57128 57148 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 22:01:10,556 basehttp 57128 38996 "GET /static/web/js/main.js HTTP/1.1" 200 4854
+INFO 2025-12-15 22:01:10,557 basehttp 57128 64908 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 22:01:14,112 basehttp 57128 64908 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 22:01:14,639 basehttp 57128 64908 "GET / HTTP/1.1" 200 66220
+INFO 2025-12-15 22:01:14,639 basehttp 57128 38996 "GET /feed/ HTTP/1.1" 302 0
+INFO 2025-12-15 22:01:14,641 basehttp 57128 57148 "GET /static/web/js/main.js HTTP/1.1" 304 0
+INFO 2025-12-15 22:01:14,648 basehttp 57128 38996 "GET /login/?next=/feed/ HTTP/1.1" 200 23311
+INFO 2025-12-15 22:01:14,651 basehttp 57128 64908 "GET /static/web/icons/icon-512x512.png HTTP/1.1" 200 376241
+INFO 2025-12-15 22:01:14,653 basehttp 57128 57148 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 22:01:15,041 basehttp 57128 57148 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-15 22:26:34,776 autoreload 57128 16368 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\models.py changed, reloading.
+INFO 2025-12-15 22:26:36,088 autoreload 63652 15680 Watching for file changes with StatReloader
+INFO 2025-12-15 22:33:12,786 autoreload 63652 15680 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\views.py changed, reloading.
+INFO 2025-12-15 22:33:14,323 autoreload 63504 64600 Watching for file changes with StatReloader
+INFO 2025-12-15 22:35:14,988 autoreload 63504 64600 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\views.py changed, reloading.
+INFO 2025-12-15 22:35:16,306 autoreload 33188 43716 Watching for file changes with StatReloader
+INFO 2025-12-15 22:35:59,391 autoreload 33188 43716 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\admin.py changed, reloading.
+INFO 2025-12-15 22:36:00,614 autoreload 22104 63636 Watching for file changes with StatReloader
+INFO 2025-12-15 22:36:35,450 autoreload 22104 63636 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\admin.py changed, reloading.
+INFO 2025-12-15 22:36:36,739 autoreload 59780 20852 Watching for file changes with StatReloader
+INFO 2025-12-15 22:37:43,473 basehttp 59780 36000 "GET /onboarding/ HTTP/1.1" 200 31538
+WARNING 2025-12-15 22:37:43,574 log 59780 36000 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 22:37:43,576 basehttp 59780 36000 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 22:37:43,878 basehttp 59780 51172 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 22:37:43,887 basehttp 59780 65232 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 22:37:43,887 basehttp 59780 22936 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 22:37:43,891 basehttp 59780 55812 "GET /static/web/js/main.js HTTP/1.1" 200 4854
+INFO 2025-12-15 22:37:45,295 basehttp 59780 55812 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-15 22:37:45,295 basehttp 59780 60168 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 22:37:45,316 basehttp 59780 55812 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 22:37:46,838 basehttp 59780 55812 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 22:39:31,217 basehttp 59780 55812 "GET /onboarding/ HTTP/1.1" 200 31538
+WARNING 2025-12-15 22:39:31,235 log 59780 22936 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 22:39:31,236 basehttp 59780 22936 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 22:43:44,023 basehttp 59780 22936 "GET /onboarding/ HTTP/1.1" 200 34596
+INFO 2025-12-15 22:43:44,074 basehttp 59780 55812 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 22:43:44,076 basehttp 59780 62692 "GET /static/web/js/main.js HTTP/1.1" 200 4854
+WARNING 2025-12-15 22:43:44,081 log 59780 22936 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-12-15 22:43:44,081 basehttp 59780 17064 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+WARNING 2025-12-15 22:43:44,081 basehttp 59780 22936 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 22:43:44,081 basehttp 59780 55548 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 22:43:52,864 basehttp 59780 22936 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-15 22:43:52,867 basehttp 59780 48972 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 22:43:52,905 basehttp 59780 22936 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 22:43:54,549 basehttp 59780 22936 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 22:44:03,283 basehttp 59780 22936 "GET /onboarding/ HTTP/1.1" 200 34596
+INFO 2025-12-15 22:44:03,364 basehttp 59780 62692 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 22:44:03,364 basehttp 59780 55812 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 22:44:03,364 basehttp 59780 55548 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 22:44:03,365 basehttp 59780 17064 "GET /static/web/js/main.js HTTP/1.1" 200 4854
+WARNING 2025-12-15 22:44:03,374 log 59780 22936 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 22:44:03,375 basehttp 59780 22936 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 22:44:05,357 basehttp 59780 22936 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-15 22:44:05,358 basehttp 59780 48972 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 22:44:05,381 basehttp 59780 22936 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 22:44:06,888 basehttp 59780 22936 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 22:45:53,098 autoreload 35860 62424 Watching for file changes with StatReloader
+INFO 2025-12-15 22:45:54,218 basehttp 35860 51248 "GET /onboarding/ HTTP/1.1" 200 34596
+WARNING 2025-12-15 22:45:54,425 log 35860 51248 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 22:45:54,426 basehttp 35860 51248 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 22:45:54,770 basehttp 35860 61108 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 22:45:54,776 basehttp 35860 58448 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 22:45:54,779 basehttp 35860 46104 "GET /static/web/js/main.js HTTP/1.1" 200 4854
+INFO 2025-12-15 22:45:54,784 basehttp 35860 4248 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 22:45:57,115 basehttp 35860 4248 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-15 22:45:57,117 basehttp 35860 3772 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 22:45:57,139 basehttp 35860 4248 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 22:45:58,578 basehttp 35860 4248 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 22:47:28,528 basehttp 35860 4248 "GET /onboarding/ HTTP/1.1" 200 34824
+INFO 2025-12-15 22:47:28,599 basehttp 35860 61108 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 22:47:28,600 basehttp 35860 46104 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 22:47:28,601 basehttp 35860 58448 "GET /static/web/js/main.js HTTP/1.1" 200 4854
+INFO 2025-12-15 22:47:28,602 basehttp 35860 51248 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+WARNING 2025-12-15 22:47:28,619 log 35860 4248 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 22:47:28,621 basehttp 35860 4248 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 22:47:30,251 basehttp 35860 4248 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-15 22:47:30,262 basehttp 35860 3772 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 22:47:30,291 basehttp 35860 4248 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 22:47:31,889 basehttp 35860 4248 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 22:53:25,390 basehttp 35860 62836 "GET /onboarding/ HTTP/1.1" 200 36970
+WARNING 2025-12-15 22:53:25,467 log 35860 62836 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 22:53:25,471 basehttp 35860 62836 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 22:53:25,471 basehttp 35860 8332 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 22:53:25,471 basehttp 35860 34876 "GET /static/web/js/main.js HTTP/1.1" 200 4854
+INFO 2025-12-15 22:53:25,474 basehttp 35860 60872 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 22:53:25,474 basehttp 35860 48492 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 22:53:27,148 basehttp 35860 48492 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-15 22:53:27,152 basehttp 35860 25520 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 22:53:27,196 basehttp 35860 48492 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 22:53:28,768 basehttp 35860 48492 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 22:53:36,134 basehttp 35860 48492 "GET /onboarding/ HTTP/1.1" 200 36970
+WARNING 2025-12-15 22:53:36,181 log 35860 48492 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 22:53:36,186 basehttp 35860 48492 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 22:53:36,187 basehttp 35860 60872 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 22:53:36,189 basehttp 35860 34876 "GET /static/web/js/main.js HTTP/1.1" 200 4854
+INFO 2025-12-15 22:53:36,189 basehttp 35860 62836 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 22:53:36,190 basehttp 35860 8332 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 22:53:36,900 basehttp 35860 8332 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-15 22:53:36,919 basehttp 35860 25520 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 22:53:36,949 basehttp 35860 8332 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 22:53:38,601 basehttp 35860 8332 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 22:54:06,097 basehttp 35860 8332 "GET /onboarding/ HTTP/1.1" 200 36970
+INFO 2025-12-15 22:54:06,156 basehttp 35860 62836 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+WARNING 2025-12-15 22:54:06,156 log 35860 8332 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 22:54:06,158 basehttp 35860 8332 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 22:54:06,162 basehttp 35860 34876 "GET /static/web/js/main.js HTTP/1.1" 200 4854
+INFO 2025-12-15 22:54:06,162 basehttp 35860 48492 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 22:54:06,162 basehttp 35860 60872 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 22:54:07,129 basehttp 35860 48492 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-15 22:54:07,130 basehttp 35860 25520 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 22:54:07,162 basehttp 35860 48492 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 22:54:08,765 basehttp 35860 48492 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 22:59:11,245 autoreload 45412 51248 Watching for file changes with StatReloader
+INFO 2025-12-15 22:59:12,766 basehttp 45412 23404 "GET /onboarding/ HTTP/1.1" 200 20625
+WARNING 2025-12-15 22:59:12,939 log 45412 23404 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 22:59:12,941 basehttp 45412 23404 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 22:59:13,376 basehttp 45412 46940 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 22:59:13,380 basehttp 45412 23404 "GET /static/web/js/onboarding.js HTTP/1.1" 200 8904
+INFO 2025-12-15 22:59:13,381 basehttp 45412 35700 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 22:59:13,428 basehttp 45412 60112 "GET /static/web/css/onboarding.css HTTP/1.1" 200 6455
+INFO 2025-12-15 22:59:13,431 basehttp 45412 49700 "GET /static/web/js/main.js HTTP/1.1" 200 4854
+INFO 2025-12-15 22:59:13,432 basehttp 45412 56716 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 22:59:15,062 basehttp 45412 56716 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-15 22:59:15,062 basehttp 45412 57636 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 22:59:15,081 basehttp 45412 56716 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 22:59:16,590 basehttp 45412 56716 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 23:04:05,074 basehttp 45412 56716 "GET /onboarding/ HTTP/1.1" 200 22820
+INFO 2025-12-15 23:04:05,164 basehttp 45412 49700 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 23:04:05,164 basehttp 45412 60112 "GET /static/web/css/onboarding.css HTTP/1.1" 200 7064
+WARNING 2025-12-15 23:04:05,165 log 45412 56716 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-12-15 23:04:05,166 basehttp 45412 35700 "GET /static/web/js/main.js HTTP/1.1" 200 4854
+WARNING 2025-12-15 23:04:05,167 basehttp 45412 56716 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 23:04:05,175 basehttp 45412 23404 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 23:04:05,176 basehttp 45412 46940 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 23:04:05,178 basehttp 45412 49700 "GET /static/web/js/onboarding.js HTTP/1.1" 200 9119
+INFO 2025-12-15 23:04:09,957 basehttp 45412 49700 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-15 23:04:09,957 basehttp 45412 57636 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 23:04:09,975 basehttp 45412 49700 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 23:04:11,553 basehttp 45412 49700 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-15 23:07:56,910 basehttp 45412 21712 "GET /onboarding/ HTTP/1.1" 200 20560
+WARNING 2025-12-15 23:07:56,980 log 45412 21712 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-15 23:07:56,982 basehttp 45412 21712 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6767
+INFO 2025-12-15 23:07:57,005 basehttp 45412 16368 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-15 23:07:57,005 basehttp 45412 51036 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-15 23:07:57,005 basehttp 45412 21712 "GET /static/web/css/onboarding.css HTTP/1.1" 200 6679
+INFO 2025-12-15 23:07:57,006 basehttp 45412 64664 "GET /static/web/js/main.js HTTP/1.1" 200 4854
+INFO 2025-12-15 23:07:57,006 basehttp 45412 53028 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-15 23:07:57,007 basehttp 45412 6988 "GET /static/web/js/onboarding.js HTTP/1.1" 200 9119
+INFO 2025-12-15 23:07:59,306 basehttp 45412 47648 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-15 23:07:59,307 basehttp 45412 6988 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-15 23:07:59,326 basehttp 45412 6988 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-15 23:08:00,863 basehttp 45412 6988 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965

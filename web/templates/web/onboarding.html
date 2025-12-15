@@ -1,0 +1,184 @@
+{% extends 'web/base.html' %}
+{% load static %}
+
+{% block title %}Welcome - Gist4U{% endblock %}
+
+{% block navbar %}{% endblock %}
+{% block footer %}{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'web/css/onboarding.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="onboarding-page" x-data="onboardingFlow()">
+    
+    <!-- Tech Mesh Background -->
+    <canvas id="mesh-canvas"></canvas>
+    
+    <div class="onboarding-content">
+        <div class="onboarding-header">
+            <div class="onboarding-logo">Gist4U</div>
+            <p class="onboarding-subtitle">Let's personalize your experience</p>
+            
+            <div class="onboarding-progress">
+                <template x-for="i in 5" :key="i">
+                    <div class="progress-dot" 
+                         :class="{ 'active': step === i, 'completed': step > i }"></div>
+                </template>
+            </div>
+        </div>
+        
+        <div class="step-container">
+            <!-- Step 1: Phone Number -->
+            <div class="step-card" x-show="step === 1">
+                <div class="step-emoji">📱</div>
+                <h2 class="step-title">Your Phone Number</h2>
+                <p class="step-subtitle">We'll send you important updates via SMS</p>
+                
+                <div class="phone-input-group">
+                    <span class="phone-prefix">+237</span>
+                    <input type="tel" 
+                           class="phone-input" 
+                           placeholder="6XXXXXXXX"
+                           x-model="phone"
+                           maxlength="9"
+                           @input="validatePhone()">
+                </div>
+                <p class="error-text" x-show="phoneError" x-text="phoneError"></p>
+                
+                <div class="step-nav">
+                    <button class="btn-next" @click="nextStep()" :disabled="!isPhoneValid">
+                        Continue →
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Step 2: Interests -->
+            <div class="step-card" x-show="step === 2">
+                <div class="step-emoji">🎯</div>
+                <h2 class="step-title">What interests you?</h2>
+                <p class="step-subtitle">Select all that apply</p>
+                
+                <div class="chips-container">
+                    <div class="chips-grid">
+                        <!-- Select All at the TOP -->
+                        <div class="chip chip-full" 
+                             :class="{ 'selected': interests.length === interestOptions.length }"
+                             @click="selectAllInterests()">
+                            <span class="chip-emoji">✅</span>
+                            <span>Select All</span>
+                        </div>
+                        
+                        <template x-for="option in interestOptions" :key="option.id">
+                            <div class="chip" 
+                                 :class="{ 'selected': interests.includes(option.id) }"
+                                 @click="toggleInterest(option.id)">
+                                <span class="chip-emoji" x-text="option.emoji"></span>
+                                <span x-text="option.label"></span>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+                
+                <div class="step-nav">
+                    <button class="btn-back" @click="prevStep()">←</button>
+                    <button class="btn-next" @click="nextStep()" :disabled="interests.length === 0">
+                        Continue →
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Step 3: Education & Background -->
+            <div class="step-card" x-show="step === 3">
+                <div class="step-emoji">🎓</div>
+                <h2 class="step-title">About You</h2>
+                <p class="step-subtitle">This helps us find relevant opportunities</p>
+                
+                <p class="section-label">Highest Education</p>
+                <div class="pills-container">
+                    <template x-for="option in educationOptions" :key="option.value">
+                        <div class="pill" 
+                             :class="{ 'selected': education === option.value }"
+                             @click="education = option.value"
+                             x-text="option.label"></div>
+                    </template>
+                </div>
+                
+                <div class="section-divider"></div>
+                
+                <p class="section-label">Your Background</p>
+                <div class="pills-container">
+                    <template x-for="option in backgroundOptions" :key="option.value">
+                        <div class="pill" 
+                             :class="{ 'selected': background === option.value }"
+                             @click="background = option.value"
+                             x-text="option.label"></div>
+                    </template>
+                </div>
+                
+                <div class="step-nav">
+                    <button class="btn-back" @click="prevStep()">←</button>
+                    <button class="btn-next" @click="nextStep()" :disabled="!education || !background">
+                        Continue →
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Step 4: Notification Time -->
+            <div class="step-card" x-show="step === 4">
+                <div class="step-emoji">🔔</div>
+                <h2 class="step-title">When to notify you?</h2>
+                <p class="step-subtitle">Pick your preferred time</p>
+                
+                <div class="time-picker">
+                    <template x-for="slot in timeSlots" :key="slot.value">
+                        <div class="time-slot" 
+                             :class="{ 'selected': notificationTime === slot.value }"
+                             @click="notificationTime = slot.value">
+                            <div class="time-slot-time" x-text="slot.time"></div>
+                            <div class="time-slot-label" x-text="slot.label"></div>
+                        </div>
+                    </template>
+                </div>
+                
+                <div class="step-nav">
+                    <button class="btn-back" @click="prevStep()">←</button>
+                    <button class="btn-next" @click="nextStep()" :disabled="!notificationTime">
+                        Continue →
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Step 5: Custom Desires (Optional) -->
+            <div class="step-card" x-show="step === 5">
+                <div class="step-emoji">💭</div>
+                <h2 class="step-title">Anything else?</h2>
+                <p class="step-subtitle">Tell us your specific needs (optional)</p>
+                
+                <textarea class="desires-textarea" 
+                          x-model="customDesires"
+                          placeholder="E.g., I'm looking for Master's scholarships in Canada for Computer Science..."></textarea>
+                <p class="desires-hint">Be specific! This helps us find exactly what you need.</p>
+                
+                <div class="step-nav">
+                    <button class="btn-back" @click="prevStep()">←</button>
+                    <button class="btn-next btn-save" @click="saveAndContinue()" :disabled="saving">
+                        <span x-show="!saving">Save & Go →</span>
+                        <span x-show="saving">Saving...</span>
+                    </button>
+                </div>
+                
+                <div class="skip-optional" x-show="!customDesires">
+                    <button @click="saveAndContinue()">Skip for now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="{% static 'web/js/onboarding.js' %}"></script>
+{% endblock %}

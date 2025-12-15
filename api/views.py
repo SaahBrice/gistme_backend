@@ -216,3 +216,42 @@ class CategoryPreferencesView(APIView):
             logger.error(f"Toggle preference failed: {e}", exc_info=True)
             return Response({"error": "Failed to update preference"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
+
+class OnboardingView(APIView):
+    """API endpoint for saving onboarding preferences."""
+    
+    def post(self, request):
+        try:
+            from web.models import UserProfile
+            
+            if not request.user.is_authenticated:
+                return Response({"error": "Authentication required"}, status=status.HTTP_401_UNAUTHORIZED)
+            
+            # Get or create profile
+            profile, created = UserProfile.objects.get_or_create(user=request.user)
+            
+            # Update fields
+            profile.phone = request.data.get('phone', '')
+            profile.interests = request.data.get('interests', [])
+            profile.education_level = request.data.get('education_level', 'RAS')
+            profile.background = request.data.get('background', 'RAS')
+            
+            # Parse time
+            notification_time = request.data.get('notification_time', '08:00')
+            profile.notification_time = notification_time
+            
+            profile.custom_desires = request.data.get('custom_desires', '')
+            profile.onboarding_completed = True
+            profile.save()
+            
+            logger.info(f"Onboarding completed for user {request.user.email}")
+            
+            return Response({
+                "status": "success",
+                "message": "Preferences saved successfully"
+            }, status=status.HTTP_200_OK)
+            
+        except Exception as e:
+            logger.error(f"Onboarding failed: {e}", exc_info=True)
+            return Response({"error": "Failed to save preferences"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
