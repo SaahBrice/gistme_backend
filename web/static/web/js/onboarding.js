@@ -5,6 +5,13 @@ function onboardingFlow() {
         saving: false,
         direction: 'forward', // Track animation direction
 
+        // Audio player state
+        showPlayer: true, // Show on page load
+        isPlaying: false,
+        audioElement: null,
+        audioProgress: 0, // 0-100 progress
+        hasStartedPlaying: false, // Track if user has clicked play
+
         phone: '',
         phoneError: '',
         isPhoneValid: false,
@@ -13,6 +20,57 @@ function onboardingFlow() {
         background: '',
         notificationTime: '',
         customDesires: '',
+
+        // Initialize audio on component mount
+        init() {
+            this.$nextTick(() => {
+                this.audioElement = document.getElementById('onboarding-audio');
+                if (this.audioElement) {
+                    // Track when audio ends
+                    this.audioElement.addEventListener('ended', () => {
+                        this.isPlaying = false;
+                        this.audioProgress = 100;
+                    });
+
+                    // Track audio progress for ring
+                    this.audioElement.addEventListener('timeupdate', () => {
+                        if (this.audioElement.duration) {
+                            this.audioProgress = (this.audioElement.currentTime / this.audioElement.duration) * 100;
+                        }
+                    });
+                }
+            });
+        },
+
+        playOrReplay() {
+            // Ensure we have the audio element
+            if (!this.audioElement) {
+                this.audioElement = document.getElementById('onboarding-audio');
+            }
+            if (this.audioElement) {
+                // If replaying, reset to start
+                if (this.hasStartedPlaying) {
+                    this.audioElement.currentTime = 0;
+                    this.audioProgress = 0;
+                }
+
+                this.audioElement.play().then(() => {
+                    this.isPlaying = true;
+                    this.hasStartedPlaying = true;
+                }).catch(err => {
+                    console.log('Audio play error:', err);
+                });
+            }
+        },
+
+        closePlayer() {
+            if (this.audioElement) {
+                this.audioElement.pause();
+                this.audioElement.currentTime = 0;
+            }
+            this.isPlaying = false;
+            this.showPlayer = false;
+        },
 
         interestOptions: [
             { id: 'jobs_abroad', label: 'Jobs Abroad', emoji: '🌍' },

@@ -12,14 +12,18 @@
 {% endblock %}
 
 {% block content %}
-<div class="onboarding-page" x-data="onboardingFlow()">
+<div class="onboarding-page" x-data="onboardingFlow()" x-init="init()">
     
     <!-- Tech Mesh Background -->
     <canvas id="mesh-canvas"></canvas>
     
     <div class="onboarding-content">
         <div class="onboarding-header">
-            <div class="onboarding-logo">Gist4U</div>
+            <div class="header-row">
+                <div class="onboarding-logo">Gist4U</div>
+                <button class="audio-play-btn" @click="showPlayer = true; playAudio()" title="Listen to intro">
+                </button>
+            </div>
             <p class="onboarding-subtitle">Let's personalize your experience</p>
             
             <div class="onboarding-progress">
@@ -29,6 +33,34 @@
                 </template>
             </div>
         </div>
+        
+        <!-- Audio Player Modal -->
+        <div class="audio-modal-overlay" x-show="showPlayer" x-transition.opacity>
+            <div class="audio-modal" x-show="showPlayer" x-transition.scale.origin.center>
+                <div class="audio-blob-container">
+                    <!-- Progress Ring -->
+                    <svg class="progress-ring" viewBox="0 0 130 130">
+                        <circle class="progress-ring-circle" cx="65" cy="65" r="60"/>
+                        <circle class="progress-ring-progress" cx="65" cy="65" r="60" 
+                                :style="{ strokeDashoffset: 377 - (377 * audioProgress / 100) }"/>
+                    </svg>
+                    <div class="audio-blob" :class="{ 'playing': isPlaying }"></div>
+                </div>
+                
+                <p class="audio-modal-text">Your future matters to us!!!</p>
+                
+                <div class="audio-modal-buttons">
+                    <button class="btn-play" @click="playOrReplay()" x-text="hasStartedPlaying ? 'Replay' : 'Play'">
+                        Play
+                    </button>
+                    <button class="btn-letsgo" @click="closePlayer()" :disabled="audioProgress < 50" :class="{ 'disabled': audioProgress < 50 }">
+                        Let's Go →
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <audio id="onboarding-audio" src="{% static 'web/audio/gist4u_onboarding_message_en.mp3' %}" preload="auto"></audio>
         
         <div class="step-container">
             <!-- Step 1: Phone Number -->
