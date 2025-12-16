@@ -490,7 +490,7 @@ body {
     background: #fff;
     border: 3px solid #111;
     border-radius: 20px;
-    box-shadow: 6px 6px 0px 0px #111;
+    box-shadow: 6px 6px 0px 0px #FACC15;
     min-width: 270px;
     overflow: hidden;
 }
@@ -530,34 +530,84 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid #111;
+    border: 2px;
     border-radius: 12px;
-    box-shadow: 2px 2px 0px 0px #111;
 }
 
 .quote-icon {
-    background: #E0E7FF;
-    color: #4F46E5;
+    background: #F3F4F6;
+    color: #6B7280;
 }
 
 .relax-icon {
-    background: #FEF3C7;
-    color: #D97706;
+    background: #F3F4F6;
+    color: #6B7280;
 }
 
 .mentor-icon {
-    background: #DBEAFE;
-    color: #2563EB;
+    background: #F3F4F6;
+    color: #6B7280;
 }
 
 .partners-icon {
-    background: #FCE7F3;
-    color: #DB2777;
+    background: #F3F4F6;
+    color: #6B7280;
+}
+
+.bookmarks-icon {
+    background: #F3F4F6;
+    color: #6B7280;
 }
 
 .settings-icon {
     background: #F3F4F6;
     color: #6B7280;
+}
+
+/* Profile Header */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 14px 10px;
+}
+
+.profile-header-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #FACC15, #F59E0B);
+    border: 2px solid #111;
+    box-shadow: 2px 2px 0px 0px #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #111;
+}
+
+.profile-header-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.profile-greeting {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #111;
+}
+
+.profile-name {
+    font-size: 0.75rem;
+    color: #666;
+}
+
+.profile-divider {
+    height: 1px;
+    background: #eee;
+    margin: 4px 14px 8px;
 }
 
 /* Translate utility for modal */
