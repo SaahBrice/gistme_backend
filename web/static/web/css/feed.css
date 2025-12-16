@@ -41,25 +41,28 @@ body {
     justify-content: space-between;
 }
 
-.nav-left {
+/* Oval pill container for profile + notification */
+.nav-left-pill {
     display: flex;
     align-items: center;
     gap: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 8px;
+    border-radius: 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Profile Avatar */
 .profile-avatar {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background: linear-gradient(135deg, #FACC15, #F59E0B);
-    border: 2px solid #FACC15;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     transition: transform 0.2s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .profile-avatar:active {
@@ -73,13 +76,13 @@ body {
     text-transform: uppercase;
 }
 
-/* Notification Button */
+/* Notification Button (inside pill) */
 .notification-btn {
     position: relative;
-    width: 36px;
-    height: 36px;
+    width: 38px;
+    height: 38px;
     border: none;
-    background: rgba(255, 255, 255, 0.9);
+    background: transparent;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -87,7 +90,6 @@ body {
     color: #333;
     border-radius: 50%;
     transition: all 0.2s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .notification-btn:active {
@@ -96,10 +98,10 @@ body {
 
 .notification-dot {
     position: absolute;
-    top: 6px;
-    right: 6px;
-    width: 8px;
-    height: 8px;
+    top: 8px;
+    right: 8px;
+    width: 10px;
+    height: 10px;
     background: #FACC15;
     border-radius: 50%;
     border: 2px solid #fff;
@@ -122,8 +124,8 @@ body {
 
 /* Expand Button */
 .expand-btn {
-    width: 36px;
-    height: 36px;
+    width: 48px;
+    height: 48px;
     border: none;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 50%;
@@ -152,6 +154,7 @@ body {
 
 .nav-chips {
     display: flex;
+    justify-content: flex-end;
     gap: 6px;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -167,11 +170,11 @@ body {
     display: flex;
     align-items: center;
     gap: 4px;
-    padding: 8px 12px;
+    padding: 9px 14px;
     border: none;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 20px;
-    font-size: 0.78rem;
+    font-size: 0.82rem;
     font-weight: 500;
     color: #333;
     cursor: pointer;
@@ -212,11 +215,11 @@ body {
     display: flex;
     align-items: center;
     gap: 3px;
-    padding: 5px 10px;
+    padding: 6px 11px;
     border: none;
     background: rgba(255, 255, 255, 0.85);
     border-radius: 14px;
-    font-size: 0.7rem;
+    font-size: 0.73rem;
     font-weight: 500;
     color: #444;
     cursor: pointer;
@@ -280,9 +283,16 @@ body {
     overflow-y: auto;
     overflow-x: hidden;
     scroll-snap-type: y mandatory;
+    scroll-padding-top: 40px;
     -webkit-overflow-scrolling: touch;
     padding-bottom: 100px;
     scroll-behavior: smooth;
+}
+
+/* Top spacer to push first card down */
+.feed-spacer {
+    height: 20px;
+    flex-shrink: 0;
 }
 
 /* Feed Card - Full screen style */
@@ -302,6 +312,11 @@ body {
     transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
     transform-origin: center top;
     will-change: transform, filter, opacity;
+}
+
+.feed-card:first-child,
+.feed-card:first-of-type {
+    margin-top: 20px;
 }
 
 .feed-card:active {
@@ -324,19 +339,7 @@ body {
     border-radius: 10px;
 }
 
-.card-category {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    padding: 6px 14px;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: #333;
-    backdrop-filter: blur(4px);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
+
 
 /* Card Content - white text, readable */
 .card-content {
