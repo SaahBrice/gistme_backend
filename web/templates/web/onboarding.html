@@ -78,11 +78,11 @@
         <audio id="onboarding-audio" src="{% static 'web/audio/gist4u_onboarding_message_en.mp3' %}" preload="auto"></audio>
         
         <div class="step-container">
-            <!-- Step 1: Phone Number -->
+            <!-- Step 1: Phone Number & Region -->
             <div class="step-card" x-show="step === 1">
                 <div class="step-emoji">📱</div>
-                <h2 class="step-title">Your Phone Number</h2>
-                <p class="step-subtitle">We'll send you important updates via SMS</p>
+                <h2 class="step-title">Let's get started</h2>
+                <p class="step-subtitle">Your phone & where you're based</p>
                 
                 <div class="phone-input-group">
                     <span class="phone-prefix">+237</span>
@@ -95,8 +95,18 @@
                 </div>
                 <p class="error-text" x-show="phoneError" x-text="phoneError"></p>
                 
+                <label class="group-label">Your Region</label>
+                <div class="region-grid">
+                    <template x-for="option in regionOptions" :key="option.value">
+                        <div class="region-chip" 
+                             :class="{ 'selected': region === option.value }"
+                             @click="region = option.value"
+                             x-text="option.label"></div>
+                    </template>
+                </div>
+                
                 <div class="step-nav">
-                    <button class="btn-next" @click="nextStep()" :disabled="!isPhoneValid">
+                    <button class="btn-next" @click="nextStep()" :disabled="!isPhoneValid || !region">
                         Continue →
                     </button>
                 </div>

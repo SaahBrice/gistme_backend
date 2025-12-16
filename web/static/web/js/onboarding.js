@@ -16,6 +16,7 @@ function onboardingFlow() {
         phone: '',
         phoneError: '',
         isPhoneValid: false,
+        region: '',
         interests: [],
         education: '',
         background: '',
@@ -111,6 +112,20 @@ function onboardingFlow() {
             { value: '21:00', time: '9 PM', label: 'Night Owl' },
         ],
 
+        regionOptions: [
+            { value: 'ADAMAWA', label: 'Adamawa' },
+            { value: 'CENTRE', label: 'Centre' },
+            { value: 'EAST', label: 'East' },
+            { value: 'FAR_NORTH', label: 'Far North' },
+            { value: 'LITTORAL', label: 'Littoral' },
+            { value: 'NORTH', label: 'North' },
+            { value: 'NORTHWEST', label: 'Northwest' },
+            { value: 'SOUTH', label: 'South' },
+            { value: 'SOUTHWEST', label: 'Southwest' },
+            { value: 'WEST', label: 'West' },
+            { value: 'RAS', label: 'Prefer not to say' },
+        ],
+
         validatePhone() {
             const cleaned = this.phone.replace(/\D/g, '');
             this.phone = cleaned;
@@ -172,6 +187,7 @@ function onboardingFlow() {
                     },
                     body: JSON.stringify({
                         phone: '+237' + this.phone,
+                        region: this.region,
                         interests: this.interests,
                         education_level: this.education,
                         background: this.background,

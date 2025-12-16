@@ -232,6 +232,7 @@ class OnboardingView(APIView):
             
             # Update fields
             profile.phone = request.data.get('phone', '')
+            profile.region = request.data.get('region', 'RAS')
             profile.interests = request.data.get('interests', [])
             profile.education_level = request.data.get('education_level', 'RAS')
             profile.background = request.data.get('background', 'RAS')

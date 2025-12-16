@@ -23,8 +23,23 @@ class UserProfile(models.Model):
         ('RAS', 'Prefer not to say'),
     ]
     
+    REGION_CHOICES = [
+        ('ADAMAWA', 'Adamawa'),
+        ('CENTRE', 'Centre'),
+        ('EAST', 'East'),
+        ('FAR_NORTH', 'Far North'),
+        ('LITTORAL', 'Littoral'),
+        ('NORTH', 'North'),
+        ('NORTHWEST', 'Northwest'),
+        ('SOUTH', 'South'),
+        ('SOUTHWEST', 'Southwest'),
+        ('WEST', 'West'),
+        ('RAS', 'Prefer not to say'),
+    ]
+    
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
     phone = models.CharField(max_length=20, help_text="Cameroon phone number (6XXXXXXXX)")
+    region = models.CharField(max_length=20, choices=REGION_CHOICES, default='RAS', help_text="Region of residence")
     
     # Interests stored as JSON list
     interests = models.JSONField(default=list, help_text="Selected interest categories")

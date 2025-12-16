@@ -754,3 +754,46 @@
     cursor: pointer;
     text-decoration: underline;
 }
+
+/* Group Label */
+.group-label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #333;
+    margin: 1.25rem 0 0.75rem;
+    text-align: left;
+}
+
+/* Region Selection Grid */
+.region-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 1rem;
+}
+
+.region-chip {
+    padding: 10px 8px;
+    background: #f8f8f8;
+    border: 2px solid #e5e5e5;
+    border-radius: 12px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: #555;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.15s ease;
+}
+
+.region-chip:hover {
+    border-color: #ccc;
+    background: #f0f0f0;
+}
+
+.region-chip.selected {
+    background: #FACC15;
+    border-color: #111;
+    color: #111;
+    font-weight: 600;
+}

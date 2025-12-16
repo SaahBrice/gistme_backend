@@ -10343,3 +10343,78 @@ INFO 2025-12-16 02:59:40,245 basehttp 50744 62732 "GET /static/web/favicon.svg H
 INFO 2025-12-16 02:59:40,245 basehttp 50744 61796 "GET /static/web/manifest.json HTTP/1.1" 200 1427
 INFO 2025-12-16 02:59:40,267 basehttp 50744 62732 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
 INFO 2025-12-16 02:59:41,831 basehttp 50744 62732 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-16 23:39:47,474 autoreload 66700 69760 Watching for file changes with StatReloader
+INFO 2025-12-16 23:39:49,043 basehttp 66700 61484 "GET / HTTP/1.1" 302 0
+INFO 2025-12-16 23:39:49,159 basehttp 66700 61484 "GET /feed/ HTTP/1.1" 200 25178
+WARNING 2025-12-16 23:39:49,395 log 66700 61484 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-16 23:39:49,396 basehttp 66700 61484 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 7020
+INFO 2025-12-16 23:39:50,038 basehttp 66700 65176 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-16 23:39:50,046 basehttp 66700 43180 "GET /static/web/js/main.js HTTP/1.1" 200 4854
+INFO 2025-12-16 23:39:50,057 basehttp 66700 73188 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-16 23:39:50,080 basehttp 66700 54948 "GET /static/web/css/feed.css HTTP/1.1" 200 10994
+INFO 2025-12-16 23:39:50,091 basehttp 66700 61484 "GET /static/web/js/feed.js HTTP/1.1" 200 12660
+INFO 2025-12-16 23:39:50,099 basehttp 66700 55924 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-16 23:39:50,502 basehttp 66700 55924 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-16 23:39:50,503 basehttp 66700 69712 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-16 23:39:50,524 basehttp 66700 55924 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-16 23:39:52,084 basehttp 66700 55924 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-16 23:39:55,171 basehttp 66700 55924 "GET / HTTP/1.1" 302 0
+INFO 2025-12-16 23:39:55,193 basehttp 66700 55924 "GET /feed/ HTTP/1.1" 200 25178
+WARNING 2025-12-16 23:39:55,262 log 66700 55924 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-16 23:39:55,265 basehttp 66700 55924 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 7020
+INFO 2025-12-16 23:39:55,276 basehttp 66700 54948 "GET /static/web/css/feed.css HTTP/1.1" 200 10994
+INFO 2025-12-16 23:39:55,277 basehttp 66700 43180 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-16 23:39:55,277 basehttp 66700 61484 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-16 23:39:55,278 basehttp 66700 65176 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-16 23:39:55,278 basehttp 66700 73188 "GET /static/web/js/main.js HTTP/1.1" 200 4854
+INFO 2025-12-16 23:39:55,278 basehttp 66700 55924 "GET /static/web/js/feed.js HTTP/1.1" 200 12660
+INFO 2025-12-16 23:39:56,226 basehttp 66700 69712 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-16 23:39:56,272 basehttp 66700 55924 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-16 23:39:57,838 basehttp 66700 55924 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-16 23:40:08,501 basehttp 66700 55924 "GET /onboarding/ HTTP/1.1" 200 23186
+WARNING 2025-12-16 23:40:08,581 log 66700 55924 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-16 23:40:08,581 basehttp 66700 55924 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 7020
+INFO 2025-12-16 23:40:08,592 basehttp 66700 55924 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-16 23:40:08,598 basehttp 66700 61484 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-16 23:40:08,598 basehttp 66700 65176 "GET /static/web/js/main.js HTTP/1.1" 200 4854
+INFO 2025-12-16 23:40:08,598 basehttp 66700 43180 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-16 23:40:08,613 basehttp 66700 73188 "GET /static/web/css/onboarding.css HTTP/1.1" 200 14585
+INFO 2025-12-16 23:40:08,638 basehttp 66700 55924 "GET /static/web/js/onboarding.js HTTP/1.1" 200 11501
+INFO 2025-12-16 23:40:08,951 basehttp 66700 55924 "GET /static/web/audio/gist4u_onboarding_message_en.mp3 HTTP/1.1" 200 329588
+INFO 2025-12-16 23:40:09,511 basehttp 66700 69712 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-16 23:40:09,538 basehttp 66700 55924 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-16 23:40:11,249 basehttp 66700 55924 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-16 23:40:12,486 basehttp 66700 55924 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-16 23:44:25,154 autoreload 66700 69760 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\models.py changed, reloading.
+INFO 2025-12-16 23:44:27,183 autoreload 73392 2204 Watching for file changes with StatReloader
+INFO 2025-12-16 23:44:42,154 autoreload 73392 2204 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\views.py changed, reloading.
+INFO 2025-12-16 23:44:44,050 autoreload 64040 55476 Watching for file changes with StatReloader
+INFO 2025-12-16 23:47:42,011 basehttp 64040 73932 "GET /onboarding/ HTTP/1.1" 200 23703
+WARNING 2025-12-16 23:47:42,169 log 64040 73932 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-16 23:47:42,171 basehttp 64040 73932 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 7020
+INFO 2025-12-16 23:47:42,767 basehttp 64040 43116 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-16 23:47:42,777 basehttp 64040 41524 "GET /static/web/js/main.js HTTP/1.1" 200 4854
+INFO 2025-12-16 23:47:42,786 basehttp 64040 73052 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-16 23:47:42,788 basehttp 64040 43116 "GET /static/web/audio/gist4u_onboarding_message_en.mp3 HTTP/1.1" 200 329588
+INFO 2025-12-16 23:47:42,791 basehttp 64040 65020 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-16 23:47:42,800 basehttp 64040 73932 "GET /static/web/js/onboarding.js HTTP/1.1" 200 12189
+INFO 2025-12-16 23:47:42,804 basehttp 64040 70792 "GET /static/web/css/onboarding.css HTTP/1.1" 200 15397
+INFO 2025-12-16 23:47:43,332 basehttp 64040 70792 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-16 23:47:43,355 basehttp 64040 58944 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-16 23:47:43,394 basehttp 64040 70792 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-16 23:47:44,477 basehttp 64040 70792 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-16 23:47:45,041 basehttp 64040 70792 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-16 23:49:06,536 views 64040 70792 Onboarding completed for user gist4u@gmail.com
+INFO 2025-12-16 23:49:06,544 basehttp 64040 70792 "POST /api/onboarding/ HTTP/1.1" 200 63
+INFO 2025-12-16 23:49:06,580 basehttp 64040 70792 "GET /feed/ HTTP/1.1" 200 25178
+WARNING 2025-12-16 23:49:06,673 log 64040 70792 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-16 23:49:06,674 basehttp 64040 70792 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 7020
+INFO 2025-12-16 23:49:06,686 basehttp 64040 70792 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-16 23:49:06,687 basehttp 64040 73932 "GET /static/web/css/feed.css HTTP/1.1" 200 10994
+INFO 2025-12-16 23:49:06,693 basehttp 64040 65020 "GET /static/web/js/main.js HTTP/1.1" 200 4854
+INFO 2025-12-16 23:49:06,698 basehttp 64040 70792 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-16 23:49:06,698 basehttp 64040 73932 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-16 23:49:06,698 basehttp 64040 43116 "GET /static/web/js/feed.js HTTP/1.1" 200 12660
+INFO 2025-12-16 23:49:07,652 basehttp 64040 58944 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-16 23:49:07,671 basehttp 64040 43116 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-16 23:49:09,233 basehttp 64040 43116 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
