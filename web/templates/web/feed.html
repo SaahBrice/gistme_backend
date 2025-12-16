@@ -14,67 +14,6 @@
 {% block content %}
 <div class="feed-page" x-data="feedApp()" x-init="init()">
     
-    <!-- Fixed Header Area -->
-    <div class="fixed-header">
-        <!-- Header -->
-        <header class="feed-header">
-            <div class="header-left">
-                <div class="profile-avatar" @click="showProfile = true">
-                    <span class="avatar-letter">{{ request.user.first_name|slice:":1"|default:"U" }}</span>
-                </div>
-            </div>
-            
-            <div class="header-right">
-                <button class="notification-btn" @click="showNotifications = true">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
-                        <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
-                    </svg>
-                    <span class="notification-dot" x-show="hasNewNotifications"></span>
-                </button>
-            </div>
-        </header>
-        
-        <!-- Main Tabs -->
-        <nav class="main-tabs">
-            <button class="tab-btn" :class="{ 'active': activeTab === 'news' }" 
-                    @click="setTab('news')">
-                News
-            </button>
-            <button class="tab-btn" :class="{ 'active': activeTab === 'opportunities' }" 
-                    @click="setTab('opportunities')">
-                Opportunities
-            </button>
-            <button class="tab-btn" :class="{ 'active': activeTab === 'foryou' }" 
-                    @click="setTab('foryou')">
-                For You
-            </button>
-        </nav>
-        
-        <!-- Secondary Filter Chips -->
-        <div class="filter-chips-container" 
-             x-show="showFilters" 
-             x-transition:enter="filter-enter"
-             x-transition:enter-start="filter-enter-start"
-             x-transition:enter-end="filter-enter-end"
-             x-transition:leave="filter-leave"
-             x-transition:leave-start="filter-leave-start"
-             x-transition:leave-end="filter-leave-end"
-             @mouseover="resetFilterTimeout()"
-             @touchstart="resetFilterTimeout()">
-            <div class="filter-chips">
-                <template x-for="cat in currentCategories" :key="cat.id">
-                    <button class="filter-chip" 
-                            :class="{ 'active': activeCategory === cat.id }"
-                            @click="setCategory(cat.id)">
-                        <span x-text="cat.emoji"></span>
-                        <span x-text="cat.name"></span>
-                    </button>
-                </template>
-            </div>
-        </div>
-    </div>
-    
     <!-- Feed Cards - Snap Scroll Container -->
     <main class="feed-content" id="feed-scroll" @scroll="onScroll($event)">
         <template x-for="(article, index) in filteredArticles" :key="article.id">
@@ -125,6 +64,91 @@
             </article>
         </template>
     </main>
+    
+    <!-- Bottom Navigation Bar -->
+    <div class="bottom-nav">
+        
+        <!-- Sub-category Chips (appear above main nav when active) -->
+        <div class="sub-chips-container" 
+             x-show="showSubChips"
+             x-transition:enter="transition ease-out duration-200"
+             x-transition:enter-start="opacity-0 translate-y-4"
+             x-transition:enter-end="opacity-100 translate-y-0"
+             x-transition:leave="transition ease-in duration-150"
+             x-transition:leave-start="opacity-100 translate-y-0"
+             x-transition:leave-end="opacity-0 translate-y-4"
+             @mouseover="resetNavTimeout()"
+             @touchstart="resetNavTimeout()">
+            <div class="sub-chips">
+                <template x-for="cat in currentCategories" :key="cat.id">
+                    <button class="sub-chip" 
+                            :class="{ 'active': activeCategory === cat.id }"
+                            @click="setCategory(cat.id)">
+                        <span x-text="cat.emoji"></span>
+                        <span x-text="cat.name"></span>
+                    </button>
+                </template>
+            </div>
+        </div>
+        
+        <!-- Main Tab Chips (appear when expanded) -->
+        <div class="nav-chips-wrapper" 
+             x-show="navExpanded"
+             x-transition:enter="transition ease-out duration-200"
+             x-transition:enter-start="opacity-0 translate-y-4"
+             x-transition:enter-end="opacity-100 translate-y-0"
+             x-transition:leave="transition ease-in duration-150"
+             x-transition:leave-start="opacity-100"
+             x-transition:leave-end="opacity-0 translate-y-4"
+             @mouseover="resetNavTimeout()"
+             @touchstart="resetNavTimeout()">
+            <div class="nav-chips">
+                <button class="nav-chip" 
+                        :class="{ 'active': activeTab === 'news' }"
+                        @click="setTab('news')">
+                    📰 News
+                </button>
+                <button class="nav-chip" 
+                        :class="{ 'active': activeTab === 'opportunities' }"
+                        @click="setTab('opportunities')">
+                    🎯 Opps
+                </button>
+                <button class="nav-chip" 
+                        :class="{ 'active': activeTab === 'foryou' }"
+                        @click="setTab('foryou')">
+                    ✨ For You
+                </button>
+            </div>
+        </div>
+        
+        <!-- Bottom Bar Controls -->
+        <div class="nav-bar">
+            <!-- Left: Profile + Notification -->
+            <div class="nav-left">
+                <div class="profile-avatar" @click="showProfile = true">
+                    <span class="avatar-letter">{{ request.user.first_name|slice:":1"|default:"U" }}</span>
+                </div>
+                <button class="notification-btn" @click="showNotifications = true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                    </svg>
+                    <span class="notification-dot" x-show="hasNewNotifications"></span>
+                </button>
+            </div>
+            
+            <!-- Right: Expand Button -->
+            <button class="expand-btn" 
+                    @click="toggleNav()"
+                    :class="{ 'expanded': navExpanded }">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline x-show="!navExpanded" points="9 18 15 12 9 6"/>
+                    <polyline x-show="navExpanded" points="18 15 12 9 6 15"/>
+                </svg>
+            </button>
+        </div>
+        
+    </div>
     
 </div>
 {% endblock %}

@@ -1,18 +1,19 @@
-// Feed Page - Alpine.js Component with Snap Scroll
+// Feed Page - Alpine.js Component with Snap Scroll and Collapsible Nav
 function feedApp() {
     return {
         // State
         activeTab: 'news',
         activeCategory: 'all',
-        showFilters: true,
-        filterTimeout: null,
+        navExpanded: false, // Navigation starts collapsed
+        showSubChips: false, // Sub-chips hidden by default
+        navTimeout: null,
         hasNewNotifications: true,
         isLoading: false,
         playingId: null,
         activeCardIndex: 0,
         scrollContainer: null,
         cardHeight: 0,
-        baseHue: Math.random() * 360, // Starting hue for color harmony
+        baseHue: Math.random() * 360,
 
         // Categories per tab
         newsCategories: [
@@ -39,6 +40,11 @@ function feedApp() {
             { id: 'saved', name: 'Saved', emoji: '🔖' },
             { id: 'recent', name: 'Recently Viewed', emoji: '👁️' },
         ],
+
+        // Check if current tab has sub-categories
+        get hasSubCategories() {
+            return this.activeTab === 'news' || this.activeTab === 'opportunities';
+        },
 
         // Dummy articles data
         articles: [
@@ -152,14 +158,9 @@ function feedApp() {
 
         // Methods
         init() {
-            this.startFilterTimeout();
-
-            // Get scroll container after DOM ready
             this.$nextTick(() => {
                 this.scrollContainer = document.getElementById('feed-scroll');
                 this.calculateCardHeight();
-
-                // Recalculate on resize
                 window.addEventListener('resize', () => this.calculateCardHeight());
             });
         },
@@ -173,17 +174,46 @@ function feedApp() {
             }
         },
 
+        // Navigation toggle
+        toggleNav() {
+            if (this.navExpanded) {
+                this.collapseNav();
+            } else {
+                this.expandNav();
+            }
+        },
+
+        expandNav() {
+            this.navExpanded = true;
+            this.resetNavTimeout();
+        },
+
+        collapseNav() {
+            this.showSubChips = false;
+            setTimeout(() => {
+                this.navExpanded = false;
+            }, 100);
+        },
+
+        startNavTimeout() {
+            this.navTimeout = setTimeout(() => {
+                this.collapseNav();
+            }, 5000); // Collapse after 5 seconds of inactivity
+        },
+
+        resetNavTimeout() {
+            if (this.navTimeout) {
+                clearTimeout(this.navTimeout);
+            }
+            this.startNavTimeout();
+        },
+
         // Generate harmonious gradient background for each card
         getCardBackground(index) {
-            // Each card shifts hue by 35 degrees for visible but harmonious color change
             const hueShift = 35;
             const hue = (this.baseHue + (index * hueShift)) % 360;
-
-            // Keep saturation low-medium and lightness dark for readability
-            const saturation = 20 + (index % 4) * 8; // 20-44%
-            const lightness = 18 + (index % 3) * 4; // 18-26%
-
-            // Secondary color shifted for gradient effect
+            const saturation = 20 + (index % 4) * 8;
+            const lightness = 18 + (index % 3) * 4;
             const hue2 = (hue + 20) % 360;
             const lightness2 = lightness + 6;
 
@@ -197,31 +227,13 @@ function feedApp() {
             const background = this.getCardBackground(index);
 
             if (diff === 0) {
-                return {
-                    background: background,
-                    transform: 'scale(1)',
-                    filter: 'blur(0)',
-                    opacity: 1
-                };
+                return { background, transform: 'scale(1)', filter: 'blur(0)', opacity: 1 };
             } else if (diff === 1) {
-                return {
-                    background: background,
-                    transform: 'scale(0.92)',
-                    filter: 'blur(2px)',
-                    opacity: 0.7
-                };
+                return { background, transform: 'scale(0.92)', filter: 'blur(2px)', opacity: 0.7 };
             } else if (diff === -1) {
-                return {
-                    background: background,
-                    transform: 'scale(0.92)',
-                    opacity: 0.5
-                };
+                return { background, transform: 'scale(0.92)', opacity: 0.5 };
             } else {
-                return {
-                    background: background,
-                    transform: 'scale(0.85)',
-                    opacity: 0.3
-                };
+                return { background, transform: 'scale(0.85)', opacity: 0.3 };
             }
         },
 
@@ -229,8 +241,15 @@ function feedApp() {
             this.activeTab = tab;
             this.activeCategory = 'all';
             this.activeCardIndex = 0;
-            this.showFilters = true;
-            this.resetFilterTimeout();
+
+            // Show sub-chips only if this tab has categories
+            if (tab === 'news' || tab === 'opportunities') {
+                this.showSubChips = true;
+            } else {
+                this.showSubChips = false;
+            }
+
+            this.resetNavTimeout();
 
             if (this.scrollContainer) {
                 this.scrollContainer.scrollTop = 0;
@@ -240,25 +259,11 @@ function feedApp() {
         setCategory(categoryId) {
             this.activeCategory = categoryId;
             this.activeCardIndex = 0;
-            this.resetFilterTimeout();
+            this.resetNavTimeout();
 
             if (this.scrollContainer) {
                 this.scrollContainer.scrollTop = 0;
             }
-        },
-
-        startFilterTimeout() {
-            this.filterTimeout = setTimeout(() => {
-                this.showFilters = false;
-            }, 4000);
-        },
-
-        resetFilterTimeout() {
-            if (this.filterTimeout) {
-                clearTimeout(this.filterTimeout);
-            }
-            this.showFilters = true;
-            this.startFilterTimeout();
         },
 
         onScroll(event) {
