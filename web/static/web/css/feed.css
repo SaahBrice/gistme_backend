@@ -614,3 +614,263 @@ body {
 .translate-y-8 {
     transform: translateY(2rem);
 }
+
+.translate-x-8 {
+    transform: translateX(2rem);
+}
+
+/* Settings Modal */
+.settings-modal {
+    position: fixed;
+    bottom: 100px;
+    left: 16px;
+    z-index: 202;
+    background: #fff;
+    border: 3px solid #111;
+    border-radius: 20px;
+    box-shadow: 6px 6px 0px 0px #FACC15;
+    width: 300px;
+    max-height: 70vh;
+    overflow: hidden;
+}
+
+.settings-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+.settings-back-btn {
+    width: 32px;
+    height: 32px;
+    border: 2px solid #111;
+    border-radius: 10px;
+    background: #f5f5f5;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #111;
+}
+
+.settings-content {
+    padding: 10px;
+    overflow-y: auto;
+    max-height: calc(70vh - 60px);
+}
+
+.settings-section {
+    margin-bottom: 16px;
+}
+
+.settings-section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #888;
+    text-transform: uppercase;
+    padding: 8px 8px 4px;
+}
+
+.settings-field {
+    padding: 6px 8px;
+}
+
+.settings-field label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.settings-field input,
+.settings-field select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #e5e5e5;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #111;
+    background: #fff;
+}
+
+.settings-field input:focus,
+.settings-field select:focus {
+    outline: none;
+    border-color: #FACC15;
+}
+
+.settings-field input:disabled {
+    background: #f5f5f5;
+    color: #888;
+}
+
+.settings-toggle-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 8px;
+}
+
+.settings-toggle {
+    width: 44px;
+    height: 24px;
+    background: #ddd;
+    border-radius: 12px;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.2s;
+}
+
+.settings-toggle.active {
+    background: #FACC15;
+}
+
+.settings-toggle::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform 0.2s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.settings-toggle.active::after {
+    transform: translateX(20px);
+}
+
+.settings-save-btn {
+    display: block;
+    width: calc(100% - 16px);
+    margin: 16px 8px;
+    padding: 12px;
+    background: #111;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.settings-save-btn:disabled {
+    opacity: 0.6;
+}
+
+.settings-action-btn {
+    display: block;
+    width: calc(100% - 16px);
+    margin: 6px 8px;
+    padding: 12px;
+    background: #f5f5f5;
+    border: 2px solid #e5e5e5;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+    text-align: left;
+}
+
+.settings-action-btn.danger {
+    color: #DC2626;
+    border-color: #FECACA;
+    background: #FEF2F2;
+}
+
+.settings-version {
+    text-align: center;
+    padding: 16px;
+    color: #aaa;
+    font-size: 0.75rem;
+}
+
+/* Terms Modal */
+.terms-content h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #111;
+    margin: 12px 0 6px;
+}
+
+.terms-content p {
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.5;
+    margin: 0 0 10px;
+}
+
+/* Delete Popup */
+.delete-popup-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 300;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-popup {
+    background: #fff;
+    border: 3px solid #111;
+    border-radius: 20px;
+    box-shadow: 6px 6px 0px 0px #DC2626;
+    padding: 24px;
+    max-width: 280px;
+    text-align: center;
+}
+
+.delete-popup-icon {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+}
+
+.delete-popup-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #111;
+    margin-bottom: 8px;
+}
+
+.delete-popup-text {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.delete-popup-email {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #f5f5f5;
+    border: 2px solid #111;
+    border-radius: 10px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.delete-popup-close {
+    padding: 10px 24px;
+    background: #111;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}

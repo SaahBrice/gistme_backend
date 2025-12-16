@@ -10,6 +10,21 @@ function feedApp() {
         hasNewNotifications: true,
         showProfile: false, // Profile modal
         showNotifications: false, // Notifications modal
+
+        // Settings modals state
+        showSettings: false,
+        showTerms: false,
+        showDeletePopup: false,
+        pushEnabled: true,
+
+        // Settings form fields
+        settingsName: '',
+        settingsPhone: '',
+        settingsRegion: '',
+        settingsNotifTime: '08:00',
+        settingsLanguage: 'en',
+        savingSettings: false,
+
         isLoading: false,
         playingId: null,
         activeCardIndex: 0,
@@ -174,6 +189,24 @@ function feedApp() {
                     this.cardHeight = cards[0].offsetHeight + 20;
                 }
             }
+        },
+
+        // Settings methods
+        openSettings() {
+            this.showProfile = false;
+            this.showSettings = true;
+        },
+
+        closeSettings() {
+            this.showSettings = false;
+        },
+
+        async saveSettings() {
+            this.savingSettings = true;
+            // TODO: Implement API call to save settings
+            await new Promise(resolve => setTimeout(resolve, 800));
+            this.savingSettings = false;
+            alert('Settings saved!');
         },
 
         // Navigation toggle

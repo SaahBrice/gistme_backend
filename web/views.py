@@ -19,8 +19,15 @@ def index(request):
 @ratelimit(key='ip', rate='10/m', block=True)
 def auth_page(request):
     """Dedicated authentication page with Google + email options"""
-    # If already logged in, redirect to onboarding or feed
+    # If already logged in, check if onboarding is completed
     if request.user.is_authenticated:
+        from .models import UserProfile
+        try:
+            profile = UserProfile.objects.get(user=request.user)
+            if profile.onboarding_completed:
+                return redirect('feed')
+        except UserProfile.DoesNotExist:
+            pass
         return redirect('onboarding')
     
     context = {
@@ -31,6 +38,14 @@ def auth_page(request):
 @login_required
 def onboarding(request):
     """Onboarding page for new users to curate their content"""
+    # If user already completed onboarding, redirect to feed
+    from .models import UserProfile
+    try:
+        profile = UserProfile.objects.get(user=request.user)
+        if profile.onboarding_completed:
+            return redirect('feed')
+    except UserProfile.DoesNotExist:
+        pass
     return render(request, 'web/onboarding.html')
 
 @login_required
