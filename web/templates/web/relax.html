@@ -1,0 +1,445 @@
+{% extends 'web/base.html' %}
+{% load static %}
+
+{% block title %}Relax - Gist4U{% endblock %}
+
+{% block navbar %}{% endblock %}
+{% block footer %}{% endblock %}
+
+{% block extra_head %}
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Inter', -apple-system, sans-serif;
+    overflow: hidden;
+    background: #0a0a0f;
+    transition: background 1s ease;
+}
+
+/* Tech Background */
+.tech-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.grid-pattern {
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridMove 30s linear infinite;
+}
+
+@keyframes gridMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+}
+
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.25;
+    animation: orbFloat 12s ease-in-out infinite;
+    transition: background 1s ease;
+}
+
+.orb-1 { width: 350px; height: 350px; top: 5%; left: 5%; }
+.orb-2 { width: 300px; height: 300px; bottom: 10%; right: 10%; animation-delay: -6s; }
+
+@keyframes orbFloat {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(40px, -30px); }
+}
+
+/* Main Content */
+.relax-page {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    padding-top: max(16px, env(safe-area-inset-top));
+    padding-bottom: max(16px, env(safe-area-inset-bottom));
+}
+
+.relax-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 25px;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.score-display {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #FACC15, #F59E0B);
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #111;
+}
+
+.game-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.level-display {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.9);
+}
+
+/* Game Grid */
+.game-grid {
+    display: grid;
+    gap: 6px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    padding: 16px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+}
+
+/* Mirror line */
+.mirror-line {
+    position: absolute;
+    background: linear-gradient(var(--mirror-angle), transparent 0%, #FACC15 50%, transparent 100%);
+    z-index: 5;
+    pointer-events: none;
+}
+
+.mirror-line.vertical {
+    --mirror-angle: 0deg;
+    top: 12px;
+    bottom: 12px;
+    left: 50%;
+    width: 4px;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.mirror-line.horizontal {
+    --mirror-angle: 90deg;
+    left: 12px;
+    right: 12px;
+    top: 50%;
+    height: 4px;
+    transform: translateY(-50%);
+    border-radius: 2px;
+}
+
+/* Cells */
+.cell {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.08);
+    border: 2px solid rgba(255,255,255,0.12);
+    transition: all 0.15s ease;
+    cursor: pointer;
+}
+
+.cell.pattern {
+    cursor: default;
+}
+
+.cell.pattern.on {
+    background: linear-gradient(135deg, #10B981, #059669);
+    border-color: #10B981;
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+}
+
+.cell.player.on {
+    background: linear-gradient(135deg, #3B82F6, #2563EB);
+    border-color: #3B82F6;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+}
+
+.cell.player:not(.on):hover {
+    background: rgba(255,255,255,0.15);
+    border-color: rgba(255,255,255,0.25);
+}
+
+.cell.won {
+    background: linear-gradient(135deg, #FACC15, #F59E0B) !important;
+    border-color: #FACC15 !important;
+    box-shadow: 0 0 25px rgba(250, 204, 21, 0.5);
+    animation: winPulse 0.5s ease;
+}
+
+@keyframes winPulse {
+    50% { transform: scale(1.15); }
+}
+
+.status-msg {
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.8);
+    padding: 12px 24px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.status-msg.win {
+    background: rgba(16, 185, 129, 0.2);
+    border-color: rgba(16, 185, 129, 0.3);
+    color: #34D399;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="tech-bg">
+    <div class="grid-pattern"></div>
+    <div class="orb orb-1" id="orb1"></div>
+    <div class="orb orb-2" id="orb2"></div>
+</div>
+
+<div class="relax-page" id="app">
+    <header class="relax-header">
+        <a href="/feed/" class="back-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"/>
+            </svg>
+            Back
+        </a>
+        <div class="score-display">⭐ <span id="score">0</span></div>
+    </header>
+    
+    <div class="game-container">
+        <div class="level-display">Level <span id="level">1</span></div>
+        <div class="game-grid" id="grid"></div>
+        <div class="status-msg" id="status">Tap to mirror the green pattern</div>
+    </div>
+</div>
+
+<script>
+(function() {
+    // Color themes (dark soft backgrounds)
+    const themes = [
+        { bg: '#0a0a12', o1: '#10B981', o2: '#3B82F6' },
+        { bg: '#0f0a18', o1: '#8B5CF6', o2: '#EC4899' },
+        { bg: '#0a1212', o1: '#14B8A6', o2: '#06B6D4' },
+        { bg: '#120a0a', o1: '#EF4444', o2: '#F97316' },
+        { bg: '#0a0a18', o1: '#6366F1', o2: '#A78BFA' },
+        { bg: '#0f0f0a', o1: '#EAB308', o2: '#84CC16' },
+    ];
+    
+    let level = 1;
+    let score = 0;
+    let size = 4;
+    let mirror = 'v'; // 'v' or 'h'
+    let pattern = []; // flat array of booleans for pattern side
+    let player = [];  // flat array of booleans for player side
+    let won = false;
+    
+    const gridEl = document.getElementById('grid');
+    const levelEl = document.getElementById('level');
+    const scoreEl = document.getElementById('score');
+    const statusEl = document.getElementById('status');
+    const orb1 = document.getElementById('orb1');
+    const orb2 = document.getElementById('orb2');
+    
+    function init() {
+        newLevel();
+    }
+    
+    function newLevel() {
+        won = false;
+        
+        // Theme
+        const t = themes[(level - 1) % themes.length];
+        document.body.style.background = t.bg;
+        orb1.style.background = t.o1;
+        orb2.style.background = t.o2;
+        
+        // Size: always even (4 or 6) to allow proper halving
+        if (level <= 4) {
+            size = 4;
+        } else {
+            size = 6;
+        }
+        
+        // Mirror alternates
+        mirror = level % 2 === 1 ? 'v' : 'h';
+        
+        // Half cells count
+        const halfRows = Math.floor(size / 2);
+        const halfCols = Math.floor(size / 2);
+        const half = halfRows * size; // for horizontal mirror (top/bottom)
+        const halfV = size * halfCols; // for vertical mirror (left/right)
+        const cellCount = mirror === 'v' ? halfV : half;
+        
+        // Reset arrays
+        pattern = [];
+        player = [];
+        for (let i = 0; i < cellCount; i++) {
+            pattern.push(false);
+            player.push(false);
+        }
+        
+        // Fill some pattern cells randomly
+        const fillCount = Math.min(2 + level, Math.floor(cellCount * 0.5));
+        const indices = [];
+        for (let i = 0; i < cellCount; i++) indices.push(i);
+        indices.sort(() => Math.random() - 0.5);
+        for (let i = 0; i < fillCount; i++) {
+            pattern[indices[i]] = true;
+        }
+        
+        render();
+        updateUI();
+    }
+    
+    function render() {
+        gridEl.innerHTML = '';
+        gridEl.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+        
+        // Remove old mirror line if any
+        const oldLine = gridEl.querySelector('.mirror-line');
+        if (oldLine) oldLine.remove();
+        
+        // Add mirror line
+        const lineEl = document.createElement('div');
+        lineEl.className = `mirror-line ${mirror === 'v' ? 'vertical' : 'horizontal'}`;
+        gridEl.appendChild(lineEl);
+        
+        // Create cells
+        for (let row = 0; row < size; row++) {
+            for (let col = 0; col < size; col++) {
+                const cell = document.createElement('div');
+                cell.className = 'cell';
+                
+                let isPattern, idx;
+                if (mirror === 'v') {
+                    // Left half = pattern, right half = player
+                    isPattern = col < size / 2;
+                    if (isPattern) {
+                        idx = row * (size / 2) + col;
+                    } else {
+                        idx = row * (size / 2) + (col - size / 2);
+                    }
+                } else {
+                    // Top half = pattern, bottom half = player
+                    isPattern = row < size / 2;
+                    if (isPattern) {
+                        idx = row * size + col;
+                    } else {
+                        idx = (row - size / 2) * size + col;
+                    }
+                }
+                
+                if (isPattern) {
+                    cell.classList.add('pattern');
+                    if (pattern[idx]) cell.classList.add('on');
+                } else {
+                    cell.classList.add('player');
+                    if (player[idx]) cell.classList.add('on');
+                    cell.dataset.idx = idx;
+                    cell.addEventListener('click', () => tapPlayer(idx));
+                }
+                
+                if (won) cell.classList.add('won');
+                
+                gridEl.appendChild(cell);
+            }
+        }
+    }
+    
+    function tapPlayer(idx) {
+        if (won) return;
+        player[idx] = !player[idx];
+        render();
+        checkWin();
+    }
+    
+    function checkWin() {
+        // Check if player matches pattern
+        for (let i = 0; i < pattern.length; i++) {
+            // Mirror index calculation
+            let mi;
+            if (mirror === 'v') {
+                // Player right mirrors pattern left (same row, mirrored col within half)
+                const pRow = Math.floor(i / (size / 2));
+                const pCol = i % (size / 2);
+                // Mirror col: pattern col 0 -> player col (size/2 - 1), etc.
+                const mCol = (size / 2) - 1 - pCol;
+                mi = pRow * (size / 2) + mCol;
+            } else {
+                // Player bottom mirrors pattern top (mirrored row, same col)
+                const pRow = Math.floor(i / size);
+                const pCol = i % size;
+                const mRow = (size / 2) - 1 - pRow;
+                mi = mRow * size + pCol;
+            }
+            
+            if (pattern[i] !== player[mi]) {
+                return;
+            }
+        }
+        
+        // Won!
+        won = true;
+        const pts = 10 + level * 5;
+        score += pts;
+        
+        render();
+        statusEl.textContent = `✓ Perfect! +${pts} points`;
+        statusEl.classList.add('win');
+        
+        setTimeout(() => {
+            level++;
+            statusEl.textContent = 'Tap to mirror the green pattern';
+            statusEl.classList.remove('win');
+            newLevel();
+        }, 1500);
+    }
+    
+    function updateUI() {
+        levelEl.textContent = level;
+        scoreEl.textContent = score;
+        statusEl.textContent = 'Tap to mirror the green pattern';
+        statusEl.classList.remove('win');
+    }
+    
+    init();
+})();
+</script>
+{% endblock %}

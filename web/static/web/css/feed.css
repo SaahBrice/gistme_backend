@@ -532,17 +532,27 @@ body {
     color: #444;
 }
 
-.profile-menu-item:first-child .menu-icon {
+.quote-icon {
+    background: #E0E7FF;
+    color: #4F46E5;
+}
+
+.relax-icon {
     background: #FEF3C7;
     color: #D97706;
 }
 
-.profile-menu-item:nth-child(2) .menu-icon {
+.mentor-icon {
     background: #DBEAFE;
     color: #2563EB;
 }
 
-.profile-menu-item:last-child .menu-icon {
+.partners-icon {
+    background: #FCE7F3;
+    color: #DB2777;
+}
+
+.settings-icon {
     background: #F3F4F6;
     color: #6B7280;
 }

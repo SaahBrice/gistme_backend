@@ -37,6 +37,10 @@ def onboarding(request):
 def feed(request):
     return render(request, 'web/feed.html')
 
+@login_required
+def relax(request):
+    return render(request, 'web/relax.html')
+
 def legal(request):
     return render(request, 'web/legal.html')
 
