@@ -12,6 +12,7 @@ function feedApp() {
         activeCardIndex: 0,
         scrollContainer: null,
         cardHeight: 0,
+        baseHue: Math.random() * 360, // Starting hue for color harmony
 
         // Categories per tab
         newsCategories: [
@@ -167,37 +168,57 @@ function feedApp() {
             if (this.scrollContainer) {
                 const cards = this.scrollContainer.querySelectorAll('.feed-card');
                 if (cards.length > 0) {
-                    this.cardHeight = cards[0].offsetHeight + 20; // Include margin
+                    this.cardHeight = cards[0].offsetHeight + 20;
                 }
             }
         },
 
+        // Generate harmonious gradient background for each card
+        getCardBackground(index) {
+            // Each card shifts hue by 35 degrees for visible but harmonious color change
+            const hueShift = 35;
+            const hue = (this.baseHue + (index * hueShift)) % 360;
+
+            // Keep saturation low-medium and lightness dark for readability
+            const saturation = 20 + (index % 4) * 8; // 20-44%
+            const lightness = 18 + (index % 3) * 4; // 18-26%
+
+            // Secondary color shifted for gradient effect
+            const hue2 = (hue + 20) % 360;
+            const lightness2 = lightness + 6;
+
+            return `linear-gradient(145deg, 
+                hsl(${hue}, ${saturation}%, ${lightness}%) 0%, 
+                hsl(${hue2}, ${saturation - 3}%, ${lightness2}%) 100%)`;
+        },
+
         getCardStyle(index) {
             const diff = index - this.activeCardIndex;
+            const background = this.getCardBackground(index);
 
             if (diff === 0) {
-                // Active card - full size
                 return {
+                    background: background,
                     transform: 'scale(1)',
                     filter: 'blur(0)',
                     opacity: 1
                 };
             } else if (diff === 1) {
-                // Next card - smaller, slightly blurred
                 return {
+                    background: background,
                     transform: 'scale(0.92)',
                     filter: 'blur(2px)',
                     opacity: 0.7
                 };
             } else if (diff === -1) {
-                // Previous card - smaller
                 return {
+                    background: background,
                     transform: 'scale(0.92)',
                     opacity: 0.5
                 };
             } else {
-                // Far cards
                 return {
+                    background: background,
                     transform: 'scale(0.85)',
                     opacity: 0.3
                 };
@@ -211,7 +232,6 @@ function feedApp() {
             this.showFilters = true;
             this.resetFilterTimeout();
 
-            // Scroll to top when changing tabs
             if (this.scrollContainer) {
                 this.scrollContainer.scrollTop = 0;
             }
@@ -243,9 +263,7 @@ function feedApp() {
 
         onScroll(event) {
             const scrollTop = event.target.scrollTop;
-            const headerOffset = 140; // Fixed header height
 
-            // Calculate which card is currently in view
             if (this.cardHeight > 0) {
                 const newIndex = Math.round(scrollTop / this.cardHeight);
                 if (newIndex !== this.activeCardIndex && newIndex >= 0) {
@@ -256,7 +274,6 @@ function feedApp() {
 
         openArticle(article) {
             console.log('Opening article:', article.id);
-            // window.location.href = `/article/${article.id}/`;
         },
 
         toggleBookmark(article) {
