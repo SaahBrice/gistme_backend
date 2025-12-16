@@ -471,3 +471,83 @@ body {
         transform: none;
     }
 }
+
+/* Modal Backdrop */
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    z-index: 200;
+}
+
+/* Profile Modal */
+.profile-modal {
+    position: fixed;
+    bottom: 100px;
+    left: 16px;
+    z-index: 201;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    min-width: 200px;
+    overflow: hidden;
+}
+
+.profile-modal-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.15s ease;
+    text-align: left;
+    width: 100%;
+}
+
+.profile-menu-item:hover,
+.profile-menu-item:active {
+    background: #f5f5f5;
+}
+
+.menu-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+    border-radius: 12px;
+    color: #444;
+}
+
+.profile-menu-item:first-child .menu-icon {
+    background: #FEF3C7;
+    color: #D97706;
+}
+
+.profile-menu-item:nth-child(2) .menu-icon {
+    background: #DBEAFE;
+    color: #2563EB;
+}
+
+.profile-menu-item:last-child .menu-icon {
+    background: #F3F4F6;
+    color: #6B7280;
+}
+
+/* Translate utility for modal */
+.translate-y-8 {
+    transform: translateY(2rem);
+}

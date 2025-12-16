@@ -8,6 +8,8 @@ function feedApp() {
         showSubChips: false, // Sub-chips hidden by default
         navTimeout: null,
         hasNewNotifications: true,
+        showProfile: false, // Profile modal
+        showNotifications: false, // Notifications modal
         isLoading: false,
         playingId: null,
         activeCardIndex: 0,
