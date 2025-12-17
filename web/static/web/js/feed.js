@@ -16,8 +16,21 @@ function feedApp() {
         showTerms: false,
         showDeletePopup: false,
         showBookmarks: false,
+        showSponsors: false,
         bookmarksList: [],
         pushEnabled: true,
+
+        // Sponsor form fields
+        sponsorType: 'SPONSOR',
+        sponsorName: '',
+        sponsorEmail: '',
+        sponsorPhone: '',
+        sponsorOrg: '',
+        sponsorWebsite: '',
+        sponsorDescription: '',
+        sponsorSubmitting: false,
+        sponsorSubmitted: false,
+        sponsorError: '',
 
         // Settings form fields
         settingsName: '',
@@ -300,6 +313,63 @@ function feedApp() {
             if (article) {
                 article.bookmarked = !article.bookmarked;
             }
+        },
+
+        openSponsors() {
+            this.showProfile = false;
+            this.sponsorError = '';
+            this.sponsorSubmitted = false;
+            this.showSponsors = true;
+        },
+
+        async submitSponsorInquiry() {
+            this.sponsorError = '';
+
+            // Validation
+            if (!this.sponsorName || !this.sponsorEmail || !this.sponsorPhone || !this.sponsorDescription) {
+                this.sponsorError = 'Please fill in all required fields';
+                return;
+            }
+
+            this.sponsorSubmitting = true;
+
+            try {
+                const response = await fetch('/submit-sponsor-partner/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        name: this.sponsorName,
+                        email: this.sponsorEmail,
+                        phone: this.sponsorPhone,
+                        organization_name: this.sponsorOrg,
+                        website: this.sponsorWebsite,
+                        inquiry_type: this.sponsorType,
+                        description: this.sponsorDescription
+                    })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    this.sponsorSubmitted = true;
+                    // Reset form
+                    this.sponsorName = '';
+                    this.sponsorEmail = '';
+                    this.sponsorPhone = '';
+                    this.sponsorOrg = '';
+                    this.sponsorWebsite = '';
+                    this.sponsorDescription = '';
+                    this.sponsorType = 'SPONSOR';
+                } else {
+                    this.sponsorError = data.message || 'Something went wrong';
+                }
+            } catch (error) {
+                this.sponsorError = 'Connection error. Please try again.';
+            }
+
+            this.sponsorSubmitting = false;
         },
 
         async saveSettings() {

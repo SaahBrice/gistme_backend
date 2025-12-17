@@ -235,3 +235,42 @@ class PaymentTransaction(models.Model):
         return f"{self.status} - {self.email} - {self.final_amount} FCFA"
 
 
+class SponsorPartnerInquiry(models.Model):
+    """Model to store sponsor/partner applications"""
+    
+    INQUIRY_TYPE_CHOICES = [
+        ('SPONSOR', 'Sponsor'),
+        ('PARTNER', 'Partner'),
+        ('BOTH', 'Both Sponsor & Partner'),
+    ]
+    
+    # Contact Info
+    name = models.CharField(max_length=100, help_text="Full name of contact person")
+    email = models.EmailField()
+    phone = models.CharField(max_length=20, help_text="Contact phone number")
+    
+    # Organization Info
+    organization_name = models.CharField(max_length=200, blank=True, null=True, help_text="Company/Organization name (optional for individuals)")
+    website = models.URLField(blank=True, null=True, help_text="Website URL (optional)")
+    
+    # Inquiry Details
+    inquiry_type = models.CharField(max_length=20, choices=INQUIRY_TYPE_CHOICES, default='SPONSOR')
+    description = models.TextField(help_text="Brief description of how they want to collaborate")
+    
+    # Status Tracking
+    contacted = models.BooleanField(default=False, help_text="Has our founder contacted them?")
+    notes = models.TextField(blank=True, null=True, help_text="Internal notes about this inquiry")
+    
+    # Timestamps
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        ordering = ['-created_at']
+        verbose_name = 'Sponsor/Partner Inquiry'
+        verbose_name_plural = 'Sponsor/Partner Inquiries'
+    
+    def __str__(self):
+        type_emoji = {'SPONSOR': '💰', 'PARTNER': '🤝', 'BOTH': '💰🤝'}
+        status = '✓' if self.contacted else '○'
+        return f"{status} {type_emoji.get(self.inquiry_type, '')} {self.name} - {self.organization_name or 'Individual'}"

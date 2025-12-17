@@ -148,6 +148,57 @@ def save_settings(request):
 
 @csrf_exempt
 @require_http_methods(["POST"])
+@ratelimit(key='ip', rate='5/h', block=True)
+def submit_sponsor_partner(request):
+    """API endpoint to submit sponsor/partner inquiry"""
+    from .models import SponsorPartnerInquiry
+    
+    try:
+        data = json.loads(request.body)
+        
+        # Required fields
+        name = data.get('name', '').strip()
+        email = data.get('email', '').strip()
+        phone = data.get('phone', '').strip()
+        inquiry_type = data.get('inquiry_type', 'SPONSOR')
+        description = data.get('description', '').strip()
+        
+        # Optional fields
+        organization_name = data.get('organization_name', '').strip() or None
+        website = data.get('website', '').strip() or None
+        
+        # Validation
+        if not name or not email or not phone or not description:
+            return JsonResponse({
+                'success': False,
+                'message': 'Please fill in all required fields'
+            }, status=400)
+        
+        # Create inquiry
+        inquiry = SponsorPartnerInquiry.objects.create(
+            name=name,
+            email=email,
+            phone=phone,
+            organization_name=organization_name,
+            website=website,
+            inquiry_type=inquiry_type,
+            description=description
+        )
+        
+        return JsonResponse({
+            'success': True,
+            'message': 'Thank you! Our founder will get in touch with you soon.'
+        })
+        
+    except Exception as e:
+        return JsonResponse({
+            'success': False,
+            'message': 'Something went wrong. Please try again.'
+        }, status=500)
+
+
+@csrf_exempt
+@require_http_methods(["POST"])
 def validate_coupon(request):
     """API endpoint to validate a coupon code in real-time"""
     try:

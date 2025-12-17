@@ -235,14 +235,12 @@
                 <span>Mentor Me</span>
             </button>
             
-            <!-- Mentors, Sponsors & Partners -->
-            <button class="profile-menu-item" @click="alert('Coming soon!')">
-                <div class="menu-icon partners-icon">
+            <!-- Sponsors & Partners -->
+            <button class="profile-menu-item" @click="openSponsors()">
+                <div class="menu-icon sponsors-icon">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-                        <circle cx="9" cy="7" r="4"/>
-                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        <path d="M11 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/>
+                        <path d="M18 2l4 4-10 10H8v-4L18 2z"/>
                     </svg>
                 </div>
                 <span>Sponsors & Partners</span>
@@ -269,7 +267,9 @@
                 </div>
                 <span>Settings</span>
             </button>
-                        <!-- WhatsApp Community -->
+            
+            
+            <!-- WhatsApp Community -->
             <a href="https://chat.whatsapp.com/YOUR_GROUP_LINK" target="_blank" class="profile-menu-item whatsapp-btn">
                 <div class="menu-icon whatsapp-icon">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
@@ -509,6 +509,115 @@
             
             <!-- Bookmarked Articles List -->
             <div class="bookmarks-list" x-show="bookmarksList.length > 0" x-html="renderBookmarksHtml()"></div>
+        </div>
+    </div>
+    
+    <!-- Sponsors & Partners Modal -->
+    <div class="modal-backdrop" 
+         x-show="showSponsors"
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0"
+         x-transition:enter-end="opacity-100"
+         @click="showSponsors = false">
+    </div>
+    
+    <div class="sponsors-modal settings-modal"
+         x-show="showSponsors"
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0 translate-y-4"
+         x-transition:enter-end="opacity-100 translate-y-0">
+        
+        <!-- Header -->
+        <div class="settings-header">
+            <button class="settings-back-btn" @click="showSponsors = false; showProfile = true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="15 18 9 12 15 6"/>
+                </svg>
+            </button>
+            <span class="settings-title">Sponsors & Partners</span>
+        </div>
+        
+        <!-- Success State -->
+        <div class="sponsors-success" x-show="sponsorSubmitted">
+            <div class="success-icon">🎉</div>
+            <h3>Thank You!</h3>
+            <p>Your inquiry has been received. Our founder will personally get in touch with you soon.</p>
+            <button class="sponsor-close-btn" @click="showSponsors = false; sponsorSubmitted = false">Close</button>
+        </div>
+        
+        <!-- Form -->
+        <div class="settings-content" x-show="!sponsorSubmitted">
+            <div class="sponsor-intro">
+                <p>Partner with us or sponsor our mission to connect Cameroonians with opportunities.</p>
+            </div>
+            
+            <!-- Inquiry Type Toggle -->
+            <div class="settings-section">
+                <div class="settings-section-label">What would you like to do?</div>
+                <div class="sponsor-type-toggle">
+                    <button class="type-btn" :class="{'active': sponsorType === 'SPONSOR'}" @click="sponsorType = 'SPONSOR'">
+                        Sponsor
+                    </button>
+                    <button class="type-btn" :class="{'active': sponsorType === 'PARTNER'}" @click="sponsorType = 'PARTNER'">
+                        Partner
+                    </button>
+                    <button class="type-btn" :class="{'active': sponsorType === 'BOTH'}" @click="sponsorType = 'BOTH'">
+                        Both
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Contact Info -->
+            <div class="settings-section">
+                <div class="settings-section-label">Your Information</div>
+                <div class="settings-field">
+                    <label>Full Name *</label>
+                    <input type="text" class="settings-input" x-model="sponsorName" placeholder="John Doe">
+                </div>
+                <div class="settings-field">
+                    <label>Email *</label>
+                    <input type="email" class="settings-input" x-model="sponsorEmail" placeholder="email@example.com">
+                </div>
+                <div class="settings-field">
+                    <label>Phone Number *</label>
+                    <input type="tel" class="settings-input" x-model="sponsorPhone" placeholder="6XXXXXXXX">
+                </div>
+            </div>
+            
+            <!-- Organization Info -->
+            <div class="settings-section">
+                <div class="settings-section-label">Organization (Optional)</div>
+                <div class="settings-field">
+                    <label>Company/Organization Name</label>
+                    <input type="text" class="settings-input" x-model="sponsorOrg" placeholder="Your Company">
+                </div>
+                <div class="settings-field">
+                    <label>Website</label>
+                    <input type="url" class="settings-input" x-model="sponsorWebsite" placeholder="https://example.com">
+                </div>
+            </div>
+            
+            <!-- Description -->
+            <div class="settings-section">
+                <div class="settings-section-label">Tell Us More *</div>
+                <div class="settings-field">
+                    <textarea class="settings-textarea" 
+                              x-model="sponsorDescription" 
+                              placeholder="How would you like to collaborate with us? What are your goals?"
+                              rows="4"></textarea>
+                </div>
+            </div>
+            
+            <!-- Error Message -->
+            <div class="sponsor-error" x-show="sponsorError" x-text="sponsorError"></div>
+            
+            <!-- Submit Button -->
+            <button class="save-settings-btn" 
+                    @click="submitSponsorInquiry()"
+                    :disabled="sponsorSubmitting">
+                <span x-show="!sponsorSubmitting">Send</span>
+                <span x-show="sponsorSubmitting">Sending...</span>
+            </button>
         </div>
     </div>
     

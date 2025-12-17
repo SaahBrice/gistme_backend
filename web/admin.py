@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Subscription, Advertisement, Coupon, CouponUsage, PaymentTransaction, UserProfile
+from .models import Subscription, Advertisement, Coupon, CouponUsage, PaymentTransaction, UserProfile, SponsorPartnerInquiry
 
 
 @admin.register(Subscription)
@@ -100,3 +100,32 @@ class UserProfileAdmin(admin.ModelAdmin):
     list_filter = ('onboarding_completed', 'education_level', 'background')
     search_fields = ('user__email', 'phone', 'custom_desires')
     readonly_fields = ('created_at', 'updated_at')
+
+
+@admin.register(SponsorPartnerInquiry)
+class SponsorPartnerInquiryAdmin(admin.ModelAdmin):
+    list_display = ('name', 'organization_name', 'inquiry_type', 'email', 'phone', 'contacted', 'created_at')
+    list_filter = ('inquiry_type', 'contacted', 'created_at')
+    search_fields = ('name', 'email', 'phone', 'organization_name', 'description')
+    readonly_fields = ('created_at', 'updated_at')
+    list_editable = ('contacted',)
+    date_hierarchy = 'created_at'
+    
+    fieldsets = (
+        ('Contact Person', {
+            'fields': ('name', 'email', 'phone')
+        }),
+        ('Organization', {
+            'fields': ('organization_name', 'website')
+        }),
+        ('Inquiry Details', {
+            'fields': ('inquiry_type', 'description')
+        }),
+        ('Status', {
+            'fields': ('contacted', 'notes')
+        }),
+        ('Timestamps', {
+            'fields': ('created_at', 'updated_at'),
+            'classes': ('collapse',)
+        }),
+    )

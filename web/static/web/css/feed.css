@@ -1117,3 +1117,129 @@ body {
     background: #FEF3C7;
     color: #F59E0B;
 }
+
+/* Sponsors & Partners Modal */
+.sponsors-modal {
+    max-height: 80vh;
+}
+
+.sponsor-intro {
+    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    border: 2px solid #111;
+}
+
+.sponsor-intro p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #111;
+}
+
+.sponsor-type-toggle {
+    display: flex;
+    gap: 8px;
+}
+
+.sponsor-type-toggle .type-btn {
+    flex: 1;
+    padding: 12px 8px;
+    background: #f5f5f5;
+    border: 2px solid #e5e5e5;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.sponsor-type-toggle .type-btn:hover {
+    border-color: #FACC15;
+    background: #fff;
+}
+
+.sponsor-type-toggle .type-btn.active {
+    background: #FACC15;
+    border-color: #111;
+    color: #111;
+}
+
+.sponsors-success {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.sponsors-success .success-icon {
+    font-size: 4rem;
+    margin-bottom: 16px;
+}
+
+.sponsors-success h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 12px;
+    color: #111;
+}
+
+.sponsors-success p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0 0 24px;
+}
+
+.sponsor-close-btn {
+    background: #111;
+    color: #fff;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.sponsor-close-btn:hover {
+    background: #333;
+}
+
+.sponsor-error {
+    background: #FEE2E2;
+    color: #DC2626;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.sponsors-icon {
+    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+}
+
+/* Save/Submit Button */
+.save-settings-btn {
+    width: 100%;
+    padding: 14px 24px;
+    background: #111;
+    color: #fff;
+    border: 3px solid #111;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    margin-top: 16px;
+}
+
+.save-settings-btn:hover {
+    background: #333;
+}
+
+.save-settings-btn:disabled {
+    background: #ccc;
+    border-color: #ccc;
+    cursor: not-allowed;
+}
