@@ -17,7 +17,10 @@ function feedApp() {
         showDeletePopup: false,
         showBookmarks: false,
         showSponsors: false,
+        showNotifications: false,
         bookmarksList: [],
+        gistList: [],
+        hasNewNotifications: true,
         pushEnabled: true,
 
         // Sponsor form fields
@@ -336,6 +339,45 @@ function feedApp() {
             if (article) {
                 article.bookmarked = !article.bookmarked;
             }
+        },
+
+        openNotifications() {
+            // Filter articles based on custom desires keywords
+            const customDesires = (this.settingsCustomDesires || '').toLowerCase();
+            const keywords = customDesires.split(',').map(k => k.trim()).filter(k => k.length > 0);
+
+            if (keywords.length === 0) {
+                // Show all articles if no custom desires set
+                this.gistList = this.articles.slice(0, 10);
+            } else {
+                // Filter articles that match any keyword in title or excerpt
+                this.gistList = this.articles.filter(article => {
+                    const title = article.title.toLowerCase();
+                    const excerpt = article.excerpt.toLowerCase();
+                    return keywords.some(keyword =>
+                        title.includes(keyword) || excerpt.includes(keyword)
+                    );
+                });
+            }
+
+            this.hasNewNotifications = false;
+            this.showNotifications = true;
+        },
+
+        renderGistHtml() {
+            if (this.gistList.length === 0) return '';
+
+            return this.gistList.map(article => `
+                <div class="bookmark-item">
+                    <a href="/article/${article.id}/" class="bookmark-link">
+                        <img src="${article.image}" alt="${article.title}" class="bookmark-image">
+                        <div class="bookmark-info">
+                            <h3 class="bookmark-title">${article.title}</h3>
+                            <p class="bookmark-excerpt">${article.excerpt}</p>
+                        </div>
+                    </a>
+                </div>
+            `).join('');
         },
 
         openSponsors() {

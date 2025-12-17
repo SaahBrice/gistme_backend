@@ -11559,3 +11559,18 @@ INFO 2025-12-17 20:40:48,628 basehttp 70744 71024 "GET /static/web/favicon.svg H
 INFO 2025-12-17 20:40:48,673 basehttp 70744 70144 "GET /static/web/manifest.json HTTP/1.1" 200 1427
 INFO 2025-12-17 20:40:48,745 basehttp 70744 71024 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
 INFO 2025-12-17 20:40:50,326 basehttp 70744 71024 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-17 21:01:59,966 autoreload 67264 77648 Watching for file changes with StatReloader
+INFO 2025-12-17 21:02:01,613 basehttp 67264 22028 "GET /feed/ HTTP/1.1" 200 51869
+WARNING 2025-12-17 21:02:01,815 log 67264 22028 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-17 21:02:01,816 basehttp 67264 22028 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 7856
+INFO 2025-12-17 21:02:02,399 basehttp 67264 66976 "GET /static/web/css/feed.css HTTP/1.1" 200 25627
+INFO 2025-12-17 21:02:02,401 basehttp 67264 72776 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-17 21:02:02,404 basehttp 67264 64560 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-17 21:02:02,409 basehttp 67264 75592 "GET /static/web/js/main.js HTTP/1.1" 200 4854
+INFO 2025-12-17 21:02:02,411 basehttp 67264 66976 "GET /static/web/js/feed.js HTTP/1.1" 200 33082
+INFO 2025-12-17 21:02:02,412 basehttp 67264 45148 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-17 21:02:02,413 basehttp 67264 22028 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-17 21:02:03,879 basehttp 67264 22028 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-17 21:02:03,881 basehttp 67264 67088 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-17 21:02:03,956 basehttp 67264 22028 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-17 21:02:05,469 basehttp 67264 22028 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
