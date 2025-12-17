@@ -32,6 +32,29 @@ function feedApp() {
         sponsorSubmitted: false,
         sponsorError: '',
 
+        // Quote of the Day state
+        showQuote: false,
+        currentQuote: null,
+
+        // Dummy quotes data by category
+        quotes: {
+            GENERAL: [
+                { text: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
+                { text: "Success is not final, failure is not fatal: it is the courage to continue that counts.", author: "Winston Churchill" },
+                { text: "Believe you can and you're halfway there.", author: "Theodore Roosevelt" }
+            ],
+            CHRISTIAN: [
+                { text: "For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you, plans to give you hope and a future.", author: "Jeremiah 29:11" },
+                { text: "I can do all things through Christ who strengthens me.", author: "Philippians 4:13" },
+                { text: "Trust in the Lord with all your heart and lean not on your own understanding.", author: "Proverbs 3:5" }
+            ],
+            ISLAMIC: [
+                { text: "Indeed, with hardship comes ease.", author: "Quran 94:6" },
+                { text: "The best among you are those who have the best manners and character.", author: "Prophet Muhammad (PBUH)" },
+                { text: "Tie your camel first, then put your trust in Allah.", author: "Prophet Muhammad (PBUH)" }
+            ]
+        },
+
         // Settings form fields
         settingsName: '',
         settingsPhone: '',
@@ -370,6 +393,191 @@ function feedApp() {
             }
 
             this.sponsorSubmitting = false;
+        },
+
+        // Quote of the Day methods
+        openQuote() {
+            this.showProfile = false;
+            this.getNewQuote();
+            this.showQuote = true;
+        },
+
+        // Color palettes for random variation
+        quoteColorPalettes: {
+            GENERAL: [
+                { bg: 'linear-gradient(145deg, #92400E 0%, #B45309 100%)' },
+                { bg: 'linear-gradient(145deg, #78350F 0%, #A16207 100%)' },
+                { bg: 'linear-gradient(145deg, #7C2D12 0%, #C2410C 100%)' },
+                { bg: 'linear-gradient(145deg, #713F12 0%, #A16207 100%)' },
+                { bg: 'linear-gradient(145deg, #854D0E 0%, #CA8A04 100%)' }
+            ],
+            CHRISTIAN: [
+                { bg: 'linear-gradient(145deg, #1E3A8A 0%, #1D4ED8 100%)' },
+                { bg: 'linear-gradient(145deg, #1E40AF 0%, #2563EB 100%)' },
+                { bg: 'linear-gradient(145deg, #312E81 0%, #4338CA 100%)' },
+                { bg: 'linear-gradient(145deg, #1E3A5F 0%, #1E40AF 100%)' },
+                { bg: 'linear-gradient(145deg, #172554 0%, #1D4ED8 100%)' }
+            ],
+            ISLAMIC: [
+                { bg: 'linear-gradient(145deg, #065F46 0%, #047857 100%)' },
+                { bg: 'linear-gradient(145deg, #064E3B 0%, #059669 100%)' },
+                { bg: 'linear-gradient(145deg, #14532D 0%, #166534 100%)' },
+                { bg: 'linear-gradient(145deg, #134E4A 0%, #0F766E 100%)' },
+                { bg: 'linear-gradient(145deg, #065F46 0%, #10B981 100%)' }
+            ]
+        },
+
+        getNewQuote() {
+            const category = this.quoteCategory || 'GENERAL';
+            const categoryQuotes = this.quotes[category] || this.quotes.GENERAL;
+            const randomIndex = Math.floor(Math.random() * categoryQuotes.length);
+
+            // Pick random color from palette
+            const palettes = this.quoteColorPalettes[category] || this.quoteColorPalettes.GENERAL;
+            const colorIndex = Math.floor(Math.random() * palettes.length);
+
+            this.currentQuote = {
+                ...categoryQuotes[randomIndex],
+                category: category,
+                date: this.getFormattedDate(),
+                colorIndex: colorIndex
+            };
+        },
+
+        getFormattedDate() {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            return new Date().toLocaleDateString('en-US', options);
+        },
+
+
+        async shareQuoteAsImage() {
+            // Create canvas for image generation - compact square format
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+
+            // Fixed width, dynamic height
+            canvas.width = 500;
+
+            // First pass: calculate content height
+            ctx.font = 'bold 22px Georgia, serif';
+            const words = this.currentQuote.text.split(' ');
+            let lines = [];
+            let currentLine = '';
+            const maxWidth = 430;
+
+            words.forEach(word => {
+                const testLine = currentLine + word + ' ';
+                const metrics = ctx.measureText(testLine);
+                if (metrics.width > maxWidth && currentLine !== '') {
+                    lines.push(currentLine.trim());
+                    currentLine = word + ' ';
+                } else {
+                    currentLine = testLine;
+                }
+            });
+            lines.push(currentLine.trim());
+
+            // Calculate dynamic height: padding + quote mark + quote lines + author + bottom section + padding
+            const lineHeight = 32;
+            const startY = 100;
+            const authorY = startY + (lines.length * lineHeight) + 25;
+            const bottomY = authorY + 45;
+            const canvasHeight = bottomY + 35; // Add bottom padding
+
+            canvas.height = canvasHeight;
+
+            // Multiple dark color variations per category
+            const colorPalettes = {
+                GENERAL: [
+                    ['#92400E', '#B45309'],
+                    ['#78350F', '#A16207'],
+                    ['#7C2D12', '#C2410C'],
+                    ['#713F12', '#A16207'],
+                    ['#854D0E', '#CA8A04']
+                ],
+                CHRISTIAN: [
+                    ['#1E3A8A', '#1D4ED8'],
+                    ['#1E40AF', '#2563EB'],
+                    ['#312E81', '#4338CA'],
+                    ['#1E3A5F', '#1E40AF'],
+                    ['#172554', '#1D4ED8']
+                ],
+                ISLAMIC: [
+                    ['#065F46', '#047857'],
+                    ['#064E3B', '#059669'],
+                    ['#14532D', '#166534'],
+                    ['#134E4A', '#0F766E'],
+                    ['#065F46', '#10B981']
+                ]
+            };
+
+            // Pick random colors from the category palette
+            const palettes = colorPalettes[this.currentQuote.category] || colorPalettes.GENERAL;
+            const randomPalette = palettes[Math.floor(Math.random() * palettes.length)];
+
+            const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+            gradient.addColorStop(0, randomPalette[0]);
+            gradient.addColorStop(1, randomPalette[1]);
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Quote mark (large, subtle)
+            ctx.font = 'bold 60px Georgia, serif';
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.15)';
+            ctx.textAlign = 'left';
+            ctx.fillText('"', 25, 70);
+
+            // Draw quote text
+            ctx.font = 'bold 22px Georgia, serif';
+            ctx.fillStyle = '#ffffff';
+            ctx.textAlign = 'left';
+            lines.forEach((line, index) => {
+                ctx.fillText(line, 35, startY + (index * lineHeight));
+            });
+
+            // Author
+            ctx.font = 'italic 18px Georgia, serif';
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.85)';
+            ctx.fillText('— ' + this.currentQuote.author, 35, authorY);
+
+            // Bottom section
+
+            // Username at bottom left
+            ctx.font = '14px Arial, sans-serif';
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.7)';
+            const username = this.settingsName || 'A Gist4U User';
+            ctx.fillText('Shared by ' + username, 35, bottomY);
+
+            // Gist4U branding - bottom right
+            ctx.textAlign = 'right';
+            ctx.font = 'bold 20px Arial, sans-serif';
+            ctx.fillStyle = '#FACC15';
+            ctx.fillText('Gist4U', 465, bottomY);
+
+            // Convert to blob and share/download
+            canvas.toBlob(async (blob) => {
+                if (navigator.share && navigator.canShare) {
+                    try {
+                        const file = new File([blob], 'quote-of-the-day.png', { type: 'image/png' });
+                        if (navigator.canShare({ files: [file] })) {
+                            await navigator.share({
+                                files: [file],
+                                title: 'Quote of the Day',
+                                text: this.currentQuote.text + ' — ' + this.currentQuote.author
+                            });
+                            return;
+                        }
+                    } catch (err) {
+                        console.log('Share failed, downloading instead');
+                    }
+                }
+
+                // Fallback: download
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(blob);
+                link.download = 'gist4u-quote.png';
+                link.click();
+            }, 'image/png');
         },
 
         async saveSettings() {

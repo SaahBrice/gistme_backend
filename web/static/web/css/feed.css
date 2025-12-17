@@ -1243,3 +1243,99 @@ body {
     border-color: #ccc;
     cursor: not-allowed;
 }
+
+/* Quote of the Day Modal */
+.quote-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 380px;
+    border-radius: 20px;
+    padding: 32px 24px;
+    z-index: 1001;
+    text-align: center;
+    border: 3px solid #111;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    /* Fallback background - overridden by inline style */
+    background: linear-gradient(145deg, #92400E 0%, #B45309 100%);
+}
+
+.quote-close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #fff;
+    transition: all 0.15s ease;
+    z-index: 10;
+}
+
+.quote-close-btn:hover {
+    background: rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.quote-content {
+    position: relative;
+    z-index: 5;
+}
+
+.quote-mark {
+    font-family: Georgia, serif;
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.3);
+    line-height: 1;
+    height: 24px;
+}
+
+.quote-text {
+    font-family: Georgia, serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.6;
+    margin: 8px 0 16px;
+}
+
+.quote-author {
+    font-style: italic;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0 0 6px;
+}
+
+.quote-date {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0 0 20px;
+}
+
+.quote-share-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 8px 16px;
+    background: #fff;
+    color: #111;
+    border: 2px solid #111;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.quote-share-btn:hover {
+    background: #FACC15;
+}
