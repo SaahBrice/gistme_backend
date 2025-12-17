@@ -50,7 +50,29 @@ def onboarding(request):
 
 @login_required
 def feed(request):
-    return render(request, 'web/feed.html')
+    from .models import UserProfile
+    import json
+    
+    # Get user profile data for settings
+    profile_data = {}
+    try:
+        profile = UserProfile.objects.get(user=request.user)
+        profile_data = {
+            'phone': profile.phone or '',
+            'region': profile.region or '',
+            'education_level': profile.education_level or '',
+            'background': profile.background or '',
+            'interests': profile.interests or [],
+            'notification_time': str(profile.notification_time)[:5] if profile.notification_time else '08:00',
+            'custom_desires': profile.custom_desires or '',
+        }
+    except UserProfile.DoesNotExist:
+        pass
+    
+    context = {
+        'profile_data': json.dumps(profile_data),
+    }
+    return render(request, 'web/feed.html', context)
 
 @login_required
 def relax(request):

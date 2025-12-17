@@ -491,7 +491,7 @@ body {
     border: 3px solid #111;
     border-radius: 20px;
     box-shadow: 6px 6px 0px 0px #FACC15;
-    min-width: 270px;
+    min-width: 300px;
     overflow: hidden;
 }
 
@@ -564,6 +564,11 @@ body {
     color: #6B7280;
 }
 
+.whatsapp-icon {
+    background: #25D366;
+    color: #fff;
+}
+
 /* Profile Header */
 .profile-header {
     display: flex;
@@ -629,7 +634,7 @@ body {
     border: 3px solid #111;
     border-radius: 20px;
     box-shadow: 6px 6px 0px 0px #FACC15;
-    width: 300px;
+    min-width: 320px;
     max-height: 70vh;
     overflow: hidden;
 }

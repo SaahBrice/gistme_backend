@@ -23,6 +23,9 @@ function feedApp() {
         settingsRegion: '',
         settingsNotifTime: '08:00',
         settingsLanguage: 'en',
+        settingsEducation: '',
+        settingsBackground: '',
+        settingsInterests: [],
         savingSettings: false,
 
         isLoading: false,
@@ -179,6 +182,22 @@ function feedApp() {
                 this.scrollContainer = document.getElementById('feed-scroll');
                 this.calculateCardHeight();
                 window.addEventListener('resize', () => this.calculateCardHeight());
+
+                // Load profile data if available
+                const profileDataEl = document.getElementById('profile-data');
+                if (profileDataEl) {
+                    try {
+                        const data = JSON.parse(profileDataEl.textContent);
+                        this.settingsPhone = data.phone || '';
+                        this.settingsRegion = data.region || '';
+                        this.settingsNotifTime = data.notification_time || '08:00';
+                        this.settingsEducation = data.education_level || '';
+                        this.settingsBackground = data.background || '';
+                        this.settingsInterests = data.interests || [];
+                    } catch (e) {
+                        console.log('No profile data');
+                    }
+                }
             });
         },
 
