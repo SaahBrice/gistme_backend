@@ -274,3 +274,74 @@ class SponsorPartnerInquiry(models.Model):
         type_emoji = {'SPONSOR': '💰', 'PARTNER': '🤝', 'BOTH': '💰🤝'}
         status = '✓' if self.contacted else '○'
         return f"{status} {type_emoji.get(self.inquiry_type, '')} {self.name} - {self.organization_name or 'Individual'}"
+
+
+class Mentor(models.Model):
+    """Mentors available for mentorship"""
+    
+    CATEGORY_CHOICES = [
+        ('ARTS', 'Arts & Social Sciences'),
+        ('SCIENCE', 'Science & Technology'),
+        ('RELIGIOUS', 'Religious & Self Development'),
+    ]
+    
+    name = models.CharField(max_length=100)
+    profession = models.CharField(max_length=150)
+    location = models.CharField(max_length=100)
+    bio = models.TextField(help_text="Short bio about the mentor")
+    picture = models.URLField(blank=True, null=True, help_text="URL to mentor's photo")
+    category = models.CharField(max_length=20, choices=CATEGORY_CHOICES)
+    
+    # Contact info (not displayed publicly)
+    phone = models.CharField(max_length=20, blank=True, null=True)
+    email = models.EmailField(blank=True, null=True)
+    
+    # Status
+    is_active = models.BooleanField(default=True, help_text="Is mentor currently accepting requests?")
+    
+    # Timestamps
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        ordering = ['name']
+        verbose_name = 'Mentor'
+        verbose_name_plural = 'Mentors'
+    
+    def __str__(self):
+        return f"{self.name} - {self.profession} ({self.get_category_display()})"
+
+
+class MentorRequest(models.Model):
+    """Requests from users to connect with mentors"""
+    
+    STATUS_CHOICES = [
+        ('PENDING', 'Pending'),
+        ('CONTACTED', 'Contacted'),
+        ('MATCHED', 'Matched'),
+        ('COMPLETED', 'Completed'),
+        ('CANCELLED', 'Cancelled'),
+    ]
+    
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='mentor_requests')
+    mentor = models.ForeignKey(Mentor, on_delete=models.CASCADE, related_name='requests')
+    
+    message = models.TextField(blank=True, null=True, help_text="User's message to the mentor")
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='PENDING')
+    
+    # Admin notes
+    notes = models.TextField(blank=True, null=True, help_text="Internal notes")
+    
+    # Timestamps
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        ordering = ['-created_at']
+        verbose_name = 'Mentor Request'
+        verbose_name_plural = 'Mentor Requests'
+    
+    def __str__(self):
+        status_emoji = {'PENDING': '⏳', 'CONTACTED': '📞', 'MATCHED': '✓', 'COMPLETED': '✅', 'CANCELLED': '✕'}
+        return f"{status_emoji.get(self.status, '')} {self.user.email} → {self.mentor.name}"
+

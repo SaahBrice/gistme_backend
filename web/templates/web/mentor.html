@@ -13,50 +13,150 @@
 
 {% block content %}
 <div class="mentor-page" x-data="mentorApp()" x-init="init()">
-    <!-- Back Button -->
-    <a href="/feed/" class="back-btn">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <polyline points="15 18 9 12 15 6"/>
-        </svg>
-    </a>
-    
-    <!-- Header -->
+    <!-- Header with Back + Centered Title -->
     <div class="mentor-header">
-        <h1>🎓 Mentor Me</h1>
-        <p>Connect with experienced mentors who can guide you on your journey to success</p>
+        <a href="/feed/" class="back-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="15 18 9 12 15 6"/>
+            </svg>
+        </a>
+        <h1>Mentor Me</h1>
     </div>
     
-    <!-- Coming Soon Card -->
-    <div class="coming-soon-card">
-        <div class="coming-soon-icon">🚀</div>
-        <h2>Coming Soon!</h2>
-        <p>We're working hard to bring you an amazing mentorship experience. Get matched with mentors who understand your goals.</p>
-        
-        <div class="feature-list">
-            <h3>What to expect</h3>
-            <div class="feature-item">
-                <span class="check">✓</span>
-                <span>1-on-1 mentorship sessions with industry experts</span>
-            </div>
-            <div class="feature-item">
-                <span class="check">✓</span>
-                <span>Guidance on scholarships, admissions & career paths</span>
-            </div>
-            <div class="feature-item">
-                <span class="check">✓</span>
-                <span>Personalized advice based on your interests</span>
-            </div>
-            <div class="feature-item">
-                <span class="check">✓</span>
-                <span>Community of ambitious Cameroonian students</span>
-            </div>
+    <!-- Filter Chips with SVG Icons -->
+    <div class="filter-section">
+        <div class="filter-chips">
+            <template x-for="cat in categories" :key="cat.key">
+                <button class="filter-chip" 
+                        :class="{ 'active': selectedCategory === cat.key }"
+                        @click="selectCategory(cat.key)">
+                    <!-- All/Users Icon -->
+                    <svg x-show="cat.icon === 'users'" class="chip-icon" viewBox="0 0 24 24">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                    <!-- Arts/Palette Icon -->
+                    <svg x-show="cat.icon === 'palette'" class="chip-icon" viewBox="0 0 24 24">
+                        <circle cx="13.5" cy="6.5" r="1.5"/>
+                        <circle cx="17.5" cy="10.5" r="1.5"/>
+                        <circle cx="8.5" cy="7.5" r="1.5"/>
+                        <circle cx="6.5" cy="12.5" r="1.5"/>
+                        <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.555C21.965 6.012 17.461 2 12 2z"/>
+                    </svg>
+                    <!-- Science/Flask Icon -->
+                    <svg x-show="cat.icon === 'flask'" class="chip-icon" viewBox="0 0 24 24">
+                        <path d="M9 3h6v6l5 8a3 3 0 0 1-3 4H7a3 3 0 0 1-3-4l5-8V3z"/>
+                        <line x1="9" y1="3" x2="15" y2="3"/>
+                        <line x1="10" y1="12" x2="14" y2="12"/>
+                    </svg>
+                    <!-- Growth/Heart Icon -->
+                    <svg x-show="cat.icon === 'heart'" class="chip-icon" viewBox="0 0 24 24">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                    </svg>
+                    <span x-text="cat.label"></span>
+                </button>
+            </template>
+        </div>
+    </div>
+    
+    <!-- Mentors Section -->
+    <div class="mentors-section">
+        <div class="section-header">
+            <h2>Available Mentors</h2>
+            <span class="mentor-count" x-text="filteredMentors.length + ' mentors'"></span>
         </div>
         
-        <button class="notify-btn" 
-                :class="{ 'notified': notified }"
-                @click="notifyMe()"
-                x-text="notified ? '✓ You\\'ll be notified!' : 'Notify me when ready'">
-        </button>
+        <!-- Mentors Grid -->
+        <div class="mentors-grid" x-show="filteredMentors.length > 0">
+            <template x-for="mentor in filteredMentors" :key="mentor.id">
+                <div class="mentor-card">
+                    <!-- Card Image -->
+                    <div class="card-image">
+                        <img :src="mentor.picture" :alt="mentor.name" class="mentor-photo">
+                        <div class="photo-overlay"></div>
+                        
+                        <!-- Category Badge -->
+                        <span class="category-badge" :class="mentor.category">
+                            <span x-text="mentor.category === 'ARTS' ? 'Arts' : mentor.category === 'SCIENCE' ? 'Science' : 'Growth'"></span>
+                        </span>
+                        
+                        <!-- Location -->
+                        <div class="mentor-location">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <span x-text="mentor.location"></span>
+                        </div>
+                    </div>
+                    
+                    <!-- Card Body -->
+                    <div class="card-body" x-data="{ expanded: false, isTruncated: false }" 
+                         x-init="$nextTick(() => { 
+                             const el = $el.querySelector('.mentor-bio'); 
+                             isTruncated = el.scrollHeight > el.clientHeight; 
+                         })">
+                        <h3 class="mentor-name" x-text="mentor.name"></h3>
+                        <p class="mentor-profession" x-text="mentor.profession"></p>
+                        <div class="mentor-bio-wrapper">
+                            <p class="mentor-bio" :class="{ 'expanded': expanded }">
+                                <span x-text="mentor.bio"></span>
+                                <span class="read-more-btn" 
+                                      x-show="isTruncated && !expanded" 
+                                      @click="expanded = true">... read more</span>
+                            </p>
+                            <span class="read-less-btn" 
+                                  x-show="expanded" 
+                                  @click="expanded = false">show less</span>
+                        </div>
+                        
+                        <button class="connect-btn" @click="requestMentor(mentor)">
+                            Mentor me
+                        </button>
+                    </div>
+                </div>
+            </template>
+        </div>
+        
+        <!-- Empty State -->
+        <div class="empty-state" x-show="filteredMentors.length === 0">
+            <div class="empty-icon">🔍</div>
+            <h3>No mentors found</h3>
+            <p>Try a different category</p>
+        </div>
+    </div>
+    
+    <!-- Sticky Audio Bar at Bottom - Always Visible -->
+    <div class="audio-bar">
+        <!-- Audio Blob with Progress Ring -->
+        <div class="audio-blob-container" @click="toggleAudio()">
+            <!-- Progress Ring -->
+            <svg class="progress-ring" viewBox="0 0 70 70">
+                <circle class="ring-bg" cx="35" cy="35" r="30"/>
+                <circle class="ring-progress" cx="35" cy="35" r="30" 
+                        :style="{ strokeDashoffset: progressOffset }"/>
+            </svg>
+            
+            <!-- Animated Blob Shape -->
+            <div class="blob-shape" :class="{ 'playing': isPlaying }"></div>
+            
+            <!-- Play/Pause Icon -->
+            <svg class="blob-icon" x-show="!isPlaying" width="18" height="18" viewBox="0 0 24 24" fill="#111">
+                <polygon points="6 3 20 12 6 21 6 3"/>
+            </svg>
+            <svg class="blob-icon" x-show="isPlaying" width="18" height="18" viewBox="0 0 24 24" fill="#111">
+                <rect x="5" y="3" width="5" height="18"/>
+                <rect x="14" y="3" width="5" height="18"/>
+            </svg>
+        </div>
+        
+        <!-- Bar Content -->
+        <div class="bar-content">
+            <p class="bar-title">Welcome to Mentor Me</p>
+            <p class="bar-subtitle">Tap to hear about our mentorship program</p>
+        </div>
     </div>
 </div>
 
