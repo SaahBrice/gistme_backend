@@ -15,6 +15,7 @@ urlpatterns = [
     path('legal/', views.legal, name='legal'),
     path('terms/', views.terms, name='terms'),
     path('contact/', views.contact, name='contact'),
+    path('save-settings/', views.save_settings, name='save_settings'),
     # Fapshi Payment
     path('initiate-payment/', views.initiate_payment, name='initiate_payment'),
     path('payment-status/<str:trans_id>/', views.get_payment_status, name='payment_status'),

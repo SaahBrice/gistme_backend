@@ -26,7 +26,12 @@ function feedApp() {
         settingsEducation: '',
         settingsBackground: '',
         settingsInterests: [],
+        settingsCustomDesires: '',
+        receiveQuotes: true,
+        quoteCategory: 'GENERAL',
+        interestOptions: [],
         savingSettings: false,
+        showSaveToast: false,
 
         isLoading: false,
         playingId: null,
@@ -188,14 +193,28 @@ function feedApp() {
                 if (profileDataEl) {
                     try {
                         const data = JSON.parse(profileDataEl.textContent);
+                        this.settingsName = data.first_name || '';
                         this.settingsPhone = data.phone || '';
                         this.settingsRegion = data.region || '';
                         this.settingsNotifTime = data.notification_time || '08:00';
                         this.settingsEducation = data.education_level || '';
                         this.settingsBackground = data.background || '';
                         this.settingsInterests = data.interests || [];
+                        this.settingsCustomDesires = data.custom_desires || '';
+                        this.receiveQuotes = data.receive_quotes !== false;
+                        this.quoteCategory = data.quote_category || 'GENERAL';
                     } catch (e) {
                         console.log('No profile data');
+                    }
+                }
+
+                // Load interest options
+                const interestOptionsEl = document.getElementById('interest-options');
+                if (interestOptionsEl) {
+                    try {
+                        this.interestOptions = JSON.parse(interestOptionsEl.textContent);
+                    } catch (e) {
+                        console.log('No interest options');
                     }
                 }
             });
@@ -222,10 +241,44 @@ function feedApp() {
 
         async saveSettings() {
             this.savingSettings = true;
-            // TODO: Implement API call to save settings
-            await new Promise(resolve => setTimeout(resolve, 800));
+
+            try {
+                const response = await fetch('/save-settings/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]')?.value || ''
+                    },
+                    body: JSON.stringify({
+                        first_name: this.settingsName,
+                        phone: this.settingsPhone,
+                        region: this.settingsRegion,
+                        education_level: this.settingsEducation,
+                        background: this.settingsBackground,
+                        notification_time: this.settingsNotifTime,
+                        interests: this.settingsInterests,
+                        custom_desires: this.settingsCustomDesires,
+                        receive_quotes: this.receiveQuotes,
+                        quote_category: this.quoteCategory
+                    })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    this.showSettings = false;
+                    this.showSaveToast = true;
+                    setTimeout(() => {
+                        this.showSaveToast = false;
+                    }, 2500);
+                } else {
+                    alert('Error: ' + data.message);
+                }
+            } catch (e) {
+                alert('Failed to save settings');
+            }
+
             this.savingSettings = false;
-            alert('Settings saved!');
         },
 
         // Navigation toggle

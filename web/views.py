@@ -54,10 +54,12 @@ def feed(request):
     import json
     
     # Get user profile data for settings
-    profile_data = {}
+    profile_data = {
+        'first_name': request.user.first_name or '',
+    }
     try:
         profile = UserProfile.objects.get(user=request.user)
-        profile_data = {
+        profile_data.update({
             'phone': profile.phone or '',
             'region': profile.region or '',
             'education_level': profile.education_level or '',
@@ -65,12 +67,18 @@ def feed(request):
             'interests': profile.interests or [],
             'notification_time': str(profile.notification_time)[:5] if profile.notification_time else '08:00',
             'custom_desires': profile.custom_desires or '',
-        }
+            'receive_quotes': profile.receive_quotes,
+            'quote_category': profile.quote_category or 'GENERAL',
+        })
     except UserProfile.DoesNotExist:
         pass
     
+    # Add interest options for chip selector
+    interest_options = UserProfile.get_interest_options()
+    
     context = {
         'profile_data': json.dumps(profile_data),
+        'interest_options': json.dumps(interest_options),
     }
     return render(request, 'web/feed.html', context)
 
@@ -86,6 +94,51 @@ def terms(request):
 
 def contact(request):
     return render(request, 'web/contact.html')
+
+
+@login_required
+@require_http_methods(["POST"])
+def save_settings(request):
+    """API endpoint to save user settings"""
+    from .models import UserProfile
+    
+    try:
+        data = json.loads(request.body)
+        
+        profile, created = UserProfile.objects.get_or_create(user=request.user)
+        
+        # Update User's first_name
+        if 'first_name' in data:
+            request.user.first_name = data['first_name']
+            request.user.save()
+        
+        # Update fields
+        if 'phone' in data:
+            profile.phone = data['phone']
+        if 'region' in data:
+            profile.region = data['region']
+        if 'education_level' in data:
+            profile.education_level = data['education_level']
+        if 'background' in data:
+            profile.background = data['background']
+        if 'notification_time' in data:
+            from datetime import datetime
+            try:
+                profile.notification_time = datetime.strptime(data['notification_time'], '%H:%M').time()
+            except:
+                pass
+        if 'interests' in data:
+            profile.interests = data['interests']
+        if 'receive_quotes' in data:
+            profile.receive_quotes = data['receive_quotes']
+        if 'quote_category' in data:
+            profile.quote_category = data['quote_category']
+        
+        profile.save()
+        
+        return JsonResponse({'success': True, 'message': 'Settings saved!'})
+    except Exception as e:
+        return JsonResponse({'success': False, 'message': str(e)}, status=400)
 
 
 @csrf_exempt

@@ -50,6 +50,15 @@ class UserProfile(models.Model):
     # Notification preferences
     notification_time = models.TimeField(default='08:00', help_text="Preferred notification time")
     
+    # Quote preferences
+    QUOTE_CATEGORY_CHOICES = [
+        ('GENERAL', 'General'),
+        ('CHRISTIAN', 'Christian'),
+        ('ISLAMIC', 'Islamic'),
+    ]
+    receive_quotes = models.BooleanField(default=True, help_text="Receive daily quotes")
+    quote_category = models.CharField(max_length=20, choices=QUOTE_CATEGORY_CHOICES, default='GENERAL', help_text="Quote category preference")
+    
     # Optional custom desires
     custom_desires = models.TextField(blank=True, null=True, help_text="User's specific needs")
     
