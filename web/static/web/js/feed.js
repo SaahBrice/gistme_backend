@@ -15,6 +15,8 @@ function feedApp() {
         showSettings: false,
         showTerms: false,
         showDeletePopup: false,
+        showBookmarks: false,
+        bookmarksList: [],
         pushEnabled: true,
 
         // Settings form fields
@@ -217,6 +219,17 @@ function feedApp() {
                         console.log('No interest options');
                     }
                 }
+
+                // Merge dummy articles if available
+                if (typeof dummyArticles !== 'undefined') {
+                    this.articles = [...this.articles, ...dummyArticles];
+                }
+
+                // Global handler for removing bookmarks from x-html rendered content
+                const self = this;
+                window.removeBookmarkHandler = (articleId) => {
+                    self.removeBookmark(articleId);
+                };
             });
         },
 
@@ -237,6 +250,56 @@ function feedApp() {
 
         closeSettings() {
             this.showSettings = false;
+        },
+
+        // Bookmark methods
+        openBookmarks() {
+            this.bookmarksList = this.articles.filter(a => a.bookmarked);
+            this.showProfile = false;
+            this.showBookmarks = true;
+        },
+
+        removeBookmark(articleId) {
+            // Guard against double execution
+            if (this._processingBookmark) return;
+            this._processingBookmark = true;
+
+            const article = this.articles.find(a => a.id === articleId);
+            if (article) {
+                article.bookmarked = false;
+                this.bookmarksList = this.articles.filter(a => a.bookmarked);
+            }
+
+            // Reset guard after short delay
+            setTimeout(() => {
+                this._processingBookmark = false;
+            }, 100);
+        },
+
+        renderBookmarksHtml() {
+            return this.bookmarksList.map(article => `
+                <div class="bookmark-card">
+                    <a href="/article/${article.id}/" class="bookmark-link">
+                        <img src="${article.image}" alt="${article.title}" class="bookmark-image">
+                        <div class="bookmark-info">
+                            <h3 class="bookmark-title">${article.title}</h3>
+                            <p class="bookmark-excerpt">${article.excerpt}</p>
+                        </div>
+                    </a>
+                    <button class="bookmark-remove-btn" onclick="event.stopPropagation(); window.removeBookmarkHandler(${article.id}); return false;" title="Remove bookmark">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1">
+                            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </button>
+                </div>
+            `).join('');
+        },
+
+        toggleBookmark(articleId) {
+            const article = this.articles.find(a => a.id === articleId);
+            if (article) {
+                article.bookmarked = !article.bookmarked;
+            }
         },
 
         async saveSettings() {

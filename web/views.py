@@ -86,6 +86,11 @@ def feed(request):
 def relax(request):
     return render(request, 'web/relax.html')
 
+@login_required
+def article(request, article_id):
+    """Article reader page"""
+    return render(request, 'web/article.html', {'article_id': article_id})
+
 def legal(request):
     return render(request, 'web/legal.html')
 

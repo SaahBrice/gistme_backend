@@ -249,7 +249,7 @@
             </button>
             
             <!-- Bookmarks -->
-            <button class="profile-menu-item" @click="alert('Coming soon!')">
+            <button class="profile-menu-item" @click="openBookmarks()">
                 <div class="menu-icon bookmarks-icon">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
@@ -466,6 +466,52 @@
         </div>
     </div>
     
+    <!-- Bookmarks Modal -->
+    <div class="modal-backdrop" 
+         x-show="showBookmarks" 
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0"
+         x-transition:enter-end="opacity-100"
+         x-transition:leave="transition ease-in duration-150"
+         x-transition:leave-start="opacity-100"
+         x-transition:leave-end="opacity-0"
+         @click="showBookmarks = false">
+    </div>
+    
+    <div class="bookmarks-modal" 
+         x-show="showBookmarks"
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0 translate-x-8"
+         x-transition:enter-end="opacity-100 translate-x-0"
+         x-transition:leave="transition ease-in duration-150"
+         x-transition:leave-start="opacity-100 translate-x-0"
+         x-transition:leave-end="opacity-0 translate-x-8"
+         @click.outside="showBookmarks = false">
+        
+        <!-- Header -->
+        <div class="bookmarks-header">
+            <button class="settings-back-btn" @click="showBookmarks = false; showProfile = true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="15 18 9 12 15 6"/>
+                </svg>
+            </button>
+            <span class="bookmarks-title">Bookmarks</span>
+            <span class="bookmarks-count" x-text="bookmarksList.length"></span>
+        </div>
+        
+        <div class="bookmarks-content">
+            <!-- Empty state -->
+            <div class="bookmarks-empty" x-show="bookmarksList.length === 0">
+                <div class="empty-icon">📚</div>
+                <p>No bookmarks yet</p>
+                <span>Articles you bookmark will appear here</span>
+            </div>
+            
+            <!-- Bookmarked Articles List -->
+            <div class="bookmarks-list" x-show="bookmarksList.length > 0" x-html="renderBookmarksHtml()"></div>
+        </div>
+    </div>
+    
     <!-- Terms Modal -->
     <div class="modal-backdrop" 
          x-show="showTerms"
@@ -537,5 +583,6 @@
 {% endblock %}
 
 {% block extra_scripts %}
+<script src="{% static 'web/js/dummy-articles.js' %}"></script>
 <script src="{% static 'web/js/feed.js' %}"></script>
 {% endblock %}
