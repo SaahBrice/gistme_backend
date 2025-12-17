@@ -87,6 +87,10 @@ def relax(request):
     return render(request, 'web/relax.html')
 
 @login_required
+def mentor(request):
+    return render(request, 'web/mentor.html')
+
+@login_required
 def article(request, article_id):
     """Article reader page"""
     return render(request, 'web/article.html', {'article_id': article_id})
