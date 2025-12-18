@@ -132,6 +132,7 @@
                    class="nav-chat-input" 
                    placeholder="Ask follow-up..."
                    x-model="chatInput"
+                   maxlength="100"
                    @keydown.enter="sendQuickMessage()"
                    @focus="onInputFocus()">
             <button class="nav-send-btn" 
@@ -299,15 +300,8 @@
             </button>
         </div>
         
-        <!-- Quick Questions -->
-        <div class="chat-quick-questions">
-            <template x-for="question in quickQuestions" :key="question">
-                <button class="quick-question-chip" @click="sendQuickQuestion(question)" x-text="question"></button>
-            </template>
-        </div>
-        
         <!-- Chat Messages -->
-        <div class="chat-messages">
+        <div class="chat-messages" x-ref="chatMessages">
             <template x-for="message in chatMessages" :key="message.id">
                 <div class="chat-message" :class="message.role">
                     <div class="chat-avatar">
@@ -338,17 +332,21 @@
             </div>
         </div>
         
-        <!-- Chat Input -->
+        <!-- Chat Input - Auto-expanding Textarea -->
         <div class="chat-input-container">
-            <input type="text" 
-                   class="chat-input" 
-                   placeholder="Ask about this article..."
-                   x-model="chatInput"
-                   @keydown="handleChatKeydown($event)">
+            <div class="chat-input-wrapper">
+                <textarea class="chat-input chat-textarea" 
+                       placeholder="Ask a follow-up..."
+                       x-model="chatInput"
+                       maxlength="100"
+                       rows="1"
+                       @keydown="handleChatKeydown($event)"
+                       @input="autoResizeTextarea($event)"></textarea>
+            </div>
             <button class="chat-send-btn" 
                     @click="sendMessage()"
                     :disabled="!chatInput.trim()">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <line x1="22" y1="2" x2="11" y2="13"/>
                     <polygon points="22 2 15 22 11 13 2 9 22 2"/>
                 </svg>

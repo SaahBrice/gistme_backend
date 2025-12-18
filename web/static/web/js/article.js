@@ -408,10 +408,16 @@ function articleApp() {
         },
 
         scrollChatToBottom() {
-            const container = document.querySelector('.chat-messages');
-            if (container) {
-                container.scrollTop = container.scrollHeight;
-            }
+            // Use $refs if available, fallback to querySelector
+            this.$nextTick(() => {
+                const container = this.$refs.chatMessages || document.querySelector('.chat-messages');
+                if (container) {
+                    container.scrollTo({
+                        top: container.scrollHeight,
+                        behavior: 'smooth'
+                    });
+                }
+            });
         },
 
         sendMessage() {
@@ -427,10 +433,13 @@ function articleApp() {
             });
 
             this.chatInput = '';
+
+            // Scroll after user message
             this.scrollChatToBottom();
 
             // Simulate AI typing
             this.isTyping = true;
+            this.scrollChatToBottom();
 
             setTimeout(() => {
                 this.isTyping = false;
@@ -483,6 +492,13 @@ function articleApp() {
         onInputFocus() {
             // Optional: could show a hint or expand the input
             console.log('[ArticleApp] Chat input focused');
+        },
+
+        // Auto-resize textarea for chat modal
+        autoResizeTextarea(event) {
+            const textarea = event.target;
+            textarea.style.height = 'auto';
+            textarea.style.height = Math.min(textarea.scrollHeight, 120) + 'px';
         },
 
         // ===============================================
