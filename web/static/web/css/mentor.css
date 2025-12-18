@@ -1,0 +1,482 @@
+/* Mentor Me Page - Mobile First Design */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: #FFFBEB;
+}
+
+.mentor-page {
+    min-height: 100vh;
+    padding: 16px;
+    padding-bottom: 140px;
+    /* Space for audio bar */
+}
+
+/* Header */
+.mentor-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.back-btn {
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border: 2px solid #111;
+    border-radius: 10px;
+    color: #111;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.back-btn:hover {
+    background: #FACC15;
+}
+
+.mentor-header h1 {
+    flex: 1;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #111;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+/* Filter Chips - Compact with SVG Icons */
+.filter-section {
+    margin-bottom: 20px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.filter-section::-webkit-scrollbar {
+    display: none;
+}
+
+.filter-chips {
+    display: flex;
+    gap: 8px;
+}
+
+.filter-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 12px;
+    background: #fff;
+    border: 2px solid #e5e5e5;
+    border-radius: 14px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.filter-chip:hover {
+    border-color: #111;
+    color: #111;
+}
+
+.filter-chip.active {
+    background: #111;
+    border-color: #111;
+    color: #fff;
+}
+
+.filter-chip.active .chip-icon {
+    stroke: #fff;
+}
+
+.chip-icon {
+    width: 14px;
+    height: 14px;
+    stroke: currentColor;
+    stroke-width: 2;
+    fill: none;
+}
+
+/* Section Header */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.section-header h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111;
+    margin: 0;
+}
+
+.mentor-count {
+    font-size: 0.7rem;
+    color: #888;
+}
+
+/* Mentor Cards - Larger */
+.mentors-grid {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding-bottom: 10px;
+}
+
+.mentors-grid::-webkit-scrollbar {
+    display: none;
+}
+
+/* Larger Mentor Card */
+.mentor-card {
+    flex-shrink: 0;
+    width: 280px;
+    background: #fff;
+    border: 3px solid #111;
+    border-radius: 18px;
+    overflow: hidden;
+    scroll-snap-align: start;
+    transition: all 0.2s ease;
+}
+
+.mentor-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 5px 5px 0 #111;
+}
+
+/* Card Image Area - Larger */
+.card-image {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1a1a1a, #333);
+}
+
+.mentor-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 40%);
+}
+
+.category-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.category-badge.ARTS {
+    background: #FEF3C7;
+    color: #92400E;
+}
+
+.category-badge.SCIENCE {
+    background: #DBEAFE;
+    color: #1E40AF;
+}
+
+.category-badge.RELIGIOUS {
+    background: #D1FAE5;
+    color: #065F46;
+}
+
+.mentor-location {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+/* Card Body - More Padding */
+.card-body {
+    padding: 16px;
+}
+
+.mentor-name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 4px;
+}
+
+.mentor-profession {
+    font-size: 0.8rem;
+    color: #666;
+    margin: 0 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mentor-bio-wrapper {
+    margin-bottom: 12px;
+}
+
+.mentor-bio {
+    font-size: 0.8rem;
+    color: #888;
+    line-height: 1.5;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.mentor-bio.expanded {
+    display: block;
+    -webkit-line-clamp: unset;
+    line-clamp: unset;
+}
+
+.read-more-btn {
+    color: #111;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.read-more-btn:hover {
+    text-decoration: underline;
+}
+
+.read-less-btn {
+    font-size: 0.7rem;
+    color: #666;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 4px;
+}
+
+.read-less-btn:hover {
+    color: #111;
+    text-decoration: underline;
+}
+
+.connect-btn {
+    width: 100%;
+    padding: 12px;
+    background: #FACC15;
+    color: #111;
+    border: 2px solid #111;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.connect-btn:hover {
+    background: #111;
+    color: #FACC15;
+}
+
+/* Sticky Audio Bar - Always Visible */
+.audio-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 3px solid #111;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    z-index: 100;
+}
+
+/* Audio Blob - Larger */
+.audio-blob-container {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.blob-shape {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, #FACC15, #F59E0B);
+    transform: translate(-50%, -50%);
+    animation: blobMorph 4s ease-in-out infinite;
+}
+
+@keyframes blobMorph {
+
+    0%,
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+
+    25% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+
+    50% {
+        border-radius: 50% 60% 40% 60% / 60% 40% 60% 40%;
+    }
+
+    75% {
+        border-radius: 60% 40% 60% 40% / 40% 60% 40% 60%;
+    }
+}
+
+.blob-shape.playing {
+    animation: blobMorph 4s ease-in-out infinite, blobGlow 1.5s ease-in-out infinite;
+}
+
+@keyframes blobGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 15px rgba(250, 204, 21, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 30px rgba(250, 204, 21, 0.9);
+    }
+}
+
+/* Progress Ring - Visible */
+.progress-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 70px;
+    height: 70px;
+}
+
+.ring-bg {
+    fill: none;
+    stroke: #e5e5e5;
+    stroke-width: 4;
+}
+
+.ring-progress {
+    fill: none;
+    stroke: #111;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-dasharray: 188;
+    /* 2 * PI * 30 */
+    stroke-dashoffset: 188;
+    transition: stroke-dashoffset 0.2s;
+}
+
+/* Play Icon - Centered, Stays Upright */
+.blob-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: #111;
+}
+
+/* Bar Content */
+.bar-content {
+    flex: 1;
+}
+
+.bar-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 3px;
+}
+
+.bar-subtitle {
+    font-size: 0.7rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 50px 20px;
+    background: #fff;
+    border: 2px dashed #ddd;
+    border-radius: 18px;
+}
+
+.empty-icon {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+}
+
+.empty-state h3 {
+    font-size: 1rem;
+    color: #111;
+    margin: 0 0 6px;
+}
+
+.empty-state p {
+    font-size: 0.8rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Tablet+ */
+@media (min-width: 600px) {
+    .mentor-page {
+        max-width: 750px;
+        margin: 0 auto;
+        padding: 24px;
+        padding-bottom: 150px;
+    }
+
+    .mentors-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        overflow: visible;
+    }
+
+    .mentor-card {
+        width: 100%;
+    }
+}

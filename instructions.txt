@@ -1,0 +1,1 @@
+Do not write a piece of code if it already exists. So always check through the file first. Either improve what is already there or use it as it is.
