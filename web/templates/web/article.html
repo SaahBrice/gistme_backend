@@ -81,6 +81,45 @@
             <div class="article-description">
                 <p x-text="article?.description">Article content goes here...</p>
             </div>
+            
+            <!-- Related Articles Section -->
+            <section class="related-articles-section">
+                <div class="related-articles-header">
+                    <h3 class="related-articles-title">More for you</h3>
+                </div>
+                
+                <div class="related-articles-scroll">
+                    <template x-for="related in relatedArticles" :key="related.id">
+                        <article class="related-article-card" @click="goToArticle(related.id)">
+                            <img class="related-article-image" 
+                                 :src="related.thumbnail" 
+                                 :alt="related.title"
+                                 loading="lazy">
+                            <div class="related-article-content">
+                                <h4 class="related-article-title" x-text="related.title"></h4>
+                            </div>
+                        </article>
+                    </template>
+                </div>
+            </section>
+            
+            <!-- Timeline Section -->
+            <section class="timeline-section">
+                <h3 class="timeline-title">Timeline</h3>
+                
+                <div class="timeline-flow">
+                    <template x-for="(item, index) in timelineItems" :key="item.id">
+                        <div class="timeline-item" :class="{ 'first': index === 0 }">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content" @click="goToArticle(item.id)">
+                                <span class="timeline-date" x-text="item.date"></span>
+                                <h4 class="timeline-item-title" x-text="item.title"></h4>
+                                <span class="timeline-category" x-text="item.category"></span>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </section>
         </article>
     </div>
     

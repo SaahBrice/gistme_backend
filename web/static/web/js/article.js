@@ -35,6 +35,12 @@ function articleApp() {
         toastMessage: '',
         toastType: 'success',
 
+        // Related articles
+        relatedArticles: [],
+
+        // Timeline items
+        timelineItems: [],
+
         // Initialize
         init() {
             // Load dummy data if available
@@ -73,6 +79,62 @@ function articleApp() {
                 ];
             }
 
+            // Load related articles (dummy data)
+            this.relatedArticles = [
+                {
+                    id: 1002,
+                    title: "Chevening Scholarships 2025 Now Open",
+                    headline: "SCHOLARSHIP",
+                    thumbnail: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=400"
+                },
+                {
+                    id: 1003,
+                    title: "Mastercard Foundation Scholars Program",
+                    headline: "SCHOLARSHIP",
+                    thumbnail: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=400"
+                },
+                {
+                    id: 1004,
+                    title: "DAAD Scholarship for African Students",
+                    headline: "SCHOLARSHIP",
+                    thumbnail: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=400"
+                },
+                {
+                    id: 1005,
+                    title: "Commonwealth Scholarships 2025",
+                    headline: "SCHOLARSHIP",
+                    thumbnail: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=400"
+                }
+            ];
+
+            // Load timeline items (dummy data)
+            this.timelineItems = [
+                {
+                    id: 2001,
+                    title: "Application deadline extended for Google Scholarship",
+                    category: "UPDATE",
+                    date: "Today"
+                },
+                {
+                    id: 2002,
+                    title: "New partner universities announced",
+                    category: "NEWS",
+                    date: "Yesterday"
+                },
+                {
+                    id: 2003,
+                    title: "Scholarship amount increased to $50,000",
+                    category: "UPDATE",
+                    date: "Dec 15"
+                },
+                {
+                    id: 2004,
+                    title: "Online application portal now open",
+                    category: "ANNOUNCEMENT",
+                    date: "Dec 10"
+                }
+            ];
+
             console.log('[ArticleApp] Initialized with article:', this.article?.title);
         },
 
@@ -88,6 +150,11 @@ function articleApp() {
             } else {
                 window.location.href = '/feed/';
             }
+        },
+
+        // Navigate to related article
+        goToArticle(articleId) {
+            window.location.href = `/article/${articleId}/`;
         },
 
         // ===============================================
