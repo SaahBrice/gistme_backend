@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Subscription, Advertisement, Coupon, CouponUsage, PaymentTransaction, UserProfile, SponsorPartnerInquiry
+from .models import Subscription, Advertisement, Coupon, CouponUsage, PaymentTransaction, UserProfile, SponsorPartnerInquiry, Mentor, MentorRequest
 
 
 @admin.register(Subscription)
@@ -123,6 +123,60 @@ class SponsorPartnerInquiryAdmin(admin.ModelAdmin):
         }),
         ('Status', {
             'fields': ('contacted', 'notes')
+        }),
+        ('Timestamps', {
+            'fields': ('created_at', 'updated_at'),
+            'classes': ('collapse',)
+        }),
+    )
+
+
+@admin.register(Mentor)
+class MentorAdmin(admin.ModelAdmin):
+    list_display = ('name', 'profession', 'category', 'location', 'is_active', 'created_at')
+    list_filter = ('category', 'is_active', 'location')
+    search_fields = ('name', 'profession', 'bio', 'location')
+    list_editable = ('is_active',)
+    readonly_fields = ('created_at', 'updated_at')
+    date_hierarchy = 'created_at'
+    
+    fieldsets = (
+        ('Basic Info', {
+            'fields': ('name', 'profession', 'location', 'category')
+        }),
+        ('Profile', {
+            'fields': ('bio', 'picture')
+        }),
+        ('Contact (Private)', {
+            'fields': ('phone', 'email'),
+            'classes': ('collapse',)
+        }),
+        ('Status', {
+            'fields': ('is_active',)
+        }),
+        ('Timestamps', {
+            'fields': ('created_at', 'updated_at'),
+            'classes': ('collapse',)
+        }),
+    )
+
+
+@admin.register(MentorRequest)
+class MentorRequestAdmin(admin.ModelAdmin):
+    list_display = ('user', 'mentor', 'status', 'created_at')
+    list_filter = ('status', 'created_at', 'mentor__category')
+    search_fields = ('user__email', 'mentor__name', 'message')
+    list_editable = ('status',)
+    readonly_fields = ('created_at', 'updated_at')
+    date_hierarchy = 'created_at'
+    raw_id_fields = ('user', 'mentor')
+    
+    fieldsets = (
+        ('Request Info', {
+            'fields': ('user', 'mentor', 'message')
+        }),
+        ('Status', {
+            'fields': ('status', 'notes')
         }),
         ('Timestamps', {
             'fields': ('created_at', 'updated_at'),
