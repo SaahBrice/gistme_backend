@@ -84,12 +84,50 @@
         </article>
     </div>
     
-    <!-- Fixed Bottom Navigation Bar -->
+    <!-- Fixed Bottom Navigation Bar - Inline Chat Layout -->
     <nav class="article-bottom-nav">
-        <div class="nav-chip-bar">
-            
-            <!-- Share Button -->
-            <button class="nav-chip-btn" @click="openShareModal()" title="Share">
+        
+        <!-- Left: Chat Input -->
+        <div class="nav-chat-input-group">
+            <input type="text" 
+                   class="nav-chat-input" 
+                   placeholder="Ask follow-up..."
+                   x-model="chatInput"
+                   @keydown.enter="sendQuickMessage()"
+                   @focus="onInputFocus()">
+            <button class="nav-send-btn" 
+                    @click="sendQuickMessage()"
+                    title="Send">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="22" y1="2" x2="11" y2="13"/>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Center: Play Button -->
+        <div class="nav-play-center">
+            <div class="play-blob-container">
+                <button class="play-blob" 
+                        :class="{ 'playing': isPlaying }"
+                        @click="togglePlay()"
+                        title="Play/Pause Audio">
+                    <span class="play-blob-icon">
+                        <svg x-show="!isPlaying" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                            <polygon points="6 3 20 12 6 21 6 3"/>
+                        </svg>
+                        <svg x-show="isPlaying" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                            <rect x="6" y="4" width="4" height="16" rx="1"/>
+                            <rect x="14" y="4" width="4" height="16" rx="1"/>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Right: Share & Bookmark -->
+        <div class="nav-actions-group">
+            <button class="nav-action-btn" @click="openShareModal()" title="Share">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <circle cx="18" cy="5" r="3"/>
                     <circle cx="6" cy="12" r="3"/>
@@ -99,28 +137,7 @@
                 </svg>
             </button>
             
-            <!-- Animated Blob Play Button -->
-            <div class="play-blob-container">
-                <button class="play-blob" 
-                        :class="{ 'playing': isPlaying }"
-                        @click="togglePlay()"
-                        title="Play/Pause Audio">
-                    <span class="play-blob-icon">
-                        <!-- Play Icon -->
-                        <svg x-show="!isPlaying" viewBox="0 0 24 24" fill="currentColor" stroke="none">
-                            <polygon points="6 3 20 12 6 21 6 3"/>
-                        </svg>
-                        <!-- Pause Icon -->
-                        <svg x-show="isPlaying" viewBox="0 0 24 24" fill="currentColor" stroke="none">
-                            <rect x="6" y="4" width="4" height="16" rx="1"/>
-                            <rect x="14" y="4" width="4" height="16" rx="1"/>
-                        </svg>
-                    </span>
-                </button>
-            </div>
-            
-            <!-- Bookmark Button -->
-            <button class="nav-chip-btn" 
+            <button class="nav-action-btn" 
                     :class="{ 'active': isBookmarked }"
                     @click="toggleBookmark()"
                     title="Bookmark">
@@ -128,15 +145,8 @@
                     <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
                 </svg>
             </button>
-            
-            <!-- Chat Button - Premium Feature -->
-            <button class="chat-btn-special" @click="openChatModal()" title="Chat with AI">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                </svg>
-            </button>
-            
         </div>
+        
     </nav>
     
     <!-- Share Modal -->

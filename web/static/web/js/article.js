@@ -397,6 +397,27 @@ function articleApp() {
             }
         },
 
+        // Quick message from inline input (bottom bar)
+        sendQuickMessage() {
+            const message = this.chatInput.trim();
+            if (!message) return;
+
+            // Open chat modal and send message
+            this.showChatModal = true;
+
+            // Wait for modal to open, then send
+            setTimeout(() => {
+                this.sendMessage();
+                this.scrollChatToBottom();
+            }, 150);
+        },
+
+        // Input focus handler
+        onInputFocus() {
+            // Optional: could show a hint or expand the input
+            console.log('[ArticleApp] Chat input focused');
+        },
+
         // ===============================================
         // TOAST NOTIFICATIONS
         // ===============================================

@@ -218,7 +218,7 @@
 }
 
 /* ============================================ */
-/* BOTTOM NAV BAR                               */
+/* BOTTOM NAV BAR - INLINE CHAT LAYOUT          */
 /* ============================================ */
 .article-bottom-nav {
     position: fixed;
@@ -230,28 +230,55 @@
     padding-bottom: max(16px, env(safe-area-inset-bottom));
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 12px;
     pointer-events: none;
 }
 
-.nav-chip-bar {
+/* Left: Chat Input Group */
+.nav-chat-input-group {
     display: flex;
     align-items: center;
-    gap: 12px;
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 2px solid rgba(17, 17, 17, 0.6);
-    border-radius: 24px;
-    padding: 8px 12px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1.5px solid rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    padding: 6px 8px 6px 16px;
     pointer-events: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    flex: 1;
+    max-width: 200px;
+    transition: all 0.25s ease;
 }
 
-/* Regular Nav Buttons */
-.nav-chip-btn {
-    width: 32px;
-    height: 32px;
-    background: rgba(245, 245, 245, 0.9);
+.nav-chat-input-group:focus-within {
+    border-color: #FACC15;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1), 0 0 0 3px rgba(250, 204, 21, 0.15);
+    max-width: 240px;
+}
+
+.nav-chat-input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #333;
+    outline: none;
+    min-width: 0;
+}
+
+.nav-chat-input::placeholder {
+    color: #999;
+    font-weight: 400;
+}
+
+.nav-send-btn {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #111 0%, #333 100%);
     border: none;
     border-radius: 12px;
     display: flex;
@@ -259,122 +286,80 @@
     justify-content: center;
     cursor: pointer;
     transition: all 0.2s ease;
-    color: #333;
+    color: #FACC15;
+    flex-shrink: 0;
 }
 
-.nav-chip-btn:active {
-    transform: scale(0.9);
+.nav-send-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.nav-chip-btn.active {
-    background: #FACC15;
-    color: #111;
+.nav-send-btn:active {
+    transform: scale(0.95);
 }
 
-.nav-chip-btn svg {
+.nav-send-btn svg {
     width: 18px;
     height: 18px;
 }
 
-/* ============================================ */
-/* SPECIAL CHAT BUTTON - PREMIUM FEATURE        */
-/* ============================================ */
-.chat-btn-special {
-    width: 42px;
-    height: 42px;
-    background: linear-gradient(135deg, #8B5CF6 0%, #6366F1 50%, #4F46E5 100%);
+/* Center: Play Button */
+.nav-play-center {
+    pointer-events: auto;
+    flex-shrink: 0;
+}
+
+/* Right: Actions Group */
+.nav-actions-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1.5px solid rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    padding: 6px 10px;
+    pointer-events: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Action Buttons */
+.nav-action-btn {
+    width: 38px;
+    height: 38px;
+    background: transparent;
     border: none;
-    border-radius: 14px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    color: #fff;
-    position: relative;
-    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
-    animation: chat-btn-glow 3s ease-in-out infinite;
+    transition: all 0.2s ease;
+    color: #555;
 }
 
-.chat-btn-special::before {
-    content: '';
-    position: absolute;
-    inset: -2px;
-    background: linear-gradient(135deg, #8B5CF6 0%, #6366F1 50%, #4F46E5 100%);
-    border-radius: 16px;
-    z-index: -1;
-    opacity: 0.5;
-    filter: blur(8px);
-    animation: chat-btn-pulse 2s ease-in-out infinite;
+.nav-action-btn:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: #111;
 }
 
-.chat-btn-special:hover {
-    transform: scale(1.1) translateY(-2px);
-    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5);
+.nav-action-btn:active {
+    transform: scale(0.9);
 }
 
-.chat-btn-special:active {
-    transform: scale(0.95);
+.nav-action-btn.active {
+    color: #FACC15;
 }
 
-.chat-btn-special svg {
+.nav-action-btn.active svg {
+    fill: #FACC15;
+}
+
+.nav-action-btn svg {
     width: 20px;
     height: 20px;
-    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
-}
-
-/* Sparkle dot indicator */
-.chat-btn-special::after {
-    content: '';
-    position: absolute;
-    top: -2px;
-    right: -2px;
-    width: 10px;
-    height: 10px;
-    background: #FACC15;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    animation: sparkle-pulse 1.5s ease-in-out infinite;
-}
-
-@keyframes chat-btn-glow {
-
-    0%,
-    100% {
-        box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
-    }
-
-    50% {
-        box-shadow: 0 4px 20px rgba(139, 92, 246, 0.6);
-    }
-}
-
-@keyframes chat-btn-pulse {
-
-    0%,
-    100% {
-        opacity: 0.5;
-        transform: scale(1);
-    }
-
-    50% {
-        opacity: 0.3;
-        transform: scale(1.1);
-    }
-}
-
-@keyframes sparkle-pulse {
-
-    0%,
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-
-    50% {
-        transform: scale(1.2);
-        opacity: 0.8;
-    }
 }
 
 /* ============================================ */
