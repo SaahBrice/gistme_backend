@@ -12574,3 +12574,44 @@ INFO 2025-12-18 21:47:12,849 basehttp 60096 8288 "GET /firebase-messaging-sw.js 
 INFO 2025-12-18 21:47:26,456 basehttp 60096 8288 "GET /article/6/ HTTP/1.1" 200 27634
 WARNING 2025-12-18 21:47:26,499 log 60096 8288 Not Found: /.well-known/appspecific/com.chrome.devtools.json
 WARNING 2025-12-18 21:47:26,501 basehttp 60096 8288 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8111
+INFO 2025-12-18 21:51:18,203 autoreload 64268 532 Watching for file changes with StatReloader
+INFO 2025-12-18 21:51:18,577 basehttp 60096 8288 "GET /article/6/ HTTP/1.1" 200 27634
+INFO 2025-12-18 21:51:18,674 basehttp 60096 8436 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-18 21:51:18,681 basehttp 60096 41216 "GET /static/web/css/article.css HTTP/1.1" 200 21122
+INFO 2025-12-18 21:51:18,681 basehttp 60096 43060 "GET /static/web/js/main.js HTTP/1.1" 200 4854
+INFO 2025-12-18 21:51:18,683 basehttp 60096 31864 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-18 21:51:18,686 basehttp 60096 31204 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-18 21:51:18,687 basehttp 60096 8436 "GET /static/web/js/article-dummy-data.js HTTP/1.1" 200 3681
+INFO 2025-12-18 21:51:18,688 basehttp 60096 41216 "GET /static/web/js/article.js HTTP/1.1" 200 15616
+WARNING 2025-12-18 21:51:18,694 log 60096 8288 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-18 21:51:18,698 basehttp 60096 8288 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8111
+INFO 2025-12-18 21:51:20,594 basehttp 60096 8288 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-18 21:51:20,614 basehttp 60096 74812 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-18 21:51:20,668 basehttp 60096 8288 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-18 21:51:22,324 basehttp 60096 8288 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-18 21:52:09,633 basehttp 60096 8288 "GET /feed/ HTTP/1.1" 200 51873
+WARNING 2025-12-18 21:52:09,867 log 60096 8288 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-18 21:52:09,868 basehttp 60096 8288 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8111
+INFO 2025-12-18 21:52:09,896 basehttp 60096 41216 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-18 21:52:09,897 basehttp 60096 43060 "GET /static/web/css/feed.css HTTP/1.1" 200 25627
+INFO 2025-12-18 21:52:09,906 basehttp 60096 8436 "GET /static/web/js/main.js HTTP/1.1" 200 4854
+INFO 2025-12-18 21:52:09,912 basehttp 60096 31864 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-18 21:52:09,916 basehttp 60096 31204 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-18 21:52:09,918 basehttp 60096 8288 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-18 21:52:09,921 basehttp 60096 41216 "GET /static/web/js/feed.js HTTP/1.1" 200 33082
+INFO 2025-12-18 21:52:13,461 basehttp 60096 41216 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965
+INFO 2025-12-18 21:52:14,898 basehttp 60096 74812 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-18 21:52:14,917 basehttp 60096 41216 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-18 21:52:16,733 basehttp 60096 41216 "GET /article/6/ HTTP/1.1" 200 27634
+WARNING 2025-12-18 21:52:16,851 log 60096 41216 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-18 21:52:16,853 basehttp 60096 41216 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8111
+INFO 2025-12-18 21:52:16,872 basehttp 60096 8288 "GET /static/web/css/main.css HTTP/1.1" 200 2909
+INFO 2025-12-18 21:52:16,874 basehttp 60096 43060 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-18 21:52:16,879 basehttp 60096 31204 "GET /static/web/css/article.css HTTP/1.1" 200 21122
+INFO 2025-12-18 21:52:16,879 basehttp 60096 31864 "GET /static/web/js/main.js HTTP/1.1" 200 4854
+INFO 2025-12-18 21:52:16,879 basehttp 60096 8436 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-18 21:52:16,883 basehttp 60096 41216 "GET /static/web/js/article-dummy-data.js HTTP/1.1" 200 3681
+INFO 2025-12-18 21:52:16,884 basehttp 60096 8288 "GET /static/web/js/article.js HTTP/1.1" 200 15616
+INFO 2025-12-18 21:52:17,957 basehttp 60096 74812 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-18 21:52:18,004 basehttp 60096 8288 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-18 21:52:19,730 basehttp 60096 8288 "GET /firebase-messaging-sw.js HTTP/1.1" 200 6965

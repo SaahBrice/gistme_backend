@@ -239,24 +239,25 @@
 .nav-chat-input-group {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1.5px solid rgba(0, 0, 0, 0.1);
     border-radius: 16px;
-    padding: 6px 8px 6px 16px;
+    padding: 6px 6px 6px 12px;
     pointer-events: auto;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     flex: 1;
-    max-width: 200px;
+    max-width: 160px;
+    min-width: 120px;
     transition: all 0.25s ease;
 }
 
 .nav-chat-input-group:focus-within {
     border-color: #FACC15;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1), 0 0 0 3px rgba(250, 204, 21, 0.15);
-    max-width: 240px;
+    max-width: 180px;
 }
 
 .nav-chat-input {
@@ -314,21 +315,22 @@
 .nav-actions-group {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 4px;
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1.5px solid rgba(0, 0, 0, 0.1);
     border-radius: 16px;
-    padding: 6px 10px;
+    padding: 6px 8px;
     pointer-events: auto;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    flex-shrink: 0;
 }
 
 /* Action Buttons */
 .nav-action-btn {
-    width: 38px;
-    height: 38px;
+    width: 34px;
+    height: 34px;
     background: transparent;
     border: none;
     border-radius: 10px;
