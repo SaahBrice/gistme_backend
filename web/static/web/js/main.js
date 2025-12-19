@@ -85,6 +85,87 @@ if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
             }
         });
     }
+
+    // Mentors Section Parallax Effect
+    const mentorsSection = document.querySelector("#mentors");
+    const mentorsParallaxBg = document.querySelector(".mentors-parallax-bg");
+
+    if (mentorsSection && mentorsParallaxBg) {
+        gsap.to(mentorsParallaxBg, {
+            y: 100,
+            ease: "none",
+            scrollTrigger: {
+                trigger: mentorsSection,
+                start: "top bottom",
+                end: "bottom top",
+                scrub: 1
+            }
+        });
+
+        // Animate mentor cards on scroll
+        const mentorCards = document.querySelectorAll(".mentor-card");
+        if (mentorCards.length > 0) {
+            gsap.fromTo(mentorCards,
+                { opacity: 0, y: 50 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.6,
+                    stagger: 0.1,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: mentorsSection,
+                        start: "top 80%",
+                        toggleActions: "play none none reverse"
+                    }
+                }
+            );
+        }
+    }
+
+    // Service Cards Scroll Animation
+    const servicesSection = document.querySelector("#services");
+    const serviceCards = document.querySelectorAll(".service-card");
+
+    if (servicesSection && serviceCards.length > 0) {
+        gsap.fromTo(serviceCards,
+            { opacity: 0, y: 50 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 0.5,
+                stagger: 0.08,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: servicesSection,
+                    start: "top 80%",
+                    toggleActions: "play none none reverse"
+                }
+            }
+        );
+    }
+
+    // FAQ Items Scroll Animation
+    const faqSection = document.querySelector("#faq");
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    if (faqSection && faqItems.length > 0) {
+        gsap.fromTo(faqItems,
+            { opacity: 0, y: 30 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 0.4,
+                stagger: 0.08,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: faqSection,
+                    start: "top 80%",
+                    toggleActions: "play none none reverse"
+                }
+            }
+        );
+    }
 }
 
 // --- 4. TEXT SPLITTER (Hero only) ---

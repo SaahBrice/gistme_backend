@@ -1,0 +1,162 @@
+<!-- Testimonials Section - Redesigned with Carousel -->
+<section class="testimonials-section py-20 md:py-32 bg-brand-light relative overflow-hidden" id="testimonials"
+    x-data="{ 
+        currentSlide: 0,
+        testimonials: [
+            {
+                text: 'I discovered a scholarship through Gist4U that changed my life. Now studying abroad with full funding. This app is a must-have!',
+                name: 'Marie-Anne N.',
+                role: 'Student, University of Yaoundé',
+                initials: 'MA'
+            },
+            {
+                text: 'No more endless scrolling through social media for news. Gist4U gives me exactly what I need in 5 minutes every morning.',
+                name: 'Jean-Pierre K.',
+                role: 'Professional, Douala',
+                initials: 'JP'
+            },
+            {
+                text: 'The audio feature is genius! I listen to article summaries during my commute. Perfect for busy people.',
+                name: 'Claire F.',
+                role: 'Entrepreneur, Buea',
+                initials: 'CF'
+            },
+            {
+                text: 'Got my first tech job thanks to Gist4U. The opportunities they share are legit and always up-to-date.',
+                name: 'Emmanuel T.',
+                role: 'Software Developer, Yaoundé',
+                initials: 'ET'
+            },
+            {
+                text: 'As a teacher, I love sharing Gist4U with my students. It helps them stay informed about concours and scholarships.',
+                name: 'Dr. Ngono P.',
+                role: 'University Lecturer, Douala',
+                initials: 'NP'
+            }
+        ],
+        nextSlide() {
+            this.currentSlide = (this.currentSlide + 1) % this.testimonials.length;
+        },
+        prevSlide() {
+            this.currentSlide = this.currentSlide === 0 ? this.testimonials.length - 1 : this.currentSlide - 1;
+        },
+        autoPlay() {
+            setInterval(() => this.nextSlide(), 5000);
+        }
+    }"
+    x-init="autoPlay()">
+    
+    <!-- Background Decoration -->
+    <div class="absolute top-20 left-10 w-20 h-20 border-2 border-black/10 rounded-full"></div>
+    <div class="absolute bottom-20 right-10 w-32 h-32 border-2 border-brand-yellow/30 rounded-full"></div>
+    <div class="absolute top-1/2 left-1/4 w-2 h-2 bg-brand-yellow rounded-full"></div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-6">
+        <!-- Section Header -->
+        <div class="text-center mb-12 md:mb-16">
+            <span class="inline-block font-mono text-xs border-2 border-black rounded-full px-4 py-2 mb-6 bg-brand-yellow">TESTIMONIALS</span>
+            <h2 class="text-4xl md:text-6xl font-display font-bold mb-4">Loved by <span class="text-brand-yellow">Readers</span></h2>
+            <p class="text-lg text-gray-600 max-w-xl mx-auto">See what our growing community of 5,000+ Cameroonians says about Gist4U.</p>
+        </div>
+
+        <!-- Mobile Carousel -->
+        <div class="md:hidden relative">
+            <div class="overflow-hidden rounded-3xl">
+                <template x-for="(testimonial, index) in testimonials" :key="index">
+                    <div x-show="currentSlide === index"
+                         x-transition:enter="transition ease-out duration-300"
+                         x-transition:enter-start="opacity-0 transform translate-x-full"
+                         x-transition:enter-end="opacity-100 transform translate-x-0"
+                         x-transition:leave="transition ease-in duration-300"
+                         x-transition:leave-start="opacity-100 transform translate-x-0"
+                         x-transition:leave-end="opacity-0 transform -translate-x-full"
+                         class="bg-white border-2 border-black rounded-3xl p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                        
+                        <!-- Stars -->
+                        <div class="flex gap-1 mb-4">
+                            <template x-for="i in 5">
+                                <span class="text-brand-yellow text-xl">★</span>
+                            </template>
+                        </div>
+                        
+                        <!-- Quote -->
+                        <p class="text-lg leading-relaxed mb-6" x-text="'\"' + testimonial.text + '\"'"></p>
+                        
+                        <!-- Author -->
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-brand-yellow rounded-full flex items-center justify-center font-display font-bold border-2 border-black" x-text="testimonial.initials"></div>
+                            <div>
+                                <div class="font-display font-bold" x-text="testimonial.name"></div>
+                                <div class="text-sm text-gray-500" x-text="testimonial.role"></div>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div class="flex justify-center items-center gap-4 mt-6">
+                <button @click="prevSlide()" class="w-12 h-12 bg-white border-2 border-black rounded-full flex items-center justify-center hover:bg-brand-yellow transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                    </svg>
+                </button>
+                <div class="flex gap-2">
+                    <template x-for="(_, index) in testimonials" :key="index">
+                        <button @click="currentSlide = index"
+                                :class="currentSlide === index ? 'bg-brand-yellow w-6' : 'bg-gray-300 w-2'"
+                                class="h-2 rounded-full transition-all duration-300"></button>
+                    </template>
+                </div>
+                <button @click="nextSlide()" class="w-12 h-12 bg-white border-2 border-black rounded-full flex items-center justify-center hover:bg-brand-yellow transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Desktop Grid -->
+        <div class="hidden md:grid grid-cols-3 gap-6">
+            <template x-for="(testimonial, index) in testimonials.slice(0, 3)" :key="index">
+                <div class="testimonial-card bg-white border-2 border-black rounded-3xl p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-2 transition-all duration-300 group">
+                    
+                    <!-- Stars with shimmer -->
+                    <div class="flex gap-1 mb-4">
+                        <template x-for="i in 5">
+                            <span class="text-brand-yellow text-xl group-hover:animate-pulse" :style="'animation-delay: ' + (i * 0.1) + 's'">★</span>
+                        </template>
+                    </div>
+                    
+                    <!-- Quote -->
+                    <p class="text-base leading-relaxed mb-6 text-gray-700" x-text="'\"' + testimonial.text + '\"'"></p>
+                    
+                    <!-- Author -->
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-brand-yellow rounded-full flex items-center justify-center font-display font-bold border-2 border-black group-hover:scale-110 transition-transform" x-text="testimonial.initials"></div>
+                        <div>
+                            <div class="font-display font-bold" x-text="testimonial.name"></div>
+                            <div class="text-sm text-gray-500" x-text="testimonial.role"></div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+        
+        <!-- Stats Bar -->
+        <div class="mt-12 md:mt-16 grid grid-cols-3 gap-4 md:gap-8 bg-brand-black text-white rounded-2xl md:rounded-3xl p-6 md:p-10 border-2 border-black">
+            <div class="text-center">
+                <div class="text-3xl md:text-5xl font-display font-bold text-brand-yellow">5K+</div>
+                <div class="text-xs md:text-sm text-gray-400 mt-1 font-mono">ACTIVE USERS</div>
+            </div>
+            <div class="text-center border-x border-white/20">
+                <div class="text-3xl md:text-5xl font-display font-bold text-brand-yellow">4.9</div>
+                <div class="text-xs md:text-sm text-gray-400 mt-1 font-mono">AVG RATING</div>
+            </div>
+            <div class="text-center">
+                <div class="text-3xl md:text-5xl font-display font-bold text-brand-yellow">100+</div>
+                <div class="text-xs md:text-sm text-gray-400 mt-1 font-mono">SUCCESS STORIES</div>
+            </div>
+        </div>
+    </div>
+</section>
