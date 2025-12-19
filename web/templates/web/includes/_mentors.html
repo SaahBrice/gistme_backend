@@ -1,3 +1,4 @@
+{% load i18n %}
 <!-- Professional Mentors Section with Parallax -->
 <section id="mentors" class="mentors-section relative overflow-hidden py-24 md:py-32">
     <!-- Parallax Background -->
@@ -9,13 +10,13 @@
     <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-6">
         <!-- Section Header -->
         <div class="text-center mb-16 md:mb-20">
-            <span class="mentor-badge inline-block font-mono text-xs border-2 border-black bg-brand-yellow rounded-full px-4 py-2 mb-6">BUT WAIT, THERE'S MORE</span>
+            <span class="mentor-badge inline-block font-mono text-xs border-2 border-black bg-brand-yellow rounded-full px-4 py-2 mb-6">{% trans "BUT WAIT, THERE'S MORE" %}</span>
             <h2 class="text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-6">
-                PROFESSIONAL<br>
-                <span class="text-brand-yellow">MENTORS</span>
+                {% trans "PROFESSIONAL" %}<br>
+                <span class="text-brand-yellow">{% trans "MENTORS" %}</span>
             </h2>
             <p class="max-w-2xl mx-auto text-lg md:text-xl text-gray-600">
-                Connect with experienced professionals from various fields who are ready to guide you on your journey to success.
+                {% trans "Connect with experienced professionals from various fields who are ready to guide you on your journey to success." %}
             </p>
         </div>
 
@@ -29,14 +30,14 @@
                         💻
                     </div>
                     <div>
-                        <span class="text-xs font-mono text-gray-500">FIELD</span>
-                        <h3 class="font-display font-bold text-xl">Technology</h3>
+                        <span class="text-xs font-mono text-gray-500">{% trans "FIELD" %}</span>
+                        <h3 class="font-display font-bold text-xl">{% trans "Technology" %}</h3>
                     </div>
                 </div>
-                <p class="text-gray-600 text-sm mb-4">Software engineers, data scientists, and tech entrepreneurs ready to help you break into the tech industry.</p>
+                <p class="text-gray-600 text-sm mb-4">{% trans "Software engineers, data scientists, and tech entrepreneurs ready to help you break into the tech industry." %}</p>
                 <div class="flex items-center gap-2 text-xs font-mono text-brand-black/70">
                     <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                    15+ mentors available
+                    {% trans "15+ mentors available" %}
                 </div>
             </div>
 
@@ -47,14 +48,14 @@
                         📊
                     </div>
                     <div>
-                        <span class="text-xs font-mono text-gray-500">FIELD</span>
-                        <h3 class="font-display font-bold text-xl">Finance</h3>
+                        <span class="text-xs font-mono text-gray-500">{% trans "FIELD" %}</span>
+                        <h3 class="font-display font-bold text-xl">{% trans "Finance" %}</h3>
                     </div>
                 </div>
-                <p class="text-gray-600 text-sm mb-4">Bankers, accountants, and financial analysts who can guide your career in finance and investment.</p>
+                <p class="text-gray-600 text-sm mb-4">{% trans "Bankers, accountants, and financial analysts who can guide your career in finance and investment." %}</p>
                 <div class="flex items-center gap-2 text-xs font-mono text-brand-black/70">
                     <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                    12+ mentors available
+                    {% trans "12+ mentors available" %}
                 </div>
             </div>
 
@@ -65,14 +66,14 @@
                         ⚖️
                     </div>
                     <div>
-                        <span class="text-xs font-mono text-gray-500">FIELD</span>
-                        <h3 class="font-display font-bold text-xl">Law</h3>
+                        <span class="text-xs font-mono text-gray-500">{% trans "FIELD" %}</span>
+                        <h3 class="font-display font-bold text-xl">{% trans "Law" %}</h3>
                     </div>
                 </div>
-                <p class="text-gray-600 text-sm mb-4">Lawyers, magistrates, and legal professionals to mentor aspiring law students and practitioners.</p>
+                <p class="text-gray-600 text-sm mb-4">{% trans "Lawyers, magistrates, and legal professionals to mentor aspiring law students and practitioners." %}</p>
                 <div class="flex items-center gap-2 text-xs font-mono text-brand-black/70">
                     <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                    8+ mentors available
+                    {% trans "8+ mentors available" %}
                 </div>
             </div>
 
@@ -83,14 +84,14 @@
                         🩺
                     </div>
                     <div>
-                        <span class="text-xs font-mono text-gray-500">FIELD</span>
-                        <h3 class="font-display font-bold text-xl">Medicine</h3>
+                        <span class="text-xs font-mono text-gray-500">{% trans "FIELD" %}</span>
+                        <h3 class="font-display font-bold text-xl">{% trans "Medicine" %}</h3>
                     </div>
                 </div>
-                <p class="text-gray-600 text-sm mb-4">Doctors, nurses, and healthcare professionals who can guide your medical career journey.</p>
+                <p class="text-gray-600 text-sm mb-4">{% trans "Doctors, nurses, and healthcare professionals who can guide your medical career journey." %}</p>
                 <div class="flex items-center gap-2 text-xs font-mono text-brand-black/70">
                     <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                    10+ mentors available
+                    {% trans "10+ mentors available" %}
                 </div>
             </div>
 
@@ -101,14 +102,14 @@
                         🚀
                     </div>
                     <div>
-                        <span class="text-xs font-mono text-gray-500">FIELD</span>
-                        <h3 class="font-display font-bold text-xl">Entrepreneurship</h3>
+                        <span class="text-xs font-mono text-gray-500">{% trans "FIELD" %}</span>
+                        <h3 class="font-display font-bold text-xl">{% trans "Entrepreneurship" %}</h3>
                     </div>
                 </div>
-                <p class="text-gray-600 text-sm mb-4">Startup founders, business owners, and innovators to help you launch and scale your venture.</p>
+                <p class="text-gray-600 text-sm mb-4">{% trans "Startup founders, business owners, and innovators to help you launch and scale your venture." %}</p>
                 <div class="flex items-center gap-2 text-xs font-mono text-brand-black/70">
                     <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                    20+ mentors available
+                    {% trans "20+ mentors available" %}
                 </div>
             </div>
 
@@ -119,14 +120,14 @@
                         🎓
                     </div>
                     <div>
-                        <span class="text-xs font-mono text-gray-500">FIELD</span>
-                        <h3 class="font-display font-bold text-xl">Academia</h3>
+                        <span class="text-xs font-mono text-gray-500">{% trans "FIELD" %}</span>
+                        <h3 class="font-display font-bold text-xl">{% trans "Academia" %}</h3>
                     </div>
                 </div>
-                <p class="text-gray-600 text-sm mb-4">Professors, researchers, and PhD holders to guide your academic and research career path.</p>
+                <p class="text-gray-600 text-sm mb-4">{% trans "Professors, researchers, and PhD holders to guide your academic and research career path." %}</p>
                 <div class="flex items-center gap-2 text-xs font-mono text-brand-black/70">
                     <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                    18+ mentors available
+                    {% trans "18+ mentors available" %}
                 </div>
             </div>
 
@@ -135,12 +136,12 @@
         <!-- CTA Section -->
         <div class="text-center">
             <a href="/mentor/" class="btn-primary inline-flex items-center gap-3 text-lg">
-                FIND YOUR MENTOR
+                {% trans "FIND YOUR MENTOR" %}
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                 </svg>
             </a>
-            <p class="mt-4 text-sm text-gray-500 font-mono">FREE consultation • Expert guidance • Your success partner</p>
+            <p class="mt-4 text-sm text-gray-500 font-mono">{% trans "FREE consultation" %} • {% trans "Expert guidance" %} • {% trans "Your success partner" %}</p>
         </div>
     </div>
 </section>

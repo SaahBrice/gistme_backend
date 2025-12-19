@@ -1,6 +1,7 @@
-{% load static %}
+{% load static i18n %}
 <!DOCTYPE html>
-<html lang="en" {% block html_attributes %}translate="no" class="notranslate" {% endblock %}>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}" {% block html_attributes %}translate="no" class="notranslate" {% endblock %}>
 
 <head>
     <meta charset="UTF-8" />
@@ -62,6 +63,10 @@
 </head>
 
 <body x-data="app()" x-init="initApp()">
+
+    {% block language_modal %}
+    {% include 'web/includes/_language_modal.html' %}
+    {% endblock %}
 
     {% block navbar %}
     {% include 'web/includes/_navbar.html' %}

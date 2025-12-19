@@ -1,92 +1,85 @@
 {% extends 'web/base.html' %}
+{% load i18n %}
 
-{% block title %}Terms and Conditions - Gist4U{% endblock %}
+{% block title %}{% trans "Terms and Conditions" %} - Gist4U{% endblock %}
 
 {% block content %}
 <div class="min-h-screen pt-24 pb-16 px-6">
     <div class="max-w-3xl mx-auto">
-        <h1 class="text-4xl font-display font-bold text-white mb-8">Terms and Conditions</h1>
+        <h1 class="text-4xl font-display font-bold text-white mb-8">{% trans "Terms and Conditions" %}</h1>
 
         <div class="prose prose-invert max-w-none space-y-8 text-gray-300">
 
             <section>
-                <h2 class="text-xl font-semibold text-yellow-500 mb-3">1. Acceptance of Terms</h2>
+                <h2 class="text-xl font-semibold text-yellow-500 mb-3">{% trans "1. Acceptance of Terms" %}</h2>
                 <p>
-                    By accessing or using Gist4U, you agree to be bound by these Terms and Conditions.
-                    If you do not agree with any part of these terms, please do not use our service.
+                    {% trans "By accessing or using Gist4U, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use our service." %}
                 </p>
             </section>
 
             <section>
-                <h2 class="text-xl font-semibold text-yellow-500 mb-3">2. Service Description</h2>
+                <h2 class="text-xl font-semibold text-yellow-500 mb-3">{% trans "2. Service Description" %}</h2>
                 <p>
-                    Gist4U is a news and opportunity curation platform that aggregates, summarizes, and delivers
-                    relevant information to users in Cameroon and beyond. Our service includes free and
-                    paid subscription tiers.
+                    {% trans "Gist4U is a news and opportunity curation platform that aggregates, summarizes, and delivers relevant information to users in Cameroon and beyond. Our service includes free and paid subscription tiers." %}
                 </p>
             </section>
 
             <section>
-                <h2 class="text-xl font-semibold text-yellow-500 mb-3">3. User Accounts</h2>
+                <h2 class="text-xl font-semibold text-yellow-500 mb-3">{% trans "3. User Accounts" %}</h2>
                 <p>
-                    When subscribing to our Pro service, you are responsible for providing accurate information
-                    (name, email, phone number). You agree to receive notifications and communications related
-                    to your subscription and curated content.
+                    {% trans "When subscribing to our Pro service, you are responsible for providing accurate information (name, email, phone number). You agree to receive notifications and communications related to your subscription and curated content." %}
                 </p>
             </section>
 
             <section>
-                <h2 class="text-xl font-semibold text-yellow-500 mb-3">4. Subscription and Payments</h2>
+                <h2 class="text-xl font-semibold text-yellow-500 mb-3">{% trans "4. Subscription and Payments" %}</h2>
                 <ul class="list-disc pl-6 space-y-2">
-                    <li>Pro subscriptions are billed at the rate displayed during checkout</li>
-                    <li>Subscription periods are 3 months in duration</li>
-                    <li>Payments are processed through Fapshi mobile money gateway</li>
-                    <li>Refunds are handled on a case-by-case basis</li>
-                    <li>Coupon codes, if valid, will apply the stated discount</li>
+                    <li>{% trans "Pro subscriptions are billed at the rate displayed during checkout" %}</li>
+                    <li>{% trans "Subscription periods are 3 months in duration" %}</li>
+                    <li>{% trans "Payments are processed through Fapshi mobile money gateway" %}</li>
+                    <li>{% trans "Refunds are handled on a case-by-case basis" %}</li>
+                    <li>{% trans "Coupon codes, if valid, will apply the stated discount" %}</li>
                 </ul>
             </section>
 
             <section>
-                <h2 class="text-xl font-semibold text-yellow-500 mb-3">5. Acceptable Use</h2>
-                <p>You agree not to:</p>
+                <h2 class="text-xl font-semibold text-yellow-500 mb-3">{% trans "5. Acceptable Use" %}</h2>
+                <p>{% trans "You agree not to:" %}</p>
                 <ul class="list-disc pl-6 space-y-2 mt-2">
-                    <li>Use the service for any unlawful purpose</li>
-                    <li>Attempt to gain unauthorized access to our systems</li>
-                    <li>Share your subscription with others</li>
-                    <li>Redistribute our curated content for commercial purposes</li>
+                    <li>{% trans "Use the service for any unlawful purpose" %}</li>
+                    <li>{% trans "Attempt to gain unauthorized access to our systems" %}</li>
+                    <li>{% trans "Share your subscription with others" %}</li>
+                    <li>{% trans "Redistribute our curated content for commercial purposes" %}</li>
                 </ul>
             </section>
 
             <section>
-                <h2 class="text-xl font-semibold text-yellow-500 mb-3">6. Content Accuracy</h2>
+                <h2 class="text-xl font-semibold text-yellow-500 mb-3">{% trans "6. Content Accuracy" %}</h2>
                 <p>
-                    While we strive for accuracy, we cannot guarantee that all information is error-free.
-                    Users should independently verify critical information, especially regarding deadlines,
-                    requirements, and official announcements.
+                    {% trans "While we strive for accuracy, we cannot guarantee that all information is error-free. Users should independently verify critical information, especially regarding deadlines, requirements, and official announcements." %}
                 </p>
             </section>
 
             <section>
-                <h2 class="text-xl font-semibold text-yellow-500 mb-3">7. Modifications</h2>
+                <h2 class="text-xl font-semibold text-yellow-500 mb-3">{% trans "7. Modifications" %}</h2>
                 <p>
-                    We reserve the right to modify these terms at any time. Continued use of the service
-                    after changes constitutes acceptance of the new terms.
+                    {% trans "We reserve the right to modify these terms at any time. Continued use of the service after changes constitutes acceptance of the new terms." %}
                 </p>
             </section>
 
             <section>
-                <h2 class="text-xl font-semibold text-yellow-500 mb-3">8. Contact</h2>
+                <h2 class="text-xl font-semibold text-yellow-500 mb-3">{% trans "8. Contact" %}</h2>
                 <p>
-                    For questions about these terms, contact us via WhatsApp at
+                    {% trans "For questions about these terms, contact us via WhatsApp at" %}
                     <a href="https://wa.me/447555000479" class="text-yellow-500 hover:underline">+44 7555 000479</a>.
                 </p>
             </section>
 
-            <p class="text-gray-500 text-sm mt-12">Last updated: December 2025</p>
+            <p class="text-gray-500 text-sm mt-12">{% trans "Last updated: December 2025" %}</p>
         </div>
 
         <div class="mt-12">
-            <a href="/" class="text-yellow-500 hover:underline font-semibold">← Back to Home</a>
+            <a href="{% url 'index' %}" class="text-yellow-500 hover:underline font-semibold">← {% trans "Back to Home" %}</a>
         </div>
     </div>
 </div>

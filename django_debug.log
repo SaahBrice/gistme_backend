@@ -13480,3 +13480,690 @@ INFO 2025-12-19 20:45:03,474 basehttp 30204 54856 "GET /static/web/icons/icon-19
 INFO 2025-12-19 20:45:03,496 basehttp 30204 54856 "GET /static/web/icons/icon-512x512.png HTTP/1.1" 200 376241
 INFO 2025-12-19 20:45:03,515 basehttp 30204 54856 "GET /static/web/icons/icon-maskable-512x512.png HTTP/1.1" 200 390230
 INFO 2025-12-19 20:45:03,538 basehttp 30204 54856 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-19 21:09:55,269 autoreload 19436 15592 Watching for file changes with StatReloader
+INFO 2025-12-19 21:10:15,732 basehttp 19436 5508 "GET / HTTP/1.1" 302 0
+INFO 2025-12-19 21:10:16,070 basehttp 19436 5508 "GET /en/ HTTP/1.1" 200 84850
+INFO 2025-12-19 21:10:16,493 basehttp 19436 5508 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-19 21:10:16,514 basehttp 19436 2544 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-19 21:10:16,523 basehttp 19436 5428 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-19 21:10:16,546 basehttp 19436 11344 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-19 21:10:18,016 basehttp 19436 15292 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-19 21:10:18,030 basehttp 19436 11344 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-19 21:10:19,001 basehttp 19436 11344 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 21:12:27,191 basehttp 19436 7640 "GET /fr/ HTTP/1.1" 200 84903
+INFO 2025-12-19 21:12:29,487 basehttp 19436 7640 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 21:12:32,573 basehttp 19436 8252 "GET /fr/ HTTP/1.1" 200 84903
+WARNING 2025-12-19 21:12:32,615 log 19436 8252 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 21:12:32,615 basehttp 19436 8252 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 21:18:43,047 basehttp 19436 13844 "GET /fr/ HTTP/1.1" 200 80901
+WARNING 2025-12-19 21:18:43,100 log 19436 13844 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 21:18:43,100 basehttp 19436 13844 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 21:18:43,136 basehttp 19436 13844 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-19 21:18:43,139 basehttp 19436 3652 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-19 21:18:43,146 basehttp 19436 13844 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-19 21:18:43,148 basehttp 19436 15388 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-19 21:18:44,755 basehttp 19436 11080 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-19 21:18:44,762 basehttp 19436 15388 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-19 21:18:44,775 basehttp 19436 13844 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-19 21:18:46,277 basehttp 19436 13844 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 21:18:48,361 basehttp 19436 15388 "GET /en/ HTTP/1.1" 200 80901
+INFO 2025-12-19 21:18:48,436 basehttp 19436 3652 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-19 21:18:48,437 basehttp 19436 15388 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-19 21:18:48,437 basehttp 19436 10904 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-19 21:18:48,439 basehttp 19436 5892 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+WARNING 2025-12-19 21:18:48,630 log 19436 5892 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 21:18:48,631 basehttp 19436 5892 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 21:18:49,299 basehttp 19436 11080 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-19 21:18:49,319 basehttp 19436 5892 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-19 21:18:51,060 basehttp 19436 5892 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 21:18:51,413 basehttp 19436 10904 "GET /en/ HTTP/1.1" 200 80901
+WARNING 2025-12-19 21:18:51,442 log 19436 10904 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 21:18:51,443 basehttp 19436 10904 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 21:18:51,446 basehttp 19436 15388 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-19 21:18:51,469 basehttp 19436 15388 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-19 21:18:51,471 basehttp 19436 10904 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-19 21:18:51,471 basehttp 19436 3652 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-19 21:18:52,293 basehttp 19436 3652 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-19 21:18:52,298 basehttp 19436 11080 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-19 21:18:52,333 basehttp 19436 3652 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-19 21:18:54,116 basehttp 19436 3652 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 21:20:25,061 basehttp 19436 10904 "GET /en/ HTTP/1.1" 200 81196
+WARNING 2025-12-19 21:20:25,099 log 19436 10904 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 21:20:25,100 basehttp 19436 10904 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 21:20:25,125 basehttp 19436 10904 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-19 21:20:25,134 basehttp 19436 15388 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-19 21:20:25,135 basehttp 19436 8404 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-19 21:20:25,135 basehttp 19436 10904 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-19 21:20:26,406 basehttp 19436 11080 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-19 21:20:26,406 basehttp 19436 10904 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-19 21:20:26,431 basehttp 19436 10904 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-19 21:20:28,115 basehttp 19436 10904 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 21:20:30,478 basehttp 19436 8404 "GET /fr/ HTTP/1.1" 200 81196
+WARNING 2025-12-19 21:20:30,557 log 19436 8404 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 21:20:30,558 basehttp 19436 8404 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 21:20:30,590 basehttp 19436 8404 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-19 21:20:30,591 basehttp 19436 15388 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-19 21:20:30,595 basehttp 19436 10688 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-19 21:20:30,596 basehttp 19436 3816 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-19 21:20:31,463 basehttp 19436 11080 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-19 21:20:31,476 basehttp 19436 3816 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-19 21:20:32,698 basehttp 19436 3816 "GET /en/ HTTP/1.1" 200 81196
+WARNING 2025-12-19 21:20:32,763 log 19436 3816 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 21:20:32,764 basehttp 19436 3816 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 21:20:32,798 basehttp 19436 3816 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-19 21:20:32,799 basehttp 19436 8404 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-19 21:20:32,799 basehttp 19436 15388 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-19 21:20:32,799 basehttp 19436 10688 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-19 21:20:33,193 basehttp 19436 8404 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 21:20:33,623 basehttp 19436 11080 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-19 21:20:33,643 basehttp 19436 10688 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-19 21:20:35,292 basehttp 19436 10688 "GET /fr/ HTTP/1.1" 200 81196
+INFO 2025-12-19 21:20:35,381 basehttp 19436 10688 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-19 21:20:35,382 basehttp 19436 3816 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-19 21:20:35,385 basehttp 19436 15388 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-19 21:20:35,385 basehttp 19436 7052 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+WARNING 2025-12-19 21:20:35,397 log 19436 7052 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 21:20:35,404 basehttp 19436 7052 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 21:20:35,405 basehttp 19436 15388 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 21:20:35,405 basehttp 19436 7052 - Broken pipe from ('127.0.0.1', 61124)
+INFO 2025-12-19 21:20:36,216 basehttp 19436 11080 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-19 21:20:36,231 basehttp 19436 3816 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-19 21:20:37,989 basehttp 19436 3816 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 21:20:39,173 basehttp 19436 10688 "GET /en/ HTTP/1.1" 200 81196
+WARNING 2025-12-19 21:20:39,242 log 19436 10688 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 21:20:39,243 basehttp 19436 10688 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 21:20:39,267 basehttp 19436 10688 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-19 21:20:39,270 basehttp 19436 19132 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-19 21:20:39,270 basehttp 19436 9728 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-19 21:20:39,271 basehttp 19436 10044 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-19 21:20:40,085 basehttp 19436 11080 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-19 21:20:40,101 basehttp 19436 10044 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-19 21:20:41,879 basehttp 19436 10044 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 21:20:46,823 basehttp 19436 19132 "GET /fr/ HTTP/1.1" 200 81196
+INFO 2025-12-19 21:20:49,089 basehttp 19436 19132 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 21:20:49,157 basehttp 19436 9728 "GET /en/ HTTP/1.1" 200 81196
+INFO 2025-12-19 21:20:51,179 basehttp 19436 9728 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 21:21:11,866 autoreload 9860 16132 Watching for file changes with StatReloader
+INFO 2025-12-19 21:21:14,130 basehttp 9860 18168 "GET /en/ HTTP/1.1" 200 81196
+INFO 2025-12-19 21:21:16,299 basehttp 9860 18168 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 21:21:16,331 basehttp 9860 17300 "GET /en/ HTTP/1.1" 200 81196
+INFO 2025-12-19 21:21:18,339 basehttp 9860 17300 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 21:21:19,263 basehttp 9860 15932 "GET /fr/ HTTP/1.1" 200 81196
+INFO 2025-12-19 21:21:21,219 basehttp 9860 15932 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 21:21:41,825 basehttp 9860 14696 "GET /fr/ HTTP/1.1" 200 81196
+WARNING 2025-12-19 21:21:41,854 log 9860 14696 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 21:21:41,855 basehttp 9860 14696 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 21:21:52,799 basehttp 9860 14696 "GET /fr/ HTTP/1.1" 200 81196
+WARNING 2025-12-19 21:21:52,839 log 9860 14696 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 21:21:52,840 basehttp 9860 14696 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 21:21:53,132 basehttp 9860 16400 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-19 21:21:53,160 basehttp 9860 8732 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-19 21:21:53,171 basehttp 9860 14696 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-19 21:21:53,172 basehttp 9860 3896 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-19 21:21:54,692 basehttp 9860 3896 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-19 21:21:54,695 basehttp 9860 6824 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-19 21:21:54,710 basehttp 9860 3896 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-19 21:21:56,309 basehttp 9860 3896 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 21:22:24,387 basehttp 9860 14696 "GET /fr/ HTTP/1.1" 200 81196
+WARNING 2025-12-19 21:22:24,444 log 9860 14696 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 21:22:24,445 basehttp 9860 14696 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 21:22:24,453 basehttp 9860 8732 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-19 21:22:24,456 basehttp 9860 16400 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-19 21:22:24,459 basehttp 9860 14696 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-19 21:22:24,459 basehttp 9860 8732 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-19 21:22:25,451 basehttp 9860 8732 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-19 21:22:25,453 basehttp 9860 6824 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-19 21:22:25,467 basehttp 9860 8732 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-19 21:22:27,147 basehttp 9860 8732 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 21:22:27,295 basehttp 9860 14696 "GET /en/ HTTP/1.1" 200 81196
+WARNING 2025-12-19 21:22:27,360 log 9860 14696 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 21:22:27,360 basehttp 9860 14696 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 21:22:27,395 basehttp 9860 14696 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-19 21:22:27,395 basehttp 9860 2860 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-19 21:22:27,396 basehttp 9860 16400 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-19 21:22:27,397 basehttp 9860 15260 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-19 21:22:28,105 basehttp 9860 6824 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-19 21:22:28,132 basehttp 9860 15260 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-19 21:22:29,862 basehttp 9860 15260 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 21:25:16,804 basehttp 9860 16400 "GET /en/ HTTP/1.1" 200 81832
+WARNING 2025-12-19 21:25:16,848 log 9860 16400 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 21:25:16,849 basehttp 9860 16400 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 21:25:16,891 basehttp 9860 16400 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-19 21:25:16,895 basehttp 9860 2860 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-19 21:25:16,895 basehttp 9860 14696 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-19 21:25:16,931 basehttp 9860 6568 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-19 21:25:18,148 basehttp 9860 6568 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-19 21:25:18,151 basehttp 9860 6824 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-19 21:25:18,168 basehttp 9860 6568 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-19 21:25:19,726 basehttp 9860 6568 "GET /fr/ HTTP/1.1" 200 81832
+INFO 2025-12-19 21:25:19,768 basehttp 9860 6568 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+WARNING 2025-12-19 21:25:19,795 log 9860 14696 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 21:25:19,796 basehttp 9860 14696 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 21:25:19,832 basehttp 9860 14696 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-19 21:25:19,833 basehttp 9860 2860 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-19 21:25:19,834 basehttp 9860 16400 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-19 21:25:19,835 basehttp 9860 15388 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-19 21:25:20,612 basehttp 9860 6824 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-19 21:25:20,625 basehttp 9860 15388 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-19 21:25:22,339 basehttp 9860 15388 "GET /en/ HTTP/1.1" 200 81832
+INFO 2025-12-19 21:25:22,352 basehttp 9860 15388 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+WARNING 2025-12-19 21:25:22,406 log 9860 16400 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 21:25:22,407 basehttp 9860 16400 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 21:25:22,431 basehttp 9860 16400 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-19 21:25:22,434 basehttp 9860 2860 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-19 21:25:22,435 basehttp 9860 14696 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-19 21:25:22,435 basehttp 9860 16400 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-19 21:25:23,228 basehttp 9860 6824 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-19 21:25:23,248 basehttp 9860 16400 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-19 21:25:23,915 basehttp 9860 16400 "GET /fr/ HTTP/1.1" 200 81832
+WARNING 2025-12-19 21:25:23,985 log 9860 16400 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 21:25:23,986 basehttp 9860 16400 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 21:25:24,015 basehttp 9860 16400 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-19 21:25:24,015 basehttp 9860 14696 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-19 21:25:24,017 basehttp 9860 2860 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-19 21:25:24,017 basehttp 9860 11356 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-19 21:25:24,790 basehttp 9860 6824 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-19 21:25:24,813 basehttp 9860 11356 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-19 21:25:25,904 basehttp 9860 11356 "GET /en/ HTTP/1.1" 200 81832
+WARNING 2025-12-19 21:25:25,972 log 9860 11356 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 21:25:25,972 basehttp 9860 11356 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 21:25:26,003 basehttp 9860 11356 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-19 21:25:26,003 basehttp 9860 14696 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-19 21:25:26,003 basehttp 9860 2860 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-19 21:25:26,003 basehttp 9860 16400 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-19 21:25:26,550 basehttp 9860 2860 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 21:25:26,742 basehttp 9860 6824 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-19 21:25:26,755 basehttp 9860 16400 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-19 21:25:28,411 basehttp 9860 16400 "GET /fr/ HTTP/1.1" 200 81832
+WARNING 2025-12-19 21:25:28,495 log 9860 16400 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 21:25:28,495 basehttp 9860 16400 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 21:25:28,523 basehttp 9860 14696 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-19 21:25:28,524 basehttp 9860 16400 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-19 21:25:28,532 basehttp 9860 1028 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 21:25:28,532 basehttp 9860 11356 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-19 21:25:28,533 basehttp 9860 2936 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-19 21:25:29,276 basehttp 9860 6824 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-19 21:25:29,294 basehttp 9860 2936 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-19 21:25:31,029 basehttp 9860 2936 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 21:30:07,950 basehttp 9860 11356 "GET /fr/ HTTP/1.1" 200 78600
+WARNING 2025-12-19 21:30:07,996 log 9860 11356 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 21:30:07,996 basehttp 9860 11356 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 21:30:08,044 basehttp 9860 16400 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-19 21:30:08,044 basehttp 9860 14696 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-19 21:30:08,047 basehttp 9860 2828 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-19 21:30:08,047 basehttp 9860 11356 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-19 21:30:09,916 basehttp 9860 11356 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-19 21:30:09,917 basehttp 9860 6824 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-19 21:30:09,931 basehttp 9860 11356 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-19 21:30:10,228 basehttp 9860 11356 "GET /en/ HTTP/1.1" 200 78600
+WARNING 2025-12-19 21:30:10,291 log 9860 11356 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 21:30:10,291 basehttp 9860 11356 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 21:30:10,324 basehttp 9860 2828 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-19 21:30:10,324 basehttp 9860 11356 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-19 21:30:10,326 basehttp 9860 14696 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-19 21:30:10,326 basehttp 9860 16400 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-19 21:30:13,185 basehttp 9860 6824 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-19 21:30:13,197 basehttp 9860 16400 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-19 21:30:14,359 basehttp 9860 16400 "GET /fr/ HTTP/1.1" 200 78600
+WARNING 2025-12-19 21:30:14,439 log 9860 16400 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 21:30:14,440 basehttp 9860 16400 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 21:30:14,470 basehttp 9860 16400 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-19 21:30:14,470 basehttp 9860 14696 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-19 21:30:14,471 basehttp 9860 2828 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-19 21:30:14,472 basehttp 9860 11356 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-19 21:30:14,859 basehttp 9860 11356 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 21:30:15,529 basehttp 9860 6824 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-19 21:30:15,541 basehttp 9860 2828 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-19 21:30:16,307 basehttp 9860 2828 "GET /en/ HTTP/1.1" 200 78600
+WARNING 2025-12-19 21:30:16,384 log 9860 2828 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 21:30:16,385 basehttp 9860 2828 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 21:30:16,417 basehttp 9860 2828 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-19 21:30:16,417 basehttp 9860 14696 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-19 21:30:16,419 basehttp 9860 16400 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-19 21:30:16,420 basehttp 9860 17292 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-19 21:30:17,140 basehttp 9860 6824 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-19 21:30:17,157 basehttp 9860 17292 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-19 21:30:17,215 basehttp 9860 17292 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 21:30:18,840 basehttp 9860 16400 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 21:30:24,292 basehttp 9860 14696 "GET /fr/ HTTP/1.1" 200 78600
+INFO 2025-12-19 21:30:26,549 basehttp 9860 14696 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 21:30:40,570 basehttp 9860 2828 "GET /en/ HTTP/1.1" 200 78600
+INFO 2025-12-19 21:30:42,316 basehttp 9860 2828 "GET /fr/ HTTP/1.1" 200 78600
+INFO 2025-12-19 21:30:42,589 basehttp 9860 2828 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 21:30:44,239 basehttp 9860 7128 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 21:31:04,953 basehttp 9860 15292 "GET /fr/ HTTP/1.1" 200 78600
+WARNING 2025-12-19 21:31:04,980 log 9860 15292 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 21:31:04,980 basehttp 9860 15292 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 21:31:20,000 autoreload 13136 20468 Watching for file changes with StatReloader
+ERROR 2025-12-19 21:31:21,279 log 13136 19976 Internal Server Error: /fr/
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\middleware\locale.py", line 35, in process_request
+    translation.activate(language)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\__init__.py", line 182, in activate
+    return _trans.activate(language)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 302, in activate
+    _active.value = translation(language)
+                    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 291, in translation
+    _translations[language] = DjangoTranslation(language)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 171, in __init__
+    self._add_local_translations()
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 231, in _add_local_translations
+    translation = self._new_gnu_trans(localedir)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 198, in _new_gnu_trans
+    return gettext_module.translation(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\gettext.py", line 538, in translation
+    t = _translations.setdefault(key, class_(fp))
+                                      ^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\gettext.py", line 272, in __init__
+    self._parse(fp)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\gettext.py", line 418, in _parse
+    msgid1, msgid2 = msg.split(b'\x00')
+    ^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 2)
+ERROR 2025-12-19 21:31:21,284 basehttp 13136 19976 "GET /fr/ HTTP/1.1" 500 118537
+ERROR 2025-12-19 21:31:21,381 log 13136 2256 Internal Server Error: /.well-known/appspecific/com.chrome.devtools.json
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\middleware\locale.py", line 35, in process_request
+    translation.activate(language)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\__init__.py", line 182, in activate
+    return _trans.activate(language)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 302, in activate
+    _active.value = translation(language)
+                    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 291, in translation
+    _translations[language] = DjangoTranslation(language)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 171, in __init__
+    self._add_local_translations()
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 231, in _add_local_translations
+    translation = self._new_gnu_trans(localedir)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 198, in _new_gnu_trans
+    return gettext_module.translation(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\gettext.py", line 538, in translation
+    t = _translations.setdefault(key, class_(fp))
+                                      ^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\gettext.py", line 272, in __init__
+    self._parse(fp)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\gettext.py", line 418, in _parse
+    msgid1, msgid2 = msg.split(b'\x00')
+    ^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 2)
+ERROR 2025-12-19 21:31:21,385 basehttp 13136 2256 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 500 117800
+ERROR 2025-12-19 21:31:21,619 log 13136 9900 Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\middleware\locale.py", line 35, in process_request
+    translation.activate(language)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\__init__.py", line 182, in activate
+    return _trans.activate(language)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 302, in activate
+    _active.value = translation(language)
+                    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 291, in translation
+    _translations[language] = DjangoTranslation(language)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 171, in __init__
+    self._add_local_translations()
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 231, in _add_local_translations
+    translation = self._new_gnu_trans(localedir)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 198, in _new_gnu_trans
+    return gettext_module.translation(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\gettext.py", line 538, in translation
+    t = _translations.setdefault(key, class_(fp))
+                                      ^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\gettext.py", line 272, in __init__
+    self._parse(fp)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\gettext.py", line 418, in _parse
+    msgid1, msgid2 = msg.split(b'\x00')
+    ^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 2)
+ERROR 2025-12-19 21:31:21,623 basehttp 13136 9900 "GET /favicon.ico HTTP/1.1" 500 118433
+ERROR 2025-12-19 21:31:23,159 log 13136 8052 Internal Server Error: /firebase-messaging-sw.js
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\middleware\locale.py", line 35, in process_request
+    translation.activate(language)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\__init__.py", line 182, in activate
+    return _trans.activate(language)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 302, in activate
+    _active.value = translation(language)
+                    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 291, in translation
+    _translations[language] = DjangoTranslation(language)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 171, in __init__
+    self._add_local_translations()
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 231, in _add_local_translations
+    translation = self._new_gnu_trans(localedir)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 198, in _new_gnu_trans
+    return gettext_module.translation(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\gettext.py", line 538, in translation
+    t = _translations.setdefault(key, class_(fp))
+                                      ^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\gettext.py", line 272, in __init__
+    self._parse(fp)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\gettext.py", line 418, in _parse
+    msgid1, msgid2 = msg.split(b'\x00')
+    ^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 2)
+ERROR 2025-12-19 21:31:23,161 basehttp 13136 8052 "GET /firebase-messaging-sw.js HTTP/1.1" 500 117994
+ERROR 2025-12-19 21:31:24,990 log 13136 9852 Internal Server Error: /fr/
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\middleware\locale.py", line 35, in process_request
+    translation.activate(language)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\__init__.py", line 182, in activate
+    return _trans.activate(language)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 302, in activate
+    _active.value = translation(language)
+                    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 291, in translation
+    _translations[language] = DjangoTranslation(language)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 171, in __init__
+    self._add_local_translations()
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 231, in _add_local_translations
+    translation = self._new_gnu_trans(localedir)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 198, in _new_gnu_trans
+    return gettext_module.translation(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\gettext.py", line 538, in translation
+    t = _translations.setdefault(key, class_(fp))
+                                      ^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\gettext.py", line 272, in __init__
+    self._parse(fp)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\gettext.py", line 418, in _parse
+    msgid1, msgid2 = msg.split(b'\x00')
+    ^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 2)
+ERROR 2025-12-19 21:31:24,991 basehttp 13136 9852 "GET /fr/ HTTP/1.1" 500 118537
+ERROR 2025-12-19 21:31:25,057 log 13136 20024 Internal Server Error: /.well-known/appspecific/com.chrome.devtools.json
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\middleware\locale.py", line 35, in process_request
+    translation.activate(language)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\__init__.py", line 182, in activate
+    return _trans.activate(language)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 302, in activate
+    _active.value = translation(language)
+                    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 291, in translation
+    _translations[language] = DjangoTranslation(language)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 171, in __init__
+    self._add_local_translations()
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 231, in _add_local_translations
+    translation = self._new_gnu_trans(localedir)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 198, in _new_gnu_trans
+    return gettext_module.translation(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\gettext.py", line 538, in translation
+    t = _translations.setdefault(key, class_(fp))
+                                      ^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\gettext.py", line 272, in __init__
+    self._parse(fp)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\gettext.py", line 418, in _parse
+    msgid1, msgid2 = msg.split(b'\x00')
+    ^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 2)
+ERROR 2025-12-19 21:31:25,059 basehttp 13136 20024 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 500 117800
+ERROR 2025-12-19 21:31:25,243 log 13136 5496 Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\middleware\locale.py", line 35, in process_request
+    translation.activate(language)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\__init__.py", line 182, in activate
+    return _trans.activate(language)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 302, in activate
+    _active.value = translation(language)
+                    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 291, in translation
+    _translations[language] = DjangoTranslation(language)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 171, in __init__
+    self._add_local_translations()
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 231, in _add_local_translations
+    translation = self._new_gnu_trans(localedir)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 198, in _new_gnu_trans
+    return gettext_module.translation(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\gettext.py", line 538, in translation
+    t = _translations.setdefault(key, class_(fp))
+                                      ^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\gettext.py", line 272, in __init__
+    self._parse(fp)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\gettext.py", line 418, in _parse
+    msgid1, msgid2 = msg.split(b'\x00')
+    ^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 2)
+ERROR 2025-12-19 21:31:25,244 basehttp 13136 5496 "GET /favicon.ico HTTP/1.1" 500 118433
+ERROR 2025-12-19 21:31:26,770 log 13136 15388 Internal Server Error: /firebase-messaging-sw.js
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\middleware\locale.py", line 35, in process_request
+    translation.activate(language)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\__init__.py", line 182, in activate
+    return _trans.activate(language)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 302, in activate
+    _active.value = translation(language)
+                    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 291, in translation
+    _translations[language] = DjangoTranslation(language)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 171, in __init__
+    self._add_local_translations()
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 231, in _add_local_translations
+    translation = self._new_gnu_trans(localedir)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\translation\trans_real.py", line 198, in _new_gnu_trans
+    return gettext_module.translation(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\gettext.py", line 538, in translation
+    t = _translations.setdefault(key, class_(fp))
+                                      ^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\gettext.py", line 272, in __init__
+    self._parse(fp)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\gettext.py", line 418, in _parse
+    msgid1, msgid2 = msg.split(b'\x00')
+    ^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 2)
+ERROR 2025-12-19 21:31:26,772 basehttp 13136 15388 "GET /firebase-messaging-sw.js HTTP/1.1" 500 117994
+INFO 2025-12-19 21:37:29,245 autoreload 11252 2408 Watching for file changes with StatReloader
+INFO 2025-12-19 21:37:52,990 basehttp 11252 20176 "GET /fr/ HTTP/1.1" 200 78696
+WARNING 2025-12-19 21:37:53,026 log 11252 20176 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 21:37:53,027 basehttp 11252 20176 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 21:37:53,315 basehttp 11252 5580 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-19 21:37:53,323 basehttp 11252 18320 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-19 21:37:53,326 basehttp 11252 20176 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-19 21:37:53,332 basehttp 11252 6796 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-19 21:37:56,016 basehttp 11252 6796 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-19 21:37:56,017 basehttp 11252 19980 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-19 21:37:56,036 basehttp 11252 6796 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-19 21:37:57,600 basehttp 11252 6796 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 21:37:58,755 basehttp 11252 20176 "GET /en/ HTTP/1.1" 200 78600
+WARNING 2025-12-19 21:37:58,815 log 11252 20176 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 21:37:58,815 basehttp 11252 20176 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 21:37:58,842 basehttp 11252 18320 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-19 21:37:58,843 basehttp 11252 20176 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-19 21:37:58,845 basehttp 11252 5580 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-19 21:37:58,847 basehttp 11252 20004 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-19 21:37:59,810 basehttp 11252 19980 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-19 21:37:59,823 basehttp 11252 20004 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-19 21:38:01,295 basehttp 11252 20004 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 21:38:03,572 basehttp 11252 5580 "GET /fr/ HTTP/1.1" 200 78696
+WARNING 2025-12-19 21:38:03,659 log 11252 5580 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 21:38:03,659 basehttp 11252 5580 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 21:38:03,681 basehttp 11252 5580 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-19 21:38:03,682 basehttp 11252 20176 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-19 21:38:03,683 basehttp 11252 18320 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-19 21:38:03,683 basehttp 11252 9992 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-19 21:38:04,601 basehttp 11252 19980 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-19 21:38:04,616 basehttp 11252 9992 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-19 21:38:06,357 basehttp 11252 9992 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 21:58:01,295 autoreload 20220 10120 Watching for file changes with StatReloader
+INFO 2025-12-19 21:58:14,858 basehttp 20220 11888 "GET /fr/ HTTP/1.1" 200 78974
+WARNING 2025-12-19 21:58:14,901 log 20220 11888 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 21:58:14,902 basehttp 20220 11888 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 21:58:15,289 basehttp 20220 15932 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-19 21:58:15,294 basehttp 20220 19576 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-19 21:58:15,296 basehttp 20220 13872 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-19 21:58:15,299 basehttp 20220 11888 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-19 21:58:19,748 basehttp 20220 11888 "GET /fr/ HTTP/1.1" 200 78974
+WARNING 2025-12-19 21:58:19,775 log 20220 11888 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 21:58:19,776 basehttp 20220 11888 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 21:58:19,784 basehttp 20220 11888 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-19 21:58:19,788 basehttp 20220 13872 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-19 21:58:19,792 basehttp 20220 11888 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-19 21:58:19,792 basehttp 20220 19576 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-19 21:58:20,769 basehttp 20220 11888 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 21:58:35,372 basehttp 20220 19576 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-19 21:58:35,372 basehttp 20220 10184 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-19 21:58:35,386 basehttp 20220 19576 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-19 22:13:04,390 autoreload 13160 17904 Watching for file changes with StatReloader
+INFO 2025-12-19 22:13:15,187 basehttp 13160 12740 "GET /fr/ HTTP/1.1" 200 79028
+WARNING 2025-12-19 22:13:15,233 log 13160 12740 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 22:13:15,234 basehttp 13160 12740 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 22:13:15,556 basehttp 13160 10048 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-19 22:13:15,575 basehttp 13160 19284 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-19 22:13:15,580 basehttp 13160 12740 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-19 22:13:15,583 basehttp 13160 2808 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-19 22:13:16,771 basehttp 13160 2808 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-19 22:13:16,776 basehttp 13160 4568 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-19 22:13:16,792 basehttp 13160 2808 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-19 22:13:18,279 basehttp 13160 2808 "GET /en/ HTTP/1.1" 200 78176
+WARNING 2025-12-19 22:13:18,346 log 13160 2808 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 22:13:18,347 basehttp 13160 2808 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 22:13:18,382 basehttp 13160 2808 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-19 22:13:18,384 basehttp 13160 12740 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-19 22:13:18,395 basehttp 13160 2808 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 22:13:18,396 basehttp 13160 19284 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-19 22:13:18,397 basehttp 13160 10048 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-19 22:13:19,271 basehttp 13160 4568 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-19 22:13:19,289 basehttp 13160 10048 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-19 22:13:21,025 basehttp 13160 10048 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 22:13:34,521 basehttp 13160 19284 "GET /fr/ HTTP/1.1" 200 79028
+WARNING 2025-12-19 22:13:34,625 log 13160 19284 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 22:13:34,626 basehttp 13160 19284 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 22:13:34,651 basehttp 13160 12740 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-19 22:13:34,651 basehttp 13160 19284 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-19 22:13:34,656 basehttp 13160 9372 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-19 22:13:34,656 basehttp 13160 19296 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-19 22:13:35,539 basehttp 13160 4568 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-19 22:13:35,581 basehttp 13160 9372 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-19 22:13:37,418 basehttp 13160 9372 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 22:14:39,474 basehttp 13160 19296 "GET /fr/contact/ HTTP/1.1" 200 28442
+WARNING 2025-12-19 22:14:39,603 log 13160 19296 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 22:14:39,604 basehttp 13160 19296 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 22:14:39,644 basehttp 13160 19296 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-19 22:14:39,645 basehttp 13160 19284 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-19 22:14:39,651 basehttp 13160 19296 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-19 22:14:39,652 basehttp 13160 12740 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-19 22:14:40,712 basehttp 13160 4568 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-19 22:14:40,743 basehttp 13160 12740 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-19 22:14:42,305 basehttp 13160 12740 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 22:14:56,325 basehttp 13160 19296 "GET / HTTP/1.1" 302 0
+INFO 2025-12-19 22:14:56,336 basehttp 13160 19296 "GET /fr/ HTTP/1.1" 200 79028
+WARNING 2025-12-19 22:14:56,395 log 13160 19296 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 22:14:56,397 basehttp 13160 19296 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 22:14:56,420 basehttp 13160 19296 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-19 22:14:56,421 basehttp 13160 19284 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-19 22:14:56,424 basehttp 13160 11188 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-19 22:14:56,425 basehttp 13160 19284 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-19 22:14:57,227 basehttp 13160 4568 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-19 22:14:57,246 basehttp 13160 19284 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-19 22:14:59,097 basehttp 13160 19284 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 22:15:04,493 basehttp 13160 11188 "GET /fr/legal/ HTTP/1.1" 200 21227
+WARNING 2025-12-19 22:15:04,570 log 13160 11188 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 22:15:04,574 basehttp 13160 11188 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 22:15:04,603 basehttp 13160 11188 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-19 22:15:04,603 basehttp 13160 19296 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-19 22:15:04,604 basehttp 13160 2740 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-19 22:15:04,604 basehttp 13160 18724 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-19 22:15:05,076 basehttp 13160 4568 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-19 22:15:05,102 basehttp 13160 18724 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-19 22:15:06,663 basehttp 13160 18724 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 22:23:43,220 autoreload 13108 18048 Watching for file changes with StatReloader
+INFO 2025-12-19 22:23:49,095 basehttp 13108 11888 "GET /fr/legal/ HTTP/1.1" 200 20799
+WARNING 2025-12-19 22:23:49,135 log 13108 11888 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 22:23:49,137 basehttp 13108 11888 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 22:23:49,438 basehttp 13108 18720 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-19 22:23:49,441 basehttp 13108 17376 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-19 22:23:49,445 basehttp 13108 15508 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-19 22:23:49,448 basehttp 13108 11888 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-19 22:23:50,451 basehttp 13108 11888 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-19 22:23:50,452 basehttp 13108 19012 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-19 22:23:50,467 basehttp 13108 11888 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-19 22:23:51,985 basehttp 13108 11888 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-19 22:24:49,761 basehttp 13108 15508 "GET /fr/ HTTP/1.1" 200 79059
+WARNING 2025-12-19 22:24:49,809 log 13108 15508 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-19 22:24:49,810 basehttp 13108 15508 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-19 22:24:49,839 basehttp 13108 15508 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-19 22:24:49,845 basehttp 13108 17376 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-19 22:24:49,846 basehttp 13108 18720 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-19 22:24:49,847 basehttp 13108 4532 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-19 22:24:51,252 basehttp 13108 19012 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-19 22:24:51,274 basehttp 13108 4532 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-19 22:24:53,364 basehttp 13108 4532 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
