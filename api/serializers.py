@@ -55,7 +55,8 @@ class ArticleSerializer(serializers.ModelSerializer):
             'french_summary', 'english_summary',
             'mood', 'source_urls', 'source_names', 'thumbnails', 'thumbnail_image',
             'french_audio', 'english_audio', 'timestamp', 'created_at',
-            'view_count', 'comment_count', 'reaction_count', 'comments', 'send_notification'
+            'view_count', 'comment_count', 'reaction_count', 'comments', 'send_notification',
+            'deadline'
         ]
         read_only_fields = ['created_at', 'view_count', 'comment_count', 'reaction_count']
 

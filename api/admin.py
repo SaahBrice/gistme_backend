@@ -23,11 +23,12 @@ class ArticleCategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Article)
 class ArticleAdmin(admin.ModelAdmin):
-    list_display = ('headline', 'headline_en', 'headline_fr', 'category', 'category_legacy', 'mood', 'created_at', 'view_count')
-    list_filter = ('category__main_category', 'category', 'mood', 'created_at')
+    list_display = ('headline', 'category', 'deadline', 'mood', 'created_at', 'view_count')
+    list_filter = ('category__main_category', 'category', 'mood', 'deadline', 'created_at')
     search_fields = ('headline', 'headline_en', 'headline_fr', 'french_summary', 'english_summary')
     raw_id_fields = ('category',)
     list_select_related = ('category',)
+    date_hierarchy = 'created_at'
 
 
 @admin.register(Comment)
