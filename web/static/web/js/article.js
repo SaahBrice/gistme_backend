@@ -18,8 +18,6 @@ function articleApp() {
         chatMessages: [],
         chatInput: '',
         isTyping: false,
-        aiResponses: [],
-        currentResponseIndex: 0,
 
         // Quick questions for chat
         quickQuestions: [
@@ -109,15 +107,8 @@ function articleApp() {
                     // Store raw data for audio
                     this.articleData = data;
 
-                    // Initialize chat with welcome message
-                    this.chatMessages = [{
-                        id: 1,
-                        role: "assistant",
-                        content: this.lang === 'fr'
-                            ? "Bonjour! Je suis là pour vous aider à mieux comprendre cet article. Que voulez-vous savoir?"
-                            : "Hello! I'm here to help you understand this article better. What would you like to know?",
-                        timestamp: this.formatTime(new Date())
-                    }];
+                    // Load chat history from LocalStorage or initialize with welcome message
+                    this.loadChatHistory();
                 } else {
                     console.error('[ArticleApp] Failed to load article:', response.status);
                     this.showToastMessage('Failed to load article', 'error');
@@ -533,43 +524,113 @@ function articleApp() {
 
         sendMessage() {
             const message = this.chatInput.trim();
-            if (!message) return;
+            if (!message || !this.article?.id) return;
 
             // Add user message
-            this.chatMessages.push({
+            const userMessage = {
                 id: Date.now(),
                 role: 'user',
                 content: message,
                 timestamp: this.formatTime(new Date())
-            });
-
+            };
+            this.chatMessages.push(userMessage);
             this.chatInput = '';
 
             // Scroll after user message
             this.scrollChatToBottom();
 
-            // Simulate AI typing
+            // Show typing indicator
             this.isTyping = true;
             this.scrollChatToBottom();
 
-            setTimeout(() => {
-                this.isTyping = false;
+            // Build history for API (last 5 messages, excluding welcome)
+            const history = this.chatMessages
+                .filter(m => m.id !== 1) // Exclude welcome message
+                .slice(-5)
+                .map(m => ({ role: m.role, content: m.content }));
 
-                // Add AI response
-                const responseIndex = this.currentResponseIndex % this.aiResponses.length;
-                this.chatMessages.push({
-                    id: Date.now() + 1,
-                    role: 'assistant',
-                    content: this.aiResponses[responseIndex],
-                    timestamp: this.formatTime(new Date())
+            // Call AI API
+            fetch('/api/chat/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    article_id: this.article.id,
+                    message: message,
+                    history: history,
+                    lang: this.lang
+                })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    this.isTyping = false;
+
+                    // Add AI response
+                    this.chatMessages.push({
+                        id: Date.now() + 1,
+                        role: 'assistant',
+                        content: data.response || 'Sorry, I could not process your request.',
+                        timestamp: this.formatTime(new Date())
+                    });
+
+                    // Save to LocalStorage (keep last 10 messages)
+                    this.saveChatHistory();
+
+                    setTimeout(() => this.scrollChatToBottom(), 50);
+                })
+                .catch(error => {
+                    console.error('[ArticleApp] Chat error:', error);
+                    this.isTyping = false;
+
+                    const fallback = this.lang === 'fr'
+                        ? "Désolé, une erreur s'est produite. Réessayez."
+                        : "Sorry, an error occurred. Please try again.";
+
+                    this.chatMessages.push({
+                        id: Date.now() + 1,
+                        role: 'assistant',
+                        content: fallback,
+                        timestamp: this.formatTime(new Date())
+                    });
+
+                    setTimeout(() => this.scrollChatToBottom(), 50);
                 });
+        },
 
-                this.currentResponseIndex++;
+        // Load chat history from LocalStorage
+        loadChatHistory() {
+            const storageKey = `gist4u_chat_${this.article?.id}`;
+            const saved = localStorage.getItem(storageKey);
 
-                setTimeout(() => {
-                    this.scrollChatToBottom();
-                }, 50);
-            }, 1200 + Math.random() * 800);
+            if (saved) {
+                try {
+                    this.chatMessages = JSON.parse(saved);
+                } catch (e) {
+                    this.initWelcomeMessage();
+                }
+            } else {
+                this.initWelcomeMessage();
+            }
+        },
+
+        // Save chat history to LocalStorage
+        saveChatHistory() {
+            if (!this.article?.id) return;
+            const storageKey = `gist4u_chat_${this.article.id}`;
+            // Keep last 10 messages
+            const toSave = this.chatMessages.slice(-10);
+            localStorage.setItem(storageKey, JSON.stringify(toSave));
+        },
+
+        // Initialize welcome message
+        initWelcomeMessage() {
+            this.chatMessages = [{
+                id: 1,
+                role: 'assistant',
+                content: this.lang === 'fr'
+                    ? "Bonjour! Je suis Reepls AI 🚀 Je suis là pour vous aider à comprendre cet article. Que voulez-vous savoir?"
+                    : "Hello! I'm Reepls AI 🚀 I'm here to help you understand this article. What would you like to know?",
+                timestamp: this.formatTime(new Date())
+            }];
         },
 
         sendQuickQuestion(question) {

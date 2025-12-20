@@ -261,3 +261,56 @@ class AssistanceRequest(models.Model):
         article_title = self.article.headline_en or self.article.headline_fr or 'Unknown'
         return f"Request for '{article_title[:30]}...' - {self.status}"
 
+
+class AISettings(models.Model):
+    """
+    Singleton model for admin-configurable AI settings.
+    Controls the behavior of the Reepls AI chat assistant.
+    """
+    ai_name = models.CharField(
+        max_length=50, 
+        default="Reepls AI",
+        help_text="Name the AI uses to identify itself"
+    )
+    system_prompt = models.TextField(
+        default="""You are Reepls AI, a helpful assistant for Gist4U - a platform that helps users discover opportunities in Cameroon (scholarships, jobs, concours, news).
+
+Your role is to help users understand articles and answer questions about opportunities.
+
+Guidelines:
+- Be concise (max 500 characters per response)
+- Be friendly but professional
+- Answer in the same language the user writes in
+- If you don't know something, say so honestly
+- On your FIRST response, you may reference the article context
+- On follow-up responses, answer naturally without repeatedly saying "this article" - just respond directly to the user's question
+- Have a natural conversation flow, like a helpful friend who read the article""",
+        help_text="System instructions sent to Gemini API"
+    )
+    max_response_length = models.PositiveIntegerField(
+        default=500,
+        help_text="Maximum characters for AI responses"
+    )
+    is_active = models.BooleanField(
+        default=True,
+        help_text="Enable/disable AI chat feature"
+    )
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        verbose_name = 'AI Settings'
+        verbose_name_plural = 'AI Settings'
+    
+    def save(self, *args, **kwargs):
+        # Ensure only one instance exists (singleton)
+        self.pk = 1
+        super().save(*args, **kwargs)
+    
+    @classmethod
+    def get_settings(cls):
+        """Get or create the singleton settings instance"""
+        obj, created = cls.objects.get_or_create(pk=1)
+        return obj
+    
+    def __str__(self):
+        return f"AI Settings (Updated: {self.updated_at})"

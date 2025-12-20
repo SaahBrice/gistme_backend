@@ -508,3 +508,55 @@ class AssistanceRequestView(APIView):
             }, status=status.HTTP_201_CREATED)
         
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class ChatView(APIView):
+    """
+    API endpoint for AI chat using Gemini.
+    POST /api/chat/ - Send a message and get AI response
+    """
+    permission_classes = [AllowAny]
+    authentication_classes = []
+    
+    def post(self, request):
+        from api.utils.gemini import get_ai_response
+        from api.models import Article
+        
+        # Extract request data
+        article_id = request.data.get('article_id')
+        user_message = request.data.get('message', '').strip()
+        chat_history = request.data.get('history', [])
+        language = request.data.get('lang', 'en')
+        
+        # Validate
+        if not user_message:
+            return Response({
+                'success': False,
+                'response': 'Message is required'
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        if not article_id:
+            return Response({
+                'success': False,
+                'response': 'Article ID is required'
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Get article context
+        try:
+            article = Article.objects.get(id=article_id)
+            article_context = {
+                'title': article.headline_en if language == 'en' else article.headline_fr or article.headline,
+                'summary': article.english_summary if language == 'en' else article.french_summary
+            }
+        except Article.DoesNotExist:
+            article_context = {'title': 'Unknown', 'summary': 'Article not found'}
+        
+        # Get AI response
+        result = get_ai_response(
+            article_context=article_context,
+            user_message=user_message,
+            chat_history=chat_history,
+            language=language
+        )
+        
+        return Response(result, status=status.HTTP_200_OK)

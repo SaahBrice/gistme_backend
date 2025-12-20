@@ -75,3 +75,31 @@ class AssistanceRequestAdmin(admin.ModelAdmin):
     @admin.display(description='Article')
     def get_article_title(self, obj):
         return obj.article.headline_en or obj.article.headline_fr or 'Unknown'
+
+
+from .models import AISettings
+
+@admin.register(AISettings)
+class AISettingsAdmin(admin.ModelAdmin):
+    list_display = ('ai_name', 'max_response_length', 'is_active', 'updated_at')
+    readonly_fields = ('updated_at',)
+    
+    fieldsets = (
+        ('AI Identity', {
+            'fields': ('ai_name', 'is_active')
+        }),
+        ('Configuration', {
+            'fields': ('system_prompt', 'max_response_length')
+        }),
+        ('Info', {
+            'fields': ('updated_at',),
+            'classes': ('collapse',)
+        }),
+    )
+    
+    def has_add_permission(self, request):
+        # Only allow one instance (singleton)
+        return not AISettings.objects.exists()
+    
+    def has_delete_permission(self, request, obj=None):
+        return False
