@@ -71,12 +71,6 @@
         
         <!-- Article Body -->
         <article class="article-body">
-            <!-- Language Switcher -->
-            <div class="language-switcher">
-                <button class="lang-btn active">EN</button>
-                <button class="lang-btn">FR</button>
-            </div>
-            
             <!-- Article Description / Content -->
             <div class="article-description">
                 <p x-text="article?.description">Article content goes here...</p>
@@ -104,7 +98,7 @@
             </section>
             
             <!-- Timeline Section -->
-            <section class="timeline-section">
+            <section class="timeline-section" x-show="timelineItems.length > 0">
                 <h3 class="timeline-title">{% trans "Timeline" %}</h3>
                 
                 <div class="timeline-flow">
