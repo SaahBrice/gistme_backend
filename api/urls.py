@@ -4,7 +4,7 @@ from .views import (
     ArticleViewSet, ArticleCategoryViewSet, CommentViewSet, SubscribeView, FileUploadView, 
     FCMSubscribeView, CategoryPreferencesView, OnboardingView,
     MentorCategoriesView, MentorsView, MentorRequestView, AssistanceRequestView, ChatView,
-    DailyQuoteViewSet
+    DailyQuoteViewSet, UserNotificationViewSet
 )
 
 router = DefaultRouter()
@@ -12,6 +12,7 @@ router.register(r'articles', ArticleViewSet)
 router.register(r'categories', ArticleCategoryViewSet)
 router.register(r'comments', CommentViewSet)
 router.register(r'quotes', DailyQuoteViewSet)
+router.register(r'notifications', UserNotificationViewSet, basename='notification')
 
 from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
 

@@ -8,8 +8,11 @@ function feedApp() {
         showSubChips: false,
         navTimeout: null,
         hasNewNotifications: true,
+        unreadCount: 0,  // Real notification count from API
+        notifications: [],  // Notifications list from API
         showProfile: false,
         showNotifications: false,
+        loadingNotifications: false,
 
         // Settings modals state
         showSettings: false,
@@ -171,6 +174,9 @@ function feedApp() {
                 // Load categories and articles from API
                 await this.loadCategories();
                 await this.loadArticles();
+
+                // Fetch notification count for badge
+                await this.fetchUnreadCount();
 
                 // Setup infinite scroll
                 this.setupInfiniteScroll();
@@ -551,35 +557,109 @@ function feedApp() {
             `).join('');
         },
 
-        // Notifications/Gist modal
-        openNotifications() {
-            const customDesires = (this.settingsCustomDesires || '').toLowerCase();
-            const keywords = customDesires.split(',').map(k => k.trim()).filter(k => k.length > 0);
+        // Notifications from API
+        getCSRFToken() {
+            return document.querySelector('[name=csrfmiddlewaretoken]')?.value || '';
+        },
 
-            if (keywords.length === 0) {
-                this.gistList = this.articles.slice(0, 10).map(a => ({
-                    ...a,
-                    title: this.getArticleTitle(a),
-                    excerpt: this.getArticleExcerpt(a),
-                    image: this.getArticleImage(a)
-                }));
-            } else {
-                this.gistList = this.articles.filter(article => {
-                    const title = this.getArticleTitle(article).toLowerCase();
-                    const excerpt = this.getArticleExcerpt(article).toLowerCase();
-                    return keywords.some(keyword =>
-                        title.includes(keyword) || excerpt.includes(keyword)
-                    );
-                }).map(a => ({
-                    ...a,
-                    title: this.getArticleTitle(a),
-                    excerpt: this.getArticleExcerpt(a),
-                    image: this.getArticleImage(a)
-                }));
+        async fetchUnreadCount() {
+            try {
+                const response = await fetch(`/api/notifications/unread-count/?lang=${this.lang}`, {
+                    credentials: 'include',
+                    headers: {
+                        'X-CSRFToken': this.getCSRFToken()
+                    }
+                });
+                if (response.ok) {
+                    const data = await response.json();
+                    this.unreadCount = data.unread_count || 0;
+                    this.hasNewNotifications = this.unreadCount > 0;
+                }
+            } catch (e) {
+                console.log('Could not fetch notification count');
             }
+        },
 
-            this.hasNewNotifications = false;
+        async openNotifications() {
             this.showNotifications = true;
+            this.loadingNotifications = true;
+
+            try {
+                const response = await fetch(`/api/notifications/?lang=${this.lang}&ordering=-created_at`, {
+                    credentials: 'include',
+                    headers: {
+                        'X-CSRFToken': this.getCSRFToken()
+                    }
+                });
+                if (response.ok) {
+                    const data = await response.json();
+                    this.notifications = data.results || data;
+                }
+            } catch (e) {
+                console.error('Failed to fetch notifications:', e);
+                this.notifications = [];
+            } finally {
+                this.loadingNotifications = false;
+            }
+        },
+
+        async markNotificationRead(notificationId) {
+            try {
+                await fetch(`/api/notifications/${notificationId}/read/`, {
+                    method: 'POST',
+                    credentials: 'include',
+                    headers: {
+                        'X-CSRFToken': this.getCSRFToken()
+                    }
+                });
+                // Update local state
+                const notif = this.notifications.find(n => n.id === notificationId);
+                if (notif) notif.is_read = true;
+                this.unreadCount = Math.max(0, this.unreadCount - 1);
+                this.hasNewNotifications = this.unreadCount > 0;
+            } catch (e) {
+                console.error('Failed to mark as read:', e);
+            }
+        },
+
+        async markAllNotificationsRead() {
+            try {
+                await fetch('/api/notifications/read-all/', {
+                    method: 'POST',
+                    credentials: 'include',
+                    headers: {
+                        'X-CSRFToken': this.getCSRFToken()
+                    }
+                });
+                this.notifications.forEach(n => n.is_read = true);
+                this.unreadCount = 0;
+                this.hasNewNotifications = false;
+            } catch (e) {
+                console.error('Failed to mark all as read:', e);
+            }
+        },
+
+        getNotificationLink(notification) {
+            if (notification.article) {
+                return `/${this.lang}/article/${notification.article}/`;
+            }
+            return notification.link_url || '#';
+        },
+
+        formatNotificationTime(dateStr) {
+            if (!dateStr) return '';
+            const date = new Date(dateStr);
+            const now = new Date();
+            const diff = now - date;
+            const minutes = Math.floor(diff / 60000);
+            const hours = Math.floor(diff / 3600000);
+            const days = Math.floor(diff / 86400000);
+
+            if (minutes < 1) return this.lang === 'fr' ? 'à l\'instant' : 'just now';
+            if (minutes < 60) return `${minutes}m`;
+            if (hours < 24) return `${hours}h`;
+            if (days < 7) return `${days}d`;
+            return date.toLocaleDateString(this.lang === 'fr' ? 'fr-FR' : 'en-US', { month: 'short', day: 'numeric' });
         },
 
         renderGistHtml() {

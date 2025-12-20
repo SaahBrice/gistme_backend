@@ -149,7 +149,7 @@
                         <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
                         <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
                     </svg>
-                    <span class="notification-dot" x-show="hasNewNotifications"></span>
+                    <span class="notification-badge" x-show="unreadCount > 0" x-text="unreadCount > 9 ? '9+' : unreadCount"></span>
                 </button>
             </div>
             
@@ -560,20 +560,47 @@
                     <polyline points="15 18 9 12 15 6"/>
                 </svg>
             </button>
-            <span class="bookmarks-title">{% trans "Gist, based on your interest" %}</span>
-            <span class="bookmarks-count" x-text="gistList.length"></span>
+            <span class="bookmarks-title">{% trans "Notifications" %}</span>
+            <button class="mark-all-read-btn" 
+                    x-show="unreadCount > 0"
+                    @click="markAllNotificationsRead()">
+                {% trans "Mark all read" %}
+            </button>
         </div>
         
         <div class="bookmarks-content">
-            <!-- Empty state -->
-            <div class="bookmarks-empty" x-show="gistList.length === 0">
-                <div class="empty-icon">🎯</div>
-                <p>{% trans "No gist yet" %}</p>
-                <span>{% trans "Set your custom desires in Settings to get personalized gist" %}</span>
+            <!-- Loading state -->
+            <div class="notifications-loading" x-show="loadingNotifications">
+                <div class="loading-spinner"></div>
             </div>
             
-            <!-- Gist Articles List -->
-            <div class="bookmarks-list" x-show="gistList.length > 0" x-html="renderGistHtml()"></div>
+            <!-- Empty state -->
+            <div class="bookmarks-empty" x-show="!loadingNotifications && notifications.length === 0">
+                <div class="empty-icon">🔔</div>
+                <p>{% trans "No notifications yet" %}</p>
+                <span>{% trans "You'll see personalized updates here" %}</span>
+            </div>
+            
+            <!-- Notifications List -->
+            <div class="notifications-list" x-show="!loadingNotifications && notifications.length > 0">
+                <template x-for="notif in notifications" :key="notif.id">
+                    <a :href="getNotificationLink(notif)" 
+                       class="notification-item"
+                       :class="{ 'unread': !notif.is_read }"
+                       @click="markNotificationRead(notif.id)">
+                        <div class="notification-icon">
+                            <img :src="notif.thumbnail_url || 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=100'" 
+                                 alt="" class="notification-thumb">
+                        </div>
+                        <div class="notification-content">
+                            <h4 class="notification-title" x-text="notif.title"></h4>
+                            <p class="notification-message" x-text="notif.message"></p>
+                            <span class="notification-time" x-text="formatNotificationTime(notif.created_at)"></span>
+                        </div>
+                        <span class="unread-dot" x-show="!notif.is_read"></span>
+                    </a>
+                </template>
+            </div>
         </div>
     </div>
     

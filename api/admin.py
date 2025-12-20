@@ -138,3 +138,43 @@ class DailyQuoteAdmin(admin.ModelAdmin):
     def quote_text_short(self, obj):
         return obj.quote_text_en[:60] + '...' if len(obj.quote_text_en) > 60 else obj.quote_text_en
 
+
+from .models import UserNotification
+
+@admin.register(UserNotification)
+class UserNotificationAdmin(admin.ModelAdmin):
+    list_display = ('user_email', 'title_short', 'notification_type', 'is_read', 'created_at')
+    list_filter = ('notification_type', 'is_read', 'created_at')
+    search_fields = ('user__email', 'title_en', 'title_fr', 'message_en', 'message_fr')
+    ordering = ('-created_at',)
+    date_hierarchy = 'created_at'
+    readonly_fields = ('created_at', 'read_at')
+    raw_id_fields = ('user', 'article')
+    
+    fieldsets = (
+        ('Recipient', {
+            'fields': ('user', 'notification_type')
+        }),
+        ('English Content 🇬🇧', {
+            'fields': ('title_en', 'message_en'),
+            'classes': ('wide',)
+        }),
+        ('French Content 🇫🇷', {
+            'fields': ('title_fr', 'message_fr'),
+            'classes': ('wide', 'collapse')
+        }),
+        ('Links & Media', {
+            'fields': ('article', 'thumbnail_url', 'link_url')
+        }),
+        ('Status', {
+            'fields': ('is_read', 'read_at', 'created_at')
+        }),
+    )
+    
+    @admin.display(description='User')
+    def user_email(self, obj):
+        return obj.user.email
+    
+    @admin.display(description='Title')
+    def title_short(self, obj):
+        return obj.title_en[:50] + '...' if len(obj.title_en) > 50 else obj.title_en

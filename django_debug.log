@@ -18798,3 +18798,1316 @@ INFO 2025-12-20 22:30:27,388 basehttp 20952 24540 "GET /api/quotes/?category=GEN
 INFO 2025-12-20 22:30:27,614 basehttp 20952 23512 "GET /static/web/manifest.json HTTP/1.1" 200 1427
 INFO 2025-12-20 22:30:27,626 basehttp 20952 24540 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
 INFO 2025-12-20 22:30:29,183 basehttp 20952 24540 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:33:18,631 autoreload 24492 23572 Watching for file changes with StatReloader
+INFO 2025-12-20 22:33:22,060 basehttp 24492 12404 "GET /en/feed/ HTTP/1.1" 200 52066
+WARNING 2025-12-20 22:33:22,164 log 24492 12404 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 22:33:22,165 basehttp 24492 12404 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 22:33:22,524 basehttp 24492 12404 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 22:33:22,528 basehttp 24492 12980 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 22:33:22,530 basehttp 24492 12404 "GET /static/web/js/feed.js HTTP/1.1" 200 27732
+INFO 2025-12-20 22:33:22,566 basehttp 24492 19140 "GET /static/web/css/feed.css HTTP/1.1" 200 27336
+INFO 2025-12-20 22:33:22,584 basehttp 24492 24264 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 22:33:22,592 basehttp 24492 9148 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 22:33:22,595 basehttp 24492 1180 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 22:33:23,051 basehttp 24492 1180 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 22:33:23,071 basehttp 24492 9148 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 22:33:23,192 basehttp 24492 9148 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56196
+INFO 2025-12-20 22:33:23,469 basehttp 24492 17068 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 22:33:23,521 basehttp 24492 12404 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 22:33:23,526 basehttp 24492 24264 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 22:33:23,548 basehttp 24492 9148 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 22:33:23,558 basehttp 24492 19140 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 22:33:23,575 basehttp 24492 1180 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 22:33:25,128 basehttp 24492 1180 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:33:27,429 basehttp 24492 19140 "GET /en/search/ HTTP/1.1" 200 20499
+WARNING 2025-12-20 22:33:27,497 log 24492 19140 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 22:33:27,498 basehttp 24492 19140 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 22:33:27,501 basehttp 24492 9148 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 22:33:27,510 basehttp 24492 24264 "GET /static/web/css/search.css HTTP/1.1" 200 5386
+INFO 2025-12-20 22:33:27,511 basehttp 24492 19140 "GET /static/web/css/feed.css HTTP/1.1" 200 27336
+INFO 2025-12-20 22:33:27,513 basehttp 24492 12404 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 22:33:27,513 basehttp 24492 12980 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 22:33:27,513 basehttp 24492 9148 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 22:33:28,130 basehttp 24492 17068 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 22:33:28,143 basehttp 24492 12980 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 22:33:29,654 basehttp 24492 12980 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:33:33,170 basehttp 24492 9148 "GET /api/articles/?search=in&page=1&page_size=15 HTTP/1.1" 200 80357
+INFO 2025-12-20 22:33:33,257 basehttp 24492 19140 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 22:33:33,279 basehttp 24492 19140 "GET /media/thumbnails/education_20251205_075726_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 22:33:33,298 basehttp 24492 9148 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 22:33:33,306 basehttp 24492 24264 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 22:33:33,320 basehttp 24492 9148 "GET /media/thumbnails/education_20251205_065016_3.jpeg HTTP/1.1" 200 64631
+INFO 2025-12-20 22:33:33,350 basehttp 24492 23408 "GET /media/thumbnails/entertainment_20251205_145357_1.webp HTTP/1.1" 200 32402
+INFO 2025-12-20 22:33:33,365 basehttp 24492 23408 "GET /media/thumbnails/business_20251205_064622_1.jpeg HTTP/1.1" 200 33322
+INFO 2025-12-20 22:33:33,382 basehttp 24492 23408 "GET /media/thumbnails/entertainment_20251205_064520_1.jpeg HTTP/1.1" 200 138530
+INFO 2025-12-20 22:33:33,397 basehttp 24492 23408 "GET /media/thumbnails/sports_20251205_064422_1.jpg HTTP/1.1" 200 64110
+INFO 2025-12-20 22:33:33,414 basehttp 24492 9148 "GET /media/thumbnails/technology_20251205_064820_1.jpeg HTTP/1.1" 200 101133
+INFO 2025-12-20 22:33:33,430 basehttp 24492 14904 "GET /media/thumbnails/sports_20251205_145304_1.jpg HTTP/1.1" 200 64441
+INFO 2025-12-20 22:33:33,447 basehttp 24492 19140 "GET /media/thumbnails/agriculture_20251205_065149_1.jpeg HTTP/1.1" 200 43226
+INFO 2025-12-20 22:33:33,460 basehttp 24492 24264 "GET /media/thumbnails/health_20251205_064922_1.jpg HTTP/1.1" 200 65009
+INFO 2025-12-20 22:33:33,476 basehttp 24492 12404 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 22:33:35,125 basehttp 24492 12404 "GET /api/articles/?search=int&page=1&page_size=15 HTTP/1.1" 200 78028
+INFO 2025-12-20 22:33:35,169 basehttp 24492 12404 "GET /media/thumbnails/sports_20251205_063707_1.jpg HTTP/1.1" 200 64662
+INFO 2025-12-20 22:33:35,184 basehttp 24492 24264 "GET /media/thumbnails/business_20251205_062426_1.jpeg HTTP/1.1" 200 27125
+INFO 2025-12-20 22:33:36,070 basehttp 24492 24264 "GET /api/articles/?search=intere&page=1&page_size=15 HTTP/1.1" 200 5117
+INFO 2025-12-20 22:33:36,098 basehttp 24492 24264 "GET /media/thumbnails/business_20251129_202902_1.png HTTP/1.1" 200 816964
+INFO 2025-12-20 22:33:36,647 basehttp 24492 24264 "GET /api/articles/?search=interet&page=1&page_size=15 HTTP/1.1" 200 52
+INFO 2025-12-20 22:33:37,402 basehttp 24492 24264 "GET /api/articles/?search=intere&page=1&page_size=15 HTTP/1.1" 200 5117
+INFO 2025-12-20 22:33:37,432 basehttp 24492 24264 "GET /media/thumbnails/business_20251129_202902_1.png HTTP/1.1" 200 816964
+INFO 2025-12-20 22:33:38,304 basehttp 24492 24264 "GET /api/articles/?search=interet&page=1&page_size=15 HTTP/1.1" 200 52
+INFO 2025-12-20 22:33:43,420 basehttp 24492 24264 "GET /api/articles/?search=intere&page=1&page_size=15 HTTP/1.1" 200 5117
+INFO 2025-12-20 22:33:43,448 basehttp 24492 24264 "GET /media/thumbnails/business_20251129_202902_1.png HTTP/1.1" 200 816964
+INFO 2025-12-20 22:33:48,668 basehttp 24492 24264 "GET /api/articles/?search=inte&page=1&page_size=15 HTTP/1.1" 200 82014
+INFO 2025-12-20 22:33:48,739 basehttp 24492 24264 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 22:33:48,754 basehttp 24492 19140 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 22:33:48,779 basehttp 24492 14904 "GET /media/thumbnails/entertainment_20251205_145357_1.webp HTTP/1.1" 200 32402
+INFO 2025-12-20 22:33:48,794 basehttp 24492 14904 "GET /media/thumbnails/entertainment_20251205_064520_1.jpeg HTTP/1.1" 200 138530
+INFO 2025-12-20 22:33:48,835 basehttp 24492 14904 "GET /media/thumbnails/entertainment_20251205_062315_1.png HTTP/1.1" 200 1100515
+INFO 2025-12-20 22:33:48,854 basehttp 24492 23408 "GET /media/thumbnails/education_20251205_075726_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 22:33:48,860 basehttp 24492 14904 "GET /media/thumbnails/sports_20251205_062213_1.jpg HTTP/1.1" 200 64405
+INFO 2025-12-20 22:33:48,875 basehttp 24492 19140 "GET /media/thumbnails/technology_20251205_064820_1.jpeg HTTP/1.1" 200 101133
+INFO 2025-12-20 22:33:48,903 basehttp 24492 24264 "GET /media/thumbnails/health_20251205_064922_1.jpg HTTP/1.1" 200 65009
+INFO 2025-12-20 22:33:48,919 basehttp 24492 9148 "GET /media/thumbnails/sports_20251205_145304_1.jpg HTTP/1.1" 200 64441
+INFO 2025-12-20 22:33:48,937 basehttp 24492 19140 "GET /media/thumbnails/politics_20251205_040440_1.jpg HTTP/1.1" 200 64080
+INFO 2025-12-20 22:33:48,950 basehttp 24492 14904 "GET /media/thumbnails/politics_20251205_050334_1.jpg HTTP/1.1" 200 64840
+INFO 2025-12-20 22:33:48,968 basehttp 24492 23408 "GET /media/thumbnails/sports_20251205_060121_1.jpg HTTP/1.1" 200 64233
+INFO 2025-12-20 22:33:48,982 basehttp 24492 12404 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 22:33:56,338 basehttp 24492 12404 "GET /api/articles/?search=ENS&page=1&page_size=15 HTTP/1.1" 200 80378
+INFO 2025-12-20 22:33:56,406 basehttp 24492 19140 "GET /media/thumbnails/sports_20251205_145304_1.jpg HTTP/1.1" 200 64441
+INFO 2025-12-20 22:33:56,424 basehttp 24492 19140 "GET /media/thumbnails/technology_20251205_064820_1.jpeg HTTP/1.1" 200 101133
+INFO 2025-12-20 22:33:56,457 basehttp 24492 19140 "GET /media/thumbnails/entertainment_20251205_064520_1.jpeg HTTP/1.1" 200 138530
+INFO 2025-12-20 22:33:56,488 basehttp 24492 24264 "GET /media/thumbnails/health_20251205_064922_1.jpg HTTP/1.1" 200 65009
+INFO 2025-12-20 22:33:56,504 basehttp 24492 24264 "GET /media/thumbnails/agriculture_20251205_065149_1.jpeg HTTP/1.1" 200 43226
+INFO 2025-12-20 22:33:56,521 basehttp 24492 23408 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 22:33:56,550 basehttp 24492 12404 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 22:33:56,572 basehttp 24492 24264 "GET /media/thumbnails/education_20251205_065016_3.jpeg HTTP/1.1" 200 64631
+INFO 2025-12-20 22:33:56,602 basehttp 24492 19140 "GET /media/thumbnails/entertainment_20251205_062315_1.png HTTP/1.1" 200 1100515
+INFO 2025-12-20 22:33:56,605 basehttp 24492 23408 "GET /media/thumbnails/business_20251205_064622_1.jpeg HTTP/1.1" 200 33322
+INFO 2025-12-20 22:33:56,621 basehttp 24492 24264 "GET /media/thumbnails/sports_20251205_063707_1.jpg HTTP/1.1" 200 64662
+INFO 2025-12-20 22:33:56,645 basehttp 24492 9148 "GET /media/thumbnails/education_20251205_075726_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 22:33:56,655 basehttp 24492 12404 "GET /media/thumbnails/sports_20251205_064422_1.jpg HTTP/1.1" 200 64110
+INFO 2025-12-20 22:33:56,665 basehttp 24492 14904 "GET /media/thumbnails/entertainment_20251205_145357_1.webp HTTP/1.1" 200 32402
+INFO 2025-12-20 22:34:02,749 basehttp 24492 14904 "GET /api/articles/?search=ENS%20&page=1&page_size=15 HTTP/1.1" 200 80379
+INFO 2025-12-20 22:34:08,617 basehttp 24492 14904 "GET /api/articles/?search=ENS&page=1&page_size=15 HTTP/1.1" 200 80378
+INFO 2025-12-20 22:34:08,667 basehttp 24492 14904 "GET /api/articles/?search=ENS&page=1&page_size=15 HTTP/1.1" 200 80378
+INFO 2025-12-20 22:34:11,539 basehttp 24492 14904 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+WARNING 2025-12-20 22:34:11,686 log 24492 14904 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 22:34:11,687 basehttp 24492 14904 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 22:34:11,754 basehttp 24492 12404 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 22:34:11,765 basehttp 24492 12404 "GET /static/web/css/feed.css HTTP/1.1" 200 27336
+INFO 2025-12-20 22:34:11,772 basehttp 24492 14904 "GET /en/feed/ HTTP/1.1" 200 52066
+INFO 2025-12-20 22:34:11,822 basehttp 24492 17068 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+WARNING 2025-12-20 22:34:11,848 log 24492 14904 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 22:34:11,848 basehttp 24492 14904 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 22:34:13,130 basehttp 24492 14904 "GET /en/search/ HTTP/1.1" 200 20499
+WARNING 2025-12-20 22:34:13,207 log 24492 14904 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 22:34:13,208 basehttp 24492 14904 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 22:34:13,224 basehttp 24492 14904 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 22:34:13,225 basehttp 24492 9148 "GET /static/web/css/search.css HTTP/1.1" 200 5386
+INFO 2025-12-20 22:34:13,225 basehttp 24492 24264 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 22:34:13,226 basehttp 24492 12404 "GET /static/web/css/feed.css HTTP/1.1" 200 27336
+INFO 2025-12-20 22:34:13,226 basehttp 24492 23408 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 22:34:13,228 basehttp 24492 19140 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 22:34:13,849 basehttp 24492 17068 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 22:34:13,860 basehttp 24492 23408 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 22:34:15,355 basehttp 24492 23408 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:34:16,064 basehttp 24492 19140 "GET /api/articles/?search=CAMERO&page=1&page_size=15 HTTP/1.1" 200 80361
+INFO 2025-12-20 22:34:16,159 basehttp 24492 14904 "GET /media/thumbnails/entertainment_20251205_145357_1.webp HTTP/1.1" 200 32402
+INFO 2025-12-20 22:34:16,184 basehttp 24492 14904 "GET /media/thumbnails/education_20251205_075726_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 22:34:16,195 basehttp 24492 24264 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 22:34:16,207 basehttp 24492 14904 "GET /media/thumbnails/agriculture_20251205_065149_1.jpeg HTTP/1.1" 200 43226
+INFO 2025-12-20 22:34:16,243 basehttp 24492 19140 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 22:34:16,255 basehttp 24492 24264 "GET /media/thumbnails/education_20251205_065016_3.jpeg HTTP/1.1" 200 64631
+INFO 2025-12-20 22:34:16,284 basehttp 24492 12404 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 22:34:16,314 basehttp 24492 20912 "GET /media/thumbnails/sports_20251205_145304_1.jpg HTTP/1.1" 200 64441
+INFO 2025-12-20 22:34:16,328 basehttp 24492 20912 "GET /media/thumbnails/sports_20251205_064422_1.jpg HTTP/1.1" 200 64110
+INFO 2025-12-20 22:34:16,362 basehttp 24492 14904 "GET /media/thumbnails/health_20251205_064922_1.jpg HTTP/1.1" 200 65009
+INFO 2025-12-20 22:34:16,391 basehttp 24492 19140 "GET /media/thumbnails/technology_20251205_064820_1.jpeg HTTP/1.1" 200 101133
+INFO 2025-12-20 22:34:16,410 basehttp 24492 12404 "GET /media/thumbnails/entertainment_20251205_064520_1.jpeg HTTP/1.1" 200 138530
+INFO 2025-12-20 22:34:16,424 basehttp 24492 24264 "GET /media/thumbnails/business_20251205_064622_1.jpeg HTTP/1.1" 200 33322
+INFO 2025-12-20 22:34:16,452 basehttp 24492 9148 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 22:34:16,488 basehttp 24492 20912 "GET /api/articles/?search=CAMEROO&page=1&page_size=15 HTTP/1.1" 200 81023
+INFO 2025-12-20 22:34:16,525 basehttp 24492 20912 "GET /media/thumbnails/sports_20251205_063707_1.jpg HTTP/1.1" 200 64662
+INFO 2025-12-20 22:34:16,706 basehttp 24492 20912 "GET /api/articles/?search=CAMEROON&page=1&page_size=15 HTTP/1.1" 200 81024
+INFO 2025-12-20 22:34:44,993 basehttp 24492 20912 "GET /en/article/123/ HTTP/1.1" 200 32390
+WARNING 2025-12-20 22:34:45,080 log 24492 20912 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 22:34:45,080 basehttp 24492 20912 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 22:34:45,105 basehttp 24492 20912 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 22:34:45,109 basehttp 24492 9148 "GET /static/web/css/article.css HTTP/1.1" 200 31725
+INFO 2025-12-20 22:34:45,109 basehttp 24492 24264 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 22:34:45,110 basehttp 24492 12404 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 22:34:45,112 basehttp 24492 14904 "GET /static/web/js/article-dummy-data.js HTTP/1.1" 200 3681
+INFO 2025-12-20 22:34:45,112 basehttp 24492 19140 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 22:34:45,152 basehttp 24492 20912 "GET /static/web/js/article.js HTTP/1.1" 200 29240
+INFO 2025-12-20 22:34:46,606 basehttp 24492 12404 "GET /api/articles/123/ HTTP/1.1" 200 4207
+INFO 2025-12-20 22:34:46,628 basehttp 24492 20912 "GET /api/articles/123/ HTTP/1.1" 200 4207
+INFO 2025-12-20 22:34:46,733 basehttp 24492 12404 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 22:34:46,776 basehttp 24492 20912 "GET /api/articles/?page_size=5&category=6 HTTP/1.1" 200 26750
+INFO 2025-12-20 22:34:46,802 basehttp 24492 14904 "GET /api/articles/?page_size=5&category=6 HTTP/1.1" 200 26750
+INFO 2025-12-20 22:34:46,954 basehttp 24492 17068 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 22:34:46,980 basehttp 24492 19140 "GET /media/thumbnails/technology_20251205_021636_1.jpeg HTTP/1.1" 200 101133
+INFO 2025-12-20 22:34:46,989 basehttp 24492 19140 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 22:34:47,016 basehttp 24492 24264 "GET /media/thumbnails/technology_20251129_232830_1.png HTTP/1.1" 200 511425
+INFO 2025-12-20 22:34:47,032 basehttp 24492 9148 "GET /media/thumbnails/science_20251129_225147_1.jpeg HTTP/1.1" 200 115580
+INFO 2025-12-20 22:34:47,060 basehttp 24492 12404 "GET /media/thumbnails/technology_20251205_064820_1.jpeg HTTP/1.1" 200 101133
+INFO 2025-12-20 22:34:47,079 basehttp 24492 14904 "GET /api/articles/?page_size=4&main_category=ACTUALITY HTTP/1.1" 200 21741
+INFO 2025-12-20 22:34:47,097 basehttp 24492 20912 "GET /api/articles/?page_size=4&main_category=ACTUALITY HTTP/1.1" 200 21741
+INFO 2025-12-20 22:34:48,663 basehttp 24492 20912 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:35:27,790 basehttp 24492 14904 "GET /media/audio/english/technology_20251205_145550.mp3 HTTP/1.1" 200 710400
+INFO 2025-12-20 22:35:27,909 basehttp 24492 14904 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-20 22:35:32,305 basehttp 24492 14904 "GET /en/search/ HTTP/1.1" 200 20499
+WARNING 2025-12-20 22:35:32,371 log 24492 14904 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 22:35:32,371 basehttp 24492 14904 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 22:35:32,385 basehttp 24492 14904 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 22:35:32,387 basehttp 24492 9148 "GET /static/web/css/search.css HTTP/1.1" 200 5386
+INFO 2025-12-20 22:35:32,388 basehttp 24492 12404 "GET /static/web/css/feed.css HTTP/1.1" 200 27336
+INFO 2025-12-20 22:35:32,389 basehttp 24492 24264 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 22:35:32,392 basehttp 24492 19140 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 22:35:32,396 basehttp 24492 24264 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 22:35:41,312 basehttp 24492 17068 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 22:35:41,328 basehttp 24492 24264 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 22:35:42,878 basehttp 24492 24264 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:35:44,203 basehttp 24492 19140 "GET /api/articles/?search=CAMEROO&page=1&page_size=15 HTTP/1.1" 200 81023
+INFO 2025-12-20 22:35:44,286 basehttp 24492 19140 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 22:35:44,314 basehttp 24492 23948 "GET /media/thumbnails/entertainment_20251205_145357_1.webp HTTP/1.1" 200 32402
+INFO 2025-12-20 22:35:44,328 basehttp 24492 23948 "GET /media/thumbnails/agriculture_20251205_065149_1.jpeg HTTP/1.1" 200 43226
+INFO 2025-12-20 22:35:44,345 basehttp 24492 23948 "GET /media/thumbnails/education_20251205_065016_3.jpeg HTTP/1.1" 200 64631
+INFO 2025-12-20 22:35:44,361 basehttp 24492 23948 "GET /media/thumbnails/health_20251205_064922_1.jpg HTTP/1.1" 200 65009
+INFO 2025-12-20 22:35:44,376 basehttp 24492 23948 "GET /media/thumbnails/technology_20251205_064820_1.jpeg HTTP/1.1" 200 101133
+INFO 2025-12-20 22:35:44,392 basehttp 24492 23948 "GET /media/thumbnails/entertainment_20251205_064520_1.jpeg HTTP/1.1" 200 138530
+INFO 2025-12-20 22:35:44,423 basehttp 24492 23948 "GET /media/thumbnails/sports_20251205_064422_1.jpg HTTP/1.1" 200 64110
+INFO 2025-12-20 22:35:44,438 basehttp 24492 23948 "GET /media/thumbnails/sports_20251205_063707_1.jpg HTTP/1.1" 200 64662
+INFO 2025-12-20 22:35:44,458 basehttp 24492 12404 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 22:35:44,487 basehttp 24492 9148 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 22:35:44,511 basehttp 24492 19140 "GET /media/thumbnails/education_20251205_075726_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 22:35:44,518 basehttp 24492 14904 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 22:35:44,536 basehttp 24492 4444 "GET /media/thumbnails/sports_20251205_145304_1.jpg HTTP/1.1" 200 64441
+INFO 2025-12-20 22:35:53,630 basehttp 24492 4444 "GET /en/feed/ HTTP/1.1" 200 52066
+WARNING 2025-12-20 22:35:53,701 log 24492 4444 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 22:35:53,701 basehttp 24492 4444 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 22:35:53,717 basehttp 24492 4444 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 22:35:53,717 basehttp 24492 19140 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 22:35:53,719 basehttp 24492 9148 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 22:35:53,720 basehttp 24492 12404 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 22:35:53,721 basehttp 24492 14904 "GET /static/web/css/feed.css HTTP/1.1" 200 27336
+INFO 2025-12-20 22:35:53,722 basehttp 24492 23948 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 22:35:53,724 basehttp 24492 4444 "GET /static/web/js/feed.js HTTP/1.1" 200 27732
+INFO 2025-12-20 22:35:55,300 basehttp 24492 14904 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 22:35:55,312 basehttp 24492 4444 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 22:35:55,415 basehttp 24492 4444 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56196
+INFO 2025-12-20 22:35:55,718 basehttp 24492 17068 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 22:35:55,773 basehttp 24492 9148 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 22:35:55,784 basehttp 24492 14904 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 22:35:55,807 basehttp 24492 4444 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 22:35:55,817 basehttp 24492 12404 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 22:35:55,834 basehttp 24492 23948 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 22:35:57,380 basehttp 24492 14904 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:38:13,170 basehttp 24492 23948 "GET /en/search/ HTTP/1.1" 200 20499
+WARNING 2025-12-20 22:38:13,267 log 24492 23948 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 22:38:13,268 basehttp 24492 23948 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 22:38:13,290 basehttp 24492 4444 "GET /static/web/css/search.css HTTP/1.1" 200 5498
+INFO 2025-12-20 22:38:13,292 basehttp 24492 23948 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 22:38:13,294 basehttp 24492 12404 "GET /static/web/css/feed.css HTTP/1.1" 200 27336
+INFO 2025-12-20 22:38:13,295 basehttp 24492 9148 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 22:38:13,295 basehttp 24492 19140 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 22:38:13,297 basehttp 24492 23748 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 22:38:17,836 basehttp 24492 17068 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 22:38:17,851 basehttp 24492 23748 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 22:38:19,263 basehttp 24492 23748 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:38:20,142 basehttp 24492 9148 "GET /api/articles/?search=ca&page=1&page_size=15 HTTP/1.1" 200 80357
+INFO 2025-12-20 22:38:20,241 basehttp 24492 4444 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 22:38:20,262 basehttp 24492 15856 "GET /media/thumbnails/sports_20251205_145304_1.jpg HTTP/1.1" 200 64441
+INFO 2025-12-20 22:38:20,287 basehttp 24492 4444 "GET /media/thumbnails/education_20251205_075726_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 22:38:20,304 basehttp 24492 19140 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 22:38:20,324 basehttp 24492 12404 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 22:38:20,358 basehttp 24492 9148 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 22:38:20,369 basehttp 24492 4444 "GET /media/thumbnails/education_20251205_065016_3.jpeg HTTP/1.1" 200 64631
+INFO 2025-12-20 22:38:20,395 basehttp 24492 19140 "GET /media/thumbnails/health_20251205_064922_1.jpg HTTP/1.1" 200 65009
+INFO 2025-12-20 22:38:20,426 basehttp 24492 19140 "GET /media/thumbnails/sports_20251205_064422_1.jpg HTTP/1.1" 200 64110
+INFO 2025-12-20 22:38:20,443 basehttp 24492 15856 "GET /media/thumbnails/agriculture_20251205_065149_1.jpeg HTTP/1.1" 200 43226
+INFO 2025-12-20 22:38:20,459 basehttp 24492 4444 "GET /media/thumbnails/entertainment_20251205_064520_1.jpeg HTTP/1.1" 200 138530
+INFO 2025-12-20 22:38:20,488 basehttp 24492 23948 "GET /media/thumbnails/entertainment_20251205_145357_1.webp HTTP/1.1" 200 32402
+INFO 2025-12-20 22:38:20,506 basehttp 24492 12404 "GET /media/thumbnails/technology_20251205_064820_1.jpeg HTTP/1.1" 200 101133
+INFO 2025-12-20 22:38:20,551 basehttp 24492 9148 "GET /media/thumbnails/business_20251205_064622_1.jpeg HTTP/1.1" 200 33322
+INFO 2025-12-20 22:38:20,568 basehttp 24492 19140 "GET /api/articles/?search=cam&page=1&page_size=15 HTTP/1.1" 200 80358
+INFO 2025-12-20 22:38:20,954 basehttp 24492 19140 "GET /api/articles/?search=came&page=1&page_size=15 HTTP/1.1" 200 80359
+INFO 2025-12-20 22:38:22,398 basehttp 24492 19140 "GET /media/thumbnails/sports_20251205_063707_1.jpg HTTP/1.1" 200 64662
+INFO 2025-12-20 22:38:24,867 basehttp 24492 19140 "GET /api/articles/?search=came&page=2&page_size=15 HTTP/1.1" 200 77029
+INFO 2025-12-20 22:38:24,945 basehttp 24492 19140 "GET /media/thumbnails/business_20251205_062426_1.jpeg HTTP/1.1" 200 27125
+INFO 2025-12-20 22:38:24,977 basehttp 24492 4444 "GET /media/thumbnails/sports_20251205_060121_1.jpg HTTP/1.1" 200 64233
+INFO 2025-12-20 22:38:24,993 basehttp 24492 19140 "GET /media/thumbnails/politics_20251205_040440_1.jpg HTTP/1.1" 200 64080
+INFO 2025-12-20 22:38:25,009 basehttp 24492 12404 "GET /media/thumbnails/sports_20251205_062213_1.jpg HTTP/1.1" 200 64405
+INFO 2025-12-20 22:38:25,050 basehttp 24492 9148 "GET /media/thumbnails/entertainment_20251205_062315_1.png HTTP/1.1" 200 1100515
+INFO 2025-12-20 22:38:25,057 basehttp 24492 23948 "GET /media/thumbnails/politics_20251205_062056_1.jpg HTTP/1.1" 200 64313
+INFO 2025-12-20 22:38:25,084 basehttp 24492 4444 "GET /media/thumbnails/politics_20251205_040015_1.jpg HTTP/1.1" 200 64661
+INFO 2025-12-20 22:38:25,100 basehttp 24492 12404 "GET /media/thumbnails/sports_20251205_035539_1.jpg HTTP/1.1" 200 64423
+INFO 2025-12-20 22:38:25,115 basehttp 24492 15856 "GET /media/thumbnails/politics_20251205_050334_1.jpg HTTP/1.1" 200 64840
+INFO 2025-12-20 22:38:25,130 basehttp 24492 19140 "GET /media/thumbnails/entertainment_20251205_035612_1.webp HTTP/1.1" 200 32402
+INFO 2025-12-20 22:38:25,357 basehttp 24492 19140 "GET /media/thumbnails/politics_20251205_035459_1.jpg HTTP/1.1" 200 64056
+INFO 2025-12-20 22:38:25,449 basehttp 24492 19140 "GET /media/thumbnails/politics_20251205_034433_1.jpeg HTTP/1.1" 200 128381
+INFO 2025-12-20 22:38:25,548 basehttp 24492 19140 "GET /media/thumbnails/entertainment_20251205_023518_1.jpeg HTTP/1.1" 200 74469
+INFO 2025-12-20 22:38:25,665 basehttp 24492 19140 "GET /media/thumbnails/sports_20251205_023425_1.jpeg HTTP/1.1" 200 40235
+INFO 2025-12-20 22:38:25,838 basehttp 24492 19140 "GET /media/thumbnails/politics_20251205_023325_1.jpeg HTTP/1.1" 200 244598
+INFO 2025-12-20 22:38:36,229 basehttp 24492 19140 "GET /api/articles/?search=ed&page=1&page_size=15 HTTP/1.1" 200 80357
+INFO 2025-12-20 22:38:36,289 basehttp 24492 19140 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 22:38:36,315 basehttp 24492 4444 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 22:38:36,330 basehttp 24492 4444 "GET /media/thumbnails/agriculture_20251205_065149_1.jpeg HTTP/1.1" 200 43226
+INFO 2025-12-20 22:38:36,362 basehttp 24492 15856 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 22:38:36,393 basehttp 24492 15856 "GET /media/thumbnails/health_20251205_064922_1.jpg HTTP/1.1" 200 65009
+INFO 2025-12-20 22:38:36,430 basehttp 24492 15856 "GET /media/thumbnails/technology_20251205_064820_1.jpeg HTTP/1.1" 200 101133
+INFO 2025-12-20 22:38:36,441 basehttp 24492 23948 "GET /media/thumbnails/entertainment_20251205_145357_1.webp HTTP/1.1" 200 32402
+INFO 2025-12-20 22:38:36,482 basehttp 24492 19140 "GET /media/thumbnails/education_20251205_075726_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 22:38:36,493 basehttp 24492 23948 "GET /media/thumbnails/entertainment_20251205_064520_1.jpeg HTTP/1.1" 200 138530
+INFO 2025-12-20 22:38:36,502 basehttp 24492 19140 "GET /media/thumbnails/sports_20251205_064422_1.jpg HTTP/1.1" 200 64110
+INFO 2025-12-20 22:38:36,520 basehttp 24492 15856 "GET /media/thumbnails/business_20251205_064622_1.jpeg HTTP/1.1" 200 33322
+INFO 2025-12-20 22:38:36,548 basehttp 24492 12404 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 22:38:36,567 basehttp 24492 9148 "GET /media/thumbnails/sports_20251205_145304_1.jpg HTTP/1.1" 200 64441
+INFO 2025-12-20 22:38:36,613 basehttp 24492 4444 "GET /media/thumbnails/education_20251205_065016_3.jpeg HTTP/1.1" 200 64631
+INFO 2025-12-20 22:38:36,632 basehttp 24492 15856 "GET /api/articles/?search=edu&page=1&page_size=15 HTTP/1.1" 200 91241
+INFO 2025-12-20 22:38:36,690 basehttp 24492 15856 "GET /media/thumbnails/business_20251205_062426_1.jpeg HTTP/1.1" 200 27125
+INFO 2025-12-20 22:38:36,703 basehttp 24492 15856 "GET /media/thumbnails/health_20251129_213629_1.jpeg HTTP/1.1" 200 32313
+INFO 2025-12-20 22:38:36,739 basehttp 24492 4444 "GET /media/thumbnails/sports_20251205_062213_1.jpg HTTP/1.1" 200 64405
+INFO 2025-12-20 22:38:36,767 basehttp 24492 23948 "GET /media/thumbnails/education_20251129_223226_1.png HTTP/1.1" 200 749574
+INFO 2025-12-20 22:38:36,780 basehttp 24492 12404 "GET /media/thumbnails/education_20251205_021948_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 22:38:36,788 basehttp 24492 19140 "GET /media/thumbnails/scholarships_cameroonians_can_apply_20251129_225514_1.jpeg HTTP/1.1" 200 196766
+INFO 2025-12-20 22:38:36,803 basehttp 24492 9148 "GET /media/thumbnails/sports_20251205_060121_1.jpg HTTP/1.1" 200 64233
+INFO 2025-12-20 22:38:37,696 basehttp 24492 9148 "GET /api/articles/?search=educ&page=1&page_size=15 HTTP/1.1" 200 69586
+INFO 2025-12-20 22:38:37,756 basehttp 24492 9148 "GET /media/thumbnails/economy_20251129_204407_1.png HTTP/1.1" 200 816964
+INFO 2025-12-20 22:38:37,811 basehttp 24492 19140 "GET /media/thumbnails/education_20251129_203455_1.png HTTP/1.1" 200 849697
+WARNING 2025-12-20 22:38:37,812 log 24492 12404 Not Found: /en/search/media/thumbnails/sports_20251126_004013_1.jpeg
+WARNING 2025-12-20 22:38:37,813 basehttp 24492 12404 "GET /en/search/media/thumbnails/sports_20251126_004013_1.jpeg HTTP/1.1" 404 11024
+INFO 2025-12-20 22:38:38,874 basehttp 24492 12404 "GET /api/articles/?search=education&page=1&page_size=15 HTTP/1.1" 200 59317
+INFO 2025-12-20 22:39:12,426 basehttp 24492 12404 "GET /en/feed/ HTTP/1.1" 200 52066
+WARNING 2025-12-20 22:39:12,512 log 24492 12404 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 22:39:12,513 basehttp 24492 12404 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 22:39:12,534 basehttp 24492 19140 "GET /static/web/css/feed.css HTTP/1.1" 200 27336
+INFO 2025-12-20 22:39:12,534 basehttp 24492 12404 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 22:39:12,536 basehttp 24492 9148 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 22:39:12,543 basehttp 24492 15856 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 22:39:12,543 basehttp 24492 4444 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 22:39:12,544 basehttp 24492 23948 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 22:39:12,544 basehttp 24492 19140 "GET /static/web/js/feed.js HTTP/1.1" 200 27732
+INFO 2025-12-20 22:39:13,203 basehttp 24492 4444 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 22:39:13,216 basehttp 24492 19140 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 22:39:13,369 basehttp 24492 19140 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56196
+INFO 2025-12-20 22:39:13,659 basehttp 24492 17068 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 22:39:13,708 basehttp 24492 12404 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 22:39:13,730 basehttp 24492 19140 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 22:39:13,741 basehttp 24492 23948 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 22:39:13,756 basehttp 24492 4444 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 22:39:13,770 basehttp 24492 15856 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 22:39:15,302 basehttp 24492 15856 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:40:18,875 basehttp 24492 4444 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:45:00,224 basehttp 24492 18032 "GET /api/articles/?page=1&page_size=10&main_category=OPPORTUNITY HTTP/1.1" 200 15870
+INFO 2025-12-20 22:45:00,271 basehttp 24492 18032 "GET /media/thumbnails/scholarships_cameroonians_can_apply_20251130_122509_1.jpeg HTTP/1.1" 200 196766
+INFO 2025-12-20 22:45:00,303 basehttp 24492 17764 "GET /media/thumbnails/scholarships_cameroonians_can_apply_20251129_225514_1.jpeg HTTP/1.1" 200 196766
+INFO 2025-12-20 22:45:00,318 basehttp 24492 20036 "GET /media/thumbnails/latest_jobs_20251129_225410_1.jpeg HTTP/1.1" 200 8868
+INFO 2025-12-20 22:45:00,967 basehttp 24492 20036 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56196
+INFO 2025-12-20 22:45:01,038 basehttp 24492 17764 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 22:45:01,055 basehttp 24492 18032 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 22:45:01,076 basehttp 24492 20036 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 22:45:01,085 basehttp 24492 17728 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 22:45:05,492 basehttp 24492 17728 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY&category__slug=economy HTTP/1.1" 200 52229
+INFO 2025-12-20 22:45:05,565 basehttp 24492 20036 "GET /media/thumbnails/business_20251205_064622_1.jpeg HTTP/1.1" 200 33322
+INFO 2025-12-20 22:45:05,582 basehttp 24492 18032 "GET /media/thumbnails/business_20251205_062426_1.jpeg HTTP/1.1" 200 27125
+INFO 2025-12-20 22:45:05,595 basehttp 24492 17728 "GET /media/thumbnails/agriculture_20251205_065149_1.jpeg HTTP/1.1" 200 43226
+INFO 2025-12-20 22:45:09,066 basehttp 24492 17728 "GET /media/thumbnails/business_20251205_021520_1.png HTTP/1.1" 200 816964
+INFO 2025-12-20 22:45:09,691 basehttp 24492 17728 "GET /en/article/118/ HTTP/1.1" 200 32390
+WARNING 2025-12-20 22:45:09,761 log 24492 17728 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 22:45:09,762 basehttp 24492 17728 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 22:45:09,779 basehttp 24492 17728 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 22:45:09,783 basehttp 24492 17764 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 22:45:09,784 basehttp 24492 18032 "GET /static/web/css/article.css HTTP/1.1" 200 31725
+INFO 2025-12-20 22:45:09,785 basehttp 24492 20036 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 22:45:09,786 basehttp 24492 15888 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 22:45:09,788 basehttp 24492 17728 "GET /static/web/js/article.js HTTP/1.1" 200 29240
+INFO 2025-12-20 22:45:09,790 basehttp 24492 2944 "GET /static/web/js/article-dummy-data.js HTTP/1.1" 200 3681
+INFO 2025-12-20 22:45:14,662 basehttp 24492 2944 "GET /api/articles/118/ HTTP/1.1" 200 7178
+INFO 2025-12-20 22:45:14,682 basehttp 24492 17728 "GET /api/articles/118/ HTTP/1.1" 200 7178
+INFO 2025-12-20 22:45:14,775 basehttp 24492 2944 "GET /media/thumbnails/agriculture_20251205_065149_1.jpeg HTTP/1.1" 200 43226
+INFO 2025-12-20 22:45:14,822 basehttp 24492 17728 "GET /api/articles/?page_size=5&category=2 HTTP/1.1" 200 27298
+INFO 2025-12-20 22:45:14,864 basehttp 24492 2944 "GET /api/articles/?page_size=5&category=2 HTTP/1.1" 200 27298
+INFO 2025-12-20 22:45:14,897 basehttp 24492 17728 "GET /api/articles/?page_size=4&main_category=ACTUALITY HTTP/1.1" 200 21741
+INFO 2025-12-20 22:45:15,005 basehttp 24492 17592 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 22:45:15,023 basehttp 24492 17728 "GET /api/articles/?page_size=4&main_category=ACTUALITY HTTP/1.1" 200 21741
+INFO 2025-12-20 22:45:15,063 basehttp 24492 17728 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 22:45:16,676 basehttp 24492 17728 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:45:22,044 basehttp 24492 2944 "GET /en/feed/ HTTP/1.1" 200 52066
+WARNING 2025-12-20 22:45:22,109 log 24492 2944 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 22:45:22,109 basehttp 24492 2944 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 22:45:22,120 basehttp 24492 2944 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 22:45:22,128 basehttp 24492 18032 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 22:45:22,128 basehttp 24492 17764 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 22:45:22,128 basehttp 24492 20036 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 22:45:22,128 basehttp 24492 20988 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 22:45:22,130 basehttp 24492 15888 "GET /static/web/css/feed.css HTTP/1.1" 200 27336
+INFO 2025-12-20 22:45:22,130 basehttp 24492 2944 "GET /static/web/js/feed.js HTTP/1.1" 200 27732
+INFO 2025-12-20 22:45:22,537 basehttp 24492 20988 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 22:45:22,554 basehttp 24492 20036 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 22:45:22,822 basehttp 24492 17592 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 22:45:22,849 basehttp 24492 20988 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 22:45:22,852 basehttp 24492 20036 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56196
+INFO 2025-12-20 22:45:22,965 basehttp 24492 20036 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 22:45:22,974 basehttp 24492 20988 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 22:45:22,992 basehttp 24492 2944 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 22:45:23,009 basehttp 24492 15888 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 22:45:24,546 basehttp 24492 15888 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:45:34,642 basehttp 24492 2944 "GET /api/articles/?page=1&page_size=10&main_category=OPPORTUNITY HTTP/1.1" 200 15870
+INFO 2025-12-20 22:45:34,688 basehttp 24492 20988 "GET /media/thumbnails/scholarships_cameroonians_can_apply_20251129_225514_1.jpeg HTTP/1.1" 200 196766
+INFO 2025-12-20 22:45:34,703 basehttp 24492 20036 "GET /media/thumbnails/latest_jobs_20251129_225410_1.jpeg HTTP/1.1" 200 8868
+INFO 2025-12-20 22:45:34,776 basehttp 24492 2944 "GET /media/thumbnails/scholarships_cameroonians_can_apply_20251130_122509_1.jpeg HTTP/1.1" 200 196766
+INFO 2025-12-20 22:45:36,045 basehttp 24492 2944 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56196
+INFO 2025-12-20 22:45:36,123 basehttp 24492 20036 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 22:45:36,153 basehttp 24492 2944 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 22:45:36,158 basehttp 24492 17764 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 22:45:36,173 basehttp 24492 20988 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 22:45:39,113 basehttp 24492 20988 "GET /media/thumbnails/entertainment_20251205_145357_1.webp HTTP/1.1" 200 32402
+INFO 2025-12-20 22:45:39,601 basehttp 24492 20988 "GET /media/thumbnails/sports_20251205_145304_1.jpg HTTP/1.1" 200 64441
+INFO 2025-12-20 22:45:40,202 basehttp 24492 20988 "GET /media/thumbnails/education_20251205_075726_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 22:45:48,965 basehttp 24492 20988 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:46:27,312 basehttp 24492 23656 "GET /admin/api/article/ HTTP/1.1" 200 95024
+INFO 2025-12-20 22:46:27,370 basehttp 24492 23656 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 22:46:29,046 basehttp 24492 23656 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:46:29,274 basehttp 24492 17852 "GET /admin/api/article/125/change/ HTTP/1.1" 200 43094
+INFO 2025-12-20 22:46:29,305 basehttp 24492 17852 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 22:46:30,882 basehttp 24492 17852 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:46:44,959 basehttp 24492 19864 "GET /admin/api/articlecategory/8/change/ HTTP/1.1" 200 28793
+INFO 2025-12-20 22:46:44,989 basehttp 24492 19864 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 22:46:46,601 basehttp 24492 19864 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:46:57,096 basehttp 24492 10860 "GET /admin/api/article/ HTTP/1.1" 200 95024
+INFO 2025-12-20 22:46:57,126 basehttp 24492 10860 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 22:46:58,743 basehttp 24492 10860 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:47:00,415 basehttp 24492 10824 "GET /admin/api/article/add/ HTTP/1.1" 200 35835
+INFO 2025-12-20 22:47:00,446 basehttp 24492 10824 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 22:47:02,019 basehttp 24492 10824 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:47:05,514 basehttp 24492 11880 "GET /admin/api/articlecategory/?_to_field=id&_popup=1 HTTP/1.1" 200 14326
+INFO 2025-12-20 22:47:07,143 basehttp 24492 11880 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:47:36,560 basehttp 24492 14636 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:51:19,048 basehttp 24492 13872 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:56:49,150 basehttp 24492 11176 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:00:11,251 basehttp 24492 24440 "GET /admin/api/articlecategory/ HTTP/1.1" 200 38867
+INFO 2025-12-20 23:00:11,282 basehttp 24492 24440 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 23:00:12,900 basehttp 24492 24440 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:00:42,334 basehttp 24492 21720 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:00:45,593 basehttp 24492 24080 "GET /admin/api/comment/ HTTP/1.1" 200 47884
+INFO 2025-12-20 23:00:45,625 basehttp 24492 24080 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 23:00:47,216 basehttp 24492 24080 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:00:50,285 basehttp 24492 18984 "POST /admin/api/comment/ HTTP/1.1" 200 30084
+INFO 2025-12-20 23:00:51,890 basehttp 24492 18984 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+ERROR 2025-12-20 23:00:52,791 fcm 24492 14292 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 23:00:52,794 fcm 24492 14292 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 23:00:52,795 fcm 24492 14292 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 23:00:52,796 fcm 24492 14292 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 23:00:52,798 fcm 24492 14292 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 23:00:52,800 fcm 24492 14292 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+INFO 2025-12-20 23:00:52,845 basehttp 24492 14292 "POST /admin/api/comment/ HTTP/1.1" 302 0
+INFO 2025-12-20 23:00:52,873 basehttp 24492 14292 "GET /admin/api/comment/ HTTP/1.1" 200 23879
+INFO 2025-12-20 23:00:52,903 basehttp 24492 14292 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 23:00:54,453 basehttp 24492 14292 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:01:23,938 basehttp 24492 23652 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:02:19,225 basehttp 24492 5772 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:07:49,314 basehttp 24492 7384 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:13:19,399 basehttp 24492 22292 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:13:44,901 autoreload 24492 23572 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\models.py changed, reloading.
+INFO 2025-12-20 23:13:46,121 autoreload 21060 11652 Watching for file changes with StatReloader
+INFO 2025-12-20 23:14:30,573 autoreload 21060 11652 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\serializers.py changed, reloading.
+INFO 2025-12-20 23:14:31,605 autoreload 18068 17772 Watching for file changes with StatReloader
+INFO 2025-12-20 23:15:27,361 autoreload 18068 17772 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\views.py changed, reloading.
+INFO 2025-12-20 23:15:28,450 autoreload 10628 14392 Watching for file changes with StatReloader
+INFO 2025-12-20 23:16:10,675 autoreload 10628 14392 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\urls.py changed, reloading.
+INFO 2025-12-20 23:16:12,140 autoreload 10828 23616 Watching for file changes with StatReloader
+INFO 2025-12-20 23:17:02,556 autoreload 10828 23616 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\admin.py changed, reloading.
+INFO 2025-12-20 23:17:03,981 autoreload 21304 14852 Watching for file changes with StatReloader
+INFO 2025-12-20 23:18:49,563 basehttp 21304 13632 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:24:19,602 basehttp 21304 692 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:29:49,669 basehttp 21304 15964 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:35:19,749 basehttp 21304 11704 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:40:49,835 basehttp 21304 13632 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:42:19,559 basehttp 21304 24556 "GET /en/feed/ HTTP/1.1" 200 53565
+WARNING 2025-12-20 23:42:19,653 log 21304 24556 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:42:19,660 basehttp 21304 24556 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 23:42:20,042 basehttp 21304 14624 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 23:42:20,046 basehttp 21304 8412 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 23:42:20,047 basehttp 21304 14624 "GET /static/web/js/feed.js HTTP/1.1" 200 29855
+INFO 2025-12-20 23:42:20,072 basehttp 21304 23868 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 23:42:20,091 basehttp 21304 22280 "GET /static/web/css/feed.css HTTP/1.1" 200 30438
+INFO 2025-12-20 23:42:20,111 basehttp 21304 24556 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 23:42:20,117 basehttp 21304 21692 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 23:42:34,259 basehttp 21304 24556 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 23:42:34,272 basehttp 21304 21692 "GET /api/categories/ HTTP/1.1" 200 1923
+ERROR 2025-12-20 23:42:34,301 __init__ 21304 24556 Exception in UserNotificationViewSet: name 'permissions' is not defined
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 503, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 421, in initial
+    self.check_permissions(request)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 337, in check_permissions
+    for permission in self.get_permissions():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\views.py", line 684, in get_permissions
+    permission_classes = [permissions.IsAuthenticated]
+                          ^^^^^^^^^^^
+NameError: name 'permissions' is not defined
+ERROR 2025-12-20 23:42:34,333 log 21304 24556 Internal Server Error: /api/notifications/unread-count/
+ERROR 2025-12-20 23:42:34,335 basehttp 21304 24556 "GET /api/notifications/unread-count/?lang=en HTTP/1.1" 500 78
+INFO 2025-12-20 23:42:34,353 basehttp 21304 21692 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56080
+ERROR 2025-12-20 23:42:34,496 __init__ 21304 21692 Exception in UserNotificationViewSet: name 'permissions' is not defined
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 503, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 421, in initial
+    self.check_permissions(request)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 337, in check_permissions
+    for permission in self.get_permissions():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\views.py", line 684, in get_permissions
+    permission_classes = [permissions.IsAuthenticated]
+                          ^^^^^^^^^^^
+NameError: name 'permissions' is not defined
+ERROR 2025-12-20 23:42:34,500 log 21304 21692 Internal Server Error: /api/notifications/unread-count/
+ERROR 2025-12-20 23:42:34,500 basehttp 21304 21692 "GET /api/notifications/unread-count/?lang=en HTTP/1.1" 500 78
+INFO 2025-12-20 23:42:34,696 basehttp 21304 21692 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 23:42:34,706 basehttp 21304 24556 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 23:42:34,720 basehttp 21304 22280 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 23:42:34,738 basehttp 21304 23868 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 23:42:36,271 basehttp 21304 23868 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+ERROR 2025-12-20 23:42:37,270 __init__ 21304 22280 Exception in UserNotificationViewSet: name 'permissions' is not defined
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 503, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 421, in initial
+    self.check_permissions(request)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 337, in check_permissions
+    for permission in self.get_permissions():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\views.py", line 684, in get_permissions
+    permission_classes = [permissions.IsAuthenticated]
+                          ^^^^^^^^^^^
+NameError: name 'permissions' is not defined
+ERROR 2025-12-20 23:42:37,278 log 21304 22280 Internal Server Error: /api/notifications/
+ERROR 2025-12-20 23:42:37,279 basehttp 21304 22280 "GET /api/notifications/?lang=en&ordering=-created_at HTTP/1.1" 500 78
+INFO 2025-12-20 23:42:39,589 basehttp 21304 23712 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 23:42:39,590 basehttp 21304 22280 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-20 23:42:39,605 basehttp 21304 22280 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+ERROR 2025-12-20 23:42:56,113 __init__ 21304 22280 Exception in UserNotificationViewSet: name 'permissions' is not defined
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 503, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 421, in initial
+    self.check_permissions(request)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 337, in check_permissions
+    for permission in self.get_permissions():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\views.py", line 684, in get_permissions
+    permission_classes = [permissions.IsAuthenticated]
+                          ^^^^^^^^^^^
+NameError: name 'permissions' is not defined
+ERROR 2025-12-20 23:42:56,117 log 21304 22280 Internal Server Error: /api/notifications/
+ERROR 2025-12-20 23:42:56,117 basehttp 21304 22280 "GET /api/notifications/?lang=en&ordering=-created_at HTTP/1.1" 500 78
+INFO 2025-12-20 23:43:00,816 basehttp 21304 22280 "GET /en/feed/ HTTP/1.1" 200 53565
+INFO 2025-12-20 23:43:00,877 basehttp 21304 24556 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 23:43:00,879 basehttp 21304 8412 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 23:43:00,880 basehttp 21304 14624 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 23:43:00,880 basehttp 21304 21692 "GET /static/web/css/feed.css HTTP/1.1" 200 30438
+WARNING 2025-12-20 23:43:00,883 log 21304 22280 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-12-20 23:43:00,885 basehttp 21304 17056 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+WARNING 2025-12-20 23:43:00,886 basehttp 21304 22280 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 23:43:00,886 basehttp 21304 24556 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 23:43:00,888 basehttp 21304 14624 "GET /static/web/js/feed.js HTTP/1.1" 200 29855
+INFO 2025-12-20 23:43:01,622 basehttp 21304 22280 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 23:43:01,638 basehttp 21304 14624 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 23:43:01,853 basehttp 21304 14624 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56080
+ERROR 2025-12-20 23:43:01,945 __init__ 21304 14624 Exception in UserNotificationViewSet: name 'permissions' is not defined
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 503, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 421, in initial
+    self.check_permissions(request)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 337, in check_permissions
+    for permission in self.get_permissions():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\views.py", line 684, in get_permissions
+    permission_classes = [permissions.IsAuthenticated]
+                          ^^^^^^^^^^^
+NameError: name 'permissions' is not defined
+ERROR 2025-12-20 23:43:01,963 log 21304 14624 Internal Server Error: /api/notifications/unread-count/
+INFO 2025-12-20 23:43:01,966 basehttp 21304 22280 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+ERROR 2025-12-20 23:43:01,974 basehttp 21304 14624 "GET /api/notifications/unread-count/?lang=en HTTP/1.1" 500 78
+ERROR 2025-12-20 23:43:01,997 __init__ 21304 14624 Exception in UserNotificationViewSet: name 'permissions' is not defined
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 503, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 421, in initial
+    self.check_permissions(request)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 337, in check_permissions
+    for permission in self.get_permissions():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\views.py", line 684, in get_permissions
+    permission_classes = [permissions.IsAuthenticated]
+                          ^^^^^^^^^^^
+NameError: name 'permissions' is not defined
+ERROR 2025-12-20 23:43:02,011 log 21304 14624 Internal Server Error: /api/notifications/unread-count/
+INFO 2025-12-20 23:43:02,014 basehttp 21304 23712 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+ERROR 2025-12-20 23:43:02,014 basehttp 21304 14624 "GET /api/notifications/unread-count/?lang=en HTTP/1.1" 500 78
+INFO 2025-12-20 23:43:02,086 basehttp 21304 21692 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 23:43:02,104 basehttp 21304 14624 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 23:43:02,124 basehttp 21304 22280 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 23:43:02,154 basehttp 21304 17056 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 23:43:02,170 basehttp 21304 24556 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 23:43:02,185 basehttp 21304 8412 "GET /media/thumbnails/entertainment_20251205_145357_1.webp HTTP/1.1" 200 32402
+INFO 2025-12-20 23:43:03,725 basehttp 21304 8412 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+ERROR 2025-12-20 23:43:05,578 __init__ 21304 24556 Exception in UserNotificationViewSet: name 'permissions' is not defined
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 503, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 421, in initial
+    self.check_permissions(request)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 337, in check_permissions
+    for permission in self.get_permissions():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\views.py", line 684, in get_permissions
+    permission_classes = [permissions.IsAuthenticated]
+                          ^^^^^^^^^^^
+NameError: name 'permissions' is not defined
+ERROR 2025-12-20 23:43:05,583 log 21304 24556 Internal Server Error: /api/notifications/
+ERROR 2025-12-20 23:43:05,584 basehttp 21304 24556 "GET /api/notifications/?lang=en&ordering=-created_at HTTP/1.1" 500 78
+INFO 2025-12-20 23:45:41,500 autoreload 21304 14852 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\views.py changed, reloading.
+INFO 2025-12-20 23:45:42,637 autoreload 20088 13176 Watching for file changes with StatReloader
+INFO 2025-12-20 23:46:19,980 basehttp 20088 17852 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:46:48,213 basehttp 20088 23656 "GET /en/feed/ HTTP/1.1" 200 53565
+WARNING 2025-12-20 23:46:48,276 log 20088 23656 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:46:48,278 basehttp 20088 23656 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 23:46:48,668 basehttp 20088 23656 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 23:46:48,673 basehttp 20088 23656 "GET /static/web/js/feed.js HTTP/1.1" 200 29884
+INFO 2025-12-20 23:46:48,686 basehttp 20088 21864 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 23:46:48,709 basehttp 20088 1520 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 23:46:48,728 basehttp 20088 3200 "GET /static/web/css/feed.css HTTP/1.1" 200 30438
+INFO 2025-12-20 23:46:48,751 basehttp 20088 9140 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 23:46:48,752 basehttp 20088 3520 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 23:46:49,243 basehttp 20088 3520 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 23:46:49,261 basehttp 20088 9140 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 23:46:49,460 basehttp 20088 3200 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-20 23:46:49,488 basehttp 20088 3520 "GET /api/notifications/unread-count/?lang=en HTTP/1.1" 200 18
+INFO 2025-12-20 23:46:49,520 basehttp 20088 9140 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56080
+INFO 2025-12-20 23:46:49,566 basehttp 20088 14292 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 23:46:49,607 basehttp 20088 9140 "GET /api/notifications/unread-count/?lang=en HTTP/1.1" 200 18
+INFO 2025-12-20 23:46:49,721 basehttp 20088 21864 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 23:46:49,756 basehttp 20088 3520 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 23:46:49,780 basehttp 20088 9140 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 23:46:49,786 basehttp 20088 1520 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 23:46:49,813 basehttp 20088 3200 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 23:46:51,354 basehttp 20088 3200 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:46:55,575 basehttp 20088 1520 "GET /api/notifications/?lang=en&ordering=-created_at HTTP/1.1" 200 52
+INFO 2025-12-20 23:47:08,448 autoreload 23956 3092 Watching for file changes with StatReloader
+INFO 2025-12-20 23:47:09,903 basehttp 23956 5240 "GET /en/feed/ HTTP/1.1" 200 53565
+WARNING 2025-12-20 23:47:09,957 log 23956 5240 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:47:09,962 basehttp 23956 5240 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 23:47:10,359 basehttp 23956 14404 "GET /static/web/css/feed.css HTTP/1.1" 200 30438
+INFO 2025-12-20 23:47:10,363 basehttp 23956 14404 "GET /static/web/js/feed.js HTTP/1.1" 200 29884
+INFO 2025-12-20 23:47:10,388 basehttp 23956 19828 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 23:47:10,392 basehttp 23956 16924 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 23:47:10,408 basehttp 23956 2740 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 23:47:10,410 basehttp 23956 5240 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 23:47:10,412 basehttp 23956 11364 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 23:47:10,699 basehttp 23956 11364 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 23:47:10,717 basehttp 23956 5240 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 23:47:11,101 basehttp 23956 11364 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-20 23:47:11,161 basehttp 23956 2740 "GET /api/notifications/unread-count/?lang=en HTTP/1.1" 200 18
+INFO 2025-12-20 23:47:11,209 basehttp 23956 19444 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 23:47:11,219 basehttp 23956 5240 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56080
+INFO 2025-12-20 23:47:11,239 basehttp 23956 5240 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 23:47:11,304 basehttp 23956 5240 "GET /api/notifications/unread-count/?lang=en HTTP/1.1" 200 18
+INFO 2025-12-20 23:47:11,377 basehttp 23956 2740 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 23:47:11,437 basehttp 23956 16924 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 23:47:11,476 basehttp 23956 11364 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 23:47:11,514 basehttp 23956 5240 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 23:47:12,103 basehttp 23956 5240 "GET /api/notifications/?lang=en&ordering=-created_at HTTP/1.1" 200 52
+INFO 2025-12-20 23:47:13,026 basehttp 23956 5240 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:47:13,879 basehttp 23956 11364 "GET /en/feed/ HTTP/1.1" 200 53565
+WARNING 2025-12-20 23:47:13,928 log 23956 11364 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:47:13,930 basehttp 23956 11364 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 23:47:13,938 basehttp 23956 16924 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 23:47:13,942 basehttp 23956 19828 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 23:47:13,943 basehttp 23956 2740 "GET /static/web/css/feed.css HTTP/1.1" 200 30438
+INFO 2025-12-20 23:47:13,943 basehttp 23956 14404 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 23:47:13,944 basehttp 23956 11364 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 23:47:13,946 basehttp 23956 16924 "GET /static/web/js/feed.js HTTP/1.1" 200 29884
+INFO 2025-12-20 23:47:13,946 basehttp 23956 20440 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 23:47:14,359 basehttp 23956 16924 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 23:47:14,375 basehttp 23956 20440 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 23:47:14,630 basehttp 23956 16924 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-20 23:47:14,672 basehttp 23956 20440 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56080
+INFO 2025-12-20 23:47:14,751 basehttp 23956 19444 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 23:47:14,771 basehttp 23956 20440 "GET /api/notifications/unread-count/?lang=en HTTP/1.1" 200 18
+INFO 2025-12-20 23:47:14,807 basehttp 23956 20440 "GET /api/notifications/unread-count/?lang=en HTTP/1.1" 200 18
+INFO 2025-12-20 23:47:14,814 basehttp 23956 16924 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 23:47:15,038 basehttp 23956 16924 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 23:47:15,050 basehttp 23956 20440 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 23:47:15,067 basehttp 23956 11364 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 23:47:15,083 basehttp 23956 14404 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 23:47:16,615 basehttp 23956 14404 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:47:19,497 basehttp 23956 11364 "GET /en/quote-of-the-day/ HTTP/1.1" 200 26852
+WARNING 2025-12-20 23:47:19,598 log 23956 11364 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:47:19,598 basehttp 23956 11364 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 23:47:19,603 basehttp 23956 20440 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 23:47:19,603 basehttp 23956 2740 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 23:47:19,608 basehttp 23956 11364 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 23:47:19,608 basehttp 23956 19828 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 23:47:19,617 basehttp 23956 16924 "GET /static/web/css/quote.css HTTP/1.1" 200 15580
+INFO 2025-12-20 23:47:19,644 basehttp 23956 5684 "GET /static/web/js/quote.js HTTP/1.1" 200 13219
+INFO 2025-12-20 23:47:19,960 basehttp 23956 5684 "GET /api/quotes/today/?category=GENERAL&lang=en HTTP/1.1" 200 1614
+INFO 2025-12-20 23:47:19,978 basehttp 23956 19828 "GET /api/quotes/today/?category=GENERAL&lang=en HTTP/1.1" 200 1614
+INFO 2025-12-20 23:47:19,997 basehttp 23956 16924 "GET /api/quotes/?category=GENERAL&ordering=-date&lang=en HTTP/1.1" 200 7670
+INFO 2025-12-20 23:47:20,019 basehttp 23956 11364 "GET /api/quotes/?category=GENERAL&ordering=-date&lang=en HTTP/1.1" 200 7670
+INFO 2025-12-20 23:47:20,275 basehttp 23956 19444 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 23:47:20,295 basehttp 23956 11364 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 23:47:21,591 basehttp 23956 11364 "GET /en/feed/ HTTP/1.1" 200 53565
+WARNING 2025-12-20 23:47:21,686 log 23956 11364 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:47:21,686 basehttp 23956 11364 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 23:47:21,701 basehttp 23956 11364 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 23:47:21,702 basehttp 23956 19828 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 23:47:21,705 basehttp 23956 16924 "GET /static/web/css/feed.css HTTP/1.1" 200 30438
+INFO 2025-12-20 23:47:21,705 basehttp 23956 20440 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 23:47:21,705 basehttp 23956 2740 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 23:47:21,707 basehttp 23956 5684 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 23:47:21,708 basehttp 23956 11364 "GET /static/web/js/feed.js HTTP/1.1" 200 29884
+INFO 2025-12-20 23:47:21,888 basehttp 23956 11364 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:47:22,169 basehttp 23956 5684 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 23:47:22,184 basehttp 23956 20440 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 23:47:22,546 basehttp 23956 19444 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 23:47:22,558 basehttp 23956 5684 "GET /api/notifications/unread-count/?lang=en HTTP/1.1" 200 18
+INFO 2025-12-20 23:47:22,563 basehttp 23956 2740 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 23:47:22,586 basehttp 23956 20440 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56080
+INFO 2025-12-20 23:47:22,640 basehttp 23956 20440 "GET /api/notifications/unread-count/?lang=en HTTP/1.1" 200 18
+INFO 2025-12-20 23:47:22,696 basehttp 23956 2740 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 23:47:22,715 basehttp 23956 5684 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 23:47:22,729 basehttp 23956 16924 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 23:47:22,753 basehttp 23956 20440 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 23:47:23,463 basehttp 23956 20440 "GET /api/notifications/?lang=en&ordering=-created_at HTTP/1.1" 200 52
+INFO 2025-12-20 23:47:24,294 basehttp 23956 20440 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:47:28,804 basehttp 23956 2760 "GET /admin/api/comment/ HTTP/1.1" 200 24207
+INFO 2025-12-20 23:47:28,854 basehttp 23956 2760 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 23:47:30,409 basehttp 23956 2760 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:47:31,776 basehttp 23956 6888 "GET /admin/api/usernotification/ HTTP/1.1" 200 30254
+INFO 2025-12-20 23:47:31,821 basehttp 23956 6888 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 23:47:33,498 basehttp 23956 6888 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:47:43,433 basehttp 23956 16924 "GET /api/articles/?page=1&page_size=10 HTTP/1.1" 200 56056
+INFO 2025-12-20 23:47:44,965 basehttp 23956 16924 "GET /api/articles/?page=1&page_size=10&main_category=OPPORTUNITY HTTP/1.1" 200 15870
+INFO 2025-12-20 23:47:45,021 basehttp 23956 5684 "GET /media/thumbnails/scholarships_cameroonians_can_apply_20251129_225514_1.jpeg HTTP/1.1" 200 196766
+INFO 2025-12-20 23:47:45,039 basehttp 23956 2740 "GET /media/thumbnails/latest_jobs_20251129_225410_1.jpeg HTTP/1.1" 200 8868
+INFO 2025-12-20 23:47:45,057 basehttp 23956 16924 "GET /media/thumbnails/scholarships_cameroonians_can_apply_20251130_122509_1.jpeg HTTP/1.1" 200 196766
+INFO 2025-12-20 23:47:45,985 basehttp 23956 16924 "GET /api/articles/?page=1&page_size=10 HTTP/1.1" 200 56056
+INFO 2025-12-20 23:47:46,058 basehttp 23956 16924 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 23:47:46,068 basehttp 23956 2740 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 23:47:46,084 basehttp 23956 5684 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 23:47:46,103 basehttp 23956 19828 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 23:48:02,849 basehttp 23956 17716 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:48:05,193 basehttp 23956 19828 "GET /api/notifications/?lang=en&ordering=-created_at HTTP/1.1" 200 52
+INFO 2025-12-20 23:48:56,229 basehttp 23956 1872 "GET /admin/api/usernotification/ HTTP/1.1" 200 30254
+INFO 2025-12-20 23:48:56,260 basehttp 23956 1872 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 23:48:57,748 basehttp 23956 1872 "GET /admin/api/usernotification/5/change/ HTTP/1.1" 200 34164
+INFO 2025-12-20 23:48:57,783 basehttp 23956 1872 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 23:48:57,833 basehttp 23956 1872 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:48:59,355 basehttp 23956 19188 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:49:28,308 basehttp 23956 16288 "GET /admin/ HTTP/1.1" 200 29935
+INFO 2025-12-20 23:49:28,803 basehttp 23956 16288 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:49:29,873 basehttp 23956 23100 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:49:31,203 basehttp 23956 8176 "GET /admin/auth/user/ HTTP/1.1" 200 27583
+INFO 2025-12-20 23:49:31,237 basehttp 23956 8176 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 23:49:32,820 basehttp 23956 8176 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:49:34,036 basehttp 23956 20644 "GET /admin/auth/user/5/change/ HTTP/1.1" 200 47189
+INFO 2025-12-20 23:49:34,071 basehttp 23956 20380 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 23:49:34,085 basehttp 23956 12556 "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 15845
+INFO 2025-12-20 23:49:34,086 basehttp 23956 20644 "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4530
+INFO 2025-12-20 23:49:34,147 basehttp 23956 20644 "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+INFO 2025-12-20 23:49:35,695 basehttp 23956 20644 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:49:40,417 basehttp 23956 12556 "GET /admin/api/usernotification/ HTTP/1.1" 200 30254
+INFO 2025-12-20 23:49:40,449 basehttp 23956 12556 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 23:49:42,055 basehttp 23956 12556 "GET /admin/api/usernotification/5/change/ HTTP/1.1" 200 34164
+INFO 2025-12-20 23:49:42,081 basehttp 23956 20380 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:49:42,096 basehttp 23956 12556 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 23:49:43,666 basehttp 23956 12556 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:49:44,277 basehttp 23956 4336 "GET /admin/auth/user/?_to_field=id&_popup=1 HTTP/1.1" 200 8098
+INFO 2025-12-20 23:49:45,890 basehttp 23956 4336 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:49:48,857 basehttp 23956 23880 "GET /admin/auth/user/?_to_field=id&_popup=1 HTTP/1.1" 200 8098
+INFO 2025-12-20 23:49:50,440 basehttp 23956 23880 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:49:57,068 basehttp 23956 5484 "POST /admin/api/usernotification/5/change/ HTTP/1.1" 200 34352
+INFO 2025-12-20 23:49:57,097 basehttp 23956 5484 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 23:49:58,728 basehttp 23956 5484 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:50:03,550 basehttp 23956 20244 "POST /admin/api/usernotification/5/change/ HTTP/1.1" 302 0
+INFO 2025-12-20 23:50:03,599 basehttp 23956 20244 "GET /admin/api/usernotification/ HTTP/1.1" 200 30506
+INFO 2025-12-20 23:50:03,636 basehttp 23956 20244 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 23:50:05,202 basehttp 23956 20244 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:50:05,399 basehttp 23956 15508 "GET /admin/api/usernotification/4/change/ HTTP/1.1" 200 34081
+INFO 2025-12-20 23:50:05,433 basehttp 23956 15508 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 23:50:07,037 basehttp 23956 13132 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:50:07,060 basehttp 23956 15508 "GET /admin/auth/user/?_to_field=id&_popup=1 HTTP/1.1" 200 8098
+INFO 2025-12-20 23:50:08,626 basehttp 23956 15508 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:50:09,657 basehttp 23956 8804 "POST /admin/api/usernotification/4/change/ HTTP/1.1" 302 0
+INFO 2025-12-20 23:50:09,696 basehttp 23956 8804 "GET /admin/api/usernotification/ HTTP/1.1" 200 30487
+INFO 2025-12-20 23:50:09,735 basehttp 23956 8804 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 23:50:11,090 basehttp 23956 8804 "GET /admin/api/usernotification/3/change/ HTTP/1.1" 200 34533
+INFO 2025-12-20 23:50:11,122 basehttp 23956 8804 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 23:50:11,303 basehttp 23956 8804 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:50:12,581 basehttp 23956 21628 "GET /admin/auth/user/?_to_field=id&_popup=1 HTTP/1.1" 200 8098
+INFO 2025-12-20 23:50:12,684 basehttp 23956 21628 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:50:14,173 basehttp 23956 20884 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:50:15,318 basehttp 23956 16920 "POST /admin/api/usernotification/3/change/ HTTP/1.1" 302 0
+INFO 2025-12-20 23:50:15,352 basehttp 23956 16920 "GET /admin/api/usernotification/ HTTP/1.1" 200 30483
+INFO 2025-12-20 23:50:15,392 basehttp 23956 16920 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 23:50:16,978 basehttp 23956 16920 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:50:17,317 basehttp 23956 19828 "GET /en/feed/ HTTP/1.1" 200 53565
+WARNING 2025-12-20 23:50:17,382 log 23956 19828 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:50:17,384 basehttp 23956 19828 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 23:50:17,393 basehttp 23956 5684 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 23:50:17,395 basehttp 23956 2740 "GET /static/web/css/feed.css HTTP/1.1" 200 30438
+INFO 2025-12-20 23:50:17,402 basehttp 23956 22036 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 23:50:17,403 basehttp 23956 16924 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 23:50:17,404 basehttp 23956 16040 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 23:50:17,404 basehttp 23956 19828 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 23:50:17,404 basehttp 23956 5684 "GET /static/web/js/feed.js HTTP/1.1" 200 29884
+INFO 2025-12-20 23:50:19,182 basehttp 23956 16040 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 23:50:19,210 basehttp 23956 19828 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 23:50:19,506 basehttp 23956 19828 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56080
+INFO 2025-12-20 23:50:19,568 basehttp 23956 16040 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-20 23:50:19,568 basehttp 23956 19444 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 23:50:19,579 basehttp 23956 19828 "GET /api/notifications/unread-count/?lang=en HTTP/1.1" 200 18
+INFO 2025-12-20 23:50:19,603 basehttp 23956 19828 "GET /api/notifications/unread-count/?lang=en HTTP/1.1" 200 18
+INFO 2025-12-20 23:50:19,655 basehttp 23956 22036 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 23:50:19,664 basehttp 23956 19828 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 23:50:19,675 basehttp 23956 5684 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 23:50:19,693 basehttp 23956 16924 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 23:50:19,709 basehttp 23956 16040 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 23:50:21,246 basehttp 23956 16040 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:50:21,474 basehttp 23956 16924 "GET /api/notifications/?lang=en&ordering=-created_at HTTP/1.1" 200 2210
+INFO 2025-12-20 23:50:25,374 basehttp 23956 11848 "GET /admin/api/usernotification/2/change/ HTTP/1.1" 200 34534
+INFO 2025-12-20 23:50:25,403 basehttp 23956 11848 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 23:50:26,964 basehttp 23956 11848 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:50:27,087 basehttp 23956 20368 "GET /admin/auth/user/?_to_field=id&_popup=1 HTTP/1.1" 200 8098
+INFO 2025-12-20 23:50:28,685 basehttp 23956 20368 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:50:30,434 basehttp 23956 4464 "POST /admin/api/usernotification/2/change/ HTTP/1.1" 302 0
+INFO 2025-12-20 23:50:30,469 basehttp 23956 4464 "GET /admin/api/usernotification/ HTTP/1.1" 200 30478
+INFO 2025-12-20 23:50:30,515 basehttp 23956 4464 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 23:50:32,095 basehttp 23956 4464 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:50:32,736 basehttp 23956 22340 "GET /admin/api/usernotification/1/change/ HTTP/1.1" 200 34615
+INFO 2025-12-20 23:50:32,768 basehttp 23956 22340 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 23:50:34,097 basehttp 23956 22340 "GET /admin/auth/user/?_to_field=id&_popup=1 HTTP/1.1" 200 8098
+INFO 2025-12-20 23:50:34,334 basehttp 23956 22340 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:50:35,688 basehttp 23956 3940 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:50:36,896 basehttp 23956 15380 "POST /admin/api/usernotification/1/change/ HTTP/1.1" 302 0
+INFO 2025-12-20 23:50:36,939 basehttp 23956 15380 "GET /admin/api/usernotification/ HTTP/1.1" 200 30475
+INFO 2025-12-20 23:50:36,976 basehttp 23956 15380 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 23:50:38,589 basehttp 23956 15380 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:50:39,464 basehttp 23956 16924 "GET /en/feed/ HTTP/1.1" 200 53565
+WARNING 2025-12-20 23:50:39,514 log 23956 16924 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:50:39,515 basehttp 23956 16924 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 23:50:39,521 basehttp 23956 16924 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 23:50:39,523 basehttp 23956 5684 "GET /static/web/css/feed.css HTTP/1.1" 200 30438
+INFO 2025-12-20 23:50:39,529 basehttp 23956 22036 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 23:50:39,529 basehttp 23956 19828 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 23:50:39,529 basehttp 23956 2740 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 23:50:39,530 basehttp 23956 2944 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 23:50:39,530 basehttp 23956 16924 "GET /static/web/js/feed.js HTTP/1.1" 200 30099
+INFO 2025-12-20 23:50:40,803 basehttp 23956 2944 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 23:50:40,827 basehttp 23956 16924 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 23:50:40,929 basehttp 23956 2944 "GET /api/notifications/unread-count/?lang=en HTTP/1.1" 200 18
+INFO 2025-12-20 23:50:40,961 basehttp 23956 16924 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56080
+INFO 2025-12-20 23:50:41,236 basehttp 23956 16924 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-20 23:50:41,273 basehttp 23956 16924 "GET /api/notifications/unread-count/?lang=en HTTP/1.1" 200 18
+INFO 2025-12-20 23:50:41,275 basehttp 23956 19444 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 23:50:41,357 basehttp 23956 22036 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 23:50:41,384 basehttp 23956 19828 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 23:50:41,386 basehttp 23956 16924 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 23:50:41,396 basehttp 23956 2944 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 23:50:41,411 basehttp 23956 2740 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 23:50:42,213 basehttp 23956 2740 "GET /api/notifications/?lang=en&ordering=-created_at HTTP/1.1" 200 3928
+INFO 2025-12-20 23:50:42,969 basehttp 23956 2740 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+ERROR 2025-12-20 23:50:46,723 __init__ 23956 2944 Exception in UserNotificationViewSet: CSRF Failed: CSRF token missing.
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 503, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 420, in initial
+    self.perform_authentication(request)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 330, in perform_authentication
+    request.user
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\request.py", line 232, in user
+    self._authenticate()
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\request.py", line 385, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\authentication.py", line 130, in authenticate
+    self.enforce_csrf(request)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\authentication.py", line 148, in enforce_csrf
+    raise exceptions.PermissionDenied('CSRF Failed: %s' % reason)
+rest_framework.exceptions.PermissionDenied: CSRF Failed: CSRF token missing.
+WARNING 2025-12-20 23:50:46,770 log 23956 2944 Forbidden: /api/notifications/5/read/
+WARNING 2025-12-20 23:50:46,770 basehttp 23956 2944 "POST /api/notifications/5/read/ HTTP/1.1" 403 63
+ERROR 2025-12-20 23:50:48,063 __init__ 23956 2944 Exception in UserNotificationViewSet: CSRF Failed: CSRF token missing.
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 503, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 420, in initial
+    self.perform_authentication(request)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 330, in perform_authentication
+    request.user
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\request.py", line 232, in user
+    self._authenticate()
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\request.py", line 385, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\authentication.py", line 130, in authenticate
+    self.enforce_csrf(request)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\authentication.py", line 148, in enforce_csrf
+    raise exceptions.PermissionDenied('CSRF Failed: %s' % reason)
+rest_framework.exceptions.PermissionDenied: CSRF Failed: CSRF token missing.
+WARNING 2025-12-20 23:50:48,073 log 23956 2944 Forbidden: /api/notifications/5/read/
+WARNING 2025-12-20 23:50:48,073 basehttp 23956 2944 "POST /api/notifications/5/read/ HTTP/1.1" 403 63
+ERROR 2025-12-20 23:50:50,919 __init__ 23956 2944 Exception in UserNotificationViewSet: CSRF Failed: CSRF token missing.
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 503, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 420, in initial
+    self.perform_authentication(request)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 330, in perform_authentication
+    request.user
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\request.py", line 232, in user
+    self._authenticate()
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\request.py", line 385, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\authentication.py", line 130, in authenticate
+    self.enforce_csrf(request)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\authentication.py", line 148, in enforce_csrf
+    raise exceptions.PermissionDenied('CSRF Failed: %s' % reason)
+rest_framework.exceptions.PermissionDenied: CSRF Failed: CSRF token missing.
+WARNING 2025-12-20 23:50:50,928 log 23956 2944 Forbidden: /api/notifications/4/read/
+WARNING 2025-12-20 23:50:50,928 basehttp 23956 2944 "POST /api/notifications/4/read/ HTTP/1.1" 403 63
+ERROR 2025-12-20 23:50:52,693 __init__ 23956 2944 Exception in UserNotificationViewSet: CSRF Failed: CSRF token missing.
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 503, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 420, in initial
+    self.perform_authentication(request)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 330, in perform_authentication
+    request.user
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\request.py", line 232, in user
+    self._authenticate()
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\request.py", line 385, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\authentication.py", line 130, in authenticate
+    self.enforce_csrf(request)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\authentication.py", line 148, in enforce_csrf
+    raise exceptions.PermissionDenied('CSRF Failed: %s' % reason)
+rest_framework.exceptions.PermissionDenied: CSRF Failed: CSRF token missing.
+WARNING 2025-12-20 23:50:52,708 log 23956 2944 Forbidden: /api/notifications/3/read/
+WARNING 2025-12-20 23:50:52,708 basehttp 23956 2944 "POST /api/notifications/3/read/ HTTP/1.1" 403 63
+INFO 2025-12-20 23:50:52,725 basehttp 23956 16924 "GET /en/article/3/ HTTP/1.1" 200 32388
+WARNING 2025-12-20 23:50:52,813 log 23956 16924 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:50:52,813 basehttp 23956 16924 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 23:50:52,819 basehttp 23956 16924 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 23:50:52,826 basehttp 23956 19828 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 23:50:52,828 basehttp 23956 22036 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 23:50:52,829 basehttp 23956 16924 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 23:50:52,835 basehttp 23956 2944 "GET /static/web/css/article.css HTTP/1.1" 200 31725
+INFO 2025-12-20 23:50:52,855 basehttp 23956 5684 "GET /static/web/js/article-dummy-data.js HTTP/1.1" 200 3681
+INFO 2025-12-20 23:50:52,864 basehttp 23956 23512 "GET /static/web/js/article.js HTTP/1.1" 200 29240
+INFO 2025-12-20 23:50:59,827 basehttp 23956 5684 "GET /api/articles/3/ HTTP/1.1" 200 4722
+INFO 2025-12-20 23:50:59,847 basehttp 23956 23512 "GET /api/articles/3/ HTTP/1.1" 200 4722
+INFO 2025-12-20 23:50:59,943 basehttp 23956 23512 "GET /api/articles/?page_size=5&category=1 HTTP/1.1" 200 30744
+INFO 2025-12-20 23:50:59,980 basehttp 23956 5684 "GET /api/articles/?page_size=5&category=1 HTTP/1.1" 200 30744
+INFO 2025-12-20 23:51:00,093 basehttp 23956 19444 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 23:51:00,103 basehttp 23956 5684 "GET /api/articles/?page_size=4&main_category=ACTUALITY HTTP/1.1" 200 21741
+INFO 2025-12-20 23:51:00,143 basehttp 23956 2944 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 23:51:00,152 basehttp 23956 23512 "GET /api/articles/?page_size=4&main_category=ACTUALITY HTTP/1.1" 200 21741
+INFO 2025-12-20 23:51:01,765 basehttp 23956 23512 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:51:02,124 basehttp 23956 2944 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+WARNING 2025-12-20 23:51:02,253 log 23956 2944 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:51:02,253 basehttp 23956 2944 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 23:51:02,320 basehttp 23956 19444 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 23:51:02,321 basehttp 23956 5684 "GET /static/web/css/feed.css HTTP/1.1" 200 30438
+WARNING 2025-12-20 23:51:02,340 log 23956 16924 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:51:02,340 basehttp 23956 16924 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 23:51:02,353 basehttp 23956 2944 "GET /en/feed/ HTTP/1.1" 200 53565
+INFO 2025-12-20 23:51:08,015 basehttp 23956 9312 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:51:38,385 basehttp 23956 23080 "GET /en/feed/ HTTP/1.1" 200 53565
+WARNING 2025-12-20 23:51:38,451 log 23956 23080 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:51:38,451 basehttp 23956 23080 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 23:51:38,463 basehttp 23956 23080 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 23:51:38,465 basehttp 23956 11248 "GET /static/web/css/feed.css HTTP/1.1" 200 30438
+INFO 2025-12-20 23:51:38,479 basehttp 23956 13068 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 23:51:38,479 basehttp 23956 24004 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 23:51:38,479 basehttp 23956 14416 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 23:51:38,481 basehttp 23956 11248 "GET /static/web/js/feed.js HTTP/1.1" 200 30182
+INFO 2025-12-20 23:51:38,482 basehttp 23956 17844 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 23:51:41,295 basehttp 23956 13068 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 23:51:41,315 basehttp 23956 17844 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 23:51:41,576 basehttp 23956 13068 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-20 23:51:41,605 basehttp 23956 17844 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56080
+INFO 2025-12-20 23:51:41,643 basehttp 23956 19120 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 23:51:41,685 basehttp 23956 17844 "GET /api/notifications/unread-count/?lang=en HTTP/1.1" 200 18
+INFO 2025-12-20 23:51:41,709 basehttp 23956 17844 "GET /api/notifications/unread-count/?lang=en HTTP/1.1" 200 18
+INFO 2025-12-20 23:51:41,765 basehttp 23956 24004 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 23:51:41,770 basehttp 23956 11248 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 23:51:41,788 basehttp 23956 13068 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 23:51:41,810 basehttp 23956 17844 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 23:51:41,820 basehttp 23956 14416 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 23:51:42,900 basehttp 23956 14416 "GET /api/notifications/?lang=en&ordering=-created_at HTTP/1.1" 200 3928
+INFO 2025-12-20 23:51:43,359 basehttp 23956 14416 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+ERROR 2025-12-20 23:51:44,857 __init__ 23956 17844 Exception in UserNotificationViewSet: CSRF Failed: CSRF token missing.
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 503, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 420, in initial
+    self.perform_authentication(request)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 330, in perform_authentication
+    request.user
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\request.py", line 232, in user
+    self._authenticate()
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\request.py", line 385, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\authentication.py", line 130, in authenticate
+    self.enforce_csrf(request)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\authentication.py", line 148, in enforce_csrf
+    raise exceptions.PermissionDenied('CSRF Failed: %s' % reason)
+rest_framework.exceptions.PermissionDenied: CSRF Failed: CSRF token missing.
+INFO 2025-12-20 23:51:44,863 basehttp 23956 13068 "GET /en/article/3/ HTTP/1.1" 200 32388
+WARNING 2025-12-20 23:51:44,878 log 23956 17844 Forbidden: /api/notifications/3/read/
+WARNING 2025-12-20 23:51:44,879 basehttp 23956 17844 "POST /api/notifications/3/read/ HTTP/1.1" 403 63
+WARNING 2025-12-20 23:51:44,988 log 23956 17844 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:51:44,990 basehttp 23956 17844 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 23:51:44,995 basehttp 23956 13068 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 23:51:44,999 basehttp 23956 24004 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 23:51:45,000 basehttp 23956 23080 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 23:51:45,000 basehttp 23956 11248 "GET /static/web/css/article.css HTTP/1.1" 200 31725
+INFO 2025-12-20 23:51:45,002 basehttp 23956 22736 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 23:51:45,002 basehttp 23956 17844 "GET /static/web/js/article-dummy-data.js HTTP/1.1" 200 3681
+INFO 2025-12-20 23:51:45,003 basehttp 23956 13068 "GET /static/web/js/article.js HTTP/1.1" 200 29240
+INFO 2025-12-20 23:51:46,074 basehttp 23956 13068 "GET /api/articles/3/ HTTP/1.1" 200 4722
+INFO 2025-12-20 23:51:46,091 basehttp 23956 17844 "GET /api/articles/3/ HTTP/1.1" 200 4722
+INFO 2025-12-20 23:51:46,185 basehttp 23956 17844 "GET /api/articles/?page_size=5&category=1 HTTP/1.1" 200 30744
+INFO 2025-12-20 23:51:46,228 basehttp 23956 17844 "GET /api/articles/?page_size=5&category=1 HTTP/1.1" 200 30744
+INFO 2025-12-20 23:51:46,277 basehttp 23956 13068 "GET /api/articles/?page_size=4&main_category=ACTUALITY HTTP/1.1" 200 21741
+INFO 2025-12-20 23:51:46,294 basehttp 23956 17844 "GET /api/articles/?page_size=4&main_category=ACTUALITY HTTP/1.1" 200 21741
+INFO 2025-12-20 23:51:46,403 basehttp 23956 19120 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 23:51:46,416 basehttp 23956 17844 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 23:51:47,763 basehttp 23956 17844 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+WARNING 2025-12-20 23:51:47,898 log 23956 17844 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:51:47,900 basehttp 23956 17844 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 23:51:47,937 basehttp 23956 19120 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 23:51:47,939 basehttp 23956 13068 "GET /static/web/css/feed.css HTTP/1.1" 200 30438
+INFO 2025-12-20 23:51:47,960 basehttp 23956 17844 "GET /en/feed/ HTTP/1.1" 200 53565
+WARNING 2025-12-20 23:51:47,987 log 23956 13068 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:51:47,988 basehttp 23956 13068 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 23:51:48,001 basehttp 23956 17844 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:51:50,010 basehttp 23956 13068 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:51:50,419 basehttp 23956 22736 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+WARNING 2025-12-20 23:51:50,487 log 23956 22736 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:51:50,488 basehttp 23956 22736 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 23:51:50,509 basehttp 23956 19120 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 23:51:50,534 basehttp 23956 22736 "GET /en/article/3/ HTTP/1.1" 200 32388
+WARNING 2025-12-20 23:51:50,550 log 23956 11248 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:51:50,551 basehttp 23956 11248 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 23:51:51,817 basehttp 23956 11248 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+WARNING 2025-12-20 23:51:51,937 log 23956 11248 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:51:51,938 basehttp 23956 11248 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+WARNING 2025-12-20 23:51:52,010 log 23956 11248 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:51:52,012 basehttp 23956 11248 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 23:51:52,396 basehttp 23956 11248 "GET /en/feed/ HTTP/1.1" 200 53565
+WARNING 2025-12-20 23:51:52,444 log 23956 11248 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:51:52,445 basehttp 23956 11248 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 23:51:52,454 basehttp 23956 22736 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 23:51:52,454 basehttp 23956 11248 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 23:51:52,456 basehttp 23956 23080 "GET /static/web/css/feed.css HTTP/1.1" 200 30438
+INFO 2025-12-20 23:51:52,463 basehttp 23956 24004 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 23:51:52,463 basehttp 23956 6756 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 23:51:52,465 basehttp 23956 22736 "GET /static/web/js/feed.js HTTP/1.1" 200 30182
+INFO 2025-12-20 23:51:52,466 basehttp 23956 3972 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 23:51:53,091 basehttp 23956 3972 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 23:51:53,105 basehttp 23956 6756 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 23:51:53,230 basehttp 23956 3972 "GET /api/notifications/unread-count/?lang=en HTTP/1.1" 200 18
+INFO 2025-12-20 23:51:53,265 basehttp 23956 6756 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56080
+INFO 2025-12-20 23:51:53,464 basehttp 23956 6756 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-20 23:51:53,500 basehttp 23956 6756 "GET /api/notifications/unread-count/?lang=en HTTP/1.1" 200 18
+INFO 2025-12-20 23:51:53,502 basehttp 23956 19120 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 23:51:53,580 basehttp 23956 11248 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 23:51:53,602 basehttp 23956 6756 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 23:51:53,621 basehttp 23956 3972 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 23:51:53,648 basehttp 23956 24004 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 23:51:53,672 basehttp 23956 22736 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 23:51:55,089 basehttp 23956 22736 "GET /api/notifications/?lang=en&ordering=-created_at HTTP/1.1" 200 3928
+INFO 2025-12-20 23:51:55,195 basehttp 23956 22736 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+ERROR 2025-12-20 23:52:01,909 __init__ 23956 24004 Exception in UserNotificationViewSet: CSRF Failed: CSRF token missing.
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 503, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 420, in initial
+    self.perform_authentication(request)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 330, in perform_authentication
+    request.user
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\request.py", line 232, in user
+    self._authenticate()
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\request.py", line 385, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\authentication.py", line 130, in authenticate
+    self.enforce_csrf(request)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\authentication.py", line 148, in enforce_csrf
+    raise exceptions.PermissionDenied('CSRF Failed: %s' % reason)
+rest_framework.exceptions.PermissionDenied: CSRF Failed: CSRF token missing.
+INFO 2025-12-20 23:52:01,921 basehttp 23956 3972 "GET /en/article/3/ HTTP/1.1" 200 32388
+WARNING 2025-12-20 23:52:01,944 log 23956 24004 Forbidden: /api/notifications/3/read/
+WARNING 2025-12-20 23:52:01,944 basehttp 23956 24004 "POST /api/notifications/3/read/ HTTP/1.1" 403 63
+WARNING 2025-12-20 23:52:02,026 log 23956 24004 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:52:02,026 basehttp 23956 24004 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 23:52:02,038 basehttp 23956 3972 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 23:52:02,042 basehttp 23956 6756 "GET /static/web/css/article.css HTTP/1.1" 200 31725
+INFO 2025-12-20 23:52:02,042 basehttp 23956 11248 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 23:52:02,042 basehttp 23956 23080 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 23:52:02,043 basehttp 23956 3496 "GET /static/web/js/article-dummy-data.js HTTP/1.1" 200 3681
+INFO 2025-12-20 23:52:02,043 basehttp 23956 24004 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 23:52:02,046 basehttp 23956 3972 "GET /static/web/js/article.js HTTP/1.1" 200 29240
+INFO 2025-12-20 23:52:02,368 basehttp 23956 3972 "GET /api/articles/3/ HTTP/1.1" 200 4722
+INFO 2025-12-20 23:52:02,381 basehttp 23956 3496 "GET /api/articles/3/ HTTP/1.1" 200 4722
+INFO 2025-12-20 23:52:02,564 basehttp 23956 3496 "GET /api/articles/?page_size=5&category=1 HTTP/1.1" 200 30744
+INFO 2025-12-20 23:52:02,598 basehttp 23956 3972 "GET /api/articles/?page_size=5&category=1 HTTP/1.1" 200 30744
+INFO 2025-12-20 23:52:02,611 basehttp 23956 19120 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 23:52:02,647 basehttp 23956 3972 "GET /api/articles/?page_size=4&main_category=ACTUALITY HTTP/1.1" 200 21741
+INFO 2025-12-20 23:52:02,662 basehttp 23956 23080 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 23:52:02,682 basehttp 23956 3496 "GET /api/articles/?page_size=4&main_category=ACTUALITY HTTP/1.1" 200 21741
+INFO 2025-12-20 23:52:04,275 basehttp 23956 3496 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:52:08,173 basehttp 23956 23080 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+WARNING 2025-12-20 23:52:08,303 log 23956 23080 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:52:08,304 basehttp 23956 23080 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 23:52:08,373 basehttp 23956 19120 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 23:52:08,374 basehttp 23956 3972 "GET /static/web/css/feed.css HTTP/1.1" 200 30438
+INFO 2025-12-20 23:52:08,396 basehttp 23956 23080 "GET /en/feed/ HTTP/1.1" 200 53565
+WARNING 2025-12-20 23:52:08,416 log 23956 3972 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:52:08,417 basehttp 23956 3972 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+ERROR 2025-12-20 23:52:08,941 __init__ 23956 3972 Exception in UserNotificationViewSet: CSRF Failed: CSRF token missing.
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 503, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 420, in initial
+    self.perform_authentication(request)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 330, in perform_authentication
+    request.user
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\request.py", line 232, in user
+    self._authenticate()
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\request.py", line 385, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\authentication.py", line 130, in authenticate
+    self.enforce_csrf(request)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\authentication.py", line 148, in enforce_csrf
+    raise exceptions.PermissionDenied('CSRF Failed: %s' % reason)
+rest_framework.exceptions.PermissionDenied: CSRF Failed: CSRF token missing.
+INFO 2025-12-20 23:52:08,949 basehttp 23956 23080 "GET /en/article/1/ HTTP/1.1" 200 32388
+WARNING 2025-12-20 23:52:08,964 log 23956 3972 Forbidden: /api/notifications/1/read/
+WARNING 2025-12-20 23:52:08,964 basehttp 23956 3972 "POST /api/notifications/1/read/ HTTP/1.1" 403 63
+WARNING 2025-12-20 23:52:09,063 log 23956 3972 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:52:09,065 basehttp 23956 3972 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 23:52:09,075 basehttp 23956 23080 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 23:52:09,079 basehttp 23956 24004 "GET /static/web/css/article.css HTTP/1.1" 200 31725
+INFO 2025-12-20 23:52:09,079 basehttp 23956 3972 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 23:52:09,080 basehttp 23956 6756 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 23:52:09,081 basehttp 23956 11248 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 23:52:09,081 basehttp 23956 19240 "GET /static/web/js/article-dummy-data.js HTTP/1.1" 200 3681
+INFO 2025-12-20 23:52:09,083 basehttp 23956 23080 "GET /static/web/js/article.js HTTP/1.1" 200 29240
+INFO 2025-12-20 23:52:09,458 basehttp 23956 19240 "GET /api/articles/1/ HTTP/1.1" 200 4286
+INFO 2025-12-20 23:52:09,478 basehttp 23956 23080 "GET /api/articles/1/ HTTP/1.1" 200 4286
+INFO 2025-12-20 23:52:09,707 basehttp 23956 23080 "GET /api/articles/?page_size=5&category=4 HTTP/1.1" 200 21133
+INFO 2025-12-20 23:52:09,748 basehttp 23956 19240 "GET /api/articles/?page_size=5&category=4 HTTP/1.1" 200 21133
+INFO 2025-12-20 23:52:09,789 basehttp 23956 19120 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 23:52:09,842 basehttp 23956 19240 "GET /api/articles/?page_size=4&main_category=ACTUALITY HTTP/1.1" 200 21741
+INFO 2025-12-20 23:52:09,882 basehttp 23956 6756 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 23:52:09,891 basehttp 23956 23080 "GET /api/articles/?page_size=4&main_category=ACTUALITY HTTP/1.1" 200 21741
+INFO 2025-12-20 23:52:10,716 basehttp 23956 23080 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+WARNING 2025-12-20 23:52:10,835 log 23956 23080 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:52:10,836 basehttp 23956 23080 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+WARNING 2025-12-20 23:52:10,923 log 23956 23080 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:52:10,923 basehttp 23956 23080 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+ERROR 2025-12-20 23:52:11,386 __init__ 23956 23080 Exception in UserNotificationViewSet: CSRF Failed: CSRF token missing.
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 503, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 420, in initial
+    self.perform_authentication(request)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 330, in perform_authentication
+    request.user
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\request.py", line 232, in user
+    self._authenticate()
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\request.py", line 385, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\authentication.py", line 130, in authenticate
+    self.enforce_csrf(request)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\authentication.py", line 148, in enforce_csrf
+    raise exceptions.PermissionDenied('CSRF Failed: %s' % reason)
+rest_framework.exceptions.PermissionDenied: CSRF Failed: CSRF token missing.
+INFO 2025-12-20 23:52:11,399 basehttp 23956 6756 "GET /en/article/2/ HTTP/1.1" 200 32388
+WARNING 2025-12-20 23:52:11,415 log 23956 23080 Forbidden: /api/notifications/2/read/
+WARNING 2025-12-20 23:52:11,416 basehttp 23956 23080 "POST /api/notifications/2/read/ HTTP/1.1" 403 63
+WARNING 2025-12-20 23:52:11,500 log 23956 23080 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:52:11,501 basehttp 23956 23080 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 23:52:11,510 basehttp 23956 23080 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 23:52:11,514 basehttp 23956 19240 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 23:52:11,514 basehttp 23956 6756 "GET /static/web/css/article.css HTTP/1.1" 200 31725
+INFO 2025-12-20 23:52:11,516 basehttp 23956 11248 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 23:52:11,517 basehttp 23956 3972 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 23:52:11,517 basehttp 23956 24004 "GET /static/web/js/article-dummy-data.js HTTP/1.1" 200 3681
+INFO 2025-12-20 23:52:11,519 basehttp 23956 23080 "GET /static/web/js/article.js HTTP/1.1" 200 29240
+INFO 2025-12-20 23:52:11,576 basehttp 23956 23080 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:52:11,887 basehttp 23956 24004 "GET /api/articles/2/ HTTP/1.1" 200 2448
+INFO 2025-12-20 23:52:11,898 basehttp 23956 3972 "GET /api/articles/2/ HTTP/1.1" 200 2448
+INFO 2025-12-20 23:52:12,035 basehttp 23956 3972 "GET /api/articles/?page_size=5&category=2 HTTP/1.1" 200 27182
+INFO 2025-12-20 23:52:12,184 basehttp 23956 3972 "GET /api/articles/?page_size=5&category=2 HTTP/1.1" 200 27182
+INFO 2025-12-20 23:52:12,280 basehttp 23956 19120 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 23:52:12,300 basehttp 23956 3972 "GET /api/articles/?page_size=4&main_category=ACTUALITY HTTP/1.1" 200 21741
+INFO 2025-12-20 23:52:12,320 basehttp 23956 19240 "GET /media/thumbnails/business_20251205_064622_1.jpeg HTTP/1.1" 200 33322
+INFO 2025-12-20 23:52:12,325 basehttp 23956 3972 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 23:52:12,347 basehttp 23956 24004 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 23:52:12,376 basehttp 23956 6756 "GET /media/thumbnails/agriculture_20251205_065149_1.jpeg HTTP/1.1" 200 43226
+INFO 2025-12-20 23:52:12,396 basehttp 23956 11248 "GET /api/articles/?page_size=4&main_category=ACTUALITY HTTP/1.1" 200 21741
+INFO 2025-12-20 23:52:12,407 basehttp 23956 19912 "GET /media/thumbnails/business_20251205_062426_1.jpeg HTTP/1.1" 200 27125
+INFO 2025-12-20 23:52:14,048 basehttp 23956 19912 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:52:17,042 basehttp 23956 2664 "GET /admin/api/usernotification/ HTTP/1.1" 200 30204
+INFO 2025-12-20 23:52:17,068 basehttp 23956 2664 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 23:52:18,404 basehttp 23956 2664 "GET /admin/api/usernotification/ HTTP/1.1" 200 30204
+INFO 2025-12-20 23:52:18,430 basehttp 23956 2664 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 23:52:18,854 basehttp 23956 2664 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:52:18,960 basehttp 23956 1908 "GET /admin/api/usernotification/ HTTP/1.1" 200 30204
+INFO 2025-12-20 23:52:18,988 basehttp 23956 1908 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 23:52:19,178 basehttp 23956 1908 "GET /admin/api/usernotification/ HTTP/1.1" 200 30204
+INFO 2025-12-20 23:52:19,208 basehttp 23956 1908 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 23:52:20,870 basehttp 23956 1908 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:52:50,245 basehttp 23956 3204 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:53:08,981 autoreload 23956 3092 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\gistme_backend\settings.py changed, reloading.
+INFO 2025-12-20 23:53:10,380 autoreload 14704 24160 Watching for file changes with StatReloader
+INFO 2025-12-20 23:53:35,346 basehttp 14704 23932 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+WARNING 2025-12-20 23:53:35,353 log 14704 24344 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:53:35,354 basehttp 14704 24344 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+WARNING 2025-12-20 23:53:35,410 log 14704 24344 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:53:35,410 basehttp 14704 24344 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 23:53:37,416 basehttp 14704 24344 "GET /en/article/2/ HTTP/1.1" 200 32388
+WARNING 2025-12-20 23:53:37,503 log 14704 24344 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:53:37,503 basehttp 14704 24344 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 23:53:37,516 basehttp 14704 24344 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 23:53:37,516 basehttp 14704 23932 "GET /static/web/css/article.css HTTP/1.1" 200 31725
+INFO 2025-12-20 23:53:37,527 basehttp 14704 15620 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 23:53:37,527 basehttp 14704 20368 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 23:53:37,528 basehttp 14704 23748 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 23:53:37,529 basehttp 14704 14972 "GET /static/web/js/article-dummy-data.js HTTP/1.1" 200 3681
+INFO 2025-12-20 23:53:37,530 basehttp 14704 23932 "GET /static/web/js/article.js HTTP/1.1" 200 29240
+INFO 2025-12-20 23:53:39,745 basehttp 14704 9240 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 23:53:39,762 basehttp 14704 23932 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 23:53:45,306 basehttp 14704 23932 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+WARNING 2025-12-20 23:53:45,424 log 14704 23932 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:53:45,425 basehttp 14704 23932 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+WARNING 2025-12-20 23:53:45,527 log 14704 23932 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:53:45,527 basehttp 14704 23932 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 23:53:46,302 basehttp 14704 23932 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:53:46,593 basehttp 14704 14972 "GET /en/feed/ HTTP/1.1" 200 53565
+WARNING 2025-12-20 23:53:46,646 log 14704 14972 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:53:46,646 basehttp 14704 14972 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 23:53:46,655 basehttp 14704 23748 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 23:53:46,661 basehttp 14704 24344 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 23:53:46,662 basehttp 14704 15620 "GET /static/web/css/feed.css HTTP/1.1" 200 30438
+INFO 2025-12-20 23:53:46,662 basehttp 14704 14972 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 23:53:46,663 basehttp 14704 20368 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 23:53:46,664 basehttp 14704 23748 "GET /static/web/js/feed.js HTTP/1.1" 200 30182
+INFO 2025-12-20 23:53:46,669 basehttp 14704 5704 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 23:53:47,076 basehttp 14704 5704 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 23:53:47,084 basehttp 14704 14972 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 23:53:47,372 basehttp 14704 5704 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-20 23:53:47,382 basehttp 14704 9240 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 23:53:47,402 basehttp 14704 5704 "GET /api/notifications/unread-count/?lang=en HTTP/1.1" 200 18
+INFO 2025-12-20 23:53:47,404 basehttp 14704 23748 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 23:53:47,424 basehttp 14704 14972 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56080
+INFO 2025-12-20 23:53:47,470 basehttp 14704 14972 "GET /api/notifications/unread-count/?lang=en HTTP/1.1" 200 18
+INFO 2025-12-20 23:53:47,536 basehttp 14704 5704 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 23:53:47,552 basehttp 14704 20368 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 23:53:47,570 basehttp 14704 23748 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 23:53:47,596 basehttp 14704 14972 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 23:53:49,112 basehttp 14704 14972 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:55:47,967 basehttp 14704 23748 "GET /en/feed/ HTTP/1.1" 200 53565
+WARNING 2025-12-20 23:55:48,024 log 14704 23748 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:55:48,027 basehttp 14704 23748 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 23:55:48,041 basehttp 14704 23748 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 23:55:48,052 basehttp 14704 5704 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 23:55:48,052 basehttp 14704 20368 "GET /static/web/css/feed.css HTTP/1.1" 200 30438
+INFO 2025-12-20 23:55:48,052 basehttp 14704 15620 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 23:55:48,055 basehttp 14704 24344 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 23:55:48,057 basehttp 14704 9912 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 23:55:48,058 basehttp 14704 23748 "GET /static/web/js/feed.js HTTP/1.1" 200 30773
+INFO 2025-12-20 23:55:50,926 basehttp 14704 23748 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 23:55:50,940 basehttp 14704 9912 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 23:55:51,060 basehttp 14704 23748 "GET /api/notifications/unread-count/?lang=en HTTP/1.1" 200 18
+INFO 2025-12-20 23:55:51,090 basehttp 14704 9912 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56080
+INFO 2025-12-20 23:55:51,297 basehttp 14704 9912 "GET /api/notifications/unread-count/?lang=en HTTP/1.1" 200 18
+INFO 2025-12-20 23:55:51,336 basehttp 14704 9912 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 23:55:51,344 basehttp 14704 24344 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 23:55:51,359 basehttp 14704 15620 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 23:55:51,374 basehttp 14704 23748 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 23:55:52,909 basehttp 14704 23748 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:55:54,610 basehttp 14704 15620 "GET /api/notifications/?lang=en&ordering=-created_at HTTP/1.1" 200 3928
+INFO 2025-12-20 23:55:56,395 basehttp 14704 15620 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-20 23:55:56,396 basehttp 14704 9240 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 23:55:56,410 basehttp 14704 15620 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 23:55:59,303 basehttp 14704 24344 "GET /en/article/3/ HTTP/1.1" 200 32388
+INFO 2025-12-20 23:55:59,331 basehttp 14704 15620 "POST /api/notifications/3/read/ HTTP/1.1" 200 846
+WARNING 2025-12-20 23:55:59,399 log 14704 15620 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:55:59,400 basehttp 14704 15620 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 23:55:59,417 basehttp 14704 15620 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 23:55:59,420 basehttp 14704 9912 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 23:55:59,420 basehttp 14704 24344 "GET /static/web/css/article.css HTTP/1.1" 200 31725
+INFO 2025-12-20 23:55:59,421 basehttp 14704 9944 "GET /static/web/js/article-dummy-data.js HTTP/1.1" 200 3681
+INFO 2025-12-20 23:55:59,421 basehttp 14704 5704 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 23:55:59,421 basehttp 14704 20368 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 23:55:59,423 basehttp 14704 15620 "GET /static/web/js/article.js HTTP/1.1" 200 29240
+INFO 2025-12-20 23:56:00,426 basehttp 14704 20368 "GET /api/articles/3/ HTTP/1.1" 200 4722
+INFO 2025-12-20 23:56:00,445 basehttp 14704 15620 "GET /api/articles/3/ HTTP/1.1" 200 4722
+INFO 2025-12-20 23:56:00,521 basehttp 14704 15620 "GET /api/articles/?page_size=5&category=1 HTTP/1.1" 200 30744
+INFO 2025-12-20 23:56:00,556 basehttp 14704 20368 "GET /api/articles/?page_size=5&category=1 HTTP/1.1" 200 30744
+INFO 2025-12-20 23:56:00,586 basehttp 14704 15620 "GET /api/articles/?page_size=4&main_category=ACTUALITY HTTP/1.1" 200 21741
+INFO 2025-12-20 23:56:00,621 basehttp 14704 20368 "GET /api/articles/?page_size=4&main_category=ACTUALITY HTTP/1.1" 200 21741
+INFO 2025-12-20 23:56:00,725 basehttp 14704 9240 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 23:56:00,736 basehttp 14704 20368 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 23:56:02,208 basehttp 14704 20368 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+WARNING 2025-12-20 23:56:02,339 log 14704 20368 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:56:02,340 basehttp 14704 20368 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 23:56:02,359 basehttp 14704 20368 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:56:02,394 basehttp 14704 9240 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 23:56:02,395 basehttp 14704 5704 "GET /static/web/css/feed.css HTTP/1.1" 200 30438
+INFO 2025-12-20 23:56:02,415 basehttp 14704 15620 "GET /en/feed/ HTTP/1.1" 200 53565
+WARNING 2025-12-20 23:56:02,430 log 14704 5704 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:56:02,430 basehttp 14704 5704 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 23:56:05,626 basehttp 14704 5704 "GET /en/feed/ HTTP/1.1" 200 53565
+WARNING 2025-12-20 23:56:05,672 log 14704 5704 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 23:56:05,674 basehttp 14704 5704 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 23:56:05,675 basehttp 14704 15620 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 23:56:05,680 basehttp 14704 24344 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 23:56:05,682 basehttp 14704 9944 "GET /static/web/css/feed.css HTTP/1.1" 200 30438
+INFO 2025-12-20 23:56:05,686 basehttp 14704 9912 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 23:56:05,688 basehttp 14704 5704 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 23:56:05,688 basehttp 14704 10088 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 23:56:05,689 basehttp 14704 15620 "GET /static/web/js/feed.js HTTP/1.1" 200 30773
+INFO 2025-12-20 23:56:06,179 basehttp 14704 5704 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 23:56:06,197 basehttp 14704 15620 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 23:56:06,379 basehttp 14704 5704 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-20 23:56:06,416 basehttp 14704 15620 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56080
+INFO 2025-12-20 23:56:06,475 basehttp 14704 9240 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 23:56:06,492 basehttp 14704 15620 "GET /api/notifications/unread-count/?lang=en HTTP/1.1" 200 18
+INFO 2025-12-20 23:56:06,524 basehttp 14704 15620 "GET /api/notifications/unread-count/?lang=en HTTP/1.1" 200 18
+INFO 2025-12-20 23:56:06,536 basehttp 14704 5704 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 23:56:06,603 basehttp 14704 5704 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 23:56:06,621 basehttp 14704 10088 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 23:56:06,640 basehttp 14704 15620 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 23:56:06,655 basehttp 14704 9912 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 23:56:08,186 basehttp 14704 9912 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:56:13,965 basehttp 14704 11428 "GET /admin/api/usernotification/ HTTP/1.1" 200 30204
+INFO 2025-12-20 23:56:13,993 basehttp 14704 11428 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 23:56:15,590 basehttp 14704 11428 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 23:56:18,346 basehttp 14704 15620 "GET /api/notifications/?lang=en&ordering=-created_at HTTP/1.1" 200 3952
+INFO 2025-12-20 23:56:45,036 basehttp 14704 20620 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
