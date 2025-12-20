@@ -15677,3 +15677,269 @@ INFO 2025-12-20 12:11:00,002 basehttp 22044 11260 "GET /static/web/icons/icon-19
 INFO 2025-12-20 12:11:01,853 basehttp 22044 11260 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
 INFO 2025-12-20 12:11:03,200 views 22044 21736 Mentor request created: gist4u@gmail.com -> Dr. Nkeng Stephens
 INFO 2025-12-20 12:11:03,243 basehttp 22044 21736 "POST /api/mentors/request/ HTTP/1.1" 201 107
+INFO 2025-12-20 13:15:28,903 autoreload 4268 7984 Watching for file changes with StatReloader
+INFO 2025-12-20 13:15:31,602 basehttp 4268 20800 "GET /fr/login/?next=/fr/feed/ HTTP/1.1" 200 23589
+INFO 2025-12-20 13:15:33,180 basehttp 4268 20800 "GET /fr/login/?next=/fr/feed/ HTTP/1.1" 200 23589
+INFO 2025-12-20 13:15:33,554 basehttp 4268 20800 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:15:33,944 basehttp 4268 20072 "GET /fr/login/?next=/fr/feed/ HTTP/1.1" 200 23589
+INFO 2025-12-20 13:15:34,705 basehttp 4268 20072 "GET /fr/login/?next=/fr/feed/ HTTP/1.1" 200 23589
+INFO 2025-12-20 13:15:35,154 basehttp 4268 20072 "GET /fr/login/?next=/fr/feed/ HTTP/1.1" 200 23589
+INFO 2025-12-20 13:15:35,674 basehttp 4268 20072 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:15:35,834 basehttp 4268 408 "GET / HTTP/1.1" 302 0
+INFO 2025-12-20 13:15:35,851 basehttp 4268 408 "GET /fr/ HTTP/1.1" 200 79059
+INFO 2025-12-20 13:15:37,531 basehttp 4268 408 "GET /fr/feed/ HTTP/1.1" 302 0
+INFO 2025-12-20 13:15:37,544 basehttp 4268 408 "GET /login/?next=/fr/feed/ HTTP/1.1" 302 0
+INFO 2025-12-20 13:15:37,557 basehttp 4268 11036 "GET /fr/login/?next=/fr/feed/ HTTP/1.1" 200 23589
+INFO 2025-12-20 13:15:38,005 basehttp 4268 11036 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:15:38,765 basehttp 4268 22404 "GET /fr/login/?next=/fr/feed/ HTTP/1.1" 200 23589
+INFO 2025-12-20 13:15:39,264 basehttp 4268 22404 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:15:39,293 basehttp 4268 8392 "GET /fr/login/?next=/fr/feed/ HTTP/1.1" 200 23589
+INFO 2025-12-20 13:15:39,819 basehttp 4268 8392 "GET /fr/login/?next=/fr/feed/ HTTP/1.1" 200 23589
+INFO 2025-12-20 13:15:41,509 basehttp 4268 8392 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:15:48,102 basehttp 4268 20792 "GET /en/feed/ HTTP/1.1" 302 0
+INFO 2025-12-20 13:15:48,111 basehttp 4268 20792 "GET /login/?next=/en/feed/ HTTP/1.1" 302 0
+INFO 2025-12-20 13:15:48,120 basehttp 4268 16784 "GET /en/login/?next=/en/feed/ HTTP/1.1" 200 23527
+INFO 2025-12-20 13:15:50,216 basehttp 4268 16784 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:15:57,694 basehttp 4268 9160 "GET /fr/login/?next=/fr/feed/ HTTP/1.1" 200 23589
+INFO 2025-12-20 13:15:59,446 basehttp 4268 9160 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:16:11,185 basehttp 4268 7172 "GET /admin/api/article/127/change/ HTTP/1.1" 200 39758
+INFO 2025-12-20 13:16:11,219 basehttp 4268 7172 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 13:16:12,800 basehttp 4268 7172 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:16:17,787 basehttp 4268 13232 "GET /admin/auth/user/ HTTP/1.1" 200 25420
+INFO 2025-12-20 13:16:17,823 basehttp 4268 10840 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 13:16:17,948 basehttp 4268 13232 "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+INFO 2025-12-20 13:16:19,409 basehttp 4268 13232 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:16:23,719 basehttp 4268 10840 "POST /admin/auth/user/ HTTP/1.1" 200 21309
+INFO 2025-12-20 13:16:25,318 basehttp 4268 10840 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:16:30,014 basehttp 4268 19744 "POST /admin/auth/user/ HTTP/1.1" 302 0
+INFO 2025-12-20 13:16:30,054 basehttp 4268 19744 "GET /admin/auth/user/ HTTP/1.1" 200 25091
+INFO 2025-12-20 13:16:30,097 basehttp 4268 19744 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 13:16:31,694 basehttp 4268 19744 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+WARNING 2025-12-20 13:16:32,704 log 4268 16784 Forbidden (Permission denied): /fr/login/
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django_ratelimit\decorators.py", line 26, in _wrapped
+    raise (import_string(cls) if isinstance(cls, str) else cls)()
+django_ratelimit.exceptions.Ratelimited
+WARNING 2025-12-20 13:16:32,728 basehttp 4268 16784 "GET /fr/login/?next=/fr/feed/ HTTP/1.1" 403 135
+WARNING 2025-12-20 13:16:32,837 log 4268 16784 Not Found: /favicon.ico
+WARNING 2025-12-20 13:16:32,838 basehttp 4268 16784 "GET /favicon.ico HTTP/1.1" 404 3143
+INFO 2025-12-20 13:16:34,401 basehttp 4268 16784 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:16:37,293 basehttp 4268 3640 "GET /fr/ HTTP/1.1" 200 79059
+INFO 2025-12-20 13:16:38,969 basehttp 4268 3640 "GET /fr/feed/ HTTP/1.1" 302 0
+INFO 2025-12-20 13:16:38,981 basehttp 4268 3640 "GET /login/?next=/fr/feed/ HTTP/1.1" 302 0
+INFO 2025-12-20 13:16:38,997 basehttp 4268 22024 "GET /fr/login/?next=/fr/feed/ HTTP/1.1" 200 23589
+INFO 2025-12-20 13:16:39,542 basehttp 4268 22024 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:16:40,769 basehttp 4268 5580 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:16:52,656 basehttp 4268 23120 "POST /accounts/signup/ HTTP/1.1" 302 0
+INFO 2025-12-20 13:16:52,674 basehttp 4268 23120 "GET /onboarding/ HTTP/1.1" 302 0
+INFO 2025-12-20 13:16:52,697 basehttp 4268 6956 "GET /fr/onboarding/ HTTP/1.1" 200 24087
+INFO 2025-12-20 13:16:52,738 basehttp 4268 6956 "GET /static/web/css/onboarding.css HTTP/1.1" 200 15831
+INFO 2025-12-20 13:16:52,739 basehttp 4268 12528 "GET /static/web/js/onboarding.js HTTP/1.1" 200 12189
+INFO 2025-12-20 13:16:52,954 basehttp 4268 12528 "GET /static/web/audio/gist4u_onboarding_message_fr.wav HTTP/1.1" 200 6516280
+INFO 2025-12-20 13:16:54,626 basehttp 4268 12528 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:22:30,841 basehttp 4268 10888 "GET /fr/onboarding/ HTTP/1.1" 200 24087
+WARNING 2025-12-20 13:22:30,916 log 4268 10888 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 13:22:30,918 basehttp 4268 10888 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 13:22:33,123 basehttp 4268 10888 "GET /fr/onboarding/ HTTP/1.1" 200 24087
+WARNING 2025-12-20 13:22:33,206 log 4268 10888 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-12-20 13:22:33,210 basehttp 4268 15020 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+WARNING 2025-12-20 13:22:33,213 basehttp 4268 10888 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 13:22:33,218 basehttp 4268 11708 "GET /static/web/css/onboarding.css HTTP/1.1" 200 15831
+INFO 2025-12-20 13:22:33,220 basehttp 4268 17068 "GET /static/web/js/onboarding.js HTTP/1.1" 200 12189
+INFO 2025-12-20 13:22:33,222 basehttp 4268 21868 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 13:22:33,222 basehttp 4268 15020 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 13:22:33,222 basehttp 4268 21260 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 13:22:36,610 basehttp 4268 21260 "GET /static/web/audio/gist4u_onboarding_message_fr.wav HTTP/1.1" 200 6516280
+INFO 2025-12-20 13:22:38,760 basehttp 4268 21260 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-20 13:22:39,650 basehttp 4268 14024 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 13:22:39,651 basehttp 4268 21260 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-20 13:22:39,668 basehttp 4268 21260 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 13:22:41,267 basehttp 4268 21260 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:23:21,173 basehttp 4268 15020 "GET /fr/login/?next=/fr/feed/ HTTP/1.1" 302 0
+INFO 2025-12-20 13:23:22,423 basehttp 4268 15020 "GET /fr/ HTTP/1.1" 302 0
+INFO 2025-12-20 13:23:22,451 basehttp 4268 15020 "GET /fr/feed/ HTTP/1.1" 200 52111
+WARNING 2025-12-20 13:23:22,744 log 4268 15020 Not Found: /api/article-categories/
+WARNING 2025-12-20 13:23:22,745 basehttp 4268 15020 "GET /api/article-categories/ HTTP/1.1" 404 10614
+INFO 2025-12-20 13:23:22,765 basehttp 4268 21868 "GET /api/articles/?page=1&page_size=10&ordering=-created_at HTTP/1.1" 200 53555
+INFO 2025-12-20 13:23:22,850 basehttp 4268 21868 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 13:23:22,867 basehttp 4268 10888 "GET /media/thumbnails/entertainment_20251205_145357_1.webp HTTP/1.1" 200 32402
+INFO 2025-12-20 13:23:22,881 basehttp 4268 15020 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 13:23:22,896 basehttp 4268 17068 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 13:23:22,910 basehttp 4268 11708 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 13:23:23,148 basehttp 4268 11708 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:23:24,427 basehttp 4268 17068 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:23:25,439 basehttp 4268 15020 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:23:28,723 basehttp 4268 10888 "GET /fr/onboarding/ HTTP/1.1" 200 24087
+INFO 2025-12-20 13:23:30,509 basehttp 4268 10888 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:23:45,744 basehttp 4268 21868 "GET /fr/onboarding/ HTTP/1.1" 200 24087
+WARNING 2025-12-20 13:23:45,769 log 4268 21868 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 13:23:45,770 basehttp 4268 21868 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 13:24:51,642 basehttp 4268 22160 "POST /admin/logout/ HTTP/1.1" 302 0
+INFO 2025-12-20 13:24:51,646 basehttp 4268 22160 "GET / HTTP/1.1" 302 0
+INFO 2025-12-20 13:24:51,664 basehttp 4268 22160 "GET /en/ HTTP/1.1" 200 78177
+INFO 2025-12-20 13:24:51,687 basehttp 4268 22160 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 13:24:51,688 basehttp 4268 11212 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 13:24:52,384 views 4268 11212 FCM subscription updated: esMCyqggvfcHcvw3tSng... (lang: en)
+INFO 2025-12-20 13:24:52,386 basehttp 4268 11212 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-12-20 13:24:53,232 basehttp 4268 11212 "GET /en/feed/ HTTP/1.1" 302 0
+INFO 2025-12-20 13:24:53,245 basehttp 4268 11212 "GET /login/?next=/en/feed/ HTTP/1.1" 302 0
+INFO 2025-12-20 13:24:53,264 basehttp 4268 22160 "GET /en/login/?next=/en/feed/ HTTP/1.1" 200 23954
+INFO 2025-12-20 13:24:53,291 basehttp 4268 22160 "GET /static/web/js/onboarding.js HTTP/1.1" 200 12189
+INFO 2025-12-20 13:24:54,073 basehttp 4268 22160 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:24:55,683 views 4268 13300 FCM subscription updated: esMCyqggvfcHcvw3tSng... (lang: en)
+INFO 2025-12-20 13:24:55,684 basehttp 4268 13300 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-12-20 13:24:57,265 basehttp 4268 13300 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:24:59,011 basehttp 4268 17700 "GET /en/login/ HTTP/1.1" 200 23912
+INFO 2025-12-20 13:24:59,136 basehttp 4268 17700 "GET /static/web/js/onboarding.js HTTP/1.1" 200 12189
+INFO 2025-12-20 13:25:01,757 basehttp 4268 17700 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:25:02,459 views 4268 10872 FCM subscription updated: daAW2fZ0N0Y0NOvFHGCs... (lang: en)
+INFO 2025-12-20 13:25:02,461 basehttp 4268 10872 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-12-20 13:25:10,832 basehttp 4268 10872 "GET /en/onboarding/ HTTP/1.1" 302 0
+INFO 2025-12-20 13:25:10,858 basehttp 4268 10872 "GET /login/?next=/en/onboarding/ HTTP/1.1" 302 0
+INFO 2025-12-20 13:25:10,884 basehttp 4268 20180 "GET /en/login/?next=/en/onboarding/ HTTP/1.1" 200 23966
+INFO 2025-12-20 13:25:11,904 views 4268 20180 FCM subscription updated: daAW2fZ0N0Y0NOvFHGCs... (lang: en)
+INFO 2025-12-20 13:25:11,905 basehttp 4268 20180 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-12-20 13:25:13,755 basehttp 4268 20180 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:25:18,457 basehttp 4268 14636 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-12-20 13:25:18,495 basehttp 4268 14636 "GET /onboarding/ HTTP/1.1" 302 0
+INFO 2025-12-20 13:25:18,526 basehttp 4268 7892 "GET /en/onboarding/ HTTP/1.1" 200 23936
+INFO 2025-12-20 13:25:18,563 basehttp 4268 7892 "GET /static/web/css/onboarding.css HTTP/1.1" 200 15831
+INFO 2025-12-20 13:25:18,749 basehttp 4268 7892 "GET /static/web/audio/gist4u_onboarding_message_en.mp3 HTTP/1.1" 200 329588
+INFO 2025-12-20 13:25:18,906 views 4268 7892 FCM subscription updated: esMCyqggvfcHcvw3tSng... (lang: en)
+INFO 2025-12-20 13:25:18,920 basehttp 4268 7892 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-12-20 13:25:20,572 basehttp 4268 7892 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:25:23,285 basehttp 4268 10412 "GET /static/web/favicon.svg HTTP/1.1" 304 0
+INFO 2025-12-20 13:27:55,668 basehttp 4268 21868 "GET /fr/onboarding/ HTTP/1.1" 200 24087
+INFO 2025-12-20 13:27:58,984 basehttp 4268 21868 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:28:03,260 basehttp 4268 10412 "GET /en/onboarding/ HTTP/1.1" 200 23936
+INFO 2025-12-20 13:28:03,399 views 4268 10412 FCM subscription updated: esMCyqggvfcHcvw3tSng... (lang: en)
+INFO 2025-12-20 13:28:03,407 basehttp 4268 10412 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-12-20 13:28:05,019 basehttp 4268 10412 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:29:42,964 basehttp 4268 17516 "GET /en/login/ HTTP/1.1" 200 23912
+INFO 2025-12-20 13:29:43,264 views 4268 17516 FCM subscription updated: daAW2fZ0N0Y0NOvFHGCs... (lang: en)
+INFO 2025-12-20 13:29:43,264 basehttp 4268 17516 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-12-20 13:29:44,904 basehttp 4268 17516 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:29:59,775 basehttp 4268 21496 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:31:55,232 basehttp 4268 14836 "GET /fr/onboarding/ HTTP/1.1" 200 24087
+INFO 2025-12-20 13:31:57,322 basehttp 4268 14836 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:32:03,862 autoreload 928 3308 Watching for file changes with StatReloader
+INFO 2025-12-20 13:32:06,086 basehttp 928 10176 "GET /fr/onboarding/ HTTP/1.1" 200 24087
+INFO 2025-12-20 13:32:08,000 basehttp 928 10176 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:32:11,886 basehttp 928 2232 "GET /fr/onboarding/ HTTP/1.1" 200 24087
+WARNING 2025-12-20 13:32:11,919 log 928 2232 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 13:32:11,921 basehttp 928 2232 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 13:32:19,797 basehttp 928 12276 "GET /en/onboarding/ HTTP/1.1" 200 23936
+WARNING 2025-12-20 13:32:19,808 log 928 17128 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 13:32:19,809 basehttp 928 17128 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 13:32:20,616 basehttp 928 17128 "GET /en/onboarding/ HTTP/1.1" 200 23936
+WARNING 2025-12-20 13:32:20,692 log 928 17128 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 13:32:20,695 basehttp 928 17128 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 13:32:21,134 views 928 17128 FCM subscription updated: esMCyqggvfcHcvw3tSng... (lang: en)
+INFO 2025-12-20 13:32:21,145 basehttp 928 17128 "POST /api/fcm/subscribe/ HTTP/1.1" 200 199
+INFO 2025-12-20 13:32:22,883 basehttp 928 17128 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+WARNING 2025-12-20 13:33:10,013 log 928 2232 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 13:33:10,014 basehttp 928 2232 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 13:33:17,009 basehttp 928 2232 "GET /fr/onboarding/ HTTP/1.1" 200 24087
+WARNING 2025-12-20 13:33:17,071 log 928 2232 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 13:33:17,074 basehttp 928 2232 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 13:33:17,400 basehttp 928 18660 "GET /static/web/css/onboarding.css HTTP/1.1" 200 15830
+INFO 2025-12-20 13:33:17,431 basehttp 928 15984 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 13:33:17,439 basehttp 928 2232 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 13:33:17,443 basehttp 928 23368 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 13:33:17,468 basehttp 928 6956 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 13:33:17,469 basehttp 928 15848 "GET /static/web/js/onboarding.js HTTP/1.1" 200 12402
+INFO 2025-12-20 13:33:18,137 basehttp 928 15848 "GET /static/web/audio/gist4u_onboarding_message_fr.wav HTTP/1.1" 200 6516280
+INFO 2025-12-20 13:33:18,954 basehttp 928 15848 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-20 13:33:18,954 basehttp 928 23168 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 13:33:18,970 basehttp 928 15848 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 13:33:20,555 basehttp 928 15848 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:33:30,993 basehttp 928 6956 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-20 13:35:30,139 basehttp 928 4268 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:36:09,776 views 928 6956 Onboarding completed for user gist4u@gmail.com
+INFO 2025-12-20 13:36:09,794 basehttp 928 6956 "POST /api/onboarding/ HTTP/1.1" 200 63
+INFO 2025-12-20 13:36:09,842 basehttp 928 6956 "GET /feed/ HTTP/1.1" 302 0
+INFO 2025-12-20 13:36:09,869 basehttp 928 23368 "GET /fr/feed/ HTTP/1.1" 200 52530
+INFO 2025-12-20 13:36:09,933 basehttp 928 23368 "GET /static/web/css/feed.css HTTP/1.1" 200 25627
+INFO 2025-12-20 13:36:09,939 basehttp 928 23368 "GET /static/web/js/feed.js HTTP/1.1" 200 34702
+INFO 2025-12-20 13:36:11,960 basehttp 928 23368 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:36:12,659 basehttp 928 2232 "GET /fr/feed/ HTTP/1.1" 200 52530
+WARNING 2025-12-20 13:36:12,686 log 928 2232 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 13:36:12,687 basehttp 928 2232 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 13:36:21,935 basehttp 928 2232 "GET /mentor/ HTTP/1.1" 302 0
+INFO 2025-12-20 13:36:21,955 basehttp 928 15984 "GET /fr/mentor/ HTTP/1.1" 200 22086
+WARNING 2025-12-20 13:36:22,013 log 928 15984 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 13:36:22,014 basehttp 928 15984 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 13:36:22,026 basehttp 928 18660 "GET /static/web/css/mentor.css HTTP/1.1" 200 13583
+INFO 2025-12-20 13:36:22,026 basehttp 928 15984 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 13:36:22,035 basehttp 928 15984 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 13:36:22,035 basehttp 928 19628 "GET /static/web/js/mentor.js HTTP/1.1" 200 9460
+INFO 2025-12-20 13:36:22,037 basehttp 928 19136 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 13:36:22,038 basehttp 928 18660 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 13:36:22,852 basehttp 928 19136 "GET /api/mentors/categories/ HTTP/1.1" 200 281
+INFO 2025-12-20 13:36:22,869 basehttp 928 18660 "GET /api/mentors/categories/ HTTP/1.1" 200 281
+INFO 2025-12-20 13:36:22,936 basehttp 928 18660 "GET /api/mentors/ HTTP/1.1" 200 3300
+INFO 2025-12-20 13:36:22,952 basehttp 928 19136 "GET /api/mentors/ HTTP/1.1" 200 3300
+INFO 2025-12-20 13:36:23,079 basehttp 928 19136 "GET /media/mentors/IMG_20240517_101039.jpg HTTP/1.1" 200 3456950
+INFO 2025-12-20 13:36:23,291 basehttp 928 23168 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 13:36:23,322 basehttp 928 19136 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 13:36:24,898 basehttp 928 19136 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:36:30,717 basehttp 928 18660 "GET /feed/ HTTP/1.1" 302 0
+INFO 2025-12-20 13:36:30,735 basehttp 928 15984 "GET /fr/feed/ HTTP/1.1" 200 52530
+WARNING 2025-12-20 13:36:30,804 log 928 15984 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 13:36:30,805 basehttp 928 15984 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 13:36:30,822 basehttp 928 15984 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 13:36:30,823 basehttp 928 19628 "GET /static/web/css/feed.css HTTP/1.1" 200 25627
+INFO 2025-12-20 13:36:30,824 basehttp 928 6096 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 13:36:30,833 basehttp 928 10664 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 13:36:30,834 basehttp 928 11384 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 13:36:30,834 basehttp 928 19440 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 13:36:30,836 basehttp 928 6096 "GET /static/web/js/feed.js HTTP/1.1" 200 34702
+INFO 2025-12-20 13:36:31,701 basehttp 928 23168 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 13:36:31,719 basehttp 928 6096 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 13:36:33,210 basehttp 928 6096 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:36:40,303 basehttp 928 11384 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-12-20 13:36:40,311 basehttp 928 11384 "GET / HTTP/1.1" 302 0
+INFO 2025-12-20 13:36:40,333 basehttp 928 11384 "GET /fr/ HTTP/1.1" 200 79059
+INFO 2025-12-20 13:36:40,411 basehttp 928 11384 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 13:36:40,412 basehttp 928 19440 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 13:36:40,414 basehttp 928 10664 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 13:36:40,415 basehttp 928 15984 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+WARNING 2025-12-20 13:36:40,443 log 928 15984 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 13:36:40,444 basehttp 928 15984 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 13:36:41,425 basehttp 928 23168 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 13:36:41,446 basehttp 928 15984 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 13:36:42,079 basehttp 928 15984 "GET /fr/feed/ HTTP/1.1" 302 0
+INFO 2025-12-20 13:36:42,089 basehttp 928 15984 "GET /login/?next=/fr/feed/ HTTP/1.1" 302 0
+INFO 2025-12-20 13:36:42,110 basehttp 928 10664 "GET /fr/login/?next=/fr/feed/ HTTP/1.1" 200 24016
+WARNING 2025-12-20 13:36:42,205 log 928 10664 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 13:36:42,205 basehttp 928 10664 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 13:36:42,237 basehttp 928 10664 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 13:36:42,237 basehttp 928 19440 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 13:36:42,241 basehttp 928 11384 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 13:36:42,241 basehttp 928 19628 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 13:36:42,366 basehttp 928 19628 "GET /static/web/js/onboarding.js HTTP/1.1" 200 12402
+INFO 2025-12-20 13:36:42,811 basehttp 928 23168 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 13:36:42,847 basehttp 928 19628 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 13:36:44,455 basehttp 928 19628 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 13:36:53,223 basehttp 928 11384 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-12-20 13:36:53,240 basehttp 928 11384 "GET /onboarding/ HTTP/1.1" 302 0
+INFO 2025-12-20 13:36:53,258 basehttp 928 10664 "GET /fr/onboarding/ HTTP/1.1" 302 0
+INFO 2025-12-20 13:36:53,278 basehttp 928 10664 "GET /fr/feed/ HTTP/1.1" 200 52530
+WARNING 2025-12-20 13:36:53,358 log 928 10664 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 13:36:53,360 basehttp 928 10664 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 13:36:53,371 basehttp 928 10664 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 13:36:53,377 basehttp 928 19440 "GET /static/web/css/feed.css HTTP/1.1" 200 25627
+INFO 2025-12-20 13:36:53,379 basehttp 928 22876 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 13:36:53,381 basehttp 928 10664 "GET /static/web/js/feed.js HTTP/1.1" 200 34702
+INFO 2025-12-20 13:36:53,382 basehttp 928 2132 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 13:36:53,382 basehttp 928 19412 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 13:36:53,383 basehttp 928 17128 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 13:36:54,284 basehttp 928 23168 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 13:36:54,300 basehttp 928 17128 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 13:36:55,883 basehttp 928 17128 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
