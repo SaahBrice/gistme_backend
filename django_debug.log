@@ -15285,3 +15285,300 @@ INFO 2025-12-20 11:38:58,019 basehttp 12624 12248 "GET /static/web/favicon.svg H
 INFO 2025-12-20 11:38:58,019 basehttp 12624 9308 "GET /static/web/manifest.json HTTP/1.1" 200 1427
 INFO 2025-12-20 11:38:58,039 basehttp 12624 12248 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
 INFO 2025-12-20 11:38:59,616 basehttp 12624 12248 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 11:42:59,655 autoreload 22212 16824 Watching for file changes with StatReloader
+INFO 2025-12-20 11:43:03,696 basehttp 22212 13204 "GET /feed/ HTTP/1.1" 302 0
+INFO 2025-12-20 11:43:03,723 basehttp 22212 9752 "GET /fr/feed/ HTTP/1.1" 200 52500
+WARNING 2025-12-20 11:43:03,784 log 22212 9752 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 11:43:03,785 basehttp 22212 9752 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 11:43:04,148 basehttp 22212 19368 "GET /static/web/css/feed.css HTTP/1.1" 200 25627
+INFO 2025-12-20 11:43:04,151 basehttp 22212 19368 "GET /static/web/js/feed.js HTTP/1.1" 200 34702
+INFO 2025-12-20 11:43:04,193 basehttp 22212 13868 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 11:43:04,201 basehttp 22212 5072 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 11:43:04,208 basehttp 22212 9752 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 11:43:04,213 basehttp 22212 11832 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 11:43:04,218 basehttp 22212 2452 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 11:43:06,177 basehttp 22212 2452 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-20 11:43:06,177 basehttp 22212 12804 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 11:43:06,197 basehttp 22212 2452 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 11:43:07,778 basehttp 22212 2452 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 11:43:18,087 basehttp 22212 11832 "POST /fr/save-settings/ HTTP/1.1" 200 47
+INFO 2025-12-20 11:43:18,130 basehttp 22212 11832 "GET /en/feed/ HTTP/1.1" 200 52113
+INFO 2025-12-20 11:43:18,227 basehttp 22212 9752 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 11:43:18,227 basehttp 22212 13868 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+WARNING 2025-12-20 11:43:18,229 log 22212 11832 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-12-20 11:43:18,229 basehttp 22212 5072 "GET /static/web/css/feed.css HTTP/1.1" 200 25627
+WARNING 2025-12-20 11:43:18,233 basehttp 22212 11832 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 11:43:18,234 basehttp 22212 19368 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 11:43:18,235 basehttp 22212 21132 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 11:43:18,236 basehttp 22212 9752 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 11:43:18,238 basehttp 22212 5072 "GET /static/web/js/feed.js HTTP/1.1" 200 34702
+INFO 2025-12-20 11:43:19,016 basehttp 22212 12804 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 11:43:19,035 basehttp 22212 5072 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 11:43:20,583 basehttp 22212 5072 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 11:43:22,637 basehttp 22212 21132 "GET /mentor/ HTTP/1.1" 302 0
+INFO 2025-12-20 11:43:22,655 basehttp 22212 9752 "GET /en/mentor/ HTTP/1.1" 200 21634
+WARNING 2025-12-20 11:43:22,723 log 22212 9752 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 11:43:22,724 basehttp 22212 9752 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 11:43:22,746 basehttp 22212 9752 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 11:43:22,747 basehttp 22212 13868 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 11:43:22,748 basehttp 22212 11832 "GET /static/web/js/mentor.js HTTP/1.1" 200 9182
+INFO 2025-12-20 11:43:22,749 basehttp 22212 19368 "GET /static/web/css/mentor.css HTTP/1.1" 200 13583
+INFO 2025-12-20 11:43:22,750 basehttp 22212 11412 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 11:43:22,750 basehttp 22212 17300 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 11:43:23,059 basehttp 22212 17300 "GET /api/mentors/categories/ HTTP/1.1" 200 281
+INFO 2025-12-20 11:43:23,076 basehttp 22212 11412 "GET /api/mentors/categories/ HTTP/1.1" 200 281
+INFO 2025-12-20 11:43:23,221 basehttp 22212 12804 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 11:43:23,225 basehttp 22212 17300 "GET /api/mentors/ HTTP/1.1" 200 3459
+INFO 2025-12-20 11:43:23,236 basehttp 22212 17300 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 11:43:23,254 basehttp 22212 11412 "GET /api/mentors/ HTTP/1.1" 200 3459
+INFO 2025-12-20 11:43:23,319 basehttp 22212 11412 "GET /media/mentors/IMG_20240517_101039.jpg HTTP/1.1" 200 3456950
+INFO 2025-12-20 11:43:25,092 basehttp 22212 11412 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 11:43:29,552 views 22212 17300 Mentor request created: gist4u@gmail.com -> Dr. Nkeng Stephens
+INFO 2025-12-20 11:43:29,559 basehttp 22212 17300 "POST /api/mentors/request/ HTTP/1.1" 201 107
+INFO 2025-12-20 11:43:42,587 basehttp 22212 17300 "GET /feed/ HTTP/1.1" 302 0
+INFO 2025-12-20 11:43:42,611 basehttp 22212 9752 "GET /en/feed/ HTTP/1.1" 200 52113
+WARNING 2025-12-20 11:43:42,728 log 22212 9752 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-12-20 11:43:42,732 basehttp 22212 19368 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 11:43:42,733 basehttp 22212 11832 "GET /static/web/css/feed.css HTTP/1.1" 200 25627
+INFO 2025-12-20 11:43:42,735 basehttp 22212 13868 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+WARNING 2025-12-20 11:43:42,740 basehttp 22212 9752 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 11:43:42,767 basehttp 22212 19368 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 11:43:42,769 basehttp 22212 11832 "GET /static/web/js/feed.js HTTP/1.1" 200 34702
+INFO 2025-12-20 11:43:42,784 basehttp 22212 21380 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 11:43:42,787 basehttp 22212 21840 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 11:43:43,489 basehttp 22212 12804 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 11:43:43,506 basehttp 22212 21840 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 11:43:45,063 basehttp 22212 21840 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 11:43:49,721 basehttp 22212 21380 "POST /en/save-settings/ HTTP/1.1" 200 47
+INFO 2025-12-20 11:43:49,767 basehttp 22212 21380 "GET /fr/feed/ HTTP/1.1" 200 52500
+WARNING 2025-12-20 11:43:49,849 log 22212 21380 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 11:43:49,850 basehttp 22212 21380 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 11:43:49,869 basehttp 22212 21380 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 11:43:49,869 basehttp 22212 19368 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 11:43:49,872 basehttp 22212 11832 "GET /static/web/css/feed.css HTTP/1.1" 200 25627
+INFO 2025-12-20 11:43:49,872 basehttp 22212 9752 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 11:43:49,873 basehttp 22212 13868 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 11:43:49,874 basehttp 22212 16144 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 11:43:49,875 basehttp 22212 21380 "GET /static/web/js/feed.js HTTP/1.1" 200 34702
+INFO 2025-12-20 11:43:50,590 basehttp 22212 12804 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 11:43:50,602 basehttp 22212 16144 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 11:43:52,197 basehttp 22212 16144 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 11:43:53,127 basehttp 22212 21380 "GET /mentor/ HTTP/1.1" 302 0
+INFO 2025-12-20 11:43:53,144 basehttp 22212 13868 "GET /fr/mentor/ HTTP/1.1" 200 21661
+WARNING 2025-12-20 11:43:53,236 log 22212 13868 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 11:43:53,236 basehttp 22212 13868 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 11:43:53,248 basehttp 22212 13868 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 11:43:53,250 basehttp 22212 9752 "GET /static/web/css/mentor.css HTTP/1.1" 200 13583
+INFO 2025-12-20 11:43:53,253 basehttp 22212 19368 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 11:43:53,253 basehttp 22212 11832 "GET /static/web/js/mentor.js HTTP/1.1" 200 9182
+INFO 2025-12-20 11:43:53,256 basehttp 22212 14932 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 11:43:53,256 basehttp 22212 13868 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 11:43:53,746 basehttp 22212 13868 "GET /api/mentors/categories/ HTTP/1.1" 200 281
+INFO 2025-12-20 11:43:53,760 basehttp 22212 14932 "GET /api/mentors/categories/ HTTP/1.1" 200 281
+INFO 2025-12-20 11:43:53,847 basehttp 22212 14932 "GET /api/mentors/ HTTP/1.1" 200 3539
+INFO 2025-12-20 11:43:53,943 basehttp 22212 14932 "GET /api/mentors/ HTTP/1.1" 200 3539
+INFO 2025-12-20 11:43:54,038 basehttp 22212 12804 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 11:43:54,040 basehttp 22212 14932 "GET /media/mentors/IMG_20240517_101039.jpg HTTP/1.1" 200 3456950
+INFO 2025-12-20 11:43:54,140 basehttp 22212 14932 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 11:43:55,830 basehttp 22212 14932 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 11:44:00,609 views 22212 13868 Mentor request created: gist4u@gmail.com -> Eric Tamo
+INFO 2025-12-20 11:44:00,617 basehttp 22212 13868 "POST /api/mentors/request/ HTTP/1.1" 201 98
+WARNING 2025-12-20 11:44:04,735 log 22212 13868 Bad Request: /api/mentors/request/
+WARNING 2025-12-20 11:44:04,736 basehttp 22212 13868 "POST /api/mentors/request/ HTTP/1.1" 400 63
+WARNING 2025-12-20 11:44:06,751 log 22212 13868 Bad Request: /api/mentors/request/
+WARNING 2025-12-20 11:44:06,751 basehttp 22212 13868 "POST /api/mentors/request/ HTTP/1.1" 400 63
+WARNING 2025-12-20 11:45:14,533 log 22212 13868 Bad Request: /api/mentors/request/
+WARNING 2025-12-20 11:45:14,534 basehttp 22212 13868 "POST /api/mentors/request/ HTTP/1.1" 400 63
+INFO 2025-12-20 11:45:17,834 basehttp 22212 13868 "GET /fr/mentor/ HTTP/1.1" 200 21661
+WARNING 2025-12-20 11:45:17,883 log 22212 13868 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 11:45:17,884 basehttp 22212 13868 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 11:45:17,904 basehttp 22212 13868 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 11:45:17,904 basehttp 22212 19368 "GET /static/web/css/mentor.css HTTP/1.1" 200 13583
+INFO 2025-12-20 11:45:17,907 basehttp 22212 9752 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 11:45:17,909 basehttp 22212 11832 "GET /static/web/js/mentor.js HTTP/1.1" 200 9182
+INFO 2025-12-20 11:45:17,910 basehttp 22212 19368 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 11:45:17,911 basehttp 22212 10588 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 11:45:19,662 basehttp 22212 10588 "GET /api/mentors/categories/ HTTP/1.1" 200 281
+INFO 2025-12-20 11:45:19,673 basehttp 22212 19368 "GET /api/mentors/categories/ HTTP/1.1" 200 281
+INFO 2025-12-20 11:45:19,737 basehttp 22212 19368 "GET /api/mentors/ HTTP/1.1" 200 3619
+INFO 2025-12-20 11:45:19,752 basehttp 22212 10588 "GET /api/mentors/ HTTP/1.1" 200 3619
+INFO 2025-12-20 11:45:19,852 basehttp 22212 10588 "GET /media/mentors/IMG_20240517_101039.jpg HTTP/1.1" 200 3456950
+INFO 2025-12-20 11:45:20,039 basehttp 22212 12804 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 11:45:20,039 basehttp 22212 10588 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-20 11:45:20,060 basehttp 22212 10588 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 11:45:21,615 basehttp 22212 10588 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+ERROR 2025-12-20 11:47:22,633 log 22212 19368 Internal Server Error: /fr/mentor/
+Traceback (most recent call last):
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\views.py", line 91, in mentor
+    return render(request, 'web/mentor.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\templatetags\i18n.py", line 403, in do_translate
+    message_string = parser.compile_filter(bits[1])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saahb\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 710, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '\"We'll' from '\"We'll'
+ERROR 2025-12-20 11:47:22,639 basehttp 22212 19368 "GET /fr/mentor/ HTTP/1.1" 500 233103
+WARNING 2025-12-20 11:47:22,678 log 22212 19368 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 11:47:22,680 basehttp 22212 19368 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+WARNING 2025-12-20 11:47:22,935 log 22212 19368 Not Found: /favicon.ico
+WARNING 2025-12-20 11:47:22,938 basehttp 22212 19368 "GET /favicon.ico HTTP/1.1" 404 3143
+INFO 2025-12-20 11:47:24,444 basehttp 22212 19368 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 11:49:01,694 basehttp 22212 11832 "GET /fr/mentor/ HTTP/1.1" 200 22086
+INFO 2025-12-20 11:49:01,745 basehttp 22212 11832 "GET /static/web/css/mentor.css HTTP/1.1" 304 0
+INFO 2025-12-20 11:49:01,988 basehttp 22212 11832 "GET /api/mentors/categories/ HTTP/1.1" 200 281
+INFO 2025-12-20 11:49:02,005 basehttp 22212 11832 "GET /api/mentors/categories/ HTTP/1.1" 200 281
+INFO 2025-12-20 11:49:02,114 basehttp 22212 11832 "GET /api/mentors/ HTTP/1.1" 200 3619
+INFO 2025-12-20 11:49:02,136 basehttp 22212 9752 "GET /api/mentors/ HTTP/1.1" 200 3619
+INFO 2025-12-20 11:49:02,165 basehttp 22212 9752 "GET /media/mentors/IMG_20240517_101039.jpg HTTP/1.1" 304 0
+INFO 2025-12-20 11:49:03,975 basehttp 22212 9752 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 11:49:10,029 basehttp 22212 11832 "GET /feed/ HTTP/1.1" 302 0
+INFO 2025-12-20 11:49:10,060 basehttp 22212 13868 "GET /fr/feed/ HTTP/1.1" 200 52500
+INFO 2025-12-20 11:49:11,988 basehttp 22212 13868 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 11:49:12,344 basehttp 22212 23320 "GET /fr/feed/ HTTP/1.1" 200 52500
+WARNING 2025-12-20 11:49:12,375 log 22212 23320 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 11:49:12,376 basehttp 22212 23320 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 11:49:48,490 basehttp 22212 23320 "GET /mentor/ HTTP/1.1" 302 0
+INFO 2025-12-20 11:49:48,513 basehttp 22212 21664 "GET /fr/mentor/ HTTP/1.1" 200 22086
+WARNING 2025-12-20 11:49:48,615 log 22212 21664 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 11:49:48,618 basehttp 22212 21664 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 11:49:48,637 basehttp 22212 21664 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 11:49:48,639 basehttp 22212 14756 "GET /static/web/js/mentor.js HTTP/1.1" 200 9460
+INFO 2025-12-20 11:49:48,640 basehttp 22212 6016 "GET /static/web/css/mentor.css HTTP/1.1" 200 13583
+INFO 2025-12-20 11:49:48,646 basehttp 22212 19252 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 11:49:48,646 basehttp 22212 16716 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 11:49:48,647 basehttp 22212 21336 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 11:49:49,416 basehttp 22212 21336 "GET /api/mentors/categories/ HTTP/1.1" 200 281
+INFO 2025-12-20 11:49:49,429 basehttp 22212 16716 "GET /api/mentors/categories/ HTTP/1.1" 200 281
+INFO 2025-12-20 11:49:49,489 basehttp 22212 16716 "GET /api/mentors/ HTTP/1.1" 200 3619
+INFO 2025-12-20 11:49:49,507 basehttp 22212 21336 "GET /api/mentors/ HTTP/1.1" 200 3619
+INFO 2025-12-20 11:49:49,589 basehttp 22212 21336 "GET /media/mentors/IMG_20240517_101039.jpg HTTP/1.1" 200 3456950
+INFO 2025-12-20 11:49:49,857 basehttp 22212 12804 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 11:49:49,876 basehttp 22212 21336 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 11:49:51,453 basehttp 22212 21336 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 11:49:53,888 views 22212 16716 Mentor request created: gist4u@gmail.com -> Jean-Pierre Kouam
+INFO 2025-12-20 11:49:53,897 basehttp 22212 16716 "POST /api/mentors/request/ HTTP/1.1" 201 106
+INFO 2025-12-20 11:49:59,991 basehttp 22212 16716 "GET /fr/mentor/ HTTP/1.1" 200 22086
+WARNING 2025-12-20 11:50:00,037 log 22212 16716 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-12-20 11:50:00,039 basehttp 22212 19252 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 11:50:00,044 basehttp 22212 21664 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+WARNING 2025-12-20 11:50:00,044 basehttp 22212 16716 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 11:50:00,046 basehttp 22212 6016 "GET /static/web/css/mentor.css HTTP/1.1" 200 13583
+INFO 2025-12-20 11:50:00,046 basehttp 22212 14756 "GET /static/web/js/mentor.js HTTP/1.1" 200 9460
+INFO 2025-12-20 11:50:00,048 basehttp 22212 19252 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 11:50:00,049 basehttp 22212 20980 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 11:50:00,448 basehttp 22212 21664 "GET /api/mentors/categories/ HTTP/1.1" 200 281
+INFO 2025-12-20 11:50:00,464 basehttp 22212 20980 "GET /api/mentors/categories/ HTTP/1.1" 200 281
+INFO 2025-12-20 11:50:00,669 basehttp 22212 19252 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-20 11:50:00,671 basehttp 22212 12804 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 11:50:00,683 basehttp 22212 20980 "GET /api/mentors/ HTTP/1.1" 200 3699
+INFO 2025-12-20 11:50:00,689 basehttp 22212 19252 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 11:50:00,698 basehttp 22212 21664 "GET /api/mentors/ HTTP/1.1" 200 3699
+INFO 2025-12-20 11:50:00,784 basehttp 22212 21664 "GET /media/mentors/IMG_20240517_101039.jpg HTTP/1.1" 200 3456950
+INFO 2025-12-20 11:50:05,083 views 22212 21664 Mentor request created: gist4u@gmail.com -> Marie-Claire Fotso
+INFO 2025-12-20 11:50:05,091 basehttp 22212 21664 "POST /api/mentors/request/ HTTP/1.1" 201 107
+WARNING 2025-12-20 11:50:08,952 log 22212 21664 Bad Request: /api/mentors/request/
+WARNING 2025-12-20 11:50:08,952 basehttp 22212 21664 "POST /api/mentors/request/ HTTP/1.1" 400 63
+INFO 2025-12-20 11:50:22,183 basehttp 22212 22188 "GET /admin/web/mentorrequest/ HTTP/1.1" 200 31197
+INFO 2025-12-20 11:50:22,211 basehttp 22212 22188 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 11:50:23,783 basehttp 22212 22188 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 11:50:33,590 basehttp 22212 17456 "POST /admin/web/mentorrequest/ HTTP/1.1" 200 20390
+INFO 2025-12-20 11:50:34,565 basehttp 22212 17456 "POST /admin/web/mentorrequest/ HTTP/1.1" 302 0
+INFO 2025-12-20 11:50:34,605 basehttp 22212 17456 "GET /admin/web/mentorrequest/ HTTP/1.1" 200 27311
+INFO 2025-12-20 11:50:34,638 basehttp 22212 17456 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 11:50:35,172 basehttp 22212 17456 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 11:50:36,220 basehttp 22212 16092 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 11:50:59,719 basehttp 22212 5288 "GET /admin/web/mentor/ HTTP/1.1" 200 31517
+INFO 2025-12-20 11:50:59,745 basehttp 22212 5288 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 11:51:01,323 basehttp 22212 5288 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 11:51:01,678 basehttp 22212 4180 "GET /admin/web/mentor/2/change/ HTTP/1.1" 200 32561
+INFO 2025-12-20 11:51:01,705 basehttp 22212 4180 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 11:51:03,290 basehttp 22212 4180 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 11:51:07,047 basehttp 22212 20544 "POST /admin/web/mentor/2/change/ HTTP/1.1" 302 0
+INFO 2025-12-20 11:51:07,092 basehttp 22212 20544 "GET /admin/web/mentor/ HTTP/1.1" 200 31843
+INFO 2025-12-20 11:51:07,122 basehttp 22212 20544 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-20 11:51:08,575 basehttp 22212 2132 "GET /fr/mentor/ HTTP/1.1" 200 22086
+WARNING 2025-12-20 11:51:08,630 log 22212 2132 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 11:51:08,632 basehttp 22212 2132 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 11:51:08,651 basehttp 22212 2132 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 11:51:08,653 basehttp 22212 19412 "GET /static/web/css/mentor.css HTTP/1.1" 200 13583
+INFO 2025-12-20 11:51:08,663 basehttp 22212 19868 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 11:51:08,664 basehttp 22212 19548 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 11:51:08,665 basehttp 22212 2132 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 11:51:08,665 basehttp 22212 19136 "GET /static/web/js/mentor.js HTTP/1.1" 200 9460
+INFO 2025-12-20 11:51:08,752 basehttp 22212 20544 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 11:51:09,674 basehttp 22212 2132 "GET /api/mentors/categories/ HTTP/1.1" 200 281
+INFO 2025-12-20 11:51:09,689 basehttp 22212 19136 "GET /api/mentors/categories/ HTTP/1.1" 200 281
+INFO 2025-12-20 11:51:09,759 basehttp 22212 19136 "GET /api/mentors/ HTTP/1.1" 200 3457
+INFO 2025-12-20 11:51:09,787 basehttp 22212 2132 "GET /api/mentors/ HTTP/1.1" 200 3457
+INFO 2025-12-20 11:51:09,907 basehttp 22212 2132 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-20 11:51:09,999 basehttp 22212 12932 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 11:51:10,003 basehttp 22212 2132 "GET /media/mentors/IMG_20240517_101039.jpg HTTP/1.1" 200 3456950
+INFO 2025-12-20 11:51:10,033 basehttp 22212 2132 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 11:51:11,733 basehttp 22212 2132 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 11:51:14,800 basehttp 22212 19136 "GET /api/mentors/?category=2 HTTP/1.1" 200 801
+INFO 2025-12-20 11:51:22,538 basehttp 22212 19136 "GET /api/mentors/ HTTP/1.1" 200 3457
+INFO 2025-12-20 11:51:22,618 basehttp 22212 19136 "GET /media/mentors/IMG_20240517_101039.jpg HTTP/1.1" 200 3456950

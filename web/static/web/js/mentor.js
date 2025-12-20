@@ -147,15 +147,17 @@ function mentorApp() {
                 });
 
                 const data = await response.json();
+                const t = window.mentorTranslations || {};
 
                 if (response.ok) {
-                    this.showModal('success', '🎉 Request Sent!', data.message || `We'll connect you with ${mentor.name} soon.`);
+                    this.showModal('success', t.successTitle || '🎉 Request Sent!', data.message || t.successMessage?.replace('{name}', mentor.name) || `We'll connect you with ${mentor.name} soon.`);
                 } else {
-                    this.showModal('error', 'Oops!', data.error || 'Failed to send request');
+                    this.showModal('error', t.errorTitle || 'Oops!', data.error || t.errorMessage || 'Failed to send request');
                 }
             } catch (e) {
                 console.error('Request failed:', e);
-                this.showModal('error', 'Connection Error', 'Failed to send request. Please try again.');
+                const t = window.mentorTranslations || {};
+                this.showModal('error', t.connectionErrorTitle || 'Connection Error', t.connectionErrorMessage || 'Failed to send request. Please try again.');
             }
 
             this.requestingMentor = null;

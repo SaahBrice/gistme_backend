@@ -9,6 +9,17 @@
 {% block extra_head %}
 <link rel="stylesheet" href="{% static 'web/css/mentor.css' %}">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+    // Translation strings for mentor modal messages
+    window.mentorTranslations = {
+        successTitle: "🎉 {% trans 'Request Sent!' %}",
+        successMessage: "{% trans 'We will connect you with {name} soon.' %}",
+        errorTitle: "{% trans 'Oops!' %}",
+        errorMessage: "{% trans 'Failed to send request' %}",
+        connectionErrorTitle: "{% trans 'Connection Error' %}",
+        connectionErrorMessage: "{% trans 'Failed to send request. Please try again.' %}"
+    };
+</script>
 <script src="{% static 'web/js/mentor.js' %}"></script>
 {% endblock %}
 
