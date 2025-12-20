@@ -23,18 +23,18 @@
     <main class="feed-content" id="feed-scroll" @scroll="onScroll($event)">
         <!-- Top spacer for breathing room -->
         <div class="feed-spacer"></div>
-        <template x-for="(article, index) in filteredArticles" :key="article.id">
+        <template x-for="(article, index) in articles" :key="article.id">
             <article class="feed-card" 
                      :class="{ 'card-active': activeCardIndex === index }"
                      :style="getCardStyle(index)"
                      @click="openArticle(article)">
                 <div class="card-image">
-                    <img :src="article.image" :alt="article.title" loading="lazy">
+                    <img :src="getArticleImage(article)" :alt="getArticleTitle(article)" loading="lazy">
                 </div>
                 
                 <div class="card-content">
-                    <h3 class="card-title" x-text="article.title"></h3>
-                    <p class="card-excerpt" x-text="article.excerpt"></p>
+                    <h3 class="card-title" x-text="getArticleTitle(article)"></h3>
+                    <p class="card-excerpt" x-text="getArticleExcerpt(article)"></p>
                 </div>
                 
                 <div class="card-actions" @click.stop>
@@ -86,11 +86,12 @@
              @mouseover="resetNavTimeout()"
              @touchstart="resetNavTimeout()">
             <div class="sub-chips">
-                <template x-for="cat in currentCategories" :key="cat.id">
+                <template x-for="cat in currentCategories" :key="cat.slug">
                     <button class="sub-chip" 
-                            :class="{ 'active': activeCategory === cat.id }"
-                            @click="setCategory(cat.id)">
-                        <span x-text="cat.name"></span>
+                            :class="{ 'active': activeCategory === cat.slug }"
+                            @click="setCategory(cat.slug)">
+                        <span x-text="cat.emoji"></span>
+                        <span x-text="getCategoryName(cat)"></span>
                     </button>
                 </template>
             </div>
@@ -109,18 +110,18 @@
              @touchstart="resetNavTimeout()">
             <div class="nav-chips">
                 <button class="nav-chip" 
-                        :class="{ 'active': activeTab === 'news' }"
-                        @click="setTab('news')">
+                        :class="{ 'active': activeTab === 'ACTUALITY' }"
+                        @click="setTab('ACTUALITY')">
                     {% trans "News" %}
                 </button>
                 <button class="nav-chip" 
-                        :class="{ 'active': activeTab === 'opportunities' }"
-                        @click="setTab('opportunities')">
+                        :class="{ 'active': activeTab === 'OPPORTUNITY' }"
+                        @click="setTab('OPPORTUNITY')">
                     {% trans "Opportunities" %}
                 </button>
                 <button class="nav-chip" 
-                        :class="{ 'active': activeTab === 'foryou' }"
-                        @click="setTab('foryou')">
+                        :class="{ 'active': activeTab === 'FOR_YOU' }"
+                        @click="setTab('FOR_YOU')">
                     {% trans "For You" %}
                 </button>
             </div>
@@ -142,22 +143,33 @@
                 </button>
             </div>
             
-            <!-- Right: Expand Button (menu icon) -->
-            <button class="expand-btn" 
-                    @click="toggleNav()"
-                    :class="{ 'expanded': navExpanded }">
-                <!-- Grid/menu icon when collapsed, X when expanded -->
-                <svg x-show="!navExpanded" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="3" y="3" width="7" height="7" rx="1"/>
-                    <rect x="14" y="3" width="7" height="7" rx="1"/>
-                    <rect x="3" y="14" width="7" height="7" rx="1"/>
-                    <rect x="14" y="14" width="7" height="7" rx="1"/>
-                </svg>
-                <svg x-show="navExpanded" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <line x1="18" y1="6" x2="6" y2="18"/>
-                    <line x1="6" y1="6" x2="18" y2="18"/>
-                </svg>
-            </button>
+            <!-- Right side buttons: Search + Expand -->
+            <div class="nav-right-buttons">
+                <!-- Search Button -->
+                <button class="search-btn" @click="goToSearch()">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                    </svg>
+                </button>
+                
+                <!-- Expand Button (menu icon) -->
+                <button class="expand-btn" 
+                        @click="toggleNav()"
+                        :class="{ 'expanded': navExpanded }">
+                    <!-- Grid/menu icon when collapsed, X when expanded -->
+                    <svg x-show="!navExpanded" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7" rx="1"/>
+                        <rect x="14" y="3" width="7" height="7" rx="1"/>
+                        <rect x="3" y="14" width="7" height="7" rx="1"/>
+                        <rect x="14" y="14" width="7" height="7" rx="1"/>
+                    </svg>
+                    <svg x-show="navExpanded" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
         </div>
         
     </div>

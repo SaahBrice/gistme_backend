@@ -3,8 +3,8 @@ from rest_framework.decorators import action
 from rest_framework.response import Response
 from django.conf import settings
 from django_filters.rest_framework import DjangoFilterBackend
-from .models import Article, Comment
-from .serializers import ArticleSerializer, CommentSerializer
+from .models import Article, Comment, ArticleCategory
+from .serializers import ArticleSerializer, CommentSerializer, ArticleCategorySerializer
 from rest_framework.pagination import PageNumberPagination
 
 class StandardResultsSetPagination(PageNumberPagination):
@@ -12,23 +12,57 @@ class StandardResultsSetPagination(PageNumberPagination):
     page_size_query_param = 'page_size'
     max_page_size = 100
 
+class ArticleCategoryViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    API endpoint for fetching article categories.
+    GET /api/categories/ - List all active categories
+    GET /api/categories/?main_category=ACTUALITY - Filter by main category
+    """
+    queryset = ArticleCategory.objects.filter(is_active=True)
+    serializer_class = ArticleCategorySerializer
+    filter_backends = [DjangoFilterBackend, filters.OrderingFilter]
+    filterset_fields = ['main_category']
+    ordering_fields = ['order', 'name_en']
+    pagination_class = None  # Return all categories without pagination
+
+
 class ArticleViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint for articles with filtering by category and main_category.
+    GET /api/articles/ - List all articles
+    GET /api/articles/?main_category=ACTUALITY - Filter by main category
+    GET /api/articles/?category__slug=politics - Filter by category slug
+    GET /api/articles/?search=keyword - Full-text search
+    """
     queryset = Article.objects.all()  # Required for router
     serializer_class = ArticleSerializer
     pagination_class = StandardResultsSetPagination
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
-    filterset_fields = ['mood', 'category']
+    filterset_fields = {
+        'mood': ['exact'],
+        'category': ['exact'],
+        'category__slug': ['exact'],
+        'category__main_category': ['exact'],
+    }
     search_fields = ['headline', 'headline_en', 'headline_fr', 'french_summary', 'english_summary']
     ordering_fields = ['created_at', 'view_count', 'reaction_count', 'comment_count']
 
     def get_queryset(self):
         """
-        Exclude pro-* categories from the public feed.
-        Pro content is delivered via email only.
+        Get articles, optionally filtered by main_category query param.
+        Excludes articles without a category.
         """
-        return Article.objects.exclude(
-            category__istartswith='pro-'
-        ).order_by('-created_at')
+        queryset = Article.objects.filter(
+            category__isnull=False,
+            category__is_active=True
+        ).select_related('category').order_by('-created_at')
+        
+        # Shorthand: ?main_category=ACTUALITY
+        main_category = self.request.query_params.get('main_category')
+        if main_category:
+            queryset = queryset.filter(category__main_category=main_category)
+        
+        return queryset
 
     def get_permissions(self):
         if self.action in ['create', 'update', 'partial_update', 'destroy']:
@@ -51,6 +85,7 @@ class ArticleViewSet(viewsets.ModelViewSet):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
 
 class CommentViewSet(viewsets.ModelViewSet):
     queryset = Comment.objects.all().order_by('-timestamp')

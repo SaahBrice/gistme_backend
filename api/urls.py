@@ -1,13 +1,14 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from .views import (
-    ArticleViewSet, CommentViewSet, SubscribeView, FileUploadView, 
+    ArticleViewSet, ArticleCategoryViewSet, CommentViewSet, SubscribeView, FileUploadView, 
     FCMSubscribeView, CategoryPreferencesView, OnboardingView,
     MentorCategoriesView, MentorsView, MentorRequestView
 )
 
 router = DefaultRouter()
 router.register(r'articles', ArticleViewSet)
+router.register(r'categories', ArticleCategoryViewSet)
 router.register(r'comments', CommentViewSet)
 
 from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView

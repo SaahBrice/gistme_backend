@@ -227,9 +227,14 @@ function onboardingFlow() {
 }
 
 // Dynamic Tech Mesh Background Animation
-(function () {
+document.addEventListener('DOMContentLoaded', function () {
+    console.log('Initializing mesh animation...');
     const canvas = document.getElementById('mesh-canvas');
-    if (!canvas) return;
+    if (!canvas) {
+        console.log('No mesh-canvas found');
+        return;
+    }
+    console.log('Canvas found, starting animation');
 
     const ctx = canvas.getContext('2d');
     let width, height;
@@ -339,4 +344,4 @@ function onboardingFlow() {
     window.addEventListener('resize', resize);
     resize();
     animate();
-})();
+});

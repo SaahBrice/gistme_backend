@@ -3,6 +3,39 @@ from django.db.models.signals import post_save, post_delete
 from django.dispatch import receiver
 import random
 
+
+class ArticleCategory(models.Model):
+    """Dynamic categories for articles - manageable from admin"""
+    
+    MAIN_CATEGORY_CHOICES = [
+        ('ACTUALITY', 'Actuality'),
+        ('OPPORTUNITY', 'Opportunity'),
+        ('FOR_YOU', 'For You'),
+    ]
+    
+    name_en = models.CharField(max_length=100, help_text="English name")
+    name_fr = models.CharField(max_length=100, help_text="French name")
+    slug = models.SlugField(unique=True, help_text="URL-friendly identifier")
+    main_category = models.CharField(
+        max_length=20, 
+        choices=MAIN_CATEGORY_CHOICES, 
+        db_index=True,
+        help_text="Parent category (Actuality, Opportunity, or For You)"
+    )
+    emoji = models.CharField(max_length=10, blank=True, help_text="Optional emoji icon")
+    order = models.PositiveIntegerField(default=0, help_text="Display order within main category")
+    is_active = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    
+    class Meta:
+        ordering = ['main_category', 'order', 'name_en']
+        verbose_name = 'Article Category'
+        verbose_name_plural = 'Article Categories'
+    
+    def __str__(self):
+        return f"{self.emoji} {self.name_en}" if self.emoji else self.name_en
+
+
 class Article(models.Model):
     # Bilingual headlines
     headline_en = models.CharField(max_length=300, null=True, blank=True)
@@ -10,7 +43,18 @@ class Article(models.Model):
     # Legacy headline field for backward compatibility
     headline = models.CharField(max_length=300, null=True, blank=True)
     
-    category = models.CharField(max_length=100, db_index=True)
+    # New dynamic category (ForeignKey)
+    category = models.ForeignKey(
+        ArticleCategory,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='articles',
+        db_index=True
+    )
+    # Legacy category field for migration (will be removed after migration)
+    category_legacy = models.CharField(max_length=100, db_index=True, blank=True, null=True)
+    
     french_summary = models.TextField()
     english_summary = models.TextField()
     mood = models.CharField(max_length=100, db_index=True)
