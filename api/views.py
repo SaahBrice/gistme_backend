@@ -256,3 +256,131 @@ class OnboardingView(APIView):
             logger.error(f"Onboarding failed: {e}", exc_info=True)
             return Response({"error": "Failed to save preferences"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
+
+class MentorCategoriesView(APIView):
+    """API endpoint for fetching mentor categories."""
+    
+    def get(self, request):
+        try:
+            from web.models import MentorCategory
+            
+            categories = MentorCategory.objects.filter(is_active=True).order_by('order')
+            
+            data = [{
+                'id': cat.id,
+                'name': cat.name,
+                'label': cat.label,
+                'icon': cat.icon,
+            } for cat in categories]
+            
+            return Response(data, status=status.HTTP_200_OK)
+            
+        except Exception as e:
+            logger.error(f"Failed to fetch categories: {e}", exc_info=True)
+            return Response({"error": "Failed to fetch categories"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+class MentorsView(APIView):
+    """API endpoint for fetching mentors with optional category filter."""
+    
+    def get(self, request):
+        try:
+            from web.models import Mentor, MentorRequest
+            
+            mentors = Mentor.objects.filter(is_active=True).select_related('category')
+            
+            # Optional category filter
+            category_id = request.query_params.get('category')
+            if category_id and category_id != 'all':
+                mentors = mentors.filter(category_id=category_id)
+            
+            # Get user's active requests if authenticated
+            user_requests = {}
+            if request.user.is_authenticated:
+                active_requests = MentorRequest.objects.filter(
+                    user=request.user,
+                    status__in=['PENDING', 'CONTACTED', 'MATCHED']
+                ).select_related('mentor')
+                for req in active_requests:
+                    if req.is_active_connection:
+                        user_requests[req.mentor_id] = {
+                            'status': req.status,
+                            'status_display': req.get_status_display(),
+                            'days_remaining': req.days_remaining,
+                            'request_id': req.id
+                        }
+            
+            data = []
+            for m in mentors:
+                mentor_data = {
+                    'id': m.id,
+                    'name': m.name,
+                    'profession': m.profession,
+                    'location': m.location,
+                    'bio': m.bio,
+                    'picture': m.get_picture_url,
+                    'language': m.language,
+                    'language_display': m.get_language_display(),
+                    'category_id': m.category_id,
+                    'category_name': m.category.name if m.category else None,
+                    'user_request': user_requests.get(m.id, None)
+                }
+                data.append(mentor_data)
+            
+            return Response(data, status=status.HTTP_200_OK)
+            
+        except Exception as e:
+            logger.error(f"Failed to fetch mentors: {e}", exc_info=True)
+            return Response({"error": "Failed to fetch mentors"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+
+class MentorRequestView(APIView):
+    """API endpoint for creating mentor requests."""
+    
+    def post(self, request):
+        try:
+            from web.models import Mentor, MentorRequest
+            
+            if not request.user.is_authenticated:
+                return Response({"error": "Authentication required"}, status=status.HTTP_401_UNAUTHORIZED)
+            
+            mentor_id = request.data.get('mentor_id')
+            message = request.data.get('message', '')
+            
+            if not mentor_id:
+                return Response({"error": "Mentor ID is required"}, status=status.HTTP_400_BAD_REQUEST)
+            
+            try:
+                mentor = Mentor.objects.get(id=mentor_id, is_active=True)
+            except Mentor.DoesNotExist:
+                return Response({"error": "Mentor not found"}, status=status.HTTP_404_NOT_FOUND)
+            
+            # Check if user already has a pending request for this mentor
+            existing = MentorRequest.objects.filter(
+                user=request.user, 
+                mentor=mentor, 
+                status__in=['PENDING', 'CONTACTED']
+            ).exists()
+            
+            if existing:
+                return Response({"error": "You already have an active request with this mentor"}, status=status.HTTP_400_BAD_REQUEST)
+            
+            # Create the request
+            mentor_request = MentorRequest.objects.create(
+                user=request.user,
+                mentor=mentor,
+                message=message
+            )
+            
+            logger.info(f"Mentor request created: {request.user.email} -> {mentor.name}")
+            
+            return Response({
+                "status": "success",
+                "message": f"Request sent to {mentor.name}! We'll connect you soon.",
+                "request_id": mentor_request.id
+            }, status=status.HTTP_201_CREATED)
+            
+        except Exception as e:
+            logger.error(f"Mentor request failed: {e}", exc_info=True)
+            return Response({"error": "Failed to send request"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

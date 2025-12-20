@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Subscription, Advertisement, Coupon, CouponUsage, PaymentTransaction, UserProfile, SponsorPartnerInquiry, Mentor, MentorRequest
+from .models import Subscription, Advertisement, Coupon, CouponUsage, PaymentTransaction, UserProfile, SponsorPartnerInquiry, MentorCategory, Mentor, MentorRequest
 
 
 @admin.register(Subscription)
@@ -131,10 +131,19 @@ class SponsorPartnerInquiryAdmin(admin.ModelAdmin):
     )
 
 
+@admin.register(MentorCategory)
+class MentorCategoryAdmin(admin.ModelAdmin):
+    list_display = ('name', 'label', 'icon', 'order', 'is_active')
+    list_filter = ('is_active',)
+    search_fields = ('name', 'label')
+    list_editable = ('order', 'is_active')
+    ordering = ('order',)
+
+
 @admin.register(Mentor)
 class MentorAdmin(admin.ModelAdmin):
-    list_display = ('name', 'profession', 'category', 'location', 'is_active', 'created_at')
-    list_filter = ('category', 'is_active', 'location')
+    list_display = ('name', 'profession', 'category', 'language', 'location', 'is_active', 'created_at')
+    list_filter = ('category', 'language', 'is_active', 'location')
     search_fields = ('name', 'profession', 'bio', 'location')
     list_editable = ('is_active',)
     readonly_fields = ('created_at', 'updated_at')
@@ -142,10 +151,11 @@ class MentorAdmin(admin.ModelAdmin):
     
     fieldsets = (
         ('Basic Info', {
-            'fields': ('name', 'profession', 'location', 'category')
+            'fields': ('name', 'profession', 'location', 'category', 'language')
         }),
         ('Profile', {
-            'fields': ('bio', 'picture')
+            'fields': ('bio', 'picture_file', 'picture'),
+            'description': 'Upload a photo directly OR provide a URL. If both are set, the uploaded file takes priority.'
         }),
         ('Contact (Private)', {
             'fields': ('phone', 'email'),
@@ -163,20 +173,31 @@ class MentorAdmin(admin.ModelAdmin):
 
 @admin.register(MentorRequest)
 class MentorRequestAdmin(admin.ModelAdmin):
-    list_display = ('user', 'mentor', 'status', 'created_at')
+    list_display = ('user', 'mentor', 'status', 'expires_at', 'days_remaining_display', 'created_at')
     list_filter = ('status', 'created_at', 'mentor__category')
     search_fields = ('user__email', 'mentor__name', 'message')
     list_editable = ('status',)
-    readonly_fields = ('created_at', 'updated_at')
+    readonly_fields = ('created_at', 'updated_at', 'days_remaining_display')
     date_hierarchy = 'created_at'
     raw_id_fields = ('user', 'mentor')
+    
+    def days_remaining_display(self, obj):
+        days = obj.days_remaining
+        if days is None:
+            return '-'
+        if days == 0:
+            return '⚠️ Expires today'
+        if days < 7:
+            return f'⚠️ {days} days'
+        return f'{days} days'
+    days_remaining_display.short_description = 'Days Left'
     
     fieldsets = (
         ('Request Info', {
             'fields': ('user', 'mentor', 'message')
         }),
-        ('Status', {
-            'fields': ('status', 'notes')
+        ('Status & Expiry', {
+            'fields': ('status', 'expires_at', 'days_remaining_display', 'notes')
         }),
         ('Timestamps', {
             'fields': ('created_at', 'updated_at'),

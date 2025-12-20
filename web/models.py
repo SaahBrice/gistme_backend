@@ -276,21 +276,62 @@ class SponsorPartnerInquiry(models.Model):
         return f"{status} {type_emoji.get(self.inquiry_type, '')} {self.name} - {self.organization_name or 'Individual'}"
 
 
+class MentorCategory(models.Model):
+    """Dynamic categories for mentors - manageable from admin"""
+    
+    # Icon choices - maps to SVG icons in frontend
+    ICON_CHOICES = [
+        ('users', 'Users (👥)'),
+        ('palette', 'Palette (🎨)'),
+        ('flask', 'Flask (🧪)'),
+        ('heart', 'Heart (❤️)'),
+        ('book', 'Book (📚)'),
+        ('briefcase', 'Briefcase (💼)'),
+        ('music', 'Music (🎵)'),
+        ('globe', 'Globe (🌍)'),
+        ('code', 'Code (💻)'),
+        ('graduation', 'Graduation (🎓)'),
+        ('star', 'Star (⭐)'),
+        ('lightbulb', 'Lightbulb (💡)'),
+    ]
+    
+    name = models.CharField(max_length=50, unique=True)
+    label = models.CharField(max_length=100, help_text="Display label for the category")
+    icon = models.CharField(max_length=20, choices=ICON_CHOICES, default='users')
+    order = models.PositiveIntegerField(default=0, help_text="Order in which categories appear")
+    is_active = models.BooleanField(default=True)
+    
+    class Meta:
+        ordering = ['order', 'name']
+        verbose_name = 'Mentor Category'
+        verbose_name_plural = 'Mentor Categories'
+    
+    def __str__(self):
+        return self.label
+
+
 class Mentor(models.Model):
     """Mentors available for mentorship"""
     
-    CATEGORY_CHOICES = [
-        ('ARTS', 'Arts & Social Sciences'),
-        ('SCIENCE', 'Science & Technology'),
-        ('RELIGIOUS', 'Religious & Self Development'),
+    LANGUAGE_CHOICES = [
+        ('EN', 'English'),
+        ('FR', 'French'),
+        ('BI', 'Bilingual'),
     ]
     
     name = models.CharField(max_length=100)
     profession = models.CharField(max_length=150)
     location = models.CharField(max_length=100)
     bio = models.TextField(help_text="Short bio about the mentor")
-    picture = models.URLField(blank=True, null=True, help_text="URL to mentor's photo")
-    category = models.CharField(max_length=20, choices=CATEGORY_CHOICES)
+    picture = models.URLField(blank=True, null=True, help_text="URL to mentor's photo (if no file uploaded)")
+    picture_file = models.ImageField(upload_to='mentors/', blank=True, null=True, help_text="Upload mentor's photo directly")
+    category = models.ForeignKey(
+        MentorCategory, 
+        on_delete=models.SET_NULL, 
+        null=True, 
+        related_name='mentors'
+    )
+    language = models.CharField(max_length=2, choices=LANGUAGE_CHOICES, default='BI')
     
     # Contact info (not displayed publicly)
     phone = models.CharField(max_length=20, blank=True, null=True)
@@ -309,7 +350,15 @@ class Mentor(models.Model):
         verbose_name_plural = 'Mentors'
     
     def __str__(self):
-        return f"{self.name} - {self.profession} ({self.get_category_display()})"
+        category_name = self.category.label if self.category else 'No Category'
+        return f"{self.name} - {self.profession} ({category_name})"
+    
+    @property
+    def get_picture_url(self):
+        """Returns uploaded file URL or fallback to URL field"""
+        if self.picture_file:
+            return self.picture_file.url
+        return self.picture
 
 
 class MentorRequest(models.Model):
@@ -321,13 +370,20 @@ class MentorRequest(models.Model):
         ('MATCHED', 'Matched'),
         ('COMPLETED', 'Completed'),
         ('CANCELLED', 'Cancelled'),
+        ('EXPIRED', 'Expired'),
     ]
+    
+    # Default connection duration in days
+    DEFAULT_DURATION_DAYS = 30
     
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='mentor_requests')
     mentor = models.ForeignKey(Mentor, on_delete=models.CASCADE, related_name='requests')
     
     message = models.TextField(blank=True, null=True, help_text="User's message to the mentor")
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='PENDING')
+    
+    # Expiry tracking
+    expires_at = models.DateTimeField(blank=True, null=True, help_text="When this mentorship connection expires")
     
     # Admin notes
     notes = models.TextField(blank=True, null=True, help_text="Internal notes")
@@ -341,7 +397,34 @@ class MentorRequest(models.Model):
         verbose_name = 'Mentor Request'
         verbose_name_plural = 'Mentor Requests'
     
+    def save(self, *args, **kwargs):
+        # Auto-set expires_at when matched
+        if self.status == 'MATCHED' and not self.expires_at:
+            from datetime import timedelta
+            from django.utils import timezone
+            self.expires_at = timezone.now() + timedelta(days=self.DEFAULT_DURATION_DAYS)
+        super().save(*args, **kwargs)
+    
+    @property
+    def days_remaining(self):
+        """Returns days remaining until expiry, or None if not set"""
+        if not self.expires_at:
+            return None
+        from django.utils import timezone
+        delta = self.expires_at - timezone.now()
+        return max(0, delta.days)
+    
+    @property
+    def is_active_connection(self):
+        """Returns True if this is an active, non-expired connection"""
+        if self.status not in ['MATCHED', 'CONTACTED', 'PENDING']:
+            return False
+        if self.expires_at:
+            from django.utils import timezone
+            return timezone.now() < self.expires_at
+        return True
+    
     def __str__(self):
-        status_emoji = {'PENDING': '⏳', 'CONTACTED': '📞', 'MATCHED': '✓', 'COMPLETED': '✅', 'CANCELLED': '✕'}
+        status_emoji = {'PENDING': '⏳', 'CONTACTED': '📞', 'MATCHED': '✓', 'COMPLETED': '✅', 'CANCELLED': '✕', 'EXPIRED': '⌛'}
         return f"{status_emoji.get(self.status, '')} {self.user.email} → {self.mentor.name}"
 
