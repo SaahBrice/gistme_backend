@@ -46,3 +46,32 @@ class FCMSubscriptionAdmin(admin.ModelAdmin):
     readonly_fields = ('created_at', 'last_used_at')
     search_fields = ('token',)
 
+
+from .models import AssistanceRequest
+
+@admin.register(AssistanceRequest)
+class AssistanceRequestAdmin(admin.ModelAdmin):
+    list_display = ('id', 'get_article_title', 'user_name', 'user_phone', 'status', 'created_at')
+    list_filter = ('status', 'created_at')
+    search_fields = ('user_name', 'user_email', 'user_phone', 'message', 'article__headline_en', 'article__headline_fr')
+    readonly_fields = ('created_at', 'updated_at')
+    raw_id_fields = ('article',)
+    list_editable = ('status',)
+    ordering = ('-created_at',)
+    date_hierarchy = 'created_at'
+    
+    fieldsets = (
+        ('Request Info', {
+            'fields': ('article', 'message', 'status')
+        }),
+        ('User Contact', {
+            'fields': ('user_name', 'user_email', 'user_phone')
+        }),
+        ('Admin', {
+            'fields': ('admin_notes', 'created_at', 'updated_at')
+        }),
+    )
+    
+    @admin.display(description='Article')
+    def get_article_title(self, obj):
+        return obj.article.headline_en or obj.article.headline_fr or 'Unknown'

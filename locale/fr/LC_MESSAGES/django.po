@@ -1230,9 +1230,27 @@ msgstr "Charger Plus"
 msgid "Loading..."
 msgstr "Chargement..."
 
+# Assistance Request Modal
+msgid "Get Assistance"
+msgstr "Obtenir de l'aide"
 
+msgid "Need help with this opportunity? Tell us how we can assist you."
+msgstr "Besoin d'aide avec cette opportunité? Dites-nous comment nous pouvons vous aider."
 
+msgid "Describe what help you need (e.g., I need help preparing my application documents...)"
+msgstr "Décrivez l'aide dont vous avez besoin (ex: J'ai besoin d'aide pour préparer mes documents de candidature...)"
 
+msgid "Your name (optional)"
+msgstr "Votre nom (facultatif)"
+
+msgid "WhatsApp number (recommended)"
+msgstr "Numéro WhatsApp (recommandé)"
+
+msgid "Send Request"
+msgstr "Envoyer la demande"
+
+msgid "Sending..."
+msgstr "Envoi en cours..."
 
 
 

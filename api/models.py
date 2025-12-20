@@ -218,3 +218,46 @@ def trigger_push_notification(sender, instance, created, **kwargs):
             # For now, we leave it as is, assuming the uploader sets it once.
         except Exception as e:
             print(f"Error triggering notification: {e}")
+
+
+class AssistanceRequest(models.Model):
+    """
+    Request for assistance from Gist4U team on a specific article.
+    Users can ask for help with concours, scholarships, job applications, etc.
+    """
+    STATUS_CHOICES = [
+        ('pending', 'Pending'),
+        ('in_progress', 'In Progress'),
+        ('completed', 'Completed'),
+        ('cancelled', 'Cancelled'),
+    ]
+    
+    article = models.ForeignKey(
+        Article, 
+        on_delete=models.CASCADE, 
+        related_name='assistance_requests',
+        help_text="The article the user needs help with"
+    )
+    user_name = models.CharField(max_length=100, blank=True, help_text="User's name (optional)")
+    user_email = models.EmailField(blank=True, help_text="User's email for follow-up")
+    user_phone = models.CharField(max_length=20, blank=True, help_text="User's WhatsApp/phone number")
+    message = models.TextField(help_text="User's description of what help they need")
+    status = models.CharField(
+        max_length=20, 
+        choices=STATUS_CHOICES, 
+        default='pending',
+        db_index=True
+    )
+    admin_notes = models.TextField(blank=True, help_text="Internal notes for team")
+    created_at = models.DateTimeField(auto_now_add=True, db_index=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        ordering = ['-created_at']
+        verbose_name = 'Assistance Request'
+        verbose_name_plural = 'Assistance Requests'
+    
+    def __str__(self):
+        article_title = self.article.headline_en or self.article.headline_fr or 'Unknown'
+        return f"Request for '{article_title[:30]}...' - {self.status}"
+

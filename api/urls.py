@@ -3,7 +3,7 @@ from rest_framework.routers import DefaultRouter
 from .views import (
     ArticleViewSet, ArticleCategoryViewSet, CommentViewSet, SubscribeView, FileUploadView, 
     FCMSubscribeView, CategoryPreferencesView, OnboardingView,
-    MentorCategoriesView, MentorsView, MentorRequestView
+    MentorCategoriesView, MentorsView, MentorRequestView, AssistanceRequestView
 )
 
 router = DefaultRouter()
@@ -24,6 +24,8 @@ urlpatterns = [
     path('mentors/categories/', MentorCategoriesView.as_view(), name='mentor_categories'),
     path('mentors/', MentorsView.as_view(), name='mentors_list'),
     path('mentors/request/', MentorRequestView.as_view(), name='mentor_request'),
+    # Assistance requests
+    path('assistance-requests/', AssistanceRequestView.as_view(), name='assistance_requests'),
     # Schema
     path('schema/', SpectacularAPIView.as_view(), name='schema'),
     path('schema/swagger-ui/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),

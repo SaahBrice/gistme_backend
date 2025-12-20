@@ -1,1 +1,25 @@
 gist for you is your personal opportunity radar for Cameroon, making sure you never miss important concours, scholarships, jobs, or local happenings again. It uses trusted sources, summarizes what matters, and sends you clear, timely alerts so you can act early instead of hearing news when it is already too late. You'll scroll through curated news delivered in bite-sized summaries, and if you have questions about any gist you receive, just tap to chat with Reepls AI for instant clarifications or deeper insights. Set your preferences and we'll send you priority notifications about opportunities that match your goals. But we don't just notify you—we help you succeed! If you receive an opportunity you'd love to follow, the gist-for-you team is available anytime to take you through the process: adjusting your CV, refining your motivational letter, and why not, even applying for you if it's a job opportunity for example. Now, go through the onboarding process and don't worry—you can always adjust anything later in your user profile. Your success is our mission. Let's get started! 
+
+
+gist for u est ton radar personnel d’opportunités au Cameroun, qui veille à ce que tu ne passes plus jamais à côté d’un concours, d’une bourse, d’un emploi ou d’un événement important autour de toi. Il s’appuie sur des sources fiables, résume l’essentiel et t’envoie des alertes claires et au bon moment, pour que tu puisses agir tôt au lieu d’apprendre les nouvelles quand il est déjà trop tard. Tu fais défiler un fil de « gists » soigneusement sélectionnés ou d'apres tes préférences , présentés sous forme de résumés faciles à lire, et si tu as des questions sur une information reçue, il te suffit d’ouvrir une discussion avec l'IA de Reepls pour obtenir des précisions instantanées ou des explications plus détaillées. Configure tes préférences et nous t’enverrons en priorité les opportunités qui correspondent à tes objectifs. Mais nous ne faisons pas que t’informer, nous t’aidons aussi à réussir ! Dès que tu repères une opportunité que tu veux vraiment suivre, l’équipe gist4u est disponible à tout moment pour t’accompagner : ajuster ton CV, améliorer ta lettre de motivation et, pourquoi pas, déposer la candidature pour toi lorsqu’il s’agit par exemple d’une offre d’emploi. Maintenant, lance-toi dans le processus d’enregistrement, et ne t’inquiète pas : tu pourras toujours modifier tous tes choix plus tard dans ton profil utilisateur. Ta réussite est notre mission. Allons-y !​
+
+une journaliste tres calme mais convainquante
+
+
+
+
+Now let us start with this work on this: A granula payment system meaning the user pays for what he uses or can pay for everything at once!
+
+Let us start with the first payment feature which is paying for more chats with AI, (because for every article, a user can send only max 3 messages , but when he pays for this he can send unlimited number!) now the prices of this feature should be set in the db and for now let us set it to 500f
+
+The next is that the user and deside to contact the gist4u team from this article reader section for example to assist and guide him but to do that he needs to pay 2000f per month.
+
+We then have the mentor me page where before a user clicks on mentor me and the request is sent the user must have subscribe to this feature at 3000f per month.
+
+In each of those cards, we can give the user the choice to pay 45000 per year for all the features to be activated! and he can pay installmentally, that is 25000 frs, then 10000, then 10000. 
+
+remember that the base amount of each feature should be able to be adjusted from the Db
+
+check all models files and see what has been done and how it can be adjsuted and so on, don't code blindly.
+
+before we code tell me first if you have understood everything, dont code anything yet

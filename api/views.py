@@ -1,6 +1,8 @@
 from rest_framework import viewsets, filters, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
+from rest_framework.permissions import AllowAny
+from rest_framework.views import APIView
 from django.conf import settings
 from django_filters.rest_framework import DjangoFilterBackend
 from .models import Article, Comment, ArticleCategory
@@ -475,3 +477,34 @@ class MentorRequestView(APIView):
         except Exception as e:
             logger.error(f"Mentor request failed: {e}", exc_info=True)
             return Response({"error": "Failed to send request"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+class AssistanceRequestView(APIView):
+    """
+    API endpoint for users to request assistance from Gist4U team.
+    POST /api/assistance-requests/ - Create a new assistance request
+    """
+    permission_classes = [AllowAny]
+    authentication_classes = []  # No auth required
+    
+    def post(self, request):
+        from .serializers import AssistanceRequestSerializer
+        from .models import AssistanceRequest
+        
+        serializer = AssistanceRequestSerializer(data=request.data)
+        if serializer.is_valid():
+            assistance_request = serializer.save()
+            
+            # Log the request for team notification
+            logger.info(
+                f"New assistance request #{assistance_request.id} for article {assistance_request.article.id}: "
+                f"{assistance_request.message[:50]}..."
+            )
+            
+            return Response({
+                "status": "success",
+                "message": "Your request has been sent! A Gist4U agent will contact you shortly.",
+                "request_id": assistance_request.id
+            }, status=status.HTTP_201_CREATED)
+        
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

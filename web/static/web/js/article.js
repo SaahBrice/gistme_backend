@@ -41,6 +41,13 @@ function articleApp() {
         // Timeline items
         timelineItems: [],
 
+        // Assistance request state
+        showAssistanceModal: false,
+        assistanceMessage: '',
+        assistanceName: '',
+        assistancePhone: '',
+        isSubmittingAssistance: false,
+
         // Initialize
         async init() {
             // Get article ID from URL (e.g., /en/article/123/)
@@ -616,6 +623,82 @@ function articleApp() {
             setTimeout(() => {
                 this.showToast = false;
             }, 2500);
+        },
+
+        // ===============================================
+        // ASSISTANCE REQUEST FUNCTIONALITY
+        // ===============================================
+        openAssistanceModal() {
+            this.showAssistanceModal = true;
+            this.assistanceMessage = '';
+            this.assistanceName = '';
+            this.assistancePhone = '';
+        },
+
+        closeAssistanceModal() {
+            this.showAssistanceModal = false;
+        },
+
+        async sendAssistanceRequest() {
+            if (!this.assistanceMessage.trim() || this.assistanceMessage.trim().length < 10) {
+                this.showToastMessage(
+                    this.lang === 'fr'
+                        ? 'Veuillez décrire votre besoin (au moins 10 caractères)'
+                        : 'Please describe your need (at least 10 characters)',
+                    'info'
+                );
+                return;
+            }
+
+            if (!this.article?.id) {
+                this.showToastMessage('Error: Article not loaded', 'error');
+                return;
+            }
+
+            this.isSubmittingAssistance = true;
+
+            try {
+                const response = await fetch('/api/assistance-requests/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        article: this.article.id,
+                        message: this.assistanceMessage.trim(),
+                        user_name: this.assistanceName.trim(),
+                        user_phone: this.assistancePhone.trim()
+                    })
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    this.closeAssistanceModal();
+                    this.showToastMessage(
+                        this.lang === 'fr'
+                            ? 'Demande envoyée! Un agent Gist4U vous contactera bientôt.'
+                            : 'Request sent! A Gist4U agent will contact you shortly.',
+                        'success'
+                    );
+                    console.log('[ArticleApp] Assistance request sent:', data.request_id);
+                } else {
+                    const errorData = await response.json();
+                    this.showToastMessage(
+                        errorData.message || 'Failed to send request',
+                        'error'
+                    );
+                }
+            } catch (error) {
+                console.error('[ArticleApp] Error sending assistance request:', error);
+                this.showToastMessage(
+                    this.lang === 'fr'
+                        ? 'Erreur de connexion. Réessayez.'
+                        : 'Connection error. Please try again.',
+                    'error'
+                );
+            } finally {
+                this.isSubmittingAssistance = false;
+            }
         }
     };
 }
