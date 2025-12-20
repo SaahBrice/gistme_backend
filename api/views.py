@@ -1,4 +1,4 @@
-from rest_framework import viewsets, filters, status
+from rest_framework import viewsets, filters, status, permissions
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
@@ -637,3 +637,99 @@ class DailyQuoteViewSet(viewsets.ModelViewSet):
         serializer = DailyQuoteSerializer(quote, context={'lang': lang})
         return Response(serializer.data)
 
+
+class UserNotificationViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint for user notifications.
+    
+    GET /api/notifications/ - List current user's notifications
+    GET /api/notifications/{id}/ - Get a specific notification
+    POST /api/notifications/ - Create notification (API key required)
+    POST /api/notifications/{id}/read/ - Mark as read
+    POST /api/notifications/read-all/ - Mark all as read
+    GET /api/notifications/unread-count/ - Get unread count for badge
+    DELETE /api/notifications/{id}/ - Delete notification
+    
+    Query params:
+        - lang: 'en' or 'fr' (default: 'en')
+        - is_read: 'true' or 'false' to filter by read status
+        - notification_type: Filter by type
+    """
+    from .models import UserNotification
+    from .serializers import UserNotificationSerializer
+    
+    serializer_class = UserNotificationSerializer
+    filter_backends = [DjangoFilterBackend, filters.OrderingFilter]
+    filterset_fields = ['is_read', 'notification_type']
+    ordering_fields = ['created_at', 'is_read']
+    
+    def get_queryset(self):
+        """Return notifications for the current user only"""
+        from .models import UserNotification
+        user = self.request.user
+        if user.is_authenticated:
+            return UserNotification.objects.filter(user=user)
+        return UserNotification.objects.none()
+    
+    def get_permissions(self):
+        """
+        - GET (list, retrieve, unread_count): Requires authenticated user
+        - POST (create): Requires API key (for external scripts)
+        - POST (read, read_all): Requires authenticated user
+        - DELETE: Requires authenticated user
+        """
+        if self.action == 'create':
+            permission_classes = [HasAPIKey]
+        elif self.action in ['list', 'retrieve', 'read', 'read_all', 'unread_count', 'destroy']:
+            permission_classes = [permissions.IsAuthenticated]
+        else:
+            permission_classes = [permissions.IsAuthenticated]
+        return [permission() for permission in permission_classes]
+    
+    def get_serializer_context(self):
+        """Add language to serializer context"""
+        context = super().get_serializer_context()
+        lang = self.request.query_params.get('lang', 'en')
+        context['lang'] = lang if lang in ['en', 'fr'] else 'en'
+        return context
+    
+    @action(detail=True, methods=['post'])
+    def read(self, request, pk=None):
+        """Mark a single notification as read"""
+        notification = self.get_object()
+        notification.mark_as_read()
+        serializer = self.get_serializer(notification)
+        return Response(serializer.data)
+    
+    @action(detail=False, methods=['post'], url_path='read-all')
+    def read_all(self, request):
+        """Mark all notifications as read for the current user"""
+        from django.utils import timezone
+        from .models import UserNotification
+        
+        count = UserNotification.objects.filter(
+            user=request.user, 
+            is_read=False
+        ).update(
+            is_read=True, 
+            read_at=timezone.now()
+        )
+        
+        return Response({
+            'message': f'Marked {count} notifications as read',
+            'count': count
+        })
+    
+    @action(detail=False, methods=['get'], url_path='unread-count')
+    def unread_count(self, request):
+        """Get the count of unread notifications for badge display"""
+        from .models import UserNotification
+        
+        count = UserNotification.objects.filter(
+            user=request.user, 
+            is_read=False
+        ).count()
+        
+        return Response({
+            'unread_count': count
+        })

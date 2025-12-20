@@ -124,3 +124,54 @@ class DailyQuoteSerializer(serializers.ModelSerializer):
         lang = self.context.get('lang', 'en')
         return obj.get_affirmations(lang)
 
+
+class UserNotificationSerializer(serializers.ModelSerializer):
+    """
+    Serializer for user notifications with bilingual support.
+    Returns language-specific content based on 'lang' context.
+    """
+    # Dynamic fields based on language
+    title = serializers.SerializerMethodField()
+    message = serializers.SerializerMethodField()
+    link = serializers.SerializerMethodField()
+    
+    # Article details if linked
+    article_headline = serializers.SerializerMethodField()
+    
+    class Meta:
+        from .models import UserNotification
+        model = UserNotification
+        fields = [
+            'id', 'user', 'title', 'message', 'link',
+            'title_en', 'title_fr', 'message_en', 'message_fr',
+            'article', 'article_headline', 'thumbnail_url', 'link_url',
+            'notification_type', 'is_read', 'read_at', 'created_at'
+        ]
+        read_only_fields = ['id', 'read_at', 'created_at']
+        extra_kwargs = {
+            'user': {'write_only': True}  # Don't expose user in list
+        }
+    
+    def get_title(self, obj):
+        """Return title in requested language"""
+        lang = self.context.get('lang', 'en')
+        return obj.get_title(lang)
+    
+    def get_message(self, obj):
+        """Return message in requested language"""
+        lang = self.context.get('lang', 'en')
+        return obj.get_message(lang)
+    
+    def get_link(self, obj):
+        """Return the link for this notification"""
+        lang = self.context.get('lang', 'en')
+        return obj.get_link(lang)
+    
+    def get_article_headline(self, obj):
+        """Return article headline if linked"""
+        if not obj.article:
+            return None
+        lang = self.context.get('lang', 'en')
+        if lang == 'fr':
+            return obj.article.headline_fr or obj.article.headline_en or obj.article.headline
+        return obj.article.headline_en or obj.article.headline_fr or obj.article.headline

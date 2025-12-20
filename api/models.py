@@ -390,3 +390,95 @@ class DailyQuote(models.Model):
         """Return affirmations in requested language"""
         return self.affirmations_fr if lang == 'fr' else self.affirmations_en
 
+
+class UserNotification(models.Model):
+    """
+    In-app notifications for users.
+    Stores persistent notification records that users can view in a notification center.
+    """
+    NOTIFICATION_TYPE_CHOICES = [
+        ('FOR_YOU', 'For You (Personalized)'),
+        ('ARTICLE', 'New Article'),
+        ('SYSTEM', 'System Notification'),
+        ('PROMO', 'Promotional'),
+        ('REMINDER', 'Reminder'),
+    ]
+    
+    user = models.ForeignKey(
+        'auth.User',
+        on_delete=models.CASCADE,
+        related_name='notifications',
+        db_index=True
+    )
+    
+    # Bilingual title and message
+    title_en = models.CharField(max_length=200, help_text="Notification title in English")
+    title_fr = models.CharField(max_length=200, blank=True, help_text="Notification title in French")
+    message_en = models.TextField(help_text="Notification message in English")
+    message_fr = models.TextField(blank=True, help_text="Notification message in French")
+    
+    # Optional link to related article
+    article = models.ForeignKey(
+        'Article',
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='notifications',
+        help_text="Related article (if applicable)"
+    )
+    
+    # Media and links
+    thumbnail_url = models.URLField(max_length=500, blank=True, help_text="Image URL for notification")
+    link_url = models.URLField(max_length=500, blank=True, help_text="Custom URL if no article linked")
+    
+    # Notification metadata
+    notification_type = models.CharField(
+        max_length=20,
+        choices=NOTIFICATION_TYPE_CHOICES,
+        default='ARTICLE',
+        db_index=True
+    )
+    
+    # Read status
+    is_read = models.BooleanField(default=False, db_index=True)
+    read_at = models.DateTimeField(null=True, blank=True)
+    
+    # Timestamps
+    created_at = models.DateTimeField(auto_now_add=True, db_index=True)
+    
+    class Meta:
+        ordering = ['-created_at']
+        verbose_name = 'User Notification'
+        verbose_name_plural = 'User Notifications'
+        indexes = [
+            models.Index(fields=['user', 'is_read', '-created_at']),
+        ]
+    
+    def __str__(self):
+        return f"{self.user.email}: {self.title_en[:50]}"
+    
+    def get_title(self, lang='en'):
+        """Return title in requested language"""
+        if lang == 'fr' and self.title_fr:
+            return self.title_fr
+        return self.title_en
+    
+    def get_message(self, lang='en'):
+        """Return message in requested language"""
+        if lang == 'fr' and self.message_fr:
+            return self.message_fr
+        return self.message_en
+    
+    def get_link(self, lang='en'):
+        """Return the appropriate link for this notification"""
+        if self.article:
+            return f"/{lang}/article/{self.article.id}/"
+        return self.link_url or ""
+    
+    def mark_as_read(self):
+        """Mark notification as read"""
+        if not self.is_read:
+            from django.utils import timezone
+            self.is_read = True
+            self.read_at = timezone.now()
+            self.save(update_fields=['is_read', 'read_at'])
