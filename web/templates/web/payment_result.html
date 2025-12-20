@@ -1,4 +1,5 @@
 {% extends 'web/base.html' %}
+{% load i18n %}
 
 {% block title %}Payment Result - Gist4U Pro{% endblock %}
 
@@ -18,22 +19,22 @@
             </div>
         </div>
 
-        <h1 class="text-3xl font-display font-bold text-white mb-3">Welcome to Pro! 🎉</h1>
+        <h1 class="text-3xl font-display font-bold text-white mb-3">{% trans "Welcome to Pro!" %} 🎉</h1>
         <p class="text-gray-300 text-lg mb-6">{{ message }}</p>
 
         {% if expiry_date %}
         <div
             class="bg-gradient-to-r from-yellow-500/10 to-green-500/10 border border-yellow-500/30 rounded-xl p-4 mb-8">
             <p class="text-yellow-500 font-semibold text-sm">
-                ✓ Subscription Active<br>
-                <span class="text-gray-400 text-xs">Valid until: {{ expiry_date }}</span>
+                ✓ {% trans "Subscription Active" %}<br>
+                <span class="text-gray-400 text-xs">{% trans "Valid until:" %} {{ expiry_date }}</span>
             </p>
         </div>
         {% endif %}
 
         <a href="/feed/"
             class="inline-block w-full py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-lg">
-            Explore Your Feed →
+            {% trans "Explore Your Feed" %} →
         </a>
 
         {% else %}
@@ -47,12 +48,12 @@
             </div>
         </div>
 
-        <h1 class="text-3xl font-display font-bold text-white mb-3">Payment Failed</h1>
+        <h1 class="text-3xl font-display font-bold text-white mb-3">{% trans "Payment Failed" %}</h1>
         <p class="text-gray-300 text-lg mb-8">{{ message }}</p>
 
         <a href="/"
             class="inline-block w-full py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-lg">
-            Try Again
+            {% trans "Try Again" %}
         </a>
         {% endif %}
 

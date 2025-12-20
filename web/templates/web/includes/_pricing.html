@@ -1,14 +1,15 @@
+{% load i18n %}
 <section id="getstarted" class="py-16 md:py-24 bg-brand-black text-white px-6">
     <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-4xl md:text-6xl font-display font-bold mb-4">GET YOUR GIST</h2>
+        <h2 class="text-4xl md:text-6xl font-display font-bold mb-4">{% trans "GET YOUR GIST" %}</h2>
         <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-xl mx-auto">
-            Stay informed with Cameroon's hottest news, scholarships, and opportunities.
+            {% trans "Stay informed with Cameroon's hottest news, scholarships, and opportunities." %}
         </p>
         
         <!-- Get Started Button -->
         <a href="{% url 'login' %}" 
            class="inline-flex items-center gap-2 bg-brand-yellow text-black px-6 py-3 rounded-xl font-bold hover:scale-105 transition-transform">
-            Get Started
+            {% trans "Get Started" %}
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
             </svg>
@@ -18,19 +19,19 @@
         <div class="grid grid-cols-2 gap-4 mt-10 text-left">
             <div class="flex items-center gap-3 bg-white/5 p-4 rounded-xl">
                 <span class="text-xl">⚡</span>
-                <span class="text-sm font-medium text-gray-300">Instant Access</span>
+                <span class="text-sm font-medium text-gray-300">{% trans "Instant Access" %}</span>
             </div>
             <div class="flex items-center gap-3 bg-white/5 p-4 rounded-xl">
                 <span class="text-xl">🎯</span>
-                <span class="text-sm font-medium text-gray-300">Personalized Feed</span>
+                <span class="text-sm font-medium text-gray-300">{% trans "Personalized Feed" %}</span>
             </div>
             <div class="flex items-center gap-3 bg-white/5 p-4 rounded-xl">
                 <span class="text-xl">🔔</span>
-                <span class="text-sm font-medium text-gray-300">Smart Alerts</span>
+                <span class="text-sm font-medium text-gray-300">{% trans "Smart Alerts" %}</span>
             </div>
             <div class="flex items-center gap-3 bg-white/5 p-4 rounded-xl">
                 <span class="text-xl">🎧</span>
-                <span class="text-sm font-medium text-gray-300">Audio Summaries</span>
+                <span class="text-sm font-medium text-gray-300">{% trans "Audio Summaries" %}</span>
             </div>
         </div>
     </div>

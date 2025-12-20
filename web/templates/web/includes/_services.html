@@ -1,3 +1,4 @@
+{% load i18n %}
 <!-- Services Section - Redesigned with Animations -->
 <section class="services-section py-20 md:py-32 bg-brand-black text-white relative overflow-hidden" id="services">
     <!-- Animated Background Pattern -->
@@ -9,9 +10,9 @@
     <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-6">
         <!-- Section Header -->
         <div class="text-center mb-16 service-header">
-            <span class="inline-block font-mono text-xs border border-brand-yellow/50 text-brand-yellow rounded-full px-4 py-2 mb-6">WHAT WE COVER</span>
-            <h2 class="text-4xl md:text-6xl font-display font-bold mb-4">Your <span class="text-brand-yellow">Opportunity</span> Hub</h2>
-            <p class="text-lg text-gray-400 max-w-xl mx-auto">Everything you need to succeed, curated and delivered to your fingertips.</p>
+            <span class="inline-block font-mono text-xs border border-brand-yellow/50 text-brand-yellow rounded-full px-4 py-2 mb-6">{% trans "WHAT WE OFFER" %}</span>
+            <h2 class="text-4xl md:text-6xl font-display font-bold mb-4">{% trans "Your" %} <span class="text-brand-yellow">{% trans "Opportunity" %}</span> {% trans "Hub" %}</h2>
+            <p class="text-lg text-gray-400 max-w-xl mx-auto">{% trans "Everything you need to stay ahead in Cameroon" %}</p>
         </div>
         
         <!-- Services Grid -->
@@ -23,11 +24,11 @@
                 <div class="service-icon w-16 h-16 bg-gradient-to-br from-brand-yellow to-yellow-500 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300 border border-black/20">
                     🎓
                 </div>
-                <h3 class="font-display font-bold text-2xl mb-3 group-hover:text-brand-yellow transition-colors">Scholarships & Grants</h3>
-                <p class="text-gray-400 leading-relaxed">Full funding opportunities for students. Local and international programs curated daily for your success.</p>
+                <h3 class="font-display font-bold text-2xl mb-3 group-hover:text-brand-yellow transition-colors">{% trans "Scholarships" %}</h3>
+                <p class="text-gray-400 leading-relaxed">{% trans "Full funding opportunities for students. Local and international programs curated daily for your success." %}</p>
                 <div class="mt-6 flex items-center gap-2 text-brand-yellow/70 text-sm font-mono">
                     <span class="w-1.5 h-1.5 bg-brand-yellow rounded-full"></span>
-                    Updated daily
+                    {% trans "Updated daily" %}
                 </div>
             </div>
             
@@ -37,11 +38,11 @@
                 <div class="service-icon w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300 border border-black/20">
                     💼
                 </div>
-                <h3 class="font-display font-bold text-2xl mb-3 group-hover:text-green-400 transition-colors">Job Opportunities</h3>
-                <p class="text-gray-400 leading-relaxed">Latest job openings from top companies. Internships, entry-level, and senior positions across all industries.</p>
+                <h3 class="font-display font-bold text-2xl mb-3 group-hover:text-green-400 transition-colors">{% trans "Job Opportunities" %}</h3>
+                <p class="text-gray-400 leading-relaxed">{% trans "Latest job openings from top companies. Internships, entry-level, and senior positions across all industries." %}</p>
                 <div class="mt-6 flex items-center gap-2 text-green-400/70 text-sm font-mono">
                     <span class="w-1.5 h-1.5 bg-green-400 rounded-full"></span>
-                    500+ listings
+                    {% trans "500+ listings" %}
                 </div>
             </div>
             
@@ -51,11 +52,11 @@
                 <div class="service-icon w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300 border border-black/20">
                     📝
                 </div>
-                <h3 class="font-display font-bold text-2xl mb-3 group-hover:text-blue-400 transition-colors">Concours & Exams</h3>
-                <p class="text-gray-400 leading-relaxed">Government and professional exams. Registration dates, deadlines, and preparation tips — all in one place.</p>
+                <h3 class="font-display font-bold text-2xl mb-3 group-hover:text-blue-400 transition-colors">{% trans "Concours & Exams" %}</h3>
+                <p class="text-gray-400 leading-relaxed">{% trans "Government and professional exams. Registration dates, deadlines, and preparation tips — all in one place." %}</p>
                 <div class="mt-6 flex items-center gap-2 text-blue-400/70 text-sm font-mono">
                     <span class="w-1.5 h-1.5 bg-blue-400 rounded-full"></span>
-                    Never miss a deadline
+                    {% trans "Never miss a deadline" %}
                 </div>
             </div>
             
@@ -65,11 +66,11 @@
                 <div class="service-icon w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300 border border-black/20">
                     📰
                 </div>
-                <h3 class="font-display font-bold text-2xl mb-3 group-hover:text-purple-400 transition-colors">Breaking News</h3>
-                <p class="text-gray-400 leading-relaxed">Stay informed with curated news from trusted sources. No clickbait, no fluff — just the facts that matter.</p>
+                <h3 class="font-display font-bold text-2xl mb-3 group-hover:text-purple-400 transition-colors">{% trans "Breaking News" %}</h3>
+                <p class="text-gray-400 leading-relaxed">{% trans "Stay informed with curated news from trusted sources. No clickbait, no fluff — just the facts that matter." %}</p>
                 <div class="mt-6 flex items-center gap-2 text-purple-400/70 text-sm font-mono">
                     <span class="w-1.5 h-1.5 bg-purple-400 rounded-full animate-pulse"></span>
-                    Live updates
+                    {% trans "Live updates" %}
                 </div>
             </div>
             
@@ -79,11 +80,11 @@
                 <div class="service-icon w-16 h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300 border border-black/20">
                     🚀
                 </div>
-                <h3 class="font-display font-bold text-2xl mb-3 group-hover:text-orange-400 transition-colors">Tech & Startups</h3>
-                <p class="text-gray-400 leading-relaxed">Innovation in Cameroon and Africa. Funding news, tech events, and startup opportunities for builders.</p>
+                <h3 class="font-display font-bold text-2xl mb-3 group-hover:text-orange-400 transition-colors">{% trans "Tech & Startups" %}</h3>
+                <p class="text-gray-400 leading-relaxed">{% trans "Innovation in Cameroon and Africa. Funding news, tech events, and startup opportunities for builders." %}</p>
                 <div class="mt-6 flex items-center gap-2 text-orange-400/70 text-sm font-mono">
                     <span class="w-1.5 h-1.5 bg-orange-400 rounded-full"></span>
-                    Entrepreneur focused
+                    {% trans "Entrepreneur focused" %}
                 </div>
             </div>
             
@@ -93,11 +94,11 @@
                 <div class="service-icon w-16 h-16 bg-gradient-to-br from-pink-400 to-pink-600 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300 border border-black/20">
                     📢
                 </div>
-                <h3 class="font-display font-bold text-2xl mb-3 group-hover:text-pink-400 transition-colors">Events & Workshops</h3>
-                <p class="text-gray-400 leading-relaxed">Conferences, webinars, and skill-building events happening near you. Never miss a networking opportunity.</p>
+                <h3 class="font-display font-bold text-2xl mb-3 group-hover:text-pink-400 transition-colors">{% trans "Events & Workshops" %}</h3>
+                <p class="text-gray-400 leading-relaxed">{% trans "Conferences, webinars, and skill-building events happening near you. Never miss a networking opportunity." %}</p>
                 <div class="mt-6 flex items-center gap-2 text-pink-400/70 text-sm font-mono">
                     <span class="w-1.5 h-1.5 bg-pink-400 rounded-full"></span>
-                    Local & virtual
+                    {% trans "Local & virtual" %}
                 </div>
             </div>
             

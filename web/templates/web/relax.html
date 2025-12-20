@@ -1,5 +1,5 @@
 {% extends 'web/base.html' %}
-{% load static %}
+{% load static i18n %}
 
 {% block title %}Relax - Gist4U{% endblock %}
 
@@ -238,13 +238,13 @@ body {
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polyline points="15 18 9 12 15 6"/>
             </svg>
-            Back
+            {% trans "Back" %}
         </a>
         <div class="score-display">⭐ <span id="score">0</span></div>
     </header>
     
     <div class="game-container">
-        <div class="level-display">Level <span id="level">1</span></div>
+        <div class="level-display">{% trans "Level" %} <span id="level">1</span></div>
         <div class="game-grid" id="grid"></div>
         <div class="status-msg" id="status">Tap to mirror the green pattern</div>
     </div>

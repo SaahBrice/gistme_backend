@@ -1,22 +1,77 @@
+{% load i18n %}
 <nav class="fixed top-0 w-full p-6 md:p-8 flex justify-between items-center z-50 mix-blend-difference text-white">
     <div class="cursor-pointer group">
-        <h1
-            class="text-3xl font-display font-bold tracking-tighter leading-none group-hover:text-brand-yellow transition-colors">
-            GIST4U
-        </h1>
+        <a href="{% url 'index' %}">
+            <h1
+                class="text-3xl font-display font-bold tracking-tighter leading-none group-hover:text-brand-yellow transition-colors">
+                GIST4U
+            </h1>
+        </a>
     </div>
 
-    <div class="hidden md:flex gap-8 font-bold">
+    <div class="hidden md:flex gap-8 font-bold items-center">
         <a href="#features"
-            class="nav-link font-sans text-sm hover:text-brand-yellow transition-colors cursor-pointer">FEATURES</a>
+            class="nav-link font-sans text-sm hover:text-brand-yellow transition-colors cursor-pointer">{% trans "FEATURES" %}</a>
         <a href="#demo"
-            class="nav-link font-sans text-sm hover:text-brand-yellow transition-colors cursor-pointer">PREVIEW</a>
+            class="nav-link font-sans text-sm hover:text-brand-yellow transition-colors cursor-pointer">{% trans "PREVIEW" %}</a>
         <a href="#pricing"
-            class="nav-link font-sans text-sm hover:text-brand-yellow transition-colors cursor-pointer">PLANS</a>
+            class="nav-link font-sans text-sm hover:text-brand-yellow transition-colors cursor-pointer">{% trans "PLANS" %}</a>
+        
+        <!-- Language Switcher (Desktop) -->
+        <div x-data="{ open: false }" class="relative">
+            <button @click="open = !open" 
+                    class="flex items-center gap-1 font-sans text-sm hover:text-brand-yellow transition-colors cursor-pointer">
+                {% get_current_language as LANGUAGE_CODE %}
+                <span class="uppercase">{{ LANGUAGE_CODE }}</span>
+                <svg class="w-3 h-3 transition-transform" :class="open ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+            </button>
+            <div x-show="open" 
+                 @click.away="open = false"
+                 x-transition:enter="transition ease-out duration-200"
+                 x-transition:enter-start="opacity-0 -translate-y-2"
+                 x-transition:enter-end="opacity-100 translate-y-0"
+                 class="absolute right-0 mt-2 bg-brand-black border border-white/20 rounded-lg overflow-hidden shadow-xl">
+                {% get_available_languages as languages %}
+                {% for lang_code, lang_name in languages %}
+                    <button @click="switchLang('{{ lang_code }}')"
+                       class="block w-full text-left px-4 py-2 text-sm hover:bg-brand-yellow hover:text-black transition-colors whitespace-nowrap
+                              {% if lang_code == LANGUAGE_CODE %}text-brand-yellow{% else %}text-white{% endif %}">
+                        {{ lang_name }}
+                    </button>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 
-    <a href="/feed/"
-        class="nav-link bg-white text-black px-6 py-2 rounded-full text-sm font-bold border border-transparent hover:bg-brand-yellow hover:border-white transition-colors cursor-pointer">
-        GET STARTED
-    </a>
+    <div class="flex items-center gap-4">
+        <!-- Language Switcher (Mobile) -->
+        {% get_current_language as LANGUAGE_CODE %}
+        <button @click="switchLang('{% if LANGUAGE_CODE == 'en' %}fr{% else %}en{% endif %}')"
+           class="md:hidden font-display font-bold text-sm hover:text-brand-yellow transition-colors">
+            {% if LANGUAGE_CODE == 'en' %}FR{% else %}EN{% endif %}
+        </button>
+        
+        <a href="{% url 'feed' %}"
+            class="nav-link bg-white text-black px-6 py-2 rounded-full text-sm font-bold border border-transparent hover:bg-brand-yellow hover:border-white transition-colors cursor-pointer">
+            {% trans "GET STARTED" %}
+        </a>
+    </div>
 </nav>
+
+<script>
+function switchLang(lang) {
+    // Set cookie first
+    const expires = new Date();
+    expires.setFullYear(expires.getFullYear() + 1);
+    document.cookie = `django_language=${lang}; path=/; expires=${expires.toUTCString()}; SameSite=Lax`;
+    
+    // Get current path without language prefix
+    const currentPath = window.location.pathname;
+    const pathWithoutLang = currentPath.replace(/^\/(en|fr)/, '') || '/';
+    
+    // Navigate to new language
+    window.location.href = `/${lang}${pathWithoutLang}`;
+}
+</script>

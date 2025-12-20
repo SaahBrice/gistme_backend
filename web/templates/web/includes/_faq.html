@@ -1,3 +1,4 @@
+{% load i18n %}
 <!-- FAQ Section - Redesigned with Smooth Animations -->
 <section class="faq-section py-20 md:py-32 bg-white relative overflow-hidden" id="faq" x-data="{ openFaq: null }">
     
@@ -11,9 +12,9 @@
     <div class="relative z-10 max-w-4xl mx-auto px-4 md:px-6">
         <!-- Section Header -->
         <div class="text-center mb-12 md:mb-16">
-            <span class="inline-block font-mono text-xs border-2 border-black rounded-full px-4 py-2 mb-6 bg-brand-yellow shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">FAQ</span>
-            <h2 class="text-4xl md:text-6xl font-display font-bold mb-4">Common <span class="text-brand-yellow">Questions</span></h2>
-            <p class="text-lg text-gray-600 max-w-xl mx-auto">Everything you need to know about Gist4U</p>
+            <span class="inline-block font-mono text-xs border-2 border-black rounded-full px-4 py-2 mb-6 bg-brand-yellow shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">{% trans "FAQ" %}</span>
+            <h2 class="text-4xl md:text-6xl font-display font-bold mb-4">{% trans "Common" %} <span class="text-brand-yellow">{% trans "Questions" %}</span></h2>
+            <p class="text-lg text-gray-600 max-w-xl mx-auto">{% trans "Everything you need to know about Gist4U" %}</p>
         </div>
         
         <!-- FAQ Accordion Container -->
@@ -24,7 +25,7 @@
                  :class="{ 'shadow-[6px_6px_0px_0px_rgba(255,222,0,1)]': openFaq === 1, 'shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]': openFaq !== 1 }">
                 <button class="faq-question w-full flex items-center justify-between p-5 md:p-6 text-left group"
                         @click="openFaq = openFaq === 1 ? null : 1">
-                    <span class="font-display font-bold text-lg md:text-xl pr-4 group-hover:text-brand-yellow transition-colors" :class="{ 'text-brand-yellow': openFaq === 1 }">Is Gist4U really free?</span>
+                    <span class="font-display font-bold text-lg md:text-xl pr-4 group-hover:text-brand-yellow transition-colors" :class="{ 'text-brand-yellow': openFaq === 1 }">{% trans "Is Gist4U really free?" %}</span>
                     <div class="w-10 h-10 bg-brand-yellow border-2 border-black rounded-xl flex items-center justify-center flex-shrink-0 transition-transform duration-300"
                          :class="{ 'rotate-45': openFaq === 1 }">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -41,7 +42,7 @@
                      x-transition:leave-start="opacity-100 max-h-96"
                      x-transition:leave-end="opacity-0 max-h-0">
                     <p class="px-5 md:px-6 pb-5 md:pb-6 text-gray-600 leading-relaxed border-t border-black/10 pt-4">
-                        Yes! Our core features are completely free. You can read the daily news feed, get article summaries, and bookmark content without paying anything. The Pro plan unlocks unlimited features like audio playback, offline mode, and priority notifications.
+                        {% trans "Yes! Our core features are completely free. You can read the daily news feed, get article summaries, and bookmark content without paying anything. The Pro plan unlocks unlimited features like audio playback, offline mode, and priority notifications." %}
                     </p>
                 </div>
             </div>
@@ -51,7 +52,7 @@
                  :class="{ 'shadow-[6px_6px_0px_0px_rgba(255,222,0,1)]': openFaq === 2, 'shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]': openFaq !== 2 }">
                 <button class="faq-question w-full flex items-center justify-between p-5 md:p-6 text-left group"
                         @click="openFaq = openFaq === 2 ? null : 2">
-                    <span class="font-display font-bold text-lg md:text-xl pr-4 group-hover:text-brand-yellow transition-colors" :class="{ 'text-brand-yellow': openFaq === 2 }">How does the AI summary work?</span>
+                    <span class="font-display font-bold text-lg md:text-xl pr-4 group-hover:text-brand-yellow transition-colors" :class="{ 'text-brand-yellow': openFaq === 2 }">{% trans "How does the AI summary work?" %}</span>
                     <div class="w-10 h-10 bg-brand-yellow border-2 border-black rounded-xl flex items-center justify-center flex-shrink-0 transition-transform duration-300"
                          :class="{ 'rotate-45': openFaq === 2 }">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -68,7 +69,7 @@
                      x-transition:leave-start="opacity-100 max-h-96"
                      x-transition:leave-end="opacity-0 max-h-0">
                     <p class="px-5 md:px-6 pb-5 md:pb-6 text-gray-600 leading-relaxed border-t border-black/10 pt-4">
-                        Our AI reads full articles from trusted sources and condenses them into 2-3 minute summaries. You get the key points without the fluff, saving you hours of reading time every day. Each gist is optimized for quick understanding while retaining all essential information.
+                        {% trans "Our AI reads full articles from trusted sources and condenses them into 2-3 minute summaries. You get the key points without the fluff, saving you hours of reading time every day." %}
                     </p>
                 </div>
             </div>
@@ -78,7 +79,7 @@
                  :class="{ 'shadow-[6px_6px_0px_0px_rgba(255,222,0,1)]': openFaq === 3, 'shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]': openFaq !== 3 }">
                 <button class="faq-question w-full flex items-center justify-between p-5 md:p-6 text-left group"
                         @click="openFaq = openFaq === 3 ? null : 3">
-                    <span class="font-display font-bold text-lg md:text-xl pr-4 group-hover:text-brand-yellow transition-colors" :class="{ 'text-brand-yellow': openFaq === 3 }">What kind of opportunities do you cover?</span>
+                    <span class="font-display font-bold text-lg md:text-xl pr-4 group-hover:text-brand-yellow transition-colors" :class="{ 'text-brand-yellow': openFaq === 3 }">{% trans "What kind of opportunities do you cover?" %}</span>
                     <div class="w-10 h-10 bg-brand-yellow border-2 border-black rounded-xl flex items-center justify-center flex-shrink-0 transition-transform duration-300"
                          :class="{ 'rotate-45': openFaq === 3 }">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -95,7 +96,7 @@
                      x-transition:leave-start="opacity-100 max-h-96"
                      x-transition:leave-end="opacity-0 max-h-0">
                     <p class="px-5 md:px-6 pb-5 md:pb-6 text-gray-600 leading-relaxed border-t border-black/10 pt-4">
-                        We cover scholarships (local and international), job opportunities, government concours, internships, grants, tech events, and more. Our team curates content specifically for Cameroonians looking to advance their careers — whether you're a student, professional, or entrepreneur.
+                        {% trans "We cover scholarships (local and international), job opportunities, government concours, internships, grants, tech events, and more. Our team curates content specifically for Cameroonians looking to advance their careers." %}
                     </p>
                 </div>
             </div>
@@ -105,7 +106,7 @@
                  :class="{ 'shadow-[6px_6px_0px_0px_rgba(255,222,0,1)]': openFaq === 4, 'shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]': openFaq !== 4 }">
                 <button class="faq-question w-full flex items-center justify-between p-5 md:p-6 text-left group"
                         @click="openFaq = openFaq === 4 ? null : 4">
-                    <span class="font-display font-bold text-lg md:text-xl pr-4 group-hover:text-brand-yellow transition-colors" :class="{ 'text-brand-yellow': openFaq === 4 }">Can I use it offline?</span>
+                    <span class="font-display font-bold text-lg md:text-xl pr-4 group-hover:text-brand-yellow transition-colors" :class="{ 'text-brand-yellow': openFaq === 4 }">{% trans "Can I use it offline?" %}</span>
                     <div class="w-10 h-10 bg-brand-yellow border-2 border-black rounded-xl flex items-center justify-center flex-shrink-0 transition-transform duration-300"
                          :class="{ 'rotate-45': openFaq === 4 }">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -122,7 +123,7 @@
                      x-transition:leave-start="opacity-100 max-h-96"
                      x-transition:leave-end="opacity-0 max-h-0">
                     <p class="px-5 md:px-6 pb-5 md:pb-6 text-gray-600 leading-relaxed border-t border-black/10 pt-4">
-                        Pro users can save articles for offline reading. Perfect for when you're commuting or in areas with limited internet access. Bookmarked content is automatically synced when you're back online. You'll never miss an important opportunity, even without internet!
+                        {% trans "Pro users can save articles for offline reading. Perfect for when you're commuting or in areas with limited internet access. Bookmarked content is automatically synced when you're back online." %}
                     </p>
                 </div>
             </div>
@@ -132,7 +133,7 @@
                  :class="{ 'shadow-[6px_6px_0px_0px_rgba(255,222,0,1)]': openFaq === 5, 'shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]': openFaq !== 5 }">
                 <button class="faq-question w-full flex items-center justify-between p-5 md:p-6 text-left group"
                         @click="openFaq = openFaq === 5 ? null : 5">
-                    <span class="font-display font-bold text-lg md:text-xl pr-4 group-hover:text-brand-yellow transition-colors" :class="{ 'text-brand-yellow': openFaq === 5 }">Is there a mobile app?</span>
+                    <span class="font-display font-bold text-lg md:text-xl pr-4 group-hover:text-brand-yellow transition-colors" :class="{ 'text-brand-yellow': openFaq === 5 }">{% trans "Is there a mobile app?" %}</span>
                     <div class="w-10 h-10 bg-brand-yellow border-2 border-black rounded-xl flex items-center justify-center flex-shrink-0 transition-transform duration-300"
                          :class="{ 'rotate-45': openFaq === 5 }">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -149,7 +150,7 @@
                      x-transition:leave-start="opacity-100 max-h-96"
                      x-transition:leave-end="opacity-0 max-h-0">
                     <p class="px-5 md:px-6 pb-5 md:pb-6 text-gray-600 leading-relaxed border-t border-black/10 pt-4">
-                        Gist4U is a Progressive Web App (PWA). You can install it directly from your browser — just visit our site on mobile and tap "Add to Home Screen". It works just like a native app with push notifications, offline support, and a smooth mobile experience!
+                        {% trans "Gist4U is a Progressive Web App (PWA). You can install it directly from your browser — just visit our site on mobile and tap 'Add to Home Screen'. It works just like a native app!" %}
                     </p>
                 </div>
             </div>
@@ -159,7 +160,7 @@
                  :class="{ 'shadow-[6px_6px_0px_0px_rgba(255,222,0,1)]': openFaq === 6, 'shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]': openFaq !== 6 }">
                 <button class="faq-question w-full flex items-center justify-between p-5 md:p-6 text-left group"
                         @click="openFaq = openFaq === 6 ? null : 6">
-                    <span class="font-display font-bold text-lg md:text-xl pr-4 group-hover:text-brand-yellow transition-colors" :class="{ 'text-brand-yellow': openFaq === 6 }">How do I connect with a mentor?</span>
+                    <span class="font-display font-bold text-lg md:text-xl pr-4 group-hover:text-brand-yellow transition-colors" :class="{ 'text-brand-yellow': openFaq === 6 }">{% trans "How do I connect with a mentor?" %}</span>
                     <div class="w-10 h-10 bg-brand-yellow border-2 border-black rounded-xl flex items-center justify-center flex-shrink-0 transition-transform duration-300"
                          :class="{ 'rotate-45': openFaq === 6 }">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -176,7 +177,7 @@
                      x-transition:leave-start="opacity-100 max-h-96"
                      x-transition:leave-end="opacity-0 max-h-0">
                     <p class="px-5 md:px-6 pb-5 md:pb-6 text-gray-600 leading-relaxed border-t border-black/10 pt-4">
-                        Visit our Mentors page and browse professionals from various fields — tech, finance, law, medicine, and more. Submit your request and we'll connect you with a mentor who matches your goals. Your first consultation is completely free!
+                        {% trans "Visit our Mentors page and browse professionals from various fields. Submit your request and we'll connect you with a mentor who matches your goals. Your first consultation is completely free!" %}
                     </p>
                 </div>
             </div>
@@ -185,9 +186,9 @@
         
         <!-- Still Have Questions CTA -->
         <div class="mt-12 text-center">
-            <p class="text-gray-600 mb-4">Still have questions?</p>
+            <p class="text-gray-600 mb-4">{% trans "Still have questions?" %}</p>
             <a href="/contact/" class="inline-flex items-center gap-2 font-display font-bold text-lg hover:text-brand-yellow transition-colors group">
-                Contact Us
+                {% trans "Contact Us" %}
                 <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                 </svg>

@@ -1,5 +1,5 @@
 {% extends 'web/base.html' %}
-{% load static %}
+{% load static i18n %}
 
 {% block title %}Feed - Gist4U{% endblock %}
 
@@ -111,17 +111,17 @@
                 <button class="nav-chip" 
                         :class="{ 'active': activeTab === 'news' }"
                         @click="setTab('news')">
-                    News
+                    {% trans "News" %}
                 </button>
                 <button class="nav-chip" 
                         :class="{ 'active': activeTab === 'opportunities' }"
                         @click="setTab('opportunities')">
-                    Opportunities
+                    {% trans "Opportunities" %}
                 </button>
                 <button class="nav-chip" 
                         :class="{ 'active': activeTab === 'foryou' }"
                         @click="setTab('foryou')">
-                    For You
+                    {% trans "For You" %}
                 </button>
             </div>
         </div>
@@ -191,7 +191,7 @@
                     {{ user.first_name|default:user.email|slice:":1"|upper }}
                 </div>
                 <div class="profile-header-info">
-                    <span class="profile-greeting">Hey, {{ user.first_name|default:user.email|slice:":6" }}! 👋</span>
+                    <span class="profile-greeting">Hey, {{ user.first_name|default:user.email|slice:":11" }}! 👋</span>
                     <span class="profile-name">{{ user.email }}</span>
                 </div>
             </div>
@@ -206,7 +206,7 @@
                         <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3"/>
                     </svg>
                 </div>
-                <span>My Quote of Today</span>
+                <span>{% trans "My Quote of Today" %}</span>
             </button>
             
             <!-- Relax Here -->
@@ -219,7 +219,7 @@
                         <line x1="15" y1="9" x2="15.01" y2="9"/>
                     </svg>
                 </div>
-                <span>Relax Here</span>
+                <span>{% trans "Relax Here" %}</span>
             </a>
             
             <!-- Mentor Me -->
@@ -232,7 +232,7 @@
                         <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
                     </svg>
                 </div>
-                <span>Mentor Me</span>
+                <span>{% trans "Mentor Me" %}</span>
             </a>
             
             <!-- Sponsors & Partners -->
@@ -243,7 +243,7 @@
                         <path d="M18 2l4 4-10 10H8v-4L18 2z"/>
                     </svg>
                 </div>
-                <span>Sponsors & Partners</span>
+                <span>{% trans "Sponsors & Partners" %}</span>
             </button>
             
             <!-- Bookmarks -->
@@ -253,7 +253,7 @@
                         <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
                     </svg>
                 </div>
-                <span>Bookmarks</span>
+                <span>{% trans "Bookmarks" %}</span>
             </button>
             
             
@@ -265,7 +265,7 @@
                         <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
                     </svg>
                 </div>
-                <span>Settings</span>
+                <span>{% trans "Settings" %}</span>
             </button>
             
             
@@ -276,7 +276,7 @@
                         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                     </svg>
                 </div>
-                <span>Join Community</span>
+                <span>{% trans "Join Community" %}</span>
             </a>
         </div>
     </div>
@@ -310,27 +310,27 @@
                     <polyline points="15 18 9 12 15 6"/>
                 </svg>
             </button>
-            <span class="settings-title">Settings</span>
+            <span class="settings-title">{% trans "Settings" %}</span>
         </div>
         
         <div class="settings-content">
             <!-- Account Section -->
             <div class="settings-section">
-                <div class="settings-section-label">📱 Account</div>
+                <div class="settings-section-label">📱 {% trans "Account" %}</div>
                 <div class="settings-field">
-                    <label>Name</label>
+                    <label>{% trans "Name" %}</label>
                     <input type="text" x-model="settingsName" placeholder="Your name">
                 </div>
                 <div class="settings-field">
-                    <label>Phone</label>
+                    <label>{% trans "Phone" %}</label>
                     <input type="tel" x-model="settingsPhone" placeholder="+237 6XXXXXXXX">
                 </div>
                 <div class="settings-field">
-                    <label>Email</label>
+                    <label>{% trans "Email" %}</label>
                     <input type="email" value="{{ user.email }}" disabled>
                 </div>
                 <div class="settings-field">
-                    <label>Region</label>
+                    <label>{% trans "Region" %}</label>
                     <select x-model="settingsRegion">
                         <option value="">Select...</option>
                         <option value="ADAMAWA">Adamawa</option>
@@ -346,7 +346,7 @@
                     </select>
                 </div>
                 <div class="settings-field">
-                    <label>Education Level</label>
+                    <label>{% trans "Education Level" %}</label>
                     <select x-model="settingsEducation">
                         <option value="">Select...</option>
                         <option value="FSLC">FSLC (Primary)</option>
@@ -359,7 +359,7 @@
                     </select>
                 </div>
                 <div class="settings-field">
-                    <label>Background</label>
+                    <label>{% trans "Background" %}</label>
                     <select x-model="settingsBackground">
                         <option value="">Select...</option>
                         <option value="ARTS">Arts & Humanities</option>
@@ -370,7 +370,7 @@
             
             <!-- Interests Section -->
             <div class="settings-section">
-                <div class="settings-section-label">🎯 Interests</div>
+                <div class="settings-section-label">🎯 {% trans "Interests" %}</div>
                 <div class="settings-chips">
                     <template x-for="option in interestOptions" :key="option.id">
                         <div class="settings-chip" 
@@ -385,9 +385,9 @@
             
             <!-- Notifications Section -->
             <div class="settings-section">
-                <div class="settings-section-label">🔔 Notifications</div>
+                <div class="settings-section-label">🔔 {% trans "Notifications" %}</div>
                 <div class="settings-field">
-                    <label>Notification Time</label>
+                    <label>{% trans "Notification Time" %}</label>
                     <select x-model="settingsNotifTime">
                         <option value="06:00">6:00 AM</option>
                         <option value="08:00">8:00 AM</option>
@@ -396,16 +396,16 @@
                     </select>
                 </div>
                 <div class="settings-toggle-row">
-                    <span>Push Notifications</span>
+                    <span>{% trans "Push Notifications" %}</span>
                     <div class="settings-toggle" :class="{ 'active': pushEnabled }" @click="pushEnabled = !pushEnabled"></div>
                 </div>
             </div>
             
             <!-- Preferences Section -->
             <div class="settings-section">
-                <div class="settings-section-label">🎨 Preferences</div>
+                <div class="settings-section-label">🎨 {% trans "Preferences" %}</div>
                 <div class="settings-field">
-                    <label>Language</label>
+                    <label>{% trans "Language" %}</label>
                     <select x-model="settingsLanguage">
                         <option value="en">English</option>
                         <option value="fr">Français</option>
@@ -415,13 +415,13 @@
             
             <!-- Quote of the Day Section -->
             <div class="settings-section">
-                <div class="settings-section-label">💬 Quote of the Day</div>
+                <div class="settings-section-label">💬 {% trans "Quote of the Day" %}</div>
                 <div class="settings-toggle-row">
-                    <span>Receive Daily Quotes</span>
+                    <span>{% trans "Receive Daily Quotes" %}</span>
                     <div class="settings-toggle" :class="{ 'active': receiveQuotes }" @click="receiveQuotes = !receiveQuotes"></div>
                 </div>
                 <div class="settings-field" x-show="receiveQuotes">
-                    <label>Quote Category</label>
+                    <label>{% trans "Quote Category" %}</label>
                     <select x-model="quoteCategory">
                         <option value="GENERAL">General</option>
                         <option value="CHRISTIAN">Christian</option>
@@ -432,9 +432,9 @@
             
             <!-- Custom Desires Section -->
             <div class="settings-section">
-                <div class="settings-section-label">✨ Custom Desires</div>
+                <div class="settings-section-label">✨ {% trans "Custom Desires" %}</div>
                 <div class="settings-field">
-                    <label>Tell us what you're looking for</label>
+                    <label>{% trans "Tell us what you're looking for" %}</label>
                     <textarea class="settings-textarea" 
                               x-model="settingsCustomDesires" 
                               placeholder="E.g. I want scholarships for medicine in Canada..."
@@ -444,21 +444,21 @@
             
             <!-- Save Button -->
             <button class="settings-save-btn" @click="saveSettings()" :disabled="savingSettings">
-                <span x-show="!savingSettings">Save Changes</span>
-                <span x-show="savingSettings">Saving...</span>
+                <span x-show="!savingSettings">{% trans "Save Changes" %}</span>
+                <span x-show="savingSettings">{% trans "Saving..." %}</span>
             </button>
             
             <!-- Actions Section -->
             <div class="settings-section">
-                <div class="settings-section-label">🔒 Account Actions</div>
+                <div class="settings-section-label">🔒 {% trans "Account Actions" %}</div>
                 <button class="settings-action-btn" @click="window.location.href='/accounts/logout/'">
-                    Log Out
+                    {% trans "Log Out" %}
                 </button>
                 <button class="settings-action-btn danger" @click="showDeletePopup = true">
-                    Delete Account
+                    {% trans "Delete Account" %}
                 </button>
                 <button class="settings-action-btn" @click="showSettings = false; showTerms = true">
-                    Terms & Privacy Policy
+                    {% trans "Terms & Privacy Policy" %}
                 </button>
             </div>
             
@@ -495,7 +495,7 @@
                     <polyline points="15 18 9 12 15 6"/>
                 </svg>
             </button>
-            <span class="bookmarks-title">Bookmarks</span>
+            <span class="bookmarks-title">{% trans "Bookmarks" %}</span>
             <span class="bookmarks-count" x-text="bookmarksList.length"></span>
         </div>
         
@@ -503,8 +503,8 @@
             <!-- Empty state -->
             <div class="bookmarks-empty" x-show="bookmarksList.length === 0">
                 <div class="empty-icon">📚</div>
-                <p>No bookmarks yet</p>
-                <span>Articles you bookmark will appear here</span>
+                <p>{% trans "No bookmarks yet" %}</p>
+                <span>{% trans "Articles you bookmark will appear here" %}</span>
             </div>
             
             <!-- Bookmarked Articles List -->
@@ -541,7 +541,7 @@
                     <polyline points="15 18 9 12 15 6"/>
                 </svg>
             </button>
-            <span class="bookmarks-title">Gist, based on your interest</span>
+            <span class="bookmarks-title">{% trans "Gist, based on your interest" %}</span>
             <span class="bookmarks-count" x-text="gistList.length"></span>
         </div>
         
@@ -549,8 +549,8 @@
             <!-- Empty state -->
             <div class="bookmarks-empty" x-show="gistList.length === 0">
                 <div class="empty-icon">🎯</div>
-                <p>No gist yet</p>
-                <span>Set your custom desires in Settings to get personalized gist</span>
+                <p>{% trans "No gist yet" %}</p>
+                <span>{% trans "Set your custom desires in Settings to get personalized gist" %}</span>
             </div>
             
             <!-- Gist Articles List -->
@@ -580,44 +580,44 @@
                     <polyline points="15 18 9 12 15 6"/>
                 </svg>
             </button>
-            <span class="settings-title">Sponsors & Partners</span>
+            <span class="settings-title">{% trans "Sponsors & Partners" %}</span>
         </div>
         
         <!-- Success State -->
         <div class="sponsors-success" x-show="sponsorSubmitted">
             <div class="success-icon">🎉</div>
-            <h3>Thank You!</h3>
-            <p>Your inquiry has been received. Our founder will personally get in touch with you soon.</p>
-            <button class="sponsor-close-btn" @click="showSponsors = false; sponsorSubmitted = false">Close</button>
+            <h3>{% trans "Thank You!" %}</h3>
+            <p>{% trans "Your inquiry has been received. Our founder will personally get in touch with you soon." %}</p>
+            <button class="sponsor-close-btn" @click="showSponsors = false; sponsorSubmitted = false">{% trans "Close" %}</button>
         </div>
         
         <!-- Form -->
         <div class="settings-content" x-show="!sponsorSubmitted">
             <div class="sponsor-intro">
-                <p>Partner with us or sponsor our mission to connect Cameroonians with opportunities.</p>
+                <p>{% trans "Partner with us or sponsor our mission to connect Cameroonians with opportunities." %}</p>
             </div>
             
             <!-- Inquiry Type Toggle -->
             <div class="settings-section">
-                <div class="settings-section-label">What would you like to do?</div>
+                <div class="settings-section-label">{% trans "What would you like to do?" %}</div>
                 <div class="sponsor-type-toggle">
                     <button class="type-btn" :class="{'active': sponsorType === 'SPONSOR'}" @click="sponsorType = 'SPONSOR'">
-                        Sponsor
+                        {% trans "Sponsor" %}
                     </button>
                     <button class="type-btn" :class="{'active': sponsorType === 'PARTNER'}" @click="sponsorType = 'PARTNER'">
-                        Partner
+                        {% trans "Partner" %}
                     </button>
                     <button class="type-btn" :class="{'active': sponsorType === 'BOTH'}" @click="sponsorType = 'BOTH'">
-                        Both
+                        {% trans "Both" %}
                     </button>
                 </div>
             </div>
             
             <!-- Contact Info -->
             <div class="settings-section">
-                <div class="settings-section-label">Your Information</div>
+                <div class="settings-section-label">{% trans "Your Information" %}</div>
                 <div class="settings-field">
-                    <label>Full Name *</label>
+                    <label>{% trans "Full Name" %} *</label>
                     <input type="text" class="settings-input" x-model="sponsorName" placeholder="John Doe">
                 </div>
                 <div class="settings-field">
@@ -632,20 +632,20 @@
             
             <!-- Organization Info -->
             <div class="settings-section">
-                <div class="settings-section-label">Organization (Optional)</div>
+                <div class="settings-section-label">{% trans "Organization" %} ({% trans "Optional" %})</div>
                 <div class="settings-field">
-                    <label>Company/Organization Name</label>
+                    <label>{% trans "Company/Organization Name" %}</label>
                     <input type="text" class="settings-input" x-model="sponsorOrg" placeholder="Your Company">
                 </div>
                 <div class="settings-field">
-                    <label>Website</label>
+                    <label>{% trans "Website" %}</label>
                     <input type="url" class="settings-input" x-model="sponsorWebsite" placeholder="https://example.com">
                 </div>
             </div>
             
             <!-- Description -->
             <div class="settings-section">
-                <div class="settings-section-label">Tell Us More *</div>
+                <div class="settings-section-label">{% trans "Tell Us More" %} *</div>
                 <div class="settings-field">
                     <textarea class="settings-textarea" 
                               x-model="sponsorDescription" 
@@ -661,8 +661,8 @@
             <button class="save-settings-btn" 
                     @click="submitSponsorInquiry()"
                     :disabled="sponsorSubmitting">
-                <span x-show="!sponsorSubmitting">Send</span>
-                <span x-show="sponsorSubmitting">Sending...</span>
+                <span x-show="!sponsorSubmitting">{% trans "Send" %}</span>
+                <span x-show="sponsorSubmitting">{% trans "Sending..." %}</span>
             </button>
         </div>
     </div>
@@ -701,7 +701,7 @@
         
         <!-- Share Button -->
         <button class="quote-share-btn" @click="shareQuoteAsImage()">
-            Share
+            {% trans "Share" %}
         </button>
     </div>
     
@@ -726,21 +726,21 @@
                     <polyline points="15 18 9 12 15 6"/>
                 </svg>
             </button>
-            <span class="settings-title">Terms & Privacy</span>
+            <span class="settings-title">{% trans "Terms & Privacy" %}</span>
         </div>
         
         <div class="settings-content terms-content">
-            <h3>Terms of Service</h3>
-            <p>By using Gist4U, you agree to these terms. We provide curated opportunities including scholarships, jobs, and competitions.</p>
+            <h3>{% trans "Terms of Service" %}</h3>
+            <p>{% trans "By using Gist4U, you agree to these terms. We provide curated opportunities including scholarships, jobs, and competitions." %}</p>
             
-            <h3>Privacy Policy</h3>
-            <p>We collect your email, phone, and preferences to personalize your experience. Your data is stored securely and never sold.</p>
+            <h3>{% trans "Privacy Policy" %}</h3>
+            <p>{% trans "We collect your email, phone, and preferences to personalize your experience. Your data is stored securely and never sold." %}</p>
             
-            <h3>Notifications</h3>
-            <p>By enabling notifications, you consent to receiving updates about opportunities matching your interests.</p>
+            <h3>{% trans "Notifications" %}</h3>
+            <p>{% trans "By enabling notifications, you consent to receiving updates about opportunities matching your interests." %}</p>
             
-            <h3>Contact</h3>
-            <p>Questions? Email us at <strong>gist4u@gmail.com</strong></p>
+            <h3>{% trans "Contact" %}</h3>
+            <p>{% trans "Questions? Email us at" %} <strong>gist4u@gmail.com</strong></p>
         </div>
     </div>
     
@@ -751,10 +751,10 @@
          x-transition:enter-end="opacity-100">
         <div class="delete-popup">
             <div class="delete-popup-icon">⚠️</div>
-            <div class="delete-popup-title">Delete Account?</div>
-            <p class="delete-popup-text">To delete your account, contact us:</p>
+            <div class="delete-popup-title">{% trans "Delete Account?" %}</div>
+            <p class="delete-popup-text">{% trans "To delete your account, contact us:" %}</p>
             <div class="delete-popup-email">gist4u@gmail.com</div>
-            <button class="delete-popup-close" @click="showDeletePopup = false">Got it</button>
+            <button class="delete-popup-close" @click="showDeletePopup = false">{% trans "Got it" %}</button>
         </div>
     </div>
     
@@ -769,7 +769,7 @@
          x-transition:leave-start="opacity-100 translate-y-0"
          x-transition:leave-end="opacity-0 translate-y-4">
         <span class="toast-icon">✅</span>
-        <span class="toast-text">Settings saved successfully!</span>
+        <span class="toast-text">{% trans "Settings saved successfully!" %}</span>
     </div>
     
 </div>

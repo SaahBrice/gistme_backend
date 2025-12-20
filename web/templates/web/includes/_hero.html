@@ -1,15 +1,16 @@
+{% load i18n %}
 <section class="min-h-screen flex flex-col justify-center px-6 relative pt-20" id="hero">
     <div class="max-w-[95vw]">
         <div class="overflow-hidden">
             <h1
                 class="hero-text font-display font-bold text-[13vw] leading-[0.85] tracking-tighter text-brand-black uppercase">
-                Curated.
+                {% trans "Curated." %}
             </h1>
         </div>
         <div class="overflow-hidden flex items-center gap-4 flex-wrap">
             <h1
                 class="hero-text font-display font-bold text-[13vw] leading-[0.85] tracking-tighter text-brand-black uppercase">
-                Consume.
+                {% trans "Consume." %}
             </h1>
             <div
                 class="w-24 h-24 md:w-[10vw] md:h-[10vw] bg-brand-yellow rounded-full flex items-center justify-center animate-spin-slow border-2 border-black">
@@ -17,7 +18,7 @@
                     <path id="curve" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="transparent" />
                     <text font-size="13" font-weight="bold">
                         <textPath href="#curve">
-                            SCROLL TO EXPLORE • SCROLL TO EXPLORE •
+                            {% trans "SCROLL TO EXPLORE" %} • {% trans "SCROLL TO EXPLORE" %} •
                         </textPath>
                     </text>
                 </svg>
@@ -26,16 +27,16 @@
         <div class="overflow-hidden relative">
             <h1
                 class="hero-text font-display font-bold text-[13vw] leading-[0.85] tracking-tighter text-brand-yellow uppercase cursor-default">
-                Conquer.
+                {% trans "Conquer." %}
             </h1>
         </div>
     </div>
 
     <div class="mt-12 md:absolute md:bottom-10 md:right-10 max-w-sm text-right">
         <p class="font-sans text-lg text-gray-600 leading-tight reveal-opacity mb-6">
-            News and opportunities. <br>
-            <span class="text-black font-bold bg-brand-yellow px-1">Yellow-light</span> your future.
+            {% trans "News and opportunities." %} <br>
+            <span class="text-black font-bold bg-brand-yellow px-1">{% trans "Yellow-light" %}</span> {% trans "your future." %}
         </p>
-        <a href="/feed/" class="nav-link btn-primary inline-block">GET STARTED</a>
+        <a href="{% url 'feed' %}" class="nav-link btn-primary inline-block">{% trans "GET STARTED" %}</a>
     </div>
 </section>

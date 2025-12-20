@@ -142,6 +142,8 @@ def save_settings(request):
             profile.receive_quotes = data['receive_quotes']
         if 'quote_category' in data:
             profile.quote_category = data['quote_category']
+        if 'custom_desires' in data:
+            profile.custom_desires = data['custom_desires']
         
         profile.save()
         

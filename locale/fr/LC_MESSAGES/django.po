@@ -1,0 +1,1214 @@
+# FRENCH TRANSLATIONS FOR GIST4U
+# Copyright (C) 2024 Gist4U
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+
+# Hero Section
+msgid "Curated."
+msgstr "Sélectionné."
+
+msgid "Consume."
+msgstr "Consomme."
+
+msgid "Conquer."
+msgstr "Conquiers."
+
+msgid "SCROLL TO EXPLORE"
+msgstr "DÉFILER POUR EXPLORER"
+
+msgid "News and opportunities."
+msgstr "Actualités et opportunités."
+
+msgid "Yellow-light"
+msgstr "Illuminez"
+
+msgid "your future."
+msgstr "votre avenir."
+
+msgid "GET STARTED"
+msgstr "COMMENCER"
+
+# Navbar
+msgid "FEATURES"
+msgstr "FONCTIONNALITÉS"
+
+msgid "PREVIEW"
+msgstr "APERÇU"
+
+msgid "PLANS"
+msgstr "TARIFS"
+
+# Pricing Section
+msgid "GET YOUR GIST"
+msgstr "OBTENEZ VOTRE GIST"
+
+msgid "Stay informed with Cameroon's hottest news, scholarships, and opportunities."
+msgstr "Restez informé des dernières actualités, bourses et opportunités du Cameroun."
+
+msgid "Get Started"
+msgstr "Commencer"
+
+msgid "Instant Access"
+msgstr "Accès Instantané"
+
+msgid "Personalized Feed"
+msgstr "Fil Personnalisé"
+
+msgid "Smart Alerts"
+msgstr "Alertes Intelligentes"
+
+msgid "Audio Summaries"
+msgstr "Résumés Audio"
+
+# Footer
+msgid "LEGAL"
+msgstr "MENTIONS LÉGALES"
+
+msgid "TERMS"
+msgstr "CONDITIONS"
+
+msgid "CONTACT"
+msgstr "CONTACT"
+
+msgid "Built with love for Cameroon"
+msgstr "Créé avec amour pour le Cameroun"
+
+msgid "Don't copy us. Be better than us."
+msgstr "Ne nous copiez pas. Faites mieux que nous."
+
+msgid "all rights reserved"
+msgstr "tous droits réservés"
+
+msgid "Powered by"
+msgstr "Propulsé par"
+
+# Mentors Section
+msgid "BUT WAIT, THERE'S MORE"
+msgstr "MAIS ATTENDEZ, CE N'EST PAS TOUT"
+
+msgid "PROFESSIONAL"
+msgstr "PROFESSIONNELS"
+
+msgid "MENTORS"
+msgstr "MENTORS"
+
+msgid "Connect with experienced professionals from various fields who are ready to guide you on your journey to success."
+msgstr "Connectez-vous avec des professionnels expérimentés de divers domaines prêts à vous guider vers le succès."
+
+msgid "FIND YOUR MENTOR"
+msgstr "TROUVEZ VOTRE MENTOR"
+
+msgid "FREE consultation"
+msgstr "Consultation GRATUITE"
+
+msgid "Expert guidance"
+msgstr "Conseils d'experts"
+
+msgid "Your success partner"
+msgstr "Votre partenaire de réussite"
+
+msgid "Tech Industry"
+msgstr "Industrie Tech"
+
+msgid "Software, AI, Data Science"
+msgstr "Logiciel, IA, Science des données"
+
+msgid "Finance"
+msgstr "Finance"
+
+msgid "Banking, Investment, Accounting"
+msgstr "Banque, Investissement, Comptabilité"
+
+msgid "Law"
+msgstr "Droit"
+
+msgid "Legal Practice, Policy, Advocacy"
+msgstr "Pratique juridique, Politique, Plaidoyer"
+
+msgid "Medicine"
+msgstr "Médecine"
+
+msgid "Healthcare, Research, Pharmacology"
+msgstr "Santé, Recherche, Pharmacologie"
+
+msgid "Entrepreneurship"
+msgstr "Entrepreneuriat"
+
+msgid "Startups, Business, Innovation"
+msgstr "Startups, Business, Innovation"
+
+msgid "Academia"
+msgstr "Académie"
+
+msgid "Research, Teaching, PhD Guidance"
+msgstr "Recherche, Enseignement, Accompagnement Doctorat"
+
+# Services Section
+msgid "WHAT WE OFFER"
+msgstr "CE QUE NOUS OFFRONS"
+
+msgid "Everything you need to stay ahead in Cameroon"
+msgstr "Tout ce dont vous avez besoin pour réussir au Cameroun"
+
+msgid "Scholarships"
+msgstr "Bourses"
+
+msgid "Full funding opportunities for students. Local and international programs curated daily for your success."
+msgstr "Opportunités de financement complet pour étudiants. Programmes locaux et internationaux sélectionnés quotidiennement."
+
+msgid "Job Opportunities"
+msgstr "Offres d'Emploi"
+
+msgid "Latest job openings from top companies. Internships, entry-level, and senior positions across all industries."
+msgstr "Dernières offres d'emploi des meilleures entreprises. Stages, postes juniors et seniors dans tous les secteurs."
+
+msgid "Concours & Exams"
+msgstr "Concours et Examens"
+
+msgid "Government and professional exams. Registration dates, deadlines, and preparation tips — all in one place."
+msgstr "Examens gouvernementaux et professionnels. Dates d'inscription, délais et conseils de préparation."
+
+msgid "Breaking News"
+msgstr "Actualités"
+
+msgid "Stay informed with curated news from trusted sources. No clickbait, no fluff — just the facts that matter."
+msgstr "Restez informé avec des actualités sélectionnées de sources fiables. Pas de racolage, juste les faits."
+
+msgid "Tech & Startups"
+msgstr "Tech et Startups"
+
+msgid "Innovation in Cameroon and Africa. Funding news, tech events, and startup opportunities for builders."
+msgstr "Innovation au Cameroun et en Afrique. Actualités financement, événements tech et opportunités startup."
+
+msgid "Events & Workshops"
+msgstr "Événements et Ateliers"
+
+msgid "Conferences, webinars, and skill-building events happening near you. Never miss a networking opportunity."
+msgstr "Conférences, webinaires et événements près de chez vous. Ne manquez aucune opportunité de networking."
+
+# Testimonials
+msgid "TESTIMONIALS"
+msgstr "TÉMOIGNAGES"
+
+msgid "Loved by"
+msgstr "Aimé par les"
+
+msgid "Readers"
+msgstr "Lecteurs"
+
+msgid "See what our growing community of 5,000+ Cameroonians says about Gist4U."
+msgstr "Découvrez ce que notre communauté de 5 000+ Camerounais dit de Gist4U."
+
+# FAQ
+msgid "Common"
+msgstr "Questions"
+
+msgid "Questions"
+msgstr "Fréquentes"
+
+msgid "Everything you need to know about Gist4U"
+msgstr "Tout ce que vous devez savoir sur Gist4U"
+
+msgid "What is Gist4U?"
+msgstr "Qu'est-ce que Gist4U ?"
+
+msgid "Gist4U is your personal news assistant for Cameroon. We curate scholarships, jobs, concours, and opportunities so you never miss what matters."
+msgstr "Gist4U est votre assistant personnel d'actualités pour le Cameroun. Nous sélectionnons bourses, emplois, concours et opportunités pour que vous ne manquiez rien d'important."
+
+msgid "How does Gist4U work?"
+msgstr "Comment fonctionne Gist4U ?"
+
+msgid "Sign up, tell us your interests, and we'll send you personalized updates. You can also browse our curated feed anytime."
+msgstr "Inscrivez-vous, dites-nous vos intérêts, et nous vous enverrons des mises à jour personnalisées. Vous pouvez aussi parcourir notre fil d'actualités à tout moment."
+
+msgid "Is Gist4U free?"
+msgstr "Gist4U est-il gratuit ?"
+
+msgid "Yes! Basic access is completely free. Pro members get priority alerts and audio summaries."
+msgstr "Oui ! L'accès de base est entièrement gratuit. Les membres Pro reçoivent des alertes prioritaires et des résumés audio."
+
+msgid "How can I connect with mentors?"
+msgstr "Comment puis-je me connecteur avec des mentors ?"
+
+msgid "Browse our mentor directory, select someone in your field, and request a connection. We'll facilitate the introduction!"
+msgstr "Parcourez notre répertoire de mentors, sélectionnez quelqu'un dans votre domaine, et demandez une connexion. Nous faciliterons la mise en relation !"
+
+msgid "What makes Gist4U different?"
+msgstr "Qu'est-ce qui rend Gist4U différent ?"
+
+msgid "We focus exclusively on Cameroon. No global noise — just local opportunities that matter to your career and education."
+msgstr "Nous nous concentrons exclusivement sur le Cameroun. Pas de bruit global — juste des opportunités locales importantes pour votre carrière et éducation."
+
+msgid "How do I get Pro access?"
+msgstr "Comment obtenir l'accès Pro ?"
+
+msgid "Tap the Pro button, pay 1,500 FCFA for 3 months, and unlock priority alerts, audio summaries, and exclusive content."
+msgstr "Appuyez sur le bouton Pro, payez 1 500 FCFA pour 3 mois, et débloquez les alertes prioritaires, résumés audio et contenu exclusif."
+
+# Signup/WhatsApp Section
+msgid "JOIN OUR COMMUNITY"
+msgstr "REJOIGNEZ NOTRE COMMUNAUTÉ"
+
+msgid "Join the Community"
+msgstr "Rejoindre la Communauté"
+
+msgid "Be part of 5,000+ Cameroonians staying ahead"
+msgstr "Faites partie des 5 000+ Camerounais qui restent en avance"
+
+msgid "Join WhatsApp"
+msgstr "Rejoindre WhatsApp"
+
+# Demo Section
+msgid "SWIPE THE GIST"
+msgstr "BALAYEZ LE GIST"
+
+msgid "Experience the future of news consumption. Swipe through curated updates tailored just for you."
+msgstr "Découvrez le futur de la consommation d'actualités. Balayez les mises à jour sélectionnées pour vous."
+
+# Features Section
+msgid "WE BROKE THE FEED"
+msgstr "NOUS AVONS CASSÉ LE FIL"
+
+msgid "Step 1"
+msgstr "Étape 1"
+
+msgid "Receive Your Gist"
+msgstr "Recevez Votre Gist"
+
+msgid "Get Full Guidance"
+msgstr "Obtenez un Guide Complet"
+
+msgid "Succeed!"
+msgstr "Réussissez !"
+
+msgid "AUDIO FIRST"
+msgstr "AUDIO D'ABORD"
+
+msgid "We transform your gists into a personalized audio experience. Listen on the go, anywhere, anytime."
+msgstr "Nous transformons vos gists en expérience audio personnalisée. Écoutez en déplacement, n'importe où, n'importe quand."
+
+msgid "CONTROL YOUR FUTURE"
+msgstr "CONTRÔLEZ VOTRE AVENIR"
+
+msgid "Set your preferences, and we'll do the rest. Your feed, your rules."
+msgstr "Définissez vos préférences, nous faisons le reste. Votre fil, vos règles."
+
+# Contact Page
+msgid "GET IN TOUCH"
+msgstr "CONTACTEZ-NOUS"
+
+msgid "Connect"
+msgstr "Contact"
+
+msgid "Let's"
+msgstr "Restons en"
+
+msgid "Have questions, feedback, or need support? We're here to help you succeed!"
+msgstr "Des questions, des commentaires ou besoin d'aide ? Nous sommes là pour vous aider à réussir !"
+
+msgid "WhatsApp"
+msgstr "WhatsApp"
+
+msgid "Get instant replies! Chat with us directly on WhatsApp for quick support."
+msgstr "Obtenez des réponses instantanées ! Discutez avec nous directement sur WhatsApp."
+
+msgid "Chat Now"
+msgstr "Discuter"
+
+msgid "Email Us"
+msgstr "Nous Écrire"
+
+msgid "For detailed inquiries or partnerships. We respond within 24 hours."
+msgstr "Pour des demandes détaillées ou des partenariats. Nous répondons sous 24 heures."
+
+msgid "Send Email"
+msgstr "Envoyer"
+
+msgid "Join Community"
+msgstr "Rejoindre la Communauté"
+
+msgid "Connect with 5,000+ Cameroonians. Share tips, get updates, and grow together!"
+msgstr "Connectez-vous avec 5 000+ Camerounais. Partagez des conseils, restez informés et grandissez ensemble !"
+
+msgid "Join Now"
+msgstr "Rejoindre"
+
+msgid "CONTACT INFO"
+msgstr "COORDONNÉES"
+
+msgid "We're Always Here For You"
+msgstr "Nous Sommes Toujours Là Pour Vous"
+
+msgid "Reach out anytime — our team is dedicated to helping you find opportunities and succeed in your journey."
+msgstr "Contactez-nous à tout moment — notre équipe est dédiée à vous aider à réussir."
+
+msgid "Phone"
+msgstr "Téléphone"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Response Time"
+msgstr "Temps de Réponse"
+
+msgid "Within 24 hours"
+msgstr "Sous 24 heures"
+
+msgid "We love hearing from you!"
+msgstr "Nous adorons avoir de vos nouvelles !"
+
+msgid "Happy Users"
+msgstr "Utilisateurs Satisfaits"
+
+msgid "Back to Home"
+msgstr "Retour à l'Accueil"
+
+# Additional Services Section
+msgid "Your"
+msgstr "Votre"
+
+msgid "Opportunity"
+msgstr "Opportunité"
+
+msgid "Hub"
+msgstr "Hub"
+
+msgid "Updated daily"
+msgstr "Mis à jour quotidiennement"
+
+msgid "500+ listings"
+msgstr "500+ offres"
+
+msgid "Never miss a deadline"
+msgstr "Ne manquez jamais une date limite"
+
+msgid "Live updates"
+msgstr "Mises à jour en direct"
+
+msgid "Entrepreneur focused"
+msgstr "Focus entrepreneurs"
+
+msgid "Local & virtual"
+msgstr "Local et virtuel"
+
+# Signup Section
+msgid "NEVER MISS OUT"
+msgstr "NE MANQUEZ RIEN"
+
+msgid "Join our WhatsApp community for real-time updates on scholarships, exams, and opportunities."
+msgstr "Rejoignez notre communauté WhatsApp pour des mises à jour en temps réel sur les bourses, examens et opportunités."
+
+msgid "5,000+ Cameroonians already in. Free forever."
+msgstr "5 000+ Camerounais déjà inscrits. Gratuit pour toujours."
+
+# FAQ Section
+msgid "FAQ"
+msgstr "FAQ"
+
+# Features Section
+msgid "YOUR JOURNEY"
+msgstr "VOTRE PARCOURS"
+
+msgid "HOW IT"
+msgstr "COMMENT"
+
+msgid "WORKS"
+msgstr "ÇA MARCHE"
+
+msgid "Get curated gists tailored to your interests — scholarships, jobs, exams & more."
+msgstr "Recevez des gists sélectionnés selon vos intérêts — bourses, emplois, examens et plus."
+
+msgid "Found an opportunity? Contact Gist4U for complete guidance and support."
+msgstr "Vous avez trouvé une opportunité ? Contactez Gist4U pour un accompagnement complet."
+
+msgid "Land that scholarship, ace that exam, or get your dream job. Your success is our mission."
+msgstr "Décrochez cette bourse, réussissez cet examen, ou obtenez votre emploi de rêve. Votre succès est notre mission."
+
+msgid "AUDIO"
+msgstr "AUDIO"
+
+msgid "FIRST."
+msgstr "D'ABORD."
+
+msgid "Don't read while walking. Listen. Our AI synthesizes gists into a personalized audio."
+msgstr "Ne lisez pas en marchant. Écoutez. Notre IA transforme les gists en audio personnalisé."
+
+msgid "AI VOICE ACTIVE"
+msgstr "VOIX IA ACTIVE"
+
+msgid "CONTROL"
+msgstr "CONTRÔLEZ"
+
+msgid "YOUR"
+msgstr "VOTRE"
+
+msgid "FUTURE"
+msgstr "AVENIR"
+
+msgid "Ready to curate?"
+msgstr "Prêt à commencer ?"
+
+msgid "SCROLL TO PREVIEW APP"
+msgstr "DÉFILER POUR PRÉVISUALISER"
+
+# Demo Section
+msgid "LIVE PREVIEW"
+msgstr "APERÇU EN DIRECT"
+
+msgid "SWIPE"
+msgstr "BALAYEZ"
+
+msgid "THE GIST."
+msgstr "LE GIST."
+
+msgid "Experience the deck. Skip what you don't need, drill down into what matters."
+msgstr "Découvrez le fil. Passez ce qui ne vous intéresse pas, approfondissez ce qui compte."
+
+msgid "NEXT CARD"
+msgstr "CARTE SUIVANTE"
+
+msgid "SAVE"
+msgstr "SAUVEGARDER"
+
+msgid "READ"
+msgstr "LIRE"
+
+msgid "All Caught Up!"
+msgstr "Tout est lu !"
+
+msgid "Refresh Feed"
+msgstr "Rafraîchir le fil"
+
+# Mentor Section Additional
+msgid "FIELD"
+msgstr "DOMAINE"
+
+msgid "Technology"
+msgstr "Technologie"
+
+msgid "Software engineers, data scientists, and tech entrepreneurs ready to help you break into the tech industry."
+msgstr "Ingénieurs logiciels, data scientists et entrepreneurs tech prêts à vous aider à percer dans l'industrie technologique."
+
+msgid "15+ mentors available"
+msgstr "15+ mentors disponibles"
+
+msgid "Bankers, accountants, and financial analysts who can guide your career in finance and investment."
+msgstr "Banquiers, comptables et analystes financiers pour guider votre carrière dans la finance et l'investissement."
+
+msgid "12+ mentors available"
+msgstr "12+ mentors disponibles"
+
+msgid "Lawyers, magistrates, and legal professionals to mentor aspiring law students and practitioners."
+msgstr "Avocats, magistrats et juristes pour encadrer les aspirants étudiants en droit et praticiens."
+
+msgid "8+ mentors available"
+msgstr "8+ mentors disponibles"
+
+msgid "Doctors, nurses, and healthcare professionals who can guide your medical career journey."
+msgstr "Médecins, infirmiers et professionnels de santé pour guider votre carrière médicale."
+
+msgid "10+ mentors available"
+msgstr "10+ mentors disponibles"
+
+msgid "Startup founders, business owners, and innovators to help you launch and scale your venture."
+msgstr "Fondateurs de startups, propriétaires d'entreprises et innovateurs pour vous aider à lancer et développer votre projet."
+
+msgid "20+ mentors available"
+msgstr "20+ mentors disponibles"
+
+msgid "Professors, researchers, and PhD holders to guide your academic and research career path."
+msgstr "Professeurs, chercheurs et titulaires de doctorat pour guider votre parcours académique et de recherche."
+
+msgid "18+ mentors available"
+msgstr "18+ mentors disponibles"
+
+# FAQ Questions and Answers
+msgid "Is Gist4U really free?"
+msgstr "Gist4U est-il vraiment gratuit ?"
+
+msgid "Yes! Our core features are completely free. You can read the daily news feed, get article summaries, and bookmark content without paying anything. The Pro plan unlocks unlimited features like audio playback, offline mode, and priority notifications."
+msgstr "Oui ! Nos fonctionnalités principales sont entièrement gratuites. Vous pouvez lire le fil d'actualités, obtenir des résumés d'articles et mettre du contenu en signet sans rien payer. Le plan Pro débloque des fonctionnalités illimitées comme la lecture audio, le mode hors ligne et les notifications prioritaires."
+
+msgid "How does the AI summary work?"
+msgstr "Comment fonctionne le résumé IA ?"
+
+msgid "Our AI reads full articles from trusted sources and condenses them into 2-3 minute summaries. You get the key points without the fluff, saving you hours of reading time every day."
+msgstr "Notre IA lit les articles complets de sources fiables et les condense en résumés de 2-3 minutes. Vous obtenez les points clés sans le superflu, économisant des heures de lecture chaque jour."
+
+msgid "What kind of opportunities do you cover?"
+msgstr "Quel type d'opportunités couvrez-vous ?"
+
+msgid "We cover scholarships (local and international), job opportunities, government concours, internships, grants, tech events, and more. Our team curates content specifically for Cameroonians looking to advance their careers."
+msgstr "Nous couvrons les bourses (locales et internationales), les opportunités d'emploi, les concours gouvernementaux, les stages, les subventions, les événements tech, et plus encore. Notre équipe sélectionne du contenu spécifiquement pour les Camerounais cherchant à faire avancer leur carrière."
+
+msgid "Can I use it offline?"
+msgstr "Puis-je l'utiliser hors ligne ?"
+
+msgid "Pro users can save articles for offline reading. Perfect for when you're commuting or in areas with limited internet access. Bookmarked content is automatically synced when you're back online."
+msgstr "Les utilisateurs Pro peuvent sauvegarder des articles pour la lecture hors ligne. Parfait quand vous êtes en déplacement ou dans des zones avec un accès internet limité. Le contenu mis en signet est automatiquement synchronisé quand vous êtes de retour en ligne."
+
+msgid "Is there a mobile app?"
+msgstr "Y a-t-il une application mobile ?"
+
+msgid "Yes! Gist4U is a Progressive Web App (PWA). Add it to your home screen for an app-like experience — no app store download needed. It works beautifully on both iOS and Android."
+msgstr "Oui ! Gist4U est une Progressive Web App (PWA). Ajoutez-la à votre écran d'accueil pour une expérience comme une application — aucun téléchargement d'app store nécessaire. Elle fonctionne parfaitement sur iOS et Android."
+
+msgid "How do I get Pro?"
+msgstr "Comment obtenir Pro ?"
+
+msgid "Pro costs just 1,500 FCFA for 3 months. Pay via Mobile Money (Orange Money or MTN MoMo) and get instant access to all premium features including audio summaries, offline mode, and priority notifications."
+msgstr "Pro coûte seulement 1 500 FCFA pour 3 mois. Payez via Mobile Money (Orange Money ou MTN MoMo) et obtenez un accès instantané à toutes les fonctionnalités premium incluant les résumés audio, le mode hors ligne et les notifications prioritaires."
+
+msgid "Gist4U is a Progressive Web App (PWA). You can install it directly from your browser — just visit our site on mobile and tap 'Add to Home Screen'. It works just like a native app!"
+msgstr "Gist4U est une Progressive Web App (PWA). Vous pouvez l'installer directement depuis votre navigateur — visitez notre site sur mobile et appuyez sur 'Ajouter à l'écran d'accueil'. Ça fonctionne comme une application native !"
+
+msgid "How do I connect with a mentor?"
+msgstr "Comment me connecter avec un mentor ?"
+
+msgid "Visit our Mentors page and browse professionals from various fields. Submit your request and we'll connect you with a mentor who matches your goals. Your first consultation is completely free!"
+msgstr "Visitez notre page Mentors et parcourez les professionnels de divers domaines. Soumettez votre demande et nous vous connecterons avec un mentor qui correspond à vos objectifs. Votre première consultation est entièrement gratuite !"
+
+msgid "Still have questions?"
+msgstr "Vous avez encore des questions ?"
+
+msgid "Contact Us"
+msgstr "Contactez-nous"
+
+# Marquee Section
+msgid "Hottest Gist"
+msgstr "Dernières Infos"
+
+msgid "Infinite News"
+msgstr "Actualités Infinies"
+
+msgid "Audio Briefs"
+msgstr "Résumés Audio"
+
+msgid "National Exams"
+msgstr "Concours Nationaux"
+
+msgid "No Algorithms"
+msgstr "Pas d'Algorithmes"
+
+msgid "Pure Signal"
+msgstr "Signal Pur"
+
+msgid "Latest Gist"
+msgstr "Derniers Gists"
+
+msgid "Job Alerts"
+msgstr "Alertes Emploi"
+
+# Legal Page
+msgid "Legal Notice"
+msgstr "Mentions Légales"
+
+msgid "Disclaimer"
+msgstr "Avertissement"
+
+msgid "Gist4U is an information aggregation service that curates, summarizes and provides news, opportunities, and announcements. We strive to provide accurate and up-to-date information, but we make no warranties or guarantees regarding the completeness, accuracy, or reliability of any content displayed on this platform."
+msgstr "Gist4U est un service d'agrégation d'informations qui sélectionne, résume et fournit des actualités, opportunités et annonces. Nous nous efforçons de fournir des informations exactes et à jour, mais nous ne garantissons pas l'exhaustivité, l'exactitude ou la fiabilité du contenu affiché sur cette plateforme."
+
+msgid "Limitation of Liability"
+msgstr "Limitation de responsabilité"
+
+msgid "Gist4U and its operators shall not be held liable for any direct, indirect, incidental, or consequential damages arising from the use of this service. Users are encouraged to verify information from original sources before making decisions based on content found here."
+msgstr "Gist4U et ses opérateurs ne pourront être tenus responsables de tout dommage direct, indirect, accessoire ou consécutif résultant de l'utilisation de ce service. Les utilisateurs sont encouragés à vérifier les informations auprès des sources originales avant de prendre des décisions."
+
+msgid "Third-Party Content"
+msgstr "Contenu Tiers"
+
+msgid "This platform may contain links to external websites and content from third-party sources. We do not control or endorse the content of these external sites and are not responsible for their availability, accuracy, or practices."
+msgstr "Cette plateforme peut contenir des liens vers des sites externes et du contenu provenant de sources tierces. Nous ne contrôlons pas et n'approuvons pas le contenu de ces sites externes et ne sommes pas responsables de leur disponibilité, exactitude ou pratiques."
+
+msgid "Intellectual Property"
+msgstr "Propriété Intellectuelle"
+
+msgid "The Gist4U name, logo, and original content are protected by applicable intellectual property laws. Summarized content is provided for informational purposes only, and original sources retain their respective rights."
+msgstr "Le nom Gist4U, le logo et le contenu original sont protégés par les lois sur la propriété intellectuelle applicables. Le contenu résumé est fourni à titre informatif uniquement, et les sources originales conservent leurs droits respectifs."
+
+msgid "For any legal inquiries or concerns, please contact us via WhatsApp at"
+msgstr "Pour toute question ou préoccupation juridique, veuillez nous contacter via WhatsApp au"
+
+msgid "Last updated: December 2025"
+msgstr "Dernière mise à jour : Décembre 2025"
+
+# Terms Page
+msgid "Terms and Conditions"
+msgstr "Conditions Générales"
+
+msgid "1. Acceptance of Terms"
+msgstr "1. Acceptation des Conditions"
+
+msgid "By accessing or using Gist4U, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use our service."
+msgstr "En accédant ou en utilisant Gist4U, vous acceptez d'être lié par ces Conditions Générales. Si vous n'acceptez pas une partie de ces conditions, veuillez ne pas utiliser notre service."
+
+msgid "2. Service Description"
+msgstr "2. Description du Service"
+
+msgid "Gist4U is a news and opportunity curation platform that aggregates, summarizes, and delivers relevant information to users in Cameroon and beyond. Our service includes free and paid subscription tiers."
+msgstr "Gist4U est une plateforme de curation d'actualités et d'opportunités qui agrège, résume et délivre des informations pertinentes aux utilisateurs au Cameroun et au-delà. Notre service comprend des niveaux d'abonnement gratuits et payants."
+
+msgid "3. User Accounts"
+msgstr "3. Comptes Utilisateurs"
+
+msgid "When subscribing to our Pro service, you are responsible for providing accurate information (name, email, phone number). You agree to receive notifications and communications related to your subscription and curated content."
+msgstr "En vous abonnant à notre service Pro, vous êtes responsable de fournir des informations exactes (nom, email, numéro de téléphone). Vous acceptez de recevoir des notifications et communications liées à votre abonnement et au contenu sélectionné."
+
+msgid "4. Subscription and Payments"
+msgstr "4. Abonnement et Paiements"
+
+msgid "Pro subscriptions are billed at the rate displayed during checkout"
+msgstr "Les abonnements Pro sont facturés au tarif affiché lors du paiement"
+
+msgid "Subscription periods are 3 months in duration"
+msgstr "Les périodes d'abonnement sont de 3 mois"
+
+msgid "Payments are processed through Fapshi mobile money gateway"
+msgstr "Les paiements sont traités via la passerelle mobile money Fapshi"
+
+msgid "Refunds are handled on a case-by-case basis"
+msgstr "Les remboursements sont traités au cas par cas"
+
+msgid "Coupon codes, if valid, will apply the stated discount"
+msgstr "Les codes promo, s'ils sont valides, appliqueront la réduction indiquée"
+
+msgid "5. Acceptable Use"
+msgstr "5. Utilisation Acceptable"
+
+msgid "You agree not to:"
+msgstr "Vous acceptez de ne pas :"
+
+msgid "Use the service for any unlawful purpose"
+msgstr "Utiliser le service à des fins illégales"
+
+msgid "Attempt to gain unauthorized access to our systems"
+msgstr "Tenter d'obtenir un accès non autorisé à nos systèmes"
+
+msgid "Share your subscription with others"
+msgstr "Partager votre abonnement avec d'autres"
+
+msgid "Redistribute our curated content for commercial purposes"
+msgstr "Redistribuer notre contenu sélectionné à des fins commerciales"
+
+msgid "6. Content Accuracy"
+msgstr "6. Exactitude du Contenu"
+
+msgid "While we strive for accuracy, we cannot guarantee that all information is error-free. Users should independently verify critical information, especially regarding deadlines, requirements, and official announcements."
+msgstr "Bien que nous nous efforcions d'être exacts, nous ne pouvons garantir que toutes les informations sont sans erreur. Les utilisateurs doivent vérifier indépendamment les informations critiques, notamment concernant les délais, exigences et annonces officielles."
+
+msgid "7. Modifications"
+msgstr "7. Modifications"
+
+msgid "We reserve the right to modify these terms at any time. Continued use of the service after changes constitutes acceptance of the new terms."
+msgstr "Nous nous réservons le droit de modifier ces conditions à tout moment. L'utilisation continue du service après les modifications constitue l'acceptation des nouvelles conditions."
+
+msgid "8. Contact"
+msgstr "8. Contact"
+
+msgid "For questions about these terms, contact us via WhatsApp at"
+msgstr "Pour toute question concernant ces conditions, contactez-nous via WhatsApp au"
+
+# Advantages Section
+msgid "Why Gist4U"
+msgstr "Pourquoi Gist4U"
+
+msgid "The Numbers Speak"
+msgstr "Les Chiffres Parlent"
+
+msgid "Real impact for real people"
+msgstr "Un impact réel pour de vraies personnes"
+
+msgid "Hours Saved Daily"
+msgstr "Heures Économisées/Jour"
+
+msgid "Curated content means less scrolling, more learning"
+msgstr "Contenu sélectionné signifie moins de défilement, plus d'apprentissage"
+
+msgid "To Get Informed"
+msgstr "Pour S'informer"
+
+msgid "AI summaries deliver key information fast"
+msgstr "Les résumés IA livrent les infos clés rapidement"
+
+msgid "Missed Deadlines"
+msgstr "Dates Limite Manquées"
+
+msgid "Smart alerts ensure you never miss an opportunity"
+msgstr "Les alertes intelligentes garantissent que vous ne manquez jamais une opportunité"
+
+# Contact Page Additional
+msgid "GET IN TOUCH"
+msgstr "CONTACTEZ-NOUS"
+
+msgid "Let's"
+msgstr "On se"
+
+msgid "Connect"
+msgstr "connecte"
+
+msgid "Have questions, feedback, or need support? We're here to help you succeed!"
+msgstr "Des questions, des commentaires ou besoin d'assistance ? Nous sommes là pour vous aider à réussir !"
+
+msgid "Get instant replies! Chat with us directly on WhatsApp for quick support."
+msgstr "Obtenez des réponses instantanées ! Discutez avec nous directement sur WhatsApp pour un support rapide."
+
+msgid "Chat Now"
+msgstr "Chatter Maintenant"
+
+msgid "Email Us"
+msgstr "Écrivez-nous"
+
+msgid "For detailed inquiries or partnerships. We respond within 24 hours."
+msgstr "Pour des demandes détaillées ou des partenariats. Nous répondons sous 24 heures."
+
+msgid "Send Email"
+msgstr "Envoyer un Email"
+
+msgid "Connect with 5,000+ Cameroonians. Share tips, get updates, and grow together!"
+msgstr "Connectez-vous avec 5 000+ Camerounais. Partagez des astuces, recevez des mises à jour et grandissez ensemble !"
+
+msgid "Join Now"
+msgstr "Rejoindre Maintenant"
+
+msgid "CONTACT INFO"
+msgstr "INFO CONTACT"
+
+msgid "Reach out anytime — our team is dedicated to helping you find opportunities and succeed in your journey."
+msgstr "Contactez-nous à tout moment — notre équipe est dédiée à vous aider à trouver des opportunités et réussir."
+
+# Feed Page - Navigation Tabs
+msgid "News"
+msgstr "Actualités"
+
+msgid "Opportunities"
+msgstr "Opportunités"
+
+msgid "For You"
+msgstr "Pour Vous"
+
+# Feed Page - Profile Modal
+msgid "My Quote of Today"
+msgstr "Ma Citation du Jour"
+
+msgid "Relax Here"
+msgstr "Détendez-vous"
+
+msgid "Mentor Me"
+msgstr "Mentorez-moi"
+
+msgid "Sponsors & Partners"
+msgstr "Sponsors & Partenaires"
+
+# Feed Page - Settings Modal
+msgid "Account"
+msgstr "Compte"
+
+msgid "Name"
+msgstr "Nom"
+
+msgid "Phone"
+msgstr "Téléphone"
+
+msgid "Region"
+msgstr "Région"
+
+msgid "Education Level"
+msgstr "Niveau d'Études"
+
+msgid "Background"
+msgstr "Formation"
+
+msgid "Interests"
+msgstr "Intérêts"
+
+msgid "Notification Time"
+msgstr "Heure de Notification"
+
+msgid "Push Notifications"
+msgstr "Notifications Push"
+
+msgid "Language"
+msgstr "Langue"
+
+msgid "Quote of the Day"
+msgstr "Citation du Jour"
+
+msgid "Receive Daily Quotes"
+msgstr "Recevoir des Citations Quotidiennes"
+
+msgid "Quote Category"
+msgstr "Catégorie de Citation"
+
+msgid "Custom Desires"
+msgstr "Souhaits Personnalisés"
+
+msgid "Tell us what you're looking for"
+msgstr "Dites-nous ce que vous recherchez"
+
+msgid "Save Changes"
+msgstr "Enregistrer les Modifications"
+
+msgid "Saving..."
+msgstr "Enregistrement..."
+
+msgid "Account Actions"
+msgstr "Actions du Compte"
+
+msgid "Log Out"
+msgstr "Déconnexion"
+
+msgid "Delete Account"
+msgstr "Supprimer le Compte"
+
+msgid "Terms & Privacy Policy"
+msgstr "Conditions & Politique de Confidentialité"
+
+# Feed Page - Bookmarks Modal
+msgid "No bookmarks yet"
+msgstr "Pas encore de signets"
+
+msgid "Articles you bookmark will appear here"
+msgstr "Les articles que vous mettez en signet apparaîtront ici"
+
+# Feed Page - Notifications Modal
+msgid "Gist, based on your interest"
+msgstr "Gist, basé sur vos intérêts"
+
+msgid "No gist yet"
+msgstr "Pas encore de gist"
+
+msgid "Set your custom desires in Settings to get personalized gist"
+msgstr "Définissez vos souhaits personnalisés dans Paramètres pour obtenir des gists personnalisés"
+
+# Feed Page - Sponsors Modal
+msgid "Thank You!"
+msgstr "Merci !"
+
+msgid "Your inquiry has been received. Our founder will personally get in touch with you soon."
+msgstr "Votre demande a été reçue. Notre fondateur vous contactera personnellement bientôt."
+
+msgid "Close"
+msgstr "Fermer"
+
+msgid "Partner with us or sponsor our mission to connect Cameroonians with opportunities."
+msgstr "Associez-vous à nous ou parrainez notre mission de connecter les Camerounais aux opportunités."
+
+msgid "What would you like to do?"
+msgstr "Que souhaitez-vous faire ?"
+
+msgid "Sponsor"
+msgstr "Sponsor"
+
+msgid "Partner"
+msgstr "Partenaire"
+
+msgid "Both"
+msgstr "Les Deux"
+
+msgid "Your Information"
+msgstr "Vos Informations"
+
+msgid "Full Name"
+msgstr "Nom Complet"
+
+msgid "Organization"
+msgstr "Organisation"
+
+msgid "Optional"
+msgstr "Optionnel"
+
+msgid "Company/Organization Name"
+msgstr "Nom de l'Entreprise/Organisation"
+
+msgid "Website"
+msgstr "Site Web"
+
+msgid "Tell Us More"
+msgstr "Dites-nous en Plus"
+
+msgid "Send"
+msgstr "Envoyer"
+
+msgid "Sending..."
+msgstr "Envoi..."
+
+msgid "Share"
+msgstr "Partager"
+
+# Feed Page - Terms Modal
+msgid "Terms & Privacy"
+msgstr "Conditions & Confidentialité"
+
+msgid "Terms of Service"
+msgstr "Conditions d'Utilisation"
+
+msgid "By using Gist4U, you agree to these terms. We provide curated opportunities including scholarships, jobs, and competitions."
+msgstr "En utilisant Gist4U, vous acceptez ces conditions. Nous fournissons des opportunités sélectionnées incluant bourses, emplois et concours."
+
+msgid "Privacy Policy"
+msgstr "Politique de Confidentialité"
+
+msgid "We collect your email, phone, and preferences to personalize your experience. Your data is stored securely and never sold."
+msgstr "Nous collectons votre email, téléphone et préférences pour personnaliser votre expérience. Vos données sont stockées en sécurité et jamais vendues."
+
+msgid "By enabling notifications, you consent to receiving updates about opportunities matching your interests."
+msgstr "En activant les notifications, vous consentez à recevoir des mises à jour sur les opportunités correspondant à vos intérêts."
+
+msgid "Questions? Email us at"
+msgstr "Questions ? Écrivez-nous à"
+
+# Feed Page - Delete Account Popup
+msgid "Delete Account?"
+msgstr "Supprimer le Compte ?"
+
+msgid "To delete your account, contact us:"
+msgstr "Pour supprimer votre compte, contactez-nous :"
+
+msgid "Got it"
+msgstr "Compris"
+
+msgid "Settings saved successfully!"
+msgstr "Paramètres enregistrés avec succès !"
+
+# Article Page
+msgid "More for you"
+msgstr "Plus pour vous"
+
+msgid "Timeline"
+msgstr "Chronologie"
+
+msgid "Share this article"
+msgstr "Partager cet article"
+
+msgid "Image"
+msgstr "Image"
+
+msgid "Download Image"
+msgstr "Télécharger l'Image"
+
+msgid "Gist Assistant"
+msgstr "Assistant Gist"
+
+msgid "Ask me about this article"
+msgstr "Posez-moi des questions sur cet article"
+
+# Subscription Modal
+msgid "Never Miss Any Opportunity Anymore!"
+msgstr "Ne Manquez Plus Jamais Aucune Opportunité !"
+
+msgid "You'll never miss any opportunity again. Get alerts for scholarships, jobs, exam results, and hot gist."
+msgstr "Vous ne manquerez plus jamais aucune opportunité. Recevez des alertes pour les bourses, emplois, résultats d'examens et les dernières infos."
+
+msgid "Delivered to your email & phone"
+msgstr "Livré sur votre email & téléphone"
+
+msgid "Get Started"
+msgstr "Commencer"
+
+msgid "Phone Number"
+msgstr "Numéro de Téléphone"
+
+msgid "Email Address"
+msgstr "Adresse Email"
+
+msgid "What kind of gist do you want?"
+msgstr "Quel type de gist voulez-vous ?"
+
+msgid "Coupon Code"
+msgstr "Code Promo"
+
+msgid "Apply"
+msgstr "Appliquer"
+
+msgid "Just 1,500 FCFA / 3 months"
+msgstr "Seulement 1 500 FCFA / 3 mois"
+
+msgid "Back"
+msgstr "Retour"
+
+msgid "Processing..."
+msgstr "Traitement..."
+
+msgid "Please wait while we process your subscription"
+msgstr "Veuillez patienter pendant que nous traitons votre abonnement"
+
+msgid "You're all set! You'll now receive priority alerts for scholarships, jobs, exam results, and exclusive gist directly to your phone and email."
+msgstr "Vous êtes paré ! Vous recevrez désormais des alertes prioritaires pour les bourses, emplois, résultats d'examens et gists exclusifs directement sur votre téléphone et email."
+
+msgid "Subscription Active"
+msgstr "Abonnement Actif"
+
+msgid "Valid until:"
+msgstr "Valide jusqu'au :"
+
+msgid "Explore Your Feed"
+msgstr "Explorez Votre Fil"
+
+msgid "You're Already Pro!"
+msgstr "Vous Êtes Déjà Pro !"
+
+msgid "Great news! You already have an active Pro subscription. No need to subscribe again."
+msgstr "Bonne nouvelle ! Vous avez déjà un abonnement Pro actif. Pas besoin de vous réabonner."
+
+msgid "Pro Subscription Active"
+msgstr "Abonnement Pro Actif"
+
+msgid "Go to Feed"
+msgstr "Aller au Fil"
+
+# Login/Signup Pages
+msgid "Free Forever"
+msgstr "Gratuit à Vie"
+
+msgid "Welcome back! Sign in to continue"
+msgstr "Bon retour ! Connectez-vous pour continuer"
+
+msgid "Continue with Google"
+msgstr "Continuer avec Google"
+
+msgid "or use email"
+msgstr "ou utilisez votre email"
+
+msgid "Sign In"
+msgstr "Connexion"
+
+msgid "New here?"
+msgstr "Nouveau ici ?"
+
+msgid "Create an account"
+msgstr "Créer un compte"
+
+msgid "Join Now"
+msgstr "Rejoignez-nous"
+
+msgid "Create your free account"
+msgstr "Créez votre compte gratuit"
+
+msgid "Sign up with Google"
+msgstr "S'inscrire avec Google"
+
+msgid "At least 8 characters"
+msgstr "Au moins 8 caractères"
+
+msgid "Create Account"
+msgstr "Créer le Compte"
+
+msgid "Already have an account?"
+msgstr "Vous avez déjà un compte ?"
+
+msgid "Sign in"
+msgstr "Connexion"
+
+msgid "Get Cameroon's hottest gist in 60 seconds"
+msgstr "Obtenez les dernières nouvelles du Cameroun en 60 secondes"
+
+# Mentor Page
+msgid "Available Mentors"
+msgstr "Mentors Disponibles"
+
+msgid "read more"
+msgstr "lire plus"
+
+msgid "show less"
+msgstr "voir moins"
+
+msgid "No mentors found"
+msgstr "Aucun mentor trouvé"
+
+msgid "Try a different category"
+msgstr "Essayez une autre catégorie"
+
+msgid "Welcome to Mentor Me"
+msgstr "Bienvenue dans Mentor Me"
+
+msgid "Tap to hear about our mentorship program"
+msgstr "Appuyez pour découvrir notre programme de mentorat"
+
+# Onboarding Page
+msgid "Let's personalize your experience"
+msgstr "Personnalisons votre expérience"
+
+msgid "Let's Go"
+msgstr "C'est parti"
+
+msgid "Let's get started"
+msgstr "Commençons"
+
+msgid "Your phone & where you're based"
+msgstr "Votre téléphone et votre localisation"
+
+msgid "Your Region"
+msgstr "Votre Région"
+
+msgid "Continue"
+msgstr "Continuer"
+
+msgid "What interests you?"
+msgstr "Qu'est-ce qui vous intéresse ?"
+
+msgid "Select all that apply"
+msgstr "Sélectionnez tout ce qui s'applique"
+
+msgid "Select All"
+msgstr "Tout Sélectionner"
+
+msgid "About You"
+msgstr "À Propos de Vous"
+
+msgid "This helps us find relevant opportunities"
+msgstr "Cela nous aide à trouver des opportunités pertinentes"
+
+msgid "Highest Education"
+msgstr "Plus Haut Niveau d'Études"
+
+msgid "Your Background"
+msgstr "Votre Formation"
+
+msgid "When to notify you?"
+msgstr "Quand vous notifier ?"
+
+msgid "Pick your preferred time"
+msgstr "Choisissez votre heure préférée"
+
+msgid "Anything else?"
+msgstr "Autre chose ?"
+
+msgid "Tell us your specific needs (optional)"
+msgstr "Dites-nous vos besoins spécifiques (optionnel)"
+
+msgid "Be specific! This helps us find exactly what you need."
+msgstr "Soyez précis ! Cela nous aide à trouver exactement ce dont vous avez besoin."
+
+msgid "Save & Go"
+msgstr "Enregistrer & Continuer"
+
+msgid "Skip for now"
+msgstr "Passer pour l'instant"
+
+# Payment Result Page
+msgid "Welcome to Pro!"
+msgstr "Bienvenue dans Pro !"
+
+msgid "Payment Failed"
+msgstr "Paiement Échoué"
+
+msgid "Try Again"
+msgstr "Réessayer"
+
+# Relax/Game Page
+msgid "Level"
+msgstr "Niveau"
+
+
+
+
+
+
+
+
+
+
+
