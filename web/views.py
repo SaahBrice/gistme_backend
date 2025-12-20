@@ -97,6 +97,23 @@ def mentor(request):
     return render(request, 'web/mentor.html')
 
 @login_required
+def quote_of_the_day(request):
+    """Quote of the Day page with inspirational quotes based on user's category preference"""
+    from .models import UserProfile
+    
+    # Get user's quote category preference
+    quote_category = 'GENERAL'
+    try:
+        profile = UserProfile.objects.get(user=request.user)
+        quote_category = profile.quote_category or 'GENERAL'
+    except UserProfile.DoesNotExist:
+        pass
+    
+    return render(request, 'web/quote.html', {
+        'quote_category': quote_category,
+    })
+
+@login_required
 def article(request, article_id):
     """Article reader page - using dummy data for now"""
     return render(request, 'web/article.html', {'article_id': article_id})

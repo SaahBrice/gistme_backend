@@ -1252,6 +1252,67 @@ msgstr "Envoyer la demande"
 msgid "Sending..."
 msgstr "Envoi en cours..."
 
+# Quote of the Day Page
+msgid "My Quote of the Day"
+msgstr "Ma Citation du Jour"
 
+msgid "Daily inspiration to fuel your ambition"
+msgstr "Inspiration quotidienne pour alimenter votre ambition"
 
+msgid "Loading your quote..."
+msgstr "Chargement de votre citation..."
+
+msgid "No Quote Available"
+msgstr "Aucune Citation Disponible"
+
+msgid "Check back tomorrow for your daily inspiration."
+msgstr "Revenez demain pour votre inspiration quotidienne."
+
+msgid "Back to Feed"
+msgstr "Retour au Fil"
+
+msgid "What This Means"
+msgstr "Ce Que Cela Signifie"
+
+msgid "Words of Affirmation"
+msgstr "Paroles d'Affirmation"
+
+msgid "Share This Quote"
+msgstr "Partager Cette Citation"
+
+msgid "Share Quote"
+msgstr "Partager la Citation"
+
+msgid "Share as Image"
+msgstr "Partager en Image"
+
+msgid "Download beautiful image"
+msgstr "Télécharger une belle image"
+
+msgid "Copy Text"
+msgstr "Copier le Texte"
+
+msgid "Copy quote to clipboard"
+msgstr "Copier la citation dans le presse-papier"
+
+msgid "Share Link"
+msgstr "Partager le Lien"
+
+msgid "Share page link"
+msgstr "Partager le lien de la page"
+
+msgid "Previous Quotes"
+msgstr "Citations Précédentes"
+
+msgid "Meaning"
+msgstr "Signification"
+
+msgid "Tap to expand"
+msgstr "Appuyez pour développer"
+
+msgid "Tap to collapse"
+msgstr "Appuyez pour réduire"
+
+msgid "More quotes coming..."
+msgstr "D'autres citations à venir..."
 

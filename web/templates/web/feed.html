@@ -218,7 +218,7 @@
             <div class="profile-divider"></div>
             
             <!-- My Quote of Today -->
-            <button class="profile-menu-item" @click="openQuote()">
+            <a href="{% url 'quote_of_the_day' %}" class="profile-menu-item" @click="showProfile = false">
                 <div class="menu-icon quote-icon">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21"/>
@@ -226,7 +226,7 @@
                     </svg>
                 </div>
                 <span>{% trans "My Quote of Today" %}</span>
-            </button>
+            </a>
             
             <!-- Relax Here -->
             <a href="/relax/" class="profile-menu-item" @click="showProfile = false">
@@ -686,43 +686,7 @@
         </div>
     </div>
     
-    <!-- Quote of the Day Modal -->
-    <div class="modal-backdrop" 
-         x-show="showQuote"
-         x-transition:enter="transition ease-out duration-200"
-         x-transition:enter-start="opacity-0"
-         x-transition:enter-end="opacity-100"
-         @click="showQuote = false">
-    </div>
-    
-    <div class="quote-modal"
-         x-show="showQuote && currentQuote"
-         :style="{ background: quoteColorPalettes[currentQuote?.category]?.[currentQuote?.colorIndex]?.bg }"
-         x-transition:enter="transition ease-out duration-200"
-         x-transition:enter-start="opacity-0"
-         x-transition:enter-end="opacity-100">
-        
-        <!-- Close Button -->
-        <button class="quote-close-btn" @click="showQuote = false">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <line x1="18" y1="6" x2="6" y2="18"/>
-                <line x1="6" y1="6" x2="18" y2="18"/>
-            </svg>
-        </button>
-        
-        <!-- Quote Content -->
-        <div class="quote-content">
-            <div class="quote-mark">"</div>
-            <p class="quote-text" x-text="currentQuote?.text"></p>
-            <p class="quote-author" x-text="'— ' + currentQuote?.author"></p>
-            <p class="quote-date" x-text="currentQuote?.date"></p>
-        </div>
-        
-        <!-- Share Button -->
-        <button class="quote-share-btn" @click="shareQuoteAsImage()">
-            {% trans "Share" %}
-        </button>
-    </div>
+
     
     <!-- Terms Modal -->
     <div class="modal-backdrop" 

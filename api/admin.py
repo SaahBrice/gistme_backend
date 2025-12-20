@@ -75,3 +75,66 @@ class AssistanceRequestAdmin(admin.ModelAdmin):
     @admin.display(description='Article')
     def get_article_title(self, obj):
         return obj.article.headline_en or obj.article.headline_fr or 'Unknown'
+
+
+from .models import AISettings
+
+@admin.register(AISettings)
+class AISettingsAdmin(admin.ModelAdmin):
+    list_display = ('ai_name', 'max_response_length', 'is_active', 'updated_at')
+    readonly_fields = ('updated_at',)
+    
+    fieldsets = (
+        ('AI Identity', {
+            'fields': ('ai_name', 'is_active')
+        }),
+        ('Configuration', {
+            'fields': ('system_prompt', 'max_response_length')
+        }),
+        ('Info', {
+            'fields': ('updated_at',),
+            'classes': ('collapse',)
+        }),
+    )
+    
+    def has_add_permission(self, request):
+        # Only allow one instance (singleton)
+        return not AISettings.objects.exists()
+    
+    def has_delete_permission(self, request, obj=None):
+        return False
+
+
+from .models import DailyQuote
+
+@admin.register(DailyQuote)
+class DailyQuoteAdmin(admin.ModelAdmin):
+    list_display = ('date', 'category', 'author', 'quote_text_short', 'created_at')
+    list_filter = ('category', 'date')
+    search_fields = ('quote_text_en', 'quote_text_fr', 'author', 'explanation_en', 'explanation_fr')
+    ordering = ('-date', 'category')
+    date_hierarchy = 'date'
+    readonly_fields = ('created_at', 'updated_at')
+    
+    fieldsets = (
+        ('Quote Info', {
+            'fields': ('category', 'date', 'author', 'source_reference')
+        }),
+        ('English Content 🇬🇧', {
+            'fields': ('quote_text_en', 'explanation_en', 'affirmations_en'),
+            'classes': ('wide',)
+        }),
+        ('French Content 🇫🇷', {
+            'fields': ('quote_text_fr', 'explanation_fr', 'affirmations_fr'),
+            'classes': ('wide',)
+        }),
+        ('Timestamps', {
+            'fields': ('created_at', 'updated_at'),
+            'classes': ('collapse',)
+        }),
+    )
+    
+    @admin.display(description='Quote (EN)')
+    def quote_text_short(self, obj):
+        return obj.quote_text_en[:60] + '...' if len(obj.quote_text_en) > 60 else obj.quote_text_en
+

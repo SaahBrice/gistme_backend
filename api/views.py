@@ -508,3 +508,132 @@ class AssistanceRequestView(APIView):
             }, status=status.HTTP_201_CREATED)
         
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class ChatView(APIView):
+    """
+    API endpoint for AI chat using Gemini.
+    POST /api/chat/ - Send a message and get AI response
+    """
+    permission_classes = [AllowAny]
+    authentication_classes = []
+    
+    def post(self, request):
+        from api.utils.gemini import get_ai_response
+        from api.models import Article
+        
+        # Extract request data
+        article_id = request.data.get('article_id')
+        user_message = request.data.get('message', '').strip()
+        chat_history = request.data.get('history', [])
+        language = request.data.get('lang', 'en')
+        
+        # Validate
+        if not user_message:
+            return Response({
+                'success': False,
+                'response': 'Message is required'
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        if not article_id:
+            return Response({
+                'success': False,
+                'response': 'Article ID is required'
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Get article context
+        try:
+            article = Article.objects.get(id=article_id)
+            article_context = {
+                'title': article.headline_en if language == 'en' else article.headline_fr or article.headline,
+                'summary': article.english_summary if language == 'en' else article.french_summary
+            }
+        except Article.DoesNotExist:
+            article_context = {'title': 'Unknown', 'summary': 'Article not found'}
+        
+        # Get AI response
+        result = get_ai_response(
+            article_context=article_context,
+            user_message=user_message,
+            chat_history=chat_history,
+            language=language
+        )
+        
+        return Response(result, status=status.HTTP_200_OK)
+
+
+class DailyQuoteViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint for daily quotes with bilingual support.
+    GET /api/quotes/ - List all quotes (with filtering)
+    GET /api/quotes/{id}/ - Get a specific quote
+    GET /api/quotes/today/ - Get today's quote for a category
+    POST /api/quotes/ - Create a new quote (API key required)
+    PUT/PATCH /api/quotes/{id}/ - Update a quote (API key required)
+    DELETE /api/quotes/{id}/ - Delete a quote (API key required)
+    
+    Query params:
+        - lang: 'en' or 'fr' (default: 'en') - Returns content in specified language
+    """
+    from .models import DailyQuote
+    from .serializers import DailyQuoteSerializer
+    
+    queryset = DailyQuote.objects.all()
+    serializer_class = DailyQuoteSerializer
+    filter_backends = [DjangoFilterBackend, filters.OrderingFilter]
+    filterset_fields = ['category', 'date']
+    ordering_fields = ['date', 'category', 'created_at']
+    
+    def get_permissions(self):
+        if self.action in ['create', 'update', 'partial_update', 'destroy']:
+            permission_classes = [HasAPIKey]
+        else:
+            permission_classes = [AllowAny]
+        return [permission() for permission in permission_classes]
+    
+    def get_serializer_context(self):
+        """Add language to serializer context"""
+        context = super().get_serializer_context()
+        lang = self.request.query_params.get('lang', 'en')
+        context['lang'] = lang if lang in ['en', 'fr'] else 'en'
+        return context
+    
+    @action(detail=False, methods=['get'])
+    def today(self, request):
+        """
+        Get today's quote for a specific category.
+        If no quote exists for today, returns the most recent quote for that category.
+        Query params:
+            - category: GENERAL (default), CHRISTIAN, or ISLAMIC
+            - lang: 'en' or 'fr' (default: 'en')
+        """
+        from datetime import date
+        from .models import DailyQuote
+        
+        category = request.query_params.get('category', 'GENERAL').upper()
+        if category not in ['GENERAL', 'CHRISTIAN', 'ISLAMIC']:
+            category = 'GENERAL'
+        
+        lang = request.query_params.get('lang', 'en')
+        if lang not in ['en', 'fr']:
+            lang = 'en'
+        
+        today = date.today()
+        
+        # Try to get today's quote
+        quote = DailyQuote.objects.filter(category=category, date=today).first()
+        
+        # If no quote for today, get the most recent one
+        if not quote:
+            quote = DailyQuote.objects.filter(category=category).order_by('-date').first()
+        
+        if not quote:
+            return Response({
+                'error': 'No quote available',
+                'message': 'No quotes found for this category'
+            }, status=status.HTTP_404_NOT_FOUND)
+        
+        from .serializers import DailyQuoteSerializer
+        serializer = DailyQuoteSerializer(quote, context={'lang': lang})
+        return Response(serializer.data)
+

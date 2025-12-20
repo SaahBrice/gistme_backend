@@ -261,3 +261,132 @@ class AssistanceRequest(models.Model):
         article_title = self.article.headline_en or self.article.headline_fr or 'Unknown'
         return f"Request for '{article_title[:30]}...' - {self.status}"
 
+
+class AISettings(models.Model):
+    """
+    Singleton model for admin-configurable AI settings.
+    Controls the behavior of the Reepls AI chat assistant.
+    """
+    ai_name = models.CharField(
+        max_length=50, 
+        default="Reepls AI",
+        help_text="Name the AI uses to identify itself"
+    )
+    system_prompt = models.TextField(
+        default="""You are Reepls AI, a helpful assistant for Gist4U - a platform that helps users discover opportunities in Cameroon (scholarships, jobs, concours, news).
+
+Your role is to help users understand articles and answer questions about opportunities.
+
+Guidelines:
+- Be concise (max 500 characters per response)
+- Be friendly but professional
+- Answer in the same language the user writes in
+- If you don't know something, say so honestly
+- On your FIRST response, you may reference the article context
+- On follow-up responses, answer naturally without repeatedly saying "this article" - just respond directly to the user's question
+- Have a natural conversation flow, like a helpful friend who read the article""",
+        help_text="System instructions sent to Gemini API"
+    )
+    max_response_length = models.PositiveIntegerField(
+        default=500,
+        help_text="Maximum characters for AI responses"
+    )
+    is_active = models.BooleanField(
+        default=True,
+        help_text="Enable/disable AI chat feature"
+    )
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        verbose_name = 'AI Settings'
+        verbose_name_plural = 'AI Settings'
+    
+    def save(self, *args, **kwargs):
+        # Ensure only one instance exists (singleton)
+        self.pk = 1
+        super().save(*args, **kwargs)
+    
+    @classmethod
+    def get_settings(cls):
+        """Get or create the singleton settings instance"""
+        obj, created = cls.objects.get_or_create(pk=1)
+        return obj
+    
+    def __str__(self):
+        return f"AI Settings (Updated: {self.updated_at})"
+
+
+class DailyQuote(models.Model):
+    """
+    Daily quotes with three categories: General, Christian, and Islamic.
+    One quote per category per day. Updated daily by admin.
+    Bilingual support: English (en) and French (fr).
+    """
+    CATEGORY_CHOICES = [
+        ('GENERAL', 'General'),
+        ('CHRISTIAN', 'Christian'),
+        ('ISLAMIC', 'Islamic'),
+    ]
+    
+    category = models.CharField(
+        max_length=20, 
+        choices=CATEGORY_CHOICES, 
+        db_index=True,
+        help_text="Quote category matching user preferences"
+    )
+    date = models.DateField(
+        db_index=True,
+        help_text="The date this quote is for"
+    )
+    
+    # Bilingual quote text
+    quote_text_en = models.TextField(default='', help_text="The quote in English")
+    quote_text_fr = models.TextField(default='', help_text="The quote in French")
+    
+    author = models.CharField(max_length=150, help_text="Author or source of the quote")
+    
+    # Bilingual explanation
+    explanation_en = models.TextField(default='', help_text="Explanation in English")
+    explanation_fr = models.TextField(default='', help_text="Explanation in French")
+    
+    # Bilingual affirmations
+    affirmations_en = models.JSONField(
+        default=list, 
+        blank=True,
+        help_text="List of affirmation strings in English"
+    )
+    affirmations_fr = models.JSONField(
+        default=list, 
+        blank=True,
+        help_text="List of affirmation strings in French"
+    )
+    
+    source_reference = models.CharField(
+        max_length=200, 
+        blank=True,
+        help_text="Bible verse, Hadith reference, book title, etc."
+    )
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        unique_together = ['category', 'date']  # One quote per category per day
+        ordering = ['-date', 'category']
+        verbose_name = 'Daily Quote'
+        verbose_name_plural = 'Daily Quotes'
+    
+    def __str__(self):
+        return f"{self.date} - {self.category}: {self.quote_text_en[:50]}..."
+    
+    def get_quote_text(self, lang='en'):
+        """Return quote text in requested language"""
+        return self.quote_text_fr if lang == 'fr' else self.quote_text_en
+    
+    def get_explanation(self, lang='en'):
+        """Return explanation in requested language"""
+        return self.explanation_fr if lang == 'fr' else self.explanation_en
+    
+    def get_affirmations(self, lang='en'):
+        """Return affirmations in requested language"""
+        return self.affirmations_fr if lang == 'fr' else self.affirmations_en
+

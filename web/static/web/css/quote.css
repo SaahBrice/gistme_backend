@@ -1,0 +1,839 @@
+/* Quote of the Day Page - Mobile First Design */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: #FFFBEB;
+}
+
+.quote-page {
+    min-height: 100vh;
+    padding: 16px;
+    padding-bottom: 40px;
+}
+
+/* Header */
+.quote-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.back-btn {
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border: 2px solid #111;
+    border-radius: 10px;
+    color: #111;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.back-btn:hover {
+    background: #FACC15;
+}
+
+.quote-header h1 {
+    flex: 1;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #111;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+/* Loading State */
+.loading-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #e5e5e5;
+    border-top-color: #FACC15;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-state p {
+    color: #666;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Error State */
+.error-state {
+    text-align: center;
+    padding: 60px 20px;
+    background: #fff;
+    border: 2px dashed #ddd;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.error-icon {
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+
+.error-state h3 {
+    font-size: 1.2rem;
+    color: #111;
+    margin: 0 0 8px;
+}
+
+.error-state p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0 0 20px;
+}
+
+.back-link {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #FACC15;
+    color: #111;
+    border: 2px solid #111;
+    border-radius: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.15s ease;
+}
+
+.back-link:hover {
+    background: #111;
+    color: #FACC15;
+}
+
+/* Quote Container */
+.quote-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Category Badge */
+.category-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.category-badge.general {
+    background: #FEF3C7;
+    color: #92400E;
+}
+
+.category-badge.christian {
+    background: #DBEAFE;
+    color: #1E40AF;
+}
+
+.category-badge.islamic {
+    background: #D1FAE5;
+    color: #065F46;
+}
+
+/* Quote Card */
+.quote-card {
+    position: relative;
+    background: linear-gradient(145deg, #92400E 0%, #B45309 100%);
+    border: 3px solid #111;
+    border-radius: 24px;
+    padding: 40px 28px 32px;
+    margin-bottom: 20px;
+    box-shadow: 6px 6px 0 #111;
+    overflow: hidden;
+}
+
+.quote-card.christian {
+    background: linear-gradient(145deg, #1E3A8A 0%, #2563EB 100%);
+}
+
+.quote-card.islamic {
+    background: linear-gradient(145deg, #065F46 0%, #059669 100%);
+}
+
+.quote-mark {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 5rem;
+    color: rgba(255, 255, 255, 0.15);
+    line-height: 1;
+    pointer-events: none;
+}
+
+.quote-text {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #fff;
+    line-height: 1.6;
+    margin: 0 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.quote-author {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.author-dash {
+    color: #FACC15;
+    font-weight: 700;
+}
+
+.quote-source {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+    margin: 10px 0 0;
+    font-style: italic;
+}
+
+/* Date Badge */
+.date-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: #fff;
+    border: 2px solid #e5e5e5;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 24px;
+}
+
+.date-badge svg {
+    color: #FACC15;
+}
+
+/* Section Cards */
+.section-card {
+    background: #fff;
+    border: 3px solid #111;
+    border-radius: 18px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 4px 4px 0 #FACC15;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.section-icon {
+    font-size: 1.3rem;
+}
+
+.section-header h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111;
+    margin: 0;
+}
+
+.explanation-text {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Affirmations Grid */
+.affirmations-section {
+    box-shadow: 4px 4px 0 #10B981;
+}
+
+.affirmations-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.affirmation-card {
+    display: inline-block;
+    padding: 10px 16px;
+    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+    border: 2px solid #111;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #111;
+    animation: fadeSlideIn 0.4s ease-out both;
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.affirmation-text {
+    display: block;
+}
+
+/* Share Button */
+.share-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 16px 24px;
+    background: #FACC15;
+    color: #111;
+    border: 3px solid #111;
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    box-shadow: 4px 4px 0 #111;
+    margin-top: 10px;
+}
+
+.share-btn:hover {
+    background: #111;
+    color: #FACC15;
+}
+
+.share-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 #111;
+}
+
+/* Share Modal */
+.share-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 1000;
+    padding: 0;
+    backdrop-filter: blur(4px);
+}
+
+.share-modal {
+    background: #fff;
+    border-top: 3px solid #111;
+    border-radius: 24px 24px 0 0;
+    padding: 24px;
+    width: 100%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.share-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.share-modal-header h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #111;
+    margin: 0;
+}
+
+.share-close-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: #f5f5f5;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.share-close-btn:hover {
+    background: #e5e5e5;
+}
+
+.share-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.share-option {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: #fff;
+    border: 2px solid #e5e5e5;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    text-align: left;
+}
+
+.share-option:hover {
+    border-color: #111;
+    background: #FFFBEB;
+}
+
+.share-option-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.share-option-icon.image-icon {
+    background: #FEF3C7;
+    color: #92400E;
+}
+
+.share-option-icon.text-icon {
+    background: #DBEAFE;
+    color: #1E40AF;
+}
+
+.share-option-icon.link-icon {
+    background: #D1FAE5;
+    color: #065F46;
+}
+
+.share-option-label {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #111;
+}
+
+.share-option-desc {
+    display: block;
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 2px;
+}
+
+/* Toast */
+.toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+    background: #111;
+    color: #fff;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    z-index: 1100;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.toast-icon {
+    font-size: 1.1rem;
+}
+
+/* Tablet+ */
+@media (min-width: 600px) {
+    .quote-page {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 24px;
+        padding-bottom: 60px;
+    }
+
+    .quote-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .quote-card {
+        padding: 50px 36px 40px;
+    }
+
+    .quote-text {
+        font-size: 1.6rem;
+    }
+
+    .share-modal-overlay {
+        align-items: center;
+        padding: 20px;
+    }
+
+    .share-modal {
+        border-radius: 24px;
+        border: 3px solid #111;
+    }
+}
+
+/* Desktop */
+@media (min-width: 900px) {
+    .quote-page {
+        max-width: 800px;
+    }
+
+    .quote-card {
+        padding: 60px 48px 50px;
+    }
+
+    .quote-text {
+        font-size: 1.8rem;
+    }
+
+    .affirmations-grid {
+        gap: 14px;
+    }
+
+    .affirmation-card {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Cloak for Alpine */
+[x-cloak] {
+    display: none !important;
+}
+
+/* ============================================
+   PREVIOUS QUOTES TIMELINE
+   ============================================ */
+
+.timeline-section {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px dashed #e5e5e5;
+}
+
+.timeline-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.timeline-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #111;
+    border-radius: 50%;
+    color: #FACC15;
+    flex-shrink: 0;
+}
+
+.timeline-header h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #111;
+    margin: 0;
+}
+
+.timeline-line-header {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(to right, #111 0%, transparent 100%);
+}
+
+/* Timeline Container */
+.timeline-container {
+    position: relative;
+    padding-left: 20px;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 60px;
+    width: 3px;
+    background: linear-gradient(to bottom, #FACC15 0%, #e5e5e5 100%);
+    border-radius: 3px;
+}
+
+/* Timeline Item */
+.timeline-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    animation: timelineSlideIn 0.4s ease-out both;
+}
+
+@keyframes timelineSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Timeline Node */
+.timeline-node {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    background: #fff;
+    border: 3px solid #111;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    z-index: 1;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-node.general {
+    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+    border-color: #92400E;
+}
+
+.timeline-node.christian {
+    background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%);
+    border-color: #1E40AF;
+}
+
+.timeline-node.islamic {
+    background: linear-gradient(135deg, #D1FAE5 0%, #A7F3D0 100%);
+    border-color: #065F46;
+}
+
+.node-day {
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: #111;
+}
+
+.timeline-item:hover .timeline-node {
+    transform: scale(1.1);
+}
+
+/* Timeline Card */
+.timeline-card {
+    flex: 1;
+    background: #fff;
+    border: 2px solid #e5e5e5;
+    border-radius: 14px;
+    padding: 16px;
+    transition: all 0.2s ease;
+}
+
+.timeline-item:hover .timeline-card {
+    border-color: #111;
+    box-shadow: 3px 3px 0 #FACC15;
+}
+
+.timeline-card.expanded {
+    border-color: #111;
+    box-shadow: 4px 4px 0 #111;
+}
+
+.timeline-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.timeline-date {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.timeline-category {
+    font-size: 1rem;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline-category.general {
+    background: #FEF3C7;
+}
+
+.timeline-category.christian {
+    background: #DBEAFE;
+}
+
+.timeline-category.islamic {
+    background: #D1FAE5;
+}
+
+.timeline-quote {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #333;
+    line-height: 1.5;
+    margin: 0 0 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.timeline-card.expanded .timeline-quote {
+    -webkit-line-clamp: unset;
+}
+
+.timeline-author {
+    font-size: 0.8rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* Expanded Content */
+.timeline-expanded {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px dashed #e5e5e5;
+}
+
+.timeline-explanation {
+    background: #FFFBEB;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.mini-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #92400E;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.timeline-explanation p {
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.timeline-expand-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    margin-top: 10px;
+    font-size: 0.7rem;
+    color: #999;
+    transition: color 0.2s;
+}
+
+.timeline-item:hover .timeline-expand-hint {
+    color: #111;
+}
+
+.timeline-expand-hint svg {
+    transition: transform 0.3s ease;
+}
+
+.timeline-expand-hint svg.rotated {
+    transform: rotate(180deg);
+}
+
+/* Timeline End */
+.timeline-end {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-left: 4px;
+    margin-top: 10px;
+}
+
+.timeline-end-node {
+    width: 28px;
+    height: 28px;
+    background: #f5f5f5;
+    border: 2px dashed #ccc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+}
+
+.timeline-end-text {
+    font-size: 0.8rem;
+    color: #999;
+    font-style: italic;
+}
