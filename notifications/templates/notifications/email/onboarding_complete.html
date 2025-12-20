@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="font-family: 'Segoe UI', Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #FFFBEB;">
+    <!-- Header - Celebration -->
+    <div style="background: linear-gradient(135deg, #10B981, #059669); color: white; padding: 35px; border-radius: 16px 16px 0 0; text-align: center;">
+        <h1 style="margin: 0 0 10px 0; font-size: 32px;">🚀 {% if language == 'fr' %}Vous êtes prêt !{% else %}You're All Set!{% endif %}</h1>
+        <p style="margin: 0; font-size: 16px; opacity: 0.9;">
+            {% if language == 'fr' %}Votre profil est personnalisé{% else %}Your profile is personalized{% endif %}
+        </p>
+    </div>
+    
+    <!-- Content -->
+    <div style="background-color: white; padding: 30px; border-radius: 0 0 16px 16px; border: 2px solid #111; border-top: none;">
+        <p style="font-size: 20px; color: #333; margin: 0 0 20px;">
+            {% if language == 'fr' %}Félicitations{% else %}Congrats{% endif %} <strong>{{ user_name }}</strong>! 🎉
+        </p>
+        
+        <!-- Key Message -->
+        <div style="background: linear-gradient(135deg, #FEF3C7, #FFFBEB); border: 2px solid #FACC15; border-radius: 16px; padding: 25px; margin: 25px 0; text-align: center;">
+            <p style="margin: 0; font-size: 20px; color: #333; font-weight: bold; line-height: 1.5;">
+                {% if language == 'fr' %}
+                🎯 La longue course est terminée.
+                {% else %}
+                🎯 The long chase is over.
+                {% endif %}
+            </p>
+            <p style="margin: 15px 0 0; font-size: 16px; color: #555; line-height: 1.6;">
+                {% if language == 'fr' %}
+                Nous apportons les <strong>gists et opportunités</strong> directement à votre porte. 
+                Plus besoin de chercher partout !
+                {% else %}
+                We're bringing <strong>gists and opportunities</strong> right to your door. 
+                No more hunting everywhere!
+                {% endif %}
+            </p>
+        </div>
+        
+        <p style="font-size: 15px; color: #555; line-height: 1.7;">
+            {% if language == 'fr' %}
+            Basé sur votre profil, nous allons maintenant vous envoyer des opportunités personnalisées 
+            qui correspondent à vos intérêts et objectifs.
+            {% else %}
+            Based on your profile, we'll now send you personalized opportunities 
+            that match your interests and goals.
+            {% endif %}
+        </p>
+        
+        <!-- What to expect -->
+        <div style="background-color: #F3F4F6; border-radius: 12px; padding: 20px; margin: 25px 0;">
+            <p style="margin: 0 0 15px; font-weight: bold; color: #333;">
+                {% if language == 'fr' %}📬 À quoi s'attendre :{% else %}📬 What to expect:{% endif %}
+            </p>
+            <ul style="margin: 0; padding-left: 20px; color: #555; line-height: 2;">
+                <li>{% if language == 'fr' %}Alertes pour les bourses et concours{% else %}Alerts for scholarships and concours{% endif %}</li>
+                <li>{% if language == 'fr' %}Résultats d'examens dès leur publication{% else %}Exam results as they're published{% endif %}</li>
+                <li>{% if language == 'fr' %}Opportunités d'emploi triées sur le volet{% else %}Hand-picked job opportunities{% endif %}</li>
+                <li>{% if language == 'fr' %}Gists exclusifs Pro (si abonné){% else %}Exclusive Pro gists (if subscribed){% endif %}</li>
+            </ul>
+        </div>
+        
+        <!-- CTA Button -->
+        <div style="text-align: center; margin: 35px 0 20px;">
+            <a href="{{ site_url }}/feed/" style="display: inline-block; background-color: #10B981; color: white; padding: 16px 45px; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 16px; border: 3px solid #111;">
+                {% if language == 'fr' %}Commencer à explorer{% else %}Start Exploring{% endif %} 🚀
+            </a>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <div style="text-align: center; padding: 25px; color: #666; font-size: 12px;">
+        <p style="margin: 0;">{% if language == 'fr' %}Le succès vous attend{% else %}Success awaits you{% endif %} 💛</p>
+        <p style="margin: 8px 0 0; color: #999;">Gist4U - {% if language == 'fr' %}Votre aventure commence maintenant{% else %}Your journey starts now{% endif %}</p>
+    </div>
+</body>
+</html>
