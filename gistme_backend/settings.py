@@ -263,6 +263,9 @@ EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '')  # Your email
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')  # App password
 DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', 'Gist4U Pro <noreply@gist4u.com>')
 
+# Admin notification email (receives alerts for new signups, requests, etc.)
+ADMIN_NOTIFICATION_EMAIL = os.environ.get('ADMIN_NOTIFICATION_EMAIL', 'saahbrice98@gmail.com')
+
 # For development/testing: Use console backend to see emails in terminal
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 

@@ -34,6 +34,27 @@ EMAIL_TEMPLATES = {
         'subject_fr': '🚀 Vous êtes prêt ! Commencez à explorer',
         'template': 'notifications/email/onboarding_complete.html',
     },
+    # Admin notifications
+    'admin_new_user': {
+        'subject_en': '👤 New User Signup: {user_email}',
+        'subject_fr': '👤 Nouvelle inscription: {user_email}',
+        'template': 'notifications/email/admin_new_user.html',
+    },
+    'admin_assistance_request': {
+        'subject_en': '🆘 New Assistance Request #{request_id}',
+        'subject_fr': '🆘 Nouvelle demande d\'assistance #{request_id}',
+        'template': 'notifications/email/admin_assistance_request.html',
+    },
+    'admin_mentor_request': {
+        'subject_en': '🎓 New Mentor Request: {mentee_name} → {mentor_name}',
+        'subject_fr': '🎓 Nouvelle demande de mentorat: {mentee_name} → {mentor_name}',
+        'template': 'notifications/email/admin_mentor_request.html',
+    },
+    'admin_sponsor_request': {
+        'subject_en': '💼 New {inquiry_type} Request from {name}',
+        'subject_fr': '💼 Nouvelle demande {inquiry_type} de {name}',
+        'template': 'notifications/email/admin_sponsor_request.html',
+    },
 }
 
 
@@ -52,8 +73,12 @@ def send_email_notification(notification_type: str, recipient_email: str, contex
     
     template_config = EMAIL_TEMPLATES[notification_type]
     
-    # Get subject based on language
+    # Get subject based on language and format with context variables
     subject = template_config.get(f'subject_{language}', template_config.get('subject_en'))
+    try:
+        subject = subject.format(**context)
+    except KeyError:
+        pass  # Keep original subject if formatting fails
     
     # Add language to context
     context['language'] = language
@@ -92,7 +117,7 @@ def _get_fallback_html(notification_type: str, context: dict, language: str) -> 
         },
         'mentor_request_mentor': {
             'en': f"Hey {context.get('mentor_name', 'there')}! 🎉\n\nGreat news - {context.get('mentee_name', 'Someone')} wants YOU as their mentor! We'll check if they're a good fit and connect you soon.\n\nExciting times!\nGist4U Team",
-            'fr': f"Salut {context.get('mentor_name', '')} ! 🎉\n\nBonne nouvelle - {context.get('mentee_name', 'Quelqu\'un')} vous a choisi comme mentor ! Nous vérifierons s'il correspond à vos critères et nous vous mettrons en contact bientôt.\n\nQue l'aventure commence !\nL'équipe Gist4U",
+            'fr': f"Salut {context.get('mentor_name', '')} ! 🎉\n\nBonne nouvelle - {context.get('mentee_name', 'Quelqu un')} vous a choisi comme mentor ! Nous vérifierons si c'est compatible et nous vous mettrons en contact bientôt.\n\nQue l'aventure commence !\nL'équipe Gist4U",
         },
         'welcome': {
             'en': f"Welcome to Gist4U, {context.get('user_name', 'friend')}! 🎉\n\nWe're thrilled to have you. Get ready to discover opportunities!",
@@ -101,6 +126,23 @@ def _get_fallback_html(notification_type: str, context: dict, language: str) -> 
         'onboarding_complete': {
             'en': f"You're all set, {context.get('user_name', 'friend')}! 🚀\n\nThe long chase is over. We're bringing gists and opportunities right to your door. Start exploring!",
             'fr': f"Vous êtes prêt, {context.get('user_name', 'ami')} ! 🚀\n\nLa longue course est terminée. Nous apportons les gists et opportunités directement à votre porte. Commencez à explorer !",
+        },
+        # Admin notifications
+        'admin_new_user': {
+            'en': f"New user signup!\n\nEmail: {context.get('user_email', 'N/A')}\nName: {context.get('user_name', 'N/A')}\nTime: {context.get('signup_time', 'N/A')}",
+            'fr': f"Nouvelle inscription!\n\nEmail: {context.get('user_email', 'N/A')}\nNom: {context.get('user_name', 'N/A')}\nHeure: {context.get('signup_time', 'N/A')}",
+        },
+        'admin_assistance_request': {
+            'en': f"New assistance request!\n\nRequest ID: #{context.get('request_id', 'N/A')}\nArticle: {context.get('article_title', 'N/A')}\nEmail: {context.get('user_email', 'N/A')}\nPhone: {context.get('phone', 'N/A')}\nMessage: {context.get('message', 'N/A')}",
+            'fr': f"Nouvelle demande d'assistance!\n\nID Demande: #{context.get('request_id', 'N/A')}\nArticle: {context.get('article_title', 'N/A')}\nEmail: {context.get('user_email', 'N/A')}\nTéléphone: {context.get('phone', 'N/A')}\nMessage: {context.get('message', 'N/A')}",
+        },
+        'admin_mentor_request': {
+            'en': f"New mentor request!\n\nMentee: {context.get('mentee_name', 'N/A')} ({context.get('mentee_email', 'N/A')})\nMentor: {context.get('mentor_name', 'N/A')}\nMessage: {context.get('message', 'N/A')}",
+            'fr': f"Nouvelle demande de mentorat!\n\nMentoré: {context.get('mentee_name', 'N/A')} ({context.get('mentee_email', 'N/A')})\nMentor: {context.get('mentor_name', 'N/A')}\nMessage: {context.get('message', 'N/A')}",
+        },
+        'admin_sponsor_request': {
+            'en': f"New {context.get('inquiry_type', 'sponsor/partner')} request!\n\nName: {context.get('name', 'N/A')}\nEmail: {context.get('email', 'N/A')}\nPhone: {context.get('phone', 'N/A')}\nOrganization: {context.get('organization', 'N/A')}\nDescription: {context.get('description', 'N/A')}",
+            'fr': f"Nouvelle demande {context.get('inquiry_type', 'sponsor/partenaire')}!\n\nNom: {context.get('name', 'N/A')}\nEmail: {context.get('email', 'N/A')}\nTéléphone: {context.get('phone', 'N/A')}\nOrganisation: {context.get('organization', 'N/A')}\nDescription: {context.get('description', 'N/A')}",
         },
     }
     

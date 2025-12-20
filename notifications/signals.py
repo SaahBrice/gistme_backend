@@ -5,6 +5,7 @@ Hooks into Django/allauth signals to send notifications automatically.
 import logging
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from django.utils import timezone
 
 logger = logging.getLogger(__name__)
 
@@ -32,6 +33,33 @@ def send_welcome_notification(user, language='en'):
         logger.info(f"[Notification] Sent welcome email to {user.email}")
     except Exception as e:
         logger.error(f"[Notification] Failed to send welcome email to {user.email}: {e}")
+
+
+def send_admin_new_user_notification(user):
+    """
+    Send notification to admin when a new user signs up.
+    """
+    try:
+        from notifications.service import notify
+        from django.conf import settings
+        
+        user_name = user.get_full_name() or user.email.split('@')[0]
+        
+        notify(
+            'admin_new_user',
+            recipient_email=settings.ADMIN_NOTIFICATION_EMAIL,
+            context={
+                'user_email': user.email,
+                'user_name': user_name,
+                'signup_time': timezone.now().strftime('%Y-%m-%d %H:%M:%S UTC'),
+                'user_id': user.id,
+            },
+            language='en',
+            channels=['email']
+        )
+        logger.info(f"[Notification] Sent admin new user notification for {user.email}")
+    except Exception as e:
+        logger.error(f"[Notification] Failed to send admin new user notification: {e}")
 
 
 def send_onboarding_complete_notification(user, language='en'):
@@ -79,3 +107,15 @@ def on_userprofile_saved(sender, instance, created, **kwargs):
             lang = 'fr' if hasattr(instance, 'preferred_language') and instance.preferred_language == 'fr' else 'en'
             send_onboarding_complete_notification(instance.user, language=lang)
             cache.set(cache_key, True, timeout=86400)  # 24 hours
+
+
+# Signal receiver for new user signups
+@receiver(post_save, sender='auth.User')
+def on_user_created(sender, instance, created, **kwargs):
+    """
+    When a new user is created, send admin notification.
+    """
+    if created:
+        # Send admin notification for new signup
+        send_admin_new_user_notification(instance)
+        logger.info(f"[Notification] New user signup detected: {instance.email}")

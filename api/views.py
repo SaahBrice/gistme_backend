@@ -465,6 +465,23 @@ class MentorRequestView(APIView):
                         language=user_lang,  # Use same language as request
                         channels=['email']
                     )
+                
+                # Admin notification
+                from django.conf import settings
+                notify(
+                    'admin_mentor_request',
+                    recipient_email=settings.ADMIN_NOTIFICATION_EMAIL,
+                    context={
+                        'mentee_name': mentee_name,
+                        'mentee_email': request.user.email,
+                        'mentor_name': mentor.name,
+                        'mentor_profession': mentor.profession,
+                        'message': message or 'No message provided',
+                        'request_id': mentor_request.id,
+                    },
+                    language='en',
+                    channels=['email']
+                )
             except Exception as e:
                 logger.warning(f"Failed to send mentor request notifications: {e}")
             
@@ -500,6 +517,28 @@ class AssistanceRequestView(APIView):
                 f"New assistance request #{assistance_request.id} for article {assistance_request.article.id}: "
                 f"{assistance_request.message[:50]}..."
             )
+            
+            # Send admin notification email
+            try:
+                from notifications.service import notify
+                from django.conf import settings
+                
+                notify(
+                    'admin_assistance_request',
+                    recipient_email=settings.ADMIN_NOTIFICATION_EMAIL,
+                    context={
+                        'request_id': assistance_request.id,
+                        'article_title': assistance_request.article.headline_en or assistance_request.article.headline_fr,
+                        'article_id': assistance_request.article.id,
+                        'user_email': assistance_request.email,
+                        'phone': assistance_request.phone or 'Not provided',
+                        'message': assistance_request.message,
+                    },
+                    language='en',
+                    channels=['email']
+                )
+            except Exception as e:
+                logger.error(f"Failed to send admin notification for assistance request: {e}")
             
             return Response({
                 "status": "success",
