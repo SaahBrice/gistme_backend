@@ -60,3 +60,24 @@ class ArticleSerializer(serializers.ModelSerializer):
         ]
         read_only_fields = ['created_at', 'view_count', 'comment_count', 'reaction_count']
 
+
+class AssistanceRequestSerializer(serializers.ModelSerializer):
+    """Serializer for assistance requests from users"""
+    article_title = serializers.SerializerMethodField(read_only=True)
+    
+    class Meta:
+        from .models import AssistanceRequest
+        model = AssistanceRequest
+        fields = [
+            'id', 'article', 'article_title', 'user_name', 'user_email', 
+            'user_phone', 'message', 'status', 'created_at'
+        ]
+        read_only_fields = ['id', 'status', 'created_at', 'article_title']
+    
+    def get_article_title(self, obj):
+        return obj.article.headline_en or obj.article.headline_fr or 'Unknown'
+    
+    def validate_message(self, value):
+        if not value or len(value.strip()) < 10:
+            raise serializers.ValidationError("Please provide a message with at least 10 characters.")
+        return value.strip()

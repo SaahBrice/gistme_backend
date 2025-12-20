@@ -41,101 +41,195 @@ function articleApp() {
         // Timeline items
         timelineItems: [],
 
+        // Assistance request state
+        showAssistanceModal: false,
+        assistanceMessage: '',
+        assistanceName: '',
+        assistancePhone: '',
+        isSubmittingAssistance: false,
+
         // Initialize
-        init() {
-            // Load dummy data if available
-            if (typeof window.articleDummyData !== 'undefined') {
-                this.article = window.articleDummyData.article;
-                this.chatMessages = [...window.articleDummyData.chatMessages];
-                this.aiResponses = [...window.articleDummyData.aiResponses];
-                this.isBookmarked = this.article.bookmarked;
+        async init() {
+            // Get article ID from URL (e.g., /en/article/123/)
+            const pathMatch = window.location.pathname.match(/\/article\/(\d+)\/?/);
+            const articleId = pathMatch ? pathMatch[1] : null;
+
+            // Get language from URL
+            const langMatch = window.location.pathname.match(/^\/(en|fr)\//);
+            this.lang = langMatch ? langMatch[1] : 'en';
+
+            if (articleId) {
+                await this.loadArticle(articleId);
+                await this.loadRelatedArticles();
             } else {
-                // Fallback article data
-                this.article = {
-                    id: 1001,
-                    title: "Google Scholarship 2025: Full Funding for African Students",
-                    headline: "SCHOLARSHIP",
-                    description: "Google is offering fully-funded scholarships for students across Africa to pursue their dreams in technology and computer science at top universities worldwide.",
-                    thumbnail: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800",
-                    source: "Google Africa",
-                    published_date: "December 18, 2024",
-                    read_time: "5 min read",
-                    view_count: 2847
-                };
-
-                this.chatMessages = [{
-                    id: 1,
-                    role: "assistant",
-                    content: "Hello! I'm here to help you understand this article better. What would you like to know?",
-                    timestamp: this.formatTime(new Date())
-                }];
-
-                this.aiResponses = [
-                    "That's a great question! The scholarship typically has a deadline in March.",
-                    "The scholarship covers full tuition, accommodation, and living expenses.",
-                    "You can apply through the official Google Africa portal.",
-                    "All African citizens with strong academics are eligible.",
-                    "Would you like me to explain any specific aspect in detail?"
-                ];
+                console.error('[ArticleApp] No article ID found in URL');
             }
 
-            // Load related articles (dummy data)
-            this.relatedArticles = [
-                {
-                    id: 1002,
-                    title: "Chevening Scholarships 2025 Now Open",
-                    headline: "SCHOLARSHIP",
-                    thumbnail: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=400"
-                },
-                {
-                    id: 1003,
-                    title: "Mastercard Foundation Scholars Program",
-                    headline: "SCHOLARSHIP",
-                    thumbnail: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=400"
-                },
-                {
-                    id: 1004,
-                    title: "DAAD Scholarship for African Students",
-                    headline: "SCHOLARSHIP",
-                    thumbnail: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=400"
-                },
-                {
-                    id: 1005,
-                    title: "Commonwealth Scholarships 2025",
-                    headline: "SCHOLARSHIP",
-                    thumbnail: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=400"
-                }
-            ];
-
-            // Load timeline items (dummy data)
-            this.timelineItems = [
-                {
-                    id: 2001,
-                    title: "Application deadline extended for Google Scholarship",
-                    category: "UPDATE",
-                    date: "Today"
-                },
-                {
-                    id: 2002,
-                    title: "New partner universities announced",
-                    category: "NEWS",
-                    date: "Yesterday"
-                },
-                {
-                    id: 2003,
-                    title: "Scholarship amount increased to $50,000",
-                    category: "UPDATE",
-                    date: "Dec 15"
-                },
-                {
-                    id: 2004,
-                    title: "Online application portal now open",
-                    category: "ANNOUNCEMENT",
-                    date: "Dec 10"
-                }
-            ];
+            // Check if bookmarked
+            const bookmarks = JSON.parse(localStorage.getItem('gist4u_bookmarks') || '[]');
+            this.isBookmarked = bookmarks.includes(parseInt(articleId));
 
             console.log('[ArticleApp] Initialized with article:', this.article?.title);
+        },
+
+        // Language helper
+        lang: 'en',
+
+        // Load article from API
+        async loadArticle(articleId) {
+            try {
+                const response = await fetch(`/api/articles/${articleId}/`);
+                if (response.ok) {
+                    const data = await response.json();
+
+                    // Transform API data to component format
+                    this.article = {
+                        id: data.id,
+                        title: this.lang === 'fr'
+                            ? (data.headline_fr || data.headline_en || data.headline)
+                            : (data.headline_en || data.headline_fr || data.headline),
+                        headline: data.category_details?.name_en || 'NEWS',
+                        description: this.lang === 'fr'
+                            ? (data.french_summary || data.english_summary)
+                            : (data.english_summary || data.french_summary),
+                        thumbnail: data.thumbnails && data.thumbnails.length > 0
+                            ? data.thumbnails[0]
+                            : 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800',
+                        source: data.source_names && data.source_names.length > 0
+                            ? data.source_names[0]
+                            : 'Gist4U',
+                        published_date: this.formatDate(data.created_at),
+                        read_time: this.estimateReadTime(data.english_summary || data.french_summary),
+                        view_count: data.view_count || 0,
+                        audio_url: this.lang === 'fr' ? data.french_audio : data.english_audio,
+                        deadline: data.deadline,
+                        category_emoji: data.category_details?.emoji || ''
+                    };
+
+                    // Store raw data for audio
+                    this.articleData = data;
+
+                    // Initialize chat with welcome message
+                    this.chatMessages = [{
+                        id: 1,
+                        role: "assistant",
+                        content: this.lang === 'fr'
+                            ? "Bonjour! Je suis là pour vous aider à mieux comprendre cet article. Que voulez-vous savoir?"
+                            : "Hello! I'm here to help you understand this article better. What would you like to know?",
+                        timestamp: this.formatTime(new Date())
+                    }];
+                } else {
+                    console.error('[ArticleApp] Failed to load article:', response.status);
+                    this.showToastMessage('Failed to load article', 'error');
+                }
+            } catch (error) {
+                console.error('[ArticleApp] Error loading article:', error);
+                this.showToastMessage('Error loading article', 'error');
+            }
+        },
+
+        // Load related articles from API
+        async loadRelatedArticles() {
+            try {
+                // Get articles from same category
+                let url = '/api/articles/?page_size=5';
+                if (this.article && this.articleData?.category) {
+                    url += `&category=${this.articleData.category}`;
+                }
+
+                const response = await fetch(url);
+                if (response.ok) {
+                    const data = await response.json();
+                    const articles = data.results || data;
+
+                    // Filter out current article and limit to 4
+                    this.relatedArticles = articles
+                        .filter(a => a.id !== this.article?.id)
+                        .slice(0, 4)
+                        .map(a => ({
+                            id: a.id,
+                            title: this.lang === 'fr'
+                                ? (a.headline_fr || a.headline_en || a.headline)
+                                : (a.headline_en || a.headline_fr || a.headline),
+                            headline: a.category_details?.name_en || 'NEWS',
+                            thumbnail: a.thumbnails && a.thumbnails.length > 0
+                                ? a.thumbnails[0]
+                                : 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=400'
+                        }));
+                }
+            } catch (error) {
+                console.error('[ArticleApp] Error loading related articles:', error);
+            }
+
+            // Load timeline items (recent articles from same main category)
+            await this.loadTimeline();
+        },
+
+        // Load timeline (recent articles)
+        async loadTimeline() {
+            try {
+                const mainCategory = this.articleData?.category_details?.main_category;
+                let url = '/api/articles/?page_size=4';
+                if (mainCategory) {
+                    url += `&main_category=${mainCategory}`;
+                }
+
+                const response = await fetch(url);
+                if (response.ok) {
+                    const data = await response.json();
+                    const articles = data.results || data;
+
+                    // Filter out current article
+                    this.timelineItems = articles
+                        .filter(a => a.id !== this.article?.id)
+                        .slice(0, 4)
+                        .map(a => ({
+                            id: a.id,
+                            title: this.lang === 'fr'
+                                ? (a.headline_fr || a.headline_en || a.headline)
+                                : (a.headline_en || a.headline_fr || a.headline),
+                            category: a.category_details?.name_en || 'NEWS',
+                            date: this.getRelativeDate(a.created_at)
+                        }));
+                }
+            } catch (error) {
+                console.error('[ArticleApp] Error loading timeline:', error);
+            }
+        },
+
+        // Get relative date (Today, Yesterday, Dec 15)
+        getRelativeDate(dateString) {
+            if (!dateString) return '';
+            const date = new Date(dateString);
+            const now = new Date();
+            const diffDays = Math.floor((now - date) / (1000 * 60 * 60 * 24));
+
+            if (diffDays === 0) return this.lang === 'fr' ? "Aujourd'hui" : 'Today';
+            if (diffDays === 1) return this.lang === 'fr' ? 'Hier' : 'Yesterday';
+
+            return date.toLocaleDateString(this.lang === 'fr' ? 'fr-FR' : 'en-US', {
+                month: 'short',
+                day: 'numeric'
+            });
+        },
+
+        // Format date helper
+        formatDate(dateString) {
+            if (!dateString) return '';
+            const date = new Date(dateString);
+            return date.toLocaleDateString(this.lang === 'fr' ? 'fr-FR' : 'en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+        },
+
+        // Estimate read time
+        estimateReadTime(text) {
+            if (!text) return '2 min read';
+            const words = text.split(/\s+/).length;
+            const minutes = Math.ceil(words / 200); // Average reading speed
+            return `${minutes} min read`;
         },
 
         // Format time helper
@@ -148,28 +242,43 @@ function articleApp() {
             if (window.history.length > 1) {
                 window.history.back();
             } else {
-                window.location.href = '/feed/';
+                window.location.href = `/${this.lang}/feed/`;
             }
         },
 
         // Navigate to related article
         goToArticle(articleId) {
-            window.location.href = `/article/${articleId}/`;
+            window.location.href = `/${this.lang}/article/${articleId}/`;
         },
+
+        // Audio element
+        currentAudio: null,
 
         // ===============================================
         // PLAY/PAUSE FUNCTIONALITY
         // ===============================================
         togglePlay() {
-            this.isPlaying = !this.isPlaying;
+            const audioUrl = this.article?.audio_url;
 
-            if (this.isPlaying) {
-                this.showToastMessage('Playing audio...', 'info');
-                // In production, connect to actual audio playback
-                console.log('[ArticleApp] Started audio playback');
+            if (!audioUrl) {
+                this.showToastMessage(this.lang === 'fr' ? 'Audio non disponible' : 'Audio not available', 'info');
+                return;
+            }
+
+            if (this.isPlaying && this.currentAudio) {
+                this.currentAudio.pause();
+                this.isPlaying = false;
+                this.showToastMessage(this.lang === 'fr' ? 'Pause' : 'Paused', 'info');
             } else {
-                this.showToastMessage('Paused', 'info');
-                console.log('[ArticleApp] Paused audio playback');
+                if (!this.currentAudio) {
+                    this.currentAudio = new Audio(audioUrl);
+                    this.currentAudio.onended = () => {
+                        this.isPlaying = false;
+                    };
+                }
+                this.currentAudio.play();
+                this.isPlaying = true;
+                this.showToastMessage(this.lang === 'fr' ? 'Lecture en cours...' : 'Playing audio...', 'info');
             }
         },
 
@@ -213,10 +322,12 @@ function articleApp() {
         },
 
         getShareUrl() {
-            return `${window.location.origin}/article/${this.article.id}/`;
+            if (!this.article?.id) return window.location.href;
+            return `${window.location.origin}/${this.lang}/article/${this.article.id}/`;
         },
 
         getShareText() {
+            if (!this.article?.title) return 'Read on Gist4U';
             return `${this.article.title} - Read on Gist4U`;
         },
 
@@ -512,6 +623,82 @@ function articleApp() {
             setTimeout(() => {
                 this.showToast = false;
             }, 2500);
+        },
+
+        // ===============================================
+        // ASSISTANCE REQUEST FUNCTIONALITY
+        // ===============================================
+        openAssistanceModal() {
+            this.showAssistanceModal = true;
+            this.assistanceMessage = '';
+            this.assistanceName = '';
+            this.assistancePhone = '';
+        },
+
+        closeAssistanceModal() {
+            this.showAssistanceModal = false;
+        },
+
+        async sendAssistanceRequest() {
+            if (!this.assistanceMessage.trim() || this.assistanceMessage.trim().length < 10) {
+                this.showToastMessage(
+                    this.lang === 'fr'
+                        ? 'Veuillez décrire votre besoin (au moins 10 caractères)'
+                        : 'Please describe your need (at least 10 characters)',
+                    'info'
+                );
+                return;
+            }
+
+            if (!this.article?.id) {
+                this.showToastMessage('Error: Article not loaded', 'error');
+                return;
+            }
+
+            this.isSubmittingAssistance = true;
+
+            try {
+                const response = await fetch('/api/assistance-requests/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        article: this.article.id,
+                        message: this.assistanceMessage.trim(),
+                        user_name: this.assistanceName.trim(),
+                        user_phone: this.assistancePhone.trim()
+                    })
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    this.closeAssistanceModal();
+                    this.showToastMessage(
+                        this.lang === 'fr'
+                            ? 'Demande envoyée! Un agent Gist4U vous contactera bientôt.'
+                            : 'Request sent! A Gist4U agent will contact you shortly.',
+                        'success'
+                    );
+                    console.log('[ArticleApp] Assistance request sent:', data.request_id);
+                } else {
+                    const errorData = await response.json();
+                    this.showToastMessage(
+                        errorData.message || 'Failed to send request',
+                        'error'
+                    );
+                }
+            } catch (error) {
+                console.error('[ArticleApp] Error sending assistance request:', error);
+                this.showToastMessage(
+                    this.lang === 'fr'
+                        ? 'Erreur de connexion. Réessayez.'
+                        : 'Connection error. Please try again.',
+                    'error'
+                );
+            } finally {
+                this.isSubmittingAssistance = false;
+            }
         }
     };
 }
