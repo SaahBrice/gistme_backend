@@ -779,6 +779,433 @@ msgstr "INFO CONTACT"
 msgid "Reach out anytime — our team is dedicated to helping you find opportunities and succeed in your journey."
 msgstr "Contactez-nous à tout moment — notre équipe est dédiée à vous aider à trouver des opportunités et réussir."
 
+# Feed Page - Navigation Tabs
+msgid "News"
+msgstr "Actualités"
+
+msgid "Opportunities"
+msgstr "Opportunités"
+
+msgid "For You"
+msgstr "Pour Vous"
+
+# Feed Page - Profile Modal
+msgid "My Quote of Today"
+msgstr "Ma Citation du Jour"
+
+msgid "Relax Here"
+msgstr "Détendez-vous"
+
+msgid "Mentor Me"
+msgstr "Mentorez-moi"
+
+msgid "Sponsors & Partners"
+msgstr "Sponsors & Partenaires"
+
+# Feed Page - Settings Modal
+msgid "Account"
+msgstr "Compte"
+
+msgid "Name"
+msgstr "Nom"
+
+msgid "Phone"
+msgstr "Téléphone"
+
+msgid "Region"
+msgstr "Région"
+
+msgid "Education Level"
+msgstr "Niveau d'Études"
+
+msgid "Background"
+msgstr "Formation"
+
+msgid "Interests"
+msgstr "Intérêts"
+
+msgid "Notification Time"
+msgstr "Heure de Notification"
+
+msgid "Push Notifications"
+msgstr "Notifications Push"
+
+msgid "Language"
+msgstr "Langue"
+
+msgid "Quote of the Day"
+msgstr "Citation du Jour"
+
+msgid "Receive Daily Quotes"
+msgstr "Recevoir des Citations Quotidiennes"
+
+msgid "Quote Category"
+msgstr "Catégorie de Citation"
+
+msgid "Custom Desires"
+msgstr "Souhaits Personnalisés"
+
+msgid "Tell us what you're looking for"
+msgstr "Dites-nous ce que vous recherchez"
+
+msgid "Save Changes"
+msgstr "Enregistrer les Modifications"
+
+msgid "Saving..."
+msgstr "Enregistrement..."
+
+msgid "Account Actions"
+msgstr "Actions du Compte"
+
+msgid "Log Out"
+msgstr "Déconnexion"
+
+msgid "Delete Account"
+msgstr "Supprimer le Compte"
+
+msgid "Terms & Privacy Policy"
+msgstr "Conditions & Politique de Confidentialité"
+
+# Feed Page - Bookmarks Modal
+msgid "No bookmarks yet"
+msgstr "Pas encore de signets"
+
+msgid "Articles you bookmark will appear here"
+msgstr "Les articles que vous mettez en signet apparaîtront ici"
+
+# Feed Page - Notifications Modal
+msgid "Gist, based on your interest"
+msgstr "Gist, basé sur vos intérêts"
+
+msgid "No gist yet"
+msgstr "Pas encore de gist"
+
+msgid "Set your custom desires in Settings to get personalized gist"
+msgstr "Définissez vos souhaits personnalisés dans Paramètres pour obtenir des gists personnalisés"
+
+# Feed Page - Sponsors Modal
+msgid "Thank You!"
+msgstr "Merci !"
+
+msgid "Your inquiry has been received. Our founder will personally get in touch with you soon."
+msgstr "Votre demande a été reçue. Notre fondateur vous contactera personnellement bientôt."
+
+msgid "Close"
+msgstr "Fermer"
+
+msgid "Partner with us or sponsor our mission to connect Cameroonians with opportunities."
+msgstr "Associez-vous à nous ou parrainez notre mission de connecter les Camerounais aux opportunités."
+
+msgid "What would you like to do?"
+msgstr "Que souhaitez-vous faire ?"
+
+msgid "Sponsor"
+msgstr "Sponsor"
+
+msgid "Partner"
+msgstr "Partenaire"
+
+msgid "Both"
+msgstr "Les Deux"
+
+msgid "Your Information"
+msgstr "Vos Informations"
+
+msgid "Full Name"
+msgstr "Nom Complet"
+
+msgid "Organization"
+msgstr "Organisation"
+
+msgid "Optional"
+msgstr "Optionnel"
+
+msgid "Company/Organization Name"
+msgstr "Nom de l'Entreprise/Organisation"
+
+msgid "Website"
+msgstr "Site Web"
+
+msgid "Tell Us More"
+msgstr "Dites-nous en Plus"
+
+msgid "Send"
+msgstr "Envoyer"
+
+msgid "Sending..."
+msgstr "Envoi..."
+
+msgid "Share"
+msgstr "Partager"
+
+# Feed Page - Terms Modal
+msgid "Terms & Privacy"
+msgstr "Conditions & Confidentialité"
+
+msgid "Terms of Service"
+msgstr "Conditions d'Utilisation"
+
+msgid "By using Gist4U, you agree to these terms. We provide curated opportunities including scholarships, jobs, and competitions."
+msgstr "En utilisant Gist4U, vous acceptez ces conditions. Nous fournissons des opportunités sélectionnées incluant bourses, emplois et concours."
+
+msgid "Privacy Policy"
+msgstr "Politique de Confidentialité"
+
+msgid "We collect your email, phone, and preferences to personalize your experience. Your data is stored securely and never sold."
+msgstr "Nous collectons votre email, téléphone et préférences pour personnaliser votre expérience. Vos données sont stockées en sécurité et jamais vendues."
+
+msgid "By enabling notifications, you consent to receiving updates about opportunities matching your interests."
+msgstr "En activant les notifications, vous consentez à recevoir des mises à jour sur les opportunités correspondant à vos intérêts."
+
+msgid "Questions? Email us at"
+msgstr "Questions ? Écrivez-nous à"
+
+# Feed Page - Delete Account Popup
+msgid "Delete Account?"
+msgstr "Supprimer le Compte ?"
+
+msgid "To delete your account, contact us:"
+msgstr "Pour supprimer votre compte, contactez-nous :"
+
+msgid "Got it"
+msgstr "Compris"
+
+msgid "Settings saved successfully!"
+msgstr "Paramètres enregistrés avec succès !"
+
+# Article Page
+msgid "More for you"
+msgstr "Plus pour vous"
+
+msgid "Timeline"
+msgstr "Chronologie"
+
+msgid "Share this article"
+msgstr "Partager cet article"
+
+msgid "Image"
+msgstr "Image"
+
+msgid "Download Image"
+msgstr "Télécharger l'Image"
+
+msgid "Gist Assistant"
+msgstr "Assistant Gist"
+
+msgid "Ask me about this article"
+msgstr "Posez-moi des questions sur cet article"
+
+# Subscription Modal
+msgid "Never Miss Any Opportunity Anymore!"
+msgstr "Ne Manquez Plus Jamais Aucune Opportunité !"
+
+msgid "You'll never miss any opportunity again. Get alerts for scholarships, jobs, exam results, and hot gist."
+msgstr "Vous ne manquerez plus jamais aucune opportunité. Recevez des alertes pour les bourses, emplois, résultats d'examens et les dernières infos."
+
+msgid "Delivered to your email & phone"
+msgstr "Livré sur votre email & téléphone"
+
+msgid "Get Started"
+msgstr "Commencer"
+
+msgid "Phone Number"
+msgstr "Numéro de Téléphone"
+
+msgid "Email Address"
+msgstr "Adresse Email"
+
+msgid "What kind of gist do you want?"
+msgstr "Quel type de gist voulez-vous ?"
+
+msgid "Coupon Code"
+msgstr "Code Promo"
+
+msgid "Apply"
+msgstr "Appliquer"
+
+msgid "Just 1,500 FCFA / 3 months"
+msgstr "Seulement 1 500 FCFA / 3 mois"
+
+msgid "Back"
+msgstr "Retour"
+
+msgid "Processing..."
+msgstr "Traitement..."
+
+msgid "Please wait while we process your subscription"
+msgstr "Veuillez patienter pendant que nous traitons votre abonnement"
+
+msgid "You're all set! You'll now receive priority alerts for scholarships, jobs, exam results, and exclusive gist directly to your phone and email."
+msgstr "Vous êtes paré ! Vous recevrez désormais des alertes prioritaires pour les bourses, emplois, résultats d'examens et gists exclusifs directement sur votre téléphone et email."
+
+msgid "Subscription Active"
+msgstr "Abonnement Actif"
+
+msgid "Valid until:"
+msgstr "Valide jusqu'au :"
+
+msgid "Explore Your Feed"
+msgstr "Explorez Votre Fil"
+
+msgid "You're Already Pro!"
+msgstr "Vous Êtes Déjà Pro !"
+
+msgid "Great news! You already have an active Pro subscription. No need to subscribe again."
+msgstr "Bonne nouvelle ! Vous avez déjà un abonnement Pro actif. Pas besoin de vous réabonner."
+
+msgid "Pro Subscription Active"
+msgstr "Abonnement Pro Actif"
+
+msgid "Go to Feed"
+msgstr "Aller au Fil"
+
+# Login/Signup Pages
+msgid "Free Forever"
+msgstr "Gratuit à Vie"
+
+msgid "Welcome back! Sign in to continue"
+msgstr "Bon retour ! Connectez-vous pour continuer"
+
+msgid "Continue with Google"
+msgstr "Continuer avec Google"
+
+msgid "or use email"
+msgstr "ou utilisez votre email"
+
+msgid "Sign In"
+msgstr "Connexion"
+
+msgid "New here?"
+msgstr "Nouveau ici ?"
+
+msgid "Create an account"
+msgstr "Créer un compte"
+
+msgid "Join Now"
+msgstr "Rejoignez-nous"
+
+msgid "Create your free account"
+msgstr "Créez votre compte gratuit"
+
+msgid "Sign up with Google"
+msgstr "S'inscrire avec Google"
+
+msgid "At least 8 characters"
+msgstr "Au moins 8 caractères"
+
+msgid "Create Account"
+msgstr "Créer le Compte"
+
+msgid "Already have an account?"
+msgstr "Vous avez déjà un compte ?"
+
+msgid "Sign in"
+msgstr "Connexion"
+
+msgid "Get Cameroon's hottest gist in 60 seconds"
+msgstr "Obtenez les dernières nouvelles du Cameroun en 60 secondes"
+
+# Mentor Page
+msgid "Available Mentors"
+msgstr "Mentors Disponibles"
+
+msgid "read more"
+msgstr "lire plus"
+
+msgid "show less"
+msgstr "voir moins"
+
+msgid "No mentors found"
+msgstr "Aucun mentor trouvé"
+
+msgid "Try a different category"
+msgstr "Essayez une autre catégorie"
+
+msgid "Welcome to Mentor Me"
+msgstr "Bienvenue dans Mentor Me"
+
+msgid "Tap to hear about our mentorship program"
+msgstr "Appuyez pour découvrir notre programme de mentorat"
+
+# Onboarding Page
+msgid "Let's personalize your experience"
+msgstr "Personnalisons votre expérience"
+
+msgid "Let's Go"
+msgstr "C'est parti"
+
+msgid "Let's get started"
+msgstr "Commençons"
+
+msgid "Your phone & where you're based"
+msgstr "Votre téléphone et votre localisation"
+
+msgid "Your Region"
+msgstr "Votre Région"
+
+msgid "Continue"
+msgstr "Continuer"
+
+msgid "What interests you?"
+msgstr "Qu'est-ce qui vous intéresse ?"
+
+msgid "Select all that apply"
+msgstr "Sélectionnez tout ce qui s'applique"
+
+msgid "Select All"
+msgstr "Tout Sélectionner"
+
+msgid "About You"
+msgstr "À Propos de Vous"
+
+msgid "This helps us find relevant opportunities"
+msgstr "Cela nous aide à trouver des opportunités pertinentes"
+
+msgid "Highest Education"
+msgstr "Plus Haut Niveau d'Études"
+
+msgid "Your Background"
+msgstr "Votre Formation"
+
+msgid "When to notify you?"
+msgstr "Quand vous notifier ?"
+
+msgid "Pick your preferred time"
+msgstr "Choisissez votre heure préférée"
+
+msgid "Anything else?"
+msgstr "Autre chose ?"
+
+msgid "Tell us your specific needs (optional)"
+msgstr "Dites-nous vos besoins spécifiques (optionnel)"
+
+msgid "Be specific! This helps us find exactly what you need."
+msgstr "Soyez précis ! Cela nous aide à trouver exactement ce dont vous avez besoin."
+
+msgid "Save & Go"
+msgstr "Enregistrer & Continuer"
+
+msgid "Skip for now"
+msgstr "Passer pour l'instant"
+
+# Payment Result Page
+msgid "Welcome to Pro!"
+msgstr "Bienvenue dans Pro !"
+
+msgid "Payment Failed"
+msgstr "Paiement Échoué"
+
+msgid "Try Again"
+msgstr "Réessayer"
+
+# Relax/Game Page
+msgid "Level"
+msgstr "Niveau"
+
+
+
+
+
 
 
 

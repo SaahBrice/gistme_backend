@@ -1,5 +1,5 @@
 {% extends 'web/base.html' %}
-{% load static %}
+{% load static i18n %}
 
 {% block title %}Welcome - Gist4U{% endblock %}
 
@@ -9,6 +9,7 @@
 {% block extra_head %}
 <link rel="stylesheet" href="{% static 'web/css/onboarding.css' %}">
 <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="{% static 'web/js/onboarding.js' %}"></script>
 {% endblock %}
 
 {% block content %}
@@ -24,7 +25,7 @@
                 <button class="audio-play-btn" @click="showPlayer = true; playAudio()" title="Listen to intro">
                 </button>
             </div>
-            <p class="onboarding-subtitle">Let's personalize your experience</p>
+            <p class="onboarding-subtitle">{% trans "Let's personalize your experience" %}</p>
             
             <div class="onboarding-progress">
                 <template x-for="i in 5" :key="i">
@@ -69,20 +70,25 @@
                     </button>
                     <button class="btn-letsgo" @click="closePlayer()" :disabled="audioProgress < 50" 
                             :class="{ 'disabled': audioProgress < 50, 'pulse-active': audioComplete }">
-                        Let's Go →
+                        {% trans "Let's Go" %} →
                     </button>
                 </div>
             </div>
         </div>
         
+        {% get_current_language as LANGUAGE_CODE %}
+        {% if LANGUAGE_CODE == 'fr' %}
+        <audio id="onboarding-audio" src="{% static 'web/audio/gist4u_onboarding_message_fr.wav' %}" preload="auto"></audio>
+        {% else %}
         <audio id="onboarding-audio" src="{% static 'web/audio/gist4u_onboarding_message_en.mp3' %}" preload="auto"></audio>
+        {% endif %}
         
         <div class="step-container">
             <!-- Step 1: Phone Number & Region -->
             <div class="step-card" x-show="step === 1">
                 <div class="step-emoji">📱</div>
-                <h2 class="step-title">Let's get started</h2>
-                <p class="step-subtitle">Your phone & where you're based</p>
+                <h2 class="step-title">{% trans "Let's get started" %}</h2>
+                <p class="step-subtitle">{% trans "Your phone & where you're based" %}</p>
                 
                 <div class="phone-input-group">
                     <span class="phone-prefix">+237</span>
@@ -95,7 +101,7 @@
                 </div>
                 <p class="error-text" x-show="phoneError" x-text="phoneError"></p>
                 
-                <label class="group-label">Your Region</label>
+                <label class="group-label">{% trans "Your Region" %}</label>
                 <div class="region-grid">
                     <template x-for="option in regionOptions" :key="option.value">
                         <div class="region-chip" 
@@ -107,7 +113,7 @@
                 
                 <div class="step-nav">
                     <button class="btn-next" @click="nextStep()" :disabled="!isPhoneValid || !region">
-                        Continue →
+                        {% trans "Continue" %} →
                     </button>
                 </div>
             </div>
@@ -115,8 +121,8 @@
             <!-- Step 2: Interests -->
             <div class="step-card" x-show="step === 2">
                 <div class="step-emoji">🎯</div>
-                <h2 class="step-title">What interests you?</h2>
-                <p class="step-subtitle">Select all that apply</p>
+                <h2 class="step-title">{% trans "What interests you?" %}</h2>
+                <p class="step-subtitle">{% trans "Select all that apply" %}</p>
                 
                 <div class="chips-container">
                     <div class="chips-grid">
@@ -125,7 +131,7 @@
                              :class="{ 'selected': interests.length === interestOptions.length }"
                              @click="selectAllInterests()">
                             <span class="chip-emoji">✅</span>
-                            <span>Select All</span>
+                            <span>{% trans "Select All" %}</span>
                         </div>
                         
                         <template x-for="option in interestOptions" :key="option.id">
@@ -142,7 +148,7 @@
                 <div class="step-nav">
                     <button class="btn-back" @click="prevStep()">←</button>
                     <button class="btn-next" @click="nextStep()" :disabled="interests.length === 0">
-                        Continue →
+                        {% trans "Continue" %} →
                     </button>
                 </div>
             </div>
@@ -150,10 +156,10 @@
             <!-- Step 3: Education & Background -->
             <div class="step-card" x-show="step === 3">
                 <div class="step-emoji">🎓</div>
-                <h2 class="step-title">About You</h2>
-                <p class="step-subtitle">This helps us find relevant opportunities</p>
+                <h2 class="step-title">{% trans "About You" %}</h2>
+                <p class="step-subtitle">{% trans "This helps us find relevant opportunities" %}</p>
                 
-                <p class="section-label">Highest Education</p>
+                <p class="section-label">{% trans "Highest Education" %}</p>
                 <div class="pills-container">
                     <template x-for="option in educationOptions" :key="option.value">
                         <div class="pill" 
@@ -165,7 +171,7 @@
                 
                 <div class="section-divider"></div>
                 
-                <p class="section-label">Your Background</p>
+                <p class="section-label">{% trans "Your Background" %}</p>
                 <div class="pills-container">
                     <template x-for="option in backgroundOptions" :key="option.value">
                         <div class="pill" 
@@ -178,7 +184,7 @@
                 <div class="step-nav">
                     <button class="btn-back" @click="prevStep()">←</button>
                     <button class="btn-next" @click="nextStep()" :disabled="!education || !background">
-                        Continue →
+                        {% trans "Continue" %} →
                     </button>
                 </div>
             </div>
@@ -186,8 +192,8 @@
             <!-- Step 4: Notification Time -->
             <div class="step-card" x-show="step === 4">
                 <div class="step-emoji">🔔</div>
-                <h2 class="step-title">When to notify you?</h2>
-                <p class="step-subtitle">Pick your preferred time</p>
+                <h2 class="step-title">{% trans "When to notify you?" %}</h2>
+                <p class="step-subtitle">{% trans "Pick your preferred time" %}</p>
                 
                 <div class="time-picker">
                     <template x-for="slot in timeSlots" :key="slot.value">
@@ -203,7 +209,7 @@
                 <div class="step-nav">
                     <button class="btn-back" @click="prevStep()">←</button>
                     <button class="btn-next" @click="nextStep()" :disabled="!notificationTime">
-                        Continue →
+                        {% trans "Continue" %} →
                     </button>
                 </div>
             </div>
@@ -211,24 +217,24 @@
             <!-- Step 5: Custom Desires (Optional) -->
             <div class="step-card" x-show="step === 5">
                 <div class="step-emoji">💭</div>
-                <h2 class="step-title">Anything else?</h2>
-                <p class="step-subtitle">Tell us your specific needs (optional)</p>
+                <h2 class="step-title">{% trans "Anything else?" %}</h2>
+                <p class="step-subtitle">{% trans "Tell us your specific needs (optional)" %}</p>
                 
                 <textarea class="desires-textarea" 
                           x-model="customDesires"
                           placeholder="E.g., I'm looking for Master's scholarships in Canada for Computer Science..."></textarea>
-                <p class="desires-hint">Be specific! This helps us find exactly what you need.</p>
+                <p class="desires-hint">{% trans "Be specific! This helps us find exactly what you need." %}</p>
                 
                 <div class="step-nav">
                     <button class="btn-back" @click="prevStep()">←</button>
                     <button class="btn-next btn-save" @click="saveAndContinue()" :disabled="saving">
-                        <span x-show="!saving">Save & Go →</span>
-                        <span x-show="saving">Saving...</span>
+                        <span x-show="!saving">{% trans "Save & Go" %} →</span>
+                        <span x-show="saving">{% trans "Saving..." %}</span>
                     </button>
                 </div>
                 
                 <div class="skip-optional" x-show="!customDesires">
-                    <button @click="saveAndContinue()">Skip for now</button>
+                    <button @click="saveAndContinue()">{% trans "Skip for now" %}</button>
                 </div>
             </div>
         </div>
@@ -237,5 +243,4 @@
 {% endblock %}
 
 {% block extra_scripts %}
-<script src="{% static 'web/js/onboarding.js' %}"></script>
 {% endblock %}

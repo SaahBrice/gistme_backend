@@ -94,7 +94,11 @@ function mentorApp() {
 
         toggleAudio() {
             if (!this.audioElement) {
-                this.audioElement = new Audio('/static/web/audio/mentor_me_message.mp3');
+                // Determine language from URL
+                const langMatch = window.location.pathname.match(/^\/(en|fr)\//);
+                const lang = langMatch ? langMatch[1] : 'en';
+                const audioFile = lang === 'fr' ? '/static/web/audio/mentor_me_message_fr.wav' : '/static/web/audio/mentor_me_message.mp3';
+                this.audioElement = new Audio(audioFile);
 
                 this.audioElement.addEventListener('timeupdate', () => {
                     if (this.audioElement.duration) {

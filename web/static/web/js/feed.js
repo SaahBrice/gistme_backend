@@ -269,6 +269,9 @@ function feedApp() {
                 window.removeBookmarkHandler = (articleId) => {
                     self.removeBookmark(articleId);
                 };
+                // Initialize language from URL
+                const langMatch = window.location.pathname.match(/^\/(en|fr)\//);
+                this.settingsLanguage = langMatch ? langMatch[1] : 'en';
             });
         },
 
@@ -399,7 +402,11 @@ function feedApp() {
             this.sponsorSubmitting = true;
 
             try {
-                const response = await fetch('/submit-sponsor-partner/', {
+                // Get language prefix from current URL (e.g., '/fr/' or '/en/')
+                const langMatch = window.location.pathname.match(/^\/(en|fr)\//);
+                const langPrefix = langMatch ? langMatch[0] : '/';
+
+                const response = await fetch(`${langPrefix}submit-sponsor-partner/`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -626,7 +633,11 @@ function feedApp() {
             this.savingSettings = true;
 
             try {
-                const response = await fetch('/save-settings/', {
+                // Get language prefix from current URL (e.g., '/fr/' or '/en/')
+                const langMatch = window.location.pathname.match(/^\/(en|fr)\//);
+                const langPrefix = langMatch ? langMatch[0] : '/';
+
+                const response = await fetch(`${langPrefix}save-settings/`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -642,7 +653,8 @@ function feedApp() {
                         interests: this.settingsInterests,
                         custom_desires: this.settingsCustomDesires,
                         receive_quotes: this.receiveQuotes,
-                        quote_category: this.quoteCategory
+                        quote_category: this.quoteCategory,
+                        language: this.settingsLanguage
                     })
                 });
 
@@ -651,6 +663,19 @@ function feedApp() {
                 if (data.success) {
                     this.showSettings = false;
                     this.showSaveToast = true;
+
+                    // Check if language changed and redirect
+                    const currentLangMatch = window.location.pathname.match(/^\/(en|fr)\//);
+                    const currentLang = currentLangMatch ? currentLangMatch[1] : 'en';
+                    if (this.settingsLanguage !== currentLang) {
+                        // Update cookie and redirect to new language version
+                        const expires = new Date(Date.now() + 365 * 24 * 60 * 60 * 1000);
+                        document.cookie = `django_language=${this.settingsLanguage}; path=/; expires=${expires.toUTCString()}; SameSite=Lax`;
+                        const newPath = window.location.pathname.replace(/^\/(en|fr)\//, `/${this.settingsLanguage}/`);
+                        window.location.href = newPath;
+                        return;
+                    }
+
                     setTimeout(() => {
                         this.showSaveToast = false;
                     }, 2500);

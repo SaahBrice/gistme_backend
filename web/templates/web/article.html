@@ -1,5 +1,5 @@
 {% extends 'web/base.html' %}
-{% load static %}
+{% load static i18n %}
 
 {% block title %}{{ article.title|default:"Article" }} - Gist4U{% endblock %}
 
@@ -85,7 +85,7 @@
             <!-- Related Articles Section -->
             <section class="related-articles-section">
                 <div class="related-articles-header">
-                    <h3 class="related-articles-title">More for you</h3>
+                    <h3 class="related-articles-title">{% trans "More for you" %}</h3>
                 </div>
                 
                 <div class="related-articles-scroll">
@@ -105,7 +105,7 @@
             
             <!-- Timeline Section -->
             <section class="timeline-section">
-                <h3 class="timeline-title">Timeline</h3>
+                <h3 class="timeline-title">{% trans "Timeline" %}</h3>
                 
                 <div class="timeline-flow">
                     <template x-for="(item, index) in timelineItems" :key="item.id">
@@ -205,7 +205,7 @@
          @click.outside="closeShareModal()">
         
         <div class="share-modal-handle"></div>
-        <h2 class="share-modal-title">Share this article</h2>
+        <h2 class="share-modal-title">{% trans "Share this article" %}</h2>
         
         <!-- Share Options -->
         <div class="share-options">
@@ -227,7 +227,7 @@
                         <polyline points="21 15 16 10 5 21"/>
                     </svg>
                 </div>
-                <span class="share-option-label">Image</span>
+                <span class="share-option-label">{% trans "Image" %}</span>
             </button>
             
             <button class="share-option-btn" @click="shareToWhatsApp()">
@@ -263,7 +263,7 @@
         <div class="share-image-preview" x-show="shareImageUrl">
             <img :src="shareImageUrl" alt="Share preview">
             <button class="share-download-btn" @click="downloadShareImage()">
-                Download Image
+                {% trans "Download Image" %}
             </button>
         </div>
     </div>
@@ -288,8 +288,8 @@
             <div class="chat-modal-title-area">
                 <div class="chat-ai-avatar">🤖</div>
                 <div>
-                    <h3 class="chat-modal-title">Gist Assistant</h3>
-                    <p class="chat-modal-subtitle">Ask me about this article</p>
+                    <h3 class="chat-modal-title">{% trans "Gist Assistant" %}</h3>
+                    <p class="chat-modal-subtitle">{% trans "Ask me about this article" %}</p>
                 </div>
             </div>
             <button class="chat-close-btn" @click="closeChatModal()">

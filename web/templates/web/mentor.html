@@ -1,5 +1,5 @@
 {% extends 'web/base.html' %}
-{% load static %}
+{% load static i18n %}
 
 {% block title %}Mentor Me - Gist4U{% endblock %}
 
@@ -20,7 +20,7 @@
                 <polyline points="15 18 9 12 15 6"/>
             </svg>
         </a>
-        <h1>Mentor Me</h1>
+        <h1>{% trans "Mentor Me" %}</h1>
     </div>
     
     <!-- Filter Chips with SVG Icons -->
@@ -64,7 +64,7 @@
     <!-- Mentors Section -->
     <div class="mentors-section">
         <div class="section-header">
-            <h2>Available Mentors</h2>
+            <h2>{% trans "Available Mentors" %}</h2>
             <span class="mentor-count" x-text="filteredMentors.length + ' mentors'"></span>
         </div>
         
@@ -105,15 +105,15 @@
                                 <span x-text="mentor.bio"></span>
                                 <span class="read-more-btn" 
                                       x-show="isTruncated && !expanded" 
-                                      @click="expanded = true">... read more</span>
+                                      @click="expanded = true">... {% trans "read more" %}</span>
                             </p>
                             <span class="read-less-btn" 
                                   x-show="expanded" 
-                                  @click="expanded = false">show less</span>
+                                  @click="expanded = false">{% trans "show less" %}</span>
                         </div>
                         
                         <button class="connect-btn" @click="requestMentor(mentor)">
-                            Mentor me
+                            {% trans "Mentor me" %}
                         </button>
                     </div>
                 </div>
@@ -123,8 +123,8 @@
         <!-- Empty State -->
         <div class="empty-state" x-show="filteredMentors.length === 0">
             <div class="empty-icon">🔍</div>
-            <h3>No mentors found</h3>
-            <p>Try a different category</p>
+            <h3>{% trans "No mentors found" %}</h3>
+            <p>{% trans "Try a different category" %}</p>
         </div>
     </div>
     
@@ -154,8 +154,8 @@
         
         <!-- Bar Content -->
         <div class="bar-content">
-            <p class="bar-title">Welcome to Mentor Me</p>
-            <p class="bar-subtitle">Tap to hear about our mentorship program</p>
+            <p class="bar-title">{% trans "Welcome to Mentor Me" %}</p>
+            <p class="bar-subtitle">{% trans "Tap to hear about our mentorship program" %}</p>
         </div>
     </div>
 </div>
