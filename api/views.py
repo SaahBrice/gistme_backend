@@ -247,6 +247,24 @@ class OnboardingView(APIView):
             
             logger.info(f"Onboarding completed for user {request.user.email}")
             
+            # Send onboarding complete notification
+            try:
+                from notifications.service import notify
+                
+                user_lang = getattr(request, 'LANGUAGE_CODE', 'en')[:2]
+                user_name = request.user.get_full_name() or request.user.email.split('@')[0]
+                
+                notify(
+                    'onboarding_complete',
+                    recipient_email=request.user.email,
+                    recipient_user=request.user,
+                    context={'user_name': user_name},
+                    language=user_lang,
+                    channels=['email']
+                )
+            except Exception as e:
+                logger.warning(f"Failed to send onboarding notification: {e}")
+            
             return Response({
                 "status": "success",
                 "message": "Preferences saved successfully"
@@ -374,6 +392,44 @@ class MentorRequestView(APIView):
             )
             
             logger.info(f"Mentor request created: {request.user.email} -> {mentor.name}")
+            
+            # Send notifications
+            try:
+                from notifications.service import notify
+                
+                # Determine user's language preference
+                user_lang = getattr(request, 'LANGUAGE_CODE', 'en')[:2]
+                
+                # Notification to mentee (the user who requested)
+                mentee_name = request.user.get_full_name() or request.user.email.split('@')[0]
+                notify(
+                    'mentor_request_mentee',
+                    recipient_email=request.user.email,
+                    recipient_user=request.user,
+                    context={
+                        'mentee_name': mentee_name,
+                        'mentor_name': mentor.name,
+                        'mentor_profession': mentor.profession,
+                    },
+                    language=user_lang,
+                    channels=['email']
+                )
+                
+                # Notification to mentor (if they have an email)
+                if mentor.email:
+                    notify(
+                        'mentor_request_mentor',
+                        recipient_email=mentor.email,
+                        context={
+                            'mentor_name': mentor.name,
+                            'mentee_name': mentee_name,
+                            'mentee_email': request.user.email,
+                        },
+                        language=user_lang,  # Use same language as request
+                        channels=['email']
+                    )
+            except Exception as e:
+                logger.warning(f"Failed to send mentor request notifications: {e}")
             
             return Response({
                 "status": "success",

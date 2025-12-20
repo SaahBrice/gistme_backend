@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     "allauth.socialaccount.providers.google",
     "api",
     "web",
+    "notifications",
 ]
 
 MIDDLEWARE = [

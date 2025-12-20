@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="font-family: 'Segoe UI', Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #FFFBEB;">
+    <!-- Header - Celebratory -->
+    <div style="background: linear-gradient(135deg, #FACC15, #F59E0B); color: #111; padding: 30px; border-radius: 16px 16px 0 0; text-align: center;">
+        <h1 style="margin: 0 0 10px 0; font-size: 28px;">🌟 {% if language == 'fr' %}Nouvelle demande de mentorat !{% else %}New Mentee Request!{% endif %}</h1>
+        <p style="margin: 0; font-size: 16px; opacity: 0.9;">
+            {% if language == 'fr' %}Quelqu'un vous a choisi comme mentor{% else %}Someone chose YOU as their mentor{% endif %}
+        </p>
+    </div>
+    
+    <!-- Content -->
+    <div style="background-color: white; padding: 30px; border-radius: 0 0 16px 16px; border: 2px solid #111; border-top: none;">
+        <p style="font-size: 20px; color: #333; margin: 0 0 20px;">
+            {% if language == 'fr' %}Hey{% else %}Hey{% endif %} <strong>{{ mentor_name }}</strong>! 🎉
+        </p>
+        
+        <p style="font-size: 16px; color: #555; line-height: 1.7;">
+            {% if language == 'fr' %}
+            <strong>Excellente nouvelle !</strong> {{ mentee_name }} veut que VOUS soyez son mentor ! 
+            Ils ont été impressionnés par votre profil et pensent que vous êtes la personne idéale pour les guider.
+            {% else %}
+            <strong>Great news!</strong> {{ mentee_name }} wants YOU to be their mentor! 
+            They were impressed by your profile and think you're the perfect person to guide them.
+            {% endif %}
+        </p>
+        
+        <!-- Mentee Info Card -->
+        <div style="background-color: #F3F4F6; border-radius: 12px; padding: 20px; margin: 25px 0; border: 2px solid #E5E7EB;">
+            <p style="margin: 0 0 10px; font-size: 12px; color: #6B7280; text-transform: uppercase; letter-spacing: 1px;">
+                {% if language == 'fr' %}À propos du demandeur{% else %}About the requestor{% endif %}
+            </p>
+            <p style="margin: 0; font-size: 18px; font-weight: bold; color: #333;">{{ mentee_name }}</p>
+            {% if mentee_email %}
+            <p style="margin: 5px 0 0; font-size: 14px; color: #666;">{{ mentee_email }}</p>
+            {% endif %}
+        </div>
+        
+        <!-- What's Next Box -->
+        <div style="background-color: #D1FAE5; border-left: 4px solid #10B981; padding: 20px; margin: 25px 0; border-radius: 0 12px 12px 0;">
+            <p style="margin: 0; font-size: 14px; color: #065F46;">
+                <strong>{% if language == 'fr' %}🚀 Prochaines étapes{% else %}🚀 What happens next{% endif %}</strong>
+            </p>
+            <p style="margin: 10px 0 0; font-size: 14px; color: #065F46;">
+                {% if language == 'fr' %}
+                Notre équipe vérifiera que {{ mentee_name }} correspond à vos critères de mentorat. 
+                Si c'est le cas, nous vous mettrons en contact très bientôt ! Vous n'avez rien à faire pour l'instant.
+                {% else %}
+                Our team will verify that {{ mentee_name }} meets your mentorship criteria. 
+                If they're a good fit, we'll connect you very soon! No action needed from you right now.
+                {% endif %}
+            </p>
+        </div>
+        
+        <p style="font-size: 15px; color: #555; line-height: 1.6; margin: 20px 0 0;">
+            {% if language == 'fr' %}
+            Merci d'être un mentor sur Gist4U. Vous faites une vraie différence ! 💪
+            {% else %}
+            Thank you for being a mentor on Gist4U. You're making a real difference! 💪
+            {% endif %}
+        </p>
+    </div>
+    
+    <!-- Footer -->
+    <div style="text-align: center; padding: 25px; color: #666; font-size: 12px;">
+        <p style="margin: 0;">{% if language == 'fr' %}Que l'aventure du mentorat continue{% else %}The mentorship journey continues{% endif %} 🌟</p>
+        <p style="margin: 8px 0 0; color: #999;">Gist4U Mentorship - {% if language == 'fr' %}Connecter les talents{% else %}Connecting talents{% endif %}</p>
+    </div>
+</body>
+</html>
