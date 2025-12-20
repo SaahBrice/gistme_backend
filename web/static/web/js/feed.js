@@ -360,7 +360,7 @@ function feedApp() {
 
         // Card styling with gradient backgrounds
         getCardBackground(index) {
-            const hueShift = 35;
+            const hueShift = 60;
             const hue = (this.baseHue + (index * hueShift)) % 360;
             const saturation = 20 + (index % 4) * 8;
             const lightness = 18 + (index % 3) * 4;
@@ -869,6 +869,41 @@ function feedApp() {
         // Search navigation
         goToSearch() {
             window.location.href = `/${this.lang}/search/`;
+        },
+
+        // Deadline formatting helpers
+        formatDeadline(deadline) {
+            if (!deadline) return '';
+
+            const date = new Date(deadline);
+            const now = new Date();
+            const diffDays = Math.ceil((date - now) / (1000 * 60 * 60 * 24));
+
+            // Show relative time for nearby deadlines
+            if (diffDays < 0) {
+                return this.lang === 'fr' ? 'Expiré' : 'Expired';
+            } else if (diffDays === 0) {
+                return this.lang === 'fr' ? "Aujourd'hui" : 'Today';
+            } else if (diffDays === 1) {
+                return this.lang === 'fr' ? 'Demain' : 'Tomorrow';
+            } else if (diffDays <= 7) {
+                return diffDays + (this.lang === 'fr' ? ' jours' : ' days');
+            } else {
+                // Format as short date
+                const options = { month: 'short', day: 'numeric' };
+                return date.toLocaleDateString(this.lang === 'fr' ? 'fr-FR' : 'en-US', options);
+            }
+        },
+
+        isDeadlineUrgent(deadline) {
+            if (!deadline) return false;
+
+            const date = new Date(deadline);
+            const now = new Date();
+            const diffDays = Math.ceil((date - now) / (1000 * 60 * 60 * 24));
+
+            // Urgent if deadline is within 3 days
+            return diffDays >= 0 && diffDays <= 3;
         }
     }
 }

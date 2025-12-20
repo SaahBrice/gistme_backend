@@ -1202,8 +1202,33 @@ msgstr "Réessayer"
 msgid "Level"
 msgstr "Niveau"
 
+# Search Page
+msgid "Search"
+msgstr "Rechercher"
 
+msgid "Search articles..."
+msgstr "Rechercher des articles..."
 
+msgid "Searching..."
+msgstr "Recherche en cours..."
+
+msgid "Find what interests you"
+msgstr "Trouvez ce qui vous intéresse"
+
+msgid "Search for news, scholarships, jobs, and more"
+msgstr "Recherchez des actualités, bourses, emplois et plus"
+
+msgid "No results found"
+msgstr "Aucun résultat trouvé"
+
+msgid "Try different keywords or check your spelling"
+msgstr "Essayez d'autres mots-clés ou vérifiez l'orthographe"
+
+msgid "Load More"
+msgstr "Charger Plus"
+
+msgid "Loading..."
+msgstr "Chargement..."
 
 
 

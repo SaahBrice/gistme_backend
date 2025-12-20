@@ -49,6 +49,16 @@
                         </svg>
                     </button>
                     
+                    <!-- Deadline Badge (if article has deadline) - positioned after play button -->
+                    <div class="deadline-badge" x-show="article.deadline" :class="{ 'urgent': isDeadlineUrgent(article.deadline) }">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                        <span class="deadline-label" x-text="lang === 'fr' ? 'Date limite:' : 'Deadline:'"></span>
+                        <span class="deadline-date" x-text="formatDeadline(article.deadline)"></span>
+                    </div>
+                    
                     <div class="actions-right">
                         <button class="action-btn" @click="shareArticle(article)">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -143,28 +153,25 @@
                 </button>
             </div>
             
-            <!-- Right side buttons: Search + Expand -->
-            <div class="nav-right-buttons">
-                <!-- Search Button -->
+            <!-- Right: Search + Filter in oval pill (matching left design) -->
+            <div class="nav-right-pill">
                 <button class="search-btn" @click="goToSearch()">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="11" cy="11" r="8"/>
                         <line x1="21" y1="21" x2="16.65" y2="16.65"/>
                     </svg>
                 </button>
-                
-                <!-- Expand Button (menu icon) -->
-                <button class="expand-btn" 
+                <button class="filter-btn" 
                         @click="toggleNav()"
-                        :class="{ 'expanded': navExpanded }">
+                        :class="{ 'active': navExpanded }">
                     <!-- Grid/menu icon when collapsed, X when expanded -->
-                    <svg x-show="!navExpanded" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg x-show="!navExpanded" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <rect x="3" y="3" width="7" height="7" rx="1"/>
                         <rect x="14" y="3" width="7" height="7" rx="1"/>
                         <rect x="3" y="14" width="7" height="7" rx="1"/>
                         <rect x="14" y="14" width="7" height="7" rx="1"/>
                     </svg>
-                    <svg x-show="navExpanded" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <svg x-show="navExpanded" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                         <line x1="18" y1="6" x2="6" y2="18"/>
                         <line x1="6" y1="6" x2="18" y2="18"/>
                     </svg>

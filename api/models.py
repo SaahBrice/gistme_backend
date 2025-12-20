@@ -72,6 +72,14 @@ class Article(models.Model):
     comment_count = models.PositiveIntegerField(default=0)
     reaction_count = models.PositiveIntegerField(default=0)
     send_notification = models.BooleanField(default=False)
+    
+    # Deadline for time-sensitive articles (scholarships, jobs, concours, etc.)
+    deadline = models.DateField(
+        null=True, 
+        blank=True, 
+        db_index=True,
+        help_text="Application/submission deadline (for scholarships, jobs, concours)"
+    )
 
     def save(self, *args, **kwargs):
         # Backward compatibility: populate headline_en/headline_fr from headline if missing
