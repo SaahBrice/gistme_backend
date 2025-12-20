@@ -18177,3 +18177,624 @@ INFO 2025-12-20 18:56:59,548 gemini 19980 860 Gemini response generated (333 cha
 INFO 2025-12-20 18:56:59,558 basehttp 19980 860 "POST /api/chat/ HTTP/1.1" 200 363
 INFO 2025-12-20 18:57:28,685 gemini 19980 860 Gemini response generated (357 chars)
 INFO 2025-12-20 18:57:28,694 basehttp 19980 860 "POST /api/chat/ HTTP/1.1" 200 389
+INFO 2025-12-20 20:18:43,538 autoreload 7160 15068 Watching for file changes with StatReloader
+WARNING 2025-12-20 20:18:45,564 log 7160 2192 Not Found: /en/stats/
+WARNING 2025-12-20 20:18:45,565 basehttp 7160 2192 "GET /en/stats/ HTTP/1.1" 404 10515
+WARNING 2025-12-20 20:18:45,617 log 7160 2192 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 20:18:45,619 basehttp 7160 2192 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 20:18:47,250 basehttp 7160 2192 "GET /en/feed/ HTTP/1.1" 200 53552
+WARNING 2025-12-20 20:18:47,336 log 7160 2192 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 20:18:47,337 basehttp 7160 2192 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 20:18:47,745 basehttp 7160 18428 "GET /static/web/css/feed.css HTTP/1.1" 200 27336
+INFO 2025-12-20 20:18:47,748 basehttp 7160 18428 "GET /static/web/js/feed.js HTTP/1.1" 200 35123
+INFO 2025-12-20 20:18:47,774 basehttp 7160 18428 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 20:18:47,778 basehttp 7160 3568 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 20:18:47,784 basehttp 7160 1180 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 20:18:47,797 basehttp 7160 1696 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 20:18:47,802 basehttp 7160 14476 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 20:18:47,804 basehttp 7160 2192 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 20:18:48,418 basehttp 7160 2192 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 20:18:48,425 basehttp 7160 14476 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 20:18:48,558 basehttp 7160 14476 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56196
+INFO 2025-12-20 20:18:48,913 basehttp 7160 24212 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 20:18:48,963 basehttp 7160 3568 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-20 20:18:48,978 basehttp 7160 23864 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 20:18:48,988 basehttp 7160 14476 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 20:18:48,995 basehttp 7160 1696 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 20:18:49,011 basehttp 7160 2192 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 20:18:49,026 basehttp 7160 1180 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 20:18:50,660 basehttp 7160 1180 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 20:18:53,923 basehttp 7160 2192 "GET /en/article/125/ HTTP/1.1" 200 32390
+WARNING 2025-12-20 20:18:54,024 log 7160 2192 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 20:18:54,025 basehttp 7160 2192 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 20:18:54,050 basehttp 7160 2192 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 20:18:54,051 basehttp 7160 14476 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 20:18:54,051 basehttp 7160 3568 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 20:18:54,051 basehttp 7160 1696 "GET /static/web/css/article.css HTTP/1.1" 200 31725
+INFO 2025-12-20 20:18:54,052 basehttp 7160 23864 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 20:18:54,052 basehttp 7160 3236 "GET /static/web/js/article-dummy-data.js HTTP/1.1" 200 3681
+INFO 2025-12-20 20:18:54,058 basehttp 7160 2192 "GET /static/web/js/article.js HTTP/1.1" 200 29240
+INFO 2025-12-20 20:18:54,494 basehttp 7160 3236 "GET /api/articles/125/ HTTP/1.1" 200 5599
+INFO 2025-12-20 20:18:54,513 basehttp 7160 2192 "GET /api/articles/125/ HTTP/1.1" 200 5599
+INFO 2025-12-20 20:18:54,650 basehttp 7160 3236 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 20:18:54,707 basehttp 7160 23864 "GET /api/articles/?page_size=5&category=8 HTTP/1.1" 200 28695
+INFO 2025-12-20 20:18:54,725 basehttp 7160 2192 "GET /api/articles/?page_size=5&category=8 HTTP/1.1" 200 28695
+INFO 2025-12-20 20:18:54,985 basehttp 7160 24212 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 20:18:54,997 basehttp 7160 2192 "GET /api/articles/?page_size=4&main_category=ACTUALITY HTTP/1.1" 200 21741
+INFO 2025-12-20 20:18:55,007 basehttp 7160 3236 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 20:18:55,038 basehttp 7160 23864 "GET /api/articles/?page_size=4&main_category=ACTUALITY HTTP/1.1" 200 21741
+INFO 2025-12-20 20:18:56,684 basehttp 7160 23864 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 20:19:01,995 gemini 7160 3236 Gemini response generated (91 chars)
+INFO 2025-12-20 20:19:02,005 basehttp 7160 3236 "POST /api/chat/ HTTP/1.1" 200 121
+INFO 2025-12-20 20:19:15,064 basehttp 7160 3236 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+WARNING 2025-12-20 20:19:15,172 log 7160 3236 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 20:19:15,173 basehttp 7160 3236 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 20:19:15,248 basehttp 7160 24212 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 20:19:15,248 basehttp 7160 2192 "GET /static/web/css/feed.css HTTP/1.1" 200 27336
+INFO 2025-12-20 20:19:15,272 basehttp 7160 3236 "GET /en/feed/ HTTP/1.1" 200 53552
+WARNING 2025-12-20 20:19:15,346 log 7160 3236 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 20:19:15,347 basehttp 7160 3236 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 20:19:25,515 basehttp 7160 3236 "GET /mentor/ HTTP/1.1" 302 0
+INFO 2025-12-20 20:19:25,538 basehttp 7160 2192 "GET /en/mentor/ HTTP/1.1" 200 22059
+WARNING 2025-12-20 20:19:25,614 log 7160 2192 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 20:19:25,615 basehttp 7160 2192 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 20:19:25,631 basehttp 7160 2192 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 20:19:25,631 basehttp 7160 3568 "GET /static/web/css/mentor.css HTTP/1.1" 200 13583
+INFO 2025-12-20 20:19:25,636 basehttp 7160 1696 "GET /static/web/js/mentor.js HTTP/1.1" 200 9460
+INFO 2025-12-20 20:19:25,637 basehttp 7160 14476 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 20:19:25,640 basehttp 7160 2192 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 20:19:25,641 basehttp 7160 20052 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 20:19:26,060 basehttp 7160 2192 "GET /api/mentors/categories/ HTTP/1.1" 200 281
+INFO 2025-12-20 20:19:26,074 basehttp 7160 20052 "GET /api/mentors/categories/ HTTP/1.1" 200 281
+INFO 2025-12-20 20:19:26,147 basehttp 7160 2192 "GET /api/mentors/ HTTP/1.1" 200 3300
+INFO 2025-12-20 20:19:26,162 basehttp 7160 20052 "GET /api/mentors/ HTTP/1.1" 200 3300
+INFO 2025-12-20 20:19:26,295 basehttp 7160 24212 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 20:19:26,323 basehttp 7160 20052 "GET /media/mentors/IMG_20240517_101039.jpg HTTP/1.1" 200 3456950
+INFO 2025-12-20 20:19:26,355 basehttp 7160 20052 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 20:19:28,077 basehttp 7160 20052 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 20:19:48,681 basehttp 7160 2192 "GET /feed/ HTTP/1.1" 302 0
+INFO 2025-12-20 20:19:48,703 basehttp 7160 14476 "GET /en/feed/ HTTP/1.1" 200 53552
+WARNING 2025-12-20 20:19:48,786 log 7160 14476 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 20:19:48,787 basehttp 7160 14476 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 20:19:48,797 basehttp 7160 14476 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 20:19:48,800 basehttp 7160 1696 "GET /static/web/css/feed.css HTTP/1.1" 200 27336
+INFO 2025-12-20 20:19:48,803 basehttp 7160 3568 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 20:19:48,803 basehttp 7160 21084 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 20:19:48,806 basehttp 7160 19328 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 20:19:48,807 basehttp 7160 19864 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 20:19:48,808 basehttp 7160 14476 "GET /static/web/js/feed.js HTTP/1.1" 200 35123
+INFO 2025-12-20 20:19:49,290 basehttp 7160 19864 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 20:19:49,302 basehttp 7160 14476 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 20:19:49,597 basehttp 7160 24212 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 20:19:49,631 basehttp 7160 19864 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 20:19:49,633 basehttp 7160 14476 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56196
+INFO 2025-12-20 20:19:49,756 basehttp 7160 19864 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 20:19:49,784 basehttp 7160 14476 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 20:19:49,790 basehttp 7160 19328 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 20:19:49,803 basehttp 7160 21084 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 20:19:51,346 basehttp 7160 21084 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 20:20:05,237 basehttp 7160 19328 "GET /relax/ HTTP/1.1" 302 0
+INFO 2025-12-20 20:20:05,255 basehttp 7160 14476 "GET /en/relax/ HTTP/1.1" 200 24702
+WARNING 2025-12-20 20:20:05,336 log 7160 14476 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 20:20:05,336 basehttp 7160 14476 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 20:20:05,345 basehttp 7160 14476 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 20:20:05,349 basehttp 7160 19864 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 20:20:05,351 basehttp 7160 3568 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 20:20:05,351 basehttp 7160 1696 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 20:20:05,781 basehttp 7160 24212 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 20:20:05,801 basehttp 7160 1696 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 20:20:07,363 basehttp 7160 1696 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 20:20:38,597 basehttp 7160 3568 "GET /feed/ HTTP/1.1" 302 0
+INFO 2025-12-20 20:20:38,629 basehttp 7160 19864 "GET /en/feed/ HTTP/1.1" 200 53552
+WARNING 2025-12-20 20:20:38,728 log 7160 19864 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 20:20:38,729 basehttp 7160 19864 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 20:20:38,745 basehttp 7160 19864 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 20:20:38,746 basehttp 7160 14476 "GET /static/web/css/feed.css HTTP/1.1" 200 27336
+INFO 2025-12-20 20:20:38,747 basehttp 7160 21412 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 20:20:38,755 basehttp 7160 24196 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 20:20:38,756 basehttp 7160 8468 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 20:20:38,756 basehttp 7160 14476 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 20:20:38,758 basehttp 7160 21412 "GET /static/web/js/feed.js HTTP/1.1" 200 35123
+INFO 2025-12-20 20:20:39,526 basehttp 7160 24196 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 20:20:39,541 basehttp 7160 21412 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 20:20:39,858 basehttp 7160 24212 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 20:20:39,873 basehttp 7160 24196 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 20:20:39,876 basehttp 7160 21412 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56196
+INFO 2025-12-20 20:20:39,991 basehttp 7160 14476 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 20:20:40,009 basehttp 7160 8468 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 20:20:40,025 basehttp 7160 24196 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 20:20:40,052 basehttp 7160 21412 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 20:20:41,568 basehttp 7160 24196 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 20:50:17,193 basehttp 7160 17136 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 20:55:47,288 basehttp 7160 7080 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 21:01:17,349 basehttp 7160 18472 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 21:06:47,443 basehttp 7160 4444 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 21:12:17,531 basehttp 7160 10196 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 21:17:47,623 basehttp 7160 10140 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 21:20:39,468 basehttp 7160 19096 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 21:23:17,731 basehttp 7160 18120 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 21:28:47,803 basehttp 7160 4236 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 21:34:17,869 basehttp 7160 9112 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 21:39:47,968 basehttp 7160 5096 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 21:40:49,704 autoreload 7160 15068 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\models.py changed, reloading.
+INFO 2025-12-20 21:40:53,400 autoreload 16968 24176 Watching for file changes with StatReloader
+INFO 2025-12-20 21:41:08,635 autoreload 16968 24176 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\serializers.py changed, reloading.
+INFO 2025-12-20 21:41:09,774 autoreload 20644 20084 Watching for file changes with StatReloader
+INFO 2025-12-20 21:41:37,319 autoreload 20644 20084 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\views.py changed, reloading.
+INFO 2025-12-20 21:41:38,419 autoreload 18604 19328 Watching for file changes with StatReloader
+INFO 2025-12-20 21:42:03,630 autoreload 18604 19328 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\urls.py changed, reloading.
+INFO 2025-12-20 21:42:04,711 autoreload 9572 18796 Watching for file changes with StatReloader
+INFO 2025-12-20 21:42:25,454 autoreload 9572 18796 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\admin.py changed, reloading.
+INFO 2025-12-20 21:42:26,530 autoreload 20696 16928 Watching for file changes with StatReloader
+INFO 2025-12-20 21:45:18,113 basehttp 20696 10404 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 21:47:06,005 autoreload 20696 16928 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\views.py changed, reloading.
+INFO 2025-12-20 21:47:07,247 autoreload 9076 8812 Watching for file changes with StatReloader
+INFO 2025-12-20 21:47:32,500 autoreload 9076 8812 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\urls.py changed, reloading.
+INFO 2025-12-20 21:47:33,610 autoreload 17148 3180 Watching for file changes with StatReloader
+INFO 2025-12-20 21:50:48,176 basehttp 17148 19968 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 21:52:22,210 basehttp 17148 8412 "GET /en/feed/ HTTP/1.1" 200 52066
+WARNING 2025-12-20 21:52:22,301 log 17148 8412 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 21:52:22,304 basehttp 17148 8412 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 21:52:22,666 basehttp 17148 24164 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 21:52:22,666 basehttp 17148 8412 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 21:52:22,669 basehttp 17148 24164 "GET /static/web/js/feed.js HTTP/1.1" 200 27732
+INFO 2025-12-20 21:52:22,687 basehttp 17148 19604 "GET /static/web/css/feed.css HTTP/1.1" 200 27336
+INFO 2025-12-20 21:52:22,733 basehttp 17148 19268 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 21:52:22,733 basehttp 17148 23368 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 21:52:22,736 basehttp 17148 15852 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 21:52:23,734 basehttp 17148 23368 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 21:52:23,748 basehttp 17148 15852 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 21:52:24,102 basehttp 17148 23368 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-20 21:52:24,109 basehttp 17148 20456 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 21:52:24,129 basehttp 17148 23368 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 21:52:24,165 basehttp 17148 15852 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56196
+INFO 2025-12-20 21:52:24,282 basehttp 17148 19268 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 21:52:24,299 basehttp 17148 23368 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 21:52:24,313 basehttp 17148 19604 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 21:52:24,342 basehttp 17148 15852 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 21:52:25,873 basehttp 17148 15852 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 21:52:26,767 basehttp 17148 19604 "GET /en/quote-of-the-day/ HTTP/1.1" 200 22247
+WARNING 2025-12-20 21:52:26,842 log 17148 19604 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 21:52:26,843 basehttp 17148 19604 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 21:52:26,853 basehttp 17148 23368 "GET /static/web/css/quote.css HTTP/1.1" 200 10156
+INFO 2025-12-20 21:52:26,854 basehttp 17148 19268 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 21:52:26,854 basehttp 17148 19604 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 21:52:26,856 basehttp 17148 24164 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 21:52:26,856 basehttp 17148 8412 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 21:52:26,858 basehttp 17148 24504 "GET /static/web/js/quote.js HTTP/1.1" 200 11114
+WARNING 2025-12-20 21:52:27,441 log 17148 24504 Not Found: /api/quotes/today/
+WARNING 2025-12-20 21:52:27,441 basehttp 17148 24504 "GET /api/quotes/today/?category=GENERAL HTTP/1.1" 404 76
+WARNING 2025-12-20 21:52:27,454 log 17148 8412 Not Found: /api/quotes/today/
+WARNING 2025-12-20 21:52:27,454 basehttp 17148 8412 "GET /api/quotes/today/?category=GENERAL HTTP/1.1" 404 76
+INFO 2025-12-20 21:52:27,567 basehttp 17148 20456 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 21:52:27,578 basehttp 17148 8412 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 21:52:29,142 basehttp 17148 8412 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 21:52:43,805 basehttp 17148 24504 "GET /en/feed/ HTTP/1.1" 200 52066
+WARNING 2025-12-20 21:52:43,882 log 17148 24504 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 21:52:43,883 basehttp 17148 24504 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 21:52:43,893 basehttp 17148 24504 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 21:52:43,897 basehttp 17148 24164 "GET /static/web/css/feed.css HTTP/1.1" 200 27336
+INFO 2025-12-20 21:52:43,898 basehttp 17148 19268 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 21:52:43,899 basehttp 17148 23368 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 21:52:43,901 basehttp 17148 19604 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 21:52:43,901 basehttp 17148 14240 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 21:52:43,902 basehttp 17148 24504 "GET /static/web/js/feed.js HTTP/1.1" 200 27732
+INFO 2025-12-20 21:52:44,310 basehttp 17148 14240 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 21:52:44,326 basehttp 17148 24504 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 21:52:44,533 basehttp 17148 24504 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56196
+INFO 2025-12-20 21:52:44,587 basehttp 17148 20456 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 21:52:44,734 basehttp 17148 19268 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 21:52:44,757 basehttp 17148 24504 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 21:52:44,776 basehttp 17148 14240 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 21:52:44,792 basehttp 17148 19604 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 21:52:44,807 basehttp 17148 23368 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 21:52:46,334 basehttp 17148 23368 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 21:52:46,442 basehttp 17148 19604 "GET /en/quote-of-the-day/ HTTP/1.1" 200 22247
+WARNING 2025-12-20 21:52:46,523 log 17148 19604 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 21:52:46,524 basehttp 17148 19604 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 21:52:46,541 basehttp 17148 14240 "GET /static/web/css/quote.css HTTP/1.1" 200 10156
+INFO 2025-12-20 21:52:46,541 basehttp 17148 19604 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 21:52:46,542 basehttp 17148 24504 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 21:52:46,542 basehttp 17148 19268 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 21:52:46,544 basehttp 17148 24164 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 21:52:46,544 basehttp 17148 15516 "GET /static/web/js/quote.js HTTP/1.1" 200 11114
+WARNING 2025-12-20 21:52:46,873 log 17148 24164 Not Found: /api/quotes/today/
+WARNING 2025-12-20 21:52:46,874 basehttp 17148 24164 "GET /api/quotes/today/?category=GENERAL HTTP/1.1" 404 76
+WARNING 2025-12-20 21:52:46,894 log 17148 15516 Not Found: /api/quotes/today/
+WARNING 2025-12-20 21:52:46,895 basehttp 17148 15516 "GET /api/quotes/today/?category=GENERAL HTTP/1.1" 404 76
+INFO 2025-12-20 21:52:47,006 basehttp 17148 20456 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 21:52:47,027 basehttp 17148 15516 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 21:52:48,609 basehttp 17148 15516 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 21:56:18,249 basehttp 17148 24164 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 21:57:41,171 basehttp 17148 19268 "GET /en/quote-of-the-day/ HTTP/1.1" 200 22247
+WARNING 2025-12-20 21:57:41,232 log 17148 19268 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 21:57:41,234 basehttp 17148 19268 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 21:57:41,245 basehttp 17148 19268 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 21:57:41,246 basehttp 17148 24504 "GET /static/web/css/quote.css HTTP/1.1" 200 10156
+INFO 2025-12-20 21:57:41,247 basehttp 17148 19604 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 21:57:41,252 basehttp 17148 14240 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 21:57:41,252 basehttp 17148 14292 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 21:57:41,253 basehttp 17148 23064 "GET /static/web/js/quote.js HTTP/1.1" 200 11114
+INFO 2025-12-20 21:57:42,107 basehttp 17148 14292 "GET /api/quotes/today/?category=GENERAL HTTP/1.1" 200 732
+INFO 2025-12-20 21:57:42,124 basehttp 17148 23064 "GET /api/quotes/today/?category=GENERAL HTTP/1.1" 200 732
+INFO 2025-12-20 21:57:42,391 basehttp 17148 23064 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-20 21:57:42,391 basehttp 17148 20456 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 21:57:42,408 basehttp 17148 23064 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 21:57:43,902 basehttp 17148 23064 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 21:59:22,724 basehttp 17148 14292 "GET /en/feed/ HTTP/1.1" 200 52066
+WARNING 2025-12-20 21:59:22,808 log 17148 14292 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 21:59:22,810 basehttp 17148 14292 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 21:59:22,830 basehttp 17148 14292 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 21:59:22,831 basehttp 17148 14240 "GET /static/web/css/feed.css HTTP/1.1" 200 27336
+INFO 2025-12-20 21:59:22,835 basehttp 17148 19604 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 21:59:22,836 basehttp 17148 19268 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 21:59:22,842 basehttp 17148 14292 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 21:59:22,843 basehttp 17148 14240 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 21:59:22,845 basehttp 17148 24504 "GET /static/web/js/feed.js HTTP/1.1" 200 27732
+INFO 2025-12-20 21:59:23,823 basehttp 17148 14240 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 21:59:23,840 basehttp 17148 24504 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 21:59:24,157 basehttp 17148 20456 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 21:59:24,193 basehttp 17148 14240 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 21:59:24,209 basehttp 17148 24504 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56196
+INFO 2025-12-20 21:59:24,309 basehttp 17148 24504 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 21:59:24,327 basehttp 17148 14292 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 21:59:24,351 basehttp 17148 14240 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 21:59:24,370 basehttp 17148 19604 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 21:59:25,962 basehttp 17148 19604 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 21:59:30,861 basehttp 17148 14240 "POST /en/save-settings/ HTTP/1.1" 200 47
+INFO 2025-12-20 21:59:35,069 basehttp 17148 14240 "GET /en/quote-of-the-day/ HTTP/1.1" 200 22249
+WARNING 2025-12-20 21:59:35,137 log 17148 14240 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 21:59:35,138 basehttp 17148 14240 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 21:59:35,143 basehttp 17148 14292 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 21:59:35,143 basehttp 17148 24504 "GET /static/web/css/quote.css HTTP/1.1" 200 10156
+INFO 2025-12-20 21:59:35,146 basehttp 17148 19268 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 21:59:35,149 basehttp 17148 14240 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 21:59:35,151 basehttp 17148 19912 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 21:59:35,151 basehttp 17148 8340 "GET /static/web/js/quote.js HTTP/1.1" 200 11114
+INFO 2025-12-20 21:59:35,616 basehttp 17148 19912 "GET /api/quotes/today/?category=CHRISTIAN HTTP/1.1" 200 776
+INFO 2025-12-20 21:59:35,623 basehttp 17148 8340 "GET /api/quotes/today/?category=CHRISTIAN HTTP/1.1" 200 776
+INFO 2025-12-20 21:59:35,887 basehttp 17148 20456 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 21:59:35,899 basehttp 17148 8340 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 21:59:37,370 basehttp 17148 8340 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:00:09,667 basehttp 17148 19912 "GET /en/feed/ HTTP/1.1" 200 52068
+WARNING 2025-12-20 22:00:09,751 log 17148 19912 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 22:00:09,752 basehttp 17148 19912 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 22:00:09,768 basehttp 17148 19912 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 22:00:09,772 basehttp 17148 14240 "GET /static/web/css/feed.css HTTP/1.1" 200 27336
+INFO 2025-12-20 22:00:09,774 basehttp 17148 19268 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 22:00:09,777 basehttp 17148 14292 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 22:00:09,782 basehttp 17148 19912 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 22:00:09,782 basehttp 17148 14240 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 22:00:09,785 basehttp 17148 19268 "GET /static/web/js/feed.js HTTP/1.1" 200 27732
+INFO 2025-12-20 22:00:10,648 basehttp 17148 19912 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 22:00:10,674 basehttp 17148 19268 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 22:00:10,995 basehttp 17148 20456 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 22:00:11,032 basehttp 17148 19912 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 22:00:11,034 basehttp 17148 19268 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56196
+INFO 2025-12-20 22:00:11,149 basehttp 17148 14240 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 22:00:11,167 basehttp 17148 19912 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 22:00:11,181 basehttp 17148 14292 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 22:00:11,207 basehttp 17148 19268 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 22:00:12,723 basehttp 17148 19268 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:00:24,249 basehttp 17148 14292 "POST /en/save-settings/ HTTP/1.1" 200 47
+INFO 2025-12-20 22:00:28,882 basehttp 17148 14292 "GET /en/quote-of-the-day/ HTTP/1.1" 200 22247
+WARNING 2025-12-20 22:00:28,957 log 17148 14292 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 22:00:28,958 basehttp 17148 14292 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 22:00:28,972 basehttp 17148 14292 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 22:00:28,972 basehttp 17148 19912 "GET /static/web/css/quote.css HTTP/1.1" 200 10156
+INFO 2025-12-20 22:00:28,973 basehttp 17148 14240 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 22:00:28,974 basehttp 17148 20952 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 22:00:28,974 basehttp 17148 24504 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 22:00:28,976 basehttp 17148 24148 "GET /static/web/js/quote.js HTTP/1.1" 200 11114
+INFO 2025-12-20 22:00:29,333 basehttp 17148 24504 "GET /api/quotes/today/?category=ISLAMIC HTTP/1.1" 200 653
+INFO 2025-12-20 22:00:29,354 basehttp 17148 24148 "GET /api/quotes/today/?category=ISLAMIC HTTP/1.1" 200 653
+INFO 2025-12-20 22:00:29,534 basehttp 17148 20456 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 22:00:29,545 basehttp 17148 24148 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 22:00:31,085 basehttp 17148 24148 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:00:58,336 basehttp 17148 24504 "GET /en/feed/ HTTP/1.1" 200 52066
+WARNING 2025-12-20 22:00:58,411 log 17148 24504 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 22:00:58,412 basehttp 17148 24504 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 22:00:58,423 basehttp 17148 24504 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 22:00:58,426 basehttp 17148 20952 "GET /static/web/css/feed.css HTTP/1.1" 200 27336
+INFO 2025-12-20 22:00:58,428 basehttp 17148 14240 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 22:00:58,434 basehttp 17148 19912 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 22:00:58,434 basehttp 17148 24504 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 22:00:58,436 basehttp 17148 14292 "GET /static/web/js/feed.js HTTP/1.1" 200 27732
+INFO 2025-12-20 22:00:58,436 basehttp 17148 20952 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 22:00:59,365 basehttp 17148 24504 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 22:00:59,381 basehttp 17148 20952 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 22:00:59,686 basehttp 17148 20456 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 22:00:59,715 basehttp 17148 20952 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56196
+INFO 2025-12-20 22:00:59,718 basehttp 17148 24504 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 22:00:59,827 basehttp 17148 20952 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 22:00:59,843 basehttp 17148 19912 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 22:00:59,867 basehttp 17148 24504 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 22:00:59,878 basehttp 17148 14292 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 22:01:01,435 basehttp 17148 14292 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:01:48,298 basehttp 17148 24504 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:06:02,386 basehttp 17148 20260 "GET /en/quote-of-the-day/ HTTP/1.1" 200 26852
+WARNING 2025-12-20 22:06:02,476 log 17148 20260 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 22:06:02,476 basehttp 17148 20260 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 22:06:02,492 basehttp 17148 20260 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 22:06:02,493 basehttp 17148 19080 "GET /static/web/css/quote.css HTTP/1.1" 200 15580
+INFO 2025-12-20 22:06:02,496 basehttp 17148 17812 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 22:06:02,500 basehttp 17148 19080 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 22:06:02,501 basehttp 17148 20260 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 22:06:02,502 basehttp 17148 17068 "GET /static/web/js/quote.js HTTP/1.1" 200 13183
+INFO 2025-12-20 22:06:03,334 basehttp 17148 17068 "GET /api/quotes/today/?category=ISLAMIC HTTP/1.1" 200 653
+INFO 2025-12-20 22:06:03,355 basehttp 17148 17812 "GET /api/quotes/?category=ISLAMIC&ordering=-date HTTP/1.1" 200 3525
+INFO 2025-12-20 22:06:03,376 basehttp 17148 20260 "GET /api/quotes/?category=ISLAMIC&ordering=-date HTTP/1.1" 200 3525
+INFO 2025-12-20 22:06:03,385 basehttp 17148 19080 "GET /api/quotes/today/?category=ISLAMIC HTTP/1.1" 200 653
+INFO 2025-12-20 22:06:03,609 basehttp 17148 21628 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 22:06:03,629 basehttp 17148 19080 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 22:06:05,160 basehttp 17148 19080 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:06:56,047 basehttp 17148 20260 "GET /en/feed/ HTTP/1.1" 200 52066
+WARNING 2025-12-20 22:06:56,124 log 17148 20260 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 22:06:56,124 basehttp 17148 20260 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 22:06:56,142 basehttp 17148 20260 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 22:06:56,143 basehttp 17148 17812 "GET /static/web/css/feed.css HTTP/1.1" 200 27336
+INFO 2025-12-20 22:06:56,146 basehttp 17148 17068 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 22:06:56,157 basehttp 17148 17068 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 22:06:56,157 basehttp 17148 17812 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 22:06:56,158 basehttp 17148 20260 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 22:06:56,159 basehttp 17148 15744 "GET /static/web/js/feed.js HTTP/1.1" 200 27732
+INFO 2025-12-20 22:06:57,197 basehttp 17148 15744 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 22:06:57,216 basehttp 17148 20260 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 22:06:57,580 basehttp 17148 21628 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 22:06:57,606 basehttp 17148 20260 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56196
+INFO 2025-12-20 22:06:57,607 basehttp 17148 15744 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 22:06:57,739 basehttp 17148 17812 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 22:06:57,760 basehttp 17148 17068 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 22:06:57,776 basehttp 17148 20260 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 22:06:57,802 basehttp 17148 15744 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 22:06:59,319 basehttp 17148 15744 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:07:18,391 basehttp 17148 20260 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:07:57,102 basehttp 17148 17068 "POST /en/save-settings/ HTTP/1.1" 200 47
+INFO 2025-12-20 22:07:57,241 basehttp 17148 17068 "GET /fr/feed/ HTTP/1.1" 200 52461
+WARNING 2025-12-20 22:07:57,312 log 17148 17068 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 22:07:57,313 basehttp 17148 17068 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 22:07:57,330 basehttp 17148 17068 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 22:07:57,334 basehttp 17148 17812 "GET /static/web/css/feed.css HTTP/1.1" 200 27336
+INFO 2025-12-20 22:07:57,336 basehttp 17148 14904 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 22:07:57,339 basehttp 17148 23592 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 22:07:57,340 basehttp 17148 17068 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 22:07:57,340 basehttp 17148 2756 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 22:07:57,343 basehttp 17148 19040 "GET /static/web/js/feed.js HTTP/1.1" 200 27732
+INFO 2025-12-20 22:07:58,158 basehttp 17148 2756 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 22:07:58,168 basehttp 17148 19040 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 22:07:58,302 basehttp 17148 19040 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56196
+INFO 2025-12-20 22:07:58,543 basehttp 17148 21628 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 22:07:58,592 basehttp 17148 14904 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 22:07:58,614 basehttp 17148 19040 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 22:07:58,626 basehttp 17148 17068 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 22:07:58,640 basehttp 17148 2756 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 22:07:58,655 basehttp 17148 23592 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 22:08:00,116 basehttp 17148 23592 "GET /fr/quote-of-the-day/ HTTP/1.1" 200 26854
+WARNING 2025-12-20 22:08:00,198 log 17148 23592 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 22:08:00,198 basehttp 17148 23592 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 22:08:00,208 basehttp 17148 23592 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 22:08:00,209 basehttp 17148 2756 "GET /static/web/css/quote.css HTTP/1.1" 200 15580
+INFO 2025-12-20 22:08:00,219 basehttp 17148 17068 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 22:08:00,219 basehttp 17148 19040 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 22:08:00,220 basehttp 17148 17812 "GET /static/web/js/quote.js HTTP/1.1" 200 13183
+INFO 2025-12-20 22:08:00,220 basehttp 17148 14904 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 22:08:00,234 basehttp 17148 2756 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:08:00,560 basehttp 17148 17812 "GET /api/quotes/today/?category=CHRISTIAN HTTP/1.1" 200 776
+INFO 2025-12-20 22:08:00,575 basehttp 17148 14904 "GET /api/quotes/?category=CHRISTIAN&ordering=-date HTTP/1.1" 200 3745
+INFO 2025-12-20 22:08:00,591 basehttp 17148 19040 "GET /api/quotes/today/?category=CHRISTIAN HTTP/1.1" 200 776
+INFO 2025-12-20 22:08:00,607 basehttp 17148 17068 "GET /api/quotes/?category=CHRISTIAN&ordering=-date HTTP/1.1" 200 3745
+INFO 2025-12-20 22:08:00,753 basehttp 17148 21628 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 22:08:00,792 basehttp 17148 17068 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 22:08:02,362 basehttp 17148 17068 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:11:13,947 autoreload 17148 3180 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\models.py changed, reloading.
+INFO 2025-12-20 22:11:14,976 autoreload 10860 20188 Watching for file changes with StatReloader
+INFO 2025-12-20 22:11:59,426 autoreload 10860 20188 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\serializers.py changed, reloading.
+INFO 2025-12-20 22:12:00,441 autoreload 17836 23964 Watching for file changes with StatReloader
+INFO 2025-12-20 22:12:48,471 basehttp 17836 20512 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:13:03,385 autoreload 17836 23964 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\views.py changed, reloading.
+INFO 2025-12-20 22:13:04,504 autoreload 9944 21116 Watching for file changes with StatReloader
+INFO 2025-12-20 22:13:47,696 autoreload 9944 21116 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\admin.py changed, reloading.
+INFO 2025-12-20 22:13:48,778 autoreload 23516 24496 Watching for file changes with StatReloader
+INFO 2025-12-20 22:18:18,556 basehttp 23516 24528 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:18:23,734 autoreload 23516 24496 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\models.py changed, reloading.
+INFO 2025-12-20 22:18:24,885 autoreload 20952 21860 Watching for file changes with StatReloader
+INFO 2025-12-20 22:22:13,285 basehttp 20952 18764 "GET /fr/quote-of-the-day/ HTTP/1.1" 200 26854
+WARNING 2025-12-20 22:22:13,351 log 20952 18764 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 22:22:13,353 basehttp 20952 18764 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 22:22:13,873 basehttp 20952 24324 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 22:22:13,896 basehttp 20952 7892 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 22:22:13,903 basehttp 20952 18764 "GET /static/web/js/quote.js HTTP/1.1" 200 13219
+INFO 2025-12-20 22:22:13,904 basehttp 20952 18868 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 22:22:13,908 basehttp 20952 884 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 22:22:13,908 basehttp 20952 2944 "GET /static/web/css/quote.css HTTP/1.1" 200 15580
+INFO 2025-12-20 22:22:26,969 basehttp 20952 2944 "GET /api/quotes/today/?category=CHRISTIAN&lang=fr HTTP/1.1" 200 1796
+INFO 2025-12-20 22:22:26,985 basehttp 20952 884 "GET /api/quotes/?category=CHRISTIAN&ordering=-date&lang=fr HTTP/1.1" 200 7744
+INFO 2025-12-20 22:22:27,002 basehttp 20952 18764 "GET /api/quotes/?category=CHRISTIAN&ordering=-date&lang=fr HTTP/1.1" 200 7744
+INFO 2025-12-20 22:22:27,017 basehttp 20952 18868 "GET /api/quotes/today/?category=CHRISTIAN&lang=fr HTTP/1.1" 200 1796
+INFO 2025-12-20 22:22:28,802 basehttp 20952 18868 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:22:31,730 basehttp 20952 18764 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-20 22:22:31,730 basehttp 20952 23512 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 22:22:31,747 basehttp 20952 18764 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 22:23:48,591 basehttp 20952 18764 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:25:22,887 basehttp 20952 884 "GET /fr/quote-of-the-day/ HTTP/1.1" 200 26854
+WARNING 2025-12-20 22:25:22,954 log 20952 884 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 22:25:22,956 basehttp 20952 884 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 22:25:22,962 basehttp 20952 2944 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 22:25:22,963 basehttp 20952 7892 "GET /static/web/css/quote.css HTTP/1.1" 200 15580
+INFO 2025-12-20 22:25:22,971 basehttp 20952 24324 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 22:25:22,971 basehttp 20952 884 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 22:25:22,971 basehttp 20952 13604 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 22:25:22,973 basehttp 20952 12980 "GET /static/web/js/quote.js HTTP/1.1" 200 13219
+INFO 2025-12-20 22:25:45,560 basehttp 20952 884 "GET /api/quotes/today/?category=CHRISTIAN&lang=fr HTTP/1.1" 200 1796
+INFO 2025-12-20 22:25:45,578 basehttp 20952 13604 "GET /api/quotes/?category=CHRISTIAN&ordering=-date&lang=fr HTTP/1.1" 200 7744
+INFO 2025-12-20 22:25:45,596 basehttp 20952 24324 "GET /api/quotes/?category=CHRISTIAN&ordering=-date&lang=fr HTTP/1.1" 200 7744
+INFO 2025-12-20 22:25:45,608 basehttp 20952 12980 "GET /api/quotes/today/?category=CHRISTIAN&lang=fr HTTP/1.1" 200 1796
+INFO 2025-12-20 22:25:45,871 basehttp 20952 12980 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-20 22:25:45,873 basehttp 20952 23512 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 22:25:45,888 basehttp 20952 12980 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 22:25:47,395 basehttp 20952 12980 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:28:03,389 basehttp 20952 24324 "GET /fr/quote-of-the-day/ HTTP/1.1" 200 26854
+WARNING 2025-12-20 22:28:03,454 log 20952 24324 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 22:28:03,454 basehttp 20952 24324 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 22:28:03,473 basehttp 20952 884 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 22:28:03,474 basehttp 20952 24324 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 22:28:03,474 basehttp 20952 13604 "GET /static/web/css/quote.css HTTP/1.1" 200 15580
+INFO 2025-12-20 22:28:03,483 basehttp 20952 2944 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 22:28:03,483 basehttp 20952 7892 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 22:28:03,484 basehttp 20952 10152 "GET /static/web/js/quote.js HTTP/1.1" 200 13219
+INFO 2025-12-20 22:28:16,430 basehttp 20952 2944 "GET /api/quotes/today/?category=CHRISTIAN&lang=fr HTTP/1.1" 200 1796
+INFO 2025-12-20 22:28:16,459 basehttp 20952 24324 "GET /api/quotes/?category=CHRISTIAN&ordering=-date&lang=fr HTTP/1.1" 200 7744
+INFO 2025-12-20 22:28:16,479 basehttp 20952 7892 "GET /api/quotes/?category=CHRISTIAN&ordering=-date&lang=fr HTTP/1.1" 200 7744
+INFO 2025-12-20 22:28:16,495 basehttp 20952 10152 "GET /api/quotes/today/?category=CHRISTIAN&lang=fr HTTP/1.1" 200 1796
+INFO 2025-12-20 22:28:16,664 basehttp 20952 10152 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-20 22:28:16,664 basehttp 20952 23512 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 22:28:16,681 basehttp 20952 10152 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 22:28:18,226 basehttp 20952 10152 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:28:37,313 basehttp 20952 7892 "GET /fr/quote-of-the-day/ HTTP/1.1" 200 27001
+INFO 2025-12-20 22:28:37,371 basehttp 20952 24324 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 22:28:37,372 basehttp 20952 2944 "GET /static/web/css/quote.css HTTP/1.1" 200 15580
+INFO 2025-12-20 22:28:37,375 basehttp 20952 13604 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 22:28:37,379 basehttp 20952 884 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+WARNING 2025-12-20 22:28:37,383 log 20952 7892 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-12-20 22:28:37,386 basehttp 20952 2944 "GET /static/web/js/quote.js HTTP/1.1" 200 13219
+WARNING 2025-12-20 22:28:37,394 basehttp 20952 7892 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 22:28:37,398 basehttp 20952 9056 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 22:28:39,672 basehttp 20952 7892 "GET /api/quotes/?category=CHRISTIAN&ordering=-date&lang=fr HTTP/1.1" 200 7744
+INFO 2025-12-20 22:28:39,703 basehttp 20952 2944 "GET /api/quotes/today/?category=CHRISTIAN&lang=fr HTTP/1.1" 200 1796
+INFO 2025-12-20 22:28:39,718 basehttp 20952 884 "GET /api/quotes/?category=CHRISTIAN&ordering=-date&lang=fr HTTP/1.1" 200 7744
+INFO 2025-12-20 22:28:39,737 basehttp 20952 9056 "GET /api/quotes/today/?category=CHRISTIAN&lang=fr HTTP/1.1" 200 1796
+INFO 2025-12-20 22:28:39,937 basehttp 20952 9056 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-20 22:28:39,937 basehttp 20952 23512 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 22:28:39,954 basehttp 20952 9056 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 22:28:41,483 basehttp 20952 9056 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:28:45,324 basehttp 20952 884 "GET /fr/feed/ HTTP/1.1" 200 52452
+WARNING 2025-12-20 22:28:45,401 log 20952 884 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 22:28:45,401 basehttp 20952 884 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 22:28:45,426 basehttp 20952 884 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 22:28:45,428 basehttp 20952 7892 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 22:28:45,430 basehttp 20952 13604 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 22:28:45,430 basehttp 20952 2944 "GET /static/web/css/feed.css HTTP/1.1" 200 27336
+INFO 2025-12-20 22:28:45,431 basehttp 20952 24324 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 22:28:45,434 basehttp 20952 8400 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 22:28:45,435 basehttp 20952 884 "GET /static/web/js/feed.js HTTP/1.1" 200 27732
+INFO 2025-12-20 22:28:46,079 basehttp 20952 884 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 22:28:46,097 basehttp 20952 8400 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 22:28:46,485 basehttp 20952 23512 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 22:28:46,516 basehttp 20952 884 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 22:28:46,522 basehttp 20952 8400 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56196
+INFO 2025-12-20 22:28:46,621 basehttp 20952 884 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 22:28:46,650 basehttp 20952 24324 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 22:28:46,667 basehttp 20952 13604 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 22:28:46,690 basehttp 20952 8400 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 22:28:48,209 basehttp 20952 8400 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:28:48,370 basehttp 20952 13604 "GET /fr/quote-of-the-day/ HTTP/1.1" 200 27001
+WARNING 2025-12-20 22:28:48,469 log 20952 13604 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 22:28:48,470 basehttp 20952 13604 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 22:28:48,481 basehttp 20952 13604 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 22:28:48,481 basehttp 20952 884 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 22:28:48,483 basehttp 20952 24324 "GET /static/web/css/quote.css HTTP/1.1" 200 15580
+INFO 2025-12-20 22:28:48,486 basehttp 20952 2944 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 22:28:48,486 basehttp 20952 7892 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 22:28:48,486 basehttp 20952 1908 "GET /static/web/js/quote.js HTTP/1.1" 200 13219
+INFO 2025-12-20 22:28:49,197 basehttp 20952 2944 "GET /api/quotes/today/?category=CHRISTIAN&lang=fr HTTP/1.1" 200 1796
+INFO 2025-12-20 22:28:49,223 basehttp 20952 1908 "GET /api/quotes/?category=CHRISTIAN&ordering=-date&lang=fr HTTP/1.1" 200 7744
+INFO 2025-12-20 22:28:49,246 basehttp 20952 7892 "GET /api/quotes/today/?category=CHRISTIAN&lang=fr HTTP/1.1" 200 1796
+INFO 2025-12-20 22:28:49,267 basehttp 20952 884 "GET /api/quotes/?category=CHRISTIAN&ordering=-date&lang=fr HTTP/1.1" 200 7744
+INFO 2025-12-20 22:28:49,451 basehttp 20952 23512 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 22:28:49,481 basehttp 20952 884 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 22:28:51,095 basehttp 20952 884 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:29:14,212 basehttp 20952 7892 "GET /fr/feed/ HTTP/1.1" 200 52452
+WARNING 2025-12-20 22:29:14,293 log 20952 7892 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 22:29:14,295 basehttp 20952 7892 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 22:29:14,304 basehttp 20952 7892 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 22:29:14,305 basehttp 20952 1908 "GET /static/web/css/feed.css HTTP/1.1" 200 27336
+INFO 2025-12-20 22:29:14,308 basehttp 20952 2944 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 22:29:14,310 basehttp 20952 24324 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 22:29:14,312 basehttp 20952 13604 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 22:29:14,314 basehttp 20952 1908 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 22:29:14,314 basehttp 20952 7892 "GET /static/web/js/feed.js HTTP/1.1" 200 27732
+INFO 2025-12-20 22:29:14,895 basehttp 20952 7892 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 22:29:14,903 basehttp 20952 1908 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 22:29:15,190 basehttp 20952 23512 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 22:29:15,212 basehttp 20952 7892 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 22:29:15,213 basehttp 20952 1908 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56196
+INFO 2025-12-20 22:29:15,307 basehttp 20952 7892 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 22:29:15,334 basehttp 20952 1908 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 22:29:15,342 basehttp 20952 13604 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 22:29:15,357 basehttp 20952 24324 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 22:29:16,896 basehttp 20952 24324 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:29:18,691 basehttp 20952 13604 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:30:00,693 basehttp 20952 1908 "POST /fr/save-settings/ HTTP/1.1" 200 47
+INFO 2025-12-20 22:30:03,033 basehttp 20952 1908 "GET /fr/quote-of-the-day/ HTTP/1.1" 200 26999
+WARNING 2025-12-20 22:30:03,141 log 20952 1908 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 22:30:03,142 basehttp 20952 1908 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 22:30:03,156 basehttp 20952 1908 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 22:30:03,159 basehttp 20952 7892 "GET /static/web/css/quote.css HTTP/1.1" 200 15580
+INFO 2025-12-20 22:30:03,162 basehttp 20952 2944 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 22:30:03,169 basehttp 20952 7892 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 22:30:03,169 basehttp 20952 1908 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 22:30:03,170 basehttp 20952 2944 "GET /static/web/js/quote.js HTTP/1.1" 200 13219
+INFO 2025-12-20 22:30:03,867 basehttp 20952 1908 "GET /api/quotes/today/?category=GENERAL&lang=fr HTTP/1.1" 200 1692
+INFO 2025-12-20 22:30:03,900 basehttp 20952 2944 "GET /api/quotes/today/?category=GENERAL&lang=fr HTTP/1.1" 200 1692
+INFO 2025-12-20 22:30:03,923 basehttp 20952 2760 "GET /api/quotes/?category=GENERAL&ordering=-date&lang=fr HTTP/1.1" 200 7992
+INFO 2025-12-20 22:30:03,934 basehttp 20952 7892 "GET /api/quotes/?category=GENERAL&ordering=-date&lang=fr HTTP/1.1" 200 7992
+INFO 2025-12-20 22:30:04,160 basehttp 20952 23512 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 22:30:04,174 basehttp 20952 7892 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 22:30:05,659 basehttp 20952 7892 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:30:11,342 basehttp 20952 2760 "GET /fr/feed/ HTTP/1.1" 200 52450
+INFO 2025-12-20 22:30:11,404 basehttp 20952 2944 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+WARNING 2025-12-20 22:30:11,407 log 20952 2760 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-12-20 22:30:11,408 basehttp 20952 1908 "GET /static/web/css/feed.css HTTP/1.1" 200 27336
+WARNING 2025-12-20 22:30:11,410 basehttp 20952 2760 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 22:30:11,412 basehttp 20952 24032 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 22:30:11,413 basehttp 20952 19444 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 22:30:11,416 basehttp 20952 24540 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 22:30:11,417 basehttp 20952 2944 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 22:30:11,418 basehttp 20952 1908 "GET /static/web/js/feed.js HTTP/1.1" 200 27732
+INFO 2025-12-20 22:30:11,854 basehttp 20952 1908 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 22:30:11,874 basehttp 20952 2944 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 22:30:12,228 basehttp 20952 23512 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 22:30:12,251 basehttp 20952 1908 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 22:30:12,252 basehttp 20952 2944 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56196
+INFO 2025-12-20 22:30:12,364 basehttp 20952 2944 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 22:30:12,375 basehttp 20952 1908 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 22:30:12,391 basehttp 20952 19444 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 22:30:12,410 basehttp 20952 24032 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 22:30:13,936 basehttp 20952 24032 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:30:21,852 basehttp 20952 19444 "POST /fr/save-settings/ HTTP/1.1" 200 47
+INFO 2025-12-20 22:30:21,912 basehttp 20952 19444 "GET /en/feed/ HTTP/1.1" 200 52066
+WARNING 2025-12-20 22:30:21,998 log 20952 19444 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 22:30:21,998 basehttp 20952 19444 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 22:30:22,004 basehttp 20952 19444 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 22:30:22,014 basehttp 20952 2760 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 22:30:22,015 basehttp 20952 24540 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 22:30:22,015 basehttp 20952 1908 "GET /static/web/css/feed.css HTTP/1.1" 200 27336
+INFO 2025-12-20 22:30:22,016 basehttp 20952 2944 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 22:30:22,016 basehttp 20952 23672 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 22:30:22,017 basehttp 20952 19444 "GET /static/web/js/feed.js HTTP/1.1" 200 27732
+INFO 2025-12-20 22:30:22,416 basehttp 20952 19444 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 22:30:22,435 basehttp 20952 2944 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 22:30:22,819 basehttp 20952 2944 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56196
+INFO 2025-12-20 22:30:22,820 basehttp 20952 23512 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 22:30:22,924 basehttp 20952 1908 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 22:30:22,933 basehttp 20952 2944 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 22:30:22,942 basehttp 20952 23672 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 22:30:22,958 basehttp 20952 24540 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 22:30:22,978 basehttp 20952 19444 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 22:30:24,521 basehttp 20952 19444 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 22:30:26,797 basehttp 20952 24540 "GET /en/quote-of-the-day/ HTTP/1.1" 200 26852
+WARNING 2025-12-20 22:30:26,870 log 20952 24540 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 22:30:26,871 basehttp 20952 24540 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 22:30:26,881 basehttp 20952 23672 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 22:30:26,883 basehttp 20952 1908 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 22:30:26,883 basehttp 20952 2944 "GET /static/web/css/quote.css HTTP/1.1" 200 15580
+INFO 2025-12-20 22:30:26,884 basehttp 20952 2760 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 22:30:26,884 basehttp 20952 24540 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 22:30:26,886 basehttp 20952 15384 "GET /static/web/js/quote.js HTTP/1.1" 200 13219
+INFO 2025-12-20 22:30:27,302 basehttp 20952 2760 "GET /api/quotes/today/?category=GENERAL&lang=en HTTP/1.1" 200 1614
+INFO 2025-12-20 22:30:27,334 basehttp 20952 15384 "GET /api/quotes/today/?category=GENERAL&lang=en HTTP/1.1" 200 1614
+INFO 2025-12-20 22:30:27,357 basehttp 20952 2944 "GET /api/quotes/?category=GENERAL&ordering=-date&lang=en HTTP/1.1" 200 7670
+INFO 2025-12-20 22:30:27,388 basehttp 20952 24540 "GET /api/quotes/?category=GENERAL&ordering=-date&lang=en HTTP/1.1" 200 7670
+INFO 2025-12-20 22:30:27,614 basehttp 20952 23512 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 22:30:27,626 basehttp 20952 24540 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 22:30:29,183 basehttp 20952 24540 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0

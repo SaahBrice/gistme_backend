@@ -314,3 +314,79 @@ Guidelines:
     
     def __str__(self):
         return f"AI Settings (Updated: {self.updated_at})"
+
+
+class DailyQuote(models.Model):
+    """
+    Daily quotes with three categories: General, Christian, and Islamic.
+    One quote per category per day. Updated daily by admin.
+    Bilingual support: English (en) and French (fr).
+    """
+    CATEGORY_CHOICES = [
+        ('GENERAL', 'General'),
+        ('CHRISTIAN', 'Christian'),
+        ('ISLAMIC', 'Islamic'),
+    ]
+    
+    category = models.CharField(
+        max_length=20, 
+        choices=CATEGORY_CHOICES, 
+        db_index=True,
+        help_text="Quote category matching user preferences"
+    )
+    date = models.DateField(
+        db_index=True,
+        help_text="The date this quote is for"
+    )
+    
+    # Bilingual quote text
+    quote_text_en = models.TextField(default='', help_text="The quote in English")
+    quote_text_fr = models.TextField(default='', help_text="The quote in French")
+    
+    author = models.CharField(max_length=150, help_text="Author or source of the quote")
+    
+    # Bilingual explanation
+    explanation_en = models.TextField(default='', help_text="Explanation in English")
+    explanation_fr = models.TextField(default='', help_text="Explanation in French")
+    
+    # Bilingual affirmations
+    affirmations_en = models.JSONField(
+        default=list, 
+        blank=True,
+        help_text="List of affirmation strings in English"
+    )
+    affirmations_fr = models.JSONField(
+        default=list, 
+        blank=True,
+        help_text="List of affirmation strings in French"
+    )
+    
+    source_reference = models.CharField(
+        max_length=200, 
+        blank=True,
+        help_text="Bible verse, Hadith reference, book title, etc."
+    )
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        unique_together = ['category', 'date']  # One quote per category per day
+        ordering = ['-date', 'category']
+        verbose_name = 'Daily Quote'
+        verbose_name_plural = 'Daily Quotes'
+    
+    def __str__(self):
+        return f"{self.date} - {self.category}: {self.quote_text_en[:50]}..."
+    
+    def get_quote_text(self, lang='en'):
+        """Return quote text in requested language"""
+        return self.quote_text_fr if lang == 'fr' else self.quote_text_en
+    
+    def get_explanation(self, lang='en'):
+        """Return explanation in requested language"""
+        return self.explanation_fr if lang == 'fr' else self.explanation_en
+    
+    def get_affirmations(self, lang='en'):
+        """Return affirmations in requested language"""
+        return self.affirmations_fr if lang == 'fr' else self.affirmations_en
+

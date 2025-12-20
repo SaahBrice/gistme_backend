@@ -81,3 +81,46 @@ class AssistanceRequestSerializer(serializers.ModelSerializer):
         if not value or len(value.strip()) < 10:
             raise serializers.ValidationError("Please provide a message with at least 10 characters.")
         return value.strip()
+
+
+class DailyQuoteSerializer(serializers.ModelSerializer):
+    """
+    Serializer for daily quotes with bilingual support.
+    Returns language-specific content based on 'lang' context.
+    """
+    category_display = serializers.CharField(source='get_category_display', read_only=True)
+    
+    # Dynamic fields that return based on language
+    quote_text = serializers.SerializerMethodField()
+    explanation = serializers.SerializerMethodField()
+    affirmations = serializers.SerializerMethodField()
+    
+    class Meta:
+        from .models import DailyQuote
+        model = DailyQuote
+        fields = [
+            'id', 'category', 'category_display', 'date', 
+            'quote_text', 'quote_text_en', 'quote_text_fr',
+            'author', 
+            'explanation', 'explanation_en', 'explanation_fr',
+            'affirmations', 'affirmations_en', 'affirmations_fr',
+            'source_reference',
+            'created_at', 'updated_at'
+        ]
+        read_only_fields = ['id', 'category_display', 'created_at', 'updated_at']
+    
+    def get_quote_text(self, obj):
+        """Return quote text in requested language"""
+        lang = self.context.get('lang', 'en')
+        return obj.get_quote_text(lang)
+    
+    def get_explanation(self, obj):
+        """Return explanation in requested language"""
+        lang = self.context.get('lang', 'en')
+        return obj.get_explanation(lang)
+    
+    def get_affirmations(self, obj):
+        """Return affirmations in requested language"""
+        lang = self.context.get('lang', 'en')
+        return obj.get_affirmations(lang)
+

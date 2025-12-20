@@ -3,13 +3,15 @@ from rest_framework.routers import DefaultRouter
 from .views import (
     ArticleViewSet, ArticleCategoryViewSet, CommentViewSet, SubscribeView, FileUploadView, 
     FCMSubscribeView, CategoryPreferencesView, OnboardingView,
-    MentorCategoriesView, MentorsView, MentorRequestView, AssistanceRequestView, ChatView
+    MentorCategoriesView, MentorsView, MentorRequestView, AssistanceRequestView, ChatView,
+    DailyQuoteViewSet
 )
 
 router = DefaultRouter()
 router.register(r'articles', ArticleViewSet)
 router.register(r'categories', ArticleCategoryViewSet)
 router.register(r'comments', CommentViewSet)
+router.register(r'quotes', DailyQuoteViewSet)
 
 from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
 

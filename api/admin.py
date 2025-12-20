@@ -103,3 +103,38 @@ class AISettingsAdmin(admin.ModelAdmin):
     
     def has_delete_permission(self, request, obj=None):
         return False
+
+
+from .models import DailyQuote
+
+@admin.register(DailyQuote)
+class DailyQuoteAdmin(admin.ModelAdmin):
+    list_display = ('date', 'category', 'author', 'quote_text_short', 'created_at')
+    list_filter = ('category', 'date')
+    search_fields = ('quote_text_en', 'quote_text_fr', 'author', 'explanation_en', 'explanation_fr')
+    ordering = ('-date', 'category')
+    date_hierarchy = 'date'
+    readonly_fields = ('created_at', 'updated_at')
+    
+    fieldsets = (
+        ('Quote Info', {
+            'fields': ('category', 'date', 'author', 'source_reference')
+        }),
+        ('English Content 🇬🇧', {
+            'fields': ('quote_text_en', 'explanation_en', 'affirmations_en'),
+            'classes': ('wide',)
+        }),
+        ('French Content 🇫🇷', {
+            'fields': ('quote_text_fr', 'explanation_fr', 'affirmations_fr'),
+            'classes': ('wide',)
+        }),
+        ('Timestamps', {
+            'fields': ('created_at', 'updated_at'),
+            'classes': ('collapse',)
+        }),
+    )
+    
+    @admin.display(description='Quote (EN)')
+    def quote_text_short(self, obj):
+        return obj.quote_text_en[:60] + '...' if len(obj.quote_text_en) > 60 else obj.quote_text_en
+

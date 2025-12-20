@@ -1,0 +1,292 @@
+{% extends 'web/base.html' %}
+{% load static i18n %}
+
+{% block title %}{% trans "My Quote of the Day" %} - Gist4U{% endblock %}
+
+{% block navbar %}{% endblock %}
+{% block footer %}{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'web/css/quote.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Meta tags for social sharing -->
+<meta property="og:title" content="{% trans 'My Quote of the Day' %} - Gist4U">
+<meta property="og:description" content="{% trans 'Daily inspiration to fuel your ambition' %}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ request.build_absolute_uri }}">
+<meta name="twitter:card" content="summary_large_image">
+{% endblock %}
+
+{% block content %}
+{% csrf_token %}
+<div class="quote-page" x-data="quoteApp()" x-init="init()">
+    
+    <!-- Hidden data for JS -->
+    <script type="application/json" id="quote-config">
+    {
+        "category": "{{ quote_category }}",
+        "userName": "{{ user.first_name|default:user.email|slice:':15' }}",
+        "lang": "{{ LANGUAGE_CODE|default:'en' }}"
+    }
+    </script>
+    
+    <!-- Header with Back + Centered Title -->
+    <div class="quote-header">
+        <a href="{% url 'feed' %}" class="back-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="15 18 9 12 15 6"/>
+            </svg>
+        </a>
+        <h1>{% trans "My Quote of the Day" %}</h1>
+    </div>
+    
+    <!-- Loading State -->
+    <div class="loading-state" x-show="loading">
+        <div class="loading-spinner"></div>
+        <p>{% trans "Loading your quote..." %}</p>
+    </div>
+    
+    <!-- Error State -->
+    <div class="error-state" x-show="error && !loading">
+        <div class="error-icon">💭</div>
+        <h3>{% trans "No Quote Available" %}</h3>
+        <p x-text="errorMessage">{% trans "Check back tomorrow for your daily inspiration." %}</p>
+        <a href="{% url 'feed' %}" class="back-link">{% trans "Back to Feed" %}</a>
+    </div>
+    
+    <!-- Quote Content (hidden while loading) -->
+    <template x-if="!loading && !error && quote">
+        <div class="quote-container">
+            
+            <!-- Category Badge -->
+            <div class="category-badge" :class="quote.category.toLowerCase()">
+                <span x-text="getCategoryEmoji()"></span>
+                <span x-text="quote.category_display"></span>
+            </div>
+            
+            <!-- Quote Card -->
+            <div class="quote-card" :class="quote.category.toLowerCase()">
+                <div class="quote-mark">"</div>
+                <p class="quote-text" x-text="quote.quote_text"></p>
+                <div class="quote-author">
+                    <span class="author-dash">—</span>
+                    <span x-text="quote.author"></span>
+                </div>
+                <template x-if="quote.source_reference">
+                    <p class="quote-source" x-text="quote.source_reference"></p>
+                </template>
+            </div>
+            
+            <!-- Date Badge -->
+            <div class="date-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                    <line x1="16" y1="2" x2="16" y2="6"/>
+                    <line x1="8" y1="2" x2="8" y2="6"/>
+                    <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                <span x-text="formatDate(quote.date)"></span>
+            </div>
+            
+            <!-- Explanation Section -->
+            <div class="section-card">
+                <div class="section-header">
+                    <span class="section-icon">💡</span>
+                    <h2>{% trans "What This Means" %}</h2>
+                </div>
+                <p class="explanation-text" x-text="quote.explanation"></p>
+            </div>
+            
+            <!-- Affirmations Section -->
+            <template x-if="quote.affirmations && quote.affirmations.length > 0">
+                <div class="section-card affirmations-section">
+                    <div class="section-header">
+                        <span class="section-icon">✨</span>
+                        <h2>{% trans "Words of Affirmation" %}</h2>
+                    </div>
+                    <div class="affirmations-grid">
+                        <template x-for="(affirmation, index) in quote.affirmations" :key="index">
+                            <div class="affirmation-card" :style="{ animationDelay: (index * 0.1) + 's' }">
+                                <span class="affirmation-text" x-text="affirmation"></span>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </template>
+            
+            <!-- Share Button -->
+            <button class="share-btn" @click="showShareModal = true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="18" cy="5" r="3"/>
+                    <circle cx="6" cy="12" r="3"/>
+                    <circle cx="18" cy="19" r="3"/>
+                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+                </svg>
+                <span>{% trans "Share This Quote" %}</span>
+            </button>
+            
+            <!-- Previous Quotes Timeline -->
+            <template x-if="previousQuotes && previousQuotes.length > 0">
+                <div class="timeline-section">
+                    <div class="timeline-header">
+                        <div class="timeline-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <h2>{% trans "Previous Quotes" %}</h2>
+                        <div class="timeline-line-header"></div>
+                    </div>
+                    
+                    <div class="timeline-container">
+                        <div class="timeline-line"></div>
+                        
+                        <template x-for="(prevQuote, index) in previousQuotes" :key="prevQuote.id">
+                            <div class="timeline-item" 
+                                 :style="{ animationDelay: (index * 0.15) + 's' }"
+                                 @click="expandedTimeline === prevQuote.id ? expandedTimeline = null : expandedTimeline = prevQuote.id">
+                                
+                                <!-- Timeline Node -->
+                                <div class="timeline-node" :class="prevQuote.category.toLowerCase()">
+                                    <span class="node-day" x-text="getDayAgo(index + 1)"></span>
+                                </div>
+                                
+                                <!-- Timeline Card -->
+                                <div class="timeline-card" :class="{ 'expanded': expandedTimeline === prevQuote.id }">
+                                    <div class="timeline-card-header">
+                                        <span class="timeline-date" x-text="formatShortDate(prevQuote.date)"></span>
+                                        <span class="timeline-category" :class="prevQuote.category.toLowerCase()" x-text="getCategoryIcon(prevQuote.category)"></span>
+                                    </div>
+                                    
+                                    <p class="timeline-quote" x-text="prevQuote.quote_text"></p>
+                                    
+                                    <div class="timeline-author">
+                                        <span>— </span>
+                                        <span x-text="prevQuote.author"></span>
+                                    </div>
+                                    
+                                    <!-- Expanded Content -->
+                                    <div class="timeline-expanded" x-show="expandedTimeline === prevQuote.id" x-collapse>
+                                        <div class="timeline-explanation">
+                                            <span class="mini-label">💡 {% trans "Meaning" %}</span>
+                                            <p x-text="prevQuote.explanation"></p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="timeline-expand-hint">
+                                        <span x-text="expandedTimeline === prevQuote.id ? '{% trans 'Tap to collapse' %}' : '{% trans 'Tap to expand' %}'"></span>
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                             :class="{ 'rotated': expandedTimeline === prevQuote.id }">
+                                            <polyline points="6 9 12 15 18 9"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                        
+                        <!-- Timeline End -->
+                        <div class="timeline-end">
+                            <div class="timeline-end-node">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 5v14M5 12h14"/>
+                                </svg>
+                            </div>
+                            <span class="timeline-end-text">{% trans "More quotes coming..." %}</span>
+                        </div>
+                    </div>
+                </div>
+            </template>
+            
+        </div>
+    </template>
+    
+    <!-- Share Modal -->
+    <div class="share-modal-overlay" 
+         x-show="showShareModal" 
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0"
+         x-transition:enter-end="opacity-100"
+         x-transition:leave="transition ease-in duration-150"
+         x-transition:leave-start="opacity-100"
+         x-transition:leave-end="opacity-0"
+         @click.self="showShareModal = false">
+        
+        <div class="share-modal"
+             x-show="showShareModal"
+             x-transition:enter="transition ease-out duration-200"
+             x-transition:enter-start="opacity-0 scale-95"
+             x-transition:enter-end="opacity-100 scale-100">
+            
+            <div class="share-modal-header">
+                <h3>{% trans "Share Quote" %}</h3>
+                <button class="share-close-btn" @click="showShareModal = false">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="share-options">
+                <button class="share-option" @click="shareAsImage()">
+                    <div class="share-option-icon image-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <polyline points="21 15 16 10 5 21"/>
+                        </svg>
+                    </div>
+                    <span class="share-option-label">{% trans "Share as Image" %}</span>
+                    <span class="share-option-desc">{% trans "Download beautiful image" %}</span>
+                </button>
+                
+                <button class="share-option" @click="shareAsText()">
+                    <div class="share-option-icon text-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                        </svg>
+                    </div>
+                    <span class="share-option-label">{% trans "Copy Text" %}</span>
+                    <span class="share-option-desc">{% trans "Copy quote to clipboard" %}</span>
+                </button>
+                
+                <button class="share-option" @click="shareAsLink()">
+                    <div class="share-option-icon link-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                        </svg>
+                    </div>
+                    <span class="share-option-label">{% trans "Share Link" %}</span>
+                    <span class="share-option-desc">{% trans "Share page link" %}</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Toast Notification -->
+    <div class="toast" 
+         x-show="showToast" 
+         x-cloak
+         x-transition:enter="transition ease-out duration-300"
+         x-transition:enter-start="opacity-0 translate-y-4"
+         x-transition:enter-end="opacity-100 translate-y-0"
+         x-transition:leave="transition ease-in duration-200"
+         x-transition:leave-start="opacity-100 translate-y-0"
+         x-transition:leave-end="opacity-0 translate-y-4">
+        <span class="toast-icon" x-text="toastIcon"></span>
+        <span class="toast-text" x-text="toastMessage"></span>
+    </div>
+    
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="{% static 'web/js/quote.js' %}"></script>
+{% endblock %}
