@@ -82,6 +82,12 @@ def feed(request):
     }
     return render(request, 'web/feed.html', context)
 
+
+@login_required
+def search(request):
+    """Search page for finding articles"""
+    return render(request, 'web/search.html')
+
 @login_required
 def relax(request):
     return render(request, 'web/relax.html')

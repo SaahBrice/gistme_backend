@@ -15943,3 +15943,437 @@ INFO 2025-12-20 13:36:53,383 basehttp 928 17128 "GET /static/web/js/dummy-articl
 INFO 2025-12-20 13:36:54,284 basehttp 928 23168 "GET /static/web/manifest.json HTTP/1.1" 200 1427
 INFO 2025-12-20 13:36:54,300 basehttp 928 17128 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
 INFO 2025-12-20 13:36:55,883 basehttp 928 17128 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+ERROR 2025-12-20 13:56:50,754 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:50,761 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:50,769 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:50,776 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:50,783 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:50,789 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:50,796 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:50,803 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:50,809 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:50,816 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:50,823 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:50,830 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:50,837 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:50,845 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:50,852 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:50,859 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:50,867 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:50,873 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:50,880 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:50,885 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:50,892 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:50,900 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:50,906 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:50,913 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:50,920 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:50,926 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:50,934 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:50,939 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:50,946 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:50,955 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:50,962 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:50,968 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:50,976 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:50,982 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:50,989 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:50,996 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,002 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,010 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,016 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,023 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,030 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,036 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,043 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,053 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,060 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,067 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,074 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,081 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,088 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,094 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,102 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,110 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,117 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,123 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,131 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,139 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,146 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,152 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,160 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,167 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,173 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,180 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,186 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,194 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,200 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,208 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,215 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,222 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,228 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,236 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,243 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,250 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,258 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,265 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,272 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,279 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,287 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,297 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,306 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,313 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,319 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,325 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,333 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,339 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,346 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,353 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,360 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,367 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,374 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,380 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,387 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,394 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,401 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,408 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,415 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,425 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,431 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,440 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,447 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,454 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,460 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,467 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,473 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,480 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,487 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,496 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,503 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+ERROR 2025-12-20 13:56:51,512 fcm 15032 14280 Error preparing push notification: 'ArticleCategory' object has no attribute 'lower'
+INFO 2025-12-20 14:08:28,853 autoreload 21664 12876 Watching for file changes with StatReloader
+INFO 2025-12-20 14:11:00,833 basehttp 21664 13544 "GET /fr/feed/ HTTP/1.1" 200 53247
+WARNING 2025-12-20 14:11:00,959 log 21664 13544 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 14:11:00,960 basehttp 21664 13544 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 14:11:01,334 basehttp 21664 10856 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 14:11:01,336 basehttp 21664 17512 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 14:11:01,338 basehttp 21664 10856 "GET /static/web/js/feed.js HTTP/1.1" 200 33721
+INFO 2025-12-20 14:11:01,349 basehttp 21664 13544 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 14:11:01,355 basehttp 21664 9388 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 14:11:01,357 basehttp 21664 22348 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 14:11:01,358 basehttp 21664 15144 "GET /static/web/css/feed.css HTTP/1.1" 200 25627
+INFO 2025-12-20 14:11:02,270 basehttp 21664 15144 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 14:11:02,287 basehttp 21664 22348 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 14:11:02,500 basehttp 21664 10404 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 14:11:02,500 basehttp 21664 15144 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-20 14:11:02,535 basehttp 21664 15144 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 14:11:02,541 basehttp 21664 22348 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56020
+INFO 2025-12-20 14:11:02,624 basehttp 21664 22348 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 14:11:02,631 basehttp 21664 9388 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 14:11:02,646 basehttp 21664 13544 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 14:11:02,661 basehttp 21664 15144 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 14:11:04,180 basehttp 21664 15144 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 14:11:05,653 basehttp 21664 13544 "GET /media/thumbnails/entertainment_20251205_145357_1.webp HTTP/1.1" 200 32402
+INFO 2025-12-20 14:11:13,982 basehttp 21664 13544 "GET /media/audio/french/health_20251205_145653.mp3 HTTP/1.1" 200 2627396
+INFO 2025-12-20 14:11:14,043 basehttp 21664 13544 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-20 14:11:28,252 basehttp 21664 13544 "POST /fr/save-settings/ HTTP/1.1" 200 47
+INFO 2025-12-20 14:11:28,300 basehttp 21664 13544 "GET /en/feed/ HTTP/1.1" 200 52860
+INFO 2025-12-20 14:11:28,426 basehttp 21664 17512 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 14:11:28,427 basehttp 21664 9388 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 14:11:28,430 basehttp 21664 10856 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 14:11:28,431 basehttp 21664 18700 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 14:11:28,433 basehttp 21664 22348 "GET /static/web/css/feed.css HTTP/1.1" 200 25627
+INFO 2025-12-20 14:11:28,434 basehttp 21664 17512 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 14:11:28,435 basehttp 21664 9388 "GET /static/web/js/feed.js HTTP/1.1" 200 33721
+WARNING 2025-12-20 14:11:28,445 log 21664 13544 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 14:11:28,453 basehttp 21664 13544 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 14:11:28,856 basehttp 21664 13544 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 14:11:28,871 basehttp 21664 17512 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 14:11:29,098 basehttp 21664 10404 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 14:11:29,124 basehttp 21664 17512 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56020
+INFO 2025-12-20 14:11:29,127 basehttp 21664 13544 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 14:11:29,240 basehttp 21664 13544 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 14:11:29,258 basehttp 21664 17512 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 14:11:29,275 basehttp 21664 22348 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 14:11:29,292 basehttp 21664 9388 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 14:11:30,811 basehttp 21664 9388 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 14:11:33,003 basehttp 21664 22348 "GET /media/thumbnails/entertainment_20251205_145357_1.webp HTTP/1.1" 200 32402
+INFO 2025-12-20 14:11:34,485 basehttp 21664 22348 "GET /media/thumbnails/sports_20251205_145304_1.jpg HTTP/1.1" 200 64441
+INFO 2025-12-20 14:11:44,011 basehttp 21664 22348 "GET /media/audio/english/technology_20251205_145550.mp3 HTTP/1.1" 200 710400
+INFO 2025-12-20 14:11:44,059 basehttp 21664 22348 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-20 14:11:57,725 basehttp 21664 22348 "GET /media/thumbnails/education_20251205_075726_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 14:12:04,765 basehttp 21664 22348 "GET /media/thumbnails/agriculture_20251205_065149_1.jpeg HTTP/1.1" 200 43226
+INFO 2025-12-20 14:12:07,397 basehttp 21664 22348 "GET /media/thumbnails/education_20251205_065016_3.jpeg HTTP/1.1" 200 64631
+INFO 2025-12-20 14:12:11,036 basehttp 21664 22348 "GET /media/thumbnails/health_20251205_064922_1.jpg HTTP/1.1" 200 65009
+INFO 2025-12-20 14:12:15,825 basehttp 21664 22348 "GET /en/article/119/ HTTP/1.1" 200 29791
+WARNING 2025-12-20 14:12:15,900 log 21664 22348 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 14:12:15,900 basehttp 21664 22348 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 14:12:15,913 basehttp 21664 22348 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 14:12:15,918 basehttp 21664 17512 "GET /static/web/css/article.css HTTP/1.1" 200 28133
+INFO 2025-12-20 14:12:15,919 basehttp 21664 18700 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 14:12:15,921 basehttp 21664 13544 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 14:12:15,921 basehttp 21664 10856 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 14:12:15,922 basehttp 21664 22560 "GET /static/web/js/article-dummy-data.js HTTP/1.1" 200 3681
+INFO 2025-12-20 14:12:15,923 basehttp 21664 22348 "GET /static/web/js/article.js HTTP/1.1" 200 18744
+INFO 2025-12-20 14:12:17,130 basehttp 21664 10404 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 14:12:17,147 basehttp 21664 22560 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 14:12:18,713 basehttp 21664 22560 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 14:12:18,722 basehttp 21664 22348 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+WARNING 2025-12-20 14:12:18,776 log 21664 22560 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 14:12:18,776 basehttp 21664 22560 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 14:12:18,790 basehttp 21664 10404 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 14:12:18,791 basehttp 21664 10856 "GET /static/web/css/feed.css HTTP/1.1" 200 25627
+INFO 2025-12-20 14:12:18,814 basehttp 21664 22560 "GET /en/feed/ HTTP/1.1" 200 52860
+WARNING 2025-12-20 14:12:18,826 log 21664 10856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 14:12:18,828 basehttp 21664 10856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 14:12:23,660 basehttp 21664 10856 "GET /api/articles/?page=2&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 52797
+INFO 2025-12-20 14:12:23,713 basehttp 21664 10856 "GET /media/thumbnails/technology_20251205_064820_1.jpeg HTTP/1.1" 200 101133
+INFO 2025-12-20 14:12:23,872 basehttp 21664 10856 "GET /media/thumbnails/business_20251205_064622_1.jpeg HTTP/1.1" 200 33322
+INFO 2025-12-20 14:12:28,194 basehttp 21664 10856 "GET /media/thumbnails/entertainment_20251205_064520_1.jpeg HTTP/1.1" 200 138530
+INFO 2025-12-20 14:12:29,076 basehttp 21664 10856 "GET /media/thumbnails/sports_20251205_064422_1.jpg HTTP/1.1" 200 64110
+INFO 2025-12-20 14:12:35,566 basehttp 21664 10856 "GET /media/thumbnails/sports_20251205_063707_1.jpg HTTP/1.1" 200 64662
+INFO 2025-12-20 14:12:37,404 basehttp 21664 10856 "GET /media/thumbnails/business_20251205_062426_1.jpeg HTTP/1.1" 200 27125
+INFO 2025-12-20 14:12:43,882 basehttp 21664 10856 "GET /media/thumbnails/entertainment_20251205_062315_1.png HTTP/1.1" 200 1100515
+INFO 2025-12-20 14:12:46,126 basehttp 21664 10856 "GET /media/thumbnails/sports_20251205_062213_1.jpg HTTP/1.1" 200 64405
+INFO 2025-12-20 14:12:47,125 basehttp 21664 10856 "GET /media/thumbnails/politics_20251205_062056_1.jpg HTTP/1.1" 200 64313
+INFO 2025-12-20 14:12:56,633 basehttp 21664 10856 "GET /api/articles/110/ HTTP/1.1" 200 5149
+INFO 2025-12-20 14:12:56,652 basehttp 21664 10856 "GET /media/thumbnails/business_20251205_062426_1.jpeg HTTP/1.1" 200 27125
+INFO 2025-12-20 14:12:58,543 basehttp 21664 10856 "GET /en/feed/ HTTP/1.1" 200 52860
+WARNING 2025-12-20 14:12:58,606 log 21664 10856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 14:12:58,607 basehttp 21664 10856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 14:12:58,627 basehttp 21664 10856 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 14:12:58,629 basehttp 21664 22560 "GET /static/web/css/feed.css HTTP/1.1" 200 25627
+INFO 2025-12-20 14:12:58,636 basehttp 21664 17512 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 14:12:58,637 basehttp 21664 13544 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 14:12:58,637 basehttp 21664 18700 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 14:12:58,638 basehttp 21664 22560 "GET /static/web/js/feed.js HTTP/1.1" 200 33721
+INFO 2025-12-20 14:12:58,641 basehttp 21664 17244 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 14:12:59,365 basehttp 21664 22560 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 14:12:59,386 basehttp 21664 17244 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 14:12:59,449 basehttp 21664 17244 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56020
+INFO 2025-12-20 14:12:59,655 basehttp 21664 10404 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 14:12:59,657 basehttp 21664 13544 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-20 14:12:59,669 basehttp 21664 13544 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 14:12:59,692 basehttp 21664 17244 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 14:12:59,700 basehttp 21664 22560 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 14:12:59,715 basehttp 21664 18700 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 14:12:59,728 basehttp 21664 17512 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 14:13:01,265 basehttp 21664 17512 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 14:13:01,529 basehttp 21664 18700 "GET /api/articles/110/ HTTP/1.1" 200 5149
+INFO 2025-12-20 14:13:01,550 basehttp 21664 18700 "GET /media/thumbnails/business_20251205_062426_1.jpeg HTTP/1.1" 200 27125
+INFO 2025-12-20 14:13:04,413 basehttp 21664 18700 "GET /media/thumbnails/entertainment_20251205_145357_1.webp HTTP/1.1" 200 32402
+INFO 2025-12-20 14:13:05,084 basehttp 21664 18700 "GET /media/thumbnails/sports_20251205_145304_1.jpg HTTP/1.1" 200 64441
+INFO 2025-12-20 14:13:07,189 basehttp 21664 18700 "GET /media/thumbnails/education_20251205_075726_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 14:13:07,993 basehttp 21664 18700 "GET /media/thumbnails/agriculture_20251205_065149_1.jpeg HTTP/1.1" 200 43226
+INFO 2025-12-20 14:13:09,223 basehttp 21664 18700 "GET /media/thumbnails/education_20251205_065016_3.jpeg HTTP/1.1" 200 64631
+INFO 2025-12-20 14:13:10,323 basehttp 21664 18700 "GET /media/thumbnails/health_20251205_064922_1.jpg HTTP/1.1" 200 65009
+INFO 2025-12-20 14:13:12,421 basehttp 21664 18700 "GET /api/articles/?page=2&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 52797
+INFO 2025-12-20 14:13:12,470 basehttp 21664 18700 "GET /media/thumbnails/technology_20251205_064820_1.jpeg HTTP/1.1" 200 101133
+INFO 2025-12-20 14:13:12,703 basehttp 21664 18700 "GET /media/thumbnails/business_20251205_064622_1.jpeg HTTP/1.1" 200 33322
+INFO 2025-12-20 14:13:13,766 basehttp 21664 18700 "GET /media/thumbnails/entertainment_20251205_064520_1.jpeg HTTP/1.1" 200 138530
+INFO 2025-12-20 14:13:15,744 basehttp 21664 18700 "GET /media/thumbnails/sports_20251205_064422_1.jpg HTTP/1.1" 200 64110
+INFO 2025-12-20 14:13:16,605 basehttp 21664 18700 "GET /media/thumbnails/sports_20251205_063707_1.jpg HTTP/1.1" 200 64662
+INFO 2025-12-20 14:13:17,365 basehttp 21664 18700 "GET /media/thumbnails/business_20251205_062426_1.jpeg HTTP/1.1" 200 27125
+INFO 2025-12-20 14:13:18,141 basehttp 21664 18700 "GET /media/thumbnails/entertainment_20251205_062315_1.png HTTP/1.1" 200 1100515
+INFO 2025-12-20 14:13:21,581 basehttp 21664 18700 "GET /api/articles/110/ HTTP/1.1" 200 5149
+INFO 2025-12-20 14:13:21,603 basehttp 21664 18700 "GET /media/thumbnails/business_20251205_062426_1.jpeg HTTP/1.1" 200 27125
+INFO 2025-12-20 14:13:25,592 basehttp 21664 18700 "GET /media/thumbnails/sports_20251205_062213_1.jpg HTTP/1.1" 200 64405
+INFO 2025-12-20 14:13:26,114 basehttp 21664 18700 "GET /media/thumbnails/politics_20251205_062056_1.jpg HTTP/1.1" 200 64313
+INFO 2025-12-20 14:13:27,336 basehttp 21664 18700 "GET /api/articles/?page=3&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 48318
+INFO 2025-12-20 14:13:27,553 basehttp 21664 18700 "GET /media/thumbnails/sports_20251205_060121_1.jpg HTTP/1.1" 200 64233
+INFO 2025-12-20 14:13:33,454 basehttp 21664 18700 "GET /media/thumbnails/politics_20251205_050334_1.jpg HTTP/1.1" 200 64840
+INFO 2025-12-20 14:13:40,483 basehttp 21664 18700 "GET /api/articles/?page=1&page_size=10&main_category=OPPORTUNITY HTTP/1.1" 200 15806
+INFO 2025-12-20 14:13:40,536 basehttp 21664 18700 "GET /media/thumbnails/scholarships_cameroonians_can_apply_20251129_225514_1.jpeg HTTP/1.1" 200 196766
+INFO 2025-12-20 14:13:40,547 basehttp 21664 22560 "GET /media/thumbnails/latest_jobs_20251129_225410_1.jpeg HTTP/1.1" 200 8868
+INFO 2025-12-20 14:13:40,676 basehttp 21664 22560 "GET /media/thumbnails/scholarships_cameroonians_can_apply_20251130_122509_1.jpeg HTTP/1.1" 200 196766
+INFO 2025-12-20 14:13:45,116 basehttp 21664 22560 "GET /api/articles/?page=1&page_size=10 HTTP/1.1" 200 55996
+INFO 2025-12-20 14:13:45,185 basehttp 21664 17244 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 14:13:45,205 basehttp 21664 22560 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 14:13:45,215 basehttp 21664 18700 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 14:13:45,230 basehttp 21664 13544 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 14:13:46,832 basehttp 21664 13544 "GET /api/articles/?page=1&page_size=10&main_category=OPPORTUNITY HTTP/1.1" 200 15806
+INFO 2025-12-20 14:13:46,884 basehttp 21664 18700 "GET /media/thumbnails/scholarships_cameroonians_can_apply_20251129_225514_1.jpeg HTTP/1.1" 200 196766
+INFO 2025-12-20 14:13:46,902 basehttp 21664 22560 "GET /media/thumbnails/latest_jobs_20251129_225410_1.jpeg HTTP/1.1" 200 8868
+INFO 2025-12-20 14:13:46,916 basehttp 21664 13544 "GET /media/thumbnails/scholarships_cameroonians_can_apply_20251130_122509_1.jpeg HTTP/1.1" 200 196766
+INFO 2025-12-20 14:13:47,664 basehttp 21664 13544 "GET /api/articles/?page=1&page_size=10&main_category=OPPORTUNITY&category__slug=jobs-abroad HTTP/1.1" 200 52
+INFO 2025-12-20 14:13:48,521 basehttp 21664 13544 "GET /api/articles/?page=1&page_size=10&main_category=OPPORTUNITY&category__slug=scholarships HTTP/1.1" 200 7081
+INFO 2025-12-20 14:13:48,560 basehttp 21664 13544 "GET /media/thumbnails/scholarships_cameroonians_can_apply_20251130_122509_1.jpeg HTTP/1.1" 200 196766
+INFO 2025-12-20 14:13:48,575 basehttp 21664 22560 "GET /media/thumbnails/scholarships_cameroonians_can_apply_20251129_225514_1.jpeg HTTP/1.1" 200 196766
+INFO 2025-12-20 14:13:55,821 basehttp 21664 22560 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56020
+INFO 2025-12-20 14:13:55,915 basehttp 21664 22560 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 14:13:55,924 basehttp 21664 13544 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 14:13:55,941 basehttp 21664 18700 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 14:13:55,954 basehttp 21664 17244 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 14:13:59,480 basehttp 21664 17244 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY&category__slug=sports HTTP/1.1" 200 48249
+INFO 2025-12-20 14:13:59,536 basehttp 21664 18700 "GET /media/thumbnails/sports_20251205_064422_1.jpg HTTP/1.1" 200 64110
+INFO 2025-12-20 14:13:59,551 basehttp 21664 13544 "GET /media/thumbnails/sports_20251205_063707_1.jpg HTTP/1.1" 200 64662
+INFO 2025-12-20 14:13:59,567 basehttp 21664 22560 "GET /media/thumbnails/sports_20251205_062213_1.jpg HTTP/1.1" 200 64405
+INFO 2025-12-20 14:13:59,581 basehttp 21664 17244 "GET /media/thumbnails/sports_20251205_145304_1.jpg HTTP/1.1" 200 64441
+INFO 2025-12-20 14:14:00,721 basehttp 21664 17244 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY&category__slug=entertainment HTTP/1.1" 200 41547
+INFO 2025-12-20 14:14:00,783 basehttp 21664 17244 "GET /media/thumbnails/entertainment_20251205_145357_1.webp HTTP/1.1" 200 32402
+INFO 2025-12-20 14:14:00,829 basehttp 21664 13544 "GET /media/thumbnails/entertainment_20251205_062315_1.png HTTP/1.1" 200 1100515
+INFO 2025-12-20 14:14:00,831 basehttp 21664 18700 "GET /media/thumbnails/entertainment_20251205_035612_1.webp HTTP/1.1" 200 32402
+INFO 2025-12-20 14:14:00,848 basehttp 21664 22560 "GET /media/thumbnails/entertainment_20251205_064520_1.jpeg HTTP/1.1" 200 138530
+INFO 2025-12-20 14:14:04,415 basehttp 21664 22560 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56020
+INFO 2025-12-20 14:14:04,489 basehttp 21664 22560 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 14:14:04,509 basehttp 21664 10856 "GET /media/thumbnails/agriculture_20251205_065149_1.jpeg HTTP/1.1" 200 43226
+INFO 2025-12-20 14:14:04,520 basehttp 21664 13544 "GET /media/thumbnails/sports_20251205_145304_1.jpg HTTP/1.1" 200 64441
+INFO 2025-12-20 14:14:04,546 basehttp 21664 17244 "GET /media/thumbnails/education_20251205_075726_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 14:14:04,553 basehttp 21664 18700 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 14:14:14,930 basehttp 21664 18700 "POST /en/save-settings/ HTTP/1.1" 200 47
+INFO 2025-12-20 14:14:14,973 basehttp 21664 18700 "GET /fr/feed/ HTTP/1.1" 200 53247
+WARNING 2025-12-20 14:14:15,055 log 21664 18700 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 14:14:15,061 basehttp 21664 18700 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 14:14:15,090 basehttp 21664 18700 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 14:14:15,093 basehttp 21664 17244 "GET /static/web/css/feed.css HTTP/1.1" 200 25627
+INFO 2025-12-20 14:14:15,093 basehttp 21664 22560 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 14:14:15,094 basehttp 21664 10856 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 14:14:15,096 basehttp 21664 13544 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 14:14:15,098 basehttp 21664 18700 "GET /static/web/js/feed.js HTTP/1.1" 200 33721
+INFO 2025-12-20 14:14:15,099 basehttp 21664 2624 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 14:14:15,917 basehttp 21664 13544 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 14:14:15,924 basehttp 21664 2624 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 14:14:16,000 basehttp 21664 2624 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56020
+INFO 2025-12-20 14:14:16,239 basehttp 21664 10404 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 14:14:16,254 basehttp 21664 22560 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 14:14:16,270 basehttp 21664 13544 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 14:14:16,284 basehttp 21664 10856 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 14:14:16,319 basehttp 21664 2624 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 14:14:16,331 basehttp 21664 18700 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 14:14:17,859 basehttp 21664 18700 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 14:14:25,702 basehttp 21664 2624 "GET /api/articles/?page=1&page_size=10&main_category=OPPORTUNITY HTTP/1.1" 200 15806
+INFO 2025-12-20 14:14:25,742 basehttp 21664 10856 "GET /media/thumbnails/scholarships_cameroonians_can_apply_20251129_225514_1.jpeg HTTP/1.1" 200 196766
+INFO 2025-12-20 14:14:25,760 basehttp 21664 2624 "GET /media/thumbnails/scholarships_cameroonians_can_apply_20251130_122509_1.jpeg HTTP/1.1" 200 196766
+INFO 2025-12-20 14:14:25,773 basehttp 21664 13544 "GET /media/thumbnails/latest_jobs_20251129_225410_1.jpeg HTTP/1.1" 200 8868
+INFO 2025-12-20 14:14:26,390 basehttp 21664 13544 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56020
+INFO 2025-12-20 14:14:26,462 basehttp 21664 10856 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 14:14:26,474 basehttp 21664 22560 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 14:14:26,498 basehttp 21664 13544 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 14:14:26,507 basehttp 21664 2624 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 14:14:30,505 basehttp 21664 2624 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY&category__slug=technology HTTP/1.1" 200 54190
+INFO 2025-12-20 14:14:30,559 basehttp 21664 2624 "GET /media/thumbnails/technology_20251205_064820_1.jpeg HTTP/1.1" 200 101133
+INFO 2025-12-20 14:14:30,580 basehttp 21664 22560 "GET /media/thumbnails/technology_20251129_232830_1.png HTTP/1.1" 200 511425
+INFO 2025-12-20 14:14:30,587 basehttp 21664 13544 "GET /media/thumbnails/technology_20251205_021636_1.jpeg HTTP/1.1" 200 101133
+INFO 2025-12-20 14:14:33,921 basehttp 21664 13544 "GET /api/articles/?page=1&page_size=10&main_category=OPPORTUNITY HTTP/1.1" 200 15806
+INFO 2025-12-20 14:14:33,960 basehttp 21664 2624 "GET /media/thumbnails/latest_jobs_20251129_225410_1.jpeg HTTP/1.1" 200 8868
+INFO 2025-12-20 14:14:33,979 basehttp 21664 13544 "GET /media/thumbnails/scholarships_cameroonians_can_apply_20251130_122509_1.jpeg HTTP/1.1" 200 196766
+INFO 2025-12-20 14:14:33,998 basehttp 21664 22560 "GET /media/thumbnails/scholarships_cameroonians_can_apply_20251129_225514_1.jpeg HTTP/1.1" 200 196766
+INFO 2025-12-20 14:14:37,916 basehttp 21664 22560 "GET /api/articles/?page=1&page_size=10 HTTP/1.1" 200 55996
+INFO 2025-12-20 14:14:37,997 basehttp 21664 10856 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 14:14:38,015 basehttp 21664 2624 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 14:14:38,031 basehttp 21664 13544 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 14:14:38,056 basehttp 21664 22560 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 14:14:40,432 basehttp 21664 22560 "GET /media/thumbnails/entertainment_20251205_145357_1.webp HTTP/1.1" 200 32402
+INFO 2025-12-20 14:14:41,204 basehttp 21664 22560 "GET /media/thumbnails/sports_20251205_145304_1.jpg HTTP/1.1" 200 64441
+INFO 2025-12-20 14:14:41,419 basehttp 21664 22560 "GET /fr/article/123/ HTTP/1.1" 200 29819
+WARNING 2025-12-20 14:14:41,487 log 21664 22560 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 14:14:41,488 basehttp 21664 22560 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 14:14:41,500 basehttp 21664 22560 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 14:14:41,502 basehttp 21664 17244 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 14:14:41,503 basehttp 21664 2624 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 14:14:41,504 basehttp 21664 10856 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 14:14:41,504 basehttp 21664 13544 "GET /static/web/css/article.css HTTP/1.1" 200 28133
+INFO 2025-12-20 14:14:41,504 basehttp 21664 17908 "GET /static/web/js/article-dummy-data.js HTTP/1.1" 200 3681
+INFO 2025-12-20 14:14:41,506 basehttp 21664 22560 "GET /static/web/js/article.js HTTP/1.1" 200 18744
+INFO 2025-12-20 14:14:42,098 basehttp 21664 10404 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 14:14:42,117 basehttp 21664 22560 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 14:14:43,184 basehttp 21664 22560 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+WARNING 2025-12-20 14:14:43,259 log 21664 22560 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 14:14:43,261 basehttp 21664 22560 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 14:14:43,293 basehttp 21664 10404 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 14:14:43,293 basehttp 21664 17908 "GET /static/web/css/feed.css HTTP/1.1" 200 25627
+INFO 2025-12-20 14:14:43,319 basehttp 21664 22560 "GET /fr/feed/ HTTP/1.1" 200 53247
+WARNING 2025-12-20 14:14:43,333 log 21664 17908 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 14:14:43,334 basehttp 21664 17908 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 14:14:43,661 basehttp 21664 17908 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 14:14:46,495 basehttp 21664 10856 "GET /api/articles/123/ HTTP/1.1" 200 4191
+INFO 2025-12-20 14:14:46,513 basehttp 21664 22560 "GET /api/articles/110/ HTTP/1.1" 200 5149
+INFO 2025-12-20 14:14:46,540 basehttp 21664 22560 "GET /media/thumbnails/business_20251205_062426_1.jpeg HTTP/1.1" 200 27125
+INFO 2025-12-20 14:14:46,561 basehttp 21664 10856 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 14:14:49,542 basehttp 21664 10856 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 14:14:53,428 basehttp 21664 10856 "GET /api/articles/123/ HTTP/1.1" 200 4191
+INFO 2025-12-20 14:14:53,446 basehttp 21664 10856 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 14:14:56,546 basehttp 21664 10856 "GET /media/thumbnails/education_20251205_075726_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 14:14:59,161 basehttp 21664 10856 "GET /media/thumbnails/agriculture_20251205_065149_1.jpeg HTTP/1.1" 200 43226
+INFO 2025-12-20 14:15:00,402 basehttp 21664 10856 "GET /media/thumbnails/education_20251205_065016_3.jpeg HTTP/1.1" 200 64631
+INFO 2025-12-20 14:15:02,880 basehttp 21664 10856 "GET /api/articles/122/ HTTP/1.1" 200 5543
+INFO 2025-12-20 14:15:02,896 basehttp 21664 13544 "GET /api/articles/120/ HTTP/1.1" 200 3542
+INFO 2025-12-20 14:15:02,915 basehttp 21664 22560 "GET /api/articles/121/ HTTP/1.1" 200 5435
+INFO 2025-12-20 14:15:02,942 basehttp 21664 22560 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 14:15:02,963 basehttp 21664 10856 "GET /media/thumbnails/sports_20251205_145304_1.jpg HTTP/1.1" 200 64441
+INFO 2025-12-20 14:15:02,975 basehttp 21664 13544 "GET /media/thumbnails/entertainment_20251205_145357_1.webp HTTP/1.1" 200 32402
+INFO 2025-12-20 14:15:08,212 basehttp 21664 13544 "GET /media/thumbnails/health_20251205_064922_1.jpg HTTP/1.1" 200 65009
+INFO 2025-12-20 14:15:17,118 basehttp 21664 13544 "GET /fr/search/ HTTP/1.1" 200 20503
+WARNING 2025-12-20 14:15:17,191 log 21664 13544 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 14:15:17,192 basehttp 21664 13544 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 14:15:17,218 basehttp 21664 13544 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 14:15:17,218 basehttp 21664 10856 "GET /static/web/css/feed.css HTTP/1.1" 200 25627
+INFO 2025-12-20 14:15:17,222 basehttp 21664 22560 "GET /static/web/css/search.css HTTP/1.1" 200 5386
+INFO 2025-12-20 14:15:17,223 basehttp 21664 2624 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 14:15:17,224 basehttp 21664 17244 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 14:15:17,225 basehttp 21664 19288 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 14:15:18,105 basehttp 21664 10404 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 14:15:18,116 basehttp 21664 19288 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 14:15:19,580 basehttp 21664 19288 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-20 14:15:23,911 basehttp 21664 17244 "GET /api/articles/?search=ca&page=1&page_size=15 HTTP/1.1" 200 80101
+INFO 2025-12-20 14:15:24,005 basehttp 21664 17244 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 14:15:24,019 basehttp 21664 22532 "GET /media/thumbnails/sports_20251205_145304_1.jpg HTTP/1.1" 200 64441
+INFO 2025-12-20 14:15:24,047 basehttp 21664 22560 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 14:15:24,077 basehttp 21664 22560 "GET /media/thumbnails/education_20251205_065016_3.jpeg HTTP/1.1" 200 64631
+INFO 2025-12-20 14:15:24,090 basehttp 21664 22560 "GET /media/thumbnails/health_20251205_064922_1.jpg HTTP/1.1" 200 65009
+INFO 2025-12-20 14:15:24,109 basehttp 21664 22560 "GET /media/thumbnails/technology_20251205_064820_1.jpeg HTTP/1.1" 200 101133
+INFO 2025-12-20 14:15:24,125 basehttp 21664 13544 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 14:15:24,155 basehttp 21664 13544 "GET /media/thumbnails/entertainment_20251205_064520_1.jpeg HTTP/1.1" 200 138530
+INFO 2025-12-20 14:15:24,171 basehttp 21664 13544 "GET /media/thumbnails/sports_20251205_064422_1.jpg HTTP/1.1" 200 64110
+INFO 2025-12-20 14:15:24,187 basehttp 21664 22532 "GET /media/thumbnails/agriculture_20251205_065149_1.jpeg HTTP/1.1" 200 43226
+INFO 2025-12-20 14:15:24,202 basehttp 21664 22560 "GET /media/thumbnails/business_20251205_064622_1.jpeg HTTP/1.1" 200 33322
+INFO 2025-12-20 14:15:24,221 basehttp 21664 2624 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 14:15:24,243 basehttp 21664 17244 "GET /media/thumbnails/education_20251205_075726_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 14:15:24,251 basehttp 21664 10856 "GET /media/thumbnails/entertainment_20251205_145357_1.webp HTTP/1.1" 200 32402
+INFO 2025-12-20 14:15:24,307 basehttp 21664 10856 "GET /api/articles/?search=cam&page=1&page_size=15 HTTP/1.1" 200 80102
+INFO 2025-12-20 14:15:24,676 basehttp 21664 10856 "GET /api/articles/?search=camer&page=1&page_size=15 HTTP/1.1" 200 80104
+INFO 2025-12-20 14:15:25,611 basehttp 21664 10856 "GET /api/articles/?search=cameroo&page=1&page_size=15 HTTP/1.1" 200 80767
+INFO 2025-12-20 14:15:25,654 basehttp 21664 10856 "GET /media/thumbnails/sports_20251205_063707_1.jpg HTTP/1.1" 200 64662
+INFO 2025-12-20 14:15:25,929 basehttp 21664 10856 "GET /api/articles/?search=cameroon&page=1&page_size=15 HTTP/1.1" 200 80768
+INFO 2025-12-20 14:15:33,312 basehttp 21664 10856 "GET /fr/article/125/ HTTP/1.1" 200 29819
+WARNING 2025-12-20 14:15:33,419 log 21664 10856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 14:15:33,426 basehttp 21664 10856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 14:15:33,430 basehttp 21664 17244 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 14:15:33,430 basehttp 21664 22560 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 14:15:33,432 basehttp 21664 13544 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 14:15:33,432 basehttp 21664 22532 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 14:15:33,434 basehttp 21664 2624 "GET /static/web/css/article.css HTTP/1.1" 200 28133
+INFO 2025-12-20 14:15:33,435 basehttp 21664 10856 "GET /static/web/js/article-dummy-data.js HTTP/1.1" 200 3681
+INFO 2025-12-20 14:15:33,438 basehttp 21664 22560 "GET /static/web/js/article.js HTTP/1.1" 200 18744
+INFO 2025-12-20 14:15:34,099 basehttp 21664 10404 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 14:15:34,112 basehttp 21664 22560 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 14:15:35,589 basehttp 21664 22560 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+WARNING 2025-12-20 14:15:35,647 log 21664 22560 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 14:15:35,652 basehttp 21664 22560 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 14:15:35,654 basehttp 21664 2624 "GET /static/web/css/search.css HTTP/1.1" 200 5386
+INFO 2025-12-20 14:15:35,662 basehttp 21664 10404 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 14:15:35,665 basehttp 21664 17244 "GET /static/web/css/feed.css HTTP/1.1" 200 25627
+INFO 2025-12-20 14:15:35,690 basehttp 21664 10856 "GET /fr/search/ HTTP/1.1" 200 20503
+INFO 2025-12-20 14:15:35,720 basehttp 21664 22532 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+WARNING 2025-12-20 14:15:35,738 log 21664 17244 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 14:15:35,739 basehttp 21664 17244 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 14:15:36,980 basehttp 21664 17244 "GET /fr/feed/ HTTP/1.1" 200 53247
+WARNING 2025-12-20 14:15:37,050 log 21664 17244 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-20 14:15:37,050 basehttp 21664 17244 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-20 14:15:37,075 basehttp 21664 17244 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-20 14:15:37,080 basehttp 21664 3576 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-20 14:15:37,080 basehttp 21664 22560 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-20 14:15:37,080 basehttp 21664 2624 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-20 14:15:37,081 basehttp 21664 10856 "GET /static/web/css/feed.css HTTP/1.1" 200 25627
+INFO 2025-12-20 14:15:37,081 basehttp 21664 13544 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-20 14:15:37,084 basehttp 21664 17244 "GET /static/web/js/feed.js HTTP/1.1" 200 33721
+INFO 2025-12-20 14:15:37,517 basehttp 21664 17244 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 14:15:37,541 basehttp 21664 13544 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-20 14:15:37,718 basehttp 21664 10404 "GET /static/web/manifest.json HTTP/1.1" 200 1427
+INFO 2025-12-20 14:15:37,743 basehttp 21664 17244 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-20 14:15:37,747 basehttp 21664 13544 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56020
+INFO 2025-12-20 14:15:37,836 basehttp 21664 3576 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-20 14:15:37,856 basehttp 21664 17244 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-20 14:15:37,889 basehttp 21664 13544 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-20 14:15:37,900 basehttp 21664 10856 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-20 14:15:39,427 basehttp 21664 10856 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
