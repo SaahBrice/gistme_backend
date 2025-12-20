@@ -20111,3 +20111,200 @@ INFO 2025-12-20 23:56:13,993 basehttp 14704 11428 "GET /admin/jsi18n/ HTTP/1.1" 
 INFO 2025-12-20 23:56:15,590 basehttp 14704 11428 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
 INFO 2025-12-20 23:56:18,346 basehttp 14704 15620 "GET /api/notifications/?lang=en&ordering=-created_at HTTP/1.1" 200 3952
 INFO 2025-12-20 23:56:45,036 basehttp 14704 20620 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-21 00:13:36,000 autoreload 15936 23752 Watching for file changes with StatReloader
+INFO 2025-12-21 00:13:50,407 basehttp 15936 3416 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-21 00:14:53,807 basehttp 15936 2288 "GET /en/feed/ HTTP/1.1" 200 53565
+WARNING 2025-12-21 00:14:53,878 log 15936 2288 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-21 00:14:53,879 basehttp 15936 2288 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-21 00:14:54,225 basehttp 15936 828 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-21 00:14:54,226 basehttp 15936 2288 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-21 00:14:54,228 basehttp 15936 828 "GET /static/web/js/feed.js HTTP/1.1" 200 30773
+INFO 2025-12-21 00:14:54,230 basehttp 15936 23828 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-21 00:14:54,282 basehttp 15936 13040 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-21 00:14:54,288 basehttp 15936 21188 "GET /static/web/css/feed.css HTTP/1.1" 200 30438
+INFO 2025-12-21 00:14:54,289 basehttp 15936 18764 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-21 00:15:01,053 basehttp 15936 18764 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-21 00:15:01,064 basehttp 15936 21188 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-21 00:15:01,250 basehttp 15936 18764 "GET /api/notifications/unread-count/?lang=en HTTP/1.1" 200 18
+INFO 2025-12-21 00:15:01,278 basehttp 15936 21188 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56080
+INFO 2025-12-21 00:15:01,369 basehttp 15936 21188 "GET /api/notifications/unread-count/?lang=en HTTP/1.1" 200 18
+INFO 2025-12-21 00:15:01,413 basehttp 15936 21188 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-21 00:15:01,423 basehttp 15936 23828 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-21 00:15:01,439 basehttp 15936 13040 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-21 00:15:01,454 basehttp 15936 18764 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-21 00:15:01,967 basehttp 15936 21760 "GET /static/web/manifest.json HTTP/1.1" 200 1423
+INFO 2025-12-21 00:15:01,986 basehttp 15936 18764 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-21 00:15:03,045 basehttp 15936 18764 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-21 00:16:07,040 basehttp 15936 13040 "POST /en/save-settings/ HTTP/1.1" 200 47
+INFO 2025-12-21 00:16:12,473 basehttp 15936 13040 "GET /en/feed/ HTTP/1.1" 200 53548
+WARNING 2025-12-21 00:16:12,531 log 15936 13040 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-21 00:16:12,534 basehttp 15936 13040 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-21 00:16:12,541 basehttp 15936 23828 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-21 00:16:12,547 basehttp 15936 13040 "GET /static/web/css/feed.css HTTP/1.1" 200 30438
+INFO 2025-12-21 00:16:12,551 basehttp 15936 23828 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-21 00:16:12,551 basehttp 15936 21188 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-21 00:16:12,558 basehttp 15936 13040 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-21 00:16:12,558 basehttp 15936 828 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-21 00:16:12,558 basehttp 15936 2288 "GET /static/web/js/feed.js HTTP/1.1" 200 30773
+INFO 2025-12-21 00:16:14,265 basehttp 15936 828 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-21 00:16:14,281 basehttp 15936 2288 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-21 00:16:14,554 basehttp 15936 13040 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-21 00:16:14,574 basehttp 15936 828 "GET /api/notifications/unread-count/?lang=en HTTP/1.1" 200 18
+INFO 2025-12-21 00:16:14,604 basehttp 15936 2288 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56080
+INFO 2025-12-21 00:16:14,618 basehttp 15936 21760 "GET /static/web/manifest.json HTTP/1.1" 200 1423
+INFO 2025-12-21 00:16:14,719 basehttp 15936 2288 "GET /api/notifications/unread-count/?lang=en HTTP/1.1" 200 18
+INFO 2025-12-21 00:16:14,784 basehttp 15936 21188 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-21 00:16:14,808 basehttp 15936 2288 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-21 00:16:14,813 basehttp 15936 23828 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-21 00:16:14,829 basehttp 15936 828 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-21 00:16:14,845 basehttp 15936 13040 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-21 00:16:16,383 basehttp 15936 13040 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-21 00:17:19,827 autoreload 15936 23752 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\notifications\channels\email.py changed, reloading.
+INFO 2025-12-21 00:17:21,124 autoreload 2200 19072 Watching for file changes with StatReloader
+INFO 2025-12-21 00:19:20,501 basehttp 2200 16920 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-21 00:19:58,659 autoreload 2200 19072 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\gistme_backend\settings.py changed, reloading.
+INFO 2025-12-21 00:19:59,815 autoreload 22576 20648 Watching for file changes with StatReloader
+INFO 2025-12-21 00:20:26,598 autoreload 22576 20648 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\views.py changed, reloading.
+INFO 2025-12-21 00:20:27,729 autoreload 10284 10824 Watching for file changes with StatReloader
+INFO 2025-12-21 00:21:09,389 autoreload 10284 10824 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\api\views.py changed, reloading.
+INFO 2025-12-21 00:21:10,576 autoreload 10628 6340 Watching for file changes with StatReloader
+INFO 2025-12-21 00:21:36,453 autoreload 10628 6340 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\web\views.py changed, reloading.
+INFO 2025-12-21 00:21:37,690 autoreload 20868 7696 Watching for file changes with StatReloader
+INFO 2025-12-21 00:22:25,084 autoreload 20868 7696 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\notifications\signals.py changed, reloading.
+INFO 2025-12-21 00:22:26,678 autoreload 19460 20388 Watching for file changes with StatReloader
+INFO 2025-12-21 00:22:29,836 basehttp 19460 5816 "GET /media/thumbnails/entertainment_20251205_145357_1.webp HTTP/1.1" 200 32402
+INFO 2025-12-21 00:22:31,678 basehttp 19460 5816 "GET /media/thumbnails/sports_20251205_145304_1.jpg HTTP/1.1" 200 64441
+INFO 2025-12-21 00:22:33,224 basehttp 19460 5816 "GET /en/article/123/ HTTP/1.1" 200 32390
+INFO 2025-12-21 00:22:33,368 basehttp 19460 6896 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-21 00:22:33,372 basehttp 19460 17548 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-21 00:22:33,372 basehttp 19460 14948 "GET /static/web/css/article.css HTTP/1.1" 200 31725
+INFO 2025-12-21 00:22:33,375 basehttp 19460 22176 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-21 00:22:33,377 basehttp 19460 17704 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-21 00:22:33,381 basehttp 19460 6896 "GET /static/web/js/article-dummy-data.js HTTP/1.1" 200 3681
+INFO 2025-12-21 00:22:33,381 basehttp 19460 17548 "GET /static/web/js/article.js HTTP/1.1" 200 29240
+WARNING 2025-12-21 00:22:33,388 log 19460 5816 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-21 00:22:33,390 basehttp 19460 5816 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-21 00:22:39,871 basehttp 19460 6896 "GET /api/articles/123/ HTTP/1.1" 200 4207
+INFO 2025-12-21 00:22:39,888 basehttp 19460 5816 "GET /api/articles/123/ HTTP/1.1" 200 4207
+INFO 2025-12-21 00:22:39,987 basehttp 19460 6896 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-21 00:22:40,017 basehttp 19460 5816 "GET /api/articles/?page_size=5&category=6 HTTP/1.1" 200 26750
+INFO 2025-12-21 00:22:40,068 basehttp 19460 5816 "GET /api/articles/?page_size=5&category=6 HTTP/1.1" 200 26750
+INFO 2025-12-21 00:22:40,231 basehttp 19460 5816 "GET /api/articles/?page_size=4&main_category=ACTUALITY HTTP/1.1" 200 21741
+INFO 2025-12-21 00:22:40,233 basehttp 19460 10664 "GET /static/web/manifest.json HTTP/1.1" 200 1423
+INFO 2025-12-21 00:22:40,262 basehttp 19460 17548 "GET /media/thumbnails/technology_20251205_021636_1.jpeg HTTP/1.1" 200 101133
+INFO 2025-12-21 00:22:40,280 basehttp 19460 14948 "GET /media/thumbnails/science_20251129_225147_1.jpeg HTTP/1.1" 200 115580
+INFO 2025-12-21 00:22:40,295 basehttp 19460 6896 "GET /media/thumbnails/technology_20251205_064820_1.jpeg HTTP/1.1" 200 101133
+INFO 2025-12-21 00:22:40,338 basehttp 19460 6896 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-21 00:22:40,357 basehttp 19460 17704 "GET /media/thumbnails/technology_20251129_232830_1.png HTTP/1.1" 200 511425
+INFO 2025-12-21 00:22:40,367 basehttp 19460 22176 "GET /api/articles/?page_size=4&main_category=ACTUALITY HTTP/1.1" 200 21741
+INFO 2025-12-21 00:22:41,991 basehttp 19460 22176 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-21 00:22:53,590 basehttp 19460 17704 "GET /en/feed/ HTTP/1.1" 200 53548
+WARNING 2025-12-21 00:22:53,653 log 19460 17704 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-21 00:22:53,654 basehttp 19460 17704 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-21 00:22:53,664 basehttp 19460 6896 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-21 00:22:53,665 basehttp 19460 14948 "GET /static/web/css/feed.css HTTP/1.1" 200 30438
+INFO 2025-12-21 00:22:53,669 basehttp 19460 17548 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-21 00:22:53,670 basehttp 19460 5816 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-21 00:22:53,670 basehttp 19460 17704 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-21 00:22:53,672 basehttp 19460 6896 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-21 00:22:53,673 basehttp 19460 18100 "GET /static/web/js/feed.js HTTP/1.1" 200 30773
+INFO 2025-12-21 00:22:54,364 basehttp 19460 18100 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-21 00:22:54,387 basehttp 19460 6896 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-21 00:22:54,754 basehttp 19460 6896 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56080
+INFO 2025-12-21 00:22:54,916 basehttp 19460 6896 "GET /api/notifications/unread-count/?lang=en HTTP/1.1" 200 18
+INFO 2025-12-21 00:22:54,937 basehttp 19460 10664 "GET /static/web/manifest.json HTTP/1.1" 200 1423
+INFO 2025-12-21 00:22:54,984 basehttp 19460 6896 "GET /api/notifications/unread-count/?lang=en HTTP/1.1" 200 18
+INFO 2025-12-21 00:22:55,068 basehttp 19460 17704 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-21 00:22:55,085 basehttp 19460 17704 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-21 00:22:55,089 basehttp 19460 5816 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-21 00:22:55,103 basehttp 19460 14948 "GET /media/thumbnails/sports_20251205_145304_1.jpg HTTP/1.1" 200 64441
+INFO 2025-12-21 00:22:55,134 basehttp 19460 17548 "GET /media/thumbnails/entertainment_20251205_145357_1.webp HTTP/1.1" 200 32402
+INFO 2025-12-21 00:22:55,135 basehttp 19460 6896 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-21 00:22:55,151 basehttp 19460 18100 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-21 00:22:56,220 basehttp 19460 18100 "GET /media/thumbnails/education_20251205_075726_1.png HTTP/1.1" 200 849697
+INFO 2025-12-21 00:22:56,703 basehttp 19460 18100 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-21 00:22:56,966 basehttp 19460 6896 "GET /media/thumbnails/agriculture_20251205_065149_1.jpeg HTTP/1.1" 200 43226
+INFO 2025-12-21 00:22:57,967 basehttp 19460 6896 "GET /media/thumbnails/education_20251205_065016_3.jpeg HTTP/1.1" 200 64631
+INFO 2025-12-21 00:22:58,688 basehttp 19460 6896 "GET /media/thumbnails/health_20251205_064922_1.jpg HTTP/1.1" 200 65009
+INFO 2025-12-21 00:23:01,782 basehttp 19460 6896 "GET /en/article/120/ HTTP/1.1" 200 32390
+WARNING 2025-12-21 00:23:01,855 log 19460 6896 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-21 00:23:01,856 basehttp 19460 6896 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-21 00:23:01,870 basehttp 19460 6896 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-21 00:23:01,872 basehttp 19460 5816 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-21 00:23:01,872 basehttp 19460 14948 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-21 00:23:01,873 basehttp 19460 17704 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-21 00:23:01,873 basehttp 19460 17548 "GET /static/web/css/article.css HTTP/1.1" 200 31725
+INFO 2025-12-21 00:23:01,876 basehttp 19460 888 "GET /static/web/js/article-dummy-data.js HTTP/1.1" 200 3681
+INFO 2025-12-21 00:23:01,876 basehttp 19460 6896 "GET /static/web/js/article.js HTTP/1.1" 200 29240
+INFO 2025-12-21 00:23:03,135 basehttp 19460 6896 "GET /api/articles/120/ HTTP/1.1" 200 3558
+INFO 2025-12-21 00:23:03,150 basehttp 19460 888 "GET /api/articles/120/ HTTP/1.1" 200 3558
+INFO 2025-12-21 00:23:03,263 basehttp 19460 6896 "GET /media/thumbnails/sports_20251205_145304_1.jpg HTTP/1.1" 200 64441
+INFO 2025-12-21 00:23:03,323 basehttp 19460 888 "GET /api/articles/?page_size=5&category=3 HTTP/1.1" 200 26421
+INFO 2025-12-21 00:23:03,341 basehttp 19460 17548 "GET /api/articles/?page_size=5&category=3 HTTP/1.1" 200 26421
+INFO 2025-12-21 00:23:03,515 basehttp 19460 10664 "GET /static/web/manifest.json HTTP/1.1" 200 1423
+INFO 2025-12-21 00:23:03,524 basehttp 19460 17548 "GET /api/articles/?page_size=4&main_category=ACTUALITY HTTP/1.1" 200 21741
+INFO 2025-12-21 00:23:03,552 basehttp 19460 17704 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-21 00:23:03,571 basehttp 19460 6896 "GET /media/thumbnails/sports_20251205_064422_1.jpg HTTP/1.1" 200 64110
+INFO 2025-12-21 00:23:03,590 basehttp 19460 17548 "GET /media/thumbnails/sports_20251205_062213_1.jpg HTTP/1.1" 200 64405
+INFO 2025-12-21 00:23:03,609 basehttp 19460 5816 "GET /media/thumbnails/sports_20251205_060121_1.jpg HTTP/1.1" 200 64233
+INFO 2025-12-21 00:23:03,622 basehttp 19460 888 "GET /api/articles/?page_size=4&main_category=ACTUALITY HTTP/1.1" 200 21741
+INFO 2025-12-21 00:23:03,645 basehttp 19460 17704 "GET /media/thumbnails/sports_20251205_063707_1.jpg HTTP/1.1" 200 64662
+INFO 2025-12-21 00:23:04,923 basehttp 19460 17704 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+WARNING 2025-12-21 00:23:05,040 log 19460 17704 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-21 00:23:05,041 basehttp 19460 17704 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-21 00:23:05,175 basehttp 19460 10664 "GET /static/web/manifest.json HTTP/1.1" 200 1423
+INFO 2025-12-21 00:23:05,178 basehttp 19460 888 "GET /static/web/css/feed.css HTTP/1.1" 200 30438
+WARNING 2025-12-21 00:23:05,201 log 19460 5816 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-21 00:23:05,205 basehttp 19460 5816 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-21 00:23:05,221 basehttp 19460 17704 "GET /en/feed/ HTTP/1.1" 200 53548
+INFO 2025-12-21 00:23:05,251 basehttp 19460 888 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-21 00:23:08,784 basehttp 19460 17704 "GET /api/articles/?page=2&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 52957
+INFO 2025-12-21 00:23:08,876 basehttp 19460 17704 "GET /media/thumbnails/sports_20251205_064422_1.jpg HTTP/1.1" 200 64110
+INFO 2025-12-21 00:23:08,885 basehttp 19460 5816 "GET /media/thumbnails/technology_20251205_064820_1.jpeg HTTP/1.1" 200 101133
+INFO 2025-12-21 00:23:08,901 basehttp 19460 17548 "GET /media/thumbnails/business_20251205_064622_1.jpeg HTTP/1.1" 200 33322
+INFO 2025-12-21 00:23:08,916 basehttp 19460 6896 "GET /media/thumbnails/entertainment_20251205_064520_1.jpeg HTTP/1.1" 200 138530
+INFO 2025-12-21 00:23:09,839 basehttp 19460 6896 "GET /media/thumbnails/sports_20251205_063707_1.jpg HTTP/1.1" 200 64662
+INFO 2025-12-21 00:23:10,571 basehttp 19460 6896 "GET /media/thumbnails/business_20251205_062426_1.jpeg HTTP/1.1" 200 27125
+INFO 2025-12-21 00:23:23,378 basehttp 19460 6896 "GET /media/thumbnails/entertainment_20251205_062315_1.png HTTP/1.1" 200 1100515
+INFO 2025-12-21 00:23:23,970 basehttp 19460 6896 "GET /media/thumbnails/sports_20251205_062213_1.jpg HTTP/1.1" 200 64405
+INFO 2025-12-21 00:23:24,888 basehttp 19460 6896 "GET /media/thumbnails/politics_20251205_062056_1.jpg HTTP/1.1" 200 64313
+INFO 2025-12-21 00:23:25,817 basehttp 19460 6896 "GET /media/thumbnails/sports_20251205_060121_1.jpg HTTP/1.1" 200 64233
+INFO 2025-12-21 00:23:27,098 basehttp 19460 6896 "GET /api/articles/?page=3&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 48478
+INFO 2025-12-21 00:23:27,155 basehttp 19460 6896 "GET /media/thumbnails/politics_20251205_050334_1.jpg HTTP/1.1" 200 64840
+INFO 2025-12-21 00:23:27,184 basehttp 19460 6896 "GET /media/thumbnails/politics_20251205_040440_1.jpg HTTP/1.1" 200 64080
+INFO 2025-12-21 00:23:27,513 autoreload 19460 20388 C:\Users\saahb\OneDrive\Bureau\APP DOCS\Gist app by Cursor\gistme_backend\notifications\signals.py changed, reloading.
+INFO 2025-12-21 00:23:28,787 autoreload 8040 3012 Watching for file changes with StatReloader
+INFO 2025-12-21 00:23:30,193 basehttp 8040 6048 "GET /media/thumbnails/entertainment_20251205_035612_1.webp HTTP/1.1" 200 32402
+INFO 2025-12-21 00:23:30,214 basehttp 8040 14624 "GET /media/thumbnails/politics_20251205_040015_1.jpg HTTP/1.1" 200 64661
+INFO 2025-12-21 00:23:30,231 basehttp 8040 17136 "GET /media/thumbnails/sports_20251205_035539_1.jpg HTTP/1.1" 200 64423
+INFO 2025-12-21 00:23:30,268 basehttp 8040 3192 "GET /media/thumbnails/politics_20251205_035459_1.jpg HTTP/1.1" 200 64056
+INFO 2025-12-21 00:23:30,448 basehttp 8040 3192 "GET /media/thumbnails/politics_20251205_034433_1.jpeg HTTP/1.1" 200 128381
+INFO 2025-12-21 00:23:30,912 basehttp 8040 3192 "GET /media/thumbnails/entertainment_20251205_023518_1.jpeg HTTP/1.1" 200 74469
+INFO 2025-12-21 00:23:31,511 basehttp 8040 3192 "GET /media/thumbnails/sports_20251205_023425_1.jpeg HTTP/1.1" 200 40235
+INFO 2025-12-21 00:23:32,394 basehttp 8040 3192 "GET /api/articles/?page=4&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 51187
+INFO 2025-12-21 00:23:32,496 basehttp 8040 3192 "GET /media/thumbnails/politics_20251205_023325_1.jpeg HTTP/1.1" 200 244598
+INFO 2025-12-21 00:24:50,556 basehttp 8040 3192 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-21 00:27:17,100 basehttp 8040 17136 "GET /en/feed/ HTTP/1.1" 200 53548
+WARNING 2025-12-21 00:27:17,168 log 8040 17136 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-21 00:27:17,170 basehttp 8040 17136 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3254
+INFO 2025-12-21 00:27:17,184 basehttp 8040 14624 "GET /static/web/css/main.css HTTP/1.1" 200 5024
+INFO 2025-12-21 00:27:17,188 basehttp 8040 6048 "GET /static/web/css/feed.css HTTP/1.1" 200 30438
+INFO 2025-12-21 00:27:17,192 basehttp 8040 21076 "GET /static/web/js/pwa-install.js HTTP/1.1" 200 7198
+INFO 2025-12-21 00:27:17,193 basehttp 8040 17136 "GET /static/web/js/dummy-articles.js HTTP/1.1" 200 7165
+INFO 2025-12-21 00:27:17,196 basehttp 8040 14624 "GET /static/web/js/feed.js HTTP/1.1" 200 30773
+INFO 2025-12-21 00:27:17,195 basehttp 8040 9432 "GET /static/web/js/update-manager.js HTTP/1.1" 200 4728
+INFO 2025-12-21 00:27:17,195 basehttp 8040 19076 "GET /static/web/js/main.js HTTP/1.1" 200 7446
+INFO 2025-12-21 00:27:18,738 basehttp 8040 14624 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-21 00:27:18,751 basehttp 8040 21076 "GET /api/categories/ HTTP/1.1" 200 1923
+INFO 2025-12-21 00:27:19,006 basehttp 8040 21076 "GET /api/articles/?page=1&page_size=10&main_category=ACTUALITY HTTP/1.1" 200 56080
+INFO 2025-12-21 00:27:19,184 basehttp 8040 14624 "GET /static/web/favicon.svg HTTP/1.1" 200 255
+INFO 2025-12-21 00:27:19,190 basehttp 8040 14972 "GET /static/web/manifest.json HTTP/1.1" 200 1423
+INFO 2025-12-21 00:27:19,199 basehttp 8040 21076 "GET /api/notifications/unread-count/?lang=en HTTP/1.1" 200 18
+INFO 2025-12-21 00:27:19,231 basehttp 8040 21076 "GET /api/notifications/unread-count/?lang=en HTTP/1.1" 200 18
+INFO 2025-12-21 00:27:19,314 basehttp 8040 17136 "GET /static/web/icons/icon-192x192.png HTTP/1.1" 200 593244
+INFO 2025-12-21 00:27:19,327 basehttp 8040 9432 "GET /media/thumbnails/business_20251205_145442_1.jpeg HTTP/1.1" 200 34393
+INFO 2025-12-21 00:27:19,347 basehttp 8040 19076 "GET /media/thumbnails/technology_20251205_145550_1.jpeg HTTP/1.1" 200 131789
+INFO 2025-12-21 00:27:19,375 basehttp 8040 21076 "GET /media/thumbnails/education_20251205_145828_1.png HTTP/1.1" 200 849697
+INFO 2025-12-21 00:27:19,386 basehttp 8040 14624 "GET /media/thumbnails/health_20251205_145653_1.jpeg HTTP/1.1" 200 121561
+INFO 2025-12-21 00:27:20,933 basehttp 8040 14624 "GET /firebase-messaging-sw.js HTTP/1.1" 302 0
+INFO 2025-12-21 00:28:54,840 basehttp 8040 21076 "POST /en/submit-sponsor-partner/ HTTP/1.1" 200 87

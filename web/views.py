@@ -214,6 +214,31 @@ def submit_sponsor_partner(request):
             description=description
         )
         
+        # Send admin notification email
+        try:
+            from notifications.service import notify
+            from django.conf import settings
+            
+            notify(
+                'admin_sponsor_request',
+                recipient_email=settings.ADMIN_NOTIFICATION_EMAIL,
+                context={
+                    'inquiry_type': 'Sponsor' if inquiry_type == 'SPONSOR' else 'Partner',
+                    'name': name,
+                    'email': email,
+                    'phone': phone,
+                    'organization': organization_name or 'Not provided',
+                    'website': website or 'Not provided',
+                    'description': description,
+                    'inquiry_id': inquiry.id,
+                },
+                language='en',
+                channels=['email']
+            )
+        except Exception as e:
+            import logging
+            logging.getLogger(__name__).error(f"Failed to send admin sponsor notification: {e}")
+        
         return JsonResponse({
             'success': True,
             'message': 'Thank you! Our founder will get in touch with you soon.'
