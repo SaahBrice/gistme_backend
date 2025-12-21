@@ -161,7 +161,7 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
-API_SECRET_CODE = "your-secure-pre-shared-code"
+API_SECRET_CODE = os.environ.get("GIST_API_KEY", "gistfinder-secret-key-2024")
 
 # Session Settings
 SESSION_ENGINE = "django.contrib.sessions.backends.db"

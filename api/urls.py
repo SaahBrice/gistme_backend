@@ -4,7 +4,7 @@ from .views import (
     ArticleViewSet, ArticleCategoryViewSet, CommentViewSet, SubscribeView, FileUploadView, 
     FCMSubscribeView, CategoryPreferencesView, OnboardingView,
     MentorCategoriesView, MentorsView, MentorRequestView, AssistanceRequestView, ChatView,
-    DailyQuoteViewSet, UserNotificationViewSet
+    DailyQuoteViewSet, UserNotificationViewSet, UserSyncView
 )
 
 router = DefaultRouter()
@@ -31,8 +31,11 @@ urlpatterns = [
     path('assistance-requests/', AssistanceRequestView.as_view(), name='assistance_requests'),
     # AI Chat
     path('chat/', ChatView.as_view(), name='ai_chat'),
+    # GistFinder sync endpoint
+    path('users/sync/', UserSyncView.as_view(), name='user_sync'),
     # Schema
     path('schema/', SpectacularAPIView.as_view(), name='schema'),
     path('schema/swagger-ui/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
     path('schema/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
 ]
+

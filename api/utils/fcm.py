@@ -126,7 +126,17 @@ def send_push_notification(article):
         from web.models import Subscription
         from api.utils.email import send_pro_notification_email, send_expiry_notification_email
         
-        article_category = article.category.lower().strip() if article.category else ''
+        # Get category as string (slug or name) - handle both ForeignKey and legacy string
+        if article.category:
+            # New ForeignKey to ArticleCategory
+            if hasattr(article.category, 'slug'):
+                article_category = article.category.slug.lower().strip()
+            elif hasattr(article.category, 'name_en'):
+                article_category = article.category.name_en.lower().strip()
+            else:
+                article_category = str(article.category).lower().strip()
+        else:
+            article_category = ''
         
         # Check if this is a PRO-only category
         if article_category.startswith('pro-'):
