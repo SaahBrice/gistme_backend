@@ -772,3 +772,74 @@ class UserNotificationViewSet(viewsets.ModelViewSet):
         return Response({
             'unread_count': count
         })
+
+
+class UserSyncView(APIView):
+    """
+    API endpoint for GistFinder to sync user preferences.
+    GET /api/users/sync/ - Returns all users with their preferences
+    
+    Requires X-API-KEY header authentication.
+    """
+    from .permissions import HasAPIKey
+    permission_classes = [HasAPIKey]
+    
+    def get(self, request):
+        from web.models import UserProfile, Subscription
+        from .models import FCMSubscription
+        from django.contrib.auth.models import User
+        
+        users = []
+        
+        # Get all users with profiles
+        for profile in UserProfile.objects.select_related('user').all():
+            user = profile.user
+            user_data = {
+                'id': user.id,
+                'email': user.email,
+                'profile': {
+                    'interests': profile.interests or [],
+                    'education_level': profile.education_level,
+                    'background': profile.background,
+                    'region': profile.region,
+                    'quote_category': profile.quote_category,
+                    'receive_quotes': profile.receive_quotes,
+                    'custom_desires': profile.custom_desires or '',
+                    'notification_time': str(profile.notification_time) if profile.notification_time else '08:00',
+                }
+            }
+            
+            # Add subscription info
+            try:
+                sub = Subscription.objects.filter(email=user.email).first()
+                if sub:
+                    user_data['subscription'] = {
+                        'is_pro': sub.is_valid(),
+                        'gist_preferences': sub.gist_preferences or ''
+                    }
+                else:
+                    user_data['subscription'] = {'is_pro': False, 'gist_preferences': ''}
+            except Exception:
+                user_data['subscription'] = {'is_pro': False, 'gist_preferences': ''}
+            
+            # Add FCM info
+            try:
+                fcm = FCMSubscription.objects.filter(token__isnull=False).first()
+                if fcm:
+                    user_data['fcm'] = {
+                        'token': fcm.token,
+                        'preferred_language': fcm.preferred_language or 'en',
+                        'preferred_categories': list(fcm.preferred_categories.values_list('id', flat=True)) if hasattr(fcm, 'preferred_categories') else []
+                    }
+                else:
+                    user_data['fcm'] = None
+            except Exception:
+                user_data['fcm'] = None
+            
+            users.append(user_data)
+        
+        return Response({
+            'users': users,
+            'total': len(users)
+        })
+

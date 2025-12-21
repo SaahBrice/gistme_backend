@@ -64,8 +64,9 @@ class Article(models.Model):
     # Temporary field for uploading a single thumbnail
     thumbnail_image = models.ImageField(upload_to='thumbnails/', null=True, blank=True)
     
-    french_audio = models.FileField(upload_to='audio/french/', max_length=500, null=True, blank=True)
-    english_audio = models.FileField(upload_to='audio/english/', max_length=500, null=True, blank=True)
+    # Audio URLs (Cloudinary or other CDN)
+    french_audio = models.URLField(max_length=500, null=True, blank=True)
+    english_audio = models.URLField(max_length=500, null=True, blank=True)
     timestamp = models.CharField(max_length=100)
     created_at = models.DateTimeField(auto_now_add=True, db_index=True)
     view_count = models.PositiveIntegerField(default=0, db_index=True)
