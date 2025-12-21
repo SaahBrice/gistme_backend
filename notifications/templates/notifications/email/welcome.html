@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="font-family: 'Segoe UI', Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #FFFBEB;">
+    <!-- Header - Welcome -->
+    <div style="background: linear-gradient(135deg, #111, #333); color: white; padding: 35px; border-radius: 16px 16px 0 0; text-align: center;">
+        <h1 style="color: #FACC15; margin: 0 0 10px 0; font-size: 32px;">🎉 {% if language == 'fr' %}Bienvenue !{% else %}Welcome!{% endif %}</h1>
+        <p style="margin: 0; font-size: 18px; opacity: 0.9;">
+            {% if language == 'fr' %}Vous êtes maintenant membre de Gist4U{% else %}You're now part of Gist4U{% endif %}
+        </p>
+    </div>
+    
+    <!-- Content -->
+    <div style="background-color: white; padding: 30px; border-radius: 0 0 16px 16px; border: 2px solid #111; border-top: none;">
+        <p style="font-size: 20px; color: #333; margin: 0 0 25px;">
+            {% if language == 'fr' %}Salut{% else %}Hey{% endif %} <strong>{{ user_name }}</strong>! 👋
+        </p>
+        
+        <p style="font-size: 16px; color: #555; line-height: 1.7;">
+            {% if language == 'fr' %}
+            Nous sommes super contents de vous avoir avec nous ! Gist4U est votre nouveau compagnon pour 
+            <strong>ne plus jamais manquer une opportunité</strong> - bourses, concours, emplois, et plus encore.
+            {% else %}
+            We're super excited to have you! Gist4U is your new companion for 
+            <strong>never missing an opportunity again</strong> - scholarships, concours, jobs, and more.
+            {% endif %}
+        </p>
+        
+        <!-- Features -->
+        <div style="margin: 30px 0;">
+            <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+                <span style="background-color: #FACC15; border-radius: 50%; width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; margin-right: 12px; flex-shrink: 0;">📚</span>
+                <div>
+                    <p style="margin: 0; font-weight: bold; color: #333;">{% if language == 'fr' %}Gists quotidiens{% else %}Daily Gists{% endif %}</p>
+                    <p style="margin: 4px 0 0; font-size: 13px; color: #666;">{% if language == 'fr' %}Résumés des opportunités clés{% else %}Key opportunities summarized{% endif %}</p>
+                </div>
+            </div>
+            <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+                <span style="background-color: #FACC15; border-radius: 50%; width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; margin-right: 12px; flex-shrink: 0;">🎓</span>
+                <div>
+                    <p style="margin: 0; font-weight: bold; color: #333;">{% if language == 'fr' %}Programme de mentorat{% else %}Mentorship Program{% endif %}</p>
+                    <p style="margin: 4px 0 0; font-size: 13px; color: #666;">{% if language == 'fr' %}Connectez-vous avec des experts{% else %}Connect with industry experts{% endif %}</p>
+                </div>
+            </div>
+            <div style="display: flex; align-items: flex-start;">
+                <span style="background-color: #FACC15; border-radius: 50%; width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; margin-right: 12px; flex-shrink: 0;">🔔</span>
+                <div>
+                    <p style="margin: 0; font-weight: bold; color: #333;">{% if language == 'fr' %}Alertes personnalisées{% else %}Personalized Alerts{% endif %}</p>
+                    <p style="margin: 4px 0 0; font-size: 13px; color: #666;">{% if language == 'fr' %}Recevez ce qui compte pour vous{% else %}Get what matters to you{% endif %}</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CTA Button -->
+        <div style="text-align: center; margin: 35px 0 20px;">
+            <a href="{{ site_url }}/onboarding/" style="display: inline-block; background-color: #FACC15; color: #111; padding: 16px 40px; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 16px; border: 3px solid #111;">
+                {% if language == 'fr' %}Personnaliser mon expérience{% else %}Personalize My Experience{% endif %} →
+            </a>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <div style="text-align: center; padding: 25px; color: #666; font-size: 12px;">
+        <p style="margin: 0;">{% if language == 'fr' %}Bienvenue dans la famille{% else %}Welcome to the family{% endif %} 💛</p>
+        <p style="margin: 8px 0 0; color: #999;">Gist4U - {% if language == 'fr' %}Votre passerelle vers le succès{% else %}Your gateway to success{% endif %}</p>
+    </div>
+</body>
+</html>

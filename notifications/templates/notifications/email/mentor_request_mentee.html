@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="font-family: 'Segoe UI', Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #FFFBEB;">
+    <!-- Header -->
+    <div style="background-color: #111; color: white; padding: 25px; border-radius: 16px 16px 0 0; text-align: center;">
+        <h1 style="color: #FACC15; margin: 0 0 8px 0; font-size: 24px;">🎓 Gist4U Mentorship</h1>
+        <p style="margin: 0; opacity: 0.8; font-size: 14px;">
+            {% if language == 'fr' %}Votre demande a été reçue{% else %}Your Request Has Been Received{% endif %}
+        </p>
+    </div>
+    
+    <!-- Content -->
+    <div style="background-color: white; padding: 30px; border-radius: 0 0 16px 16px; border: 2px solid #111; border-top: none;">
+        <p style="font-size: 18px; color: #333; margin: 0 0 20px;">
+            {% if language == 'fr' %}Bonjour{% else %}Hi{% endif %} <strong>{{ mentee_name }}</strong>! 👋
+        </p>
+        
+        <p style="font-size: 15px; color: #555; line-height: 1.6;">
+            {% if language == 'fr' %}
+            Nous avons bien reçu votre demande de mentorat avec <strong>{{ mentor_name }}</strong>.
+            {% else %}
+            We've received your request to connect with <strong>{{ mentor_name }}</strong> as your mentor.
+            {% endif %}
+        </p>
+        
+        <!-- Info Box -->
+        <div style="background-color: #FEF3C7; border-left: 4px solid #FACC15; padding: 20px; margin: 25px 0; border-radius: 0 12px 12px 0;">
+            <p style="margin: 0; font-size: 14px; color: #92400E;">
+                <strong>{% if language == 'fr' %}⏳ Prochaines étapes{% else %}⏳ What happens next{% endif %}</strong>
+            </p>
+            <p style="margin: 10px 0 0; font-size: 14px; color: #92400E;">
+                {% if language == 'fr' %}
+                Notre équipe examinera votre demande dans les <strong>24 heures</strong>. 
+                Nous vous connecterons avec {{ mentor_name }} si votre profil correspond à ses critères.
+                {% else %}
+                Our team will review your request within <strong>24 hours</strong>. 
+                We'll connect you with {{ mentor_name }} if you meet the eligibility criteria.
+                {% endif %}
+            </p>
+        </div>
+        
+        <p style="font-size: 15px; color: #555; line-height: 1.6;">
+            {% if language == 'fr' %}
+            En attendant, continuez à explorer les opportunités sur Gist4U!
+            {% else %}
+            In the meantime, keep exploring opportunities on Gist4U!
+            {% endif %}
+        </p>
+        
+        <!-- CTA Button -->
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="{{ site_url }}/feed/" style="display: inline-block; background-color: #FACC15; color: #111; padding: 14px 35px; text-decoration: none; border-radius: 25px; font-weight: bold; border: 2px solid #111;">
+                {% if language == 'fr' %}Explorer le Feed{% else %}Explore Feed{% endif %} →
+            </a>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <div style="text-align: center; padding: 25px; color: #666; font-size: 12px;">
+        <p style="margin: 0;">{% if language == 'fr' %}Merci de nous faire confiance{% else %}Thanks for trusting us{% endif %} 💛</p>
+        <p style="margin: 8px 0 0; color: #999;">Gist4U - {% if language == 'fr' %}Ne manquez plus jamais une opportunité{% else %}Never miss an opportunity{% endif %}</p>
+    </div>
+</body>
+</html>

@@ -1,6 +1,7 @@
-{% load static %}
+{% load static i18n %}
 <!DOCTYPE html>
-<html lang="en" {% block html_attributes %}translate="no" class="notranslate" {% endblock %}>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}" {% block html_attributes %}translate="no" class="notranslate" {% endblock %}>
 
 <head>
     <meta charset="UTF-8" />
@@ -63,25 +64,9 @@
 
 <body x-data="app()" x-init="initApp()">
 
-    <div class="grain"></div>
-    <canvas id="bg-canvas"></canvas>
-
-    <div class="loader" id="loader">
-        <div class="max-w-md w-full mb-8 font-bold text-lg">
-            <div class="flex justify-between mb-2">
-                <span>REEPLS SYSTEM BOOT</span>
-                <span x-text="loadPercent + '%'"></span>
-            </div>
-            <div class="text-xs text-gray-500 space-y-1 mb-4">
-                <p>> Initializing Neural Curators...</p>
-                <p x-show="loadPercent > 50">> Connecting to Cameroon Network...</p>
-                <p x-show="loadPercent > 90">> Connection Established.</p>
-            </div>
-        </div>
-        <div class="load-bar">
-            <div class="load-progress" id="loadBar"></div>
-        </div>
-    </div>
+    {% block language_modal %}
+    {% include 'web/includes/_language_modal.html' %}
+    {% endblock %}
 
     {% block navbar %}
     {% include 'web/includes/_navbar.html' %}

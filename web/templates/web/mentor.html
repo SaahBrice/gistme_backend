@@ -1,0 +1,190 @@
+{% extends 'web/base.html' %}
+{% load static i18n %}
+
+{% block title %}Mentor Me - Gist4U{% endblock %}
+
+{% block navbar %}{% endblock %}
+{% block footer %}{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'web/css/mentor.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+    // Translation strings for mentor modal messages
+    window.mentorTranslations = {
+        successTitle: "🎉 {% trans 'Request Sent!' %}",
+        successMessage: "{% trans 'We will connect you with {name} soon.' %}",
+        errorTitle: "{% trans 'Oops!' %}",
+        errorMessage: "{% trans 'Failed to send request' %}",
+        connectionErrorTitle: "{% trans 'Connection Error' %}",
+        connectionErrorMessage: "{% trans 'Failed to send request. Please try again.' %}"
+    };
+</script>
+<script src="{% static 'web/js/mentor.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+{% csrf_token %}
+<div class="mentor-page" x-data="mentorApp()" x-init="init()">
+    <!-- Header with Back + Centered Title -->
+    <div class="mentor-header">
+        <a href="/feed/" class="back-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="15 18 9 12 15 6"/>
+            </svg>
+        </a>
+        <h1>{% trans "Mentor Me" %}</h1>
+    </div>
+    
+    <!-- Loading State -->
+    <div class="loading-state" x-show="loading">
+        <div class="loading-spinner"></div>
+        <p>{% trans "Loading mentors..." %}</p>
+    </div>
+    
+    <!-- Content (hidden while loading) -->
+    <template x-if="!loading">
+        <div>
+            <!-- Filter Chips with Dynamic Icons -->
+            <div class="filter-section">
+                <div class="filter-chips">
+                    <template x-for="cat in categories" :key="cat.id">
+                        <button class="filter-chip" 
+                                :class="{ 'active': selectedCategory === cat.id || (selectedCategory === 'all' && cat.id === 'all') }"
+                                @click="selectCategory(cat.id)">
+                            <!-- Dynamic Icon -->
+                            <span class="chip-icon-wrapper" x-html="getCategoryIcon(cat.icon)"></span>
+                            <span x-text="cat.label"></span>
+                        </button>
+                    </template>
+                </div>
+            </div>
+            
+            <!-- Mentors Section -->
+            <div class="mentors-section">
+                <div class="section-header">
+                    <h2>{% trans "Available Mentors" %}</h2>
+                    <span class="mentor-count" x-text="filteredMentors.length + ' mentors'"></span>
+                </div>
+                
+                <!-- Mentors Grid -->
+                <div class="mentors-grid" x-show="filteredMentors.length > 0">
+                    <template x-for="mentor in filteredMentors" :key="mentor.id">
+                        <div class="mentor-card">
+                            <!-- Card Image -->
+                            <div class="card-image">
+                                <img :src="mentor.picture || 'https://ui-avatars.com/api/?name=' + encodeURIComponent(mentor.name) + '&background=FACC15&color=111&size=200'" 
+                                     :alt="mentor.name" 
+                                     class="mentor-photo"
+                                     width="200"
+                                     height="150">
+                                <div class="photo-overlay"></div>
+                                
+                                <!-- Language Badge -->
+                                <span class="language-badge" :title="mentor.language_display" x-text="getLanguageBadge(mentor.language)"></span>
+                                
+                                <!-- Location -->
+                                <div class="mentor-location">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    <span x-text="mentor.location"></span>
+                                </div>
+                            </div>
+                            
+                            <!-- Card Body -->
+                            <div class="card-body" x-data="{ expanded: false }">
+                                <h3 class="mentor-name" x-text="mentor.name"></h3>
+                                <p class="mentor-profession" x-text="mentor.profession"></p>
+                                <div class="mentor-bio-wrapper">
+                                    <p class="mentor-bio" :class="{ 'expanded': expanded }" x-text="mentor.bio"></p>
+                                    <button class="read-more-btn" 
+                                          x-show="!expanded && mentor.bio && mentor.bio.length > 80" 
+                                          @click="expanded = true">{% trans "...read more" %}</button>
+                                    <button class="read-less-btn" 
+                                          x-show="expanded" 
+                                          @click="expanded = false">{% trans "show less" %}</button>
+                                </div>
+                                
+                                <!-- Show active connection status OR mentor me button -->
+                                <template x-if="mentor.user_request">
+                                    <button class="status-btn" :class="mentor.user_request.status.toLowerCase()">
+                                        <span class="status-icon">✓</span>
+                                        <span x-text="mentor.user_request.status_display"></span>
+                                        <template x-if="mentor.user_request.days_remaining !== null">
+                                            <span class="days-badge" x-text="mentor.user_request.days_remaining + 'd'"></span>
+                                        </template>
+                                    </button>
+                                </template>
+                                
+                                <template x-if="!mentor.user_request">
+                                    <button class="connect-btn" 
+                                            @click="requestMentor(mentor)"
+                                            :disabled="requestingMentor === mentor.id">
+                                        <span x-show="requestingMentor !== mentor.id">{% trans "Mentor me" %}</span>
+                                        <span x-show="requestingMentor === mentor.id">{% trans "Sending..." %}</span>
+                                    </button>
+                                </template>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+                
+                <!-- Empty State -->
+                <div class="empty-state" x-show="filteredMentors.length === 0 && !loading">
+                    <div class="empty-icon">🔍</div>
+                    <h3>{% trans "No mentors found" %}</h3>
+                    <p>{% trans "Try a different category" %}</p>
+                </div>
+            </div>
+        </div>
+    </template>
+    
+    <!-- Sticky Audio Bar at Bottom - Always Visible -->
+    <div class="audio-bar">
+        <!-- Audio Blob with Progress Ring -->
+        <div class="audio-blob-container" @click="toggleAudio()">
+            <!-- Progress Ring -->
+            <svg class="progress-ring" viewBox="0 0 70 70">
+                <circle class="ring-bg" cx="35" cy="35" r="30"/>
+                <circle class="ring-progress" cx="35" cy="35" r="30" 
+                        :style="{ strokeDashoffset: progressOffset }"/>
+            </svg>
+            
+            <!-- Animated Blob Shape -->
+            <div class="blob-shape" :class="{ 'playing': isPlaying }"></div>
+            
+            <!-- Play/Pause Icon -->
+            <svg class="blob-icon" x-show="!isPlaying" width="18" height="18" viewBox="0 0 24 24" fill="#111">
+                <polygon points="6 3 20 12 6 21 6 3"/>
+            </svg>
+            <svg class="blob-icon" x-show="isPlaying" width="18" height="18" viewBox="0 0 24 24" fill="#111">
+                <rect x="5" y="3" width="5" height="18"/>
+                <rect x="14" y="3" width="5" height="18"/>
+            </svg>
+        </div>
+        
+        <!-- Bar Content -->
+        <div class="bar-content">
+            <p class="bar-title">{% trans "Welcome to Mentor Me" %}</p>
+            <p class="bar-subtitle">{% trans "Tap to hear about our mentorship program" %}</p>
+        </div>
+    </div>
+    
+    <!-- Custom Modal -->
+    <div class="mentor-modal-overlay" x-show="modalVisible" x-transition.opacity @click.self="closeModal()">
+        <div class="mentor-modal" x-show="modalVisible" x-transition.scale.origin.center>
+            <div class="modal-icon" :class="modalType">
+                <span x-show="modalType === 'success'">✓</span>
+                <span x-show="modalType === 'error'">!</span>
+            </div>
+            <h3 class="modal-title" x-text="modalTitle"></h3>
+            <p class="modal-message" x-text="modalMessage"></p>
+            <button class="modal-btn" :class="modalType" @click="closeModal()">
+                {% trans "Got it!" %}
+            </button>
+        </div>
+    </div>
+</div>
+{% endblock %}

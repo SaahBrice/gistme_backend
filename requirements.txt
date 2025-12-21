@@ -1,5 +1,6 @@
 # Django & Core
 Django==5.2.8
+django-allauth==65.3.0
 djangorestframework==3.16.1
 django-filter==25.2
 django-q2==1.8.0
@@ -27,3 +28,4 @@ firebase_admin==7.1.0
 
 # Other utilities
 python-decouple==3.8
+django-ratelimit==4.1.0

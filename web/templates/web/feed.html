@@ -1,43 +1,791 @@
 {% extends 'web/base.html' %}
-{% load static %}
+{% load static i18n %}
 
-{% block title %}Gist4u - powered by REEPLS{% endblock %}
-
-{% block extra_head %}
-<link
-    href="https://fonts.googleapis.com/css2?family=Carter+One&family=Black+Ops+One&family=Inter:wght@400;700;900&display=swap"
-    rel="stylesheet">
-<link rel="stylesheet" href="{% static 'web/css/feed.css' %}">
-<!-- Feed scripts must load BEFORE Alpine.js initializes -->
-<script src="{% static 'web/js/feed-config.js' %}"></script>
-<script src="{% static 'web/js/feed-actions.js' %}"></script>
-<script src="{% static 'web/js/feed.js' %}"></script>
-{% endblock %}
+{% block title %}Feed - Gist4U{% endblock %}
 
 {% block navbar %}{% endblock %}
 {% block footer %}{% endblock %}
 
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'web/css/feed.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+{% endblock %}
+
 {% block content %}
-<div class="overflow-hidden fixed inset-0 text-white">
-    <div class="noise-overlay"></div>
-
-    <div x-data="gistMeApp()" x-init="initApp()" class="h-full w-full relative">
-
-        {% include 'web/includes/feed/_mood_selector.html' %}
-
-        <!-- MAIN FEED INTERFACE -->
-        <div x-show="moodSelected" class="h-full w-full">
-            {% include 'web/includes/feed/_header.html' %}
-            {% include 'web/includes/feed/_article_loop.html' %}
-            {% include 'web/includes/feed/_floating_ui.html' %}
-            {% include 'web/includes/feed/_action_bar.html' %}
+<div class="feed-page" x-data="feedApp()" x-init="init()">
+    
+    <!-- Hidden profile data for JS -->
+    <script type="application/json" id="profile-data">{{ profile_data|safe }}</script>
+    <script type="application/json" id="interest-options">{{ interest_options|safe }}</script>
+    {% csrf_token %}
+    
+    <!-- Feed Cards - Snap Scroll Container -->
+    <main class="feed-content" id="feed-scroll" @scroll="onScroll($event)">
+        <!-- Top spacer for breathing room -->
+        <div class="feed-spacer"></div>
+        <template x-for="(article, index) in articles" :key="article.id">
+            <article class="feed-card" 
+                     :class="{ 'card-active': activeCardIndex === index }"
+                     :style="getCardStyle(index)"
+                     @click="openArticle(article)">
+                <div class="card-image">
+                    <img :src="getArticleImage(article)" :alt="getArticleTitle(article)" loading="lazy">
+                </div>
+                
+                <div class="card-content">
+                    <h3 class="card-title" x-text="getArticleTitle(article)"></h3>
+                    <p class="card-excerpt" x-text="getArticleExcerpt(article)"></p>
+                </div>
+                
+                <div class="card-actions" @click.stop>
+                    <button class="action-btn" @click="playArticle(article)"
+                            :class="{ 'playing': playingId === article.id }">
+                        <svg x-show="playingId !== article.id" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="5 3 19 12 5 21 5 3"/>
+                        </svg>
+                        <svg x-show="playingId === article.id" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="6" y="4" width="4" height="16"/>
+                            <rect x="14" y="4" width="4" height="16"/>
+                        </svg>
+                    </button>
+                    
+                    <!-- Deadline Badge (if article has deadline) - positioned after play button -->
+                    <div class="deadline-badge" x-show="article.deadline" :class="{ 'urgent': isDeadlineUrgent(article.deadline) }">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                        <span class="deadline-label" x-text="lang === 'fr' ? 'Date limite:' : 'Deadline:'"></span>
+                        <span class="deadline-date" x-text="formatDeadline(article.deadline)"></span>
+                    </div>
+                    
+                    <div class="actions-right">
+                        <button class="action-btn" @click="shareArticle(article)">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="18" cy="5" r="3"/>
+                                <circle cx="6" cy="12" r="3"/>
+                                <circle cx="18" cy="19" r="3"/>
+                                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+                                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+                            </svg>
+                        </button>
+                        <button class="action-btn" @click="toggleBookmark(article)" 
+                                :class="{ 'active': article.bookmarked }">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </template>
+    </main>
+    
+    <!-- Bottom Navigation Bar -->
+    <div class="bottom-nav">
+        
+        <!-- Sub-category Chips (appear above main nav when active) -->
+        <div class="sub-chips-container" 
+             x-show="showSubChips"
+             x-transition:enter="transition ease-out duration-200"
+             x-transition:enter-start="opacity-0 translate-y-4"
+             x-transition:enter-end="opacity-100 translate-y-0"
+             x-transition:leave="transition ease-in duration-150"
+             x-transition:leave-start="opacity-100 translate-y-0"
+             x-transition:leave-end="opacity-0 translate-y-4"
+             @mouseover="resetNavTimeout()"
+             @touchstart="resetNavTimeout()">
+            <div class="sub-chips">
+                <template x-for="cat in currentCategories" :key="cat.slug">
+                    <button class="sub-chip" 
+                            :class="{ 'active': activeCategory === cat.slug }"
+                            @click="setCategory(cat.slug)">
+                        <span x-text="cat.emoji"></span>
+                        <span x-text="getCategoryName(cat)"></span>
+                    </button>
+                </template>
+            </div>
         </div>
-
-        {% include 'web/includes/feed/_category_panel.html' %}
-        {% include 'web/includes/feed/_comments_panel.html' %}
-        {% include 'web/includes/feed/_modals.html' %}
-        {% include 'web/includes/feed/_reader.html' %}
-
+        
+        <!-- Main Tab Chips (appear when expanded) -->
+        <div class="nav-chips-wrapper" 
+             x-show="navExpanded"
+             x-transition:enter="transition ease-out duration-200"
+             x-transition:enter-start="opacity-0 translate-y-4"
+             x-transition:enter-end="opacity-100 translate-y-0"
+             x-transition:leave="transition ease-in duration-150"
+             x-transition:leave-start="opacity-100"
+             x-transition:leave-end="opacity-0 translate-y-4"
+             @mouseover="resetNavTimeout()"
+             @touchstart="resetNavTimeout()">
+            <div class="nav-chips">
+                <button class="nav-chip" 
+                        :class="{ 'active': activeTab === 'ACTUALITY' }"
+                        @click="setTab('ACTUALITY')">
+                    {% trans "News" %}
+                </button>
+                <button class="nav-chip" 
+                        :class="{ 'active': activeTab === 'OPPORTUNITY' }"
+                        @click="setTab('OPPORTUNITY')">
+                    {% trans "Opportunities" %}
+                </button>
+                <button class="nav-chip" 
+                        :class="{ 'active': activeTab === 'FOR_YOU' }"
+                        @click="setTab('FOR_YOU')">
+                    {% trans "For You" %}
+                </button>
+            </div>
+        </div>
+        
+        <!-- Bottom Bar Controls -->
+        <div class="nav-bar">
+            <!-- Left: Profile + Notification in oval pill -->
+            <div class="nav-left-pill">
+                <div class="profile-avatar" @click="showProfile = true">
+                    <span class="avatar-letter">{{ user.first_name|default:user.email|slice:":1"|upper }}</span>
+                </div>
+                <button class="notification-btn" @click="openNotifications()">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                    </svg>
+                    <span class="notification-badge" x-show="unreadCount > 0" x-text="unreadCount > 9 ? '9+' : unreadCount"></span>
+                </button>
+            </div>
+            
+            <!-- Right: Search + Filter in oval pill (matching left design) -->
+            <div class="nav-right-pill">
+                <button class="search-btn" @click="goToSearch()">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                    </svg>
+                </button>
+                <button class="filter-btn" 
+                        @click="toggleNav()"
+                        :class="{ 'active': navExpanded }">
+                    <!-- Grid/menu icon when collapsed, X when expanded -->
+                    <svg x-show="!navExpanded" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7" rx="1"/>
+                        <rect x="14" y="3" width="7" height="7" rx="1"/>
+                        <rect x="3" y="14" width="7" height="7" rx="1"/>
+                        <rect x="14" y="14" width="7" height="7" rx="1"/>
+                    </svg>
+                    <svg x-show="navExpanded" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
     </div>
+    
+    <!-- Profile Modal -->
+    <div class="modal-backdrop" 
+         x-show="showProfile" 
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0"
+         x-transition:enter-end="opacity-100"
+         x-transition:leave="transition ease-in duration-150"
+         x-transition:leave-start="opacity-100"
+         x-transition:leave-end="opacity-0"
+         @click="showProfile = false">
+    </div>
+    
+    <div class="profile-modal" 
+         x-show="showProfile"
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0 translate-y-8"
+         x-transition:enter-end="opacity-100 translate-y-0"
+         x-transition:leave="transition ease-in duration-150"
+         x-transition:leave-start="opacity-100 translate-y-0"
+         x-transition:leave-end="opacity-0 translate-y-8"
+         @click.outside="showProfile = false">
+        
+        <div class="profile-modal-content">
+            <!-- User Profile Header -->
+            <div class="profile-header">
+                <div class="profile-header-avatar">
+                    {{ user.first_name|default:user.email|slice:":1"|upper }}
+                </div>
+                <div class="profile-header-info">
+                    <span class="profile-greeting">Hey, {{ user.first_name|default:user.email|slice:":11" }}! 👋</span>
+                    <span class="profile-name">{{ user.email }}</span>
+                </div>
+            </div>
+            
+            <div class="profile-divider"></div>
+            
+            <!-- My Quote of Today -->
+            <a href="{% url 'quote_of_the_day' %}" class="profile-menu-item" @click="showProfile = false">
+                <div class="menu-icon quote-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21"/>
+                        <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3"/>
+                    </svg>
+                </div>
+                <span>{% trans "My Quote of Today" %}</span>
+            </a>
+            
+            <!-- Relax Here -->
+            <a href="/relax/" class="profile-menu-item" @click="showProfile = false">
+                <div class="menu-icon relax-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+                        <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                        <line x1="9" y1="9" x2="9.01" y2="9"/>
+                        <line x1="15" y1="9" x2="15.01" y2="9"/>
+                    </svg>
+                </div>
+                <span>{% trans "Relax Here" %}</span>
+            </a>
+            
+            <!-- Mentor Me -->
+            <a href="/mentor/" class="profile-menu-item" @click="showProfile = false">
+                <div class="menu-icon mentor-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                </div>
+                <span>{% trans "Mentor Me" %}</span>
+            </a>
+            
+            <!-- Sponsors & Partners -->
+            <button class="profile-menu-item" @click="openSponsors()">
+                <div class="menu-icon sponsors-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M11 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/>
+                        <path d="M18 2l4 4-10 10H8v-4L18 2z"/>
+                    </svg>
+                </div>
+                <span>{% trans "Sponsors & Partners" %}</span>
+            </button>
+            
+            <!-- Bookmarks -->
+            <button class="profile-menu-item" @click="openBookmarks()">
+                <div class="menu-icon bookmarks-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+                    </svg>
+                </div>
+                <span>{% trans "Bookmarks" %}</span>
+            </button>
+            
+            
+            <!-- Settings -->
+            <button class="profile-menu-item" @click="openSettings()">
+                <div class="menu-icon settings-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"/>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                    </svg>
+                </div>
+                <span>{% trans "Settings" %}</span>
+            </button>
+            
+            
+            <!-- WhatsApp Community -->
+            <a href="https://chat.whatsapp.com/YOUR_GROUP_LINK" target="_blank" class="profile-menu-item whatsapp-btn">
+                <div class="menu-icon whatsapp-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                </div>
+                <span>{% trans "Join Community" %}</span>
+            </a>
+        </div>
+    </div>
+    
+    <!-- Settings Modal -->
+    <div class="modal-backdrop" 
+         x-show="showSettings" 
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0"
+         x-transition:enter-end="opacity-100"
+         x-transition:leave="transition ease-in duration-150"
+         x-transition:leave-start="opacity-100"
+         x-transition:leave-end="opacity-0"
+         @click="showSettings = false">
+    </div>
+    
+    <div class="settings-modal" 
+         x-show="showSettings"
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0 translate-x-8"
+         x-transition:enter-end="opacity-100 translate-x-0"
+         x-transition:leave="transition ease-in duration-150"
+         x-transition:leave-start="opacity-100 translate-x-0"
+         x-transition:leave-end="opacity-0 translate-x-8"
+         @click.outside="showSettings = false">
+        
+        <!-- Header -->
+        <div class="settings-header">
+            <button class="settings-back-btn" @click="showSettings = false; showProfile = true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="15 18 9 12 15 6"/>
+                </svg>
+            </button>
+            <span class="settings-title">{% trans "Settings" %}</span>
+        </div>
+        
+        <div class="settings-content">
+            <!-- Account Section -->
+            <div class="settings-section">
+                <div class="settings-section-label">📱 {% trans "Account" %}</div>
+                <div class="settings-field">
+                    <label>{% trans "Name" %}</label>
+                    <input type="text" x-model="settingsName" placeholder="Your name">
+                </div>
+                <div class="settings-field">
+                    <label>{% trans "Phone" %}</label>
+                    <input type="tel" x-model="settingsPhone" placeholder="+237 6XXXXXXXX">
+                </div>
+                <div class="settings-field">
+                    <label>{% trans "Email" %}</label>
+                    <input type="email" value="{{ user.email }}" disabled>
+                </div>
+                <div class="settings-field">
+                    <label>{% trans "Region" %}</label>
+                    <select x-model="settingsRegion">
+                        <option value="">Select...</option>
+                        <option value="ADAMAWA">Adamawa</option>
+                        <option value="CENTRE">Centre</option>
+                        <option value="EAST">East</option>
+                        <option value="FAR_NORTH">Far North</option>
+                        <option value="LITTORAL">Littoral</option>
+                        <option value="NORTH">North</option>
+                        <option value="NORTHWEST">Northwest</option>
+                        <option value="SOUTH">South</option>
+                        <option value="SOUTHWEST">Southwest</option>
+                        <option value="WEST">West</option>
+                    </select>
+                </div>
+                <div class="settings-field">
+                    <label>{% trans "Education Level" %}</label>
+                    <select x-model="settingsEducation">
+                        <option value="">Select...</option>
+                        <option value="FSLC">FSLC (Primary)</option>
+                        <option value="GCE_OL">GCE O/L</option>
+                        <option value="GCE_AL">GCE A/L</option>
+                        <option value="HND">HND</option>
+                        <option value="BACHELOR">Bachelor's Degree</option>
+                        <option value="MASTERS">Master's Degree</option>
+                        <option value="PHD">PhD</option>
+                    </select>
+                </div>
+                <div class="settings-field">
+                    <label>{% trans "Background" %}</label>
+                    <select x-model="settingsBackground">
+                        <option value="">Select...</option>
+                        <option value="ARTS">Arts & Humanities</option>
+                        <option value="SCIENCE">Science & Technology</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Interests Section -->
+            <div class="settings-section">
+                <div class="settings-section-label">🎯 {% trans "Interests" %}</div>
+                <div class="settings-chips">
+                    <template x-for="option in interestOptions" :key="option.id">
+                        <div class="settings-chip" 
+                             :class="{ 'selected': settingsInterests.includes(option.id) }"
+                             @click="settingsInterests.includes(option.id) ? settingsInterests = settingsInterests.filter(i => i !== option.id) : settingsInterests.push(option.id)">
+                            <span x-text="option.emoji"></span>
+                            <span x-text="option.label"></span>
+                        </div>
+                    </template>
+                </div>
+            </div>
+            
+            <!-- Notifications Section -->
+            <div class="settings-section">
+                <div class="settings-section-label">🔔 {% trans "Notifications" %}</div>
+                <div class="settings-field">
+                    <label>{% trans "Notification Time" %}</label>
+                    <select x-model="settingsNotifTime">
+                        <option value="06:00">6:00 AM</option>
+                        <option value="08:00">8:00 AM</option>
+                        <option value="12:00">12:00 PM</option>
+                        <option value="18:00">6:00 PM</option>
+                    </select>
+                </div>
+                <div class="settings-toggle-row">
+                    <span>{% trans "Push Notifications" %}</span>
+                    <div class="settings-toggle" :class="{ 'active': pushEnabled }" @click="pushEnabled = !pushEnabled"></div>
+                </div>
+            </div>
+            
+            <!-- Preferences Section -->
+            <div class="settings-section">
+                <div class="settings-section-label">🎨 {% trans "Preferences" %}</div>
+                <div class="settings-field">
+                    <label>{% trans "Language" %}</label>
+                    <select x-model="settingsLanguage">
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Quote of the Day Section -->
+            <div class="settings-section">
+                <div class="settings-section-label">💬 {% trans "Quote of the Day" %}</div>
+                <div class="settings-toggle-row">
+                    <span>{% trans "Receive Daily Quotes" %}</span>
+                    <div class="settings-toggle" :class="{ 'active': receiveQuotes }" @click="receiveQuotes = !receiveQuotes"></div>
+                </div>
+                <div class="settings-field" x-show="receiveQuotes">
+                    <label>{% trans "Quote Category" %}</label>
+                    <select x-model="quoteCategory">
+                        <option value="GENERAL">General</option>
+                        <option value="CHRISTIAN">Christian</option>
+                        <option value="ISLAMIC">Islamic</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Custom Desires Section -->
+            <div class="settings-section">
+                <div class="settings-section-label">✨ {% trans "Custom Desires" %}</div>
+                <div class="settings-field">
+                    <label>{% trans "Tell us what you're looking for" %}</label>
+                    <textarea class="settings-textarea" 
+                              x-model="settingsCustomDesires" 
+                              placeholder="E.g. I want scholarships for medicine in Canada..."
+                              rows="3"></textarea>
+                </div>
+            </div>
+            
+            <!-- Save Button -->
+            <button class="settings-save-btn" @click="saveSettings()" :disabled="savingSettings">
+                <span x-show="!savingSettings">{% trans "Save Changes" %}</span>
+                <span x-show="savingSettings">{% trans "Saving..." %}</span>
+            </button>
+            
+            <!-- Actions Section -->
+            <div class="settings-section">
+                <div class="settings-section-label">🔒 {% trans "Account Actions" %}</div>
+                <button class="settings-action-btn" @click="window.location.href='/accounts/logout/'">
+                    {% trans "Log Out" %}
+                </button>
+                <button class="settings-action-btn danger" @click="showDeletePopup = true">
+                    {% trans "Delete Account" %}
+                </button>
+                <button class="settings-action-btn" @click="showSettings = false; showTerms = true">
+                    {% trans "Terms & Privacy Policy" %}
+                </button>
+            </div>
+            
+            <div class="settings-version">Gist4U v1.0.0</div>
+        </div>
+    </div>
+    
+    <!-- Bookmarks Modal -->
+    <div class="modal-backdrop" 
+         x-show="showBookmarks" 
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0"
+         x-transition:enter-end="opacity-100"
+         x-transition:leave="transition ease-in duration-150"
+         x-transition:leave-start="opacity-100"
+         x-transition:leave-end="opacity-0"
+         @click="showBookmarks = false">
+    </div>
+    
+    <div class="bookmarks-modal" 
+         x-show="showBookmarks"
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0 translate-x-8"
+         x-transition:enter-end="opacity-100 translate-x-0"
+         x-transition:leave="transition ease-in duration-150"
+         x-transition:leave-start="opacity-100 translate-x-0"
+         x-transition:leave-end="opacity-0 translate-x-8"
+         @click.outside="showBookmarks = false">
+        
+        <!-- Header -->
+        <div class="bookmarks-header">
+            <button class="settings-back-btn" @click="showBookmarks = false; showProfile = true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="15 18 9 12 15 6"/>
+                </svg>
+            </button>
+            <span class="bookmarks-title">{% trans "Bookmarks" %}</span>
+            <span class="bookmarks-count" x-text="bookmarksList.length"></span>
+        </div>
+        
+        <div class="bookmarks-content">
+            <!-- Empty state -->
+            <div class="bookmarks-empty" x-show="bookmarksList.length === 0">
+                <div class="empty-icon">📚</div>
+                <p>{% trans "No bookmarks yet" %}</p>
+                <span>{% trans "Articles you bookmark will appear here" %}</span>
+            </div>
+            
+            <!-- Bookmarked Articles List -->
+            <div class="bookmarks-list" x-show="bookmarksList.length > 0" x-html="renderBookmarksHtml()"></div>
+        </div>
+    </div>
+    
+    <!-- Gist Notifications Modal -->
+    <div class="modal-backdrop" 
+         x-show="showNotifications" 
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0"
+         x-transition:enter-end="opacity-100"
+         x-transition:leave="transition ease-in duration-150"
+         x-transition:leave-start="opacity-100"
+         x-transition:leave-end="opacity-0"
+         @click="showNotifications = false">
+    </div>
+    
+    <div class="bookmarks-modal gist-modal" 
+         x-show="showNotifications"
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0 translate-x-8"
+         x-transition:enter-end="opacity-100 translate-x-0"
+         x-transition:leave="transition ease-in duration-150"
+         x-transition:leave-start="opacity-100 translate-x-0"
+         x-transition:leave-end="opacity-0 translate-x-8"
+         @click.outside="showNotifications = false">
+        
+        <!-- Header -->
+        <div class="bookmarks-header">
+            <button class="settings-back-btn" @click="showNotifications = false">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="15 18 9 12 15 6"/>
+                </svg>
+            </button>
+            <span class="bookmarks-title">{% trans "Notifications" %}</span>
+            <button class="mark-all-read-btn" 
+                    x-show="unreadCount > 0"
+                    @click="markAllNotificationsRead()">
+                {% trans "Mark all read" %}
+            </button>
+        </div>
+        
+        <div class="bookmarks-content">
+            <!-- Loading state -->
+            <div class="notifications-loading" x-show="loadingNotifications">
+                <div class="loading-spinner"></div>
+            </div>
+            
+            <!-- Empty state -->
+            <div class="bookmarks-empty" x-show="!loadingNotifications && notifications.length === 0">
+                <div class="empty-icon">🔔</div>
+                <p>{% trans "No notifications yet" %}</p>
+                <span>{% trans "You'll see personalized updates here" %}</span>
+            </div>
+            
+            <!-- Notifications List -->
+            <div class="notifications-list" x-show="!loadingNotifications && notifications.length > 0">
+                <template x-for="notif in notifications" :key="notif.id">
+                    <a :href="getNotificationLink(notif)" 
+                       class="notification-item"
+                       :class="{ 'unread': !notif.is_read }"
+                       @click="markNotificationRead(notif.id)">
+                        <div class="notification-icon">
+                            <img :src="notif.thumbnail_url || 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=100'" 
+                                 alt="" class="notification-thumb">
+                        </div>
+                        <div class="notification-content">
+                            <h4 class="notification-title" x-text="notif.title"></h4>
+                            <p class="notification-message" x-text="notif.message"></p>
+                            <span class="notification-time" x-text="formatNotificationTime(notif.created_at)"></span>
+                        </div>
+                        <span class="unread-dot" x-show="!notif.is_read"></span>
+                    </a>
+                </template>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sponsors & Partners Modal -->
+    <div class="modal-backdrop" 
+         x-show="showSponsors"
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0"
+         x-transition:enter-end="opacity-100"
+         @click="showSponsors = false">
+    </div>
+    
+    <div class="sponsors-modal settings-modal"
+         x-show="showSponsors"
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0 translate-y-4"
+         x-transition:enter-end="opacity-100 translate-y-0">
+        
+        <!-- Header -->
+        <div class="settings-header">
+            <button class="settings-back-btn" @click="showSponsors = false; showProfile = true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="15 18 9 12 15 6"/>
+                </svg>
+            </button>
+            <span class="settings-title">{% trans "Sponsors & Partners" %}</span>
+        </div>
+        
+        <!-- Success State -->
+        <div class="sponsors-success" x-show="sponsorSubmitted">
+            <div class="success-icon">🎉</div>
+            <h3>{% trans "Thank You!" %}</h3>
+            <p>{% trans "Your inquiry has been received. Our founder will personally get in touch with you soon." %}</p>
+            <button class="sponsor-close-btn" @click="showSponsors = false; sponsorSubmitted = false">{% trans "Close" %}</button>
+        </div>
+        
+        <!-- Form -->
+        <div class="settings-content" x-show="!sponsorSubmitted">
+            <div class="sponsor-intro">
+                <p>{% trans "Partner with us or sponsor our mission to connect Cameroonians with opportunities." %}</p>
+            </div>
+            
+            <!-- Inquiry Type Toggle -->
+            <div class="settings-section">
+                <div class="settings-section-label">{% trans "What would you like to do?" %}</div>
+                <div class="sponsor-type-toggle">
+                    <button class="type-btn" :class="{'active': sponsorType === 'SPONSOR'}" @click="sponsorType = 'SPONSOR'">
+                        {% trans "Sponsor" %}
+                    </button>
+                    <button class="type-btn" :class="{'active': sponsorType === 'PARTNER'}" @click="sponsorType = 'PARTNER'">
+                        {% trans "Partner" %}
+                    </button>
+                    <button class="type-btn" :class="{'active': sponsorType === 'BOTH'}" @click="sponsorType = 'BOTH'">
+                        {% trans "Both" %}
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Contact Info -->
+            <div class="settings-section">
+                <div class="settings-section-label">{% trans "Your Information" %}</div>
+                <div class="settings-field">
+                    <label>{% trans "Full Name" %} *</label>
+                    <input type="text" class="settings-input" x-model="sponsorName" placeholder="John Doe">
+                </div>
+                <div class="settings-field">
+                    <label>Email *</label>
+                    <input type="email" class="settings-input" x-model="sponsorEmail" placeholder="email@example.com">
+                </div>
+                <div class="settings-field">
+                    <label>Phone Number *</label>
+                    <input type="tel" class="settings-input" x-model="sponsorPhone" placeholder="6XXXXXXXX">
+                </div>
+            </div>
+            
+            <!-- Organization Info -->
+            <div class="settings-section">
+                <div class="settings-section-label">{% trans "Organization" %} ({% trans "Optional" %})</div>
+                <div class="settings-field">
+                    <label>{% trans "Company/Organization Name" %}</label>
+                    <input type="text" class="settings-input" x-model="sponsorOrg" placeholder="Your Company">
+                </div>
+                <div class="settings-field">
+                    <label>{% trans "Website" %}</label>
+                    <input type="url" class="settings-input" x-model="sponsorWebsite" placeholder="https://example.com">
+                </div>
+            </div>
+            
+            <!-- Description -->
+            <div class="settings-section">
+                <div class="settings-section-label">{% trans "Tell Us More" %} *</div>
+                <div class="settings-field">
+                    <textarea class="settings-textarea" 
+                              x-model="sponsorDescription" 
+                              placeholder="How would you like to collaborate with us? What are your goals?"
+                              rows="4"></textarea>
+                </div>
+            </div>
+            
+            <!-- Error Message -->
+            <div class="sponsor-error" x-show="sponsorError" x-text="sponsorError"></div>
+            
+            <!-- Submit Button -->
+            <button class="save-settings-btn" 
+                    @click="submitSponsorInquiry()"
+                    :disabled="sponsorSubmitting">
+                <span x-show="!sponsorSubmitting">{% trans "Send" %}</span>
+                <span x-show="sponsorSubmitting">{% trans "Sending..." %}</span>
+            </button>
+        </div>
+    </div>
+    
+
+    
+    <!-- Terms Modal -->
+    <div class="modal-backdrop" 
+         x-show="showTerms"
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0"
+         x-transition:enter-end="opacity-100"
+         @click="showTerms = false">
+    </div>
+    
+    <div class="settings-modal terms-modal" 
+         x-show="showTerms"
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0 translate-x-8"
+         x-transition:enter-end="opacity-100 translate-x-0">
+        
+        <div class="settings-header">
+            <button class="settings-back-btn" @click="showTerms = false; showSettings = true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="15 18 9 12 15 6"/>
+                </svg>
+            </button>
+            <span class="settings-title">{% trans "Terms & Privacy" %}</span>
+        </div>
+        
+        <div class="settings-content terms-content">
+            <h3>{% trans "Terms of Service" %}</h3>
+            <p>{% trans "By using Gist4U, you agree to these terms. We provide curated opportunities including scholarships, jobs, and competitions." %}</p>
+            
+            <h3>{% trans "Privacy Policy" %}</h3>
+            <p>{% trans "We collect your email, phone, and preferences to personalize your experience. Your data is stored securely and never sold." %}</p>
+            
+            <h3>{% trans "Notifications" %}</h3>
+            <p>{% trans "By enabling notifications, you consent to receiving updates about opportunities matching your interests." %}</p>
+            
+            <h3>{% trans "Contact" %}</h3>
+            <p>{% trans "Questions? Email us at" %} <strong>gist4u@gmail.com</strong></p>
+        </div>
+    </div>
+    
+    <!-- Delete Account Popup -->
+    <div class="delete-popup-overlay" x-show="showDeletePopup" x-cloak
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0"
+         x-transition:enter-end="opacity-100">
+        <div class="delete-popup">
+            <div class="delete-popup-icon">⚠️</div>
+            <div class="delete-popup-title">{% trans "Delete Account?" %}</div>
+            <p class="delete-popup-text">{% trans "To delete your account, contact us:" %}</p>
+            <div class="delete-popup-email">gist4u@gmail.com</div>
+            <button class="delete-popup-close" @click="showDeletePopup = false">{% trans "Got it" %}</button>
+        </div>
+    </div>
+    
+    <!-- Save Success Toast -->
+    <div class="save-toast" 
+         x-show="showSaveToast" 
+         x-cloak
+         x-transition:enter="transition ease-out duration-300"
+         x-transition:enter-start="opacity-0 translate-y-4"
+         x-transition:enter-end="opacity-100 translate-y-0"
+         x-transition:leave="transition ease-in duration-200"
+         x-transition:leave-start="opacity-100 translate-y-0"
+         x-transition:leave-end="opacity-0 translate-y-4">
+        <span class="toast-icon">✅</span>
+        <span class="toast-text">{% trans "Settings saved successfully!" %}</span>
+    </div>
+    
 </div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="{% static 'web/js/dummy-articles.js' %}"></script>
+<script src="{% static 'web/js/feed.js' %}"></script>
 {% endblock %}

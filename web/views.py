@@ -1,7 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_http_methods
+from django.contrib.auth.decorators import login_required
+from django_ratelimit.decorators import ratelimit
 import json
 from .models import Subscription, Advertisement, Coupon, CouponUsage
 from django.conf import settings
@@ -9,10 +11,112 @@ import os
 from django.http import HttpResponse
 
 def index(request):
+    # If user is already logged in, redirect to feed
+    if request.user.is_authenticated:
+        return redirect('feed')
     return render(request, 'web/index.html')
 
+@ratelimit(key='ip', rate='10/m', block=True)
+def auth_page(request):
+    """Dedicated authentication page with Google + email options"""
+    # If already logged in, check if onboarding is completed
+    if request.user.is_authenticated:
+        from .models import UserProfile
+        try:
+            profile = UserProfile.objects.get(user=request.user)
+            if profile.onboarding_completed:
+                return redirect('feed')
+        except UserProfile.DoesNotExist:
+            pass
+        return redirect('onboarding')
+    
+    context = {
+        'recaptcha_site_key': settings.RECAPTCHA_SITE_KEY,
+    }
+    return render(request, 'web/login.html', context)
+
+@login_required
+def onboarding(request):
+    """Onboarding page for new users to curate their content"""
+    # If user already completed onboarding, redirect to feed
+    from .models import UserProfile
+    try:
+        profile = UserProfile.objects.get(user=request.user)
+        if profile.onboarding_completed:
+            return redirect('feed')
+    except UserProfile.DoesNotExist:
+        pass
+    return render(request, 'web/onboarding.html')
+
+@login_required
 def feed(request):
-    return render(request, 'web/feed.html')
+    from .models import UserProfile
+    import json
+    
+    # Get user profile data for settings
+    profile_data = {
+        'first_name': request.user.first_name or '',
+    }
+    try:
+        profile = UserProfile.objects.get(user=request.user)
+        profile_data.update({
+            'phone': profile.phone or '',
+            'region': profile.region or '',
+            'education_level': profile.education_level or '',
+            'background': profile.background or '',
+            'interests': profile.interests or [],
+            'notification_time': str(profile.notification_time)[:5] if profile.notification_time else '08:00',
+            'custom_desires': profile.custom_desires or '',
+            'receive_quotes': profile.receive_quotes,
+            'quote_category': profile.quote_category or 'GENERAL',
+        })
+    except UserProfile.DoesNotExist:
+        pass
+    
+    # Add interest options for chip selector
+    interest_options = UserProfile.get_interest_options()
+    
+    context = {
+        'profile_data': json.dumps(profile_data),
+        'interest_options': json.dumps(interest_options),
+    }
+    return render(request, 'web/feed.html', context)
+
+
+@login_required
+def search(request):
+    """Search page for finding articles"""
+    return render(request, 'web/search.html')
+
+@login_required
+def relax(request):
+    return render(request, 'web/relax.html')
+
+@login_required
+def mentor(request):
+    return render(request, 'web/mentor.html')
+
+@login_required
+def quote_of_the_day(request):
+    """Quote of the Day page with inspirational quotes based on user's category preference"""
+    from .models import UserProfile
+    
+    # Get user's quote category preference
+    quote_category = 'GENERAL'
+    try:
+        profile = UserProfile.objects.get(user=request.user)
+        quote_category = profile.quote_category or 'GENERAL'
+    except UserProfile.DoesNotExist:
+        pass
+    
+    return render(request, 'web/quote.html', {
+        'quote_category': quote_category,
+    })
+
+@login_required
+def article(request, article_id):
+    """Article reader page - using dummy data for now"""
+    return render(request, 'web/article.html', {'article_id': article_id})
 
 def legal(request):
     return render(request, 'web/legal.html')
@@ -22,6 +126,129 @@ def terms(request):
 
 def contact(request):
     return render(request, 'web/contact.html')
+
+
+@login_required
+@require_http_methods(["POST"])
+def save_settings(request):
+    """API endpoint to save user settings"""
+    from .models import UserProfile
+    
+    try:
+        data = json.loads(request.body)
+        
+        profile, created = UserProfile.objects.get_or_create(user=request.user)
+        
+        # Update User's first_name
+        if 'first_name' in data:
+            request.user.first_name = data['first_name']
+            request.user.save()
+        
+        # Update fields
+        if 'phone' in data:
+            profile.phone = data['phone']
+        if 'region' in data:
+            profile.region = data['region']
+        if 'education_level' in data:
+            profile.education_level = data['education_level']
+        if 'background' in data:
+            profile.background = data['background']
+        if 'notification_time' in data:
+            from datetime import datetime
+            try:
+                profile.notification_time = datetime.strptime(data['notification_time'], '%H:%M').time()
+            except:
+                pass
+        if 'interests' in data:
+            profile.interests = data['interests']
+        if 'receive_quotes' in data:
+            profile.receive_quotes = data['receive_quotes']
+        if 'quote_category' in data:
+            profile.quote_category = data['quote_category']
+        if 'custom_desires' in data:
+            profile.custom_desires = data['custom_desires']
+        
+        profile.save()
+        
+        return JsonResponse({'success': True, 'message': 'Settings saved!'})
+    except Exception as e:
+        return JsonResponse({'success': False, 'message': str(e)}, status=400)
+
+
+@csrf_exempt
+@require_http_methods(["POST"])
+@ratelimit(key='ip', rate='5/h', block=True)
+def submit_sponsor_partner(request):
+    """API endpoint to submit sponsor/partner inquiry"""
+    from .models import SponsorPartnerInquiry
+    
+    try:
+        data = json.loads(request.body)
+        
+        # Required fields
+        name = data.get('name', '').strip()
+        email = data.get('email', '').strip()
+        phone = data.get('phone', '').strip()
+        inquiry_type = data.get('inquiry_type', 'SPONSOR')
+        description = data.get('description', '').strip()
+        
+        # Optional fields
+        organization_name = data.get('organization_name', '').strip() or None
+        website = data.get('website', '').strip() or None
+        
+        # Validation
+        if not name or not email or not phone or not description:
+            return JsonResponse({
+                'success': False,
+                'message': 'Please fill in all required fields'
+            }, status=400)
+        
+        # Create inquiry
+        inquiry = SponsorPartnerInquiry.objects.create(
+            name=name,
+            email=email,
+            phone=phone,
+            organization_name=organization_name,
+            website=website,
+            inquiry_type=inquiry_type,
+            description=description
+        )
+        
+        # Send admin notification email
+        try:
+            from notifications.service import notify
+            from django.conf import settings
+            
+            notify(
+                'admin_sponsor_request',
+                recipient_email=settings.ADMIN_NOTIFICATION_EMAIL,
+                context={
+                    'inquiry_type': 'Sponsor' if inquiry_type == 'SPONSOR' else 'Partner',
+                    'name': name,
+                    'email': email,
+                    'phone': phone,
+                    'organization': organization_name or 'Not provided',
+                    'website': website or 'Not provided',
+                    'description': description,
+                    'inquiry_id': inquiry.id,
+                },
+                language='en',
+                channels=['email']
+            )
+        except Exception as e:
+            import logging
+            logging.getLogger(__name__).error(f"Failed to send admin sponsor notification: {e}")
+        
+        return JsonResponse({
+            'success': True,
+            'message': 'Thank you! Our founder will get in touch with you soon.'
+        })
+        
+    except Exception as e:
+        return JsonResponse({
+            'success': False,
+            'message': 'Something went wrong. Please try again.'
+        }, status=500)
 
 
 @csrf_exempt
@@ -214,67 +441,6 @@ def advertise(request):
             'success': True,
             'message': 'Thank you! Our agent will contact you within 12 hours.',
             'inquiry_id': ad.id
-        })
-        
-    except json.JSONDecodeError:
-        return JsonResponse({
-            'success': False,
-            'error': 'Invalid JSON data'
-        }, status=400)
-    except Exception as e:
-        return JsonResponse({
-            'success': False,
-            'error': str(e)
-        }, status=500)
-
-
-@csrf_exempt
-@require_http_methods(["POST"])
-def join_waiting_list(request):
-    """API endpoint to handle waiting list submissions"""
-    try:
-        data = json.loads(request.body)
-        
-        if data.get('website'):
-            return JsonResponse({
-                'success': True,
-                'message': 'Successfully joined!'
-            })
-            
-        email = data.get('email', '').strip()
-        phone = data.get('phone', '').strip()
-        
-        if not email:
-            return JsonResponse({
-                'success': False,
-                'error': 'Email is required'
-            }, status=400)
-            
-        from .models import WaitingList
-        
-        x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
-        if x_forwarded_for:
-            ip = x_forwarded_for.split(',')[0]
-        else:
-            ip = request.META.get('REMOTE_ADDR')
-            
-        entry, created = WaitingList.objects.get_or_create(
-            email=email,
-            defaults={
-                'phone': phone,
-                'ip_address': ip,
-                'user_agent': request.META.get('HTTP_USER_AGENT', '')
-            }
-        )
-        
-        if not created and phone:
-            entry.phone = phone
-            entry.save()
-        
-        return JsonResponse({
-            'success': True,
-            'message': 'You have been added to the waiting list!',
-            'entry_id': entry.id
         })
         
     except json.JSONDecodeError:

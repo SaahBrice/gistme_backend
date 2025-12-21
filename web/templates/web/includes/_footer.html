@@ -1,21 +1,22 @@
+{% load i18n %}
 <footer class="bg-brand-black pt-10 pb-10 px-6 relative overflow-hidden">
     <div class="max-w-7xl mx-auto relative z-10 text-center border-t border-gray-800 pt-10">
         <div class="flex flex-col md:flex-row justify-between items-end">
             <div class="text-left">
-                <h1
-                    class="text-[12vw] leading-[0.8] font-display font-bold text-transparent outline-text text-white/20 select-none hover:text-brand-yellow transition-colors duration-500">
-                    GIST4U
-                </h1>
+                <h2
+                    class="text-[12vw] leading-[0.8] font-display font-bold text-gray-300 select-none hover:text-brand-yellow transition-colors duration-500">
+                    GIST4U.
+                </h2>
             </div>
             <div class="flex flex-col items-end mt-8 md:mt-0">
                 <div class="flex gap-6 text-gray-500 font-mono text-sm mb-4">
-                    <a href="/legal/" class="hover:text-white transition-colors">LEGAL</a>
-                    <a href="/terms/" class="hover:text-white transition-colors">TERMS</a>
-                    <a href="/contact/" class="hover:text-white transition-colors">CONTACT</a>
+                    <a href="{% url 'legal' %}" class="hover:text-white transition-colors">{% trans "LEGAL" %}</a>
+                    <a href="{% url 'terms' %}" class="hover:text-white transition-colors">{% trans "TERMS" %}</a>
+                    <a href="{% url 'contact' %}" class="hover:text-white transition-colors">{% trans "CONTACT" %}</a>
                 </div>
-                <p class="text-gray-600 text-xs">Built with ❤️ for Cameroon🔥 🇨🇲</p>
-                <p class="text-gray-600 text-xs">Don't copy us. Be better than us. @2025 all rights reserved</p>
-                <p class="text-gray-500 text-xs mt-2">Powered by <span
+                <p class="text-gray-600 text-xs">{% trans "Built with ❤️ for Cameroon🔥 🇨🇲" %}</p>
+                <p class="text-gray-600 text-xs">{% trans "Don't copy us. Be better than us." %} @2025 {% trans "all rights reserved" %}</p>
+                <p class="text-gray-500 text-xs mt-2">{% trans "Powered by" %} <span
                         class="text-yellow-500 font-semibold">REEPLS</span></p>
             </div>
         </div>

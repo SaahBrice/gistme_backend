@@ -2,29 +2,29 @@
     "id": "/",
     "name": "Gist4U",
     "short_name": "Gist4U",
-    "description": "Your news curator delivering personalized Cameroon gists instantly",
+    "description": "Your Cameroon gists instantly",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#080808",
-    "theme_color": "#FFDE00",
+    "theme_color": "#FACC15",
     "orientation": "portrait-primary",
     "scope": "/",
     "icons": [
         {
             "src": "/static/web/icons/icon-192x192.png",
-            "sizes": "1024x1024",
+            "sizes": "192x192",
             "type": "image/png",
             "purpose": "any"
         },
         {
             "src": "/static/web/icons/icon-512x512.png",
-            "sizes": "1024x1024",
+            "sizes": "512x512",
             "type": "image/png",
             "purpose": "any"
         },
         {
             "src": "/static/web/icons/icon-maskable-512x512.png",
-            "sizes": "1024x1024",
+            "sizes": "512x512",
             "type": "image/png",
             "purpose": "maskable"
         }
@@ -34,7 +34,22 @@
         "magazines",
         "productivity"
     ],
-    "screenshots": [],
+    "screenshots": [
+        {
+            "src": "/static/web/icons/screenshot-1.png",
+            "sizes": "375x812",
+            "type": "image/png",
+            "form_factor": "narrow",
+            "label": "Gist4U Feed"
+        },
+        {
+            "src": "/static/web/icons/screenshot-2.png",
+            "sizes": "1280x800",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "Gist4U Desktop"
+        }
+    ],
     "shortcuts": [
         {
             "name": "Latest Gists",
@@ -43,7 +58,7 @@
             "icons": [
                 {
                     "src": "/static/web/icons/icon-192x192.png",
-                    "sizes": "96x96",
+                    "sizes": "192x192",
                     "type": "image/png"
                 }
             ]

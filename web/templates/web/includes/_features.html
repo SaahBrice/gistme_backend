@@ -1,48 +1,72 @@
+{% load i18n %}
 <section id="features" class="relative bg-brand-light overflow-hidden">
     <div class="h-scroll-wrapper" style="height: 100vh;">
         <div class="h-scroll-container">
 
-            <div class="h-panel bg-brand-light flex-col text-center px-4">
-                <span class="font-mono text-xs mb-4 border border-black rounded-full px-3 py-1">STEP 01</span>
-                <h2 class="text-[6vw] font-display font-bold leading-none mb-6">WE BROKE<br>THE FEED.</h2>
-                <p class="max-w-xl text-xl text-gray-500">Infinite scroll was a mistake. Gist4u introduces "The
-                    Deck" — a finite, high-value news experience.</p>
+            <!-- Step-by-Step Journey Panel -->
+            <div class="h-panel bg-brand-light flex-col text-center px-4 py-8">
+                <span class="font-mono text-xs mb-6 border border-black rounded-full px-3 py-1">{% trans "YOUR JOURNEY" %}</span>
+                <h2 class="text-[8vw] md:text-[5vw] font-display font-bold leading-tight mb-10">{% trans "HOW IT" %}<br>{% trans "WORKS" %}</h2>
+                
+                <div class="flex flex-col md:flex-row gap-6 md:gap-8 max-w-5xl mx-auto">
+                    <!-- Step 1 -->
+                    <div class="step-card flex-1 bg-white border-2 border-black rounded-2xl p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all hover:-translate-y-1">
+                        <div class="w-12 h-12 bg-brand-yellow rounded-full flex items-center justify-center font-display font-bold text-2xl mb-4 mx-auto border-2 border-black">1</div>
+                        <h3 class="font-display font-bold text-xl mb-2">{% trans "Receive Your Gist" %}</h3>
+                        <p class="text-gray-600 text-sm">{% trans "Get curated gists tailored to your interests — scholarships, jobs, exams & more." %}</p>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="step-card flex-1 bg-white border-2 border-black rounded-2xl p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all hover:-translate-y-1">
+                        <div class="w-12 h-12 bg-brand-yellow rounded-full flex items-center justify-center font-display font-bold text-2xl mb-4 mx-auto border-2 border-black">2</div>
+                        <h3 class="font-display font-bold text-xl mb-2">{% trans "Get Full Guidance" %}</h3>
+                        <p class="text-gray-600 text-sm">{% trans "Found an opportunity? Contact Gist4U for complete guidance and support." %}</p>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="step-card flex-1 bg-white border-2 border-black rounded-2xl p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all hover:-translate-y-1">
+                        <div class="w-12 h-12 bg-brand-yellow rounded-full flex items-center justify-center font-display font-bold text-2xl mb-4 mx-auto border-2 border-black">3</div>
+                        <h3 class="font-display font-bold text-xl mb-2">{% trans "Succeed!" %}</h3>
+                        <p class="text-gray-600 text-sm">{% trans "Land that scholarship, ace that exam, or get your dream job. Your success is our mission." %}</p>
+                    </div>
+                </div>
             </div>
 
+            <!-- Audio First Panel -->
             <div class="h-panel bg-brand-yellow text-black px-4 overflow-hidden relative">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl w-full z-10 items-center">
                     <div>
-                        <h2 class="text-7xl font-display font-bold mb-4">AUDIO<br>FIRST.</h2>
+                        <h2 class="text-7xl font-display font-bold mb-4">{% trans "AUDIO" %}<br>{% trans "FIRST." %}</h2>
                         <p class="text-xl font-medium border-l-4 border-black pl-6">
-                            Don't read while walking. Listen. Our AI synthesizes articles into a personalized
-                            podcast every morning.
+                            {% trans "Don't read while walking. Listen. Our AI synthesizes gists into a personalized audio." %}
                         </p>
                     </div>
 
                     <div
                         class="aspect-square bg-black rounded-full flex items-center justify-center relative overflow-hidden shadow-2xl">
                         <canvas id="liquid-canvas" class="w-full h-full"></canvas>
-                        <div class="absolute bottom-6 font-mono text-[10px] text-white/50 animate-pulse">AI
-                            VOICE ACTIVE</div>
+                        <div class="absolute bottom-6 font-mono text-[10px] text-white/50 animate-pulse">{% trans "AI VOICE ACTIVE" %}</div>
                     </div>
 
                 </div>
             </div>
 
+            <!-- Control Your Future Panel -->
             <div class="h-panel bg-brand-black text-white px-4">
                 <div class="text-center relative">
                     <h2 class="text-[12vw] font-display font-bold leading-[0.8] mix-blend-difference z-10 relative">
-                        CONTROL<br>THE<br><span class="text-brand-yellow">NOISE</span>
+                        {% trans "CONTROL" %}<br>{% trans "YOUR" %}<br><span class="text-brand-yellow">{% trans "FUTURE" %}</span>
                     </h2>
                 </div>
             </div>
 
+            <!-- CTA Panel -->
             <div class="h-panel bg-white flex-col justify-center items-center">
-                <h2 class="text-5xl font-display font-bold mb-8">Ready to curate?</h2>
+                <h2 class="text-5xl font-display font-bold mb-8">{% trans "Ready to curate?" %}</h2>
                 <div class="w-1 h-24 bg-gray-200 overflow-hidden mb-4">
                     <div class="w-full h-full bg-brand-black animate-[slideDown_1.5s_infinite]"></div>
                 </div>
-                <p class="font-mono text-sm">SCROLL TO PREVIEW APP</p>
+                <p class="font-mono text-sm">{% trans "SCROLL TO PREVIEW APP" %}</p>
             </div>
 
         </div>
