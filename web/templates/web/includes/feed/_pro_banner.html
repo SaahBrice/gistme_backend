@@ -1,0 +1,35 @@
+<!-- Pro Promotion Banner - Shows for free users after every 7 articles -->
+<div x-show="showProBanner && !proBannerDismissed" x-transition:enter="transition ease-out duration-300"
+    x-transition:enter-start="opacity-0 transform translate-y-4"
+    x-transition:enter-end="opacity-100 transform translate-y-0" x-transition:leave="transition ease-in duration-200"
+    x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
+    class="fixed bottom-24 left-4 right-4 z-40 max-w-lg mx-auto">
+
+    <div
+        class="bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-500 rounded-2xl p-4 shadow-[0_0_30px_rgba(255,222,0,0.4)] border-2 border-yellow-300">
+        <button @click="dismissProBanner()"
+            class="absolute -top-2 -right-2 w-8 h-8 bg-black rounded-full flex items-center justify-center text-yellow-500 hover:bg-gray-900 transition-colors shadow-lg">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+
+        <div class="flex items-center gap-4">
+            <div class="flex-shrink-0">
+                <div class="w-14 h-14 bg-black rounded-xl flex items-center justify-center">
+                    <span class="text-3xl">👑</span>
+                </div>
+            </div>
+            <div class="flex-1 min-w-0">
+                <h3 class="text-black font-bold text-lg" x-text="globalLang === 'fr' ? 'Passez Pro!' : 'Go Pro!'"></h3>
+                <p class="text-black/70 text-sm"
+                    x-text="globalLang === 'fr' ? 'Accès anticipé, emails exclusifs, et plus!' : 'Early access, exclusive emails, and more!'">
+                </p>
+            </div>
+            <a href="https://gist4u.reepls.com/?from=promo#pricing" rel="external" @click="showProBanner = false"
+                class="flex-shrink-0 px-4 py-2 bg-black text-yellow-500 rounded-xl font-bold text-sm hover:bg-gray-900 transition-colors no-underline">
+                <span x-text="globalLang === 'fr' ? 'Voir' : 'View'"></span>
+            </a>
+        </div>
+    </div>
+</div>
