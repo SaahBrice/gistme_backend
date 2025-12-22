@@ -50,3 +50,15 @@ htmlcov/
 Thumbs.db
 
 Googleclientkey.json
+
+
+*api/__pycache__/
+api/migrations/__pycache__/
+api/utils/__pycache__/
+notifications/__pycache__/
+web/__pycache__/
+web/migrations/__pycache__/
+django_debug.log
+gistme_backend/__pycache__/
+gistme_backend/migrations/__pycache__/
+notifications/migrations/__pycache__/
