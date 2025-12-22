@@ -10,6 +10,41 @@ from django.conf import settings
 import os
 from django.http import HttpResponse
 
+
+
+
+def is_social_crawler(request):
+    """Detect if request is from a social media crawler for link previews."""
+    user_agent = request.META.get('HTTP_USER_AGENT', '').lower()
+    
+    # Common social media and search engine crawlers
+    crawlers = [
+        'facebookexternalhit',    # Facebook
+        'facebot',                # Facebook
+        'twitterbot',             # Twitter/X
+        'linkedinbot',            # LinkedIn
+        'whatsapp',               # WhatsApp
+        'telegrambot',            # Telegram
+        'slackbot',               # Slack
+        'discordbot',             # Discord
+        'pinterest',              # Pinterest
+        'googlebot',              # Google (for SEO)
+        'bingbot',                # Bing
+        'yandexbot',              # Yandex
+        'embedly',                # Embed.ly
+        'quora link preview',     # Quora
+        'showyoubot',             # ShowYouBot
+        'outbrain',               # Outbrain
+        'rogerbot',               # Moz
+        'vkshare',                # VK
+        'developers.google.com',  # Google Structured Data Testing
+    ]
+    
+    return any(crawler in user_agent for crawler in crawlers)
+
+
+
+
 def index(request):
     # If user is already logged in, redirect to feed
     if request.user.is_authenticated:
@@ -96,27 +131,69 @@ def relax(request):
 def mentor(request):
     return render(request, 'web/mentor.html')
 
-@login_required
 def quote_of_the_day(request):
     """Quote of the Day page with inspirational quotes based on user's category preference"""
+    # Allow social media crawlers to access meta tags
+    if not is_social_crawler(request) and not request.user.is_authenticated:
+        return redirect('/login/?next=/quote-of-the-day/')
+    
     from .models import UserProfile
     
-    # Get user's quote category preference
+    # Get user's quote category preference (only if authenticated)
     quote_category = 'GENERAL'
-    try:
-        profile = UserProfile.objects.get(user=request.user)
-        quote_category = profile.quote_category or 'GENERAL'
-    except UserProfile.DoesNotExist:
-        pass
+    if request.user.is_authenticated:
+        try:
+            profile = UserProfile.objects.get(user=request.user)
+            quote_category = profile.quote_category or 'GENERAL'
+        except UserProfile.DoesNotExist:
+            pass
     
     return render(request, 'web/quote.html', {
         'quote_category': quote_category,
     })
 
-@login_required
 def article(request, article_id):
-    """Article reader page - using dummy data for now"""
-    return render(request, 'web/article.html', {'article_id': article_id})
+    """Article reader page - allows crawlers for social sharing previews"""
+    if not is_social_crawler(request) and not request.user.is_authenticated:
+        return redirect(f'/login/?next=/article/{article_id}/')
+    
+    # Fetch article data for OG meta tags (server-side rendering for crawlers)
+    from api.models import Article as ArticleModel
+    from django.utils.translation import get_language
+    
+    article_data = None
+    try:
+        article_obj = ArticleModel.objects.get(id=article_id)
+        lang = get_language() or 'en'  # Get user's preferred language
+        
+        # Choose title based on language
+        if lang == 'fr':
+            title = article_obj.headline_fr or article_obj.headline_en or article_obj.headline or 'Gist4U Article'
+            description = article_obj.french_summary or article_obj.english_summary or ''
+        else:
+            title = article_obj.headline_en or article_obj.headline_fr or article_obj.headline or 'Gist4U Article'
+            description = article_obj.english_summary or article_obj.french_summary or ''
+        
+        # Get first thumbnail or fallback
+        thumbnail = 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800'
+        if article_obj.thumbnails and len(article_obj.thumbnails) > 0:
+            thumbnail = article_obj.thumbnails[0]
+        
+        article_data = {
+            'title': title,
+            'description': description,
+            'thumbnail': thumbnail,
+        }
+    except ArticleModel.DoesNotExist:
+        pass
+    
+    return render(request, 'web/article.html', {
+        'article_id': article_id,
+        'article': article_data,
+    })
+
+
+
 
 def legal(request):
     return render(request, 'web/legal.html')

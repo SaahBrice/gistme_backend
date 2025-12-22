@@ -429,7 +429,8 @@ function feedApp() {
 
         shareArticle(article) {
             const title = this.getArticleTitle(article);
-            const text = this.getArticleExcerpt(article);
+            const fullText = this.getArticleExcerpt(article) || '';
+            const text = fullText.length > 100 ? fullText.substring(0, 100) + '...' : fullText;
             const url = window.location.origin + `/${this.lang}/article/${article.id}/`;
 
             if (navigator.share) {
