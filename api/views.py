@@ -77,6 +77,73 @@ class ArticleViewSet(viewsets.ModelViewSet):
         # source_code check is replaced by HasAPIKey permission
         return super().create(request, *args, **kwargs)
 
+    def list(self, request, *args, **kwargs):
+        """
+        Override list to interleave articles by category for better variety.
+        Only applies when no specific category filter is applied.
+        """
+        queryset = self.filter_queryset(self.get_queryset())
+        
+        # Check if we should interleave (only when showing ALL articles)
+        category_filter = request.query_params.get('category')
+        main_category_filter = request.query_params.get('main_category')
+        
+        # If filtering by specific category, use default behavior
+        if category_filter:
+            page = self.paginate_queryset(queryset)
+            if page is not None:
+                serializer = self.get_serializer(page, many=True)
+                return self.get_paginated_response(serializer.data)
+            serializer = self.get_serializer(queryset, many=True)
+            return Response(serializer.data)
+        
+        # Get pagination parameters
+        page_size = int(request.query_params.get('page_size', 20))
+        page_num = int(request.query_params.get('page', 1))
+        
+        # Get all articles for interleaving
+        all_articles = list(queryset)
+        
+        if len(all_articles) <= 1:
+            page = self.paginate_queryset(queryset)
+            if page is not None:
+                serializer = self.get_serializer(page, many=True)
+                return self.get_paginated_response(serializer.data)
+            serializer = self.get_serializer(queryset, many=True)
+            return Response(serializer.data)
+        
+        # Group articles by category
+        from collections import defaultdict
+        category_buckets = defaultdict(list)
+        for article in all_articles:
+            cat_id = article.category_id if article.category_id else 'uncategorized'
+            category_buckets[cat_id].append(article)
+        
+        # Round-robin interleave
+        interleaved = []
+        buckets = list(category_buckets.values())
+        max_len = max(len(b) for b in buckets)
+        
+        for i in range(max_len):
+            for bucket in buckets:
+                if i < len(bucket):
+                    interleaved.append(bucket[i])
+        
+        # Manual pagination on interleaved list
+        start = (page_num - 1) * page_size
+        end = start + page_size
+        page_articles = interleaved[start:end]
+        
+        serializer = self.get_serializer(page_articles, many=True)
+        
+        # Return paginated response format
+        return Response({
+            'count': len(interleaved),
+            'next': f'?page={page_num + 1}&page_size={page_size}' if end < len(interleaved) else None,
+            'previous': f'?page={page_num - 1}&page_size={page_size}' if page_num > 1 else None,
+            'results': serializer.data
+        })
+
     @action(detail=True, methods=['post'])
     def comment(self, request, pk=None):
         article = self.get_object()
