@@ -217,32 +217,48 @@ class FCMSubscribeView(APIView):
     def post(self, request):
         try:
             from .models import FCMSubscription
+            from django.contrib.auth.models import User
             
             token = request.data.get('token')
             preferred_language = request.data.get('preferred_language', 'fr')
+            email = request.data.get('email')  # Accept email from frontend
             
             if not token:
                 return Response({"error": "Token is required"}, status=status.HTTP_400_BAD_REQUEST)
             
-            # Update or create - this will update the language if token exists
+            # Try to link to user
+            user = None
+            if request.user.is_authenticated:
+                user = request.user
+                email = user.email
+            elif email:
+                user = User.objects.filter(email=email).first()
+            
+            # Update or create - this will update the language and link user if available
             subscription, created = FCMSubscription.objects.update_or_create(
                 token=token,
-                defaults={'preferred_language': preferred_language}
+                defaults={
+                    'preferred_language': preferred_language,
+                    'user': user,
+                    'email': email,
+                }
             )
             
             if created:
-                logger.info(f"New FCM subscription created: {token[:20]}... (lang: {preferred_language})")
+                logger.info(f"New FCM subscription created: {token[:20]}... (lang: {preferred_language}, email: {email})")
                 return Response({
                     "status": "subscribed",
                     "token": token,
-                    "preferred_language": preferred_language
+                    "preferred_language": preferred_language,
+                    "linked_to_user": user is not None
                 }, status=status.HTTP_201_CREATED)
             else:
-                logger.info(f"FCM subscription updated: {token[:20]}... (lang: {preferred_language})")
+                logger.info(f"FCM subscription updated: {token[:20]}... (lang: {preferred_language}, email: {email})")
                 return Response({
                     "status": "updated",
                     "token": token,
-                    "preferred_language": preferred_language
+                    "preferred_language": preferred_language,
+                    "linked_to_user": user is not None
                 }, status=status.HTTP_200_OK)
                 
         except Exception as e:
@@ -889,14 +905,18 @@ class UserSyncView(APIView):
             except Exception:
                 user_data['subscription'] = {'is_pro': False, 'gist_preferences': ''}
             
-            # Add FCM info
+            # ✅ FIX: Add FCM info - now filtering by USER or EMAIL
             try:
-                fcm = FCMSubscription.objects.filter(token__isnull=False).first()
+                from django.db.models import Q
+                fcm = FCMSubscription.objects.filter(
+                    Q(user=user) | Q(email=user.email),
+                    token__isnull=False
+                ).first()
                 if fcm:
                     user_data['fcm'] = {
                         'token': fcm.token,
                         'preferred_language': fcm.preferred_language or 'en',
-                        'preferred_categories': list(fcm.preferred_categories.values_list('id', flat=True)) if hasattr(fcm, 'preferred_categories') else []
+                        'preferred_categories': fcm.category_preferences or []
                     }
                 else:
                     user_data['fcm'] = None
@@ -909,4 +929,3 @@ class UserSyncView(APIView):
             'users': users,
             'total': len(users)
         })
-

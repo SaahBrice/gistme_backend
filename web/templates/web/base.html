@@ -86,6 +86,18 @@
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-messaging-compat.js"></script>
 
+    <!-- User Context for FCM -->
+    <script>
+        // Expose user email for FCM token linking
+        {% if user.is_authenticated %}
+        const USER_EMAIL = "{{ user.email|escapejs }}";
+        // Save to localStorage for persistence
+        localStorage.setItem('userEmail', USER_EMAIL);
+        {% else %}
+        const USER_EMAIL = localStorage.getItem('userEmail') || null;
+        {% endif %}
+    </script>
+
     <!-- PWA Install Prompt -->
     <script src="{% static 'web/js/pwa-install.js' %}"></script>
 
@@ -234,7 +246,11 @@
                             const preferredLanguage = browserLang.toLowerCase().startsWith('fr') ? 'fr' : 'en';
                             console.log('Detected language:', browserLang, '→ Using:', preferredLanguage);
 
-                            // Step 4: Send token and language to backend
+                            // Step 4: Send token, language, and email to backend
+                            // Try to get user email from page context or storage
+                            const userEmail = typeof USER_EMAIL !== 'undefined' ? USER_EMAIL : localStorage.getItem('userEmail') || null;
+                            console.log('User email for FCM:', userEmail || 'anonymous');
+                            
                             const response = await fetch('/api/fcm/subscribe/', {
                                 method: 'POST',
                                 headers: {
@@ -243,12 +259,15 @@
                                 },
                                 body: JSON.stringify({
                                     token: token,
-                                    preferred_language: preferredLanguage
-                                })
+                                    preferred_language: preferredLanguage,
+                                    email: userEmail  // Link token to user
+                                }),
+                                credentials: 'include'  // Include auth cookies
                             });
 
                             if (response.ok) {
-                                console.log('✅ Subscribed to FCM successfully');
+                                const data = await response.json();
+                                console.log('✅ Subscribed to FCM successfully', data.linked_to_user ? '(linked to user)' : '(anonymous)');
                             } else {
                                 const errorData = await response.text();
                                 console.error('❌ Failed to subscribe to FCM backend:', errorData);

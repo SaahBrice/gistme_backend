@@ -88,25 +88,29 @@ def feed(request):
     from .models import UserProfile
     import json
     
+    # Force onboarding for users who haven't completed it
+    try:
+        profile = UserProfile.objects.get(user=request.user)
+        if not profile.onboarding_completed:
+            return redirect('onboarding')
+    except UserProfile.DoesNotExist:
+        return redirect('onboarding')
+    
     # Get user profile data for settings
     profile_data = {
         'first_name': request.user.first_name or '',
     }
-    try:
-        profile = UserProfile.objects.get(user=request.user)
-        profile_data.update({
-            'phone': profile.phone or '',
-            'region': profile.region or '',
-            'education_level': profile.education_level or '',
-            'background': profile.background or '',
-            'interests': profile.interests or [],
-            'notification_time': str(profile.notification_time)[:5] if profile.notification_time else '08:00',
-            'custom_desires': profile.custom_desires or '',
-            'receive_quotes': profile.receive_quotes,
-            'quote_category': profile.quote_category or 'GENERAL',
-        })
-    except UserProfile.DoesNotExist:
-        pass
+    profile_data.update({
+        'phone': profile.phone or '',
+        'region': profile.region or '',
+        'education_level': profile.education_level or '',
+        'background': profile.background or '',
+        'interests': profile.interests or [],
+        'notification_time': str(profile.notification_time)[:5] if profile.notification_time else '08:00',
+        'custom_desires': profile.custom_desires or '',
+        'receive_quotes': profile.receive_quotes,
+        'quote_category': profile.quote_category or 'GENERAL',
+    })
     
     # Add interest options for chip selector
     interest_options = UserProfile.get_interest_options()

@@ -1,6 +1,8 @@
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
+from django.contrib.auth.signals import user_logged_in
+from django.dispatch import receiver
 
 
 class UserProfile(models.Model):
@@ -87,6 +89,16 @@ class UserProfile(models.Model):
             {'id': 'university_paid', 'label': 'Paid University Admissions', 'emoji': '💰'},
             {'id': 'competitions', 'label': 'Competitions & Contests', 'emoji': '🏆'},
         ]
+
+
+# Signal: Auto-create UserProfile when user logs in (especially for Google OAuth)
+@receiver(user_logged_in)
+def ensure_user_profile_on_login(sender, user, request, **kwargs):
+    """
+    Automatically create a UserProfile for users who don't have one.
+    This ensures Google OAuth users (who skip onboarding) still have profiles.
+    """
+    UserProfile.objects.get_or_create(user=user)
 
 
 class Subscription(models.Model):

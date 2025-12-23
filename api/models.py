@@ -153,6 +153,16 @@ class FCMSubscription(models.Model):
         db_index=True,
         help_text='Email for linking to Pro subscription (optional)'
     )
+    # Link to user for proper notification targeting
+    user = models.ForeignKey(
+        'auth.User',
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name='fcm_subscriptions',
+        db_index=True,
+        help_text='User who owns this FCM token'
+    )
     preferred_language = models.CharField(
         max_length=2,
         choices=LANGUAGE_CHOICES,

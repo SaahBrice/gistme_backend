@@ -788,10 +788,6 @@ function feedApp() {
             this.savingSettings = false;
         },
 
-        // Search navigation
-        goToSearch() {
-            window.location.href = `/${this.lang}/search/`;
-        },
 
         // Deadline formatting helpers
         formatDeadline(deadline) {
