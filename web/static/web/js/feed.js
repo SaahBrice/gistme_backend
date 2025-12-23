@@ -826,6 +826,15 @@ function feedApp() {
 
             // Urgent if deadline is within 3 days
             return diffDays >= 0 && diffDays <= 3;
+        },
+
+        // Navigation functions
+        goToSearch() {
+            window.location.href = `/${this.lang}/search/`;
+        },
+
+        goToCategories() {
+            window.location.href = `/${this.lang}/categories/`;
         }
     }
 }

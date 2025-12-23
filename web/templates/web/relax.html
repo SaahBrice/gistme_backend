@@ -12,26 +12,16 @@
 * { box-sizing: border-box; }
 
 body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
+    margin: 0; padding: 0; min-height: 100vh;
     font-family: 'Inter', -apple-system, sans-serif;
-    overflow: hidden;
-    background: #0a0a0f;
+    overflow: hidden; background: #0a0a0f;
     transition: background 1s ease;
 }
 
-/* Tech Background */
-.tech-bg {
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    overflow: hidden;
-}
+.tech-bg { position: fixed; inset: 0; z-index: 0; overflow: hidden; }
 
 .grid-pattern {
-    position: absolute;
-    inset: 0;
+    position: absolute; inset: 0;
     background-image: 
         linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
@@ -45,14 +35,10 @@ body {
 }
 
 .orb {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(100px);
-    opacity: 0.25;
-    animation: orbFloat 12s ease-in-out infinite;
+    position: absolute; border-radius: 50%; filter: blur(100px);
+    opacity: 0.25; animation: orbFloat 12s ease-in-out infinite;
     transition: background 1s ease;
 }
-
 .orb-1 { width: 350px; height: 350px; top: 5%; left: 5%; }
 .orb-2 { width: 300px; height: 300px; bottom: 10%; right: 10%; animation-delay: -6s; }
 
@@ -61,139 +47,192 @@ body {
     50% { transform: translate(40px, -30px); }
 }
 
-/* Main Content */
 .relax-page {
-    position: relative;
-    z-index: 1;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    padding: 16px;
+    position: relative; z-index: 1; min-height: 100vh;
+    display: flex; flex-direction: column; padding: 16px;
     padding-top: max(16px, env(safe-area-inset-top));
     padding-bottom: max(16px, env(safe-area-inset-bottom));
 }
 
 .relax-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+    display: flex; justify-content: space-between;
+    align-items: center; margin-bottom: 12px;
 }
 
 .back-btn {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    display: flex; align-items: center; gap: 8px;
     padding: 10px 16px;
     background: rgba(255,255,255,0.1);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 25px;
-    color: #fff;
-    font-size: 0.9rem;
-    font-weight: 500;
-    cursor: pointer;
-    text-decoration: none;
+    border-radius: 25px; color: #fff;
+    font-size: 0.9rem; font-weight: 500;
+    cursor: pointer; text-decoration: none;
+}
+
+.score-container {
+    position: relative;
+    display: flex; align-items: center;
 }
 
 .score-display {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    display: flex; align-items: center; gap: 8px;
     padding: 10px 20px;
     background: linear-gradient(135deg, #FACC15, #F59E0B);
-    border-radius: 25px;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #111;
+    border-radius: 25px; font-size: 1.1rem;
+    font-weight: 700; color: #111;
 }
 
+.penalty-display {
+    position: absolute;
+    top: -10px; right: -10px;
+    padding: 4px 10px;
+    background: #EF4444;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(0) scale(0.8);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.penalty-display.show {
+    opacity: 1;
+    transform: translateY(-15px) scale(1);
+    animation: penaltyBounce 0.5s ease;
+}
+
+@keyframes penaltyBounce {
+    0% { transform: translateY(0) scale(0.8); }
+    50% { transform: translateY(-25px) scale(1.1); }
+    100% { transform: translateY(-15px) scale(1); }
+}
+
+.stats-bar {
+    display: flex; justify-content: center;
+    align-items: center; gap: 12px;
+    margin-bottom: 16px; flex-wrap: wrap;
+}
+
+.stat-badge {
+    display: flex; align-items: center; gap: 6px;
+    padding: 8px 14px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 20px; font-size: 0.8rem;
+    font-weight: 500; color: rgba(255,255,255,0.9);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.stat-badge.phase {
+    background: linear-gradient(135deg, rgba(250,204,21,0.2), rgba(245,158,11,0.2));
+    border-color: rgba(250,204,21,0.3);
+    color: #FACC15;
+}
+
+.timer-container {
+    width: 100%; max-width: 300px;
+    margin: 0 auto 16px; display: none;
+}
+.timer-container.active { display: block; }
+
+.timer-bar-bg {
+    height: 8px; background: rgba(255,255,255,0.1);
+    border-radius: 4px; overflow: hidden;
+}
+
+.timer-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #10B981, #34D399);
+    border-radius: 4px;
+    transition: width 0.1s linear, background 0.3s ease;
+    width: 100%;
+}
+.timer-bar-fill.warning { background: linear-gradient(90deg, #F59E0B, #FBBF24); }
+.timer-bar-fill.danger { background: linear-gradient(90deg, #EF4444, #F87171); }
+
 .game-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
+    flex: 1; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 20px;
 }
 
 .level-display {
-    font-size: 1.3rem;
-    font-weight: 600;
+    font-size: 1.3rem; font-weight: 600;
     color: rgba(255,255,255,0.9);
 }
 
-/* Game Grid */
 .game-grid {
-    display: grid;
-    gap: 6px;
+    display: grid; gap: 4px;
     background: rgba(255,255,255,0.05);
     backdrop-filter: blur(10px);
-    padding: 16px;
-    border-radius: 20px;
+    padding: 10px; border-radius: 16px;
     border: 1px solid rgba(255,255,255,0.1);
     position: relative;
+    max-width: calc(100vw - 40px);
+    width: fit-content;
 }
 
-/* Mirror line */
 .mirror-line {
     position: absolute;
     background: linear-gradient(var(--mirror-angle), transparent 0%, #FACC15 50%, transparent 100%);
-    z-index: 5;
-    pointer-events: none;
+    z-index: 5; pointer-events: none;
 }
 
 .mirror-line.vertical {
     --mirror-angle: 0deg;
-    top: 12px;
-    bottom: 12px;
-    left: 50%;
-    width: 4px;
-    transform: translateX(-50%);
-    border-radius: 2px;
+    top: 8px; bottom: 8px;
+    width: 3px; border-radius: 2px;
 }
 
 .mirror-line.horizontal {
     --mirror-angle: 90deg;
-    left: 12px;
-    right: 12px;
-    top: 50%;
-    height: 4px;
-    transform: translateY(-50%);
-    border-radius: 2px;
+    left: 8px; right: 8px;
+    height: 3px; border-radius: 2px;
 }
 
-/* Cells */
+/* Responsive cell sizing based on grid columns */
 .cell {
-    width: 50px;
-    height: 50px;
-    border-radius: 12px;
+    width: clamp(28px, 8vw, 42px);
+    height: clamp(28px, 8vw, 42px);
+    border-radius: 8px;
     background: rgba(255,255,255,0.08);
     border: 2px solid rgba(255,255,255,0.12);
-    transition: all 0.15s ease;
-    cursor: pointer;
+    transition: all 0.15s ease; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
 }
 
-.cell.pattern {
-    cursor: default;
+.cell.dimmed {
+    opacity: 0.35;
+    cursor: not-allowed;
 }
+
+.cell.circle { border-radius: 50%; }
+.cell.triangle { clip-path: polygon(50% 0%, 0% 100%, 100% 100%); border-radius: 0; }
+.cell.star { clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); border-radius: 0; }
+
+.cell.pattern { cursor: default; }
 
 .cell.pattern.on {
     background: linear-gradient(135deg, #10B981, #059669);
     border-color: #10B981;
     box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
 }
+.cell.pattern.on.color-purple { background: linear-gradient(135deg, #8B5CF6, #7C3AED); border-color: #8B5CF6; }
+.cell.pattern.on.color-orange { background: linear-gradient(135deg, #F97316, #EA580C); border-color: #F97316; }
+.cell.pattern.on.color-pink { background: linear-gradient(135deg, #EC4899, #DB2777); border-color: #EC4899; }
 
 .cell.player.on {
     background: linear-gradient(135deg, #3B82F6, #2563EB);
     border-color: #3B82F6;
     box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
 }
+.cell.player.on.color-purple { background: linear-gradient(135deg, #A78BFA, #8B5CF6); border-color: #A78BFA; }
+.cell.player.on.color-orange { background: linear-gradient(135deg, #FB923C, #F97316); border-color: #FB923C; }
+.cell.player.on.color-pink { background: linear-gradient(135deg, #F472B6, #EC4899); border-color: #F472B6; }
 
-.cell.player:not(.on):hover {
-    background: rgba(255,255,255,0.15);
-    border-color: rgba(255,255,255,0.25);
-}
+.cell.player:not(.on):hover { background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.25); }
 
 .cell.won {
     background: linear-gradient(135deg, #FACC15, #F59E0B) !important;
@@ -202,26 +241,171 @@ body {
     animation: winPulse 0.5s ease;
 }
 
-@keyframes winPulse {
-    50% { transform: scale(1.15); }
+.cell.wrong {
+    background: linear-gradient(135deg, #EF4444, #DC2626) !important;
+    border-color: #EF4444 !important;
+    animation: wrongShake 0.4s ease;
 }
 
+@keyframes winPulse { 50% { transform: scale(1.15); } }
+@keyframes wrongShake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.shape-palette, .color-palette { display: none; gap: 10px; margin-bottom: 12px; }
+.shape-palette.active, .color-palette.active { display: flex; }
+
+.shape-btn {
+    width: 40px; height: 40px;
+    background: rgba(255,255,255,0.1);
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 10px; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.15s ease;
+}
+.shape-btn.selected { background: rgba(250,204,21,0.2); border-color: #FACC15; }
+.shape-btn .shape-icon { width: 20px; height: 20px; background: #fff; }
+.shape-btn .shape-icon.circle { border-radius: 50%; }
+.shape-btn .shape-icon.triangle { clip-path: polygon(50% 0%, 0% 100%, 100% 100%); }
+.shape-btn .shape-icon.star { clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); }
+
+.color-btn {
+    width: 36px; height: 36px; border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.3);
+    cursor: pointer; transition: all 0.15s ease;
+}
+.color-btn.selected { border-color: #fff; transform: scale(1.15); }
+.color-btn.green { background: linear-gradient(135deg, #10B981, #059669); }
+.color-btn.purple { background: linear-gradient(135deg, #8B5CF6, #7C3AED); }
+.color-btn.orange { background: linear-gradient(135deg, #F97316, #EA580C); }
+.color-btn.pink { background: linear-gradient(135deg, #EC4899, #DB2777); }
+
 .status-msg {
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 0.95rem; font-weight: 500;
     color: rgba(255,255,255,0.8);
     padding: 12px 24px;
     background: rgba(255,255,255,0.05);
     backdrop-filter: blur(10px);
     border-radius: 25px;
     border: 1px solid rgba(255,255,255,0.1);
+    text-align: center; max-width: 320px;
+}
+.status-msg.win { background: rgba(16, 185, 129, 0.2); border-color: rgba(16, 185, 129, 0.3); color: #34D399; }
+.status-msg.fail { background: rgba(239, 68, 68, 0.2); border-color: rgba(239, 68, 68, 0.3); color: #F87171; }
+
+/* Leaderboard */
+.leaderboard-toggle {
+    padding: 8px 16px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 20px;
+    color: #fff; font-size: 0.85rem;
+    cursor: pointer; margin-bottom: 12px;
+    display: flex; align-items: center; gap: 6px;
+}
+.leaderboard-toggle:hover { background: rgba(255,255,255,0.12); }
+
+.leaderboard-panel {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    background: rgba(10,10,20,0.95);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(250,204,21,0.3);
+    border-radius: 20px 20px 0 0;
+    padding: 16px 20px 24px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    z-index: 90;
+    max-height: 60vh; overflow-y: auto;
+}
+.leaderboard-panel.open { transform: translateY(0); }
+
+.leaderboard-header {
+    display: flex; justify-content: space-between;
+    align-items: center; margin-bottom: 16px;
+}
+.leaderboard-title { font-size: 1.1rem; font-weight: 700; color: #FACC15; }
+.leaderboard-close {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: rgba(255,255,255,0.1); border: none;
+    color: #fff; font-size: 1.2rem; cursor: pointer;
+}
+.leaderboard-rank { font-size: 0.9rem; color: rgba(255,255,255,0.6); }
+
+.lb-item {
+    display: flex; align-items: center; gap: 12px;
+    padding: 10px 12px; border-radius: 12px;
+    margin-bottom: 6px;
+    background: rgba(255,255,255,0.04);
+}
+.lb-item.current {
+    background: linear-gradient(135deg, rgba(250,204,21,0.15), rgba(245,158,11,0.15));
+    border: 1px solid rgba(250,204,21,0.3);
+}
+.lb-pos { width: 28px; font-weight: 700; color: rgba(255,255,255,0.5); text-align: center; }
+.lb-item.current .lb-pos { color: #FACC15; }
+.lb-name { flex: 1; font-weight: 500; color: #fff; }
+.lb-score { font-weight: 700; color: #FACC15; }
+.lb-level { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-left: 8px; }
+
+/* Reset button */
+.reset-btn {
+    padding: 8px 16px;
+    background: rgba(239,68,68,0.15);
+    border: 1px solid rgba(239,68,68,0.3);
+    border-radius: 20px;
+    color: #F87171; font-size: 0.85rem;
+    cursor: pointer;
+}
+.reset-btn:hover { background: rgba(239,68,68,0.25); }
+
+.bottom-actions {
+    display: flex; gap: 10px; margin-top: 16px;
+    justify-content: center; flex-wrap: wrap;
 }
 
-.status-msg.win {
-    background: rgba(16, 185, 129, 0.2);
-    border-color: rgba(16, 185, 129, 0.3);
-    color: #34D399;
+.milestone-overlay {
+    position: fixed; inset: 0; z-index: 100;
+    background: rgba(0,0,0,0.8);
+    display: none; align-items: center; justify-content: center;
+    flex-direction: column; gap: 20px;
 }
+.milestone-overlay.active { display: flex; animation: fadeIn 0.3s ease; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.milestone-text { font-size: 2rem; font-weight: 700; color: #FACC15; text-align: center; }
+.milestone-sub { font-size: 1rem; color: rgba(255,255,255,0.8); }
+.milestone-btn {
+    padding: 14px 32px;
+    background: linear-gradient(135deg, #FACC15, #F59E0B);
+    border: none; border-radius: 30px;
+    font-size: 1rem; font-weight: 600;
+    color: #111; cursor: pointer; margin-top: 10px;
+}
+
+/* Confirm dialog */
+.confirm-overlay {
+    position: fixed; inset: 0; z-index: 110;
+    background: rgba(0,0,0,0.85);
+    display: none; align-items: center; justify-content: center;
+}
+.confirm-overlay.open { display: flex; }
+.confirm-box {
+    background: rgba(20,20,30,0.98);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 20px; padding: 24px;
+    max-width: 320px; text-align: center;
+}
+.confirm-title { font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 12px; }
+.confirm-text { font-size: 0.95rem; color: rgba(255,255,255,0.7); margin-bottom: 20px; }
+.confirm-btns { display: flex; gap: 12px; justify-content: center; }
+.confirm-cancel, .confirm-yes {
+    padding: 10px 24px; border-radius: 25px;
+    font-weight: 600; cursor: pointer; border: none;
+}
+.confirm-cancel { background: rgba(255,255,255,0.1); color: #fff; }
+.confirm-yes { background: #EF4444; color: #fff; }
 </style>
 {% endblock %}
 
@@ -240,206 +424,81 @@ body {
             </svg>
             {% trans "Back" %}
         </a>
-        <div class="score-display">⭐ <span id="score">0</span></div>
+        <div class="score-container">
+            <div class="score-display">⭐ <span id="score">0</span></div>
+            <div class="penalty-display" id="penaltyDisplay">-5</div>
+        </div>
     </header>
+    
+    <div class="stats-bar">
+        <div class="stat-badge phase" id="phaseBadge">🌱 Phase 1</div>
+        <div class="stat-badge" id="timerBadge" style="display: none;">⏱️ Timer</div>
+    </div>
+    
+    <div class="timer-container" id="timerContainer">
+        <div class="timer-bar-bg">
+            <div class="timer-bar-fill" id="timerFill"></div>
+        </div>
+    </div>
     
     <div class="game-container">
         <div class="level-display">{% trans "Level" %} <span id="level">1</span></div>
+        
+        <div class="shape-palette" id="shapePalette">
+            <button class="shape-btn selected" data-shape="square"><div class="shape-icon"></div></button>
+            <button class="shape-btn" data-shape="circle"><div class="shape-icon circle"></div></button>
+            <button class="shape-btn" data-shape="triangle"><div class="shape-icon triangle"></div></button>
+            <button class="shape-btn" data-shape="star"><div class="shape-icon star"></div></button>
+        </div>
+        
+        <div class="color-palette" id="colorPalette">
+            <button class="color-btn green selected" data-color="green"></button>
+            <button class="color-btn purple" data-color="purple"></button>
+            <button class="color-btn orange" data-color="orange"></button>
+            <button class="color-btn pink" data-color="pink"></button>
+        </div>
+        
         <div class="game-grid" id="grid"></div>
-        <div class="status-msg" id="status">Tap to mirror the green pattern</div>
+        <div class="status-msg" id="status">{% trans "Tap to mirror the pattern" %}</div>
+        
+        <div class="bottom-actions">
+            <button class="leaderboard-toggle" id="lbToggle">🏆 {% trans "Leaderboard" %} <span id="userRankBadge">#1</span></button>
+            <button class="reset-btn" id="resetBtn">🔄 {% trans "Reset" %}</button>
+        </div>
     </div>
 </div>
 
-<script>
-(function() {
-    // Color themes (dark soft backgrounds)
-    const themes = [
-        { bg: '#0a0a12', o1: '#10B981', o2: '#3B82F6' },
-        { bg: '#0f0a18', o1: '#8B5CF6', o2: '#EC4899' },
-        { bg: '#0a1212', o1: '#14B8A6', o2: '#06B6D4' },
-        { bg: '#120a0a', o1: '#EF4444', o2: '#F97316' },
-        { bg: '#0a0a18', o1: '#6366F1', o2: '#A78BFA' },
-        { bg: '#0f0f0a', o1: '#EAB308', o2: '#84CC16' },
-    ];
-    
-    let level = 1;
-    let score = 0;
-    let size = 4;
-    let mirror = 'v'; // 'v' or 'h'
-    let pattern = []; // flat array of booleans for pattern side
-    let player = [];  // flat array of booleans for player side
-    let won = false;
-    
-    const gridEl = document.getElementById('grid');
-    const levelEl = document.getElementById('level');
-    const scoreEl = document.getElementById('score');
-    const statusEl = document.getElementById('status');
-    const orb1 = document.getElementById('orb1');
-    const orb2 = document.getElementById('orb2');
-    
-    function init() {
-        newLevel();
-    }
-    
-    function newLevel() {
-        won = false;
-        
-        // Theme
-        const t = themes[(level - 1) % themes.length];
-        document.body.style.background = t.bg;
-        orb1.style.background = t.o1;
-        orb2.style.background = t.o2;
-        
-        // Size: always even (4 or 6) to allow proper halving
-        if (level <= 4) {
-            size = 4;
-        } else {
-            size = 6;
-        }
-        
-        // Mirror alternates
-        mirror = level % 2 === 1 ? 'v' : 'h';
-        
-        // Half cells count
-        const halfRows = Math.floor(size / 2);
-        const halfCols = Math.floor(size / 2);
-        const half = halfRows * size; // for horizontal mirror (top/bottom)
-        const halfV = size * halfCols; // for vertical mirror (left/right)
-        const cellCount = mirror === 'v' ? halfV : half;
-        
-        // Reset arrays
-        pattern = [];
-        player = [];
-        for (let i = 0; i < cellCount; i++) {
-            pattern.push(false);
-            player.push(false);
-        }
-        
-        // Fill some pattern cells randomly
-        const fillCount = Math.min(2 + level, Math.floor(cellCount * 0.5));
-        const indices = [];
-        for (let i = 0; i < cellCount; i++) indices.push(i);
-        indices.sort(() => Math.random() - 0.5);
-        for (let i = 0; i < fillCount; i++) {
-            pattern[indices[i]] = true;
-        }
-        
-        render();
-        updateUI();
-    }
-    
-    function render() {
-        gridEl.innerHTML = '';
-        gridEl.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
-        
-        // Remove old mirror line if any
-        const oldLine = gridEl.querySelector('.mirror-line');
-        if (oldLine) oldLine.remove();
-        
-        // Add mirror line
-        const lineEl = document.createElement('div');
-        lineEl.className = `mirror-line ${mirror === 'v' ? 'vertical' : 'horizontal'}`;
-        gridEl.appendChild(lineEl);
-        
-        // Create cells
-        for (let row = 0; row < size; row++) {
-            for (let col = 0; col < size; col++) {
-                const cell = document.createElement('div');
-                cell.className = 'cell';
-                
-                let isPattern, idx;
-                if (mirror === 'v') {
-                    // Left half = pattern, right half = player
-                    isPattern = col < size / 2;
-                    if (isPattern) {
-                        idx = row * (size / 2) + col;
-                    } else {
-                        idx = row * (size / 2) + (col - size / 2);
-                    }
-                } else {
-                    // Top half = pattern, bottom half = player
-                    isPattern = row < size / 2;
-                    if (isPattern) {
-                        idx = row * size + col;
-                    } else {
-                        idx = (row - size / 2) * size + col;
-                    }
-                }
-                
-                if (isPattern) {
-                    cell.classList.add('pattern');
-                    if (pattern[idx]) cell.classList.add('on');
-                } else {
-                    cell.classList.add('player');
-                    if (player[idx]) cell.classList.add('on');
-                    cell.dataset.idx = idx;
-                    cell.addEventListener('click', () => tapPlayer(idx));
-                }
-                
-                if (won) cell.classList.add('won');
-                
-                gridEl.appendChild(cell);
-            }
-        }
-    }
-    
-    function tapPlayer(idx) {
-        if (won) return;
-        player[idx] = !player[idx];
-        render();
-        checkWin();
-    }
-    
-    function checkWin() {
-        // Check if player matches pattern
-        for (let i = 0; i < pattern.length; i++) {
-            // Mirror index calculation
-            let mi;
-            if (mirror === 'v') {
-                // Player right mirrors pattern left (same row, mirrored col within half)
-                const pRow = Math.floor(i / (size / 2));
-                const pCol = i % (size / 2);
-                // Mirror col: pattern col 0 -> player col (size/2 - 1), etc.
-                const mCol = (size / 2) - 1 - pCol;
-                mi = pRow * (size / 2) + mCol;
-            } else {
-                // Player bottom mirrors pattern top (mirrored row, same col)
-                const pRow = Math.floor(i / size);
-                const pCol = i % size;
-                const mRow = (size / 2) - 1 - pRow;
-                mi = mRow * size + pCol;
-            }
-            
-            if (pattern[i] !== player[mi]) {
-                return;
-            }
-        }
-        
-        // Won!
-        won = true;
-        const pts = 10 + level * 5;
-        score += pts;
-        
-        render();
-        statusEl.textContent = `✓ Perfect! +${pts} points`;
-        statusEl.classList.add('win');
-        
-        setTimeout(() => {
-            level++;
-            statusEl.textContent = 'Tap to mirror the green pattern';
-            statusEl.classList.remove('win');
-            newLevel();
-        }, 1500);
-    }
-    
-    function updateUI() {
-        levelEl.textContent = level;
-        scoreEl.textContent = score;
-        statusEl.textContent = 'Tap to mirror the green pattern';
-        statusEl.classList.remove('win');
-    }
-    
-    init();
-})();
-</script>
+<!-- Leaderboard Panel -->
+<div class="leaderboard-panel" id="leaderboardPanel">
+    <div class="leaderboard-header">
+        <div>
+            <div class="leaderboard-title">🏆 Leaderboard</div>
+            <div class="leaderboard-rank" id="lbRankText">You are #1 of 1 players</div>
+        </div>
+        <button class="leaderboard-close" id="lbClose">×</button>
+    </div>
+    <div id="lbContent">
+        <!-- Leaderboard items rendered by JS -->
+    </div>
+</div>
+
+<div class="milestone-overlay" id="milestoneOverlay">
+    <div class="milestone-text" id="milestoneText">🎉 Milestone!</div>
+    <div class="milestone-sub" id="milestoneSub">Feature unlocked!</div>
+    <button class="milestone-btn" id="milestoneBtn">Continue</button>
+</div>
+
+<!-- Reset Confirmation -->
+<div class="confirm-overlay" id="confirmOverlay">
+    <div class="confirm-box">
+        <div class="confirm-title">🔄 Reset Progress?</div>
+        <div class="confirm-text">This will erase all your progress and start from Level 1 with 0 stars. This cannot be undone!</div>
+        <div class="confirm-btns">
+            <button class="confirm-cancel" id="confirmCancel">Cancel</button>
+            <button class="confirm-yes" id="confirmYes">Reset</button>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'web/js/relax-game.js' %}"></script>
 {% endblock %}

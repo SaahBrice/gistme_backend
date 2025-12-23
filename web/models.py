@@ -428,3 +428,23 @@ class MentorRequest(models.Model):
         status_emoji = {'PENDING': '⏳', 'CONTACTED': '📞', 'MATCHED': '✓', 'COMPLETED': '✅', 'CANCELLED': '✕', 'EXPIRED': '⌛'}
         return f"{status_emoji.get(self.status, '')} {self.user.email} → {self.mentor.name}"
 
+
+class GameProgress(models.Model):
+    """Tracks user's progress in the Relax mirror game"""
+    
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='game_progress')
+    level = models.IntegerField(default=1)
+    score = models.IntegerField(default=0)  # Can be negative due to penalties
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        ordering = ['-score']  # Leaderboard order by score
+        verbose_name = 'Game Progress'
+        verbose_name_plural = 'Game Progress'
+        indexes = [
+            models.Index(fields=['-score']),  # Fast leaderboard queries
+        ]
+    
+    def __str__(self):
+        return f"{self.user.email} - Level {self.level} - ⭐{self.score}"
+

@@ -1,0 +1,369 @@
+{% extends 'web/base.html' %}
+{% load static i18n %}
+
+{% block title %}{% trans "Categories" %} - Gist4U{% endblock %}
+
+{% block navbar %}{% endblock %}
+{% block footer %}{% endblock %}
+
+{% block extra_head %}
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+.categories-page {
+    min-height: 100vh;
+    background: #f5f5f5;
+    font-family: 'Inter', sans-serif;
+}
+.categories-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 16px;
+}
+.back-btn {
+    width: 44px;
+    height: 44px;
+    background: rgba(255,255,255,0.95);
+    border: 2px solid #111;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 3px 3px 0 0 #111;
+}
+.loading-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    gap: 16px;
+    color: #666;
+}
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #eee;
+    border-top-color: #FACC15;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.categories-content {
+    padding: 80px 0 40px;
+}
+.main-category-divider {
+    padding: 24px 20px 14px;
+    margin-top: 12px;
+}
+.main-category-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #888;
+}
+.category-section {
+    margin-bottom: 28px;
+}
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 20px;
+    margin-bottom: 12px;
+}
+.category-emoji { font-size: 1.1rem; }
+.category-name {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+    color: #111;
+}
+.article-count {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #888;
+}
+.articles-scroll {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    padding: 4px 20px 12px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+.articles-scroll::-webkit-scrollbar { display: none; }
+.article-card {
+    flex-shrink: 0;
+    width: 220px;
+    min-width: 220px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+.card-inner {
+    border-radius: 10px;
+    padding: 3px;
+}
+.card-thumbnail {
+    width: 100%;
+    height: 200px;
+    min-height: 180px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.3);
+}
+.card-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-title {
+    padding: 12px 8px 14px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.45;
+    height: 80px;
+    margin: 0;
+}
+.empty-state {
+    text-align: center;
+    padding: 100px 20px;
+    color: #888;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="categories-page">
+    <header class="categories-header">
+        <button class="back-btn" onclick="window.history.back()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="15 18 9 12 15 6"/>
+            </svg>
+        </button>
+    </header>
+    
+    <div id="loading-state" class="loading-state">
+        <div class="spinner"></div>
+        <p>{% trans "Loading..." %}</p>
+    </div>
+    
+    <div id="empty-state" class="empty-state" style="display: none;">
+        <p>{% trans "No articles available" %}</p>
+    </div>
+    
+    <main id="categories-content" class="categories-content" style="display: none;"></main>
+</div>
+
+<script>
+(function() {
+    const LANG = '{{ LANGUAGE_CODE }}' || 'en';
+    const BASE_HUE = Math.random() * 360;
+    
+    // Data storage
+    let categories = [];
+    let articlesByCategory = {};
+    let pageByCategory = {};
+    let hasMoreByCategory = {};
+    let loadingByCategory = {};
+    
+    // DOM elements
+    const loadingEl = document.getElementById('loading-state');
+    const emptyEl = document.getElementById('empty-state');
+    const contentEl = document.getElementById('categories-content');
+    
+    // Initialize
+    init();
+    
+    async function init() {
+        try {
+            // Fetch categories
+            const catRes = await fetch('/api/categories/');
+            categories = await catRes.json();
+            
+            // Fetch articles for each category
+            for (const cat of categories) {
+                pageByCategory[cat.id] = 1;
+                hasMoreByCategory[cat.id] = true;
+                loadingByCategory[cat.id] = false;
+                
+                const artRes = await fetch(`/api/articles/?category=${cat.id}&page=1&page_size=10`);
+                const data = await artRes.json();
+                articlesByCategory[cat.id] = data.results || [];
+                hasMoreByCategory[cat.id] = !!data.next;
+                pageByCategory[cat.id] = 2;
+            }
+            
+            // Render
+            renderCategories();
+            
+            // Hide loading, show content
+            loadingEl.style.display = 'none';
+            
+            const hasArticles = Object.values(articlesByCategory).some(arr => arr.length > 0);
+            if (hasArticles) {
+                contentEl.style.display = 'block';
+            } else {
+                emptyEl.style.display = 'block';
+            }
+        } catch (error) {
+            console.error('Error loading categories:', error);
+            loadingEl.style.display = 'none';
+            emptyEl.style.display = 'block';
+        }
+    }
+    
+    async function loadMoreArticles(categoryId) {
+        if (loadingByCategory[categoryId] || !hasMoreByCategory[categoryId]) return;
+        
+        loadingByCategory[categoryId] = true;
+        
+        try {
+            const page = pageByCategory[categoryId];
+            const res = await fetch(`/api/articles/?category=${categoryId}&page=${page}&page_size=10`);
+            const data = await res.json();
+            
+            const newArticles = data.results || [];
+            const scrollContainer = document.getElementById(`scroll-${categoryId}`);
+            
+            // Add new cards
+            const startIdx = articlesByCategory[categoryId].length;
+            newArticles.forEach((article, idx) => {
+                articlesByCategory[categoryId].push(article);
+                const card = createArticleCard(article, startIdx + idx);
+                scrollContainer.appendChild(card);
+            });
+            
+            hasMoreByCategory[categoryId] = !!data.next;
+            pageByCategory[categoryId]++;
+        } catch (error) {
+            console.error('Error loading more:', error);
+        } finally {
+            loadingByCategory[categoryId] = false;
+        }
+    }
+    
+    function renderCategories() {
+        contentEl.innerHTML = '';
+        
+        const mainOrder = ['OPPORTUNITY', 'FOR_YOU', 'ACTUALITY'];
+        const labels = {
+            'OPPORTUNITY': '📚 {% trans "Opportunities" %}',
+            'FOR_YOU': '✨ {% trans "For You" %}',
+            'ACTUALITY': '📰 {% trans "News" %}'
+        };
+        
+        for (const mainCat of mainOrder) {
+            const cats = categories
+                .filter(c => c.main_category === mainCat)
+                .sort((a, b) => (a.order || 0) - (b.order || 0))
+                .filter(c => (articlesByCategory[c.id] || []).length > 0);
+            
+            if (cats.length === 0) continue;
+            
+            // Add main category divider
+            const divider = document.createElement('div');
+            divider.className = 'main-category-divider';
+            divider.innerHTML = `<span class="main-category-label">${labels[mainCat]}</span>`;
+            contentEl.appendChild(divider);
+            
+            // Add each subcategory
+            for (const cat of cats) {
+                const articles = articlesByCategory[cat.id] || [];
+                const section = createCategorySection(cat, articles);
+                contentEl.appendChild(section);
+            }
+        }
+    }
+    
+    function createCategorySection(cat, articles) {
+        const section = document.createElement('section');
+        section.className = 'category-section';
+        
+        const name = LANG === 'fr' ? (cat.name_fr || cat.name_en) : (cat.name_en || cat.name_fr);
+        
+        section.innerHTML = `
+            <div class="category-header">
+                <span class="category-emoji">${cat.emoji || '📁'}</span>
+                <h2 class="category-name">${name}</h2>
+            </div>
+            <div class="articles-scroll" id="scroll-${cat.id}"></div>
+        `;
+        
+        const scrollContainer = section.querySelector('.articles-scroll');
+        
+        // Add article cards
+        articles.forEach((article, idx) => {
+            const card = createArticleCard(article, idx);
+            scrollContainer.appendChild(card);
+        });
+        
+        // Add infinite scroll listener
+        scrollContainer.addEventListener('scroll', () => {
+            const scrollRight = scrollContainer.scrollWidth - scrollContainer.scrollLeft - scrollContainer.clientWidth;
+            if (scrollRight < 150) {
+                loadMoreArticles(cat.id);
+            }
+        });
+        
+        return section;
+    }
+    
+    function createArticleCard(article, index) {
+        const card = document.createElement('article');
+        card.className = 'article-card';
+        
+        // Get title
+        let title = LANG === 'fr' 
+            ? (article.headline_fr || article.headline_en || article.headline || '')
+            : (article.headline_en || article.headline_fr || article.headline || '');
+        
+        // Truncate title
+        if (title.length > 55) {
+            title = title.substring(0, 55).trim() + '...';
+        }
+        
+        // Get thumbnail
+        const thumbnail = (article.thumbnails && article.thumbnails.length > 0) 
+            ? article.thumbnails[0] 
+            : 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=400';
+        
+        // Generate background color
+        const background = getCardBackground(index);
+        
+        card.innerHTML = `
+            <div class="card-inner" style="background: ${background}">
+                <div class="card-thumbnail">
+                    <img src="${thumbnail}" alt="${title}" loading="lazy" 
+                         onerror="this.src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=400'">
+                </div>
+                <h3 class="card-title">${title}</h3>
+            </div>
+        `;
+        
+        // Click handler
+        card.addEventListener('click', () => {
+            window.location.href = `/${LANG}/article/${article.id}/`;
+        });
+        
+        return card;
+    }
+    
+    function getCardBackground(index) {
+        const hueShift = 60;
+        const hue = (BASE_HUE + (index * hueShift)) % 360;
+        const saturation = 20 + (index % 4) * 8;
+        const lightness = 18 + (index % 3) * 4;
+        const hue2 = (hue + 20) % 360;
+        const lightness2 = lightness + 6;
+        return `linear-gradient(145deg, hsl(${hue}, ${saturation}%, ${lightness}%) 0%, hsl(${hue2}, ${saturation - 3}%, ${lightness2}%) 100%)`;
+    }
+})();
+</script>
+{% endblock %}

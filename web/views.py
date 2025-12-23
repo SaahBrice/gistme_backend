@@ -193,6 +193,10 @@ def article(request, article_id):
     })
 
 
+@login_required
+def categories(request):
+    """Category browse page - shows all categories with horizontal scrolling articles"""
+    return render(request, 'web/categories.html')
 
 
 def legal(request):
@@ -844,3 +848,149 @@ def payment_callback(request):
         })
 
 
+# ============ RELAX GAME API ENDPOINTS ============
+
+from .models import GameProgress
+from django.db.models import Window, F
+from django.db.models.functions import RowNumber
+
+
+@login_required
+@require_http_methods(["POST"])
+def save_game_progress(request):
+    """Save user's game progress (level and score)"""
+    try:
+        data = json.loads(request.body)
+        level = data.get('level', 1)
+        score = data.get('score', 0)
+        
+        progress, created = GameProgress.objects.update_or_create(
+            user=request.user,
+            defaults={'level': level, 'score': score}
+        )
+        
+        return JsonResponse({
+            'success': True,
+            'level': progress.level,
+            'score': progress.score
+        })
+    except Exception as e:
+        return JsonResponse({'success': False, 'error': str(e)}, status=400)
+
+
+@login_required
+@require_http_methods(["GET"])
+def load_game_progress(request):
+    """Load user's saved game progress"""
+    try:
+        progress = GameProgress.objects.filter(user=request.user).first()
+        
+        if progress:
+            return JsonResponse({
+                'success': True,
+                'level': progress.level,
+                'score': progress.score,
+                'found': True
+            })
+        else:
+            return JsonResponse({
+                'success': True,
+                'level': 1,
+                'score': 0,
+                'found': False
+            })
+    except Exception as e:
+        return JsonResponse({'success': False, 'error': str(e)}, status=400)
+
+
+@login_required
+@require_http_methods(["POST"])
+def reset_game_progress(request):
+    """Reset user's game progress to level 1, score 0"""
+    try:
+        GameProgress.objects.update_or_create(
+            user=request.user,
+            defaults={'level': 1, 'score': 0}
+        )
+        
+        return JsonResponse({
+            'success': True,
+            'message': 'Progress reset successfully',
+            'level': 1,
+            'score': 0
+        })
+    except Exception as e:
+        return JsonResponse({'success': False, 'error': str(e)}, status=400)
+
+
+@login_required
+@require_http_methods(["GET"])
+def game_leaderboard(request):
+    """Get leaderboard: 3 players above and 3 below current user by score"""
+    try:
+        # Ensure user has a progress record
+        user_progress, _ = GameProgress.objects.get_or_create(
+            user=request.user,
+            defaults={'level': 1, 'score': 0}
+        )
+        
+        user_score = user_progress.score
+        user_id = request.user.id
+        
+        # Get 3 players with higher scores (excluding current user)
+        above = list(GameProgress.objects.filter(
+            score__gt=user_score
+        ).exclude(
+            user=request.user
+        ).select_related('user').order_by('score')[:3])
+        above.reverse()  # Highest first
+        
+        # Get 3 players with equal or lower scores (excluding current user)
+        below = list(GameProgress.objects.filter(
+            score__lte=user_score
+        ).exclude(
+            user=request.user
+        ).select_related('user').order_by('-score')[:3])
+        
+        # Build leaderboard
+        leaderboard = []
+        
+        # Add players above
+        for p in above:
+            leaderboard.append({
+                'name': p.user.first_name or p.user.email.split('@')[0],
+                'score': p.score,
+                'level': p.level,
+                'is_current_user': False
+            })
+        
+        # Add current user
+        leaderboard.append({
+            'name': request.user.first_name or request.user.email.split('@')[0],
+            'score': user_progress.score,
+            'level': user_progress.level,
+            'is_current_user': True
+        })
+        
+        # Add players below
+        for p in below:
+            leaderboard.append({
+                'name': p.user.first_name or p.user.email.split('@')[0],
+                'score': p.score,
+                'level': p.level,
+                'is_current_user': False
+            })
+        
+        # Calculate user's rank
+        rank = GameProgress.objects.filter(score__gt=user_score).count() + 1
+        total_players = GameProgress.objects.count()
+        
+        return JsonResponse({
+            'success': True,
+            'leaderboard': leaderboard,
+            'user_rank': rank,
+            'total_players': total_players
+        })
+        
+    except Exception as e:
+        return JsonResponse({'success': False, 'error': str(e)}, status=400)

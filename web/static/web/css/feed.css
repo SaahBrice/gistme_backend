@@ -39,6 +39,40 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+}
+
+/* Center Categories Button - Matching pill style */
+.nav-center-btn {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.85);
+    border: none;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.nav-center-btn:hover {
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.nav-center-btn:active {
+    transform: translateX(-50%) scale(0.95);
+}
+
+.nav-center-btn svg {
+    stroke-width: 2;
 }
 
 /* Rounded rectangle container for profile + notification */

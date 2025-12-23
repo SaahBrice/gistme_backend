@@ -9,6 +9,7 @@ urlpatterns = [
     path('relax/', views.relax, name='relax'),
     path('mentor/', views.mentor, name='mentor'),
     path('quote-of-the-day/', views.quote_of_the_day, name='quote_of_the_day'),
+    path('categories/', views.categories, name='categories'),
     path('login/', views.auth_page, name='login'),
     path('onboarding/', views.onboarding, name='onboarding'),
     path('subscribe/', views.subscribe, name='subscribe'),
@@ -26,5 +27,9 @@ urlpatterns = [
     path('payment-status/<str:trans_id>/', views.get_payment_status, name='payment_status'),
     path('payment-callback/', views.payment_callback, name='payment_callback'),
     path('fapshi-webhook/', views.fapshi_webhook, name='fapshi_webhook'),
+    # Relax Game API
+    path('relax/save/', views.save_game_progress, name='save_game_progress'),
+    path('relax/load/', views.load_game_progress, name='load_game_progress'),
+    path('relax/reset/', views.reset_game_progress, name='reset_game_progress'),
+    path('relax/leaderboard/', views.game_leaderboard, name='game_leaderboard'),
 ]
-
